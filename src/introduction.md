@@ -13,4 +13,4 @@ It can be moved to another computer, but you might encounter license issues (we 
 | ------- | ------------------------------------------------------------ |
 | Linux   | `~/.local/share/caido`                                       |
 | MacOS   | `/Users/<USER>/Library/Application\ Support/io.caido.Caido/` |
-| Windows | `C:\\users\<USER>\AppData\Roaming\caido\Caido\data`          |
+| Windows | `C:\users\<USER>\AppData\Roaming\caido\Caido\data`           |
