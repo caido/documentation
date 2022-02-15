@@ -3,6 +3,9 @@ MDBOOK_VERSION = 0.4.15
 build:
 	mdbook build
 
+run:
+	mdbook serve
+
 build-release:
 	./bin/mdbook build
 
