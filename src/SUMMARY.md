@@ -10,8 +10,8 @@
 
 
 # Internals
+- [Files](./internals/files.md)
 - [License checks](./internals/license.md)
-- [Configuration Files](./internals/configuration.md)
 
 # Community Contributions
 - [Documentation](./contributions/documentation.md)
