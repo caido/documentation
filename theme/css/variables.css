@@ -10,6 +10,48 @@
 
 /* Themes */
 
+/* We overwrite the navy theme with Caido's styling */
+.navy {
+    --bg: #2f323a;
+    --fg: #c9cbcf;
+
+    --sidebar-bg: #25272d;
+    --sidebar-fg: #c9cbcf;
+    --sidebar-non-existant: #505274;
+    --sidebar-active: #daa04a;
+    --sidebar-spacer: #2d334f;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #737480;
+    --icons-hover: #b7b9cc;
+
+    --links: #daa04a;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #161923;
+    --theme-popup-border: #737480;
+    --theme-hover: rgba(255, 255, 255, 0.04);
+
+    --quote-bg: hsl(226, 15%, 17%);
+    --quote-border: hsl(226, 15%, 22%);
+
+    --table-border-color: #555555;
+    --table-header-bg: #25272d;
+    --table-alternate-bg: rgba(255, 255, 255, 0.1);
+
+    --searchbar-border-color: #aaa;
+    --searchbar-bg: #25272d;
+    --searchbar-fg: #c9cbcf;
+    --searchbar-shadow-color: #aaa;
+    --searchresults-header-fg: #88a2aa;
+    --searchresults-border-color: #5c5c68;
+    --searchresults-li-bg: #242430;
+    --search-mark-bg: #a2cff5;
+}
+
+
 .ayu {
     --bg: hsl(210, 25%, 8%);
     --fg: #c5c5c5;
@@ -127,46 +169,6 @@
     --searchresults-header-fg: #666;
     --searchresults-border-color: #888;
     --searchresults-li-bg: #e4f2fe;
-    --search-mark-bg: #a2cff5;
-}
-
-.navy {
-    --bg: hsl(226, 23%, 11%);
-    --fg: #bcbdd0;
-
-    --sidebar-bg: #282d3f;
-    --sidebar-fg: #c8c9db;
-    --sidebar-non-existant: #505274;
-    --sidebar-active: #2b79a2;
-    --sidebar-spacer: #2d334f;
-
-    --scrollbar: var(--sidebar-fg);
-
-    --icons: #737480;
-    --icons-hover: #b7b9cc;
-
-    --links: #2b79a2;
-
-    --inline-code-color: #c5c8c6;
-
-    --theme-popup-bg: #161923;
-    --theme-popup-border: #737480;
-    --theme-hover: #282e40;
-
-    --quote-bg: hsl(226, 15%, 17%);
-    --quote-border: hsl(226, 15%, 22%);
-
-    --table-border-color: hsl(226, 23%, 16%);
-    --table-header-bg: hsl(226, 23%, 31%);
-    --table-alternate-bg: hsl(226, 23%, 14%);
-
-    --searchbar-border-color: #aaa;
-    --searchbar-bg: #aeaec6;
-    --searchbar-fg: #000;
-    --searchbar-shadow-color: #aaa;
-    --searchresults-header-fg: #5f5f71;
-    --searchresults-border-color: #5c5c68;
-    --searchresults-li-bg: #242430;
     --search-mark-bg: #a2cff5;
 }
 
