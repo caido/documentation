@@ -1,4 +1,4 @@
-# License
+# License checks
 
 A license is required to use Caido, we check the validity of the license once every 7 days.
 

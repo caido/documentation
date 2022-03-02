@@ -6,4 +6,5 @@ src = "src"
 title = "Caido Documentation"
 
 [output.html]
+default-theme = "navy"
 git-repository-url = "https://github.com/caido/documentation"
