@@ -2,7 +2,7 @@
 [(WIP) FAQ](./faq.md)
 
 # User Guide
-- [(WIP) Installation](./user_guide/installation.md)
+- [Installation](./user_guide/installation.md)
 - [Configuration](./user_guide/configuration.md)
 - [(WIP) Running on a VPS](./user_guide/vps.md)
 
