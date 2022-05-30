@@ -28,7 +28,7 @@ CMD ["./caido", "--listen", "0.0.0.0:8080"]
 1. Create a `Dockerfile` file with the above contents.
 2. In the command line, run the following commands:
   ```
-  cat /dev/urandom | head -c 255 | md5sum
+  cat /dev/urandom | head -c 16 | xxd -p
   ```
 3. In the `Dockerfile`, replace `MY_MACHINE_ID` with the output from step #2.
 4. Download the latest Caido executable, rename the file to `caido` and run `chmod +x` on it.
