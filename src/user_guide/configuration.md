@@ -12,7 +12,7 @@ You can change that with one of the following methods:
 1. Specify the `--listen` flag at runtime
 2. Modify the default in the [configuration file](./configuration.md#configuration-file-location)
 
-It is totally possible to bind the address `0.0.0.0`, though we do recommend doing so if you expose Caido to the internet.
+It is totally possible to bind the address `0.0.0.0`, though we do not recommend doing so if you expose Caido to the internet.
 
 ## Configuration file location
 
