@@ -5,7 +5,7 @@
 
 - [Installation](./user_guide/installation.md)
 - [Configuration](./user_guide/configuration.md)
-- [(WIP) Running on a VPS](./user_guide/vps.md)
+- [Running on a VPS](./user_guide/vps.md)
 - [Running in docker](./user_guide/docker.md)
 
 # Features
