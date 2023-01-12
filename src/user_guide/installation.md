@@ -1,28 +1,24 @@
 # Installation
 
-Caido is a binary acting both as a webserver and a proxy.
+Caido is available as both a desktop application and a standalone command-line interface (CLI) binary, offering users the flexibility to choose the installation method that best suits their needs.
 
-You can download the right binary for your OS in the <a target="_blank" href="https://discord.com/channels/843915806748180492/901115322571046992">#releases channel</a> on Discord (note that this server is invite-only at the moment).
+You can download the installer package from your <a href="https://dashboard.caido.io" target="_blank">dashboard</a> or from the <a href="https://github.com/caido/caido/releases" target="_blank">releases</a> page of our Github repository. The available installer package can differ based on your operating system, make sure to download the package that is compatible with your system.
 
-## Linux Installation
+## Installing Caido on Windows
 
-1. Download your binary from our Discord server
-2. In a terminal, run `chmod +x` on the binary (e.g `chmod +x ./caido-linux-v0.12.1-79ec606e`)
-3. Run the binary with `./caido-linux-v0.12.1-79ec606e`
+1. Download the Caido installer package for Windows from the dashboard or Github repository.
+2. Open the downloaded package and follow the prompts to install Caido on your system.
+3. Once the installation is complete, you can launch Caido from the Start menu or by searching for it in the Windows search bar.
 
-You should be redirected to http://127.0.0.1:8080/ in your browser.
-## MacOS Installation
+## Installing Caido on Linux
 
-1. Download your binary from our Discord server
-2. In a terminal, run `chmod +x` on the binary (e.g `chmod +x ./caido-macos-v0.12.1-79ec606e`)
-3. Run the binary with `./caido-macos-v0.12.1-79ec606e`
+1. Download the Caido installer package for Linux from the dashboard or Github repository.
+2. Open a terminal and navigate to the directory where the downloaded package is located.
+3. Use the command `sudo dpkg -i <package-name>` to install Caido.
+4. Once the installation is complete, you can launch Caido by running the `caido` command in the terminal.
 
-You should be redirected to http://127.0.0.1:8080/ in your browser.
+## Installing Caido on MacOS
 
-## Windows Installation
-
-1. Download your binary from our Discord server
-3. Double click the executable
-
-You should be redirected to http://127.0.0.1:8080/ in your browser.
-
+1. Download the Caido installer package for macOS from the dashboard or Github repository.
+2. Open the downloaded package and follow the prompts to install Caido on your system.
+3. Once the installation is complete, you can launch Caido from the Applications folder or by searching for it in Spotlight.

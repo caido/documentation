@@ -24,6 +24,7 @@ body {
 code {
     font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
     font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    padding: 1em;
 }
 
 /* Don't change font size in headers. */
@@ -137,6 +138,7 @@ blockquote {
     background-color: var(--quote-bg);
     border-top: .1em solid var(--quote-border);
     border-bottom: .1em solid var(--quote-border);
+    border-left: .1em solid var(--quote-border-accent);
 }
 
 
