@@ -32,7 +32,7 @@
 # Internals
 
 - [Files](./internals/files.md)
-- [License checks](./internals/license.md)
+- [Authentication](./internals/authentication.md)
 
 # Community Contributions
 
