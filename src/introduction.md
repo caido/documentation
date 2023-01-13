@@ -1,7 +1,7 @@
 # Introduction
 
-Caido is a new lightweight web security auditing toolkit.
-It can be installed on your own computer or on any VPS you own.
-We are currently in private beta, so feel free to register on [our main site](https://caido.io).
+Welcome to the Caido documentation site! Here you will find a wealth of information on how to use Caido to perform web application security testing.
 
+Explore our documentation to learn about the different features of Caido and how to install and configure it. We invite you to take a look around and discover all that Caido has to offer.
 
+![intercept_with_filter](/_images/intercept.png)
