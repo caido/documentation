@@ -1,5 +1,5 @@
 [Introduction](./introduction.md)
-[(WIP) FAQ](./faq.md)
+[FAQ](./faq.md)
 
 # User Guide
 
@@ -24,9 +24,10 @@
   - [Tamper](./features/testing/tamper.md)
 
 - [Miscellaneous]()
-  - [Convert](./features/misc/convert.md)
-  - [Files](./features/misc/files.md)
   - [Projects](./features/misc/projects.md)
+  - [Files](./features/misc/files.md)
+  - [Layout Customization](./features/misc/layout.md)
+  - [Convert](./features/misc/convert.md)
 
 # Internals
 

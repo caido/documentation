@@ -7,34 +7,44 @@ We don't yet provide prebuilt Caido docker images, but you can easily build one 
 Here is a `Dockerfile` sample you can use:
 
 ```Dockerfile
-FROM debian:bullseye-slim
+## Base ##
+FROM debian:bullseye-slim as base
 
 RUN \
   apt-get update && \
   apt-get -y install ca-certificates && \
   apt-get clean
 
-RUN echo "MY_MACHINE_ID" > /etc/machine-id
+## Download ##
+FROM base as download
 
-WORKDIR /app
+RUN \
+  apt-get -y install curl jq && \
+  curl -s https://api.caido.io/releases/latest \
+    | jq '.links[] | select(.display == "Linux") | .link' \
+    | xargs curl -s --output caido.tar.gz && \
+  tar -xf caido.tar.gz && \
+  rm caido.tar.gz
 
-COPY caido caido
+## Runtime ##
+FROM base
 
-CMD ["./caido", "--listen", "0.0.0.0:8080"]
+RUN groupadd -r caido && useradd --no-log-init -m -r -g caido caido
+
+COPY --from=download caido /usr/bin/caido
+
+USER caido
+
+EXPOSE 8080
+
+ENTRYPOINT ["caido"]
+CMD ["--listen", "0.0.0.0:8080"]
 ```
 
 ---
 
 1. Create a `Dockerfile` file with the above contents.
-2. In the command line, run the following commands:
-  ```
-  cat /dev/urandom | head -c 16 | xxd -p
-  ```
-3. In the `Dockerfile`, replace `MY_MACHINE_ID` with the output from step #2.
-4. Download the latest Caido executable, rename the file to `caido` and run `chmod +x` on it.
-5. Make sure the caido executable from step #4 is in the same folder as the `Dockerfile`
-
-Running `docker build . -t caido:latest` will create a docker image for Caido.
+2. Running `docker build . -t caido:latest` will create a docker image for Caido.
 
 ## Running the image
 
@@ -53,7 +63,7 @@ By default, projects created in the docker container are not saved between `dock
 
 We recommend mounting a volume to keep your data on your file system and to avoid losing data between Caido updates.
 
-This is done by appending the `-v` parameter to the `docker run` command using the format `-v <HOST PATH>:/root/.local/share/caido`.
+This is done by appending the `-v` parameter to the `docker run` command using the format `-v <HOST PATH>:/home/caido/.local/share/caido`.
 
 Note that the host path must be an absolute path.
 
@@ -61,7 +71,7 @@ Your running command should look like the following:
 
 ```
 docker run --rm -p 7000:8080 \
-  -v /home/my_user/my_data:/root/.local/share/caido caido:latest
+  -v /home/my_user/my_data:/home/caido/.local/share/caido caido:latest
 ```
 
 ... where `/home/my_user/my_data` will be the folder containing Caido projects.

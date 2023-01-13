@@ -1,1 +1,29 @@
 # FAQ
+
+## Is Caido free?
+
+Yes, Caido is free to use. However, we also offer a pro tier which will include additional advanced features in the future. By purchasing the pro version, you will be supporting the development and maintenance of the tool.
+
+Additionally, we offer an enterprise plan for organizations that need premium support and/or custom feature implementation.
+
+You can check our website to stay informed about the new features that will be added in the future.
+
+## Is Caido open source?
+
+Caido is not currently open source, but we have plans to offer an API for open source plugin development. We also employ standard open formats whenever possible.
+
+## On how many devices can I install Caido?
+
+At this time, Caido can be installed on an unlimited number of devices. You are welcome to install Caido on as many devices as you like.
+
+## What data do you collect?
+
+When you register for Caido, we collect your name and email address, as well as information about your user agent.
+
+When you use Caido, we collect interaction data between your instances and our cloud services. This includes the IP address of the instance and API call actions/timestamps.
+
+We do not collect any data stored on your instances nor interactions within the caido application.
+
+## Where can I ask for support and/or feature requests?
+
+You can ask for support and submit feature requests through our public <a href="https://links.caido.io/www-discord" target="_blank">Discord</a> or <a href="https://links.caido.io/www-github-issues" target="_blank">Github repository</a>. Both are great places to share feedback and help improve Caido.
