@@ -1,29 +1,32 @@
-<h2 align="middle">Caido Documentation</p>
-<h3 align="middle">A lightweight web security auditing toolkit</h3>
+<div align="center">
+  <img width="1000" alt="image" src="https://user-images.githubusercontent.com/6225588/211916659-567751d1-0225-402b-9141-4145c18b0834.png">
 
-<p align="center">
-    <a href="https://github.com/caido/caido/issues">
-        <img src="https://img.shields.io/badge/-Bugs%20%2F%20Features-a0213e?style=for-the-badge" alt="Bugs/Features">
-    </a>
-    <a href="https://github.com/orgs/caido/projects/4/views/20">
-        <img src="https://img.shields.io/badge/-RoadMap-daa04a?style=for-the-badge" alt="RoadMap">
-    </a>
-    <a href="https://docs.caido.io/">
-        <img src="https://img.shields.io/badge/-Documentation-40454f?style=for-the-badge" alt="Documentation">
-    </a>
-</p>
+  <br />
+  <br />
+  <a href="https://caido.io/">Website</a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://dashboard.caido.io/">Dashboard</a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://links.caido.io/roadmap">Roadmap</a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://github.com/caido/caido/tree/main/brand">Branding</a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://links.caido.io/www-discord" target="_blank">Discord</a>
+  <br />
+  <hr />
+</div>
 
-</br>
+## 👋 Welcome
 
-<h3 align="middle">This is the repository containing the documentation of Caido.</br>Thanks in advance for your contributions!</h3>
+Welcome to the Caido documentation repository! 
 
-</br>
+To contribute to our documentation, you can either submit a pull request directly to the repository or create an issue if you have a question or suggestion. If you're making a pull request, please make sure to follow our style guide and to test your changes before submitting.
 
-<p align="center">
-    <a href="https://medium.com/@caido">
-        <img src="https://img.shields.io/badge/-Medium-03a87c?style=for-the-badge" alt="Medium">
-    </a>
-    <a href="https://twitter.com/CaidoIO">
-        <img src="https://img.shields.io/badge/-Twitter-00aced?style=for-the-badge" alt="Twitter">
-    </a>
-</p>
+Please note that you'll also have to sign a [contributor license agreement](https://cla-assistant.io/caido/documentation
+) when submitting a PR.
+
+Thanks in advance for your contributions!
+
+## 💚 Community
+
+Come join our [Discord](https://links.caido.io/www-discord) community and connect with other Caido users! We'd love to have you as part of the conversation and help with any questions you may have.
