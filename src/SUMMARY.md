@@ -8,21 +8,26 @@
 - [Running in docker](./user_guide/docker.md)
 
 # Configuration
+
 - [Default listening address/port](./configuration/default_listening_address.md)
 
+# Show Case
+
+- [Overview](./show_case/overview.md)
+- [Techniques](./show_case/techniques.md)
+
 # Features
+
 - [Exploration]()
   - [Sitemap](./features/exploration/sitemap.md)
   - [Intercept](./features/exploration/intercept.md)
   - [History](./features/exploration/history.md)
   - [Scope](./features/exploration/scope.md)
-
 - [Testing]()
   - [Forward](./features/testing/forward.md)
   - [Replay](./features/testing/replay.md)
   - [Automate (WIP)](./features/testing/automate.md)
   - [Tamper](./features/testing/tamper.md)
-
 - [Miscellaneous]()
   - [Projects](./features/misc/projects.md)
   - [Files](./features/misc/files.md)
@@ -36,6 +41,6 @@
 
 # Community Contributions
 
-- [(WIP) Documentation](./contributions/documentation.md)
+- [Documentation](./contributions/documentation.md)
 - [(WIP) Convert modules](./contributions/convert_modules.md)
 - [(WIP) Plugins](./contributions/plugins.md)
