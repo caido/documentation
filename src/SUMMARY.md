@@ -14,7 +14,7 @@
 # Show Case
 
 - [Overview](./show_case/overview.md)
-- [Techniques](./show_case/techniques.md)
+- [Tutorials](./show_case/tutorials.md)
 
 # Features
 
