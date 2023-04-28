@@ -10,6 +10,7 @@
 # Configuration
 
 - [Default listening address/port](./configuration/default_listening_address.md)
+- [Import CA Certificate](./configuration/import_ca_certificate.md)
 
 # Show Case
 
