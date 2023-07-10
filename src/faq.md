@@ -27,3 +27,9 @@ We do not collect any data stored on your instances nor interactions within the 
 ## Where can I ask for support and/or feature requests?
 
 You can ask for support and submit feature requests through our public <a href="https://links.caido.io/www-discord" target="_blank">Discord</a> or <a href="https://links.caido.io/www-github-issues" target="_blank">Github repository</a>. Both are great places to share feedback and help improve Caido.
+
+## What is the difference between Caido CLI and Caido Desktop
+
+The Caido CLI is self-contained binary that launches the Caido proxy (also called instance). You can use it on remote servers or locally and access the instance using your browser. The Caido Desktop acts a connection manager to your instances and can also launch the Caido proxy in the background. It uses webviews to access the instance instead of the browser.
+
+> **WARNING**: At the moment, Caido Desktop is considered experimental and does not perform as well as the browser on Linux.
