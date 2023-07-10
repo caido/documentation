@@ -27,7 +27,7 @@
 - [Testing]()
   - [Forward](./features/testing/forward.md)
   - [Replay](./features/testing/replay.md)
-  - [Automate (WIP)](./features/testing/automate.md)
+  - [Automate](./features/testing/automate.md)
   - [Tamper](./features/testing/tamper.md)
 - [Miscellaneous]()
   - [Projects](./features/misc/projects.md)

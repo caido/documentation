@@ -6,6 +6,12 @@ If you want your contributions to appear here, please follow the [contribution g
 
 Please note that these videos are not endorsed by Caido.
 
+## Hack The Box
+
+- Intranet
+  - [TheCyberMentor](https://linktr.ee/thecybermentor): [https://www.youtube.com/watch?v=lW-u_2EByT4](https://www.youtube.com/watch?v=lW-u_2EByT4)
+  - [hacksmarter](https://hacksmarter.live/): [https://www.youtube.com/watch?v=u8bQPtLNPpk](https://www.youtube.com/watch?v=u8bQPtLNPpk)
+
 ## Password Attacks
 
 - [Alex Kollar](https://twitter.com/ssgcythes): [https://www.youtube.com/watch?v=qPBK6sHjJt8](https://www.youtube.com/watch?v=qPBK6sHjJt8)
