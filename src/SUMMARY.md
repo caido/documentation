@@ -11,6 +11,7 @@
 
 - [Default listening address/port](./configuration/default_listening_address.md)
 - [Import CA Certificate](./configuration/import_ca_certificate.md)
+- [Data Location](./configuration/data_location.md)
 
 # Show Case
 
