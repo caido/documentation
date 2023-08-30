@@ -25,6 +25,7 @@
   - [Intercept](./features/exploration/intercept.md)
   - [History](./features/exploration/history.md)
   - [Scope](./features/exploration/scope.md)
+  - [Test](./features/exploration/test.md)
 - [Testing]()
   - [Forward](./features/testing/forward.md)
   - [Replay](./features/testing/replay.md)
