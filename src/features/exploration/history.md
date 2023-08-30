@@ -9,4 +9,3 @@ The History feature provides a comprehensive view of all the requests that have 
 In addition to all the filter options available in Intercept, you can also filter by source tool (Replay, Intercept, Automate).
 
 ![history_with_filter_drawer](/_images/history_with_filter_drawer.png)
-
