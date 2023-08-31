@@ -1,0 +1,3 @@
+# WS History
+
+The WS History feature allows you to...

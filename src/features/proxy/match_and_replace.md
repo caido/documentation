@@ -1,12 +1,12 @@
-# Tamper
+# Match and Replace
 
-The Tamper feature allows you to define match and replace rules. These rules can be used to modify requests as they pass through the proxy.
+The Match and Replace feature allows you to define match and replace rules. These rules can be used to modify requests as they pass through the proxy.
 
-Tamper rules can be organized into collections, which allows you to group rules however you see fit. For example, you can create a collection to group User-Agent rules, header rules, etc.
+Match and Replace rules can be organized into collections, which allows you to group rules however you see fit. For example, you can create a collection to group User-Agent rules, header rules, etc.
 
 ![tamper](/_images/tamper.png)
 
-To create a tamper rule, click on the "More options" icon of the collection where you want to create the rule and select the option "Create rule."
+To create a Match and Replace rule, click on the "More options" icon of the collection where you want to create the rule and select the option "Create rule."
 
 When creating a new rule, you can update the following fields:
 
@@ -29,4 +29,4 @@ Enabled rules will be shown in the "Active rules" section of the page. This sect
 
 > It's important to note that the order of the rules in the "Active rules" section determines the order in which they will be applied to the requests.
 >
->  You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs, and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
+> You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs, and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
