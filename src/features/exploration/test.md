@@ -17,6 +17,7 @@
 >**_Bold with italics_**
 >[Petit](https://martinpetit.com/)
 ![Petit](https://s3.amazonaws.com/rose.vero/wp-content/uploads/2015/01/01173337/entreuve-avec-martin-petit.jpg)
+
 ![Search Screenshot](/_images/search_overview.png)
 
 ### Mini
