@@ -3,9 +3,12 @@
 
 ## Table des matieres
 
-- [Petit](#petit)
-- [Mini](#mini)
-- [Lists](#lists)
+<details>
+  <summary>Table des matieres</summary>
+
+- <kbd>[Petit](#petit)
+- <kbd>[Mini](#mini)
+- <kbd>[Lists](#lists)
 
 >**Bold**
 >
@@ -68,3 +71,24 @@ ___
 For more info, go to our [Website] or follow us on [LinkedIn].
 ___
 You can reach out to us [here].
+
+<img src="https://media.giphy.com/media/qLHzYjlA2FW8g/giphy.gif">
+
+- [ ] Fix
+- [x] Learn
+
+Keyboard shortcuts
+<kbd>shift + s</kbd>
+
+<kbd>ctrl + shift + p</kbd>
+
+<kbd>ctrl + z</kbd>
+
+<kbd>ctrl + ,</kbd> = settings
+
+<details>
+  <summary>Markdown</summary>
+
+- <kbd>[Petit](#petit)
+- <kbd>[Mini](#mini)
+- <kbd>[Lists](#lists)
