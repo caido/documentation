@@ -1,6 +1,6 @@
 # Scope
 
-The Scope feature allows you to filter requests throughout the app by creating presets of in-scope and out-of-scope hosts. Currently, scoping is only available for the search and intercept pages.
+The Scope feature allows you to filter requests throughout the app by creating presets of in-scope and out-of-scope hosts. Currently, scoping is available for the sitemap, search and HTTP History pages.
 
 ## Creating a scope preset
 
@@ -16,7 +16,7 @@ The Scope feature is split into two panes, the left pane contains the list of sc
 
 ## Using scope presets
 
-Once you have created a scope preset, you can apply it to the intercept and search pages by selecting it from the "Scope Preset" dropdown located in the top left corner of each page.
+Once you have created a scope preset, you can apply it to the http history and search pages by selecting it from the "Scope Preset" dropdown located in the top left corner of each page.
 
 When you select a scope preset from the dropdown, the table in the page will be filtered based on the hosts defined in the selected scope preset.
 
