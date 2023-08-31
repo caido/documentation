@@ -20,7 +20,7 @@ You can filter requests by:
 
 ![intercept_with_filter_drawer](/_images/intercept_with_filter_drawer.png)
 
-You can also scope the requests by host. See the [Scope](/features/exploration/sitemap) page for more details.
+You can also scope the requests by host. See the [Scope](/features/overview/scope.md) page for more details.
 
 # Forward (ne va pas la)
 
