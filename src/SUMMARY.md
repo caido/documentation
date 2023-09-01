@@ -15,27 +15,32 @@
 
 # Show Case
 
-- [Overview](./show_case/overview.md)
+- [Reviews](./show_case/reviews.md)
 - [Tutorials](./show_case/tutorials.md)
 
 # Features
 
-- [Exploration]()
-  - [Sitemap](./features/exploration/sitemap.md)
-  - [Intercept](./features/exploration/intercept.md)
-  - [History](./features/exploration/history.md)
-  - [Scope](./features/exploration/scope.md)
+- [Overview]()
+  - [Sitemap](./features/overview/sitemap.md)
+  - [Scope](./features/overview/scope.md)
+- [Proxy]()
+  - [Intercept](./features/proxy/intercept.md)
+  - [HTTP History](./features/proxy/HTTP_history.md)
+  - [WS History](./features/proxy/ws_history.md)
+  - [Match & Replace](./features/proxy/match_and_replace.md)
 - [Testing]()
-  - [Forward](./features/testing/forward.md)
   - [Replay](./features/testing/replay.md)
   - [Automate](./features/testing/automate.md)
-  - [Tamper](./features/testing/tamper.md)
+  - [Assistant](./features/testing/assistant.md)
 - [Workflows]()
   - [Convert](./features/workflows/convert.md)
-- [Miscellaneous]()
-  - [Projects](./features/misc/projects.md)
-  - [Files](./features/misc/files.md)
-  - [Layout Customization](./features/misc/layout.md)
+- [Logging]()
+  - [Search](./features/logging/search.md)
+  - [Exports](./features/logging/exports.md)
+- [Workspace]()
+  - [Files](./features/workspace/files.md)
+  - [Projects](./features/workspace/projects.md)
+  - [Layout](./features/workspace/layout.md)
 
 # Internals
 

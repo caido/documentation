@@ -13,4 +13,3 @@ Requests are organized into collections and sessions.
 A session is a group of requests that are related to each other. Every time you edit and send a request, it is saved in the history of that replay session. This allows you to keep track of the changes you made to the request, and easily go back to previous versions.
 
 Replay collections allow you to group sessions together. This allows you to keep your sessions organized and easily switch between them. You can group sessions however you want, for example, by project, by feature or by environment.
-
