@@ -1,3 +1,1 @@
-# Assistant
-
-The Assistant feature ...
+# Assistant (WIP)
