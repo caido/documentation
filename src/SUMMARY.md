@@ -27,7 +27,7 @@
   - [Intercept](./features/proxy/intercept.md)
   - [HTTP History](./features/proxy/HTTP_history.md)
   - [WS History](./features/proxy/ws_history.md)
-  - [Match & Replace](./features/proxy/match_and_replace.md)
+  - [Match & Replace](./features/proxy/match_replace.md)
 - [Testing]()
   - [Replay](./features/testing/replay.md)
   - [Automate](./features/testing/automate.md)
