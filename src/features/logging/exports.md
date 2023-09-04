@@ -19,6 +19,6 @@ The Exports feature allows you to export data in JSON and CSV format.
 
 Your data will be available in the Exports feature to download, edit or delete.
 
-![Download Exports](/images/exports_in_exports.png)
+![Download Exports](/_images/exports_in_exports.png)
 
-![Edit of Delete Exports](/images/edit_exports.png)
+![Edit of Delete Exports](_/images/edit_exports.png)
