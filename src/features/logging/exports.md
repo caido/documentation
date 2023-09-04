@@ -15,7 +15,7 @@ The Current Rows option (a Pro feature) only exports requests that match the fil
 ## Exports format
 
 The Exports feature allows you to export data in JSON and CSV format.
-![JSON & CSV format](/images/jsoncsv.png)
+![JSON & CSV format](_/images/jsoncsv.png)
 
 Your data will be available in the Exports feature to download, edit or delete.
 
