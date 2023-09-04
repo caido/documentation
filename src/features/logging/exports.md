@@ -21,4 +21,4 @@ Your data will be available in the Exports feature to download, edit or delete.
 
 ![Download Exports](/_images/exports_in_exports.png)
 
-![Edit of Delete Exports](_/images/edit_exports.png)
+![Edit of Delete Exports](/_images/edit_exports.png)
