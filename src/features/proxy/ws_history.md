@@ -8,11 +8,11 @@ When an HTTP Connection is upgraded to Websocket, it will appear in the stream t
 
 ![WS History Streams](/_images/ws_streams.png)
 
-Clicking on a stream will display the messages and their direction.
+- Clicking on a stream will display the messages and their direction.
 
 ![Streams direction](/_images/stream_direction.png)
 
-You can open each message to display the content.
+- You can open each message to display the content.
 
 ![Display message content](/_images/ws_message.png)
 
