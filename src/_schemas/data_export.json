@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataExport",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/ExportRequest"
+  },
+  "definitions": {
+    "ExportRequest": {
+      "type": "object",
+      "required": [
+        "alteration",
+        "created_at",
+        "edited",
+        "host",
+        "id",
+        "is_tls",
+        "length",
+        "method",
+        "path",
+        "port",
+        "query",
+        "source"
+      ],
+      "properties": {
+        "alteration": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "edited": {
+          "type": "boolean"
+        },
+        "file_extension": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "host": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "is_tls": {
+          "type": "boolean"
+        },
+        "length": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "method": {
+          "type": "string"
+        },
+        "parent_id": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int32"
+        },
+        "path": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "query": {
+          "type": "string"
+        },
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "response": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ExportResponse"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "ExportResponse": {
+      "type": "object",
+      "required": [
+        "alteration",
+        "created_at",
+        "edited",
+        "id",
+        "length",
+        "status_code"
+      ],
+      "properties": {
+        "alteration": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "edited": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "length": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "parent_id": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "int32"
+        },
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status_code": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}

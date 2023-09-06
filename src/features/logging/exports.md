@@ -1,24 +1,54 @@
-# Exports (WIP)
+# Exports
 
-The Exports feature currently allows you to export data from HTTP History and Search pages.
+The Exports feature allows you to export data from the HTTP History and Search pages and use data collected by Caido in other tools.
+This feature can also be used for archival purposes or audit purposes sometimes required by clients.
 
 ## Exports types
 
-Two types of exports can be generated through the Exports feature: All and Current rows.
-*The Exports feature generate two types of exports: All and Current rows.
+The Exports feature generates two types of exports:
 
-The Export All option exports all data in the specified tool.
+- **All**: exports all data of the specified tool.
+- **Current rows** (Pro feature): exports only rows that match the filter and scope currently set.
 
-The Current Rows option (a Pro feature) only exports requests that match the filter and scope currently set.
 ![2 types of exports](/_images/exports_2_types.png)
 
-## Exports format
+## Exports formats
 
-The Exports feature allows you to export data in JSON and CSV format.
+Two export formats are available: JSON and CSV.
 ![JSON & CSV format](/_images/jsoncsv.png)
 
-Your data will be available in the Exports feature to download, edit or delete.
+### JSON
+
+For the JSON format, data will be exported as an array of requests with their respective response nested. See the full JSON schema below.
+
+<details>
+  <summary>SCHEMA</summary>
+
+  ```json
+  {{ #include ../../_schemas/data_export.json }}
+  ```
+
+</details>
+
+### CSV
+
+For the CSV format, each request/response pair will be exported on a row. Since CSV does not support nested columns, the response's columns have been renamed.
+
+<details>
+  <summary>COLUMNS</summary>
+
+  ```csv
+  id,host,method,path,length,port,raw,is_tls,query,file_extension,source,alteration,edited,parent_id,created_at,response_id,response_status_code,response_raw,response_length,response_alteration,response_edited,response_parent_id,response_created_at
+  ```
+
+</details>
+
+## Download
+
+Once the export is completed, it will be available in the Exports page.
 
 ![Download Exports](/_images/exports_in_exports.png)
+
+From there you can download it, rename it or delete it.
 
 ![Edit of Delete Exports](/_images/edit_exports.png)
