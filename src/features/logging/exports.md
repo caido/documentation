@@ -8,7 +8,7 @@ This feature can also be used for archival purposes or audit purposes sometimes 
 The Exports feature generates two types of exports:
 
 - **All**: exports all data of the specified tool.
-- **Current rows** (Pro feature): exports only rows that match the filter and scope currently set.
+- **Current rows** (Pro feature): exports only rows that match the filter and [scope](/features/overview/scope.md) currently set.
 
 ![2 types of exports](/_images/exports_2_types.png)
 
@@ -45,10 +45,10 @@ For the CSV format, each request/response pair will be exported on a row. Since 
 
 ## Download
 
-Once the export is completed, it will be available in the Exports page.
+Once the export is completed, it will be available on the Exports page.
 
 ![Download Exports](/_images/exports_in_exports.png)
 
-From there you can download it, rename it or delete it.
+From there you can download it, rename it, or delete it.
 
-![Edit of Delete Exports](/_images/edit_exports.png)
+![Edit or Delete Exports](/_images/edit_exports.png)
