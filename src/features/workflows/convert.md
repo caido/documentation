@@ -5,7 +5,7 @@
 Convert workflows allow you to create arbitrary conversion pipelines using `nodes` chained together.
 When running a workflow, the `input` is injected in the `Convert Start` node and it will run until it reaches a `Convert End` node.
 
-![convert basic](/_images/workflow_convert_basic.png)
+<img alt="Convert basic" src="/_images/workflow_convert_basic.png" no-shadow/>
 
 ## Flow
 
@@ -30,9 +30,7 @@ We currently only offer "official" nodes made by us, but we hope to allow the co
 There are many "regular" nodes offered in Convert workflows, you can select them from the left panel.
 They are grouped by `tag` and can appear in multiple places.
 
-<div align="center">
-  <img src="/_images/workflow_convert_node_tags.png" alt="convert node tags" height="500" />
-</div>
+<img alt="Convert node tags" src="/_images/workflow_convert_node_tags.png"  height="500" center/>
 
 They usually have some parameters that you can configure directly in the node.
 Those will affect how the node behaves.
@@ -76,9 +74,7 @@ Right now we only offer an `if/else`, but we will likely offer loops and other c
 
 The `if/else` node is very similar to the code node, with the exception that **it must return a boolean**.
 
-<div align="center">
-  <img src="/_images/workflow_convert_node_if.png" alt="convert node if" height="400" />
-</div>
+<img alt="Convert node if" src="/_images/workflow_convert_node_if.png" height="400" center/>
 
 ```javascript
 export function run(input, sdk) {

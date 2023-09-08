@@ -10,4 +10,4 @@ For each request in the Intercept table, you can then choose to edit its content
 
 When you're done forwarding, toggle the "Queuing" button to resume forwarding. This will forward all the queued up requests in the Intercept table.
 
-![Intercept](/_images/forward.png)
+<img alt="Intercept" src="/_images/forward.png" no-shadow/>

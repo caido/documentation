@@ -12,7 +12,7 @@ The Scope feature is split into two panes, the left pane contains the list of sc
 4. Choose the type of the entry (in-scope or out-of-scope) and click "Add".
 5. Click the "Save" button to create the preset.
 
-![scope_creation](/_images/scope_creation.png)
+<img alt="Scope creation" src="/_images/scope_creation.png" no-shadow/>
 
 ## Using scope presets
 
@@ -20,4 +20,4 @@ Once you have created a scope preset, you can apply it to the HTTP history and S
 
 When you select a scope preset from the dropdown, the table in the page will be filtered based on the hosts defined in the selected scope preset.
 
-![selecting_scope](/_images/history_selecting_scope.png)
+<img alt="Selecting scope" src="/_images/history_selecting_scope.png" no-shadow/>

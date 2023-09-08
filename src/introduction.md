@@ -4,4 +4,4 @@ Welcome to the Caido documentation site! Here you will find a wealth of informat
 
 Explore our documentation to learn about the different features of Caido and how to install and configure it. We invite you to take a look around and discover all that Caido has to offer.
 
-![intercept_with_filter](/_images/intercept.png)
+<img alt="Intercept with filter" src="/_images/intercept.png" no-shadow/>
