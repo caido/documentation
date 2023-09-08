@@ -6,21 +6,15 @@ The WS History feature allows you to view data exchange between the client and t
 
 When an HTTP Connection is upgraded to Websocket, it will appear in the stream table.
 
-<div align="center">
-<img src="../../_images/ws_streams.png" alt="Websocket History Streams" width="1000"/>
-</div>
+<img src="../../_images/ws_streams.png" alt="Websocket History Streams" width="1000" center/>
 
-Clicking on a stream will display the messages and their direction.
+</br> Clicking on a stream will display the messages and their direction.
 
-<div align="center">
-<img src="../../_images/stream_direction.png" alt="Stream Direction" width="1300"/>
-</div>
+<img src="../../_images/stream_direction.png" alt="Stream Direction" width="1300" center/>
 
-You can open each message to display the content.
+</br> You can open each message to display the content.
 
-<div align="center">
-<img src="../../_images/ws_message.png" alt="WS Message" width="1500"/>
-</div>
+<img src="../../_images/ws_message.png" alt="WS Message" width="1500" center/>
 
 ## Scopes
 
