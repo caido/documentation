@@ -6,6 +6,11 @@ on:
       - '**.jpeg'
       - '**.png'
       - '**.webp'
+
+concurrency:
+  group: compress-images-${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   run:
     # Only run on Pull Requests within the same repository, and not from forks.
