@@ -18,6 +18,6 @@ The Scope feature is split into two panes, the left pane contains the list of sc
 
 Once you have created a scope preset, you can apply it to the HTTP history and Search pages by selecting it from the "Scope Preset" dropdown located in the top left corner of each page.
 
-When you select a scope preset from the dropdown, the table in the page will be filtered based on the hosts defined in the selected scope preset.
+When you select a scope preset from the dropdown, the table on the page will be filtered based on the hosts defined in the selected scope preset.
 
 <img alt="Selecting scope" src="/_images/history_selecting_scope.png" no-shadow/>
