@@ -2,7 +2,7 @@
 
 The HTTP History feature allows you to view requests and responses as they pass through the proxy. The HTTP History page shows a table of all requests that have been proxied through Caido, along with details such as the request method, host, path, status code and length.
 
-![intercept](/_images/intercept.png)
+<img alt="HTTP History" src="/_images/intercept.png" no-shadow/>
 
 ## Filtering
 
@@ -18,6 +18,6 @@ You can filter requests by:
 - Status Code
 - ...
 
-![intercept_with_filter_drawer](/_images/intercept_with_filter_drawer.png)
+<img alt="HTTP History with filter drawer" src="/_images/intercept_with_filter_drawer.png" no-shadow/>
 
 You can also scope the requests by host. See the [Scope](/features/overview/scope.md) page for more details.

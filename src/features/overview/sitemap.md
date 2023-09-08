@@ -4,7 +4,7 @@ The Sitemap feature allows you to visualize the structure of any website that is
 
 It keeps track of domains, folders, and requests, as well as any variations in query parameters and post bodies. The Sitemap page provides a clear, hierarchical view of the website's structure, making it easy to identify and explore different parts of the site.
 
-![sitemap](/_images/sitemap.png)
+<img alt="Sitemap" src="/_images/sitemap.png" no-shadow/>
 
 ## Navigating the Sitemap
 

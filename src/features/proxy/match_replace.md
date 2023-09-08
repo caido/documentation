@@ -4,7 +4,7 @@ The Match & Replace feature allows you to define match & replace rules. These ru
 
 Match & Replace rules can be organized into collections, which allows you to group rules however you see fit. For example, you can create a collection to group User-Agent rules, header rules, etc.
 
-![tamper](/_images/tamper.png)
+<img alt="Match & Replace" src="/_images/tamper.png" no-shadow/>
 
 To create a Match & Replace rule, click on the "More options" icon of the collection where you want to create the rule and select the option "Create rule."
 
