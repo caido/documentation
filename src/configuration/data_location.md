@@ -27,4 +27,4 @@ caido --data-path /some/data/path
 
 For the Desktop application, set the `Data path` in the advanced options:
 
-![advanced_options](/_images/advanced_options.png)
+<img alt="Advanced options" src="/_images/advanced_options.png" no-shadow/>

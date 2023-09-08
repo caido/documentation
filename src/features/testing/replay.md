@@ -4,7 +4,7 @@ The Replay page allows you to edit and replay requests individually. This featur
 
 You can create requests from scratch, or start from any existing request inside the application. Once a request is created, you can edit it and replay it as many times as needed.
 
-![replay](/_images/replay.png)
+<img alt="Replay" src="/_images/replay.png" no-shadow/>
 
 ## Replay Collections
 

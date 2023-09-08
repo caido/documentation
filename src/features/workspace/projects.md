@@ -4,4 +4,4 @@ The Projects page allows you to organize your work by creating different project
 
 This allows you to easily switch between different assessments without losing track of the information you've collected and keep your work organized.
 
-![projects](/_images/projects.png)
+<img alt="Projects" src="/_images/projects.png" no-shadow/>

@@ -13,7 +13,7 @@ We use a few OAuth2 grants depending on the API.
 - <a href="https://www.rfc-editor.org/rfc/rfc8628.html" target="_blank">Device Authorization</a>: We use this grant to get an access and refresh tokens that authenticate a user. This grant is nice because it doesn't require a redirect from the browser contrary to most other grants.
 - <a href="https://www.rfc-editor.org/rfc/rfc6749#section-1.5" target="_blank">Refresh Token</a>: We use this grant to refresh the access token of the user without having to ask the user to re-login. At this moment, we do not make any guarantees on the lifetime of the tokens.
 
-![authentication_user](/_images/authentication_user.png)
+<img alt="Authenticate user flow" src="/_images/authentication_user.png" no-shadow/>
 
 ## Secrets storage
 
