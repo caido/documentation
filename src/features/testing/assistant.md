@@ -27,8 +27,12 @@ The Assistant page helps you understand what a request is doing by explaining it
 
 Be careful if your payload is huge, it can cost a lot of credits.
 
+<img src="../../_images/assistant_request.png" alt="assistant request" width="1500" center/>
+
 ## Generate CSRF
 
 The Assistant page currently allows you to generate proof of concept CSRF's. We are planning to add more attacks in the future.
 
 You can generate CSRF payloads for a specified request.
+
+<img src="../../_images/assistant_csrf.png" alt="assistant csrf" width="1500" center/>
