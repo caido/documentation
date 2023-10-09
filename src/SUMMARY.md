@@ -40,6 +40,8 @@
 - [Workspace]()
   - [Files](./features/workspace/files.md)
   - [Projects](./features/workspace/projects.md)
+  - [Backups](./features/workspace/backups.md)
+- [Settings]()
   - [Layout](./features/workspace/layout.md)
 
 # Internals
