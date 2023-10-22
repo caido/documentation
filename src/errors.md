@@ -30,3 +30,11 @@
   - Run Caido with `--reset-cache` or in the desktop advanced settings (reset cache).
   WARNING: Do it only ONCE.
 <img src="../../_images/reset_cache.png" alt="Reset Cache" width="1300" center/>
+
+### `An unkown authentification error occurred` during login process
+
+- Why:
+  - Usually means that your computer time is out of sync
+  - We allow 5 minutes slippage between the "real" time and your computer time
+- Remediations:
+  - Document the process for each platform to resync the time using NTP
