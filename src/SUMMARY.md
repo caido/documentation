@@ -1,5 +1,6 @@
 [Introduction](./introduction.md)
 [FAQ](./faq.md)
+[Common errors](./common_errors.md)
 
 # User Guide
 
