@@ -30,3 +30,20 @@ Enabled rules will be shown in the "Active rules" section of the page. This sect
 > It's important to note that the order of the rules in the "Active rules" section determines the order in which they will be applied to the requests.
 >
 > You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs, and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
+
+## Examples
+
+**1) Append a request header with a custom string**
+
+Many popular bug bounty programs require a custom header to be sent with your requests. You can do this in Caido using the Match and Replace feature. An example of this from Bugcrowd is to send the word `bugcrowd` to your USer-Agent header. See the example below on how to do this. After adding these values to the rules settings, be sure to save it!
+
+**Strategy**
+> Request header (_Enable_ `Search as Regex`)
+> 
+
+**Search**
+> ^(User-Agent: .+)
+
+**Replace**
+> $1 bugcrowd
+
