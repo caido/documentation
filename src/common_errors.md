@@ -6,7 +6,7 @@
 
 ### Why
 
-- You are trying to access an instance that yo do not own ( further info on instances [here](/src/internals/documentation_instances.md.md) )
+You are trying to access an instance that yo do not own ( further info on instances [here](/src/internals/documentation_instances.md.md) ).
 
 ### Likely origins
 
@@ -24,7 +24,7 @@
 
 ### Why
 
-- We have caches in Caido that take some time to update
+We have caches in Caido that take some time to update.
 
 ### Remediations
 
@@ -38,8 +38,9 @@
 
 ### Why
 
-- Usually means that your computer time is out of sync
-- We allow 5 minutes slippage between the "real" time and your computer time
+Usually means that your computer time is out of sync.
+
+We allow 5 minutes slippage between the "real" time and your computer time.
 
 ### Remediations
 
@@ -64,3 +65,15 @@ Manually resync the time using NTP.
   Open a terminal or SSH into your server > Install the NTP package by running the following command : `sudo apt-get install ntp` > Once the installation is complete, the NTP service should start automatically > Check its status by using this command `sudo systemctl status ntp`
   
   [More details](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers)
+
+## I can't forward some traffic using Caido
+
+### Why
+
+There possibly is a tamper rule modifying requests in a bad way.
+
+### Remediations
+
+- Restart the instance
+- Simply change the project in Caido
+- TLS (Transport Layer Security) is blocked by Cloudflare, and in order to bypass their bot detection mechanisms, you need to provide a valid cookie
