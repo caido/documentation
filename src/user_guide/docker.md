@@ -24,11 +24,13 @@ This is done by appending the `-v` parameter to the `docker run` command using t
 
 Note that the host path must be an absolute path.
 
+Make sure you give the right permissions to `<HOST PATH>` via `chown -R 999:999 <HOSTPATH>`.
+
 Your running command should look like the following:
 
 ```
 docker run --rm -p 7000:8080 \
-  -v /home/my_user/my_data:/home/caido/.local/share/caido caido:latest
+  -v /home/my_user/my_data:/home/caido/.local/share/caido caido/caido:latest
 ```
 
 ... where `/home/my_user/my_data` will be the folder containing Caido projects.
