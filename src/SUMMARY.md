@@ -47,6 +47,7 @@
 
 # Internals
 
+- [Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Authentication](./internals/authentication.md)
 

@@ -1,3 +1,0 @@
-# Documentation around instances
-
-WIP
