@@ -38,7 +38,7 @@ The Caido CLI is self-contained binary that launches the Caido proxy (also calle
 
 There is 3 options available:
 
-- Go check out the [Common errors](/src/common_errors.md) page
+- Go check out the [Common errors](./common_errors.md) page
 - Join the Discord
 - Raise an issue on [Github](https://github.com/caido/caido) if it's a bug.
 
