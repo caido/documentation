@@ -1,5 +1,6 @@
 [Introduction](./introduction.md)
 [FAQ](./faq.md)
+[Common errors](./common_errors.md)
 
 # User Guide
 
@@ -46,6 +47,7 @@
 
 # Internals
 
+- [Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Authentication](./internals/authentication.md)
 
