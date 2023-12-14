@@ -6,7 +6,7 @@ HttlQL is the query language we use in Caido to let you filtering requests and r
 
 # Primitives
 
-<img width="500" alt="Parts of a filter clause" src="/_images/httpql.png" no-shadow center/>
+<img width="500" alt="Parts of a filter clause" src="/_images/httpql_clause.png" no-shadow center/>
 
 ## 1. Namespace
 
@@ -78,6 +78,38 @@ The `preset` value is a different. You can reference presets in one of two ways:
 
 Head over to the [filters](/features/overview/filters.md) page to learn more about filter presets.
 
+### Standalone
+
+We support string standalone values **without** `namespace`, `field` and `operator` (like `"my value"`).
+It is a shortcut to search across both requests and responses, it is replaced at runtime by:
+
+```
+(req.raw.cont:"my value" OR resp.raw.cont:"my value")
+```
+
 </br>
 
-# Logical operators
+# Query
+
+<img width="600" alt="A full HttpQL Query" src="/_images/httpql_logical.png" no-shadow center/>
+
+Queries are composed of multiple filter clauses that are combined together using `logical operators` and `logical grouping`.
+
+## Logical operators
+
+We offer two logical operators:
+
+- **AND**: Both the left and right clauses must be true
+- **OR**: Either the left or right clause must be true
+
+Operators can be written in upper or lower case. Both have the **same priority**.
+
+## Logical grouping
+
+We don't have priority of operations, this means that the automatic grouping is done from **left to right** (this might change eventually):
+
+- `clause1 AND clause2 OR clause3` is equivalent to `((clause1 AND clause2) OR clause3)`
+- `clause1 OR clause2 AND clause3` is equivalent to `((clause1 OR clause2) AND clause3)`
+- `clause1 AND clause2 AND clause3` is equivalent to `((clause1 AND clause2) AND clause3)`
+
+We thus recommend that you insert parentheses to make sure the logicial groups represent what you are trying to accomplish.
