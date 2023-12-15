@@ -24,6 +24,7 @@
 - [Overview]()
   - [Sitemap](./features/overview/sitemap.md)
   - [Scope](./features/overview/scope.md)
+  - [Filters](./features/overview/filters.md)
 - [Proxy]()
   - [Intercept](./features/proxy/intercept.md)
   - [HTTP History](./features/proxy/http_history.md)
@@ -47,6 +48,7 @@
 
 # Internals
 
+- [HttpQL](./internals/httpql.md)
 - [Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Authentication](./internals/authentication.md)
