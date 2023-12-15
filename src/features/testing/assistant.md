@@ -24,7 +24,7 @@ Credit usage depends on the model used. We currently offer ChatGPT-3.5 Turbo, bu
 
 - **1 credit is equal to 1 token**
 - A token is roughly a word or ¾ of a word.
-  <img src="../../_images/token_system.png">
+  <img src="/_images/token_system.png">
 - If you send follow-up messages in the same session, the tokens of all previous messages count in your credit usage
 - You can send a maximum of **4000 tokens** in a single session
 
@@ -48,13 +48,13 @@ The Assistant can help you understand what a request is doing by explaining it i
 
 Be careful if your payload is huge, it can cost a lot of credits.
 
-<img src="../../_images/assistant_request.png" alt="assistant request" width="1500" center/>
+<img src="/_images/assistant_request.png" alt="assistant request" width="1500" center/>
 
 <br>
 
 You can access the Assistant feature easily by right-clicking on a request in `HTTP History` or `Search`.
 
-<img src="../../_images/right_click_explain.png" alt="explain right click" width="1500" center/>
+<img src="/_images/right_click_explain.png" alt="explain right click" width="1500" center/>
 
 > Warning: the request is sent automatically along with any sensitive information contained in it
 
@@ -78,4 +78,4 @@ The Assistant page currently allows you to generate proof of concept [CSRF](http
 
 You can generate CSRF payloads for a specified request with the right click menu, similar to the `Explain` request.
 
-<img src="../../_images/assistant_csrf.png" alt="assistant csrf" width="1500" center/>
+<img src="/_images/assistant_csrf.png" alt="assistant csrf" width="1500" center/>

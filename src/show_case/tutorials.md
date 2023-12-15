@@ -6,6 +6,11 @@ If you want your contributions to appear here, please follow the [contribution g
 
 Please note that these videos are not endorsed by Caido.
 
+## Try Hack Me
+
+- OWASP Top 10
+  - [Tyler Ramsbey](https://hacksmarter.live): [https://www.youtube.com/watch?v=nZDwUwIPJ6M](https://www.youtube.com/watch?v=nZDwUwIPJ6M)
+
 ## Hack The Box
 
 - Intranet

@@ -14,10 +14,10 @@ To replace an element in your query, you first have to highlight it and click on
 
 We currently provide 4 attack strategies:
 
-- **Sequential:** This will replace markers one at a time. If you have multiple markers, **only one** will be replaced for any given request.
-- **All:** This will replace all the markers with the same value.
-- **Parallel:** This will replace all the markers with different values from the different payloads. This requires payloads that each have the same number of elements.
-- **Matrix:** This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
+- **Sequential** _(Sniper)_: This will replace markers one at a time. If you have multiple markers, **only one** will be replaced for any given request.
+- **All** _(Battering ram)_: This will replace all the markers with the same value.
+- **Parallel** _(Pitchfork)_: This will replace all the markers with different values from the different payloads. This requires payloads that each have the same number of elements.
+- **Matrix** _(Cluster bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
 
 <img alt="Automate strategy" src="/_images/automate_strategy.png" no-shadow/>
 

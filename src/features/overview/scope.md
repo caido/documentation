@@ -1,23 +1,25 @@
 # Scope
 
-The Scope feature allows you to filter requests throughout the app by creating presets of in-scope and out-of-scope hosts. Currently, scoping is available for the Sitemap, Search and HTTP History pages.
+Scopes allows you to filter requests throughout the app by creating presets of in-scope and out-of-scope hosts. Scoping is available for most of the Caido tools.
 
-## Creating a scope preset
+## Creating a scope
 
-The Scope feature is split into two panes, the left pane contains the list of scope presets, and the right pane contains the details for a scope preset. To create a new scope preset, follow these steps:
+You can create as many scopes as you want. Scopes are specific to a project.
+Scopes are composed of **scope rules**:
 
-1. In the left pane, click on the "New Preset" button.
-2. In the right pane, enter a name for the new preset in the "Preset Name" field.
-3. Write the name of the host you want to add to the scope preset. You can use the wildcard characters '%' and '\_' to create your presets.
-4. Choose the type of the entry (in-scope or out-of-scope) and click "Add".
-5. Click the "Save" button to create the preset.
+- They can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
+- They can include [Glob wildcards](<https://en.wikipedia.org/wiki/Glob_(programming)>) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLD (`*example*`).
+- They currently only support domains, **not paths**.
+- They can be `In Scope` acting as an allow list or `Out of Scope` acting as a deny list.
+
+> **NOTE**: Adding or removing a rule can be **slow** if you have a big project since Caido will re-index your data on each change
 
 <img alt="Scope creation" src="/_images/scope_creation.png" no-shadow/>
 
-## Using scope presets
+## Using a scope
 
-Once you have created a scope preset, you can apply it to the HTTP history and Search pages by selecting it from the "Scope Preset" dropdown located in the top left corner of each page.
+Once you have created a scope preset, you can apply it to a given tool by selecting it from the `Scope Preset` dropdown located in the **top left corner** of each page that support it.
 
-When you select a scope preset from the dropdown, the table on the page will be filtered based on the hosts defined in the selected scope preset.
+In Caido, scopes are **NOT** global. Each tool and _(eventually)_ each view can have a different scope. You can switch between scopes very fast.
 
-<img alt="Selecting scope" src="/_images/history_selecting_scope.png" no-shadow/>
+<img width="400" alt="Selecting scope" src="/_images/scope_selection.png" center/>
