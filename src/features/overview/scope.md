@@ -7,8 +7,8 @@ Scopes allows you to filter requests throughout the app by creating presets of i
 You can create as many scopes as you want. Scopes are specific to a project.
 Scopes are composed of **scope rules**:
 
-- They can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`).
-- They can include wildcards (`*`) to support multiple subdomains (`*.example.com`) and TLD (`*example*`).
+- They can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
+- They can include [Glob wildcards](<https://en.wikipedia.org/wiki/Glob_(programming)>) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLD (`*example*`).
 - They currently only support domains, **not paths**.
 - They can be `In Scope` acting as an allow list or `Out of Scope` acting as a deny list.
 
