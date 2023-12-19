@@ -24,7 +24,7 @@ By selecting a scope, requests and responses In-scope will be intercepted and on
 
 <img alt="intercept_scope" src="/_images/intercept_scope.png"/>
 
-## Modifications of requests and responses in transit
+## Modifications of requests and responses
 
 If you choose to edit content in the Intercept table, modifications will be visible after your rule in Match & Replace is done and active.
 
