@@ -6,7 +6,7 @@ To eventually add websocket interceptions to Caido, vote for this issue [here](h
 
 ## Pausing and Resuming Intercept
 
-To pause forwarding, toggle the "Forwarding" button on the top right of any page. This will prevent any new requests from being forwarded through the proxy and will queue them up in the Forward table.
+To pause forwarding, toggle the "Forwarding" button on the top right of any page. This will prevent any new requests from being forwarded through the proxy and will queue them up in the Intercept table.
 
 The interface allows you to queue multiple requests and responses in the Intercept table. All requests are visible in one place and can be sorted.
 
