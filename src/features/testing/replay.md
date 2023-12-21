@@ -24,4 +24,4 @@ Navigate quickly through the history of requests and responses in your Session b
 
 - You can use Convert Workflows in Replay. See the [Workflows](/features/workflows/convert.md) page for more details.
 
--
+- GET/POST: Convert the request from a POST form to a GET with query parameters
