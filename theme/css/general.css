@@ -113,7 +113,7 @@ table td {
     border: 1px var(--table-border-color) solid;
 }
 table td[no-border] {
-  border: none;
+    border: none;
 }
 table thead {
     background: var(--table-header-bg);
