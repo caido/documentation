@@ -1,6 +1,6 @@
 # Filters
 
-The filters page allows you to create **filter presets** that can then later be used in [HttpQL](/features/internals/httpql.md) queries.
+The filters page allows you to create **filter presets** that can then later be used in [HttpQL](/internals/httpql.md) queries.
 We provide a few presets for each new project, but you can modify or update them if you wish to.
 
 The filters are project specific for the moment.

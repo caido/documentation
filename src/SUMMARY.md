@@ -16,7 +16,8 @@
 
 # Show Case
 
-- [Reviews](./show_case/reviews.md)
+- [Overviews](./show_case/overviews.md)
+- [Interviews](./show_case/interviews.md)
 - [Tutorials](./show_case/tutorials.md)
 
 # Features
