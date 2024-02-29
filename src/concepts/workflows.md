@@ -22,14 +22,12 @@ Each node has a customizable `alias` which is used to uniquely identify itself i
 <img alt="Base64 Node" src="/_images/workflow_convert_node_base64.png" width="500" center/>
 
 
-Caido comes with a default list of nodes depending on the workflow type.
-Here are a few we support:
+Caido comes with a default list of nodes. Here are a few we support:
 - Encoding nodes (Base64/URL/Hex)
 - Hashing nodes (SHA1/SHA2)
 - Code nodes (Shell/JavaScript)
 - Control nodes (If-Else/If-Else-Javascript)
 - Misc nodes (Set-Color/HTTPQL)
-
 
 ## Connections
 
