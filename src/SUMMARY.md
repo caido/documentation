@@ -10,8 +10,8 @@
 
 # Configuration
 
-- [Default listening address/port](./configuration/default_listening_address.md)
-- [Import CA Certificate](./configuration/import_ca_certificate.md)
+- [Listening Address/Port](./configuration/listening_address.md)
+- [CA Certificate](./configuration/import_ca_certificate.md)
 - [Data Location](./configuration/data_location.md)
 
 # Show Case
@@ -19,6 +19,10 @@
 - [Overviews](./show_case/overviews.md)
 - [Interviews](./show_case/interviews.md)
 - [Tutorials](./show_case/tutorials.md)
+
+# Concepts
+- [HTTPQL](./concepts/httpql.md)
+- [Workflows](./concepts/workflows.md)
 
 # Features
 
@@ -35,8 +39,8 @@
   - [Replay](./features/testing/replay.md)
   - [Automate](./features/testing/automate.md)
   - [Assistant](./features/testing/assistant.md)
-- [Workflows]()
-  - [Convert](./features/workflows/convert.md)
+  - [Workflows]()
+    - [Convert](./features/testing/workflows/convert.md)
 - [Logging]()
   - [Search](./features/logging/search.md)
   - [Exports](./features/logging/exports.md)
@@ -49,7 +53,6 @@
 
 # Internals
 
-- [HttpQL](./internals/httpql.md)
 - [Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Authentication](./internals/authentication.md)

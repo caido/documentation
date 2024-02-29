@@ -1,4 +1,4 @@
-# Default listening address/port
+# Listening address/port
 
 Caido, by default, listens on the IP address `127.0.0.1` and port `8080`. This means that Caido will only be accessible from the same machine it is running on.
 

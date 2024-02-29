@@ -1,6 +1,6 @@
 # Filters
 
-The filters page allows you to create **filter presets** that can then later be used in [HttpQL](/internals/httpql.md) queries.
+The filters page allows you to create **filter presets** that can then later be used in [HTTPQL](/internals/httpql.md) queries.
 We provide a few presets for each new project, but you can modify or update them if you wish to.
 
 The filters are project specific for the moment.
@@ -16,7 +16,7 @@ The `alias` can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and 
 
 ## Expression
 
-The expression is an [HttpQL](/features/internals/httpql.md) query, but it has some limitations:
+The expression is an [HTTPQL](/features/concepts/httpql.md) query, but it has some limitations:
 
 - It **cannot** reference other `presets`
 - The shortcut `"my value"` is always expanded as `(req.raw.cont:"my value" OR resp.raw.cont:"my value")`
