@@ -42,7 +42,7 @@ You can refresh your account state by logging out / logging in to your Caido ins
 
 <img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
 
-You may see this error during login, it means that your computer time is out of sync.
+You may see this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
 
 We allow 5 minutes slippage between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
 
