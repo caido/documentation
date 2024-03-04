@@ -21,6 +21,7 @@
 - [Tutorials](./show_case/tutorials.md)
 
 # Concepts
+
 - [HTTPQL](./concepts/httpql.md)
 - [Workflows](./concepts/workflows.md)
 
@@ -55,6 +56,7 @@
 
 - [Instances](./internals/instances.md)
 - [Files](./internals/files.md)
+- [Cloud](./internals/cloud.md)
 - [Authentication](./internals/authentication.md)
 
 # Community Contributions
