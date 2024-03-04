@@ -8,3 +8,8 @@ title = "Caido Documentation"
 [output.html]
 default-theme = "navy"
 git-repository-url = "https://github.com/caido/documentation"
+
+[output.html.redirect]
+"/configuration/default_listening_address.html" = "/configuration/listening_address.html"
+"/features/workflows/convert.html" = "/features/testing/workflows/convert.html"
+"/internals/httpql.html" = "/concepts/httpql.html"
