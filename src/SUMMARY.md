@@ -25,6 +25,7 @@
 - [HTTPQL](./concepts/httpql.md)
 - [Workflows](./concepts/workflows.md)
 - [Tabs](./concepts/tabs.md)
+- [Layout](./concepts/layout.md)
 
 # Features
 
@@ -50,12 +51,15 @@
   - [Files](./features/workspace/files.md)
   - [Projects](./features/workspace/projects.md)
   - [Backups](./features/workspace/backups.md)
-- [Settings]()
-  - [Layout](./features/workspace/layout.md)
+
+# Plugins
+- [Custom CSS](./plugins/custom_css.md)
+- [(WIP) Custom JS](./plugins/custom_js.md)
+- [(WIP) Custom Workflow Nodes](./plugins/custom_workflow_nodes.md)
 
 # Internals
 
-- [Instances](./internals/instances.md)
+- [(WIP) Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Cloud](./internals/cloud.md)
 - [Authentication](./internals/authentication.md)
@@ -63,5 +67,3 @@
 # Community Contributions
 
 - [Documentation](./contributions/documentation.md)
-- [(WIP) Convert nodes](./contributions/convert_nodes.md)
-- [(WIP) Plugins](./contributions/plugins.md)
