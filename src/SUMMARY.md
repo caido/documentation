@@ -24,6 +24,7 @@
 
 - [HTTPQL](./concepts/httpql.md)
 - [Workflows](./concepts/workflows.md)
+- [Tabs](./concepts/tabs.md)
 
 # Features
 
