@@ -1,6 +1,7 @@
 [Introduction](./introduction.md)
 [FAQ](./faq.md)
 [Common errors](./common_errors.md)
+[Report a bug](./report_bug.md)
 
 # User Guide
 
@@ -53,6 +54,7 @@
   - [Backups](./features/workspace/backups.md)
 
 # Plugins
+
 - [Custom CSS](./plugins/custom_css.md)
 - [(WIP) Custom JS](./plugins/custom_js.md)
 - [(WIP) Custom Workflow Nodes](./plugins/custom_workflow_nodes.md)
