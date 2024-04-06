@@ -24,7 +24,7 @@ Credit usage depends on the model used. We currently offer ChatGPT-3.5 Turbo, bu
 
 - **1 credit is equal to 1 token**
 - A token is roughly a word or ¾ of a word.
-  <img src="/_images/token_system.png">
+  <img alt="Token computation" src="/_images/token_system.png">
 - If you send follow-up messages in the same session, the tokens of all previous messages count in your credit usage
 - You can send a maximum of **4000 tokens** in a single session
 

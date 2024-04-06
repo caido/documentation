@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD042 -->
+
 [Introduction](./introduction.md)
 [FAQ](./faq.md)
 [Common errors](./common_errors.md)

@@ -40,14 +40,14 @@ Enabled rules will be shown in the `Active rules` section of the page. This sect
 
 Many popular bug bounty programs require a custom header to be sent with your requests. You can do this in Caido using the `Match and Replace` feature. An example of this for [Bugcrowd](https://www.bugcrowd.com/) is to send the word `bugcrowd` as your User-Agent header.
 
-**Strategy**
+#### Strategy
 
 > Request header (_Enable_ `Search as Regex`)
 
-**Search**
+#### Search
 
 > ^(User-Agent: .+)
 
-**Replace**
+#### Replace
 
 > $1 bugcrowd

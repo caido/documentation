@@ -2,12 +2,12 @@
 
 Workflows are the main way to customize Caido to suit your needs.
 A workflow consists of three components:
+
 - [Nodes](#nodes)
 - [Connections](#connections)
 - [Inputs & Outputs](#inputs--outputs)
 
 <img alt="Convert workflow" src="/_images/workflow_convert_basic.png" center/>
-
 
 ## Nodes
 
@@ -21,8 +21,8 @@ Each node has a customizable `alias` which is used to uniquely identify itself i
 
 <img alt="Base64 Node" src="/_images/workflow_convert_node_base64.png" width="500" center/>
 
-
 Caido comes with a default list of nodes. Here are a few we support:
+
 - Encoding nodes (Base64/URL/Hex)
 - Hashing nodes (SHA1/SHA2)
 - Code nodes (Shell/JavaScript)
@@ -37,12 +37,12 @@ Drag the bottom socket of one node into the top socket of another to connect the
 
 <img alt="Workflow Connections" src="/_images/workflow_connections.png" width="300" center/>
 
-
 ## Inputs & Outputs
 
-While connections define what __order__ the nodes are run in, they do not define what `inputs` each node will use.
+While connections define what **order** the nodes are run in, they do not define what `inputs` each node will use.
 
 Node inputs fall under two types:
+
 - Constant values
 - Reference values
 
@@ -54,6 +54,7 @@ When using a constant value, executing the node will use the value as-is.
 When using a reference value, executing the node will use the output of a previous node.
 
 To use reference values, the content of the text field should be under the format:
+
 ```
 $[node_alias].[property_alias]
 ```
@@ -79,6 +80,3 @@ Here's an example where the `data` output of the `start` node is used as `data` 
     </tr>
   </tbody>
 </table>
-
-
-
