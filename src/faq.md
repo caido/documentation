@@ -2,9 +2,9 @@
 
 ## Is Caido free?
 
-Yes, Caido is free to use. However, we also offer a pro tier which will include additional advanced features in the future. By purchasing the pro version, you will be supporting the development and maintenance of the tool.
+Caido has a free `Basic` plan. We also offer a `Pro` plan which includes additional advanced features. By purchasing the `Pro` plan, you will be supporting the development and maintenance of the tool.
 
-Additionally, we offer an enterprise plan for organizations that need premium support and/or custom feature implementation.
+Additionally, we offer a `Team` plan for organizations that need premium support and/or custom feature implementation.
 
 You can check our website to stay informed about the new features that will be added in the future.
 
