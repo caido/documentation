@@ -23,6 +23,7 @@
 
 # Concepts
 
+- [Instances](./concepts/instances.md)
 - [HTTPQL](./concepts/httpql.md)
 - [Workflows](./concepts/workflows.md)
 - [Tabs](./concepts/tabs.md)
@@ -61,7 +62,6 @@
 
 # Internals
 
-- [(WIP) Instances](./internals/instances.md)
 - [Files](./internals/files.md)
 - [Cloud](./internals/cloud.md)
 - [Authentication](./internals/authentication.md)
