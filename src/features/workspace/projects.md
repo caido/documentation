@@ -7,10 +7,11 @@ We encourage you to keep your work organized by creating many smaller projects.
 <img alt="Projects" src="/_images/projects_page.png">
 
 By clicking on the three dots to the right of the project Select button, you may:
-* Rename your project
-* Copy <a href="/internals/files.html">the file path to your project</a>
-* Create <a href="/features/workspace/backups.html">a backup</a> of your project
-* Delete your project
+
+- Rename your project
+- Copy [the file path to your project](/internals/files.md)
+- Create [a backup](/features/workspace/backups.md) of your project
+- Delete your project
 
 <img width="300" alt="Rename Projects" src="/_images/projects_rename.png" center>
 
@@ -24,12 +25,10 @@ The Project button on the top right of any page enables you to easily switch bet
 
 <img width="500" alt="Switch Projects" src="/_images/projects_switch.png" center>
 
-
 ## Project Updating
 
 When structural changes occur after a Caido update, sometimes it is necessary for Caido to update a project to a new project format. This can take time but will ensure you're working with the latest capabilities in Caido.
 
 > Projects are automatically upgraded when you use them with a newer Caido version and **CANNOT** be downgraded
 
-<img width="300" alt="Upgrade Projects" src="/_images/projects_upgrade.png" center>
-
+<img width="400" alt="Upgrade Projects" src="/_images/projects_upgrade.png" center>
