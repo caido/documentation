@@ -18,12 +18,11 @@
 
 ## 👋 Welcome
 
-Welcome to the Caido documentation repository! 
+Welcome to the Caido documentation repository!
 
 To contribute to our documentation, you can either submit a pull request directly to the repository or create an issue if you have a question or suggestion. If you're making a pull request, please make sure to follow our style guide and to test your changes before submitting.
 
-Please note that you'll also have to sign a [contributor license agreement](https://cla-assistant.io/caido/documentation
-) when submitting a PR.
+Please note that you'll also have to sign a [contributor license agreement](https://cla-assistant.io/caido/documentation) when submitting a PR.
 
 Thanks in advance for your contributions!
 

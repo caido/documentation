@@ -7,6 +7,4 @@ Just head over to the tree view in the sidebar, and you'll find all your session
 
 This functionality allows you to manage your screen real estate efficiently while maintaining the ability to access and resume your work at any point.
 
-
-
 <img width="1000" alt="Tab and tree section" src="/_images/tabs.png" no-shadow center/>

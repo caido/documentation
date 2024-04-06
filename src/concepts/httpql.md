@@ -34,8 +34,12 @@ We will add more fields eventually. [Let us know](https://github.com/caido/caido
 
 ### resp
 
+<!-- markdownlint-disable MD038 -->
+
 - **code**: Status code of the reponse. If the response is malformed, this will contain everything after `HTTP/1.1 ` and the following space.
 - **raw**: The full raw data of the response. This allows you to search on things we currently don't index (like headers).
+
+<!-- markdownlint-enable MD038 -->
 
 ## 3. Operator
 

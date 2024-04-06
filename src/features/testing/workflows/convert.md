@@ -13,10 +13,10 @@ These workflows are triggered manually and are integrated in various areas of Ca
 Most convert nodes have simple inputs that are covered by the [workflow](/concepts/workflows.md) guide.
 
 There are a few exceptions that require further explanation:
+
 - [JavaScript node](#javascript)
 - [Shell node](#shell)
 - [Control flow nodes](#control-flow)
-
 
 ### JavaScript
 
@@ -72,5 +72,3 @@ export function run(input, sdk) {
 
 Based on the result, the execution will take the `True` or `False` branch.
 **Make sure to connect both** to the rest of the workflow!
-
-
