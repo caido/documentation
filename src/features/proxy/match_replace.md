@@ -15,6 +15,11 @@ When creating a new rule, you can update the following fields:
 - `Search as regex`: If the `Search term` is a regex or a simple string match
 - `Search term`: The term to search for in the defined part of the request or response.
 - `Replace term`: The term to replace the search term with.
+- `Condition`: a [HTTPQL](/concepts/httpql.html) query that defines which requests/responses this rule applies to.
+
+> <a href="#common-mistake">**COMMON MISTAKE**</a>
+>
+> If you're having an issue with your Match & Replace rule not taking affect, and you've already double checked your `Strategy`, make sure you're looking at the un-prettified version of the request/response body by pressing the <img width=30 alt="Unprettify button" src="/_images/match_replace_unprettify.png"> button in HTTP History to ensure your spacing is correct.
 
 ## Testing your rule
 
@@ -51,3 +56,19 @@ Many popular bug bounty programs require a custom header to be sent with your re
 #### Replace
 
 > $1 bugcrowd
+
+### Turning an isAdmin boolean from False to True
+
+It is common to see a boolean such as `isAdmin` in the JSON API response of a request which describes the current user (i.e. `/api/user/properties`). By using a Match & Replace rule to turn this to `true`, we can navigate the client-side of the application as if we were an admin.
+
+#### Strategy
+
+> Response Body
+
+#### Search
+
+> "isAdmin":false
+
+#### Replace
+
+> "isAdmin":true
