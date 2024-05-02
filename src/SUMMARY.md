@@ -7,6 +7,7 @@
 
 # User Guide
 
+- [Beginner Guide](./user_guide/beginner_guide.md)
 - [Installation](./user_guide/installation.md)
 - [Running on a VPS](./user_guide/vps.md)
 - [Running in docker](./user_guide/docker.md)
