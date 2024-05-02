@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postStartCommand": "mdbook serve",
+  "forwardPorts": [3000],
+  "features": {
+  "ghcr.io/eitsupi/devcontainer-features/mdbook:1": {}
+  }
+}
+
