@@ -20,4 +20,3 @@ Items such as an HTML file (_this file defines the layout of all the different e
 
 **Caido** is a proxy for capturing web traffic. **Caido** allows you to intercept and modify **HTTP**(**S**) requests and responses - all while providing intuitive and providing a beautiful user interface.
 
-_italic_
