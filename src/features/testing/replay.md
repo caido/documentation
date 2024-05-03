@@ -6,7 +6,7 @@ You can create requests from scratch, or start from any existing request inside 
 
 <img alt="Replay" src="/_images/replay_page.png" center>
 
-## Replay Collections
+## Collections
 
 Requests are organized into Collections and Sessions.
 

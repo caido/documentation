@@ -1,6 +1,6 @@
-# HttpQL
+# HTTPQL
 
-HttlQL is the query language we use in Caido to let you filtering requests and responses. It is an evolving language that we hope will eventually become an industry standard.
+HTTPQL is the query language we use in Caido to let you filtering requests and responses. It is an evolving language that we hope will eventually become an industry standard.
 
 </br>
 
@@ -34,8 +34,12 @@ We will add more fields eventually. [Let us know](https://github.com/caido/caido
 
 ### resp
 
+<!-- markdownlint-disable MD038 -->
+
 - **code**: Status code of the reponse. If the response is malformed, this will contain everything after `HTTP/1.1 ` and the following space.
 - **raw**: The full raw data of the response. This allows you to search on things we currently don't index (like headers).
+
+<!-- markdownlint-enable MD038 -->
 
 ## 3. Operator
 
@@ -63,11 +67,16 @@ That category of operators work on field that are text (or bytes) like `path` an
 - **ne**: No equal to `value`
 - **nlike**: SQLITE `NOT LIKE` operator, see `like` for more details.
 
-We don't currently support full regex, but we will in the future.
+### Regex
+
+That category of operators work on field that are text (or bytes) like `path` and `raw`.
+
+- **regex**: Matches the regex `/value.+/`
+- **nregex**: Doesn't match the regex `/value.+/`
 
 ## 4. Value
 
-This is the value against which the field will be compared. The value is either an integer or a string depending on the field.
+This is the value against which the field will be compared. The value is either an integer (like `1`), a string (`"value"`) or a regex (`/value/`) depending on the field and operator.
 
 ### Preset
 
@@ -91,7 +100,7 @@ It is a shortcut to search across both requests and responses, it is replaced at
 
 # Query
 
-<img width="600" alt="A full HttpQL Query" src="/_images/httpql_logical.png" no-shadow center/>
+<img width="600" alt="A full HTTPQL Query" src="/_images/httpql_logical.png" no-shadow center/>
 
 Queries are composed of multiple filter clauses that are combined together using `logical operators` and `logical grouping`.
 
@@ -106,10 +115,10 @@ Operators can be written in upper or lower case. Both have the **same priority**
 
 ## Logical grouping
 
-We don't have priority of operations, this means that the automatic grouping is done from **left to right** (this might change eventually):
+Caido supports the priority of operations, `AND` has a higher priority than `OR`. Here are some examples:
 
 - `clause1 AND clause2 OR clause3` is equivalent to `((clause1 AND clause2) OR clause3)`
-- `clause1 OR clause2 AND clause3` is equivalent to `((clause1 OR clause2) AND clause3)`
+- `clause1 OR clause2 AND clause3` is equivalent to `(clause1 OR (clause2 AND clause3))`
 - `clause1 AND clause2 AND clause3` is equivalent to `((clause1 AND clause2) AND clause3)`
 
-We thus recommend that you insert parentheses to make sure the logicial groups represent what you are trying to accomplish.
+We still recommend that you insert parentheses to make sure the logicial groups represent what you are trying to accomplish.

@@ -1,77 +1,81 @@
 # Common errors
 
-## You do not have access to this instance
+You might face of any these issues while using Caido:
+
+- ["You do not have access to this instance"](#you-do-not-have-access-to-this-instance)
+- [I have paid for "Pro" but it still shows "Community" in the app](#i-have-paid-for-pro-but-it-still-shows-community-in-the-app)
+- [I get a "Date mismatch" error during login](#i-get-a-date-mismatch-error-during-login)
+
+## "You do not have access to this instance"
 
 <img alt="No access to instance" src="/_images/no_access_instance.png"/>
 
-**Why**
+You may encounter this error when trying to access an instance that you do not own (further info on instances [here](/internals/instances.md)). This can happen if you've initially setup a Caido instance using a different account.
 
-You are trying to access an instance that yo do not own (further info on instances [here](/internals/instances.md)).
+### Method 1: Login with your original Caido account
 
-**Likely origins**
+Login to the initial account that was used to setup your Caido instance.
 
-- You used another Caido account in the past to connect to the machine on which Caido is running.
+### Method 2: Reset the instance credentials
 
-**Remediations**
+If you're using the CLI, start Caido using `caido --reset-credentials`
 
-- Login with your original Caido account
-- Delete the data folder of Caido
-- Run Caido with `--reset-credentials` or in the desktop advanced settings (reset credentials).
-  WARNING: Do it only ONCE.
-  <img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300" center/>
+If you're using the desktop app, check the `Reset Credentials` checkbox in your instance's advanced settings.
 
-## I have paid for the Pro plan but it still shows Community in the app
+These settings will allow you to login with any account you want.
 
-**Why**
+Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
 
-We have caches in Caido that take some time to update.
+<img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300" center/>
 
-**Remediations**
+### Method 3: Delete your data folder
 
-- Wait 1 h
-- Logout/Login from your instance
-- Run Caido with `--reset-cache` or in the desktop advanced settings (reset cache).
-  WARNING: Do it only ONCE.
-  <img src="/_images/reset_cache.png" alt="Reset Cache" width="1300" center/>
+While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. Check out the [Files](/internals/files.md) page to locate your data folder.
 
-## An unkown authentification error occurred during login process
+## "Login URL generation failed"
 
-**Why**
+<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400"/>
 
-Usually means that your computer time is out of sync.
+You may encounter this error when trying to access an instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).
 
-We allow 5 minutes slippage between the "real" time and your computer time.
+The easiest way to fix this issue is to [Reset the instance credentials](#method-2-reset-the-instance-credentials).
 
-**Remediations**
+## I have paid for "Pro" but it still shows "Community" in the app
 
-Manually resync the time using NTP.
+Caido caches the state of your account. Any changes to your account can take some time to update.
 
-- **Windows**
+You can refresh your account state by logging out / logging in to your Caido instance.
 
-  Right-click on the clock > `Adjust date/time` > Go to `Date & Time` in `Setting` > Click `Sync now`
+## I get a "Date mismatch" error during login
 
-  [More details](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html)
+<img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
 
-- **MacOS**
+You may see this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
 
-  Open a terminal window > Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`) > Check the time synchronization status again using the same command to confirm the synchronization has been achieved.
+We allow 5 minutes slippage between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
 
-  [More details](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788)
+### Windows
 
-- **Linux**
+1. Right-click on the clock
+1. `Adjust date/time`
+1. Go to `Date & Time` in `Setting`
+1. Click `Sync now`
 
-  Open a terminal or SSH into your server > Install the NTP package by running the following command : `sudo apt-get install ntp` > Once the installation is complete, the NTP service should start automatically > Check its status by using this command `sudo systemctl status ntp`
+You can find more information about this issue [here](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html).
 
-  [More details](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers)
+### MacOS
 
-## I can't forward some traffic using Caido
+1. Open a terminal window
+1. Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`)
+1. Check the time synchronization status again using the same command
 
-**Why**
+You can find more information about this issue [here](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788).
 
-There possibly is a tamper rule modifying requests in a bad way.
+### Linux
 
-**Remediations**
+1. Open a terminal or SSH into your server
+1. Install the NTP package: `sudo apt-get install ntp`
+1. Once the installation is complete, the NTP service should start automatically
+1. Check its status by using this command `sudo systemctl status ntp`
 
-- Restart the instance
-- Simply change the project in Caido
-- TLS (Transport Layer Security) is blocked by Cloudflare, and in order to bypass their bot detection mechanisms, you need to provide a valid cookie
+You can find more information about this issue [here](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers).

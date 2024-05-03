@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Compress Images
         uses: calibreapp/image-actions@04831e32337cfbe14b4b2952e5c4aac651f32ec5

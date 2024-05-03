@@ -1,0 +1,22 @@
+name: Lint
+on:
+  pull_request:
+    paths:
+      - '**.md'
+
+concurrency:
+  group: lint-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Lint
+        uses: DavidAnson/markdownlint-cli2-action@510b996878fc0d1a46c8a04ec86b06dbfba09de7 # v15
+        with:
+          globs: '**/*.md'

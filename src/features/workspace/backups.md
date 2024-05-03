@@ -1,6 +1,6 @@
 # Backups
 
-You can create backups of you projects at anytime inside Caido.
+You can create backups of your projects at anytime inside Caido.
 They are self-contained files that can be easily shared with colleagues, partners, clients, etc.
 Creating backups is a `Pro` feature, but **all** plans can restore backups.
 
