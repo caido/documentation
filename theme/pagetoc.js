@@ -3,7 +3,7 @@ let scrollTimeout;
 const listenActive = () => {
   const elems = document.querySelector(".pagetoc").children;
   [...elems].forEach(el => {
-    el.addEventListener("click", (event) => {
+    el.addEventListener("click", () => {
       clearTimeout(scrollTimeout);
       [...elems].forEach(el => el.classList.remove("active"));
       el.classList.add("active");
@@ -15,11 +15,8 @@ const listenActive = () => {
   });
 };
 
-const getPagetoc = () => document.querySelector(".pagetoc") || autoCreatePagetoc();
+const getPagetoc = () => document.querySelector(".pagetoc");
 
-const autoCreatePagetoc = () => {
-  return document.querySelector(".pagetoc");
-};
 const updateFunction = () => {
   if (scrollTimeout) return; // Skip updates if within the cooldown period from a click
   const headers = [...document.getElementsByClassName("header")];

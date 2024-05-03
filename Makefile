@@ -1,5 +1,4 @@
 MDBOOK_VERSION = 0.4.37
-MDBOOK_PAGETOC_VERSION = 0.2.0
 
 build:
 	mdbook build
