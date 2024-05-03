@@ -40,7 +40,7 @@ const updateFunction = () => {
   }
 };
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const pagetoc = getPagetoc();
   const topPadding = Object.assign(document.createElement("div"), {
     className: "pagetoc-padding"
