@@ -1,4 +1,4 @@
-MDBOOK_VERSION = 0.4.15
+MDBOOK_VERSION = 0.4.37
 
 build:
 	mdbook build
