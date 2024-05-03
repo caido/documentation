@@ -4,6 +4,11 @@
   "forwardPorts": [3000],
   "features": {
   "ghcr.io/eitsupi/devcontainer-features/mdbook:1": {}
+  },
+  "customizations":{
+    "vscode":{
+      "extensions":["DavidAnson.vscode-markdownlint"]
+    }
   }
 }
 
