@@ -54,22 +54,31 @@ You may see this error during login, it means that your computer time is likely 
 
 We allow 5 minutes slippage between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
 
-### Windows ([details](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html))
+### Windows
+
 
 1. Right-click on the clock
 1. `Adjust date/time`
 1. Go to `Date & Time` in `Setting`
 1. Click `Sync now`
 
-### MacOS ([details](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788))
+You can find more information about this issue [here](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html).
+
+
+### MacOS
 
 1. Open a terminal window
 1. Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`)
 1. Check the time synchronization status again using the same command
 
-### Linux ([details](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers))
+You can find more information about this issue [here](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788).
+
+### Linux
 
 1. Open a terminal or SSH into your server
 1. Install the NTP package: `sudo apt-get install ntp`
 1. Once the installation is complete, the NTP service should start automatically
 1. Check its status by using this command `sudo systemctl status ntp`
+
+You can find more information about this issue [here](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers).
+

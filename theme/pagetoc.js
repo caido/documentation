@@ -18,13 +18,6 @@ const listenActive = () => {
 const getPagetoc = () => document.querySelector(".pagetoc") || autoCreatePagetoc();
 
 const autoCreatePagetoc = () => {
-  const main = document.querySelector("#content > main");
-  const content = Object.assign(document.createElement("div"), {
-    className: "content-wrap"
-  });
-  content.append(...main.childNodes);
-  main.prepend(content);
-  main.insertAdjacentHTML("afterbegin", '<div class="sidetoc"><nav class="pagetoc"></nav></div>');
   return document.querySelector(".pagetoc");
 };
 const updateFunction = () => {
@@ -52,6 +45,15 @@ const updateFunction = () => {
 
 window.addEventListener('load', () => {
   const pagetoc = getPagetoc();
+  const topPadding = Object.assign(document.createElement("div"), {
+    className: "pagetoc-padding"
+  });
+
+  const bottomPadding = Object.assign(document.createElement("div"), {
+    className: "pagetoc-padding"
+  });
+
+  pagetoc.appendChild(topPadding);
   const headers = [...document.getElementsByClassName("header")];
   headers.forEach(header => {
     const link = Object.assign(document.createElement("a"), {
@@ -61,6 +63,8 @@ window.addEventListener('load', () => {
     });
     pagetoc.appendChild(link);
   });
+  pagetoc.appendChild(bottomPadding);
+
   updateFunction();
   listenActive();
   window.addEventListener("scroll", updateFunction);

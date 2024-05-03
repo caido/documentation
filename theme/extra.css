@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  gap: 3rem;
+
+}
+
+main .content-wrap {
+  flex: 1;
+  width: 100%;
+}
+
+
+#theme-toggle {
+  display: none;
+}

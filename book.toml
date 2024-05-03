@@ -5,11 +5,10 @@ multilingual = false
 src = "src"
 title = "Caido Documentation"
 
-[preprocessor.pagetoc]
 [output.html]
 default-theme = "navy"
 git-repository-url = "https://github.com/caido/documentation"
-additional-css = ["theme/pagetoc.css", "theme/main.css"]
+additional-css = ["theme/pagetoc.css", "theme/extra.css"]
 additional-js  = ["theme/pagetoc.js"]
 
 [output.html.redirect]
