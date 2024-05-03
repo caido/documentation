@@ -30,19 +30,20 @@ Thanks in advance for your contributions!
 
 We've taken the time to set up Codespaces on this repo, which makes setting up a local copy of [the documentation site](https://docs.caido.com), viewing your changes live, and creating a pull request back to the `main` branch SUPER easy. **The entire process will take less than 5 clicks and less than 5 minutes.**
 
-Here is a video explaining the process (<2 mins):
-https://www.loom.com/share/83b80d9f19db4ae3aab5eb831231d476 
+[![Video of the process](https://cdn.loom.com/sessions/thumbnails/83b80d9f19db4ae3aab5eb831231d476-with-play.gif)](https://www.loom.com/share/83b80d9f19db4ae3aab5eb831231d476)
 
 An overview of the process is as follows:
+
+1. Create a fork of the repository
 1. Create a new branch
-2. Create a codespace on this branch (the codespace settings will configure everything for you)
-3. Make changes and view your changes on the local version of the documentation site found in the `ports` section of the VS Code interface
-4. Commit changes to the branch using the VS Code interface
-5. Create a pull request to main via VS Code interface or normal GitHub interface
+1. Create a `codespace` on this branch (the `codespace` settings will configure everything for you)
+1. Make changes and view your changes on the local version of the documentation site found in the `ports` section of the VS Code interface
+1. Commit changes to the branch using the VS Code interface
+1. Create a pull request to main via VS Code interface or normal GitHub interface
 
 Here is a link to our [style guide (WIP)](style-guide.md).
 
-**Note:** Accounts get 60 hours per month of codespace run-time before you start getting charged; so don't forget to stop/delete your codespace after you've made your modification. 
+> Accounts get 60 hours per month of `codespace` run-time before you start getting charged; so don't forget to stop/delete your codespace after you've made your modification!
 
 ## 💚 Community
 
