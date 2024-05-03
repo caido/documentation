@@ -1,4 +1,4 @@
-MDBOOK_VERSION = 0.4.15
+MDBOOK_VERSION = 0.4.37
 
 build:
 	mdbook build
@@ -14,7 +14,7 @@ build-release:
 
 download-mdbook:
 	mkdir -p bin
-	curl -L https://github.com/rust-lang/mdBook/releases/download/v$(MDBOOK_VERSION)/mdbook-v$(MDBOOK_VERSION)-x86_64-unknown-linux-gnu.tar.gz | tar xvz -C ./bin
+	curl -L https://github.com/rust-lang/mdBook/releases/download/v$(MDBOOK_VERSION)/mdbook-v$(MDBOOK_VERSION)-x86_64-unknown-linux-musl.tar.gz | tar xvz -C ./bin
 	chmod +x ./bin/mdbook
 
 download-linter:
