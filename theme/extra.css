@@ -1,15 +1,18 @@
 main {
   display: flex;
+  justify-content: center;
   gap: 3rem;
 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main .content-wrap {
-  flex: 1;
   min-width: 0;
   width: 100%;
 
   padding: 0 5em;
+  max-width: var(--content-max-width);
 }
 
 #theme-toggle {
