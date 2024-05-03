@@ -181,18 +181,3 @@ blockquote {
     font-style: italic;
 }
 
-img {
-    -webkit-box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
-    box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
-}
-
-img[no-shadow] {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-img[center] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
