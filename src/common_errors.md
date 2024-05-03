@@ -56,14 +56,12 @@ We allow 5 minutes slippage between the "real" time and your computer time. To f
 
 ### Windows
 
-
 1. Right-click on the clock
 1. `Adjust date/time`
 1. Go to `Date & Time` in `Setting`
 1. Click `Sync now`
 
 You can find more information about this issue [here](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html).
-
 
 ### MacOS
 
@@ -81,4 +79,3 @@ You can find more information about this issue [here](https://superuser.com/ques
 1. Check its status by using this command `sudo systemctl status ntp`
 
 You can find more information about this issue [here](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers).
-
