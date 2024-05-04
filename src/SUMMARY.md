@@ -9,6 +9,7 @@
 
 - [Documentation Directory](./user_guide/doc_directory.md)
 - [Installation](./user_guide/installation.md)
+- [Linux Desktop AppImage Installation](./user_guide/linux_image_installation.md)
 - [Running on a VPS](./user_guide/vps.md)
 - [Running in docker](./user_guide/docker.md)
 
