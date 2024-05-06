@@ -7,12 +7,19 @@
 
 # Beginner Guide
 
-- [Introduction to Caido](./beginner_guide/welcome/introduction.md)
+- [Welcome to Caido]()
+  - [Introduction to Caido](./beginner_guide/welcome/introduction.md)
 - [Setup]()
   - [Downloading and Installing](./beginner_guide/setup/setup.md)
   - [Configuration Basics](./beginner_guide/setup/config.md)
 - [First Steps with Caido]()
-  - []
+  - [Creating Your First Project](./beginner_guide/first_steps_with_caido/project.md)
+  - [Capturing and Inspecting Traffic](./beginner_guide/first_steps_with_caido/traffic.md)
+  - [Modifying Requests and Responses](./beginner_guide/first_steps_with_caido/modifying.md)
+- [Troubleshooting Common Issues]()
+  - [Common Errors and Solutions](./beginner_guide/troubleshooting_common_issues/errors.md)
+- [Getting Help]()
+  - [Accessing Support via Discord](./beginner_guide/getting_help/support.md)
 
 # User Guide
 
