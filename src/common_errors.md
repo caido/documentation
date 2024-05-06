@@ -1,4 +1,4 @@
-# Common errors
+# Common Errors
 
 You might face of any these issues while using Caido:
 

@@ -88,6 +88,3 @@
 # Community Contributions
 
 - [Documentation](./contributions/documentation.md)
-
-
-[def]: ./beginner_guide/setup/install.md

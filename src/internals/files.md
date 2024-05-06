@@ -33,6 +33,6 @@ For each project, you will see the following:
 
 - `database.caido`: The majority of the data of the project is contained in that database.
 - `database_raw.caido`: Contains the raw data of the requests and responses, it is split for performance reasons.
-- `exports`: Folder containing the exported data
+- `exports`: Folder containing the exported data.
 
 Each one of those files is a sqlite3 database in `wal` mode. Thus if you copy them, make sure to also copy the `-wal` files.

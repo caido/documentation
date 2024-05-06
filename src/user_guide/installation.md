@@ -27,7 +27,7 @@ You can download the installer package from your <a href="https://dashboard.caid
 
 For all operating systems, once Caido is launched:
 
-1. Click the 'Start' button.
+1. Click the `Start` button.
 2. Sign in with your credentials or register an account.
 3. Name your Caido instance.
 4. Allow access to your Caido instance.
