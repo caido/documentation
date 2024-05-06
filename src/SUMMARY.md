@@ -11,6 +11,8 @@
 - [Setup]()
   - [Downloading and Installing](./beginner_guide/setup/setup.md)
   - [Configuration Basics](./beginner_guide/setup/config.md)
+- [First Steps with Caido]()
+  - []
 
 # User Guide
 
