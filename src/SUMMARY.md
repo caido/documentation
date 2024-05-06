@@ -2,16 +2,20 @@
 
 [Introduction](./introduction.md)
 [FAQ](./faq.md)
-[Common errors](./common_errors.md)
-[Report a bug](./report_bug.md)
+[Common Errors](./common_errors.md)
+[Report a Bug](./report_bug.md)
+
+# Beginner Guide
+
+- [Welcome to Caido]()
+  - [Introduction to Caido](./beginner_guide/welcome_to_caido/introduction.md)
 
 # User Guide
 
 - [Documentation Directory](./user_guide/doc_directory.md)
 - [Installation](./user_guide/installation.md)
-- [Linux Desktop AppImage Installation](./user_guide/linux_image_installation.md)
 - [Running on a VPS](./user_guide/vps.md)
-- [Running in docker](./user_guide/docker.md)
+- [Running in Docker](./user_guide/docker.md)
 
 # Configuration
 
