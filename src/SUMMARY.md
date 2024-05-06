@@ -8,7 +8,7 @@
 # Beginner Guide
 
 - [Welcome to Caido]()
-  - [Introduction to Caido](./beginner_guide/welcome_to_caido/introduction.md)
+  - [Introduction to Caido](./beginner_guide/welcome_to_caido/introduction_to_caido.md)
 - [Setup]()
   - [Downloading and Installing](./beginner_guide/setup/setup.md)
   - [Configuration Basics](./beginner_guide/setup/config.md)
