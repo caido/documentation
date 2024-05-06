@@ -10,7 +10,7 @@
 - [Welcome to Caido]()
   - [Introduction to Caido](./beginner_guide/welcome_to_caido/introduction_to_caido.md)
 - [Setup]()
-  - [Downloading and Installing](./beginner_guide/setup/setup.md)
+  - [Downloading and Installing](./beginner_guide/setup/install.md)
   - [Configuration Basics](./beginner_guide/setup/config.md)
 - [First Steps with Caido]()
   - [Creating Your First Project](./beginner_guide/first_steps_with_caido/project.md)
@@ -88,3 +88,6 @@
 # Community Contributions
 
 - [Documentation](./contributions/documentation.md)
+
+
+[def]: ./beginner_guide/setup/install.md
