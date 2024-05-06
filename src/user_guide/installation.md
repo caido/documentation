@@ -22,3 +22,14 @@ You can download the installer package from your <a href="https://dashboard.caid
 1. Download the Caido installer package for macOS from the dashboard or Github repository.
 2. Open the downloaded package and follow the prompts to install Caido on your system.
 3. Once the installation is complete, you can launch Caido from the Applications folder or by searching for it in Spotlight.
+
+## Shared Steps
+
+For all operating systems, once Caido is launched:
+
+1. Click the 'Start' button.
+2. Sign in with your credentials or register an account.
+3. Name your Caido instance.
+4. Allow access to your Caido instance.
+5. Navigate through the brief tutorial on creating a new Project.
+6. In order for Caido to capture your web traffic, you must [download and import Caido's CA Certificate to your browser.](../import_ca_certificate.md)
