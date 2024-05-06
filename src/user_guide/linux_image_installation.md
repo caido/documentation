@@ -1,1 +1,0 @@
-# Linux Desktop AppImage Installation
