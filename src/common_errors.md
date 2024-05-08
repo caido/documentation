@@ -3,7 +3,7 @@
 You might face of any these issues while using Caido:
 
 - ["You do not have access to this instance"](#you-do-not-have-access-to-this-instance)
-- [I have paid for "Pro" but it still shows "Community" in the app](#i-have-paid-for-pro-but-it-still-shows-community-in-the-app)
+- [I have paid for "Pro" but it still shows "Community" in the application](#i-have-paid-for-pro-but-it-still-shows-community-in-the-application)
 - [I get a "Date mismatch" error during login](#i-get-a-date-mismatch-error-during-login)
 
 ## "You do not have access to this instance"
@@ -40,7 +40,7 @@ You may encounter this error when trying to access an instance that you **delete
 
 The easiest way to fix this issue is to [Reset the instance credentials](#method-2-reset-the-instance-credentials).
 
-## I have paid for "Pro" but it still shows "Community" in the app
+## I have paid for "Pro" but it still shows "Community" in the application
 
 Caido caches the state of your account. Any changes to your account can take some time to update.
 

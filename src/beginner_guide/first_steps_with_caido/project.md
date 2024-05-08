@@ -2,9 +2,13 @@
 
 ## What are Projects?
 
+---
+
 Think of **Projects** as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
 ## Creating a New Project
+
+---
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Click on the red `+ Create a project` button in the top-right area of the Caido window.
@@ -14,11 +18,15 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 
 ## Switching Between Projects
 
+---
+
 Caido offers the ability to switch between your Projects with ease. Switching Projects can be accomplished in two different ways:
 
 1. Selecting the `Workspace` tab from the left-hand menu within the Caido window and clicking the `Select` button next to the desired Project.
 2. Selecting the desired Project in the drop-down menu, located in the upper-right corner of the Caido window.
 
 ## Additional Information on Projects
+
+---
 
 - [Projects](../../features/workspace/projects.md)

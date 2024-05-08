@@ -3,10 +3,12 @@
 You might face of any these issues while using Caido:
 
 - ["You do not have access to this instance"](#you-do-not-have-access-to-this-instance)
-- [I have paid for "Pro" but it still shows "Community" in the app](#i-have-paid-for-pro-but-it-still-shows-community-in-the-app)
+- [I have paid for "Pro" but it still shows "Community" in the application](#i-have-paid-for-pro-but-it-still-shows-community-in-the-application)
 - [I get a "Date mismatch" error during login](#i-get-a-date-mismatch-error-during-login)
 
 ## "You do not have access to this instance"
+
+---
 
 <img alt="No access to instance" src="/_images/no_access_instance.png"/>
 
@@ -34,19 +36,25 @@ While not ideal, deleting your Caido data folder will allow you to start with a 
 
 ## "Login URL generation failed"
 
+---
+
 <img alt="Date mismatch" src="/_images/error_url_generation.png" width="400"/>
 
 You may encounter this error when trying to access an instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).
 
 The easiest way to fix this issue is to [Reset the instance credentials](#method-2-reset-the-instance-credentials).
 
-## I have paid for "Pro" but it still shows "Community" in the app
+## I have paid for "Pro" but it still shows "Community" in the application
+
+---
 
 Caido caches the state of your account. Any changes to your account can take some time to update.
 
 You can refresh your account state by logging out / logging in to your Caido instance.
 
 ## I get a "Date mismatch" error during login
+
+---
 
 <img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
 

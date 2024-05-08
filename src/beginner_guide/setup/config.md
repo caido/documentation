@@ -2,6 +2,8 @@
 
 ## Changing Default Settings
 
+---
+
 In order to change Caido's default settings:
 
 1. Click on your `account icon` in the upper-rightmost corner of the Caido window.
@@ -30,6 +32,16 @@ Customize Caido by writing your own CSS/JavaScript.
 
 ## Advanced Configuration
 
+---
+
 - [Data Location](../../configuration/data_location.md)
 - [Listening Address/Port](../../configuration/listening_address.md)
 - [Importing Caido's CA Certificate](../../configuration/import_ca_certificate.md)
+
+## Creating Your First Project
+
+---
+
+Once you have successfully configured Caido - steps on creating your first Project are discussed here:
+
+- [Creating Your First Project](../first_steps_with_caido/project.md)
