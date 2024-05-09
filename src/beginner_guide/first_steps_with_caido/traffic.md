@@ -34,3 +34,5 @@ The `HTTP History` tab lists all the traffic that Caido has proxied.
 ---
 
 The `WS History` tab lists all of the WebSocket stream traffic that Caido has proxied.
+
+<img alt="WS History tab." src="../../_images/history_tab.png" center/>
