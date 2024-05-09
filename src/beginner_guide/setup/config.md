@@ -42,6 +42,6 @@ Customize Caido by writing your own CSS/JavaScript.
 
 ---
 
-Once you have successfully configured Caido - steps on creating your first Project are discussed here:
+Once you have successfully configured Caido - steps on creating your first Project are available here:
 
 - [Creating Your First Project](../first_steps_with_caido/project.md)

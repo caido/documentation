@@ -11,10 +11,11 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 ---
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
-2. Click on the red `+ Create a project` button in the top-right area of the Caido window.
-3. Name the Project - consider using a descriptive name of the context the project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._)
-4. Once you have entered a name - click on the `Create` button.
-5. Your new Project will now appear in the `Workspace` panel.
+2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.
+3. Click on the red `+ Create a project` button in the top-right area of the Caido window.
+4. Name the Project - consider using a descriptive name of the context the project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._)
+5. Once you have entered a name - click on the `Create` button.
+6. Your new Project will now appear in the `Workspace` panel.
 
 ## Switching Between Projects
 
@@ -30,3 +31,11 @@ Caido offers the ability to switch between your Projects with ease. Switching Pr
 ---
 
 - [Projects](../../features/workspace/projects.md)
+
+## Capturing and Inspecting Web Traffic
+
+---
+
+Once you have familiarized yourself with creating Projects - basic capture and inspection of web traffic steps are available here:
+
+- [Capturing and Inspecting Web Traffic](./traffic.md)

@@ -46,6 +46,6 @@ For all operating systems, once Caido is launched:
 
 ---
 
-Once you have successfully installed Caido - basic configuration options are discussed here:
+Once you have successfully installed Caido - basic configuration options are available here:
 
 - [Basic Configuration](./config.md)
