@@ -28,6 +28,10 @@ Download a rendering engine in order to view a visual representation of a respon
 
 ## Developer
 
+_For advanced documentation on customizing Caido with CSS - click [here](../../plugins/custom_css.md)._
+
+_For advanced documentation on customizing Caido with JavaScript - click [here](../../plugins/custom_js.md)._ `WORK IN PROGRESS`
+
 Customize Caido by writing your own CSS/JavaScript.
 
 ## Advanced Configuration

@@ -1,6 +1,7 @@
 <!-- markdownlint-disable MD042 -->
 
 [Introduction](./introduction.md)
+[Documentation Directory](./doc_directory.md)
 [FAQ](./faq.md)
 [Common Errors](./common_errors.md)
 [Report a Bug](./report_bug.md)
@@ -12,18 +13,17 @@
 - [Setup]()
   - [Downloading and Installing](./beginner_guide/setup/install.md)
   - [Configuration Basics](./beginner_guide/setup/config.md)
+  - [Uploading Files for Use in Automate](./beginner_guide/setup/file_upload.md)
 - [First Steps with Caido]()
   - [Creating Your First Project](./beginner_guide/first_steps_with_caido/project.md)
   - [Capturing and Inspecting Traffic](./beginner_guide/first_steps_with_caido/traffic.md)
-  - [Modifying Requests and Responses](./beginner_guide/first_steps_with_caido/modifying.md)
-- [Troubleshooting Common Issues]()
-  - [Common Errors and Solutions](./beginner_guide/troubleshooting_common_issues/errors.md)
-- [Getting Help]()
-  - [Accessing Support via Discord](./beginner_guide/getting_help/support.md)
+  - [Forwarding and Modifying Requests Repeatedly](./beginner_guide/first_steps_with_caido/replay.md)
+  - [Automating Brute-Forcing/Fuzzing](./beginner_guide/first_steps_with_caido/automate.md)
+- [Support]()
+  - [Common Errors and Solutions](./beginner_guide/getting_help/support.md)
 
 # User Guide
 
-- [Documentation Directory](./user_guide/doc_directory.md)
 - [Installation](./user_guide/installation.md)
 - [Running on a VPS](./user_guide/vps.md)
 - [Running in Docker](./user_guide/docker.md)
