@@ -6,7 +6,7 @@
 
 `Replay` allows you to repeatedly forward modified requests. **Requests** are shown on the left and **responses** are shown on the right.
 
-- To send a request to `Replay`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+R`.
+> To send a request to `Replay`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+R`.
 
 ---
 
