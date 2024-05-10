@@ -1,5 +1,7 @@
 ## Uploading Files for Use in Automate
 
+_For advanced documentation on this topic - click [here](../../features/workspace/files.md)._
+
 ---
 
 `Automate` allows you to brute-force/fuzz designated elements of a request

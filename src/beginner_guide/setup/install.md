@@ -42,10 +42,10 @@ For all operating systems, once Caido is launched:
 5. Navigate through the brief tutorial on creating a new Project.
 6. In order for Caido to capture your web traffic, you must [download and import Caido's CA Certificate to your browser.](../../configuration/import_ca_certificate.md)
 
-## Configuration Basics
+## Configuration
 
 ---
 
 Once you have successfully installed Caido - basic configuration options are available here:
 
-- [Basic Configuration](./config.md)
+- [Configuration](./config.md)

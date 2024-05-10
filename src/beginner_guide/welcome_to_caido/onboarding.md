@@ -19,16 +19,11 @@
 
 - [Creating Your First Project](../first_steps_with_caido/project.md)
 - [Capturing and Inspecting Web Traffic](../first_steps_with_caido/traffic.md)
-- [Modifying Requests and Responses](../first_steps_with_caido/modifying.md)
-
-## Troubleshooting Common Issues
-
----
-
-- [Common Errors](../troubleshooting_common_issues/errors.md)
+- [Forwarding and Modifying Requests Repeatedly](../first_steps_with_caido/replay.md)
+- [Automating Brute-Forcing/Fuzzing](../first_steps_with_caido/automate.md)
 
 ## Getting Help
 
 ---
 
-- [Accessing Support via Discord](../getting_help/support.md)
+- [Support](../getting_help/support.md)

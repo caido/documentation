@@ -2,6 +2,8 @@
 
 ## What are Projects?
 
+_For advanced documentation on this topic - click [here](../../features/workspace/projects.md)._
+
 ---
 
 Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](../../concepts/instances.md) for more information on Instances.
@@ -12,12 +14,18 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 
 ---
 
+<img alt="Projects tab." src="../../_images/projects_tab.png">
+
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.
-3. Click on the red `+ Create a project` button in the top-right area of the Caido window.
-4. Name the Project - consider using a descriptive name of the context the project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._)
-5. Once you have entered a name - click on the `Create` button.
-6. Your new Project will now appear in the `Workspace` panel.
+3. Click on the red `+ Create a project` button in the top-right area of the Caido window. Name the Project - consider using a descriptive name of the context the project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._). Once you have entered a name - click on the `Create` button.
+4. Your new Project will now appear in the `Workspace` panel.
+5. Clicking on `⋮` will present the following additional options:
+
+- **Rename**: rename your Project.
+- **Copy path**: copy the Project's data location on your device to your clipboard.
+- **Create backup**: create a backup of the Project data.
+- **Delete**: delete the Project from your Instance.
 
 ## Switching Between Projects
 
@@ -27,12 +35,6 @@ Caido offers the ability to switch between your Projects with ease. Switching Pr
 
 1. Selecting the `Workspace` tab from the left-hand menu within the Caido window and clicking the `Select` button next to the desired Project.
 2. Selecting the desired Project in the drop-down menu, located in the upper-right corner of the Caido window.
-
-## Additional Information on Projects
-
----
-
-- [Projects](../../features/workspace/projects.md)
 
 ## Capturing and Inspecting Web Traffic
 
