@@ -12,6 +12,7 @@
 
 - [Installation](../setup/install.md)
 - [Configuration](../setup/config.md)
+- [Uploading Files for Use in Automate](../setup/file_upload.md)
 
 ## Using Caido
 
