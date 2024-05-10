@@ -28,10 +28,10 @@ With Caido, requests are easily organized with the use of **Sessions** and **Col
 - **Sessions**: everytime you edit and forward a request within `Replay` - the history of these forwards is recorded into a **Session**.
 - **Collections**: you can group Sessions into **Collections** which allows you to organize your requests by shared traits.
 
-<img alt="Sessions and Collections." src="../../_images/sessions_collections_tab.png" center/>
+<img alt="Sessions and Collections." src="../../_images/session_collection_tab.png" center/>
 
 1. The request Sessions.
-2. The Collections. You can view the list of associated Sessions by clicking `>` to the left of the Collection. To collapse the list, click the `∨`.
+2. The Collection. You can view the list of associated Sessions by clicking `>` to the left of the Collection. To collapse the list, click the `∨`.
 3. The request currently in the pane/the total number of recorded requests.
 4. Clicking the `New Session` button will present an empty request template. Create a new request manually or enter a URL into the `Enter a connection URL` input box and Caido will automatically generate a valid basic request.
 5. Clicking the drop-down arrow of the `New Session` button will present the option to create a new Collection. Click `New Collection` to proceed with this option.

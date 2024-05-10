@@ -10,7 +10,7 @@
 
 1. Select the `Intercept` tab from the left-hand menu within the Caido window.
 2. Clicking this button will toggle between `Queuing` (_intercept traffic_) and `Forwarding` (_forward traffic_).
-3. Click `Requests`, `Responses` or **both** to specify what `Queuing` is applied to. _**Intercept on** is signified by **||** and **intercept off** is signified by **>>**._
+3. Click `Requests`, `Responses` or **both** to specify what `Queuing` is applied to. _**Intercept on** is signified by `||` and **intercept off** is signified by `>>`._
 4. The `Drop` and `Forward` buttons will drop or forward requests/responses respecively.
 
 ## HTTP History
