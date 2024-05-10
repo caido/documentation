@@ -4,6 +4,8 @@
 
 ---
 
+Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](../../concepts/instances.md) for more information on **Instances**.
+
 Think of **Projects** as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
 ## Creating a New Project

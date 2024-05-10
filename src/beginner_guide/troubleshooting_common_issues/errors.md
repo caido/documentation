@@ -1,11 +1,5 @@
 # Common Errors
 
-You might face of any these issues while using Caido:
-
-- ["You do not have access to this instance"](#you-do-not-have-access-to-this-instance)
-- [I have paid for "Pro" but it still shows "Community" in the application](#i-have-paid-for-pro-but-it-still-shows-community-in-the-application)
-- [I get a "Date mismatch" error during login](#i-get-a-date-mismatch-error-during-login)
-
 ## "You do not have access to this instance"
 
 ---
