@@ -1,4 +1,4 @@
-# Data location
+# Data Location
 
 All the data Caido creates is stored in a single folder.
 Currently, it is **not possible** to create projects outside this folder.

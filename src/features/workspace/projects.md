@@ -29,6 +29,6 @@ The Project button on the top right of any page enables you to easily switch bet
 
 When structural changes occur after a Caido update, sometimes it is necessary for Caido to update a project to a new project format. This can take time but will ensure you're working with the latest capabilities in Caido.
 
-> Projects are automatically upgraded when you use them with a newer Caido version and **CANNOT** be downgraded
+> Projects are automatically upgraded when you use them with a newer Caido version and **CANNOT** be downgraded.
 
 <img width="400" alt="Upgrade Projects" src="/_images/projects_upgrade.png" center>
