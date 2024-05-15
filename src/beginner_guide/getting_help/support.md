@@ -12,7 +12,7 @@ View the roadmap to stay up-to-date with Caido's development here:
 
 - [Roadmap](https://github.com/orgs/caido/projects)
 
-## Check our directory of common errors
+## Check Our Directory of Common Errors
 
 ---
 

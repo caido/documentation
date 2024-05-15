@@ -45,6 +45,7 @@
 - [Instances](./concepts/instances.md)
 - [HTTPQL](./concepts/httpql.md)
 - [Workflows](./concepts/workflows.md)
+  - [Nodes](./concepts/nodes.md)
 - [Tabs](./concepts/tabs.md)
 - [Layout](./concepts/layout.md)
 
