@@ -4,7 +4,7 @@
 
 ---
 
-**Nodes** are simply **actions** or **conditions**. By connecting Nodes together complex action sequences based on certain conditions are created.
+**Nodes** are simply **actions** or **conditions**. By connecting Nodes together, complex action sequences based on certain conditions are created.
 
 Nodes are visually represented by Caido as draggable blocks, colorized by category. They utilize an input/output model that can be used to send data altered by one Node to a subsequent Node.
 
@@ -16,7 +16,7 @@ Nodes are visually represented by Caido as draggable blocks, colorized by catego
 
 A `Connection` is visually represented by the gray line between nodes and determine the order of execution.
 
-- Workflows use a top-down heirachical structure (_the Node at the very top represents the beginning of the flow and the Node at the bottom represents the end of the flow_).
+Workflows use a top-down heirachical structure (_the Node at the very top represents the beginning of the flow and the Node at the bottom represents the end of the flow_).
 
 <img alt="Workflow Connections" src="/_images/node_connect.png" center/>
 
@@ -64,9 +64,16 @@ _Example (pictured above):_
 
 ---
 
-- **Encoding/Decoding/Hashing/Dehashing Nodes** (Blue) - Base64/Hex/HTML/JWT/MD5/SHA1/SHA2/URL
-- **Control Nodes** (Green) - If-Else/If-Else-Javascript
-- **Code Nodes** (Red) - Shell/JavaScript
-- **Misc Nodes** - Set-Color/HTTPQL
+Certain Nodes are specific to a Workflow type (Passive/Active/Convert). Though, in general, Nodes can be categorized broadly and associated together by color:
 
-<img alt="List of nodes" src="/_images/workflow_convert_node_list.png" height="500" center/>
+- **Start/End Nodes** (Yellow) - mark the beginning and end of a Workflow.
+
+- **Control Nodes** (Green) - allow you to dictate the execution flow.
+
+- **Code Nodes** (Red) - provide a way to integrate Shell commands and Javascript.
+
+- **Miscellaneous Nodes** (Blue)
+
+<img alt="List of nodes." src="/_images/nodes_all_types.png" center/>
+
+> The development of Nodes will be ongoing and new nodes will be included in future Caido releases.

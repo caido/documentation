@@ -4,7 +4,11 @@
 
 ---
 
-**Workflows** are the main way to customize Caido to suit your needs. Think of Workflows as custom shortcuts that will perform an action/a sequence of actions under certain specified conditions. These "shortcuts" can be saved as a Workflow in Caido so they can be utilized repeatedly.
+**Workflows** provide an intuitive way to create, save and reuse customizable actions or sequences of actions that will be performed under certain specified conditions. With Workflows, you have the ability to extend the functionality of Caido to suit your individual needs.
+
+As Caido utilizes a client/server architecture, the Workflows you create are executed server-side - thereby offloading processing power, providing enhanced performance and allowing seemless usage across multiple devices.
+
+Workflows created by others can also be downloaded and imported into your Caido instance.
 
 <img alt="Convert workflow" src="/_images/workflow_convert_basic.png" center/>
 
@@ -16,9 +20,9 @@ _Example (pictured above): a Workflow that will take user-provided input, base64
 
 There are three main types of Workflows, each of which are applied differently:
 
-1. `Passive Workflows` - will automatically trigger based on the conditions specified when creating the Workflow.
-2. `Active Workflows` -  must be manually triggered and meet the conditions specified during creation.
-3. `Convert Workflows` - take strings as input, perform the specified modifications and then outputs the end result.
+1. `Passive Workflows` - will automatically trigger based on the specifications set when creating the Workflow.
+2. `Active Workflows` -  must be manually triggered.
+3. `Convert Workflows` - will perform actions against user supplied input.
 
 ## Nodes: The Building Blocks of Workspaces
 
