@@ -22,7 +22,7 @@ There are three main types of Workflows, each of which are applied differently:
 
 1. `Passive Workflows` - will automatically trigger based on the specifications set when creating the Workflow.
 2. `Active Workflows` -  must be manually triggered.
-3. `Convert Workflows` - will perform actions against user supplied input.
+3. `Convert Workflows` - will perform actions against supplied input.
 
 ## Nodes: The Building Blocks of Workspaces
 
