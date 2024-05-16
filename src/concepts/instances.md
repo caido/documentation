@@ -26,7 +26,7 @@ When you use the `Desktop Application`, you will see by default a `Local Instanc
 
 ---
 
-You can add Instances with the `New instance` button, those can be other `Local` instances if you want to use another [data path](/configuration/data_location.md) or port.
+You can add Instances with the `New instance` button, those can be other `Local` Instances if you want to use another [data path](/configuration/data_location.md) or port.
 
 <img alt="New local instance." src="/_images/instances_local.png" center width="500"/>
 
