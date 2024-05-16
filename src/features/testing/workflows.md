@@ -1,6 +1,6 @@
 # Enhanced Testing Using Workflows
 
-_For conceptual documentation on the concept of Workflows - click [here](/concepts/workflows.md)._
+_For conceptual documentation on Workflows - click [here](/concepts/workflows.md)._
 
 ---
 
@@ -33,4 +33,6 @@ The data types that Workflows intake include:
 4. Toggling the `Enabled` checkbox from filled to empty will dictate the inclusion/exclusion of the associated Workflow in the user interface respectively.
 5. By default, Workflows are present globally (_meaning they will span across all your Projects_). To render a Workflow specific to a project - click the `Switch to project-specific` text within the parenthesis.
 6. Clicking the `Edit` button will present the Workflow editor and the `Duplicate` button will create a copy of the Workflow.
-7. Clicking on `Community Workflows` will open a browser window to <a href="https://github.com/caido/workflows" target="_blank">Caido's Workflow Github Repository</a>. Here you can download Workflows created by other Caido users or submit your own!
+7. Clicking on `Community Workflows` will open a browser window to <a href="https://github.com/caido/workflows" target="_blank">Caido's Workflow Github Repository</a>. Here you can download Workflows created by other Caido users or submit your own! **Workflow files are JSON based.**
+8. Click `Download` to locally download the selected Workflow. To delete the selected Workflow - click `Delete`.
+9. `Import` allows you to select downloaded Workflows to use in your Caido instance.
