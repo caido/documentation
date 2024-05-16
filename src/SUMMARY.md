@@ -64,7 +64,7 @@
   - [Replay](./features/testing/replay.md)
   - [Automate](./features/testing/automate.md)
   - [Assistant](./features/testing/assistant.md)
-  - [Workflows]()
+  - [Workflows](./features/testing/workflows.md)
     - [Convert](./features/testing/workflows/convert.md)
 - [Logging]()
   - [Search](./features/logging/search.md)
