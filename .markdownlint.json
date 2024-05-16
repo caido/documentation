@@ -4,5 +4,7 @@
   "first-line-heading": false,
   "single-title": false,
   "fenced-code-language": false,
-  "no-duplicate-heading": false
+  "no-duplicate-heading": false,
+  "ol-prefix": false,
+  "no-trailing-punctuation": false
 }

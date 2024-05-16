@@ -1,6 +1,6 @@
 # Overviews
 
-Our awesome community has put together many guides and videos 🎉
+Our awesome community has put together many guides and videos! 🎉
 
 If you want your contributions to appear here, please follow the [contribution guidelines](../contributions/documentation.md)!
 

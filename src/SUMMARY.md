@@ -6,7 +6,7 @@
 [Common Errors](./common_errors.md)
 [Report a Bug](./report_bug.md)
 
-# Beginner Guide
+# Beginner's Guide
 
 - [Welcome to Caido]()
   - [Introduction to Caido](./beginner_guide/welcome_to_caido/onboarding.md)

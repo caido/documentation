@@ -6,11 +6,15 @@ You can download the installer package from your <a href="https://dashboard.caid
 
 ## Installing Caido on Windows
 
+---
+
 1. Download the Caido installer package for Windows from the dashboard or Github repository.
 2. Open the downloaded package and follow the prompts to install Caido on your system.
 3. Once the installation is complete, you can launch Caido from the Start menu or by searching for it in the Windows search bar.
 
 ## Installing Caido on Linux
+
+---
 
 1. Download the Caido installer package for Linux from the dashboard or Github repository.
 2. Open a terminal and navigate to the directory where the downloaded package is located.
@@ -19,11 +23,15 @@ You can download the installer package from your <a href="https://dashboard.caid
 
 ## Installing Caido on MacOS
 
+---
+
 1. Download the Caido installer package for macOS from the dashboard or Github repository.
 2. Open the downloaded package and follow the prompts to install Caido on your system.
 3. Once the installation is complete, you can launch Caido from the Applications folder or by searching for it in Spotlight.
 
 ## Shared Steps
+
+---
 
 For all operating systems, once Caido is launched:
 

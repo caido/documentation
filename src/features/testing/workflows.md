@@ -48,3 +48,9 @@ The data types that Workflows use include:
 1. The available Nodes based on the selected Workflow type are displayed in this pane. They are represented as draggable blocks. To use a Node, simply **click, hold and drag** one into the pane directly right.
 2. This pane is where your Workflow is created. Here, [Connections](/concepts/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
 3. After selecting a Node, the Node's properties are displayed here. The ability to delete the currently selected Node is included in this pane as well.
+
+## Advanced Workflow Types Documentation
+
+1. Passive Workflows - `WORK IN PROGRESS`
+2. Active Workflows - `WORK IN PROGRESS`
+3. [Convert Workflows](./workflows/convert.md)

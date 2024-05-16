@@ -4,9 +4,11 @@ The Custom CSS feature allows users to personalize the look and feel of the inte
 
 By writing your own CSS code in the provided text area, you can modify the aesthetic aspects of the application, such as colors, layouts, and fonts, to suit your preferences or needs.
 
-<img width="1000" alt="Custom CSS" src="/_images/custom_css.png" no-shadow center/>
+<img width="1000" alt="Custom CSS." src="/_images/custom_css.png" no-shadow center/>
 
 ## Themes
+
+---
 
 One of the simplest changes you can make is to customize the default theme. You can do this by adjusting the CSS variables we've provided to your liking.
 

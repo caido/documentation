@@ -4,7 +4,9 @@ Caido is designed to be a flexible web application security testing tool, and on
 
 > By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the recommended configuration as there is currently no built-in access control on the proxy portion of Caido. Listening on 127.0.0.1 limits access to the local machine only.
 
-Here are the steps to host Caido on a Linux-based VPS:
+## Here are the steps to host Caido on a Linux-based VPS:
+
+---
 
 1. Once you have set up a VPS, you can install Caido on it by following the Linux installation guide found [here](/user_guide/installation.md).
 
