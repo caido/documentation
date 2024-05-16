@@ -24,3 +24,5 @@ The data types that Workflows intake include:
 ## The Workflows Tab
 
 ---
+
+<img alt="Workflows tab." src="../../_images/workflows_tab_layout.png">
