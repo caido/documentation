@@ -1,6 +1,6 @@
-# Convert Workflows
+# Convert Type Workflows
 
-_For conceptual documentation on the concept of Workflows - click [here](/concepts/workflows.md)._
+_For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
 
 ---
 
@@ -18,8 +18,6 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 <img alt="Convert context menu" src="/_images/workflow_convert_context_menu.png"/>
 
-## Unique Traits of Convert Type Workflows
+## Creating a New Convert Workflow: MD5 Hash Example
 
 ---
-
-- Convert Workflows **MUST** include an End Node.

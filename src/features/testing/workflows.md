@@ -12,7 +12,7 @@ Multi-step processes that, before, needed to be performed manually can be saved 
 
 ---
 
-The data types that Workflows intake include:
+The data types that Workflows use include:
 
 - **Bytes**
 - **Strings**
@@ -36,3 +36,15 @@ The data types that Workflows intake include:
 7. Clicking on `Community Workflows` will open a browser window to <a href="https://github.com/caido/workflows" target="_blank">Caido's Workflow Github Repository</a>. Here you can download Workflows created by other Caido users or submit your own! **Workflow files are JSON based.**
 8. Click `Download` to locally download the selected Workflow. To delete the selected Workflow - click `Delete`.
 9. `Import` allows you to select downloaded Workflows to use in your Caido instance.
+
+## The Workflow Editor
+
+---
+
+<img alt="Workflows editor." src="../../_images/workflow_editor.png">
+
+> This interface will be displayed after clicking either the `+ New Workflow` button or the `Edit` button on an existing Workflow.
+
+1. The available Nodes based on the selected Workflow type are displayed in this pane. They are represented as draggable blocks. To use a Node, simply **click, hold and drag** one into the pane directly right.
+2. This pane is where your Workflow is created. Here, [Connections](/concepts/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
+3. After selecting a Node, the Node's properties are displayed here. The ability to delete the currently selected Node is included in this pane as well.
