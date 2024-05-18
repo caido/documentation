@@ -27,8 +27,8 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 ---
 
-Navigate to the **Workflow Editor** for the Convert type by following these steps:
-
+> Navigate to the **Workflow Editor** for the Convert type by following these steps:
+>
 > - Select the `Workflow` tab from the left-hand menu within the Caido window.
 > - Select the `Convert` tab.
 > - Click `+ New Workflow`.

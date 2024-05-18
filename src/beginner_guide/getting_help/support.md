@@ -24,8 +24,8 @@ We have documented some of the common errors you might encounter while using Cai
 
 ---
 
+<img alt="Discord banner." src="../../_images/discord_banner.png"/>
+
 With an active community and constant discussion, feel free to ask any questions!
 
 Click [here](https://links.caido.io/www-discord) to join the server!
-
-<img alt="Discord banner." src="../../_images/discord_banner.png"/>
