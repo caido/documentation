@@ -27,19 +27,19 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 ---
 
+_In this example - the Workflow created will perform MD5 hashing on the given input._
+
 > Navigate to the **Workflow Editor** for the Convert type by following these steps:
 >
 > - Select the `Workflow` tab from the left-hand menu within the Caido window.
 > - Select the `Convert` tab.
 > - Click `+ New Workflow`.
 
-<img alt="Convert context menu" src="/_images/name_convert.png"/>
-
 1. Enter an arbitrary name for your Workflow.
 2. (_Optional_) Enter a description of the workflow.
 3. Click `Save`.
 
-<img alt="Convert context menu" src="/_images/md5_hash_example.png"/>
+<img alt="Convert MD5 hash." src="/_images/md5_hash_example.png"/>
 
 4. **Click, hold and drag** the `MD5 Hash` Node into the pane directly right.
 5. Drag the Nodes into a top-down heirachical structure. Connect them together by making Node `Connections`.

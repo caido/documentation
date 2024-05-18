@@ -47,9 +47,15 @@ The data types that Workflows use include:
 
 ---
 
-<img alt="Workflows editor." src="../../_images/workflow_editor.png">
-
 > This interface will be displayed after clicking either the `+ New Workflow` button or the `Edit` button on an existing Workflow.
+
+You will first be presented with a pane that includes fields to name your new Workflow as well as provide an optional description. Click `Save` to apply these properties.
+
+<img alt="Convert name/description pane." src="/_images/name_description_workflow.png"/>
+
+The name and description pane will switch to a pane that displays a Node's properties when one is selected.
+
+<img alt="Workflows editor." src="../../_images/workflow_editor.png">
 
 1. The available Nodes based on the selected Workflow type are displayed in this pane. They are represented as draggable blocks. To use a Node, simply **click, hold and drag** one into the pane directly right.
 2. This pane is where your Workflow is created. Here, [Connections](/concepts/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
@@ -57,6 +63,6 @@ The data types that Workflows use include:
 
 ## Advanced Workflow Types Documentation
 
-1. Passive Workflows - `WORK IN PROGRESS`
+1. [Passive Workflows](./workflows/passive.md)
 2. Active Workflows - `WORK IN PROGRESS`
 3. [Convert Workflows](./workflows/convert.md)

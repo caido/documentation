@@ -21,7 +21,7 @@ Workflows use a top-down heirachical structure (_the Node at the very top repres
 <img alt="Workflow Connections" src="/_images/node_connect.png" center/>
 
 1. The down arrow within a circle icon represents a Node's `socket`.
-2. Click and drag a bottom socket to the top socket of the next Node in the flow to create a `Connection`.
+2. Click and drag a bottom socket to the top socket of the next/a subsequent Node in the flow to create a `Connection`.
 
 ## Node Alias
 

@@ -65,6 +65,7 @@
   - [Automate](./features/testing/automate.md)
   - [Assistant](./features/testing/assistant.md)
   - [Workflows](./features/testing/workflows.md)
+    - [Passive](./features/testing/workflows/passive.md)
     - [Convert](./features/testing/workflows/convert.md)
 - [Logging]()
   - [Search](./features/logging/search.md)
