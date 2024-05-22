@@ -1,0 +1,201 @@
+{
+  "description": "The example given in the Passive Workflows documentation section. Sets color of GET requests to navy blue.",
+  "edition": 2,
+  "graph": {
+    "edges": [
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 3
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 1
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 2
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 4
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 0
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 6
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "true",
+          "node_id": 6
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 2
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "false",
+          "node_id": 6
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 1
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "false",
+          "node_id": 4
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 1
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "true",
+          "node_id": 4
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 3
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "alias": "on_intercept_request",
+        "definition_id": "caido/on-intercept-request",
+        "display": {
+          "x": 10,
+          "y": -180
+        },
+        "id": 0,
+        "inputs": [],
+        "name": "On intercept request",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "passive_end",
+        "definition_id": "caido/passive-end",
+        "display": {
+          "x": 240,
+          "y": 460
+        },
+        "id": 1,
+        "inputs": [],
+        "name": "Passive End",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "matches_httpql",
+        "definition_id": "caido/httpql-matches",
+        "display": {
+          "x": 10,
+          "y": 50
+        },
+        "id": 2,
+        "inputs": [
+          {
+            "alias": "query",
+            "value": {
+              "data": "req.method.eq:\"GET\"",
+              "kind": "string"
+            }
+          },
+          {
+            "alias": "request",
+            "value": {
+              "data": "$on_intercept_request.request",
+              "kind": "ref"
+            }
+          }
+        ],
+        "name": "Matches HTTPQL",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "set_color",
+        "definition_id": "caido/color-set",
+        "display": {
+          "x": 10,
+          "y": 300
+        },
+        "id": 3,
+        "inputs": [
+          {
+            "alias": "request",
+            "value": {
+              "data": "$on_intercept_request.request",
+              "kind": "ref"
+            }
+          },
+          {
+            "alias": "color",
+            "value": {
+              "data": "#185a6c",
+              "kind": "string"
+            }
+          }
+        ],
+        "name": "Set Color",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "if_else",
+        "definition_id": "caido/if-else",
+        "display": {
+          "x": 10,
+          "y": 180
+        },
+        "id": 4,
+        "inputs": [
+          {
+            "alias": "condition",
+            "value": {
+              "data": "$matches_httpql.matches",
+              "kind": "ref"
+            }
+          }
+        ],
+        "name": "If/Else",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "in_scope",
+        "definition_id": "caido/in-scope",
+        "display": {
+          "x": 10,
+          "y": -60
+        },
+        "id": 6,
+        "inputs": [
+          {
+            "alias": "request",
+            "value": {
+              "data": "$on_intercept_request.request",
+              "kind": "ref"
+            }
+          }
+        ],
+        "name": "In Scope",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "id": "10d89306-ae4c-4759-a509-beee8fad15fd",
+  "kind": "passive",
+  "name": "Color In-Scope GET Requests Example"
+}

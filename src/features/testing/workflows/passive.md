@@ -20,7 +20,7 @@ Passive Workflows are **automatically triggered** when their specifications/cond
 
 ---
 
-**This example Workflow is available for download and import. Click [here] to download.**
+**This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json) to download.**
 
 _In this example - the Workflow created will color highlight GET requests within the HTTP History tab if they are within the Project's Scope._
 
