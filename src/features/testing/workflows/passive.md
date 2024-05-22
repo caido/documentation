@@ -10,7 +10,7 @@ _For general documentation on utilizing the Workflows tab - click [here](../work
 
 ---
 
-Passive Workflows are **automatically triggered** when their specifications/conditions are met. These specifications/conditions are set by [Nodes](../../../concepts/nodes.md) and include prerequisites such as:
+Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](../../../concepts/nodes.md) and include prerequisites such as:
 
 - If the request/response is within a set [Scope](../../overview/scope.md).
 - If the request/response is a match according to [HTTPQL](../../../concepts/httpql.md) syntax.
@@ -19,6 +19,8 @@ Passive Workflows are **automatically triggered** when their specifications/cond
 ## Creating a New Passive Workflow: Applying Color to In-Scope GET Requests Workflow Example
 
 ---
+
+**This example Workflow is available for download and import. Click [here] to download.**
 
 _In this example - the Workflow created will color highlight GET requests within the HTTP History tab if they are within the Project's Scope._
 
@@ -40,33 +42,68 @@ _In this example - the Workflow created will color highlight GET requests within
 
 5. Drag the Nodes into the top-down heirachical structure displayed. Connect them together by making Node `Connections`.
 
-## Node Relationship Explanation: : Applying Color to In-Scope GET Requests Workflow Example
+## Node Relationship Explanation: Applying Color to In-Scope GET Requests Workflow Example
 
 ---
 
 _The flow of the example Workflow provided above is described below:_
 
-1. `On intercept request` - this Node "_Triggers a workflow when a request passes through the proxy_". It's output is the request object itself. This output is referenced by the `Alias.Property` of `$on_intercept_request.request`.
-2. `In Scope` - this Node "_Checks if a request is in scope"_. It takes the output of `$on_intercept_request.request` as the value of it's `Request` input property and checks if the Host of the request is included in any Scopes you have set in the current Caido Project. This Node's output is `$in_scope.result`.
+<img alt="On intercept request Node in example Passive Workflow." src="/_images/on_intercept_req_example_wf.png"/>
+
+1. `On intercept request` - this Node "_Triggers a workflow when a request passes through the proxy_":
+
+- It's output is the request object itself.
+- This output is referenced by the `Alias.Property` syntax of `$on_intercept_request.request`.
+
+<img alt="In Scope Node in example Passive Workflow." src="/_images/in_scope_example_wf.png"/>
+
+2. `In Scope` - this Node "_Checks if a request is in scope"_:
+
+- It takes the output of `$on_intercept_request.request` as the value of it's `Request` input property and checks if the Host of the request is included in any Scopes you have set in the current Caido Project.
+- This Node's output is `$in_scope.result`.
+
+<img alt="Flow of In Scope Node in example Passive Workflow." src="/_images/in_scope_flow_example_wf.png"/>
 
 - If **True** (_the request Host is in scope_), then the flow will proceed to the `Matches HTTPQL` Node.
 - If **False**, the flow will proceed to the `Passive End` Node, ending the action flow against the request since it did not meet the set criteria of the Workflow.
 
-3. `Matches HTTPQL` - this Node "_Matches a request/response against an HTTPQL query_". The query used in this Workflow example is `req.method.eq:"GET"`. It uses the output of `$on_intercept_request.request` from the `On intercept request` Node as the value of it's `Request` input property. This Node's output is `$matches_httpql.matches`.
+<img alt="Matches HTTPQL Node in example Passive Workflow." src="/_images/matches_httpql_example_wf.png"/>
 
+3. `Matches HTTPQL` - this Node "_Matches a request/response against an HTTPQL query_":
+
+- The query used in this Workflow example is `req.method.eq:"GET"`.
+- It uses the output of `$on_intercept_request.request` from the `On intercept request` Node as the value of it's `Request` input property.
+- This Node's output is `$matches_httpql.matches`.
 - The query will check if the request method used is GET for all the requests that are in scope.
 
-4. `If/Else` - this Node "_Branches off based on a condition_". It uses the output of `$matches_httpql.matches` as the value of it's `Condition` input property (select the `Use reference` checkbox). **If** the request satisfied the HTTPQL query (_the request was an in scope GET request_), the output of this Node evaluates to the Boolean value of **True**. **Else**, if the request did not satisfy the HTTPQL query (_the request was not in scope/used another method other than GET if it was in scope), the output of this Node evaluates to the Boolean value of **False**.
+<img alt="If/Else Node in example Passive Workflow." src="/_images/if_else_example_wf.png"/>
+
+4. `If/Else` - this Node "_Branches off based on a condition_":
+
+- It uses the output of `$matches_httpql.matches` as the value of it's `Condition` input property (select the `Use reference` checkbox).
+- **If** the request satisfied the HTTPQL query (_the request was an in scope GET request_), the output of this Node evaluates to the Boolean value of **True**.
+- **Else**, if the request did not satisfy the HTTPQL query (_the request was not in scope/used another method other than GET if it was in scope_), the output of this Node evaluates to the Boolean value of **False**.
+
+<img alt="Flow of If/Else Node in example Passive Workflow." src="/_images/if_else_flow_example_wf.png"/>
 
 - If **True** then the flow will proceed to the `Set Color` Node.
 - If **False**, the flow will proceed to the `Passive End` Node, ending the action flow against the request since it did not meet the set criteria of the Workflow.
 
-5. `Set Color` - this Node "_Sets the row color of a request_" within the HTTP History tab. The `Color` input property takes the value of a color's Hex code. This will be the color used to highlight any requests that have reached this Node within the Workflow.
+<img alt="Set Color Node in example Passive Workflow." src="/_images/set_color_example_wf.png"/>
+
+5. `Set Color` - this Node "_Sets the row color of a request_":
+
+- It will apply the color to the row within the HTTP History tab.
+- The `Color` input property takes the value of a color's Hex code.
+- This will be the color used to highlight any requests that have reached this Node within the Workflow by applying it to the request object produced by the output of the `On intercept request` Node of `$on_intercept_request.request`.
+
+<img alt="Passive End Node in example Passive Workflow." src="/_images/passive_end_example_wf.png"/>
+
 6. `Passive End` - this Node "_Ends the passive workflow_", bringing the workflow to a finished state.
 
 > In summary:
 >
-> _"If the Host of a proxied GET request is within a scope I have set, highlight the request in the HTTP History tab feed in aqua-blue. For all other requests, exit the Passive Workflow."_
+> _"If the Host of a proxied GET request is within a scope I have set, highlight the request in the HTTP History tab feed in navy blue. For all other requests, exit the Passive Workflow."_
 
 ## Results: : Applying Color to In-Scope GET Requests Workflow Example
 

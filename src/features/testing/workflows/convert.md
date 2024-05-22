@@ -16,12 +16,17 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 - Within the **Workflow Editor** supply the input in the `Data` field under `Inputs` with the `Use reference` checkbox **_deselected_**. Then apply the conversion by clicking the `Save and Run` button.
 
+<img alt="Testing Convert Workflow with user supplied input within Node." src="/_images/constant_value_supplied.png"/>
+
 **When using [Reference Values](/concepts/nodes.md#2-reference-value-type)**:
 
 - At the bottom of the Concept **Workflow Editor** is an Input pane in which you can supply data and then apply the conversion by clicking the `Save and Run` button.
+
+<img alt="Testing Convert Workflow with user supplied input." src="/_images/reference_value_supplied.png"/>
+
 - Highlight the data to be changed, right-click in the associated pane and select either `Convert (Preview)` or `Convert (Replace)`. _**Preview** will present the output in a pop-up window and **Replace** will apply the conversion to the selected bytes._
 
-<img alt="Convert context menu." src="/_images/workflow_convert_context_menu.png"/>
+<img alt="Applying a Convert Workflow to request data." src="/_images/rightclick_reference_value.png"/>
 
 ## Creating a New Convert Workflow: MD5 Hash Example
 
