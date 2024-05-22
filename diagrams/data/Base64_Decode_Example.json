@@ -1,0 +1,92 @@
+{
+  "description": "The example given in the Convert Workflows documentation section.",
+  "edition": 2,
+  "graph": {
+    "edges": [
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 0
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 2
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 2
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 1
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "alias": "convert_start",
+        "definition_id": "caido/convert-start",
+        "display": {
+          "x": 0,
+          "y": -80
+        },
+        "id": 0,
+        "inputs": [],
+        "name": "Convert Start",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "convert_end",
+        "definition_id": "caido/convert-end",
+        "display": {
+          "x": 0,
+          "y": 100
+        },
+        "id": 1,
+        "inputs": [
+          {
+            "alias": "data",
+            "value": {
+              "data": "$base64_d.data",
+              "kind": "ref"
+            }
+          }
+        ],
+        "name": "Convert End",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "base64_d",
+        "definition_id": "caido/base64-decode",
+        "display": {
+          "x": 0,
+          "y": 10
+        },
+        "id": 2,
+        "inputs": [
+          {
+            "alias": "format",
+            "value": {
+              "data": "STANDARD",
+              "kind": "string"
+            }
+          },
+          {
+            "alias": "data",
+            "value": {
+              "data": "",
+              "kind": "bytes"
+            }
+          }
+        ],
+        "name": "Base64 D",
+        "version": "0.2.0"
+      }
+    ]
+  },
+  "id": "5a6cd175-23b5-4b3b-a72a-ea5964804365",
+  "kind": "convert",
+  "name": "Base64 Decode Example"
+}

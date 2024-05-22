@@ -18,6 +18,8 @@ When an HTTP Connection is upgraded to Websocket, it will appear in the stream t
 
 ## Scopes
 
+---
+
 [Scopes](/features/overview/scope.md) can be used to limit the domains displayed in the stream's table.
 
 ![Scopes in WS History](/_images/scope_ws_history.png)

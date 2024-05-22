@@ -21,13 +21,15 @@ Workflows use a top-down heirachical structure (_the Node at the very top repres
 <img alt="Workflow Connections" src="/_images/node_connect.png" center/>
 
 1. The down arrow within a circle icon represents a Node's `socket`.
-2. Click and drag a bottom socket to the top socket of the next Node in the flow to create a `Connection`.
+2. Click and drag a bottom socket to the top socket of the next/a subsequent Node in the flow to create a `Connection`.
 
 ## Node Alias
 
 ---
 
 A Node's `Alias` is an arbitrarily set identifier used to uniquely reference the associated Node within a Workflow.
+
+Aliases can consist of lowercase letters, hyphens, underscores and numbers.
 
 > _NOTE: This differs from a Node's Name which simply serves cosmetic purposes to assist in the visual representation._
 

@@ -3,7 +3,9 @@
 The Exports feature allows you to export data from the HTTP History and Search pages and use data collected by Caido in other tools.
 This feature can also be used for archival purposes or audit purposes sometimes required by clients.
 
-## Exports types
+## Exports Types
+
+---
 
 The Exports feature generates two types of exports:
 
@@ -12,7 +14,9 @@ The Exports feature generates two types of exports:
 
 ![2 types of exports](/_images/exports_2_types.png)
 
-## Exports formats
+## Exports Formats
+
+---
 
 Two export formats are available: JSON and CSV.
 ![JSON & CSV format](/_images/jsoncsv.png)
@@ -44,6 +48,8 @@ For the CSV format, each request/response pair will be exported on a row. Since 
 </details>
 
 ## Download
+
+---
 
 Once the export is completed, it will be available on the Exports page.
 

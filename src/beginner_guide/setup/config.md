@@ -1,6 +1,6 @@
 # Basic Configuration
 
-_For advanced documentation on where Caido saves data, customizing the listening address/port used by Caido and importing Caido's CA certificate - can be found below:_
+_Advanced documentation on where Caido saves data, customizing the listening address/port used by Caido and importing Caido's CA certificate - can be found below:_
 
 - [Data Location](../../configuration/data_location.md)
 - [Listening Address/Port](../../configuration/listening_address.md)

@@ -1,8 +1,8 @@
 # Tutorials
 
-Our awesome community has put together many guides and videos 🎉
+Our awesome community has put together many guides and videos! 🎉
 
-If you want your contributions to appear here, please follow the [contribution guidelines](../contributions/documentation.md)!
+If you want your contributions to appear here, please follow the [Contribution Guidelines](../contributions/documentation.md)!
 
 Please note that these videos are not endorsed by Caido.
 

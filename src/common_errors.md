@@ -2,23 +2,23 @@
 
 You might face of any these issues while using Caido.
 
-## "You do not have access to this instance"
+## "You do not have access to this instance".
 
 ---
 
-<img alt="No access to instance" src="/_images/no_access_instance.png"/>
+<img alt="No access to instance" src="/_images/no_access_instance.png" center/>
 
-You may encounter this error when trying to access an instance that you do not own (further info on instances [here](/internals/instances.md)). This can happen if you've initially setup a Caido instance using a different account.
+You may encounter this error when trying to access an instance that you do not own (_further information on instances [here](/internals/instances.md)_). This can happen if you've initially setup a Caido instance using a different account.
 
-### Method 1: Login with your original Caido account
+### Method 1 - Login with your original Caido account:
 
 Login to the initial account that was used to setup your Caido instance.
 
-### Method 2: Reset the instance credentials
+### Method 2 - Reset the instance credentials:
 
 If you're using the CLI, start Caido using `caido --reset-credentials`.
 
-If you're using the desktop app, check the `Reset Credentials` checkbox in your instance's advanced settings.
+If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
 
 These settings will allow you to login with any account you want.
 
@@ -26,35 +26,35 @@ Once you've claimed your instance, make sure to remove the `--reset-credentials`
 
 <img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300" center/>
 
-### Method 3: Delete your data folder
+### Method 3 - Delete your data folder:
 
 While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. Check out the [Files](/internals/files.md) page to locate your data folder.
 
-## "Login URL generation failed"
+## "Login URL generation failed".
 
 ---
 
-<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400"/>
+<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400" center/>
 
 You may encounter this error when trying to access an instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).
 
-The easiest way to fix this issue is to [Reset the instance credentials](#method-2-reset-the-instance-credentials).
+The easiest way to fix this issue is to [reset the instance credentials](#method-2---reset-the-instance-credentials).
 
-## I have paid for "Pro" but it still shows "Community" in the application
+## I have paid for "Pro" but it still shows "Community" in the application.
 
 ---
 
 Caido caches the state of your account. Any changes to your account can take some time to update.
 
-You can refresh your account state by logging out / logging in to your Caido instance.
+You can refresh your account state by logging out/logging into your Caido instance.
 
-## I get a "Date mismatch" error during login
+## I get a "Date mismatch" error during login.
 
 ---
 
-<img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
+<img alt="Date mismatch" src="/_images/error_date_mismatch.png" center/>
 
-You may see this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
+If you see this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
 
 We allow 5 minutes slippage between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
 

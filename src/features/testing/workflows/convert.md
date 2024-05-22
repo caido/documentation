@@ -1,74 +1,58 @@
-# Convert Workflows
+# Convert Type Workflows
 
-> Before you dive in, read up on the [workflow](/concepts/workflows.md) concept first.
+_For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
 
-Convert Workflows allow you to create actions using strings as input.
+---
 
-These workflows are triggered manually and are integrated in various areas of Caido:
+While Passive and Active Workflows operate on requests and responses - `Convert Workflows` operate on **bytes** received as input.
 
-<img alt="Convert context menu" src="/_images/workflow_convert_context_menu.png"/>
+## Using Convert Workflows
 
-## Special Nodes
+---
 
-Most convert nodes have simple inputs that are covered by the [workflow](/concepts/workflows.md) guide.
+Convert Workflows are **manually triggered** and are integrated in various areas of Caido:
 
-There are a few exceptions that require further explanation:
+**When using [Constant Values](/concepts/nodes.md#1-constant-value-type)**:
 
-- [JavaScript node](#javascript)
-- [Shell node](#shell)
-- [Control flow nodes](#control-flow)
+- Within the **Workflow Editor** supply the input in the `Data` field under `Inputs` with the `Use reference` checkbox **_deselected_**. Then apply the conversion by clicking the `Save and Run` button.
 
-### JavaScript
+<img alt="Testing Convert Workflow with user supplied input within Node." src="/_images/constant_value_supplied.png"/>
 
-`Javascript` code nodes allow you to run custom scripts in your convert workflow.
-They have a minimal code editor available in the properties.
+**When using [Reference Values](/concepts/nodes.md#2-reference-value-type)**:
 
-The code **must** export a function called `run` that takes an `input` and the `sdk` as arguments and return either a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of numbers (representing the UTF-8 bytes).
+- At the bottom of the Concept **Workflow Editor** is an Input pane in which you can supply data and then apply the conversion by clicking the `Save and Run` button.
 
-**By default, the input is an array of bytes.**
+<img alt="Testing Convert Workflow with user supplied input." src="/_images/reference_value_supplied.png"/>
 
-```javascript
-export function run(input, sdk) {
-  let parsed = sdk.asString(input);
-  sdk.console.log(parsed);
-  return parsed;
-}
-```
+- Highlight the data to be changed, right-click in the associated pane and select either `Convert (Preview)` or `Convert (Replace)`. _**Preview** will present the output in a pop-up window and **Replace** will apply the conversion to the selected bytes._
 
-The `sdk` object provides some basic utilities, namely:
+<img alt="Applying a Convert Workflow to request data." src="/_images/rightclick_reference_value.png"/>
 
-- `console`: This is similar to the `console` provided in standard Javascript runtimes. Only the `log` method is available at the moment.
-- `asString`: This loosely converts an array of bytes into a String, invalid characters will be represented with the � character.
+## Creating a New Convert Workflow: MD5 Hash Example
 
-Please [let us know](https://github.com/caido/caido/issues/new?template=feature.md) which utilities you would like to see in the SDK!
+---
 
-### Shell
+**This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json) to download.**
 
-Shell nodes allow you to call external programs in the workflow.
-Depending on the platform on which Caido is running (unix or windows) you will have access to different shells.
+_In this example - the Workflow created will perform MD5 hashing on the given input._
 
-<img alt="Shell selection" src="/_images/workflow_convert_node_shell.png" height="300" center/>
+> Navigate to the **Workflow Editor** for the Convert type by following these steps:
+>
+> - Select the `Workflow` tab from the left-hand menu within the Caido window.
+> - Select the `Convert` tab.
+> - Click `+ New Workflow`.
 
-Since those shell are run in non-interactive mode, they do not source any files prior to running the script (see [bash manual](https://linux.die.net/man/1/bash)). For some shells, Caido will try to source the default `.[shell]rc` file in your home directory. If that doesn't work for you, you can override manually the `Init`.
+1. Enter an arbitrary name for your Workflow.
+2. (_Optional_) Enter a description of the workflow.
+3. Click `Save`.
 
-<img alt="Init script override" src="/_images/workflow_convert_node_shell_init.png" width="600" center/>
+<img alt="Convert MD5 hash." src="/_images/md5_hash_example.png"/>
 
-The command receives the data via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the Caido logs. The command should also exit with 0.
+4. **Click, hold and drag** the `MD5 Hash` Node into the pane directly right.
+5. Drag the Nodes into a top-down heirachical structure. Connect them together by making Node `Connections`.
 
-<img alt="Input for command" src="/_images/workflow_convert_node_shell_code.png" width="600" center/>
+> _NOTE: Convert Workflows require an End Node to function properly._
 
-### Control flow
-
-Control flow nodes allow you to take various paths based on some conditions.
-Right now we only offer an `if/else`, but we will likely offer loops and other control flow nodes in the future.
-
-The `If/Else Javascript` node is very similar to the code node, with the exception that **it must return a boolean**.
-
-```javascript
-export function run(input, sdk) {
-  return false;
-}
-```
-
-Based on the result, the execution will take the `True` or `False` branch.
-**Make sure to connect both** to the rest of the workflow!
+6. Select the `MD5 Hash` Node by clicking on it to display its properties in the right-hand pane. Here, the Node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured. _For this example creation, leave the default configuration as is._
+7. Supply test input to be converted by the Workflow.
+8. Click `Save and Run` - the conversion output will be displayed in the Output pane.

@@ -6,7 +6,7 @@
 [Common Errors](./common_errors.md)
 [Report a Bug](./report_bug.md)
 
-# Beginner Guide
+# Beginner's Guide
 
 - [Welcome to Caido]()
   - [Introduction to Caido](./beginner_guide/welcome_to_caido/onboarding.md)
@@ -64,7 +64,8 @@
   - [Replay](./features/testing/replay.md)
   - [Automate](./features/testing/automate.md)
   - [Assistant](./features/testing/assistant.md)
-  - [Workflows]()
+  - [Workflows](./features/testing/workflows.md)
+    - [Passive](./features/testing/workflows/passive.md)
     - [Convert](./features/testing/workflows/convert.md)
 - [Logging]()
   - [Search](./features/logging/search.md)
