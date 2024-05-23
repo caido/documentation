@@ -1,10 +1,10 @@
 # Documentation Directory
 
-**[Introduction](/./introduction.md)** - an overview of Caido.
+**[Introduction](/introduction.md)** - an overview of Caido.
 
-**[FAQ](/./faq.md)** - Frequently Asked Questions
+**[FAQ](/faq.md)** - Frequently Asked Questions
 
-**[Common Errors](/./common_errors.md)** - common errors and matching resolutions.
+**[Common Errors](/common_errors.md)** - common errors and matching resolutions.
 
 ## User Guide
 

@@ -3,13 +3,16 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Caido",
+  titleTemplate: "Documentation",
   description: "Official Caido Documentation",
+
   srcDir: 'src',
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
     ["script", { "data-api": "/stats/event", src: "/stats/script.js", "defer":"", "data-domain":"docs.caido.io" }]
   ],
-  titleTemplate: "Documentation",
+  ignoreDeadLinks: "localhostLinks",
 
   themeConfig: {
     logo: '/logo.png',

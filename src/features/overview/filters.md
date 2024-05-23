@@ -16,7 +16,7 @@ The `alias` can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and 
 
 ## Expression
 
-The expression is an [HTTPQL](/features/concepts/httpql.md) query, but it has some limitations:
+The expression is an [HTTPQL](/concepts/httpql.md) query, but it has some limitations:
 
 - It **cannot** reference other `presets`.
 - The shortcut `"my value"` is always expanded as `(req.raw.cont:"my value" OR resp.raw.cont:"my value")`.
