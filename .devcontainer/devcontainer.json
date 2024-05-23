@@ -1,6 +1,6 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postCreateCommand": "pnpm install",
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
   "postStartCommand": "pnpm dev",
   "features": {
     "ghcr.io/devcontainers-contrib/features/pnpm:2": {},
@@ -10,8 +10,7 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
-        "esbenp.prettier-vscode",
-        "antfu.vite"
+        "esbenp.prettier-vscode"
       ]
     }
   }
