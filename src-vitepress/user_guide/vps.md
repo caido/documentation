@@ -16,7 +16,7 @@ Caido is designed to be a flexible web application security testing tool, and on
    ssh -L <local port>:127.0.0.1:8080 <username>@<your vps IP address>
    ```
 
-   This will forward all traffic on port <local port> of your local machine to port 8080 of your VPS. For example, if you want to use port 1337 on your local machine, you can run the command:
+   This will forward all traffic on port &lt;local port&gt; of your local machine to port 8080 of your VPS. For example, if you want to use port 1337 on your local machine, you can run the command:
 
    ```
    ssh -L 1337:127.0.0.1:8080 <username>@<your vps IP address>

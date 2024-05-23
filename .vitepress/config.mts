@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Caido Docs",
   description: "Official Caido Documentation",
   srcDir: 'src-vitepress',
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

@@ -17,7 +17,7 @@ Please note that these videos are not endorsed by Caido.
   <tbody>
     <tr>
       <td no-border>
-        <iframe id="ytplayer" type="text/html" width="320" height="180"
+        <iframe id="ytplayer" type="text/html"
           src="https://www.youtube.com/embed/nZDwUwIPJ6M"
           frameborder="0"></iframe>
       </td>
@@ -37,13 +37,13 @@ Please note that these videos are not endorsed by Caido.
   <tbody>
     <tr>
       <td no-border>
-        <iframe id="ytplayer" type="text/html" width="320" height="180" \
-          src="https://www.youtube.com/embed/lW-u_2EByT4" \
+        <iframe id="ytplayer" type="text/html"
+          src="https://www.youtube.com/embed/lW-u_2EByT4"
           frameborder="0"></iframe>
       </td>
       <td no-border>
-        <iframe id="ytplayer" type="text/html" width="320" height="180" \
-          src="https://www.youtube.com/embed/u8bQPtLNPpk" \
+        <iframe id="ytplayer" type="text/html"
+          src="https://www.youtube.com/embed/u8bQPtLNPpk"
           frameborder="0"></iframe>
       </td>
     </tr>
@@ -62,12 +62,12 @@ Please note that these videos are not endorsed by Caido.
   <tbody>
     <tr>
       <td no-border>
-        <iframe id="ytplayer" type="text/html" width="320" height="180"
+        <iframe id="ytplayer" type="text/html"
           src="https://www.youtube.com/embed/qPBK6sHjJt8"
           frameborder="0"></iframe>
       </td>
       <td no-border>
-        <iframe id="ytplayer" type="text/html" width="320" height="180"
+        <iframe id="ytplayer" type="text/html"
           src="https://www.youtube.com/embed/d9EFV5zdkQY"
           frameborder="0"></iframe>
       </td>

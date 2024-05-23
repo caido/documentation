@@ -22,7 +22,7 @@ If you are facing an issue, look into [Common Errors](/common_errors.md), it mig
 
 ---
 
-You might want to dig into more advanced features we offer like [HttpQL](/internals/httpql.md) and running Caido on remote [VPS](/user_guide/vps.md).
+You might want to dig into more advanced features we offer like [HttpQL](/concepts/httpql.md) and running Caido on remote [VPS](/user_guide/vps.md).
 
 For finding documentation specific to what you are looking for, visit the [Documentation Directory](./doc_directory.md) page!
 

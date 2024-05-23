@@ -8,7 +8,7 @@ You might face of any these issues while using Caido.
 
 <img alt="No access to instance" src="/_images/no_access_instance.png" center/>
 
-You may encounter this error when trying to access an instance that you do not own (_further information on instances [here](/internals/instances.md)_). This can happen if you've initially setup a Caido instance using a different account.
+You may encounter this error when trying to access an instance that you do not own (_further information on instances [here](/concepts/instances.md)_). This can happen if you've initially setup a Caido instance using a different account.
 
 ### Method 1 - Login with your original Caido account:
 
