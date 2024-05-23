@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Caido",
   description: "Official Caido Documentation",
-  srcDir: 'src-vitepress',
+  srcDir: 'src',
 
   themeConfig: {
     logo: '/logo.png',
@@ -15,7 +15,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/introduction' },
+      { text: 'Quickstart', link: '/introduction' },
     ],
 
     sidebar: [

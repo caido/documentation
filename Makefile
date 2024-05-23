@@ -7,7 +7,7 @@ run:
 	mdbook serve
 
 lint:
-	markdownlint-cli2 "**/*.md"
+	markdownlint-cli2 "src/**/*.md"
 
 build-release:
 	./bin/mdbook build
