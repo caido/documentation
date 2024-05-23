@@ -1,9 +1,10 @@
-MDBOOK_VERSION = 0.4.37
-
 lint:
 	pnpm lint
 
-build-release:
+install:
+	pnpm install
+
+build-release: install
 	pnpm build
 
 download-linter:
