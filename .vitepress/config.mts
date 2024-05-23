@@ -6,8 +6,10 @@ export default defineConfig({
   description: "Official Caido Documentation",
   srcDir: 'src',
   head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }],
     ["script", { "data-api": "/stats/event", src: "/stats/script.js", "defer":"", "data-domain":"docs.caido.io" }]
   ],
+  titleTemplate: "Documentation",
 
   themeConfig: {
     logo: '/logo.png',
