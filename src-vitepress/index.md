@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Caido"
   text: "A lightweight web security auditing toolkit"
-  tagline: My great project tagline
+  tagline: Guides and documentation
   actions:
     - theme: brand
       text: Getting Started
