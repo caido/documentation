@@ -10,7 +10,7 @@ The Search feature provides a comprehensive view of all the requests that have b
 
 > **PRO FEATURE**
 
-The filtering is using our new query language [HttpQL](/internals/httpql.md).
+The filtering is using our new query language [HttpQL](/concepts/httpql.md).
 
 To avoid having to always configure very common filters, we also offer an `Advanced` panel that allows you to select:
 

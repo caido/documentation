@@ -1,0 +1,7 @@
+:root {
+  --vp-c-brand-1: #daa04a;
+  --vp-c-brand-2: #df3259;
+  --vp-c-brand-3: #a0213e;
+
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
+}

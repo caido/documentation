@@ -1,14 +1,17 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postStartCommand": "mdbook serve",
-  "forwardPorts": [3000],
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
+  "postStartCommand": "pnpm dev",
   "features": {
-  "ghcr.io/eitsupi/devcontainer-features/mdbook:1": {}
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {},
+    "ghcr.io/devcontainers-contrib/features/markdownlint-cli2:1": {}
   },
-  "customizations":{
-    "vscode":{
-      "extensions":["DavidAnson.vscode-markdownlint"]
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "esbenp.prettier-vscode"
+      ]
     }
   }
 }
-

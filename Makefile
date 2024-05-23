@@ -1,21 +1,10 @@
 MDBOOK_VERSION = 0.4.37
 
-build:
-	mdbook build
-
-run:
-	mdbook serve
-
 lint:
-	markdownlint-cli2 "**/*.md"
+	pnpm lint
 
 build-release:
-	./bin/mdbook build
-
-download-mdbook:
-	mkdir -p bin
-	curl -L https://github.com/rust-lang/mdBook/releases/download/v$(MDBOOK_VERSION)/mdbook-v$(MDBOOK_VERSION)-x86_64-unknown-linux-musl.tar.gz | tar xvz -C ./bin
-	chmod +x ./bin/mdbook
+	pnpm build
 
 download-linter:
 	npm install markdownlint-cli2 --global
