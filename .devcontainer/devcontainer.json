@@ -3,7 +3,10 @@
   "postCreateCommand": "pnpm install",
   "postStartCommand": "pnpm dev",
   "forwardPorts": [5173],
-  "features": {},
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {},
+    "ghcr.io/devcontainers-contrib/features/markdownlint-cli2:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
