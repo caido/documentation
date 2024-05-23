@@ -1,0 +1,46 @@
+name: Lint
+on:
+  pull_request:
+    paths:
+      - '**.md'
+
+concurrency:
+  group: lint-${{ github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  CAIDO_PNPM_VERSION: 9
+
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Lint
+        uses: DavidAnson/markdownlint-cli2-action@510b996878fc0d1a46c8a04ec86b06dbfba09de7 # v15
+        with:
+          globs: '**/*.md'
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3.0.0
+        with:
+          version: ${{ env.CAIDO_PNPM_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run build
+        run: pnpm build
+
+

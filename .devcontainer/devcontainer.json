@@ -1,7 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "postCreateCommand": "pnpm install",
-  "postStartCommand": "pnpm run docs:dev",
+  "postStartCommand": "pnpm dev",
   "forwardPorts": [5173],
   "features": {},
   "customizations": {

@@ -4,7 +4,7 @@ lint:
 	pnpm lint
 
 build-release:
-	pnpm docs:build
+	pnpm build
 
 download-linter:
 	npm install markdownlint-cli2 --global
