@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "Caido Docs"
-  text: "Official Caido Documentation"
+  name: "Caido"
+  text: "A lightweight web security auditing toolkit"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Getting Started
       link: /markdown-examples
     - theme: alt
       text: API Examples
