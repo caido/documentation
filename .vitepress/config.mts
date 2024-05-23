@@ -2,17 +2,20 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Caido Docs",
+  title: "Caido",
   description: "Official Caido Documentation",
   srcDir: 'src-vitepress',
 
   themeConfig: {
+    logo: '/logo.png',
+
     search: {
       provider: 'local',
     },
-    // https://vitepress.dev/reference/default-theme-config
+
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Getting Started', link: '/introduction' },
     ],
 
     sidebar: [
@@ -159,10 +162,12 @@ export default defineConfig({
         text: 'Community Contributions',
         link: '/contributions/documentation'
       }
-          ],
+    ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'discord', link: 'https://links.caido.io/discord' },
+      { icon: 'twitter', link: 'https://twitter.com/caidoio' },
+      { icon: 'github', link: 'https://github.com/caido/caido' },
     ]
   }
 })
