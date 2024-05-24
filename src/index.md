@@ -5,7 +5,10 @@ layout: home
 hero:
   name: "Caido"
   text: "A lightweight web security auditing toolkit"
-  image: /logo.png
+  image:
+    src: /logo.png
+    "no-shadow": true
+
   tagline: Guides and documentation
   actions:
     - theme: brand
