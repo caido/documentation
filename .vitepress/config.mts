@@ -9,7 +9,7 @@ export default defineConfig({
   description: "Official Caido Documentation",
 
   srcDir: 'src',
-  appearance: "dark",
+  appearance: "force-dark",
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
