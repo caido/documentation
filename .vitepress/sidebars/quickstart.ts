@@ -2,7 +2,7 @@ import {
     DefaultTheme
 } from "vitepress";
 
-export const quickstartSidebar: DefaultTheme.Sidebar = [{
+export const quickstartSidebar: DefaultTheme.SidebarItem[] = [{
         text: "Welcome",
         items: [{
                 text: 'Introduction',

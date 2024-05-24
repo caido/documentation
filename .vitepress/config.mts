@@ -9,6 +9,7 @@ export default defineConfig({
   description: "Official Caido Documentation",
 
   srcDir: 'src',
+  appearance: "dark",
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
@@ -17,7 +18,10 @@ export default defineConfig({
   ignoreDeadLinks: "localhostLinks",
 
   themeConfig: {
-    logo: '/logo.png',
+    logo: {
+      src: '/logo.png',
+      "no-shadow": true,
+    },
 
     search: {
       provider: 'local',

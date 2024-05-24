@@ -2,7 +2,7 @@ import {
     DefaultTheme
 } from "vitepress";
 
-export const conceptsSidebar: DefaultTheme.Sidebar = [{
+export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
         text: "Introduction",
         items: [{
             text: 'Directory',
