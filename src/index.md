@@ -13,7 +13,15 @@ hero:
       link: /quickstart/
 
     - theme: alt
-      text: Roadmap
-      link: https://github.com/orgs/caido/projects/4/views/20
+      text: Guides
+      link: /guides/
+
+    - theme: alt
+      text: Reference
+      link: /reference/
+
+    - theme: alt
+      text: Concepts
+      link: /concepts/
 ---
 

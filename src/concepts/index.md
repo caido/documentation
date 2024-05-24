@@ -1,6 +1,6 @@
 # Directory
 
-## Concepts
+## Essentials
 
 - **[Instances](./essentials/instances.md)** - running/managing multiple Caido instances at once.
 - **[HTTPQL](./essentials/httpql.md)** - filtering requests and responses using HTTP Query Language.

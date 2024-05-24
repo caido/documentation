@@ -85,7 +85,7 @@ Twitter: [@SeanWrightSec](https://twitter.com/SeanWrightSec)
   </tbody>
 </table>
 
-## DVWA
+### DVWA
 
 <table>
   <thead>
