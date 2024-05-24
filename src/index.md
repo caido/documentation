@@ -9,12 +9,8 @@ hero:
   tagline: Guides and documentation
   actions:
     - theme: brand
-      text: Getting Started
-      link: /getting_started/index
-
-    - theme: alt
-      text: Reference
-      link: /reference/configuration/data_location
+      text: Quickstart
+      link: /quickstart/
 
     - theme: alt
       text: Roadmap
