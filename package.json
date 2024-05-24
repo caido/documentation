@@ -7,7 +7,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "lint": "markdownlint-cli2 src/**/*.md"
+    "lint": "markdownlint-cli2 'src/**/*.md'"
   },
   "keywords": [],
   "author": "",
