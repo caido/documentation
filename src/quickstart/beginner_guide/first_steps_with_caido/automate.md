@@ -2,13 +2,13 @@
 
 ## Automate
 
-_For advanced documentation on this topic - click [here](../../features/testing/automate.md)._
+_For advanced documentation on this topic - click [here](/reference/features/testing/automate.md)._
 
 ---
 
 > To send a request to `Automate`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+M`.
 
-<img alt="Automate tab." src="../../_images/automate_generator_tab.png">
+<img alt="Automate tab." src="/_images/automate_generator_tab.png">
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Highlight the element you wish to brute-force/fuzz.
@@ -24,17 +24,9 @@ _For advanced documentation on this topic - click [here](../../features/testing/
 
 To inspect the results of your `Automate` campaign - proceed with the following steps:
 
-<img alt="Automate results." src="../../_images/automate_results_tab.png">
+<img alt="Automate results." src="/_images/automate_results_tab.png">
 
 1. Click the paired tab.
 2. Each request will be displayed in this pane.
 3. This pane will display the selected request and it's associated response.
 4. This is the resulting list of options presented after right-clicking within the request pane.
-
-## Advanced/Additional Documentation
-
----
-
-For further or more advanced usage documentation, visit the documentation directory!
-
-- [Documentation Directory](../../doc_directory.md)

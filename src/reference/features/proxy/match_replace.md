@@ -15,7 +15,7 @@ When creating a new rule, you can update the following fields:
 - `Search as regex`: If the `Search term` is a regex or a simple string match.
 - `Search term`: The term to search for in the defined part of the request or response.
 - `Replace term`: The term to replace the search term with.
-- `Condition`: a [HTTPQL](/concepts/httpql.html) query that defines which requests/responses this rule applies to.
+- `Condition`: a [HTTPQL](/concepts/essentials/httpql.html) query that defines which requests/responses this rule applies to.
 
 > <a href="#common-mistake">**COMMON MISTAKE**</a>
 >

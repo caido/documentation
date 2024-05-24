@@ -10,7 +10,7 @@ This feature can also be used for archival purposes or audit purposes sometimes 
 The Exports feature generates two types of exports:
 
 - **All**: exports all data of the specified tool.
-- **Current rows** (Pro feature): exports only rows that match the filter and [scope](/features/overview/scope.md) currently set.
+- **Current rows** (Pro feature): exports only rows that match the filter and [scope](/reference/features/overview/scope.md) currently set.
 
 ![2 types of exports](/_images/exports_2_types.png)
 

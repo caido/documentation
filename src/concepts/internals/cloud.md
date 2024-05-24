@@ -9,8 +9,8 @@ Caido Cloud is comprised of the [dashboard](https://dashboard.caido.io) and the 
 We are aware that tying our product to a cloud is controversial. We developed our own cloud platform for a couple of reasons:
 
 - **Billing**: We don't bill per license, we bill per user and we want to allow you to install Caido on as many machines as you want. It is not possible to do so without a concept of account (notably to prevent abuse).
-- **Access Control**: We want to allow multiple users to share Instances securely without having to re-create a new account on each one, this requires a central service to set permissions. You can learn more about the process in the [Authentication](/internals/authentication.md) page.
-- **Complementary Services**: We want to offer complementary cloud services like the [Assistant](/features/testing/assistant.md) and sharing capabilities (in the future).
+- **Access Control**: We want to allow multiple users to share Instances securely without having to re-create a new account on each one, this requires a central service to set permissions. You can learn more about the process in the [Authentication](./authentication.md) page.
+- **Complementary Services**: We want to offer complementary cloud services like the [Assistant](/reference/features/testing/assistant.md) and sharing capabilities (in the future).
 
 ## API
 

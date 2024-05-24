@@ -1,6 +1,6 @@
 # Enhanced Testing Using Workflows
 
-_For conceptual documentation on Workflows - click [here](/concepts/workflows.md)._
+_For conceptual documentation on Workflows - click [here](/concepts/essentials/workflows.md)._
 
 ---
 
@@ -25,7 +25,7 @@ The data types that Workflows use include:
 
 ---
 
-<img alt="Workflows tab." src="../../_images/workflows_tab_layout.png">
+<img alt="Workflows tab." src="/_images/workflows_tab_layout.png">
 
 1. Select the `Workflows` tab from the left-hand menu within the Caido window.
 2. The three types of Workflows (`Passive`/`Active`/`Convert`) are listed horizontally here as tabs. Click to toggle between them.
@@ -55,10 +55,10 @@ You will first be presented with a pane that includes fields to name your new Wo
 
 The name and description pane will switch to a pane that displays a Node's properties when one is selected.
 
-<img alt="Workflows editor." src="../../_images/workflow_editor.png">
+<img alt="Workflows editor." src="/_images/workflow_editor.png">
 
 1. The available Nodes based on the selected Workflow type are displayed in this pane. They are represented as draggable blocks. To use a Node, simply **click, hold and drag** one into the pane directly right.
-2. This pane is where your Workflow is created. Here, [Connections](/concepts/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
+2. This pane is where your Workflow is created. Here, [Connections](/concepts/essentials/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
 3. After selecting a Node, the Node's properties are displayed here. The ability to delete the currently selected Node is included in this pane as well.
 
 ## Advanced Workflow Types Documentation

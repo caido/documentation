@@ -1,12 +1,46 @@
-# Tutorials
+# Showcase
 
 Our awesome community has put together many guides and videos! 🎉
 
-If you want your contributions to appear here, please follow the [Contribution Guidelines](../contributions/documentation.md)!
+If you want your contributions to appear here, please follow the [contribution guidelines](/guides/contributions/documentation.md)!
 
 Please note that these videos are not endorsed by Caido.
 
-## Try Hack Me
+## Reviews
+
+### t3l3machus
+
+Twitter: [@t3l3machus](https://twitter.com/t3l3machus)
+
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/5qWttZv8WF4"
+  frameborder="0"></iframe>
+
+### TheCyberMentor
+
+Linktree: [TheCyberMentor](https://linktr.ee/thecybermentor)
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/qLVu7rg9btk"
+  frameborder="0"></iframe>
+
+### CryptoCat
+
+Twitter: [@_CryptoCat](https://twitter.com/_CryptoCat)
+
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/8zhk9LBruks"
+  frameborder="0"></iframe>
+
+### Sean Wright
+
+Twitter: [@SeanWrightSec](https://twitter.com/SeanWrightSec)
+
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/z4x5FP2tbPY"
+  frameborder="0"></iframe>
+
+## Tutorials
+### Try Hack Me
 
 <table>
   <thead>
@@ -25,7 +59,7 @@ Please note that these videos are not endorsed by Caido.
   </tbody>
 </table>
 
-## Hack The Box
+### Hack The Box
 
 <table>
   <thead>
@@ -74,3 +108,13 @@ Please note that these videos are not endorsed by Caido.
     </tr>
   </tbody>
 </table>
+
+## Interviews
+
+### CTBBPodcast
+
+[www.criticalthinkingpodcast.io](https://www.criticalthinkingpodcast.io/)
+
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/cKB5QVez5es"
+  frameborder="0"></iframe>

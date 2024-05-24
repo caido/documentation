@@ -18,7 +18,7 @@ The first part of a filter clause is the `namespace`. We currently support 3 nam
 - **resp**: For HTTP responses.
 - **preset**: For filter presets.
 
-The **preset** namespace is a bit different, it doesn't have a `field` nor an `operator`. See the [filters](/features/overview/filters.md) page to learn more about filter presets.
+The **preset** namespace is a bit different, it doesn't have a `field` nor an `operator`. See the [filters](/reference/features/overview/filters.md) page to learn more about filter presets.
 
 ## 2. Field
 
@@ -90,7 +90,7 @@ The `preset` value is a different. You can reference presets in one of two ways:
 - **Name**: `preset:"Preset name"`.
 - **Alias**: `preset:preset-alias`.
 
-Head over to the [filters](/features/overview/filters.md) page to learn more about filter presets.
+Head over to the [filters](/reference/features/overview/filters.md) page to learn more about filter presets.
 
 ### Standalone
 

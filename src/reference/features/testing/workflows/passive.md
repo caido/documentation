@@ -10,10 +10,10 @@ _For general documentation on utilizing the Workflows tab - click [here](../work
 
 ---
 
-Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](../../../concepts/nodes.md) and include prerequisites such as:
+Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](/concepts/essentials/nodes.md) and include prerequisites such as:
 
 - If the request/response is within a set [Scope](../../overview/scope.md).
-- If the request/response is a match according to [HTTPQL](../../../concepts/httpql.md) syntax.
+- If the request/response is a match according to [HTTPQL](/concepts/essentials/httpql.md) syntax.
 - If the prior Node's specification/condition evaluated to True or False (_Boolean value_).
 
 ## Creating a New Passive Workflow: Applying Color to In-Scope GET Requests Workflow Example

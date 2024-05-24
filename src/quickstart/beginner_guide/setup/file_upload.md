@@ -1,6 +1,6 @@
 ## Uploading Files for Use in Automate
 
-_For advanced documentation on this topic - click [here](../../features/workspace/files.md)._
+_For advanced documentation on this topic - click [here](/reference/features/workspace/files.md)._
 
 ---
 
@@ -12,7 +12,7 @@ _For advanced documentation on this topic - click [here](../../features/workspac
 
 ---
 
-<img alt="Files tab." src="../../_images/upload_wordlist_tab.png" center/>
+<img alt="Files tab." src="/_images/upload_wordlist_tab.png" center/>
 
 1. Select the `Files` tab from the left-hand menu within the Caido window.
 2. Drag and drop the files you wish to upload into this box or click `Browse` to navigate/select the file within your device's file system.

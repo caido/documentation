@@ -18,7 +18,7 @@ View the roadmap to stay up-to-date with Caido's development here:
 
 We have documented some of the common errors you might encounter while using Caido:
 
-- [Common Errors](/common_errors.md)
+- [Common Errors](/reference/common_errors.md)
 
 ### Join Caido's Discord Server
 

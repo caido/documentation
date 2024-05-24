@@ -9,13 +9,13 @@ We encourage you to keep your work organized by creating many smaller Projects.
 By clicking on the three dots to the right of the Project Select button, you may:
 
 - Rename your Project.
-- Copy [the file path to your Project](/internals/files.md).
-- Create [a backup](/features/workspace/backups.md) of your Project.
+- Copy [the file path to your Project](/concepts/internals/files.md).
+- Create [a backup](/reference/features/workspace/backups.md) of your Project.
 - Delete your Project.
 
 <img width="300" alt="Rename Projects." src="/_images/projects_rename.png" center>
 
-To restore your Projects from a backup, press the Restore button on the [Backups](/features/workspace/backups.md) tab or use the Import button near the search bar within the Projects tab and provide a path to a `.caidobak` file.
+To restore your Projects from a backup, press the Restore button on the [Backups](/reference/features/workspace/backups.md) tab or use the Import button near the search bar within the Projects tab and provide a path to a `.caidobak` file.
 
 <img width="300" alt="Import Projects." src="/_images/projects_import.png" center>
 

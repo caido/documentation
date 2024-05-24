@@ -31,7 +31,7 @@ We currently provide 4 attack strategies:
 
 For each payload, you can choose a `type` from the list:
 
-- **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance using the [Files](/features/workspace/files.md) page.
+- **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance using the [Files](/reference/features/workspace/files.md) page.
 - **Simple List:** This is for cases where you want to test a short list of elements.
 - **Null Payload:** This is useful to generate requests without changing anything in it.
 

@@ -22,4 +22,4 @@ You can filter requests by:
 
 <img alt="HTTP History with filter drawer" src="/_images/intercept_with_filter_drawer.png" no-shadow/>
 
-You can also Scope the requests by host. See the [Scope](/features/overview/scope.md) page for more details.
+You can also Scope the requests by host. See the [Scope](/reference/features/overview/scope.md) page for more details.

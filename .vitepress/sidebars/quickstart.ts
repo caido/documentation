@@ -7,31 +7,20 @@ export const quickstartSidebar: DefaultTheme.Sidebar = [{
         items: [{
                 text: 'Introduction',
                 link: '/quickstart/'
-            },
-            {
-                text: 'Show Case',
-                items: [{
-                        text: 'Reviews',
-                        link: '/quickstart/show_case/overviews'
-                    },
-                    {
-                        text: 'Interviews',
-                        link: '/quickstart/show_case/interviews'
-                    },
-                    {
-                        text: 'Tutorials',
-                        link: '/quickstart/show_case/tutorials'
-                    }
-                ]
-            }
-        ],
+        },
+          { text: "Showcase", link: "/quickstart/showcase" },
+                                ]
     },
     {
         text: "Beginner Guide",
-        items: [{
-                text: 'What is Caido?',
-                link: '/quickstart/beginner_guide/welcome_to_caido/onboarding'
-            },
+        items: [
+          {
+            text: "Welcome to Caido",
+            items: [{
+              text: "Onboarding",
+              link: "/quickstart/beginner_guide/welcome_to_caido/onboarding",
+            }]
+          },
             {
                 text: 'Setup',
                 items: [{

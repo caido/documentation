@@ -2,25 +2,34 @@ import {
     DefaultTheme
 } from "vitepress";
 
-export const guidesSidebar: DefaultTheme.Sidebar = [{
+export const guidesSidebar: DefaultTheme.Sidebar = [
+  {
+    text: 'Introduction',
+    items: [{
+            text: 'Directory',
+            link: '/guides/'
+        }
+    ]
+  },
+  {
     text: 'User Guide',
     items: [{
             text: 'Installation',
-            link: '/guides/installation'
+            link: '/guides/user_guide/installation'
         },
         {
             text: 'Running on a VPS',
-            link: '/guides/vps'
+            link: '/guides/user_guide/vps'
         },
         {
             text: 'Running in Docker',
-            link: '/guides/docker'
+            link: '/guides/user_guide/docker'
         }
     ]
 },
-  { text: "Developer Guide", items: [{
+  { text: "Contributions", items: [{
     text: "Documentation",
-    link: "/guides/developer_guide/documentation"
+    link: "/guides/contributions/documentation"
   }
   ]}
 ]

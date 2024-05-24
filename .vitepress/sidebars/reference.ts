@@ -1,48 +1,52 @@
-import { DefaultTheme } from "vitepress";
+import {
+    DefaultTheme
+} from "vitepress";
 
-export const referenceSidebar: DefaultTheme.Sidebar = [
-  { text: "Introduction", items: [
-    { text: 'Directory', link: '/reference/' },
-  ]},
-  {
-    text: "Debugging",
-    items: [
-      { text: 'Common Errors', link: '/reference/debugging/errors' },
-    ]
-  },
-{
-                text: 'Configuration',
-                items: [{
-                        text: 'Listening Address/Port',
-                        link: '/configuration/listening_address'
-                    },
-                    {
-                        text: 'CA Certificate',
-                        link: '/configuration/import_ca_certificate'
-                    },
-                    {
-                        text: 'Data Location',
-                        link: '/configuration/data_location'
-                    }
-                ]
+export const referenceSidebar: DefaultTheme.Sidebar = [{
+        text: "Introduction",
+        items: [{
+                text: 'Directory',
+                link: '/reference/'
             },
+            {
+                text: 'Common Errors',
+                link: '/reference/common_errors'
+            },
+        ]
+    },
+    {
+        text: 'Configuration',
+        items: [{
+                text: 'Listening Address/Port',
+                link: '/reference/configuration/listening_address'
+            },
+            {
+                text: 'CA Certificate',
+                link: '/reference/configuration/import_ca_certificate'
+            },
+            {
+                text: 'Data Location',
+                link: '/reference/configuration/data_location'
+            }
+        ]
+    },
 
 
-        {
+    {
         text: 'Features',
         items: [{
                 text: 'Overview',
                 items: [{
                         text: 'Sitemap',
-                        link: '/features/overview/sitemap'
+                        link: '/reference//features/overview/sitemap'
                     },
                     {
                         text: 'Scope',
-                        link: '/features/overview/scope'
+                        link: '/reference//features/overview/scope'
                     },
                     {
                         text: 'Filters',
-                        link: '/features/overview/filters'
+                        link: '/reference/features/overview/filters'
                     }
                 ]
             },
@@ -50,46 +54,46 @@ export const referenceSidebar: DefaultTheme.Sidebar = [
                 text: 'Proxy',
                 items: [{
                         text: 'Intercept',
-                        link: '/features/proxy/intercept'
+                        link: '/reference/features/proxy/intercept'
                     },
                     {
                         text: 'HTTP History',
-                        link: '/features/proxy/http_history'
+                        link: '/reference/features/proxy/http_history'
                     },
                     {
                         text: 'WS History',
-                        link: '/features/proxy/ws_history'
+                        link: '/reference/features/proxy/ws_history'
                     },
                     {
                         text: 'Match & Replace',
-                        link: '/features/proxy/match_replace'
+                        link: '/reference/features/proxy/match_replace'
                     }
                 ]
             },
-                        {
+            {
                 text: 'Testing',
                 items: [{
                         text: 'Replay',
-                        link: '/features/testing/replay'
+                        link: '/reference/features/testing/replay'
                     },
                     {
                         text: 'Automate',
-                        link: '/features/testing/automate'
+                        link: '/reference/features/testing/automate'
                     },
                     {
                         text: 'Assistant',
-                        link: '/features/testing/assistant'
+                        link: '/reference/features/testing/assistant'
                     },
                     {
                         text: 'Workflows',
-                        link: '/features/testing/workflows',
+                        link: '/reference/features/testing/workflows',
                         items: [{
                                 text: 'Passive',
-                                link: '/features/testing/workflows/passive'
+                                link: '/reference/features/testing/workflows/passive'
                             },
                             {
                                 text: 'Convert',
-                                link: '/features/testing/workflows/convert'
+                                link: '/reference/features/testing/workflows/convert'
                             }
                         ]
                     }
@@ -99,11 +103,11 @@ export const referenceSidebar: DefaultTheme.Sidebar = [
                 text: 'Logging',
                 items: [{
                         text: 'Search',
-                        link: '/features/logging/search'
+                        link: '/reference/features/logging/search'
                     },
                     {
                         text: 'Exports',
-                        link: '/features/logging/exports'
+                        link: '/reference/features/logging/exports'
                     }
                 ]
             },
@@ -111,35 +115,35 @@ export const referenceSidebar: DefaultTheme.Sidebar = [
                 text: 'Workspace',
                 items: [{
                         text: 'Files',
-                        link: '/features/workspace/files'
+                        link: '/reference/features/workspace/files'
                     },
                     {
                         text: 'Projects',
-                        link: '/features/workspace/projects'
+                        link: '/reference/features/workspace/projects'
                     },
                     {
                         text: 'Backups',
-                        link: '/features/workspace/backups'
+                        link: '/reference/features/workspace/backups'
                     }
                 ]
             }
         ]
     },
-{
-                text: 'Plugins',
-                items: [{
-                        text: 'Custom CSS',
-                        link: '/plugins/custom_css'
-                    },
-                    {
-                        text: '(WIP) Custom JS',
-                        link: '/plugins/custom_js'
-                    },
-                    {
-                        text: '(WIP) Custom Workflow Nodes',
-                        link: '/plugins/custom_workflow_nodes'
-                    }
-                ]
+    {
+        text: 'Plugins',
+        items: [{
+                text: 'Custom CSS',
+                link: '/reference/plugins/custom_css'
             },
+            {
+                text: '(WIP) Custom JS',
+                link: '/reference/plugins/custom_js'
+            },
+            {
+                text: '(WIP) Custom Workflow Nodes',
+                link: '/reference/plugins/custom_workflow_nodes'
+            }
+        ]
+    },
 
 ]

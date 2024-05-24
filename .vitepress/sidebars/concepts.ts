@@ -1,51 +1,56 @@
-import { DefaultTheme } from "vitepress";
+import {
+    DefaultTheme
+} from "vitepress";
 
-export const conceptsSidebar: DefaultTheme.Sidebar = [
-  { text: "Introduction", items: [
-    { text: 'Directory', link: '/reference/' }
-  ]},
-{
+export const conceptsSidebar: DefaultTheme.Sidebar = [{
+        text: "Introduction",
+        items: [{
+            text: 'Directory',
+            link: '/concepts/'
+        }]
+    },
+    {
         text: 'Essentials',
         items: [{
                 text: 'Instances',
-                link: '/reference/concepts/instances'
+                link: '/concepts/essentials/instances'
             },
             {
                 text: 'HTTPQL',
-                link: '/reference/concepts/httpql'
+                link: '/concepts/essentials/httpql'
             },
             {
                 text: 'Workflows',
-                link: '/reference/concepts/workflows',
+                link: '/concepts/essentials/workflows',
                 items: [{
                     text: 'Nodes',
-                    link: '/reference/concepts/nodes'
+                    link: '/concepts/essentials/nodes'
                 }]
             },
             {
                 text: 'Tabs',
-                link: '/reference/concepts/tabs'
+                link: '/concepts/essentials/tabs'
             },
             {
                 text: 'Layout',
-                link: '/reference/concepts/layout'
+                link: '/concepts/essentials/layout'
             }
         ]
     },
-      {
+    {
         text: 'Internals',
         items: [{
                 text: 'Files',
-                link: '/internals/files'
+                link: '/concepts/internals/files'
             },
             {
                 text: 'Cloud',
-                link: '/internals/cloud'
+                link: '/concepts/internals/cloud'
             },
             {
                 text: 'Authentication',
-                link: '/internals/authentication'
+                link: '/concepts/internals/authentication'
             }
         ]
     },
-  ]
+]

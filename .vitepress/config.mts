@@ -25,7 +25,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Quickstart', link: '/quickstart/' },
-      { text: 'Guides', link: '/guides/installation' },
+      { text: 'Guides', link: '/guides/' },
       { text: 'Reference', link: '/reference/' },
       { text: 'Concepts', link: '/concepts/' },
       { text: 'FAQ', link: '/faq' },

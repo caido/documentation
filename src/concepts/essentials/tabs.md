@@ -1,6 +1,6 @@
 # Tabs
 
-Pages such as [Replay](/features/testing/replay.md) and [Automate](/features/testing/automate.md) feature a tab system to quickly switch between items of interest. These tabs are usually accompanied with a tree view on the left side of the page.
+Pages such as [Replay](/reference/features/testing/replay.md) and [Automate](/reference/features/testing/automate.md) feature a tab system to quickly switch between items of interest. These tabs are usually accompanied with a tree view on the left side of the page.
 
 In case you need to declutter your Workspace, you can close any tab at any time without worrying about losing your data.
 Just head over to the tree view in the sidebar, and you'll find all your sessions ready to be reopened.

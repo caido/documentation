@@ -2,7 +2,7 @@
 
 ## Replay
 
-_For advanced documentation on this topic - click [here](../../features/testing/replay.md)._
+_For advanced documentation on this topic - click [here](/reference/features/testing/replay.md)._
 
 ---
 
@@ -12,7 +12,7 @@ _For advanced documentation on this topic - click [here](../../features/testing/
 
 ---
 
-<img alt="Intercept tab." src="../../_images/replay_tab.png" center/>
+<img alt="Intercept tab." src="/_images/replay_tab.png" center/>
 
 1. Select the `Replay` tab from the left-hand menu within the Caido window.
 2. These numerically named tabs are the requests that have been sent to `Replay` in the order they were sent. To select a request, simply click on the desired tab. _You can arbitrarily rename a tab by right-clicking it and selecting `Rename`_.
@@ -30,7 +30,7 @@ With Caido, requests are easily organized with the use of **Sessions** and **Col
 - **Sessions**: everytime you edit and forward a request within `Replay` - the history of these forwards is recorded into a **Session**.
 - **Collections**: you can group Sessions into **Collections** which allows you to organize your requests by shared traits.
 
-<img alt="Sessions and Collections." src="../../_images/session_collection_tab.png" center/>
+<img alt="Sessions and Collections." src="/_images/session_collection_tab.png" center/>
 
 1. The request Sessions.
 2. The Collection. You can view the list of associated Sessions by clicking `>` to the left of the Collection. To collapse the list, click the `∨`.

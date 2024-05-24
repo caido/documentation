@@ -2,11 +2,11 @@
 
 ## What are Projects?
 
-_For advanced documentation on this topic - click [here](../../features/workspace/projects.md)._
+_For advanced documentation on this topic - click [here](/reference/features/workspace/projects.md)._
 
 ---
 
-Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](../../concepts/instances.md) for more information on Instances.
+Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
 
 Think of **Projects** as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
@@ -14,7 +14,7 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 
 ---
 
-<img alt="Projects tab." src="../../_images/projects_tab.png">
+<img alt="Projects tab." src="/_images/projects_tab.png">
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.
