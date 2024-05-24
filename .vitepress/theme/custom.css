@@ -7,6 +7,26 @@
 
 }
 
+@media (min-width: 1536px) {
+  :root {
+    --vp-layout-max-width: 1536px;
+  }
+
+  .VPDoc.has-aside .content-container {
+    max-width: 1000px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --vp-layout-max-width: 1920px;
+  }
+
+  .VPDoc.has-aside .content-container {
+    max-width: 1200px !important;
+  }
+}
+
 img {
     -webkit-box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
     box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
