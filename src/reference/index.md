@@ -2,7 +2,6 @@
 
 **[Common Errors](./common_errors.md)** - common errors and matching resolutions.
 
-
 ## Configuration
 
 - **[Listening Address & Port](./configuration/listening_address.md)** - listening address customization.

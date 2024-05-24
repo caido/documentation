@@ -40,6 +40,7 @@ Twitter: [@SeanWrightSec](https://twitter.com/SeanWrightSec)
   frameborder="0"></iframe>
 
 ## Tutorials
+
 ### Try Hack Me
 
 <table>
