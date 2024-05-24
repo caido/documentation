@@ -10,8 +10,6 @@ Explore our documentation to learn about the different features of Caido and how
 
 ## I am just starting!
 
----
-
 Great! Glad to have you on board! 🚀
 
 We suggest you start with the [Beginner's Guide](./beginner_guide/welcome_to_caido/onboarding.md) and [Tutorials](./showcase) to get familiar with the basics.
@@ -20,9 +18,7 @@ If you are facing an issue, look into [Common Errors](/reference/common_errors),
 
 ## I know my way around!
 
----
-
-You might want to dig into more advanced features we offer like [HttpQL](/concepts/essentials/httpql.md) and running Caido on remote [VPS](/guides/user_guide/vps.md).
+You might want to dig into more advanced features we offer like [HTTPQL](/concepts/essentials/httpql.md) and running Caido on remote [VPS](/guides/user_guide/vps.md).
 
 ## Want a quick peak of the future?
 

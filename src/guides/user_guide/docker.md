@@ -2,8 +2,6 @@
 
 ## Running the Image
 
----
-
 We offer images on [Dockerhub](https://hub.docker.com/r/caido/caido) that you can run directly on `x86`:
 
 ```
@@ -14,11 +12,11 @@ This will start Caido on port 7000. You can then point your browser's proxy sett
 
 To use another port, replace `7000` in the command above with a different port.
 
-> For M1 users, it is now possible to enable [Rosetta](https://docs.docker.com/desktop/settings/mac/#use-rosetta-for-x86amd64-emulation-on-apple-silicon) in the Docker settings. You can then run images with `--platform linux/amd64`.
+::: info
+For M1 users, it is now possible to enable [Rosetta](https://docs.docker.com/desktop/settings/mac/#use-rosetta-for-x86amd64-emulation-on-apple-silicon) in the Docker settings. You can then run images with `--platform linux/amd64`.
+:::
 
 ## Project Persistence
-
----
 
 By default, Projects created in the Docker container are not saved between `docker run` commands.
 
@@ -37,11 +35,11 @@ docker run --rm -p 7000:8080 \
   -v /home/my_user/my_data:/home/caido/.local/share/caido caido/caido:latest
 ```
 
-...where `/home/my_user/my_data` will be the folder containing Caido projects.
+::: info
+`/home/my_user/my_data` will be the folder containing Caido projects.
+:::
 
 ## Building the Image
-
----
 
 If you prefer to build the image yourself, here is a `Dockerfile` sample you can use:
 

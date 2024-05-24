@@ -31,7 +31,9 @@ A Node's `Alias` is an arbitrarily set identifier used to uniquely reference the
 
 Aliases can consist of lowercase letters, hyphens, underscores and numbers.
 
-> _NOTE: This differs from a Node's Name which simply serves cosmetic purposes to assist in the visual representation._
+::: info
+This differs from a Node's Name which simply serves cosmetic purposes to assist in the visual representation.
+:::
 
 ## Node Input Types: Constant Value & Reference Value
 

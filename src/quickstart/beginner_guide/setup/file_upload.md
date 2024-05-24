@@ -1,16 +1,12 @@
-## Uploading Files for Use in Automate
+# Uploading Files for Use in Automate
 
 _For advanced documentation on this topic - click [here](/reference/features/workspace/files.md)._
-
----
 
 `Automate` allows you to brute-force/fuzz designated elements of a request
 
 - In order to utilize `Automate` - you must first upload payload files/wordlists in the `Files` tab within Caido.
 
 ## Files
-
----
 
 <img alt="Files tab." src="/_images/upload_wordlist_tab.png" center/>
 
@@ -20,8 +16,6 @@ _For advanced documentation on this topic - click [here](/reference/features/wor
 4. You can rename the file by clicking the `Edit` button, entering the desired name and then clicking `Save`. To remove a wordlist click on the `⋮` and select `Delete`.
 
 ## Automating Brute-Forcing/Fuzzing
-
----
 
 Once you have uploaded your desired files - return to Automate documentation here:
 

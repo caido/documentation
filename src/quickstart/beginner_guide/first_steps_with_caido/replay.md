@@ -4,13 +4,11 @@
 
 _For advanced documentation on this topic - click [here](/reference/features/testing/replay.md)._
 
----
-
 `Replay` allows you to repeatedly forward modified requests. **Requests** are shown on the left and **responses** are shown on the right.
 
-> To send a request to `Replay`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+R`.
-
----
+::: tip
+To send a request to `Replay`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+R`.
+:::
 
 <img alt="Intercept tab." src="/_images/replay_tab.png" center/>
 
@@ -22,8 +20,6 @@ _For advanced documentation on this topic - click [here](/reference/features/tes
 6. This is the resulting list of options presented after right-clicking within the request pane.
 
 ## Replay Collections and Sessions
-
----
 
 With Caido, requests are easily organized with the use of **Sessions** and **Collections**.
 
@@ -38,11 +34,11 @@ With Caido, requests are easily organized with the use of **Sessions** and **Col
 4. Clicking the `New Session` button will present an empty request template. Create a new request manually or enter a URL into the `Enter a connection URL` input box and Caido will automatically generate a valid basic request.
 5. Clicking the drop-down arrow of the `New Session` button will present the option to create a new Collection. Click `New Collection` to proceed with this option.
 
-**_To move Sessions between Collections - click, hold and drag the target Session and release on top of the target Collection._**
+::: tip
+To move Sessions between Collections - click, hold and drag the target Session and release on top of the target Collection.
+:::
 
 ## Automating Brute-Forcing/Fuzzing
-
----
 
 Once you have familiarized yourself with Replay - the steps to automate request forwarding are available here:
 

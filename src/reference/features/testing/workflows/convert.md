@@ -2,13 +2,9 @@
 
 _For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
 
----
-
 While Passive and Active Workflows operate on requests and responses - `Convert Workflows` operate on **bytes** received as input.
 
 ## Using Convert Workflows
-
----
 
 Convert Workflows are **manually triggered** and are integrated in various areas of Caido:
 
@@ -30,9 +26,9 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 ## Creating a New Convert Workflow: MD5 Hash Example
 
----
-
-**This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json) to download.**
+::: tip
+This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json) to download.
+:::
 
 _In this example - the Workflow created will perform MD5 hashing on the given input._
 
@@ -51,7 +47,9 @@ _In this example - the Workflow created will perform MD5 hashing on the given in
 4. **Click, hold and drag** the `MD5 Hash` Node into the pane directly right.
 5. Drag the Nodes into a top-down heirachical structure. Connect them together by making Node `Connections`.
 
-> _NOTE: Convert Workflows require an End Node to function properly._
+::: warning
+Convert Workflows require an End Node to function properly.
+:::
 
 6. Select the `MD5 Hash` Node by clicking on it to display its properties in the right-hand pane. Here, the Node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured. _For this example creation, leave the default configuration as is._
 7. Supply test input to be converted by the Workflow.

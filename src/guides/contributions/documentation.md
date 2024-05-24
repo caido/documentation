@@ -6,15 +6,11 @@ Don't hesitate to join our [Discord](https://links.caido.io/www-discord) if you 
 
 ## Requirements
 
----
-
 - [Git](https://git-scm.com/)
 - [mdBook](https://rust-lang.github.io/mdBook/)
 - [Github Account](https://github.com)
 
 ## Steps
-
----
 
 ### Prepare
 
