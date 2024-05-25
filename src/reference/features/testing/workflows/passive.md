@@ -14,9 +14,13 @@ Passive Workflows are **automatically triggered** when their specifications/cond
 
 ## Creating a New Passive Workflow: Applying Color to In-Scope GET Requests Workflow Example
 
-**This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json) to download.**
+::: tip
+This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json) to download.
+:::
 
-_In this example - the Workflow created will color highlight GET requests within the HTTP History tab if they are within the Project's Scope._
+::: info
+In this example - the Workflow created will color highlight GET requests within the HTTP History tab if they are within the Project's Scope.
+:::
 
 > Navigate to the **Workflow Editor** for the Passive type by following these steps:
 >

@@ -1,35 +1,43 @@
 # Intercept
 
-The `Intercept` tab allows you to control the flow of requests through the proxy by pausing and resuming forwarding. When forwarding is paused, requests and responses that go through the proxy are temporarily stored in the Intercept table, where you can review, edit, or drop them before forwarding them.
+The `Intercept` tab allows you to control the flow of requests through the proxy by pausing and resuming forwarding. When forwarding is paused, requests and responses that pass through the proxy are temporarily stored in the Intercept table, where you can review, edit, or drop them before forwarding them.
 
-::: tip
-To eventually add Websocket interceptions to Caido, vote for this issue [here](https://github.com/caido/caido/issues/568).
+Modifications to requests and responses can be made directly within their Intercept panes as they are captured.
+
+## Intercept Layout
+
+To familiarize yourself with the Intercept interface, continue below:
+
+<img alt="Intercept layout." src="/_images/intercept_marked_layout.png" center/>
+
+1. Select the `Intercept` tab from the left-hand menu within the Caido window.
+2. Clicking this button will toggle between `Queuing` (_intercept traffic_) and `Forwarding` (_forward traffic_).
+3. Click `Requests`, `Responses` or **both** to specify what `Queuing` is applied to. _**Intercept on** is signified by `||` and **intercept off** is signified by `>>`._
+4. This pane lists all the queued **requests**. Select one from the list by clicking on it to view its contents.
+5. The contents of the currently queued/selected **request** will be displayed in this pane.
+6. The `Drop` and `Forward` buttons will drop or forward **requests**/**responses** respecively.
+
+<img alt="Intercept layout - response panes." src="/_images/interceptresp_marked_layout.png" center/>
+
+7. This pane will list all the queued **responses**. Select one from the list by clicking on it to view its contents.
+8. The contents of the currently queued/selected **response** will be displayed in this pane.
+
+## Additional Information
+
+::: info
+
+- The number highlighted in red within the Intercept tab represents the number of queued requests and responses.
+- All queued traffic will be forwarded when toggling from Queuing back to Forwarding.
+
 :::
 
-## Pausing and Resuming Intercept
+::: tip TIPS
 
-To pause forwarding, toggle the `Forwarding` button on the top-right of any tab. This will prevent any new requests from being forwarded through the proxy and will queue them up in the Intercept table.
+- [Applying a Scope Preset](../overview/scope.md) is supported by Intercept.
+- Clicking the column names (_located at the top and spanning horizontally_) within the top request and response panes will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
+- To send a request to `Replay` from `Intercept`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
+- To send a request to `Automate` from `Intercept`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
+- Clicking the `{}` button will toggle the Pretty/Raw display option.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](../../../quickstart/beginner_guide/setup/config.md) documentation for more information.
 
-The interface allows you to queue multiple requests and responses in the Intercept table. All requests are visible in one place and can be sorted.
-
-For each request in the Intercept table, you can then choose to edit its contents, as well as forward or drop it.
-
-When you're done forwarding, toggle the `Queuing` button to resume forwarding. This will forward all the queued up requests in the Intercept table.
-
-<img alt="Intercept." src="/_images/intercept1.png"/>
-
-## Scope
-
-The `Scope` setting allows you to define and use Scopes to narrow interception of requests and responses.  
-
-By selecting a Scope, requests and responses for hosts in-scope will be intercepted and those for hosts out-of-scope will pass through.
-
-<img alt="Intercept scope." src="/_images/intercept_scope.png"/>
-
-## Modifications of Requests/Responses
-
-If you choose to edit content in the Intercept table, modifications will be visible after your rule in `Match & Replace` is completed and active.
-
-In the `Search` and `HTTP History` tabs, a new entry will then be available in the dropdown menu called `Manual` for your edits.
-
-<img alt="Manual edit." src="/_images/manual_edit.png" center/>
+:::

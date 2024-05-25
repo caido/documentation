@@ -39,6 +39,9 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                 items: [{
                         text: 'Sitemap',
                         link: '/reference//features/overview/sitemap'
+                    },{
+                        text: 'Sorting',
+                        link: '/reference//features/overview/sorting'
                     },
                     {
                         text: 'Scope',

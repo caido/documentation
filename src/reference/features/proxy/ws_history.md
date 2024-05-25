@@ -1,23 +1,20 @@
 # WS History
 
-## Streams
+The `WS History` tab allows you to view data exchanged between the client and the server passing through the proxy over a WebSocket connection. This tab provides you with information such as when the connection was established, where the messages are being sent, the direction of the messages between the client and server, the length of the messages and the contents of each message exchanged.
 
-The `WS History` tab allows you to view data exchange between the client and the server passing through the proxy.
+## WS History Layout
 
-When an HTTP Connection is upgraded to Websocket, it will appear in the stream table.
+To familiarize yourself with the WS History interface, continue below:
 
-<img src="/_images/ws_streams.png" alt="Websocket History Streams" width="1000" center/>
+<img alt="WS History tab." src="/_images/ws_history_tab.png" center/>
 
-</br> Clicking on a stream will display the messages and their direction.
+1. Select the `WS History` tab from the left-hand menu within the Caido window.
+2. All the proxied WebSocket streams will appear in this pane. Select them arbitrarily.
+3. Select a message within the selected stream in this pane.
+4. The contents of the selected message are presented in this pane.
 
-<img src="/_images/stream_direction.png" alt="Stream Direction" width="1300" center/>
+::: tip
 
-</br> You can open each message to display the content.
+- [Applying a Scope Preset](../overview/scope.md) is supported by WS History.
 
-<img src="/_images/ws_message.png" alt="WS Message" width="1500" center/>
-
-## Scopes
-
-[Scopes](/reference/features/overview/scope.md) can be used to limit the domains displayed in the stream's table.
-
-![Scopes in WS History](/_images/scope_ws_history.png)
+:::
