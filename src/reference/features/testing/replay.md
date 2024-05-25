@@ -1,14 +1,12 @@
 # Replay
 
-The Replay page allows you to edit and replay requests individually. This feature provides a flexible way to test your web applications by replaying requests with different parameters/headers.
+The `Replay` tab allows you to edit and replay requests individually. This feature provides a flexible way to test your web applications by replaying requests with different parameters/headers.
 
 You can create requests from scratch, or start from any existing request inside the application. Once a request is created, you can edit it and replay it as many times as needed.
 
 <img alt="Replay" src="/_images/replay_page.png" center>
 
 ## Collections
-
----
 
 Requests are organized into Collections and Sessions.
 
@@ -20,13 +18,9 @@ Replay Collections allow you to group Sessions. You can rename Collections and d
 
 ## Replay Sessions
 
----
-
 Navigate quickly through the history of requests and responses in your Session by using the arrows at the top of the Replay table. You can see the number of pages in the Session at the bottom of the table.
 
 ### Right Click Menu
-
----
 
 - You can use Convert Workflows in Replay. See the [Workflows](/reference/features/testing/workflows/convert) page for more details.
 

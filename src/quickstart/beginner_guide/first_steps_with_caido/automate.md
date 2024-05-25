@@ -4,9 +4,9 @@
 
 _For advanced documentation on this topic - click [here](/reference/features/testing/automate.md)._
 
----
-
-> To send a request to `Automate`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+M`.
+::: tip
+To send a request to `Automate`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+M`.
+:::
 
 <img alt="Automate tab." src="/_images/automate_generator_tab.png">
 
@@ -19,8 +19,6 @@ _For advanced documentation on this topic - click [here](/reference/features/tes
 7. The configuration tab as well as the associated results tab will be paired next to each other here.
 
 ## Automate Results
-
----
 
 To inspect the results of your `Automate` campaign - proceed with the following steps:
 

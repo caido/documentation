@@ -8,11 +8,11 @@ By writing your own CSS code in the provided text area, you can modify the aesth
 
 ## Themes
 
----
-
 One of the simplest changes you can make is to customize the default theme. You can do this by adjusting the CSS variables we've provided to your liking.
 
-> Some sections of Caido are not be configurable with CSS variables yet. Depending on your use case, you might have to add CSS to existing classes directly.
+::: tip
+Some sections of Caido are not be configurable with CSS variables yet. Depending on your use case, you might have to add CSS to existing classes directly.
+:::
 
 Here is an (incomplete) example of a CSS snippet for the solarized dark theme. You can paste this into the Custom CSS field to try it out.
 

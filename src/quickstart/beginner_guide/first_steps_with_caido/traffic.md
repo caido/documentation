@@ -4,8 +4,6 @@
 
 _For advanced documentation on this topic - click [here](/reference/features/proxy/intercept.md)._
 
----
-
 `Intercept` allows you to capture requests as well as responses for inspection/modification and forward or drop them arbitrarily. **Requests** are shown on the left and **responses** are shown on the right.
 
 <img alt="Intercept tab." src="/_images/intercept_tab.png" center/>
@@ -18,8 +16,6 @@ _For advanced documentation on this topic - click [here](/reference/features/pro
 ## HTTP History
 
 _For advanced documentation on this topic - click [here](/reference/features/proxy/http_history.md)._
-
----
 
 The `HTTP History` tab lists all the traffic that Caido has proxied.
 
@@ -35,8 +31,6 @@ The `HTTP History` tab lists all the traffic that Caido has proxied.
 
 _For advanced documentation on this topic - click [here](/reference/features/proxy/ws_history.md)._
 
----
-
 The `WS History` tab lists all of the WebSocket stream traffic that Caido has proxied.
 
 <img alt="WS History tab." src="/_images/ws_history_tab.png" center/>
@@ -46,11 +40,11 @@ The `WS History` tab lists all of the WebSocket stream traffic that Caido has pr
 3. Select a message within the selected stream in this pane.
 4. The contents of the selected message are presented in this pane.
 
-**Tip:** _You can click on any of the column names above the request/response/stream list pane to sort in ascending/descending/alphabetical/numerical order, by extension/presence/absence/size, or by time waited/time sent depending on the tab/category selected._
+::: tip
+You can click on any of the column names above the request/response/stream list pane to sort in ascending/descending/alphabetical/numerical order, by extension/presence/absence/size, or by time waited/time sent depending on the tab/category selected.
+:::
 
 ## Forwarding and Modifying Requests Repeatedly
-
----
 
 Once you have familiarized yourself with capturing and inspecting web traffic - basic modification steps using `Replay` are available here:
 

@@ -33,7 +33,7 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/' },
       { text: 'Concepts', link: '/concepts/' },
       { text: 'FAQ', link: '/faq' },
-      { text: "Report a bug", link: "/report_bug" }
+      { text: "Report a Bug", link: "/report_bug" }
     ],
 
     sidebar: {

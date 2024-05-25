@@ -4,15 +4,11 @@
 
 _For advanced documentation on this topic - click [here](/reference/features/workspace/projects.md)._
 
----
-
 Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
 
 Think of **Projects** as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
 ## Creating a New Project
-
----
 
 <img alt="Projects tab." src="/_images/projects_tab.png">
 
@@ -29,16 +25,12 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 
 ## Switching Between Projects
 
----
-
 Caido offers the ability to switch between your Projects with ease. Switching Projects can be accomplished in two different ways:
 
 1. Selecting the `Workspace` tab from the left-hand menu within the Caido window and clicking the `Select` button next to the desired Project.
 2. Selecting the desired Project in the drop-down menu, located in the upper-right corner of the Caido window.
 
 ## Capturing and Inspecting Web Traffic
-
----
 
 Once you have familiarized yourself with creating Projects - basic capture and inspection of web traffic steps are available here:
 

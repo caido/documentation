@@ -2,7 +2,7 @@
 
 ## Streams
 
-The WS History feature allows you to view data exchange between the client and the server passing through the proxy.
+The `WS History` tab allows you to view data exchange between the client and the server passing through the proxy.
 
 When an HTTP Connection is upgraded to Websocket, it will appear in the stream table.
 
@@ -17,8 +17,6 @@ When an HTTP Connection is upgraded to Websocket, it will appear in the stream t
 <img src="/_images/ws_message.png" alt="WS Message" width="1500" center/>
 
 ## Scopes
-
----
 
 [Scopes](/reference/features/overview/scope.md) can be used to limit the domains displayed in the stream's table.
 

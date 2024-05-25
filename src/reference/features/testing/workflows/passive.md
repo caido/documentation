@@ -2,13 +2,9 @@
 
 _For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
 
----
-
 `Passive Workflows` take **requests** or **responses** as input. Their execution occurs in the "background" as you conduct your testing, extending the efficiency of your process.
 
 ## Using Passive Workflows
-
----
 
 Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](/concepts/essentials/nodes.md) and include prerequisites such as:
 
@@ -17,8 +13,6 @@ Passive Workflows are **automatically triggered** when their specifications/cond
 - If the prior Node's specification/condition evaluated to True or False (_Boolean value_).
 
 ## Creating a New Passive Workflow: Applying Color to In-Scope GET Requests Workflow Example
-
----
 
 **This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json) to download.**
 
@@ -38,13 +32,13 @@ _In this example - the Workflow created will color highlight GET requests within
 
 4. Click, hold and drag the `In Scope`, `Matches HTTPQL`, `If/Else` and `Set Color` Nodes into the pane directly right.
 
-> _NOTE: The_ `On intercept request` _and_ `Passive End` _Nodes are already included by default. Passive Workflows do not require an End Node in order to function properly. However, it is recommended that you include it for flow readability._
+::: tip
+The `On intercept request` and `Passive End` Nodes are already included by default. Passive Workflows do not require an End Node in order to function properly. However, it is recommended that you include it for flow readability.
+:::
 
 5. Drag the Nodes into the top-down heirachical structure displayed. Connect them together by making Node `Connections`.
 
 ## Node Relationship Explanation: Applying Color to In-Scope GET Requests Workflow Example
-
----
 
 _The flow of the example Workflow provided above is described below:_
 
@@ -107,8 +101,8 @@ _The flow of the example Workflow provided above is described below:_
 
 ## Results: : Applying Color to In-Scope GET Requests Workflow Example
 
----
-
 <img alt="Passive set color result." src="/_images/passive_setcolor_result.png"/>
 
-> The color Hex code used in this example: #185a6c
+::: info
+The color Hex code used in this example: #185a6c
+:::

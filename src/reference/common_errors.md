@@ -2,78 +2,88 @@
 
 You might face of any these issues while using Caido.
 
-## "You do not have access to this instance".
+## Error Message: "You do not have access to this instance".
 
----
+**You may encounter this error when trying to access an Instance that you do not own (_further information on Instances [here](/concepts/essentials/instances.md)_). This can occur if you've initially setup a Caido Instance using a different account.**
 
-<img alt="No access to instance" src="/_images/no_access_instance.png" center/>
+<img alt="No access to instance" src="/_images/no_access_instance.png"/>
 
-You may encounter this error when trying to access an instance that you do not own (_further information on instances [here](/concepts/essentials/instances.md)_). This can happen if you've initially setup a Caido instance using a different account.
+### Resolution Method 1 - Login with your original Caido account:
 
-### Method 1 - Login with your original Caido account:
+Login to the initial account that was used to setup your Caido Instance.
 
-Login to the initial account that was used to setup your Caido instance.
+### Resolution Method 2 - Reset the Instance credentials:
 
-### Method 2 - Reset the instance credentials:
+- If using the CLI, start Caido using `caido --reset-credentials`.
 
-If you're using the CLI, start Caido using `caido --reset-credentials`.
+- If using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
 
-If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
+::: info
+These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
+:::
 
-These settings will allow you to login with any account you want.
+<img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300"/>
 
-Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
+### Resolution Method 3 - Delete your data folder:
 
-<img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300" center/>
+While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/concepts/internals/files.md) page to locate your data folder.
 
-### Method 3 - Delete your data folder:
+## Error Message: "Login URL generation failed: invalid authentication token".
 
-While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. Check out the [Files](/concepts/internals/files.md) page to locate your data folder.
+**You may encounter this error when trying to access an Instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).**
 
-## "Login URL generation failed".
+<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400"/>
 
----
+### Resolution:
 
-<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400" center/>
+The easiest way to fix this issue is to [reset the instance credentials](#resolution-method-2---reset-the-instance-credentials).
 
-You may encounter this error when trying to access an instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).
+## Error Message: "Date mismatch: make sure your device's date and time settings are correct".
 
-The easiest way to fix this issue is to [reset the instance credentials](#method-2---reset-the-instance-credentials).
+**If you encounter this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.**
 
-## I have paid for "Pro" but it still shows "Community" in the application.
+<img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
 
----
+::: info
+Caido allows 5 minutes of deviation between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
+:::
 
-Caido caches the state of your account. Any changes to your account can take some time to update.
+### Resolution for Windows
 
-You can refresh your account state by logging out/logging into your Caido instance.
-
-## I get a "Date mismatch" error during login.
-
----
-
-<img alt="Date mismatch" src="/_images/error_date_mismatch.png" center/>
-
-If you see this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
-
-We allow 5 minutes slippage between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
-
-### Windows [Details](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html)
+::: info
+Time synchronization instructions for Windows can be found [here](https://www.majorgeeks.com/content/page/synchronize_clock_with_an_internet_time_server.html).
+:::
 
 1. Right-click on the clock.
 1. `Adjust date/time`.
 1. Go to `Date & Time` in `Setting`.
 1. Click `Sync now`.
 
-### MacOS [Details](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788)
+### Resolution for MacOS
+
+::: info
+Time synchronization instructions for MacOS can be found [here](https://superuser.com/questions/155785/mac-os-x-date-time-synchronization#comment2136688_155788).
+:::
 
 1. Open a terminal window.
 1. Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`).
 1. Check the time synchronization status again using the same command.
 
-### Linux [Details](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers)
+### Resolution for Linux
+
+::: info
+Time synchronization instructions for Linux can be found [here](https://unix.stackexchange.com/questions/137266/how-to-keep-debian-internal-clock-synchronized-with-ntp-servers).
+:::
 
 1. Open a terminal or SSH into your server.
 1. Install the NTP package: `sudo apt-get install ntp`.
 1. Once the installation is complete, the NTP service should start automatically.
 1. Check its status by using this command `sudo systemctl status ntp`.
+
+## I have paid for "Pro" but it still shows "Community" in the application.
+
+**Caido caches the state of your account. Any changes to your account can take some time to update.**
+
+### Resolution:
+
+Refresh your account state by logging out/logging into your Caido Instance.
