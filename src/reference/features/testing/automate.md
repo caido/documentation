@@ -2,7 +2,9 @@
 
 The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidy modify certain parameters of requests using wordlists.
 
-You can create a Session from scratch, or start from any existing request inside the application.
+Advanced setting options ensure your campaign can account for events such as failed requests or rate-limiting. You can transfer requests to the Automate interface from many other Caido interfaces.
+
+You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
 <img alt="Automate tab." src="/_images/automate_generator_tab.png" center/>
 
@@ -32,9 +34,9 @@ Caido currently provides the following attack `Strategies`:
 <img alt="Automate Strategies." src="/_images/strategies_automate.png" center/>
 
 - **Sequential** _(Sniper)_: This will replace markers one at a time. If you have multiple markers, **only one** will be replaced for any given request.
-- **All** _(Battering ram)_: This will replace all the markers with the same value.
+- **All** _(Battering Ram)_: This will replace all the markers with the same value.
 - **Parallel** _(Pitchfork)_: This will replace all the markers with different values from the different payloads. This requires payloads that each have the same number of elements.
-- **Matrix** _(Cluster bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
+- **Matrix** _(Cluster Bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
 
 ## Types
 

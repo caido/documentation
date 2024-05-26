@@ -2,7 +2,7 @@
 
 _For advanced documentation on this topic - click [here](/reference/features/workspace/files.md)._
 
-`Automate` allows you to brute-force/fuzz designated elements of a request
+`Automate` allows you to brute-force/fuzz designated elements of a request.
 
 - In order to utilize `Automate` - you must first upload payload files/wordlists in the `Files` tab within Caido.
 

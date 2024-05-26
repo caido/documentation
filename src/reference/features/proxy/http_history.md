@@ -1,6 +1,10 @@
 # HTTP History
 
-The `HTTP History` tab allows you to view requests and responses as they pass through the proxy. The HTTP History tab shows a table of all requests that have been proxied through Caido, along with details such as the request method, host, path, status code and length.
+The `HTTP History` tab allows you to view requests and responses as they pass through the proxy. The HTTP History tab shows a table of all requests that have been proxied through Caido.
+
+The table format allows for easy examination of the traffic flow by offering categories of sortable properties. These properties include details such as the intended host of the request, the request method used, pathing and extension information - as well as details of the associated response such as status code, response length and response time.
+
+Advanced filtering and data exportation capabilities are also integrated into the HTTP History interface.
 
 ## HTTP History Layout
 
@@ -33,6 +37,7 @@ This includes any modifications made by any active [Match & Replace](./match_rep
 ::: tip TIPS
 
 - [Applying a Scope Preset](../overview/scope.md) is supported by HTTP History.
+- [Applying a Filter Preset](../overview/filters.md) is supported by HTTP History.
 - Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
 - To send a request to `Replay` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
 - To send a request to `Automate` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.

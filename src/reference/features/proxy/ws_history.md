@@ -1,6 +1,8 @@
 # WS History
 
-The `WS History` tab allows you to view data exchanged between the client and the server passing through the proxy over a WebSocket connection. This tab provides you with information such as when the connection was established, where the messages are being sent, the direction of the messages between the client and server, the length of the messages and the contents of each message exchanged.
+The `WS History` tab allows you to view data exchanged between the client and the server passing through the proxy over a WebSocket connection.
+
+This tab provides you with information such as when the connection was established, where the messages are being sent, the direction of the messages between the client and server, the length of the messages and the contents of each message exchanged.
 
 ## WS History Layout
 

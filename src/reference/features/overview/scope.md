@@ -1,13 +1,15 @@
 # Scopes
 
-The `Scopes` tab allows you to create **Scope Presets** that will match requests throughout the application by creating a list of `Hosts` that are either `In Scope` or `Out of Scope`. Scoping improves the efficiency of your testing process by quickly filtering the display of targets that are relevant/irrelevant to your engagement.
+Scopes are defined through the creation of **Scope Presets** within the `Scopes` tab interface. Your **Scope Presets** will match requests throughout the application by using a supplied list of `Hosts` that are designated either `In Scope` or `Out of Scope`. Scoping improves the efficiency of your testing process by quickly filtering the display of targets that are relevant/irrelevant to your engagement.
+
+Caido offers the ability to switch between your Scope Presets with ease throughout the application.
 
 ## Scope Preset Rules
 
 - Hosts can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
-- Hosts can include [Glob wildcards](https://en.wikipedia.org/wiki/Glob_(programming)) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLDs (`*example*`).
-- Scope Presets currently only support domains, **not paths**.
+- Hosts can include [Glob Wildcards](https://en.wikipedia.org/wiki/Glob_(programming)) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLDs (`*example*`).
 - Hosts can be `In Scope` acting as an **allow list** or `Out of Scope` acting as a **deny list**.
+- Scope Presets currently only support domains, **not paths**.
 
 ## Creating a New Scope Preset
 

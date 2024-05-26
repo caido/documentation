@@ -55,14 +55,12 @@ The Assistant can help you understand what a request is doing by explaining it i
 
 ```
 Explain the operation being performed by the endpoint in this request:
-===
-<YOUR REQUEST HERE>
-===
+[PASTE REQUEST HERE]
 ```
 
 </details>
 
-<img src="/_images/assistant_request.png" alt="Assistant request." width="1500" center/>
+<img alt="Assistant request." src="/_images/assistant_explain_req.png" center/>
 
 ### Generate a POC CSRF Attack
 
@@ -72,15 +70,13 @@ The Assistant page currently allows you to generate a proof-of-concept for a [CS
 <summary>Prompt</summary>
 
 ```
-Generate a CSRF PoC in HTML for the following request:
-===
-<YOUR REQUEST HERE>
-===
+Create a CSRF PoC in HTML that will automatically submit the form for the following request:
+[PASTE REQUEST HERE]
 ```
 
 </details>
 
-<img src="/_images/assistant_csrf.png" alt="assistant csrf" width="1500" center/>
+<img  alt="assistant csrf" src="/_images/assistant_poc_csrf.png" center/>
 
 ## Additional Information
 

@@ -9,7 +9,7 @@ hero:
     src: /logo.png
     "no-shadow": true
 
-  tagline: Guides and documentation
+  tagline: Guides and Documentation
   actions:
     - theme: brand
       text: Quickstart

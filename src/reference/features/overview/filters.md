@@ -1,13 +1,22 @@
 # Filters
 
-The `Filters` tab allows you to create **Filter Presets**. Filter Presets provide a way to fine-tune which proxied resources/objects are displayed/excluded. They are referenced by their `Names` and `Aliases` and use [HTTPQL](/concepts/essentials/httpql.md) queries as their `Expression` value.
+**Filter Presets**, created via the `Filters` tab allows you to fine-tune which proxied resources/objects are displayed/excluded. Utilizing the intuitive query syntax of HTTPQL for their `Expressions` - these custom filtering rules ensure your work is streamlined by reducing the time it takes to find that specific request you are looking for.
+
+Through the use of wildccard characters and logical operators - Caido's Filter Preset feature makes it easy to evalute a large amount of data as you delve into your testing engagement.
+
+::: info
+View the [HTTPQL](../../../concepts/essentials/httpql.md) documentation for more information on query syntax.
+:::
 
 ## Filter Preset Rules
+
+::: info
+Filter Presets are referenced by their `Names` and `Aliases`.
+:::
 
 - Aliases can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and the symbols (`-` and `_`).
 - Names and Aliases **must** be unique across all Presets for referencing purposes.
 - The Expression or Expressions **cannot** reference other Presets.
-- The shortcut `"my value"` is always expanded as `(req.raw.cont:"my value" OR resp.raw.cont:"my value")`.
 
 ## Creating a New Filter Preset
 
@@ -41,5 +50,8 @@ Currently, the tabs that support Scope selection are **HTTP History** and **Sear
 :::
 
 ::: tip
-Caido provides default Presets for each new Project, but you can modify or update them if you wish to.
+
+- Caido provides default Presets for each new Project, but you can modify or update them if you wish to.
+- Expression shortcut syntax: `"Value"` is equal to `(req.raw.cont:"Value" OR resp.raw.cont:"Value")` - insert an arbitrary value within the double quotes.
+
 :::

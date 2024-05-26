@@ -3,11 +3,11 @@
 The authentication in Caido is based on the <a href="https://www.rfc-editor.org/rfc/rfc6749" target="_blank">OAuth 2.0 Authorization Framework</a>. It replaces the need for licenses and will allow us to provide hosted and sharing services down the line.
 Each Instance registers itself with our cloud API using the <a href="https://www.rfc-editor.org/rfc/rfc7591.html" target="_blank">Dynamic Client Registration Protocol</a> and obtains a client ID and secret. Upon the first login, the user will "claim" the client ID for its Instance.
 
-> **WARNING**: Even if the API is authenticated, the actual proxy is currently not protected. That is why we **strongly** advise not to put your Caido Instances on the open internet.
+::: warning
+Even if the API is authenticated, the actual proxy is currently not protected. That is why we **strongly** advise not to put your Caido Instances on the open internet.
+:::
 
 ## Grants
-
----
 
 We use a few OAuth2 grants depending on the API.
 
@@ -18,8 +18,6 @@ We use a few OAuth2 grants depending on the API.
 <img alt="Authenticate user flow." src="/_images/authentication_user.png" no-shadow/>
 
 ## Secrets Storage
-
----
 
 - **Client Secret**: Stored encrypted in the `secrets.db` database on the instance disk.
 - **Instance Access Token**: Stored encrypted in the `secrets.db` database on the instance disk.

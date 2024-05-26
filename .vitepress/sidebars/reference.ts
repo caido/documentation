@@ -38,14 +38,14 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                 text: 'Overview',
                 items: [{
                         text: 'Sitemap',
-                        link: '/reference//features/overview/sitemap'
+                        link: '/reference/features/overview/sitemap'
                     },{
                         text: 'Sorting',
-                        link: '/reference//features/overview/sorting'
+                        link: '/reference/features/overview/sorting'
                     },
                     {
                         text: 'Scope',
-                        link: '/reference//features/overview/scope'
+                        link: '/reference/features/overview/scope'
                     },
                     {
                         text: 'Filters',
