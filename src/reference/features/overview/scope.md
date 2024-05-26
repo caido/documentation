@@ -4,10 +4,10 @@ The `Scopes` tab allows you to create **Scope Presets** that will match requests
 
 ## Scope Preset Rules
 
-- `Hosts` can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
-- `Hosts` can include [Glob wildcards](https://en.wikipedia.org/wiki/Glob_(programming)) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLDs (`*example*`).
+- Hosts can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
+- Hosts can include [Glob wildcards](https://en.wikipedia.org/wiki/Glob_(programming)) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLDs (`*example*`).
 - Scope Presets currently only support domains, **not paths**.
-- `Hosts` can be `In Scope` acting as an **allow list** or `Out of Scope` acting as a **deny list**.
+- Hosts can be `In Scope` acting as an **allow list** or `Out of Scope` acting as a **deny list**.
 
 ## Creating a New Scope Preset
 

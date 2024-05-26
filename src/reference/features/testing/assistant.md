@@ -2,16 +2,17 @@
 
 > **PRO FEATURE**
 
-The `Assistant` helps you understand requests, explains elements like headers and suggests attack vectors.
-The AI assistant in Caido is tailored for security research. See [our privacy policy](https://caido.io/privacy) for more info.
+The `Assistant` is an AI LLM avaiable to Caido Pro users. Specifically tailored for secutiry research - the Assistant can help you understand requests, provide explanations of web traffic elements and suggests attack vectors.
 
-Make sure to **anonymize sensitive information** when you use this tool.
+::: warning
+Make sure to **anonymize sensitive information** when you use this tool. See [our privacy policy](https://caido.io/privacy) for more info.
+:::
 
 ::: info
 Data is sent to a third party (OpenAI) and can be stored for up to 30 days. See [their privacy policy](https://openai.com/policies/privacy-policy) for more info.
 :::
 
-## What are Models?
+## What is an LLM?
 
 Large Language Models (LLM) like GPT-3.5 are created through deep learning techniques and have the capability to understand, generate and manipulate text in a wide range of natural language tasks.
 
@@ -26,7 +27,6 @@ Credit usage depends on the model used. We currently offer ChatGPT-3.5 Turbo, bu
 
 - **1 credit is equal to 1 token**.
 - A token is roughly a word or ¾ of a word.
-  <img alt="Token computation." src="/_images/token_system.png">
 - If you send follow-up messages in the same session, the tokens of all previous messages count in your credit usage.
 - You can send a maximum of **4000 tokens** in a single session.
 
@@ -34,11 +34,21 @@ Credit usage depends on the model used. We currently offer ChatGPT-3.5 Turbo, bu
 For more information on tokens, visit [ChatGPT Tokenizer](https://platform.openai.com/tokenizer).
 :::
 
-## Explain Requests
+## Assistant Usage Examples
+
+::: tip
+You can easily access the Assistant by right-clicking on a request in `HTTP History` or `Search`. `Explain` and `Generate CSRF PoC` are default selections and will produce results similar to the following:
+:::
+
+::: warning
+When using the right-click menu shortcut to call upon the Assistant - the request is sent automatically along with any sensitive information contained in it.
+
+- If you need to anonymize data, copy the prompt the `Assistant` should use, paste it in a new attempt with your request and remove any sensitive information before submitting it.
+:::
+
+### Provide an Explanation of a Request
 
 The Assistant can help you understand what a request is doing by explaining it in natural language.
-
-Be careful if your payload is huge, it can cost a lot of credits.
 
 <details>
 <summary>Prompt</summary>
@@ -54,23 +64,9 @@ Explain the operation being performed by the endpoint in this request:
 
 <img src="/_images/assistant_request.png" alt="Assistant request." width="1500" center/>
 
-<br>
+### Generate a POC CSRF Attack
 
-You can access the Assistant feature easily by right-clicking on a request in `HTTP History` or `Search`.
-
-<img src="/_images/right_click_explain.png" alt="Explain right click." width="1500" center/>
-
-::: warning
-The request is sent automatically along with any sensitive information contained in it.
-
-- If you need to anonymize data, copy the prompt the `Assistant` should use, paste it in a new attempt with your request and remove any sensitive information before submitting it.
-:::
-
-## Generate CSRF
-
-The Assistant page currently allows you to generate proof of concept [CSRF](https://owasp.org/www-community/attacks/csrf). We are planning to add more attacks in the future.
-
-You can generate CSRF payloads for a specified request with the right click menu, similar to the `Explain` request.
+The Assistant page currently allows you to generate a proof-of-concept for a [CSRF Attack](https://owasp.org/www-community/attacks/csrf).
 
 <details>
 <summary>Prompt</summary>
@@ -85,3 +81,9 @@ Generate a CSRF PoC in HTML for the following request:
 </details>
 
 <img src="/_images/assistant_csrf.png" alt="assistant csrf" width="1500" center/>
+
+## Additional Information
+
+::: tip
+Be careful if your payload is huge, it can cost a lot of credits.
+:::

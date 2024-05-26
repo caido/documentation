@@ -4,16 +4,10 @@ The `Filters` tab allows you to create **Filter Presets**. Filter Presets provid
 
 ## Filter Preset Rules
 
-- `Aliases` can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and the symbols (`-` and `_`).
-- `Names` and `Aliases` **must** be unique across all Presets for referencing purposes.
-- The `Expression(s)` of the Filter Preset **cannot** reference other Presets.
+- Aliases can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and the symbols (`-` and `_`).
+- Names and Aliases **must** be unique across all Presets for referencing purposes.
+- The Expression or Expressions **cannot** reference other Presets.
 - The shortcut `"my value"` is always expanded as `(req.raw.cont:"my value" OR resp.raw.cont:"my value")`.
-
-::: info
-
-- You can create as many Filter Presets as you want.
-- Filter Presets are specific to the Project they are created in.
-:::
 
 ## Creating a New Filter Preset
 
@@ -36,6 +30,15 @@ Currently, the tabs that support Scope selection are **HTTP History** and **Sear
 1. Click the `Advanced` button located to the right of the `Enter an HTTPQL query...` input field.
 2. In the `Advanced options` side menu that is presented - select/deselect the Filter Presets you want to apply.
 3. As the example Filter Preset created is reliant on the presence of the **/about** path - you can confirm it is working properly based on the Path filter category of the displayed requests.
+
+## Additional Information
+
+::: info
+
+- You can create as many Filter Presets as you want.
+- Filter Presets are specific to the Project they are created in.
+
+:::
 
 ::: tip
 Caido provides default Presets for each new Project, but you can modify or update them if you wish to.

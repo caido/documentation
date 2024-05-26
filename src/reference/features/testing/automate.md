@@ -27,9 +27,9 @@ To inspect the results of your `Automate` campaign - proceed with the following 
 
 ## Strategies
 
-<img alt="Automate Strategies." src="/_images/strategies_automate.png" center/>
-
 Caido currently provides the following attack `Strategies`:
+
+<img alt="Automate Strategies." src="/_images/strategies_automate.png" center/>
 
 - **Sequential** _(Sniper)_: This will replace markers one at a time. If you have multiple markers, **only one** will be replaced for any given request.
 - **All** _(Battering ram)_: This will replace all the markers with the same value.
@@ -38,9 +38,9 @@ Caido currently provides the following attack `Strategies`:
 
 ## Types
 
-<img alt="Automate Types." src="/_images/types_automate.png" center/>
-
 For each payload, you can choose a `Type` from the list:
+
+<img alt="Automate Types." src="/_images/types_automate.png" center/>
 
 - **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
 - **Simple List:** This is for cases where you want to test a short manually created list of elements.
@@ -48,7 +48,23 @@ For each payload, you can choose a `Type` from the list:
 
 ## Settings
 
+Additional setting options allow you to fine tune how the Automate session will run.
+
 <img alt="Automate settings." src="/_images/settings_automate.png" center/>
 
-The settings allow you to choose how the Automate session will run. This allows you to throttle the bruteforce to avoid limits and retry in case of error.
-We do not limit the number of workers, but we suggest to not put too high a number unless latency is an issue.
+- **Close Connection:** Toggle between keeping the socket connection or closing the socket connection after the paired response to a request is received.
+- **Update Content-Length:** Automatically update the value of the Content-Length header to account for the payload.
+- **Delay (ms) between requests:** The time in milliseconds to sleep between forwarding requests.
+- **# of workers:** The number of threads to run.
+- **Delay (ms) before retry:** The time in milliseconds to sleep until retrying a failed request.
+- **Max retries:** The number of reattempts to perform upon a failed request before moving on to the following requests.
+
+## Additional Information
+
+::: tip TIPS
+
+- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
+- Clicking the `{}` button will toggle the Pretty/Raw display option.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](../../../quickstart/beginner_guide/setup/config.md) documentation for more information.
+
+:::
