@@ -48,7 +48,7 @@ For each payload, you can choose a `Type` from the list:
 
 ## Settings
 
+<img alt="Automate settings." src="/_images/settings_automate.png" center/>
+
 The settings allow you to choose how the Automate session will run. This allows you to throttle the bruteforce to avoid limits and retry in case of error.
 We do not limit the number of workers, but we suggest to not put too high a number unless latency is an issue.
-
-<img alt="Automate settings." src="/_images/settings_automate.png" center/>
