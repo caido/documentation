@@ -9,7 +9,7 @@ You can create a Session from scratch, or start from any existing request inside
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Highlight the element you wish to brute-force/fuzz.
 3. Once the element is highlighted - click `+` to convert it to a placeholder. **_You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`._**
-4. This pane gives multiple payload `Type` options: `Hosted File` - select from your uploaded files (_file upload documentation can be found [here](../setup/file_upload.md)_). `Simple List` - manually create a list. `Null Payload` - Set a number of null payloads to generate.
+4. This pane gives multiple payload `Type` options: `Hosted File` - select from your uploaded files (_file upload documentation can be found [here](../../../quickstart/beginner_guide/setup/file_upload.md)_). `Simple List` - manually create a list. `Null Payload` - Set a number of null payloads to generate.
 5. This pane presents additional options for fine-tuning your brute-force/fuzzing campaign such as: setting the value of the **Connection** header to **_keep-alive_** or **_close_**, automatically updating the **Content-Length** header value to match body data size when a placeholder/placeholders are present within the body of the request, concurrency handling options and error handling options.
 6. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
 7. The configuration tab as well as the associated results tab will be paired next to each other here.
