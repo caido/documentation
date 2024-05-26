@@ -2,9 +2,9 @@
 
 Found a bug in Caido or need help debugging? You are at the right place!
 
----
-
-> We need a few items in order to be able to reproduce bugs and help you.
+::: tip
+We need a few items in order to be able to reproduce bugs and help you.
+:::
 
 ## 1. Backend Logs
 
@@ -28,26 +28,30 @@ For us to be able to help you, we need to be able to reproduce the bug on our si
 
 Thus, it is **critical** that you give us **as much details as possible** on the various steps you took leading to the bug.
 
-> A good example of steps would be:
->
-> 1. In `Intercept`, click on `Response`.
-> 2. Start `Queuing`.
-> 3. In a terminal, execute `curl -x 127.0.0.1:8080 https://example.com`.
-> 4. Modify response status code.
-> 5. Click `Forward`.
-> 6. Confirm in terminal that the response was not modified.
+::: tip
+A good example of steps would be:
+
+1. In `Intercept`, click on `Response`.
+2. Start `Queuing`.
+3. In a terminal, execute `curl -x 127.0.0.1:8080 https://example.com`.
+4. Modify response status code.
+5. Click `Forward`.
+6. Confirm in terminal that the response was not modified.
+:::
 
 ## 4. Operating System & Version
 
 Many Caido bugs are depend on the OS and even sometimes the version of that OS.
 When reporting a bug, please make sure to include this information.
 
-> A good example would be:
->
-> - **OS:** Mac OS
-> - **OS Version:** 12 (Monterey)
-> - **Caido Client:** Caido Desktop
-> - **Caido Version:** 0.33.0
+::: tip
+A good example would be:
+
+- **OS:** Mac OS
+- **OS Version:** 12 (Monterey)
+- **Caido Client:** Caido Desktop
+- **Caido Version:** 0.33.0
+:::
 
 ## 5. Github Issues
 
@@ -55,7 +59,9 @@ The last step is to [open an issue](https://github.com/caido/caido/issues/new?as
 
 Thanks a lot for the help! You rock! 🤘
 
-> **WARNING:** If your steps to reproduce contains sensitive information, please continue reading.
+::: warning
+If your steps to reproduce contains sensitive information, please continue reading.
+:::
 
 ## 6. (Optional) Discord Channel
 

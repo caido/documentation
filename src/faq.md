@@ -6,7 +6,9 @@ Caido has a free `Basic` plan. We also offer a `Pro` plan which includes additio
 
 Additionally, we offer a `Team` plan for organizations that need premium support and/or custom feature implementation.
 
+::: info
 You can check our [website](https://caido.io) to stay informed about the new features that will be added in the future.
+:::
 
 ## Is Caido open source?
 
