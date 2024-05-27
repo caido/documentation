@@ -30,7 +30,9 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 This example Workflow is available for download and import. Click [here](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json) to download.
 :::
 
-_In this example - the Workflow created will perform MD5 hashing on the given input._
+::: info
+In this example - the Workflow created will perform MD5 hashing on the given input.
+:::
 
 > Navigate to the **Workflow Editor** for the Convert type by following these steps:
 >

@@ -6,7 +6,7 @@ _For advanced documentation on this topic - click [here](/reference/features/wor
 
 Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
 
-Think of **Projects** as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
+Think of `Projects` as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
 ## Creating a New Project
 
@@ -20,7 +20,7 @@ Think of **Projects** as separate directories for your audits. Projects allow yo
 
 - **Rename**: rename your Project.
 - **Copy path**: copy the Project's data location on your device to your clipboard.
-- **Create backup**: create a backup of the Project data.
+- **Create backup**: create a Backup of the Project data.
 - **Delete**: delete the Project from your Instance.
 
 ## Switching Between Projects

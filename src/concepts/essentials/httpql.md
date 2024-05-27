@@ -10,19 +10,15 @@ HTTPQL is the query language we use in Caido to let you filtering requests and r
 
 ## 1. Namespace
 
----
-
 The first part of a filter clause is the `namespace`. We currently support 3 namespaces:
 
 - **req**: For HTTP requests.
 - **resp**: For HTTP responses.
 - **preset**: For filter presets.
 
-The **preset** namespace is a bit different, it doesn't have a `field` nor an `operator`. See the [filters](/reference/features/overview/filters.md) page to learn more about filter presets.
+The **preset** namespace is a bit different, it doesn't have a `field` nor an `operator`. View the [Filters](/reference/features/overview/filters.md) documentation for more information.
 
 ## 2. Field
-
----
 
 The second part of filter clause is the `field`. Fields differ based on the the `namespace`.
 We will add more fields eventually. [Let us know](https://github.com/caido/caido/issues/new?template=feature.md&title=New%20HttpQL%20field:) which ones you need!
@@ -43,8 +39,6 @@ We will add more fields eventually. [Let us know](https://github.com/caido/caido
 - **raw**: The full raw data of the response. This allows you to search on things we currently don't index (like headers).
 
 ## 3. Operator
-
----
 
 We have two categories of operators depending on the data type.
 
@@ -79,8 +73,6 @@ This category of operators works on fields that are text values (or bytes) like 
 
 ## 4. Value
 
----
-
 This is the value against which the field will be compared. The value is either an integer (like `1`), a string (`"value"`) or a regex (`/value/`) depending on the field and operator.
 
 ### Preset
@@ -90,7 +82,7 @@ The `preset` value is a different. You can reference presets in one of two ways:
 - **Name**: `preset:"Preset name"`.
 - **Alias**: `preset:preset-alias`.
 
-Head over to the [filters](/reference/features/overview/filters.md) page to learn more about filter presets.
+View the [Filters](/reference/features/overview/filters.md) documentation for more information.
 
 ### Standalone
 
@@ -111,18 +103,16 @@ Queries are composed of multiple filter clauses that are combined together using
 
 ## Logical Operators
 
----
-
 We offer two logical operators:
 
 - **AND**: Both the left and right clauses must be true.
 - **OR**: Either the left or right clause must be true.
 
+::: info
 Operators can be written in upper or lower case. Both have the **same priority**.
+:::
 
 ## Logical Grouping
-
----
 
 Caido supports the priority of operations, `AND` has a higher priority than `OR`. Here are some examples:
 
@@ -130,4 +120,6 @@ Caido supports the priority of operations, `AND` has a higher priority than `OR`
 - `clause1 OR clause2 AND clause3` is equivalent to `(clause1 OR (clause2 AND clause3))`.
 - `clause1 AND clause2 AND clause3` is equivalent to `((clause1 AND clause2) AND clause3)`.
 
+::: tip
 We still recommend that you insert parentheses to make sure the logicial groups represent what you are trying to accomplish.
+:::

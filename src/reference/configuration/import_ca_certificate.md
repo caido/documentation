@@ -11,7 +11,7 @@ To use Caido to intercept (and tamper with) your HTTP/S traffic, it is necessary
 2. Click on your account icon in the upper-rightmost corner of the Caido window.
 3. Select `CA Certificate` tab or navigate to [http://localhost:8080/#/settings/certificate](http://localhost:8080/#/settings/certificate).
 
-<img alt="Downloading the CA Certificate." src="/_images/download_cert.png" center/>
+<img alt="Downloading the CA Certificate." src="/_images/cert_instructions_new.png" center/>
 
 4. Download the certificate and follow the importation instructions provided within Caido. After you've successfully imported the certificate, your browser is now configured to proxy it's traffic through Caido.
 

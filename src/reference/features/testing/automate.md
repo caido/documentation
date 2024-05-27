@@ -1,39 +1,83 @@
 # Automate
 
-The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to bruteforce/fuzz certain parameters of requests using wordlists.
+The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidly modify certain parameters of requests using wordlists.
 
-You can create a Session from scratch, or start from any existing request inside the application.
+Advanced setting options ensure your campaign can account for events such as failed requests or rate-limiting. You can transfer requests to the Automate interface from many other Caido interfaces.
 
-<img alt="Automate." src="/_images/automate.png" no-shadow/>
+You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
-## Payloads
+<img alt="Automate tab." src="/_images/automate_tab.png" center/>
 
-To replace an element in your query, you first have to highlight it and click on `Mark`. This will unlock the payload section on the right. Depending on the attack strategy and the number of markers, you will have one or more payloads to configure.
+1. Select the `Automate` tab from the left-hand menu within the Caido window.
+2. Select the [Attack Strategy](#attack-strategies).
+2. Highlight the element(s) you wish to brute-force/fuzz.
+3. Once the element is highlighted - click `+` to convert it to a placeholder. **_You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`._**
+4. Select a [Payload Type](#payload-types), apply [Preprocessors](#preprocessors) and set additional [Settings](#settings) within this pane.
+5. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
+7. The configuration tab as well as the associated results tab will be paired next to each other here.
 
-## Strategies
+## Automate Results
 
-We currently provide 4 attack strategies:
+To inspect the results of your `Automate` campaign - proceed with the following steps:
+
+<img alt="Automate results." src="/_images/automate_results_tab.png" center/>
+
+1. Click the paired tab.
+2. Each request will be displayed in this pane.
+3. This pane will display the selected request and it's associated response.
+4. This is the resulting list of options presented after right-clicking within the request pane.
+
+## Attack Strategies
+
+Caido currently provides the following attack `Strategies`:
+
+<img alt="Automate Strategies." src="/_images/strategies_automate.png" center/>
 
 - **Sequential** _(Sniper)_: This will replace markers one at a time. If you have multiple markers, **only one** will be replaced for any given request.
-- **All** _(Battering ram)_: This will replace all the markers with the same value.
+- **All** _(Battering Ram)_: This will replace all the markers with the same value.
 - **Parallel** _(Pitchfork)_: This will replace all the markers with different values from the different payloads. This requires payloads that each have the same number of elements.
-- **Matrix** _(Cluster bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
+- **Matrix** _(Cluster Bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
 
-<img alt="Automate strategy." src="/_images/automate_strategy.png" no-shadow/>
+## Payload Types
 
-## Types
+For each payload, you can choose a `Type` from the list:
 
-For each payload, you can choose a `type` from the list:
+<img alt="Automate Types." src="/_images/types_automate.png" center/>
 
-- **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance using the [Files](/reference/features/workspace/files.md) page.
-- **Simple List:** This is for cases where you want to test a short list of elements.
+- **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
+- **Simple List:** This is for cases where you want to test a short manually created list of elements.
 - **Null Payload:** This is useful to generate requests without changing anything in it.
 
-<img alt="Automate payload." src="/_images/automate_payload.png" no-shadow/>
+## Preprocessors
+
+Preprocessors enable you to apply additional modifications to the payloads.
+
+<img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
+
+- **Workflow**: This allows you to select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/features/testing/workflows.md) documentation for more information.
+- **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
+- **Prefix**: This allows you to prefix a payload value with a supplied value.
+- **Suffix**: This allows you to append a supplied suffix value to a payload value.
 
 ## Settings
 
-The settings allow you to choose how the Automate session will run. This allows you to throttle the bruteforce to avoid limits and retry in case of error.
-We do not limit the number of workers, but we suggest to not put too high a number unless latency is an issue.
+Additional setting options allow you to fine tune how the Automate session will run.
 
-<img alt="Automate settings." src="/_images/automate_settings.png" no-shadow/>
+<img alt="Automate settings." src="/_images/settings_automate.png" center/>
+
+- **Close Connection:** Toggle between keeping the socket connection or closing the socket connection after the paired response to a request is received.
+- **Update Content-Length:** Automatically update the value of the Content-Length header to account for the payload.
+- **Delay (ms) between requests:** The time in milliseconds to sleep between forwarding requests.
+- **# of workers:** The number of threads to run.
+- **Delay (ms) before retry:** The time in milliseconds to sleep until retrying a failed request.
+- **Max retries:** The number of reattempts to perform upon a failed request before moving on to the following requests.
+
+## Additional Information
+
+::: tip TIPS
+
+- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
+- Clicking the `{}` button will toggle the Pretty/Raw display option.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](../../../quickstart/beginner_guide/setup/config.md) documentation for more information.
+
+:::

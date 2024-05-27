@@ -6,7 +6,7 @@ You might face of any these issues while using Caido.
 
 **You may encounter this error when trying to access an Instance that you do not own (_further information on Instances [here](/concepts/essentials/instances.md)_). This can occur if you've initially setup a Caido Instance using a different account.**
 
-<img alt="No access to instance" src="/_images/no_access_instance.png"/>
+<img alt="No access to Instance." src="/_images/no_access_error.png" center/>
 
 ### Resolution Method 1 - Login with your original Caido account:
 
@@ -22,7 +22,7 @@ Login to the initial account that was used to setup your Caido Instance.
 These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
 :::
 
-<img src="/_images/reset_credentials.png" alt="Reset Credentials" width="1300"/>
+<img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" center/>
 
 ### Resolution Method 3 - Delete your data folder:
 
@@ -32,7 +32,7 @@ While not ideal, deleting your Caido data folder will allow you to start with a 
 
 **You may encounter this error when trying to access an Instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).**
 
-<img alt="Date mismatch" src="/_images/error_url_generation.png" width="400"/>
+<img alt="Login error." src="/_images/login_url_error.png" center/>
 
 ### Resolution:
 
@@ -42,7 +42,7 @@ The easiest way to fix this issue is to [reset the instance credentials](#resolu
 
 **If you encounter this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.**
 
-<img alt="Date mismatch" src="/_images/error_date_mismatch.png"/>
+<img alt="Date mismatch." src="/_images/date_mismatch_error.png" center/>
 
 ::: info
 Caido allows 5 minutes of deviation between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.

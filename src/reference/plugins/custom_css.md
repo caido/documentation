@@ -1,8 +1,8 @@
 # Custom CSS
 
-The Custom CSS feature allows users to personalize the look and feel of the interface.
+The Custom CSS feature allows you to personalize the look and feel of the interface.
 
-By writing your own CSS code in the provided text area, you can modify the aesthetic aspects of the application, such as colors, layouts, and fonts, to suit your preferences or needs.
+By writing your own CSS code in the provided text area, you can modify the aesthetic aspects of the application, such as the color scheme, layout and fonts used.
 
 <img width="1000" alt="Custom CSS." src="/_images/custom_css.png" no-shadow center/>
 

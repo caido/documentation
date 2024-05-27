@@ -22,11 +22,11 @@ caido -l 0.0.0.0:8000
 
 Open the Connection Manager and proceed with the following steps:
 
-<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" no-shadow/>
+<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center/>
 
 1. Click on the `⋮` icon to the right of the Instance you want to apply a custom listening address to and select `Edit`.
 
-<img alt="Connection manager instance edit." src="/_images/connection_manager_instance_edit.png" no-shadow/>
+<img alt="Connection manager instance edit." src="/_images/connection_manager_instance_edit.png" center/>
 
 2. Select the appropriate radio button. _If using a_ `Custom` _listening address - supply the address in the input field._
 3. Supply the value of the desired listening port.
