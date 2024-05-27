@@ -66,6 +66,13 @@ h4 {
   padding: 0.5rem;
 }
 
+/* Media query for mobile view */
+@media (max-width: 600px) {
+  .videos {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
+
 .video {
   min-height: 6rem;
 }
