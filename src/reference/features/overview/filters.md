@@ -5,7 +5,7 @@
 Caido's Filter Preset feature makes it easy to evaluate a large amount of data as you delve into your testing engagement.
 
 ::: info
-View the [HTTPQL](/workspaces/documentation/src/concepts/essentials/httpql.md) documentation for more information on query syntax.
+View the [HTTPQL](/concepts/essentials/httpql.md) documentation for more information on query syntax.
 :::
 
 ## Filter Preset Rules
