@@ -24,6 +24,14 @@ You might want to dig into more advanced features we offer like [HTTPQL](/concep
 
 ---
 
-<iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/embed/cKB5QVez5es"
-  frameborder="0"></iframe>
+<div class="videos">
+    <div class="video">
+        <iframe width="585" height="315" src="https://www.youtube.com/embed/cKB5QVez5es" title="YouTube video player" frameborder="0"></iframe>
+        <br>
+        <div class="caption" style="color:#ffffff">
+            Interview: CTBBPodcast
+            <br>
+            <a href="https://www.criticalthinkingpodcast.io/">www.criticalthinkingpodcast.io</a>
+        </div>
+    </div>
+</div>
