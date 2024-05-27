@@ -9,7 +9,12 @@ Caido offers the ability to switch between your Scope Presets with ease througho
 - Hosts can **only** contain lowercase letters (`a-z`), numbers (`0-9`) and some symbols (`-`, `_`, `*`, `?`).
 - Hosts can include [Glob Wildcards](https://en.wikipedia.org/wiki/Glob_(programming)) (`*` and `?`) to support multiple subdomains (`*.example.com`) and TLDs (`*example*`).
 - Hosts can be `In Scope` acting as an **allow list** or `Out of Scope` acting as a **deny list**.
-- Scope Presets currently only support domains, **not paths**.
+
+::: warning NOTE
+Scope Presets currently only support domains, **not paths**.
+
+View the submitted [Github Issue](https://github.com/caido/caido/issues/642) for more information and to cast your vote to prioritize the implementation of paths within scoping rules.
+:::
 
 ## Creating a New Scope Preset
 

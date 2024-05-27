@@ -58,3 +58,14 @@ h3 {
 h4 {
   color:#b67474;
 }
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  padding: 0.5rem;
+}
+
+.video {
+  min-height: 6rem;
+}

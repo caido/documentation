@@ -1,19 +1,19 @@
 # Automate
 
-The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidy modify certain parameters of requests using wordlists.
+The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidly modify certain parameters of requests using wordlists.
 
 Advanced setting options ensure your campaign can account for events such as failed requests or rate-limiting. You can transfer requests to the Automate interface from many other Caido interfaces.
 
 You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
-<img alt="Automate tab." src="/_images/automate_generator_tab.png" center/>
+<img alt="Automate tab." src="/_images/automate_tab.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
-2. Highlight the element you wish to brute-force/fuzz.
+2. Select the [Attack Strategy](#attack-strategies).
+2. Highlight the element(s) you wish to brute-force/fuzz.
 3. Once the element is highlighted - click `+` to convert it to a placeholder. **_You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`._**
-4. This pane gives multiple payload `Type` options: `Hosted File` - select from your uploaded files (_file upload documentation can be found [here](../../../quickstart/beginner_guide/setup/file_upload.md)_). `Simple List` - manually create a list. `Null Payload` - Set a number of null payloads to generate.
-5. This pane presents additional options for fine-tuning your brute-force/fuzzing campaign such as: setting the value of the **Connection** header to **_keep-alive_** or **_close_**, automatically updating the **Content-Length** header value to match body data size when a placeholder/placeholders are present within the body of the request, concurrency handling options and error handling options.
-6. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
+4. Select a [Payload Type](#payload-types), apply [Preprocessors](#preprocessors) and set additional [Settings](#settings) within this pane.
+5. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
 7. The configuration tab as well as the associated results tab will be paired next to each other here.
 
 ## Automate Results
@@ -27,7 +27,7 @@ To inspect the results of your `Automate` campaign - proceed with the following 
 3. This pane will display the selected request and it's associated response.
 4. This is the resulting list of options presented after right-clicking within the request pane.
 
-## Strategies
+## Attack Strategies
 
 Caido currently provides the following attack `Strategies`:
 
@@ -38,7 +38,7 @@ Caido currently provides the following attack `Strategies`:
 - **Parallel** _(Pitchfork)_: This will replace all the markers with different values from the different payloads. This requires payloads that each have the same number of elements.
 - **Matrix** _(Cluster Bomb)_: This will replace all the markers with all the combinations of payloads. Payloads can have different number of elements, but beware that this can create a large number of requests.
 
-## Types
+## Payload Types
 
 For each payload, you can choose a `Type` from the list:
 
@@ -47,6 +47,17 @@ For each payload, you can choose a `Type` from the list:
 - **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
 - **Simple List:** This is for cases where you want to test a short manually created list of elements.
 - **Null Payload:** This is useful to generate requests without changing anything in it.
+
+## Preprocessors
+
+Preprocessors enable you to apply additional modifications to the payloads.
+
+<img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
+
+- **Workflow**: This allows you to select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/workspaces/documentation/src/reference/features/testing/workflows.md) documentation for more information.
+- **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
+- **Prefix**: This allows you to prefix a payload value with a supplied value.
+- **Suffix**: This allows you to append a supplied suffix value to a payload value.
 
 ## Settings
 

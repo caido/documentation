@@ -2,10 +2,10 @@
 
 **Filter Presets**, created via the `Filters` tab allows you to fine-tune which proxied resources/objects are displayed/excluded. Utilizing the intuitive query syntax of HTTPQL for their `Expressions` - these custom filtering rules ensure your work is streamlined by reducing the time it takes to find that specific request you are looking for.
 
-Through the use of wildccard characters and logical operators - Caido's Filter Preset feature makes it easy to evalute a large amount of data as you delve into your testing engagement.
+Caido's Filter Preset feature makes it easy to evaluate a large amount of data as you delve into your testing engagement.
 
 ::: info
-View the [HTTPQL](../../../concepts/essentials/httpql.md) documentation for more information on query syntax.
+View the [HTTPQL](/workspaces/documentation/src/concepts/essentials/httpql.md) documentation for more information on query syntax.
 :::
 
 ## Filter Preset Rules

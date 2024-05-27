@@ -6,23 +6,23 @@ This feature can also be used for archival purposes or audit purposes sometimes 
 
 ## Exports Types
 
-The Exports feature offers two exportation options:
+The Exports feature offers two export options:
 
 <img alt="Exports." src="/_images/export_types.png" center/>
 
+::: info
+**Export current rows** is a feature exclusive to Caido Pro users.
+:::
+
 1. **Export all**: Exports all data of the specified tool.
-
-> PRO FEATURE
-
 2. **Export current rows**: Exports only rows that match the filter and [scope](/reference/features/overview/scope.md) currently set.
 
-::: info
+## Export Formats
+
 Each export option has two formats available:
 
 1. JSON
 2. CSV
-
-:::
 
 ### JSON
 

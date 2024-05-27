@@ -6,6 +6,18 @@ These categories are represented as column names spanning horizontally located a
 
 Clicking a column name will toggle the associated sorting mechanism. Sorting varies in how it is accomplished - ascending/descending order, alphabetical order, numerical order, time-based order and the presence/absence of a property are all factors utilized to provide Caido users with the functionality to easily navigate through data.
 
+::: info FAQ
+
+Q: "Why can't some columns be sorted?"
+
+- Sorting is not always easy due to the client/server architecture of Caido and our reliance on disk. It requires more work from our side to support all sorting. Please check Caido's [Github Issues](https://github.com/caido/caido/issues) page to submit a request to expand the available sorting options/vote for an existing sorting request.
+
+Q: "When sorting the payloads in Automate, why are they sometimes out of order?"
+
+- They are sorted using [lexicographical order](https://stackoverflow.com/questions/45950646/what-is-lexicographical-order).
+
+:::
+
 <img alt="HTTP History." src="/_images/sorting_example.png" center/>
 
 ## Available Sorting Properties
@@ -14,8 +26,12 @@ Some properties, even when present as column names in a table do not perform sor
 
 Below is a list of all available sorting properties as well as in which Caido features they can be found in:
 
-::: tip
-Clicking on a column name will toggle between the `^` and `∨` characters within the column name's field.
+::: tip TIPS
+
+- Clicking on a column name will toggle between the `^` and `∨` characters within the column name's field.
+- Columns can be included/excluded in the table by clicking the `Column preferences` cog wheel icon located at the bottom right corner of the pane. To toggle between the two, select/deselect the checkbox of the associated column.
+- The horizontal order of columns can be adjusted arbitrarily. To do so, **click, hold and drag** the desired column to your preferred position.
+
 :::
 
 ## ID
