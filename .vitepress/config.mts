@@ -10,6 +10,9 @@ export default defineConfig({
 
   srcDir: 'src',
   appearance: "force-dark",
+  sitemap: {
+    hostname: "https://docs.caido.io"
+  },
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
