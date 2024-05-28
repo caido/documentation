@@ -9,7 +9,7 @@ All the data Caido creates is stored in a single folder. The default location of
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
 ::: tip
-The `log` directory will contain the log files used to view output from the [Coding Nodes](/src/concepts/essentials/workflows/nodes/nodes.md).
+The `log` directory will contain the log files used to view output from the [Coding Nodes](/concepts/essentials/workflows/nodes/nodes.md).
 :::
 
 ::: info
