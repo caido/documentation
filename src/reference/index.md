@@ -11,6 +11,7 @@
 ## Features: _Overview_
 
 - **[Sitemap](./features/overview/sitemap.md)** - capturing/navigating the file structure of a website.
+- **[Sorting](./features/overview/sorting.md)** - sorting tables by property categories.
 - **[Scope](./features/overview/scope.md)** - filtering what Caido captures/presents.
 - **[Filters](./features/overview/filters.md)** - creating filter presets for use with HTTPQL.
 
@@ -26,7 +27,9 @@
 - **[Replay](./features/testing/replay.md)** - modifying and sending requests arbitrarily.
 - **[Automate](./features/testing/automate.md)** - fuzzing/bruteforcing requests.
 - **[Assistant](./features/testing/assistant.md)** - Caido's AI, security-tailored LLM integration.
-- **[Convert](./features/testing/workflows/convert.md)** - applying created Workflows.
+- **[Workflows](./features/testing/workflows.md)** - Caido Workflows.
+- **[Passive Workflows](./features/testing/workflows/passive.md)** - creating and applying Passive Type Workflows.
+- **[Convert Workflows](./features/testing/workflows/convert.md)** - creating and applying Convert Type Workflows.
 
 ## Features: _Logging_
 
