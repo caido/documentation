@@ -2,8 +2,6 @@
 
 ## What are Nodes?
 
----
-
 **Nodes** are simply **actions** or **conditions**. By connecting Nodes together, complex action sequences based on certain conditions are created.
 
 Nodes are visually represented by Caido as draggable blocks, colorized by category. They utilize an input/output model that can be used to send data altered by one Node to a subsequent Node.
@@ -11,8 +9,6 @@ Nodes are visually represented by Caido as draggable blocks, colorized by catego
 <img alt="Convert workflow" src="/_images/workflow_convert_basic.png" center/>
 
 ## Connecting Nodes
-
----
 
 A `Connection` is visually represented by the gray line between nodes and determine the order of execution.
 
@@ -25,8 +21,6 @@ Workflows use a top-down heirachical structure (_the Node at the very top repres
 
 ## Node Alias
 
----
-
 A Node's `Alias` is an arbitrarily set identifier used to uniquely reference the associated Node within a Workflow.
 
 Aliases can consist of lowercase letters, hyphens, underscores and numbers.
@@ -36,8 +30,6 @@ This differs from a Node's Name which simply serves cosmetic purposes to assist 
 :::
 
 ## Node Input Types: Constant Value & Reference Value
-
----
 
 ### 1. Constant Value Type
 
@@ -66,18 +58,26 @@ _Example (pictured above):_
 
 ## Node Categories
 
----
-
 Certain Nodes are specific to a Workflow type (Passive/Active/Convert). Though, in general, Nodes can be categorized broadly and associated together by color:
 
-- **Start/End Nodes** (Yellow) - mark the beginning and end of a Workflow.
+### Start/End Nodes
 
-- **Control Nodes** (Green) - allow you to dictate the execution flow.
+These nodes are color categorized together by their yellow marked tabs. They mark the beginning and end of a Workflow.
 
-- **Code Nodes** (Red) - provide a way to integrate Shell commands and Javascript.
+### Control Nodes
 
-- **Miscellaneous Nodes** (Blue)
+These nodes are color categorized together by their green marked tabs and allow you to dictate the execution flow.
+
+### Code Nodes
+
+These nodes are color categorized together by their green marked tabs and provide a way to integrate Shell commands and Javascript.
+
+### Miscellaneous Nodes (Blue)
+
+These nodes are color categorized together by their green marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
 
 <img alt="List of nodes." src="/_images/nodes_all_types.png" center/>
 
-> The development of Nodes will be ongoing and new nodes will be included in future Caido releases.
+::: info
+The development of Nodes will be ongoing and new nodes will be included in future Caido releases.
+:::

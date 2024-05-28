@@ -24,8 +24,15 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
                 link: '/concepts/essentials/workflows',
                 items: [{
                     text: 'Nodes',
-                    link: '/concepts/essentials/nodes'
-                }]
+                    link: '/concepts/essentials/workflows/nodes/nodes',
+                    items: [{
+                        text: 'Coding Nodes',
+                        items: [{
+                            text: 'Convert Coding Nodes',
+                            link: '/concepts/essentials/workflows/nodes/coding_nodes/convert_coding_nodes'
+                            }]
+                        }]
+                    }]
             },
             {
                 text: 'Tabs',
