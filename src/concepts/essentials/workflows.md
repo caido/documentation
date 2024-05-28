@@ -2,6 +2,8 @@
 
 ## What are Workflows?
 
+_For advanced documentation on this topic - click [here](/reference/features/testing/workflows.md)._
+
 ---
 
 **Workflows** provide an intuitive way to create, save and reuse customizable actions or sequences of actions that will be performed under certain specified conditions. With Workflows, you have the ability to extend the functionality of Caido to suit your individual needs.
