@@ -24,4 +24,4 @@ There are three main types of Workflows, each of which are applied differently:
 
 ## Nodes: The Building Blocks of Workspaces
 
-In order to create a Workflow - Caido implements [Nodes](./nodes.md).
+In order to create a Workflow - Caido implements [Nodes](/concepts/essentials/workflows/nodes/nodes.md).
