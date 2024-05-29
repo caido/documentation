@@ -25,7 +25,7 @@ When you use Caido, we collect interaction data between your Instances and our c
 - `/instance/alive`: We track Instance startup and alive status once per 24H.
 - `/instance/user/session`: We track when a user interact for the first time with an Instance and once every hour.
 - `/instance/user/profile`: We track when a user interact for the first time with an Instance and once every hour.
-- `/instance/assistant/complete`: We track assistant token usage, but **not** the messages sent to us.
+- `/instance/assistant/complete`: We track Assistant token usage, but **not** the messages sent to us.
 
 ::: info
 We do not collect any data stored on your Instances nor interactions within the Caido application.

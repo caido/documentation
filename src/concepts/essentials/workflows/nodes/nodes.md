@@ -10,7 +10,7 @@ Nodes are visually represented by Caido as draggable blocks, colorized by catego
 
 ## Connecting Nodes
 
-A `Connection` is visually represented by the gray line between nodes and determine the order of execution.
+A `Connection` is visually represented by the gray line between Nodes and determine the order of execution.
 
 Workflows use a top-down heirachical structure (_the Node at the very top represents the beginning of the flow and the Node at the bottom represents the end of the flow_).
 
@@ -62,19 +62,19 @@ Certain Nodes are specific to a Workflow type (Passive/Active/Convert). Though, 
 
 ### Start/End Nodes
 
-These nodes are color categorized together by their yellow marked tabs. They mark the beginning and end of a Workflow.
+These Nodes are color categorized together by their yellow marked tabs. They mark the beginning and end of a Workflow.
 
 ### Control Nodes
 
-These nodes are color categorized together by their green marked tabs and allow you to dictate the execution flow.
+These Nodes are color categorized together by their green marked tabs and allow you to dictate the execution flow.
 
 ### Code Nodes
 
-These nodes are color categorized together by their green marked tabs and provide a way to integrate Shell commands and Javascript.
+These Nodes are color categorized together by their green marked tabs and provide a way to integrate Shell commands and Javascript.
 
 ### Miscellaneous Nodes (Blue)
 
-These nodes are color categorized together by their green marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
+These Nodes are color categorized together by their green marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
 
 <img alt="List of nodes." src="/_images/nodes_all_types.png" center/>
 

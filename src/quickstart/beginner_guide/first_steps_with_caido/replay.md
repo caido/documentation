@@ -23,8 +23,8 @@ To send a request to `Replay`, either right-click inside the request pane of `In
 
 With Caido, requests are easily organized with the use of **Sessions** and **Collections**.
 
-- **Sessions**: everytime you edit and forward a request within `Replay` - the history of these forwards is recorded into a **Session**.
-- **Collections**: you can group Sessions into **Collections** which allows you to organize your requests by shared traits.
+- **Sessions**: Everytime you edit and forward a request within `Replay` - the history of these forwards is recorded into a **Session**.
+- **Collections**: You can group Sessions into **Collections** which allows you to organize your requests by shared traits.
 
 <img alt="Sessions and Collections." src="/_images/session_collection_tab.png" center/>
 

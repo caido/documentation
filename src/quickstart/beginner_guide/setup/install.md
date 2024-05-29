@@ -2,7 +2,7 @@
 
 Caido is available as both a desktop application and a standalone command-line interface (CLI) binary, offering users the flexibility to choose the installation method that best suits their needs.
 
-You can download the installer package from your <a href="https://dashboard.caido.io" target="_blank">dashboard</a> or from the <a href="https://github.com/caido/caido/releases" target="_blank">releases</a> page of our Github repository. The available installer package can differ based on your operating system, make sure to download the package that is compatible with your system.
+You can download the installer package from your <a href="https://dashboard.caido.io" target="_blank">Dashboard</a> or from the <a href="https://github.com/caido/caido/releases" target="_blank">releases</a> page of our Github repository. The available installer package can differ based on your operating system, make sure to download the package that is compatible with your system.
 
 ## Installing Caido on Windows
 

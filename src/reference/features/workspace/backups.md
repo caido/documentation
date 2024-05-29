@@ -8,9 +8,7 @@ Backups allow you to share your security audits with others - making sure you ar
 
 ## Creating a Backup
 
-> **PRO FEATURE**
-
-You create Backups directly from the `Projects` tab of your `Workspace` by clicking `⋮` located to the far-right of the desired Project row.
+**Caido Pro Feature**: You create Backups directly from the `Projects` tab of your `Workspace` by clicking `⋮` located to the far-right of the desired Project row.
 
 ::: tip
 It is possible to backup any Project including the currently selected one.

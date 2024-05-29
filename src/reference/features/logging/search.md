@@ -9,9 +9,7 @@ This extra inclusion allows you to sort through the results of all your testing 
 <img alt="Search overview." src="/_images/search_tab.png" center/>
 <br>
 
-> PRO FEATURE
-
-An HTTPQL query search bar is available within Search for Caido Pro users.
+**Caido Pro Feature**: An HTTPQL query search bar is available within Search for Pro users.
 
 ## Filtering
 
@@ -22,7 +20,7 @@ Additional default Filter Presets in the `Advanced options` panel are included t
 - The presets to use (implicit AND).
 
 ::: info
-There is an implicit AND in between each of those sections.
+There is an implicit AND in-between each of those sections.
 :::
 
 View the [Filters](../overview/filters.md) documentation for more information.

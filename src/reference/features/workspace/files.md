@@ -10,7 +10,7 @@ Currently, files uploaded in this page are only available for use in the Automat
 
 `Automate` allows you to brute-force/fuzz designated elements of a request.
 
-- In order to utilize the `Hosted File` payload `Type` in Automate - you must first upload payload files/wordlists in the `Files` tab within Caido.
+- In order to utilize the [Hosted File Payload Type](/reference/features/testing/automate.md#payload-types) in Automate - you must first upload payload files/wordlists in the `Files` tab within Caido.
 
 ## Files
 
