@@ -9,7 +9,9 @@ This extra inclusion allows you to sort through the results of all your testing 
 <img alt="Search overview." src="/_images/search_tab.png" center/>
 <br>
 
-**Caido Pro Feature**: An HTTPQL query search bar is available within Search for Pro users.
+<ProContainer>
+An HTTPQL query search bar is available within Search for Pro users.
+</ProContainer>
 
 ## Filtering
 
