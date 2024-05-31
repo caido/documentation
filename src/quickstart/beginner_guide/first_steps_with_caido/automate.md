@@ -44,9 +44,9 @@ For each payload, you can choose a `Type` from the list:
 
 <img alt="Automate Types." src="/_images/types_automate.png" center/>
 
-- **Hosted File:** This allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
-- **Simple List:** This is for cases where you want to test a short manually created list of elements.
-- **Null Payload:** This is useful to generate requests without changing anything in it.
+- **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
+- **Simple List:** For cases where you want to test a short manually created list of elements.
+- **Null Payload:** Generate requests without changing anything in it.
 
 ## Preprocessors
 
@@ -54,10 +54,10 @@ Preprocessors enable you to apply additional modifications to the payloads.
 
 <img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
 
-- **Workflow**: This allows you to select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/features/testing/workflows.md) documentation for more information.
+- **Workflow (Caido Pro Feature)**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/workflows/workflows.md) documentation for more information.
 - **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
-- **Prefix**: This allows you to prefix a payload value with a supplied value.
-- **Suffix**: This allows you to append a supplied suffix value to a payload value.
+- **Prefix**: Allows you to prefix a payload value with a supplied value.
+- **Suffix**: Allows you to append a supplied suffix value to a payload value.
 
 ## Settings
 

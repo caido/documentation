@@ -20,6 +20,8 @@ If you are facing an issue, look into [Common Errors](/reference/common_errors),
 
 You might want to dig into more advanced features we offer like [HTTPQL](/concepts/essentials/httpql.md) and running Caido on remote [VPS](/guides/user_guide/vps.md).
 
+For everything else: view the [Documentation Directory](/reference/index.md).
+
 ## Want a quick peak of the future?
 
 ---

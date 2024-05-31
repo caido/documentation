@@ -30,8 +30,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
             }
         ]
     },
-
-
     {
         text: 'Features',
         items: [{
@@ -86,19 +84,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                     {
                         text: 'Assistant',
                         link: '/reference/features/testing/assistant'
-                    },
-                    {
-                        text: 'Workflows',
-                        link: '/reference/features/testing/workflows',
-                        items: [{
-                                text: 'Passive',
-                                link: '/reference/features/testing/workflows/passive'
-                            },
-                            {
-                                text: 'Convert',
-                                link: '/reference/features/testing/workflows/convert'
-                            }
-                        ]
                     }
                 ]
             },
@@ -148,5 +133,24 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
             }
         ]
     },
-
+    {
+        text: 'Workflows',
+        items: [{
+                text: 'Workflow Basics',
+                link: '/reference/workflows/workflows'
+            },
+            {
+                text: 'Passive',
+                link: '/reference/workflows/passive'
+            },
+            {
+                text: 'Convert',
+                link: '/reference/workflows/convert',
+                items: [{
+                    text: 'Coding Nodes',
+                    link: '/reference/workflows/convert/coding_nodes'
+                    }]
+            }
+        ]
+    },
 ]

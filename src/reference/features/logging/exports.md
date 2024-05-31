@@ -10,16 +10,12 @@ The Exports feature offers two export options:
 
 <img alt="Exports." src="/_images/export_types.png" center/>
 
-::: info
-**Export current rows** is a feature exclusive to Caido Pro users.
-:::
-
 1. **Export all**: Exports all data of the specified tool.
-2. **Export current rows**: Exports only rows that match the filter and [scope](/reference/features/overview/scope.md) currently set.
+2. **Export current rows (Caido Pro Feature)**: Exports only rows that match the filter and [Scope](/reference/features/overview/scope.md) currently set.
 
 ## Export Formats
 
-Each export option has two formats available:
+Each Export option has two formats available:
 
 1. JSON
 2. CSV
@@ -42,7 +38,7 @@ For the CSV format, each request/response pair will be exported on a row. Since 
 
 ## Download
 
-Once the export is completed, it will be available on the Exports page.
+Once the Export is completed, it will be available on the Exports page.
 
 <img alt="Exports tab." src="/_images/exports_tab.png">
 

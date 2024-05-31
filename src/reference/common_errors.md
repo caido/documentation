@@ -18,7 +18,7 @@ Login to the initial account that was used to setup your Caido Instance.
 
 - If using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
 
-::: info
+::: warning
 These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
 :::
 
@@ -30,7 +30,7 @@ While not ideal, deleting your Caido data folder will allow you to start with a 
 
 ## Error Message: "Login URL generation failed: invalid authentication token".
 
-**You may encounter this error when trying to access an Instance that you **deleted** in the Caido [dashboard](https://dashboard.caido.io).**
+**You may encounter this error when trying to access an Instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).**
 
 <img alt="Login error." src="/_images/login_url_error.png" center/>
 

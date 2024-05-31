@@ -10,14 +10,14 @@ Think of `Projects` as separate directories for your audits. Projects allow you 
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.
-3. Click on the red `+ Create a project` button in the top-right area of the Caido window. Name the Project - consider using a descriptive name of the context the project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._). Once you have entered a name - click on the `Create` button.
+3. Click on the red `+ Create a project` button in the top-right area of the Caido window. Name the Project - consider using a descriptive name of the context the Project will be utilized for (_such as the name of the client you are auditing, a specific bug bounty program, the name of the product, etc._). Once you have entered a name - click on the `Create` button.
 4. Your new Project will now appear in the `Workspace` panel.
 5. Clicking on `⋮` will present the following additional options:
 
-- **Rename**: rename your Project.
-- **Copy path**: copy the Project's data location on your device to your clipboard. View the [Files](/concepts/internals/files.md) documentation for more information.
-- **Create backup**: create a Backup of the Project data. View the [Backups](/reference/features/workspace/backups.md) documentation for more information.
-- **Delete**: delete the Project from your Instance.
+- **Rename**: Rename your Project.
+- **Copy path**: Copy the Project's data location on your device to your clipboard. View the [Files](/concepts/internals/files.md) documentation for more information.
+- **Create backup (Caido Pro Feature)**: Create a Backup of the Project data. View the [Backups](/reference/features/workspace/backups.md) documentation for more information.
+- **Delete**: Delete the Project from your Instance.
 
 ## Switching Between Projects
 

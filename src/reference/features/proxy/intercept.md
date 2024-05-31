@@ -17,7 +17,7 @@ To familiarize yourself with the Intercept interface, continue below:
 3. Click `Requests`, `Responses` or **both** to specify what `Queuing` is applied to. _**Intercept on** is signified by `||` and **intercept off** is signified by `>>`._
 4. This pane lists all the queued **requests**. Select one from the list by clicking on it to view its contents.
 5. The contents of the currently queued/selected **request** will be displayed in this pane.
-6. The `Drop` and `Forward` buttons will drop or forward **requests**/**responses** respecively.
+6. The `Drop` and `Forward` buttons will drop or forward **requests**/**responses** respectively.
 
 <img alt="Intercept layout - response panes." src="/_images/interceptresp_marked_layout.png" center/>
 

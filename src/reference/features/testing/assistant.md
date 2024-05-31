@@ -5,18 +5,18 @@
 The `Assistant` is an AI LLM avaiable to Caido Pro users. Specifically tailored for secutiry research - the Assistant can help you understand requests, provide explanations of web traffic elements and suggests attack vectors.
 
 ::: warning
-Make sure to **anonymize sensitive information** when you use this tool. See [our privacy policy](https://caido.io/privacy) for more info.
+Make sure to **anonymize sensitive information** when you use this tool. See [our privacy policy](https://caido.io/privacy) for more information.
 :::
 
 ::: info
-Data is sent to a third party (OpenAI) and can be stored for up to 30 days. See [their privacy policy](https://openai.com/policies/privacy-policy) for more info.
+Data is sent to a third party (OpenAI) and can be stored for up to 30 days. See [their privacy policy](https://openai.com/policies/privacy-policy) for more information.
 :::
 
 ## What is an LLM?
 
 Large Language Models (LLM) like GPT-3.5 are created through deep learning techniques and have the capability to understand, generate and manipulate text in a wide range of natural language tasks.
 
-However, there are certains limitations to LLMs such as hallucinations (LLMs generating info that is not accurate or even completely fabricated), lack of understanding and biases.
+However, there are certains limitations to LLMs such as hallucinations (LLMs generating information that is not accurate or even completely fabricated), lack of understanding and biases.
 
 LLMs are **not going to "hack for you"** since they have no consciousness or intent. They generate responses based solely on patterns in the data and input they receive.
 

@@ -8,6 +8,10 @@ All the data Caido creates is stored in a single folder. The default location of
 | MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
+::: tip
+The `log` directory will contain the log files used to view output from the [Coding Nodes](/concepts/essentials/workflows/nodes/nodes.md).
+:::
+
 ::: info
 Currently, it is **not possible** to create Caido Projects outside this folder. However, you can change the location of the whole folder if needed.
 :::

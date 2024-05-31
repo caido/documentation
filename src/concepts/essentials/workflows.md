@@ -2,7 +2,7 @@
 
 ## What are Workflows?
 
----
+_For advanced documentation on this topic - click [here](/reference/workflows/workflows.md)._
 
 **Workflows** provide an intuitive way to create, save and reuse customizable actions or sequences of actions that will be performed under certain specified conditions. With Workflows, you have the ability to extend the functionality of Caido to suit your individual needs.
 
@@ -16,8 +16,6 @@ _Example (pictured above): a Workflow that will take user-provided input, base64
 
 ## Workflow Types
 
----
-
 There are three main types of Workflows, each of which are applied differently:
 
 1. `Passive Workflows` - will automatically trigger based on the specifications set when creating the Workflow.
@@ -26,6 +24,4 @@ There are three main types of Workflows, each of which are applied differently:
 
 ## Nodes: The Building Blocks of Workspaces
 
----
-
-In order to create a Workflow - Caido implements [Nodes](./nodes.md).
+In order to create a Workflow - Caido implements [Nodes](/concepts/essentials/workflows/nodes/nodes.md).

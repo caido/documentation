@@ -19,6 +19,6 @@ We use a few OAuth2 grants depending on the API.
 
 ## Secrets Storage
 
-- **Client Secret**: Stored encrypted in the `secrets.db` database on the instance disk.
-- **Instance Access Token**: Stored encrypted in the `secrets.db` database on the instance disk.
+- **Client Secret**: Stored encrypted in the `secrets.db` database on the Instance disk.
+- **Instance Access Token**: Stored encrypted in the `secrets.db` database on the Instance disk.
 - **User Access & Refresh Tokens**: Stored in the browser `local storage` of the **user**. Never stored on the Instance, but can be present in memory.

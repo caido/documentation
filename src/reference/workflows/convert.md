@@ -1,6 +1,6 @@
 # Convert Type Workflows
 
-_For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
+_For general documentation on utilizing the Workflows tab - click [here](/reference/workflows/workflows.md)._
 
 While Passive and Active Workflows operate on requests and responses - `Convert Workflows` operate on **bytes** received as input.
 
@@ -8,13 +8,13 @@ While Passive and Active Workflows operate on requests and responses - `Convert 
 
 Convert Workflows are **manually triggered** and are integrated in various areas of Caido:
 
-**When using [Constant Values](/concepts/essentials/nodes.md#1-constant-value-type)**:
+**When using [Constant Values](/concepts/essentials/workflows/nodes/nodes.md#node-input-types-constant-value-reference-value)**:
 
 - Within the **Workflow Editor** supply the input in the `Data` field under `Inputs` with the `Use reference` checkbox **_deselected_**. Then apply the conversion by clicking the `Save and Run` button.
 
 <img alt="Testing Convert Workflow with user supplied input within Node." src="/_images/constant_value_supplied.png"/>
 
-**When using [Reference Values](/concepts/essentials/nodes.md#2-reference-value-type)**:
+**When using [Reference Values](/concepts/essentials/workflows/nodes/nodes.md#node-input-types-constant-value-reference-value)**:
 
 - At the bottom of the Concept **Workflow Editor** is an Input pane in which you can supply data and then apply the conversion by clicking the `Save and Run` button.
 

@@ -5,6 +5,7 @@
 - **[Instances](./essentials/instances.md)** - running/managing multiple Caido instances at once.
 - **[HTTPQL](./essentials/httpql.md)** - filtering requests and responses using HTTP Query Language.
 - **[Workflows](./essentials/workflows.md)** - automating input/output modifications.
+- **[Nodes](./essentials/workflows/nodes/nodes.md)** - the building blocks of Workflows.
 - **[Tabs](./essentials/tabs.md)** - managing/organizing your workspace using tabs in Replay and Automate.
 - **[Layout](./essentials/layout.md)** - customizing the user interface layout of Caido.
 
