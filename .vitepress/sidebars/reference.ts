@@ -84,6 +84,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                     {
                         text: 'Assistant',
                         link: '/reference/features/testing/assistant'
+                    },
+                    {
+                        text: 'Workflows',
+                        link: '/reference/workflows/workflows'
                     }
                 ]
             },
