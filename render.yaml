@@ -56,6 +56,10 @@ services:
       - type: redirect
         source: /concepts/*
         destination: /concepts/essentials/*
+      # Post-Vitepress
+      - type: redirect
+        source: /reference/features/testing/workflows/*
+        destination: /reference/workflows/*
     domains:
       - docs.caido.io
     envVars:
