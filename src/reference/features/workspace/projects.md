@@ -16,8 +16,12 @@ Think of `Projects` as separate directories for your audits. Projects allow you 
 
 - **Rename**: Rename your Project.
 - **Copy path**: Copy the Project's data location on your device to your clipboard. View the [Files](/concepts/internals/files.md) documentation for more information.
-- **Create backup (Caido Pro Feature)**: Create a Backup of the Project data. View the [Backups](/reference/features/workspace/backups.md) documentation for more information.
+- **Create backup**: Create a Backup of the Project data. View the [Backups](/reference/features/workspace/backups.md) documentation for more information.
 - **Delete**: Delete the Project from your Instance.
+
+<ProContainer>
+<b>Create backup</b> is only available to Caido Pro users.
+</ProContainer>
 
 ## Switching Between Projects
 
