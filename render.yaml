@@ -1,0 +1,63 @@
+services:
+  - type: web
+    name: documentation
+    runtime: static
+    repo: https://github.com/caido/documentation.git
+    branch: main
+    buildCommand: make build-release
+    staticPublishPath: ./.vitepress/dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /stats/script.js
+        destination: https://plausible.io/js/plausible.js
+      - type: rewrite
+        source: /stats/event
+        destination: https://plausible.io/api/event
+      # Pre-vitepress
+      - type: redirect
+        source: /configuration/default_listening_address
+        destination: /configuration/listening_address
+      - type: redirect
+        source: /features/workflows/convert
+        destination: /features/testing/workflows/convert
+      - type: redirect
+        source: /internals/httpql
+        destination: /concepts/httpql
+      - type: redirect
+        source: /internals/instances
+        destination: /concepts/instances
+      # Specific
+      - type: redirect
+        source: /common_errors
+        destination: /reference/common_errors
+      - type: redirect
+        source: /show_case/*
+        destination: /quickstart/showcase
+      - type: redirect
+        source: /doc_directory
+        destination: /
+      # Generic
+      - type: redirect
+        source: /configuration/*
+        destination: /reference/configuration/*
+      - type: redirect
+        source: /plugins/*
+        destination: /reference/plugins/*
+      - type: redirect
+        source: /user_guide/*
+        destination: /guides/user_guide/*
+      - type: redirect
+        source: /beginner_guide/*
+        destination: /quickstart/beginner_guide/*
+      - type: redirect
+        source: /features/*
+        destination: /reference/features/*
+      - type: redirect
+        source: /concepts/*
+        destination: /concepts/essentials/*
+    domains:
+      - docs.caido.io
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: true
