@@ -86,23 +86,8 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                     {
                         text: 'Assistant',
                         link: '/reference/features/testing/assistant'
-                    },
-                    {
-                        text: 'Workflows',
-                        link: '/reference/features/testing/workflows',
-                        items: [{
-                                text: 'Passive',
-                                link: '/reference/features/testing/workflows/passive'
-                            },
-                            {
-                                text: 'Convert',
-                                link: '/reference/features/testing/workflows/convert/convert',
-                                items: [{
-                                    text: 'Convert Coding Nodes',
-                                    link: '/reference/features/testing/workflows/convert/convert_coding_nodes'
-                                }]
-                            }]
-                        }]
+                    }
+                ]
             },
             {
                 text: 'Logging',
@@ -115,6 +100,22 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                         link: '/reference/features/logging/exports'
                     }
                 ]
+            },
+            {
+                text: 'Workflows',
+                link: '/reference/features/testing/workflows',
+                items: [{
+                        text: 'Passive',
+                        link: '/reference/features/testing/workflows/passive'
+                    },
+                    {
+                        text: 'Convert',
+                        link: '/reference/features/testing/workflows/convert/convert',
+                        items: [{
+                            text: 'Convert Coding Nodes',
+                            link: '/reference/features/testing/workflows/convert/convert_coding_nodes'
+                            }]
+                        }]
             },
             {
                 text: 'Workspace',
