@@ -147,8 +147,8 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                 text: 'Convert',
                 link: '/reference/workflows/convert',
                 items: [{
-                    text: 'Convert Coding Nodes',
-                    link: '/reference/workflows/convert/convert_coding_nodes'
+                    text: 'Coding Nodes',
+                    link: '/reference/workflows/convert/coding_nodes'
                     }]
             }
         ]
