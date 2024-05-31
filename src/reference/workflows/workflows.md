@@ -61,6 +61,6 @@ The name and description pane will switch to a pane that displays a Node's prope
 
 ## Advanced Workflow Types Documentation
 
-1. [Passive Workflows](./workflows/passive.md)
+1. [Passive Workflows](/reference/workflows/passive.md)
 2. Active Workflows - `WORK IN PROGRESS`
-3. [Convert Workflows](./workflows/convert.md)
+3. [Convert Workflows](/reference/workflows/convert.md)

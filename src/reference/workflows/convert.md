@@ -1,6 +1,6 @@
 # Convert Type Workflows
 
-_For general documentation on utilizing the Workflows tab - click [here](/reference/features/testing/workflows.md)._
+_For general documentation on utilizing the Workflows tab - click [here](/reference/workflows/workflows.md)._
 
 While Passive and Active Workflows operate on requests and responses - `Convert Workflows` operate on **bytes** received as input.
 

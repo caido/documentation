@@ -54,7 +54,7 @@ Preprocessors enable you to apply additional modifications to the payloads.
 
 <img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
 
-- **Workflow (Caido Pro Feature)**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/features/testing/workflows.md) documentation for more information.
+- **Workflow (Caido Pro Feature)**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/workflows/workflows.md) documentation for more information.
 - **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
 - **Prefix**: Allows you to prefix a payload value with a supplied value.
 - **Suffix**: Allows you to append a supplied suffix value to a payload value.
@@ -78,6 +78,6 @@ Additional setting options allow you to fine tune how the Automate session will 
 
 - Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](../../../quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
 
 :::

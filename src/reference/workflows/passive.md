@@ -1,6 +1,6 @@
 # Passive Type Workflows
 
-_For general documentation on utilizing the Workflows tab - click [here](../workflows.md)._
+_For general documentation on utilizing the Workflows tab - click [here](/reference/workflows/workflows.md)._
 
 `Passive Workflows` take **requests** or **responses** as input. Their execution occurs in the "background" as you conduct your testing, extending the efficiency of your process.
 

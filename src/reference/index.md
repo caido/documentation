@@ -27,9 +27,6 @@
 - **[Replay](./features/testing/replay.md)** - modifying and sending requests arbitrarily.
 - **[Automate](./features/testing/automate.md)** - fuzzing/bruteforcing requests.
 - **[Assistant](./features/testing/assistant.md)** - Caido's AI, security-tailored LLM integration.
-- **[Workflows](./features/testing/workflows.md)** - Caido Workflows.
-- **[Passive Workflows](./features/testing/workflows/passive.md)** - creating and applying Passive Type Workflows.
-- **[Convert Workflows](./features/testing/workflows/convert.md)** - creating and applying Convert Type Workflows.
 
 ## Features: _Logging_
 
@@ -47,3 +44,9 @@
 - **[Custom CSS](./plugins/custom_css.md)** - customizing Caido's UI with your own CSS code.
 - **[Custom JavaScript](./plugins/custom_js.md)** - `WORK IN PROGESS`
 - **[Custom Workflow Nodes](./plugins/custom_workflow_nodes.md)** - `WORK IN PROGRESS`
+
+## Workflows
+
+- **[Workflows](./workflows/workflows.md)** - Caido Workflows.
+- **[Passive Workflows](./workflows/passive.md)** - creating and applying Passive Type Workflows.
+- **[Convert Workflows](./workflows/convert.md)** - creating and applying Convert Type Workflows.

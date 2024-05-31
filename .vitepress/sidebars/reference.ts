@@ -136,19 +136,19 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
     {
         text: 'Workflows',
         items: [{
-                text: 'Workflows',
+                text: 'Workflow Basics',
                 link: '/reference/workflows/workflows'
             },
             {
                 text: 'Passive',
-                link: '/reference/workflows/workflows/passive'
+                link: '/reference/workflows/passive'
             },
             {
                 text: 'Convert',
-                link: '/reference/workflows/workflows/convert',
+                link: '/reference/workflows/convert',
                 items: [{
                     text: 'Convert Coding Nodes',
-                    link: '/reference/workflows/workflows/convert/convert_coding_nodes'
+                    link: '/reference/workflows/convert/convert_coding_nodes'
                     }]
             }
         ]
