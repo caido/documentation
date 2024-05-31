@@ -30,8 +30,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
             }
         ]
     },
-
-
     {
         text: 'Features',
         items: [{
