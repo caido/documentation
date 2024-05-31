@@ -135,17 +135,17 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
     },
     {
         text: 'Workflows',
-        link: '/reference/features/testing/workflows',
+        link: '/reference/features/workflows',
         items: [{
                 text: 'Passive',
-                link: '/reference/features/testing/workflows/passive'
+                link: '/reference/features/workflows/passive'
             },
             {
                 text: 'Convert',
-                link: '/reference/features/testing/workflows/convert/convert',
+                link: '/reference/features/workflows/convert/convert',
                 items: [{
                     text: 'Convert Coding Nodes',
-                    link: '/reference/features/testing/workflows/convert/convert_coding_nodes'
+                    link: '/reference/features/workflows/convert/convert_coding_nodes'
                     }]
                 }]
         },
