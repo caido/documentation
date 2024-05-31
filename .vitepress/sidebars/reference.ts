@@ -96,11 +96,13 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                             },
                             {
                                 text: 'Convert',
-                                link: '/reference/features/testing/workflows/convert'
-                            }
-                        ]
-                    }
-                ]
+                                link: '/reference/features/testing/workflows/convert/convert',
+                                items: [{
+                                    text: 'Convert Coding Nodes',
+                                    link: '/reference/features/testing/workflows/convert/convert_coding_nodes'
+                                }]
+                            }]
+                        }]
             },
             {
                 text: 'Logging',
