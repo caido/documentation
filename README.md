@@ -28,7 +28,7 @@ Thanks in advance for your contributions!
 
 ## 🔧 Contribution
 
-We've taken the time to set up Codespaces on this repo, which makes setting up a local copy of [the documentation site](https://docs.caido.com), viewing your changes live, and creating a pull request back to the `main` branch SUPER easy. **The entire process will take less than 5 clicks and less than 5 minutes.**
+We've taken the time to set up Codespaces on this repo, which makes setting up a local copy of [the documentation site](https://docs.caido.io), viewing your changes live, and creating a pull request back to the `main` branch SUPER easy. **The entire process will take less than 5 clicks and less than 5 minutes.**
 
 <div align="center">
   <a href="https://www.loom.com/share/83b80d9f19db4ae3aab5eb831231d476" title="Process"><img src="https://cdn.loom.com/sessions/thumbnails/83b80d9f19db4ae3aab5eb831231d476-with-play.gif" alt="Video of the documentation steps" /></a>
