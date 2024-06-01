@@ -5,7 +5,9 @@ The `typing.d.ts` file is the interface for Caido's SDK/API. Within it you can f
 ::: info
 To view the **typing.d.ts** file - click [here](https://github.com/caido/sdk-workflow/blob/main/src/typing.d.ts).
 
-Or expand the collapsible element located at the bottom of this page:
+Or expand the collapsible element located at the bottom of this page.
+
+For quick navigation of this documentation - use the page contents menu located to the right.
 :::
 
 ## Console
@@ -190,13 +192,33 @@ _Returns:_
 
 - This method will return the request `body` as a [Body instance](#body) OR `undefined` if no body exists.
 
+::: tip
+Example:
+
+```js
+const body = request.getBody();
+const bodyContent = body.toText();
+sdk.console.log(bodyContent);
+```
+
+The backend logs will have an entry containing the body data of the request.
+:::
+
 #### `toSpec(): RequestSpec;`
 
-- This method returns a `RequestSpec` object that represents a **mutable** version of the request. This now enables you to make modifications to the request (_which was not possible before since the saved request from which `toSpec()` sources from is immutable which is why the majority of the methods available return data - not alter data_).
+- This method returns a [RequestSpec](#requestspec) object that represents a **mutable** version of the request. This now enables you to make modifications to the request (_which was not possible before since the saved request from which `toSpec()` sources from is immutable which is why the majority of the methods available return data - not alter data_).
+
+::: info
+Essentially, this method converts the `Request` object (_which cannot be modified_) into a new `RequestSpec` object than can be modified.
+:::
 
 #### `toSpecRaw(): RequestSpecRaw;`
 
-- Similar to `toSpec(): RequestSpec;` - this method also returns a `RequestSpecRaw` object that represents a **mutable** version of the request. This method differs in that it returns the request in `raw` format (_Uint8Array_).
+- This method returns a [RequestSpecRaw](#requestspecraw) object that represents a **mutable** version of the request. This method differs in that it returns the request in `raw` format (_Uint8Array_).
+
+::: info
+Essentially, this method converts the `Request` object (_which cannot be modified_) into a new `RequestSpecRaw` object (_the request is now represented in 8-bit unsigned integers_) than can be modified.
+:::
 
 ## SetBodyOptions
 
@@ -229,7 +251,7 @@ request.setBody(body, options);
 
 ## RequestSpec
 
-The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by `export declare type Request`_). This object class represents an HTTP request and provides methods for accessing and manipulating the data within it.
+The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by `export declare type Request`_). This object class represents a mutable HTTP request and provides methods for accessing and manipulating the data within it.
 
 ```
 export declare class RequestSpec {
@@ -262,9 +284,10 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 
 ::: tip TIPS
 
+- You can convert a saved immutable [Request](#request) object into a RequestSpec object by using the `toSpec()` method. _Example_: `request.toSpec();`
 - The default HTTP Method utilized is GET.
-- You can include the schema, host and port to the URL - allowing you to easily pre-populate some of the properties.
-- Once initialized, the `host` component is extracted from the URL and used internally within the RequestSpec class. To explicitly change the host, see the `setHost(host: string): void;` method below.
+- You can include the schema, host and port to the URL - allowing you to easily prepopulate some of the properties.
+- Once initialized (_by supplying the constructor URL_), the `host` component is extracted from the URL and used internally within the RequestSpec class. To explicitly change the host, see the `setHost(host: string): void;` method below.
 :::
 
 #### `getHost(): string;`
@@ -273,16 +296,21 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 
 #### `setHost(host: string): void;`
 
-- This method explicitly sets the host of the request in the case you want to change it. The `host` parameter value is the domain name in type `string`. The return type is `void` as no value is returned.
+- This method explicitly sets the host of the request in the case you want to change it. The `host` parameter value is the domain name (_including subdomains, if any_) in type `string`. The return type is `void` as no value is returned.
+
+::: info
+The `setHost()` method of `RequestSpec` will apply to **both** the Host header of the request **and** the connection parameter of the TCP stream.
+:::
 
 ::: tip
 Example:
 
 ```js
-const request = new RequestSpec(`"https://example.com"`);
-request.setHost("caido.io"):
+const request = new RequestSpec("https://example.com");
+request.setHost("https://dashboard.caido.io"):
 ```
 
+The request's target host of `https://example.com` will be replaced with `https://dashboard.caido.io`.
 :::
 
 #### `getPort(): number;`
@@ -345,15 +373,15 @@ sdk.console.log(headers);
 
 _Returns:_
 
+```
 {
-
-  "Content-Type": ["application/json"],
-
-  "Authorization": ["Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"],
-
+  "Host": ["caido.io"],
+  "Connection": ["keep-alive"],
+  "Content-Length": ["95"],
   ...
-
 }
+```
+
 :::
 
 #### `getHeader(name: string): Array<string> | undefined;`
@@ -387,11 +415,23 @@ _Returns:_
 
 #### `getBody(): Body | undefined;`
 
-- This method will return the request `body` as a [Body instance](#body) OR `undefined` if no body exists.
+- This method will return the request `body` as a [Body](#body) object class instance OR `undefined` if no body exists.
+
+::: tip
+Example:
+
+```js
+const body = request.getBody();
+const bodyContent = body.toText();
+sdk.console.log(bodyContent);
+```
+
+The backend logs will have an entry containing the body data of the request.
+:::
 
 #### `setBody(body: Body | Bytes, options?: SetBodyOptions): void;`
 
-- This method sets the body of the request. The `body` parameter can be a variable that stores a [Body instance](#body) OR its value can be of type `string/Array<number>/Uint8Array`. The `?` in `options?` signifies that the parameter is optional. `options` is of type [SetBodyOptions](#setbodyoptions).
+- This method sets the body of the request. The `body` parameter type is a [Body](#body) object class instance OR its value can be of type `string/Array<number>/Uint8Array`. The `?` in `options?` signifies that the parameter is optional. `options` is of type [SetBodyOptions](#setbodyoptions).
 
 ::: tip
 Example:
@@ -406,18 +446,29 @@ request.setBody(body, options);
 
 #### `setRaw(raw: Bytes): RequestSpecRaw;`
 
-- This method sets the raw bytes of the request. The `raw` parameter can be a variable that stores a `Bytes` object of type `string/Array<number>/Uint8Array`.  The return type is a `RequestSpecRaw` object which represents the raw request.
+- This method sets the raw bytes of the request. The `raw` parameter can be of type `Bytes` (`string/Array<number>/Uint8Array`).  The return type is a [RequestSpecRaw](#requestspecraw) object which represents the raw request.
+
+::: info
+Essentially, this method converts the `RequestSpec` object into a new `RequestSpecRaw` object (_the request is now represented in 8-bit unsigned integers_) than can be modified.
+:::
 
 ::: tip TIPS
-This method is useful when you have a pre-existing byte representation of an HTTP request and want to set it directly without individually setting properties such as the HTTP Method, headers, the body, etc.
+This method is useful when you have a pre-existing byte representation of an HTTP request and want to set it directly without individually setting the properties (_such as the HTTP Method, headers, the body, etc._).
 
 Example:
 
 ```js
-const rawBytes = [`RAW BYTE ARRAY OF REQUEST INSERTED HERE`];
+const rawBytes = [/*RAW BYTE ARRAY OF REQUEST INSERTED HERE*/];
 const request = new RequestSpec(`"https://example.com"`);
 const rawRequest = request.setRaw(rawBytes);
 ```
+
+In this example:
+
+- A request, represented as a raw byte array, is supplied and stored in the `rawBytes` variable.
+- A new mutable request object is created and stored in the `request` variable.
+- The raw byte array of the request stored in `rawBytes` is applied to the newly created request object stored in `request`.
+- Returned is the `RequestSpecRaw` class object that represents the raw request.
 
 :::
 
@@ -451,6 +502,10 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 
 - This method explicitly sets the host of the request in the case you want to change it. The `host` parameter value is the domain name in type `string`. The return type is `void` as no value is returned.
 
+::: info
+The `setHost()` method of `RequestSpecRaw` will apply **only** to the connection parameter of the TCP stream.
+:::
+
 #### `getPort(): number;`
 
 - This method will return the `port` that the request was sent to in type `number`.
@@ -473,7 +528,7 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 
 #### `setRaw(raw: Bytes): void;`
 
-- This method sets the raw bytes of the request. The `raw` parameter can be a variable that stores a `Bytes` object of type `string/Array<number>/Uint8Array`.
+- This method sets the raw bytes of the request. The `raw` parameter can be of type `Bytes` (`string/Array<number>/Uint8Array`).
 
 ## Response
 
@@ -491,7 +546,7 @@ export declare type Response = {
 
 #### `getId(): ID;`
 
-- This method will return the unique identifier of the response. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number). This is the same ID property seen in the request tables throughout Caido.
+- This method will return the unique identifier of the response. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number).
 
 #### `getCode(): number;`
 
@@ -553,6 +608,18 @@ _Returns:_
 
 - This method will return the response `body` as a [Body instance](#body) OR `undefined` if no body exists.
 
+::: tip
+Example:
+
+```js
+const body = response.getBody();
+const bodyContent = body.toText();
+sdk.console.log(bodyContent);
+```
+
+The backend logs will have an entry containing the body data of the response.
+:::
+
 ## RequestResponse
 
 - The `RequestResponse` type interface represents a saved **immutable** HTTP request **and** its associated saved **immutable** response as a pair. All of the methods available to the respective objects are available to use.
@@ -574,7 +641,7 @@ export declare type RequestResponse = {
 
 ## RequestsSDK
 
-- The `RequestsSDK` type interface provides methods in order to interact with the request service.
+- The `RequestsSDK` type interface provides methods in order to interact with requests.
 
 ```
 export declare type RequestsSDK = {
@@ -585,7 +652,7 @@ export declare type RequestsSDK = {
 
 #### `send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;`
 
-- This method will send an HTTP request. The `request` parameter can be a variable that stores a [RequestSpec](#requestspec) object OR a [RequestSpecRaw](#requestspecraw) object. The return type is a `Promise` (_since the function is asynchronous_) that resolves as a [RequestResponse](#response-response) pair. An `error` is logges if the request cannot be sent.
+- This method will send an HTTP request. The `request` parameter type is a [RequestSpec](#requestspec) object class instance OR a [RequestSpecRaw](#requestspecraw) object class instance. The return type is a `Promise` (_since the function is asynchronous_) that resolves as a [RequestResponse](#response-response) pair. An error is logged if the request cannot be sent.
 
 ::: tip TIPS
 
@@ -628,7 +695,7 @@ In this example:
 
 ## Finding
 
-The `Finding` type interface represents a saved **immutable** Finding that has been identified and has not yet been created. All of the methods available to the respective objects are available to use.
+The `Finding` type interface represents a saved **immutable** Finding.
 
 ```
 export declare type Finding = {
@@ -653,7 +720,11 @@ export declare type Finding = {
 
 #### `getReporter(): string;`
 
-- This method will return the `Reporter` of the Finding in type `string`. The Reporter identifies what discovered the Finding (_for example, the Reporter value will be a Workflow_).
+- This method will return the `Reporter` of the Finding in type `string`. The Reporter identifies what discovered the Finding (_for example, the Reporter value will be the name of a Workflow_).
+
+#### `toSpec(): FindingSpec;`
+
+- This method returns a `FindingSpec` object that represents a mutable version of the Finding. This now enables you to make modifications to the Finding (which was not possible before since the saved Finding from which toSpec() sources from is immutable which is why the methods available return data - not alter data).
 
 ## FindingSpec
 
@@ -696,7 +767,7 @@ export declare type FindingsSDK = {
 
 #### `create(spec: FindingSpec): Promise<Finding>;`
 
-- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding).
+- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding). If the request cannot be saved - an error will be logged automatically.
 
 ::: tip
 Example:
@@ -754,6 +825,8 @@ export declare type Bytes = string | Array<number> | Uint8Array;
 ```
 
 #### `MaybePromise<T>`
+
+- Allows for the handling of both synchronous and asynchronous values.
 
 ```
 export declare type MaybePromise<T> = T | Promise<T>;
