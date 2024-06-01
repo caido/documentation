@@ -65,7 +65,7 @@ The `constructor` creates an instance of the class. The `data` parameter can be 
 ::: tip
 Examples:
 
-```
+```js
 const body = new Body("Hello world.");
 const body = new Body([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]);
 const body = new Body(new Uint8Array([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]));
@@ -147,7 +147,7 @@ The definition syntax is as follows: `Record`<`key`, `value`>;
 ::: tip
 Example:
 
-```
+```js
 const headers = request.getHeaders();
 sdk.console.log(headers);
 ```
@@ -176,7 +176,7 @@ The definition syntax is as follows: `method`(`parameter`: `type`): `return type
 ::: tip
 Example:
 
-```
+```js
 const header = request.getHeader("Content-Type");
 sdk.console.log(header);
 ```
@@ -219,7 +219,7 @@ updateContentLength is `true` by default.
 ::: tip
 Example:
 
-```
+```js
 const body = new Body("Hello world.");
 const options: SetBodyOptions = {updateContentLength: true;};
 request.setBody(body, options);
@@ -278,7 +278,7 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 ::: tip
 Example:
 
-```
+```js
 const request = new RequestSpec(`"https://example.com"`);
 request.setHost("caido.io"):
 ```
@@ -338,7 +338,7 @@ The definition syntax is as follows: `Record`<`key`, `value`>;
 ::: tip
 Example:
 
-```
+```js
 const headers = request.getHeaders();
 sdk.console.log(headers);
 ```
@@ -367,7 +367,7 @@ The definition syntax is as follows: `method`(`parameter`: `type`): `return type
 ::: tip
 Example:
 
-```
+```js
 const header = request.getHeader("Content-Type");
 sdk.console.log(header);
 ```
@@ -396,7 +396,7 @@ _Returns:_
 ::: tip
 Example:
 
-```
+```js
 const body = new Body("Hello world.");
 const options: SetBodyOptions = {updateContentLength: true;};
 request.setBody(body, options);
@@ -413,7 +413,7 @@ This method is useful when you have a pre-existing byte representation of an HTT
 
 Example:
 
-```
+```js
 const rawBytes = [`RAW BYTE ARRAY OF REQUEST INSERTED HERE`];
 const request = new RequestSpec(`"https://example.com"`);
 const rawRequest = request.setRaw(rawBytes);
@@ -510,7 +510,7 @@ The definition syntax is as follows: `Record`<`key`, `value`>;
 ::: tip
 Example:
 
-```
+```js
 const headers = response.getHeaders();
 sdk.console.log(headers);
 ```
@@ -539,7 +539,7 @@ The definition syntax is as follows: `method`(`parameter`: `type`): `return type
 ::: tip
 Example:
 
-```
+```js
 const header = response.getHeader("Content-Type");
 sdk.console.log(header);
 ```
@@ -588,9 +588,9 @@ export declare type RequestsSDK = {
 - This method will send an HTTP request. The `request` parameter can be a variable that stores a [RequestSpec](#requestspec) object OR a [RequestSpecRaw](#requestspecraw) object. The return type is a `Promise` (_since the function is asynchronous_) that resolves as a [RequestResponse](#response-response) pair. An `error` is logges if the request cannot be sent.
 
 ::: tip TIPS
-const spec = new RequestSpec(`"https://example.com"`);
 
-```
+```js
+const spec = new RequestSpec(`"https://example.com"`);
 sdk.requests.send(spec)
   .then((res) => {
     sdk.console.log(res.request.getId());
@@ -615,7 +615,7 @@ This method will use the `request` parameter with a type of [Request](#request) 
 ::: tip TIPS
 Example:
 
-```
+```js
 if (sdk.requests.inScope(request)) {
   sdk.console.log("In scope");
 };
@@ -701,7 +701,7 @@ export declare type FindingsSDK = {
 ::: tip
 Example:
 
-```
+```js
 sdk.findings.create({
   title: "Title",
   description: "Description",
@@ -771,6 +771,81 @@ export declare type SDK = {
   asString(array: Bytes): string;
 };
 ```
+
+#### `console: Console;`
+
+- The [Console](#console) object for logging.
+
+::: tip
+
+Examples:
+
+```js
+sdk.console.debug();
+sdk.console.log();
+sdk.console.warn();
+sdk.console.error();
+```
+
+:::
+
+#### `findings: FindingsSDK;`
+
+- The [FindingsSDK](#findingssdk) for interacting with Findings.
+
+::: tip
+Example:
+
+```js
+sdk.findings.create({
+  title: "Title",
+  description: "Description",
+  reporter: "Reporter",
+  request,
+});
+```
+
+:::
+
+#### `requests: ReequestsSDK;`
+
+- The [RequestsSDK](#requestssdk) for interacting with requests.
+
+::: tip
+Example:
+
+```js
+const spec = new RequestSpec(`"https://example.com"`);
+sdk.requests.send(spec)
+  .then((res) => {
+    sdk.console.log(res.request.getId());
+    sdk.console.log(res.response.getCode());
+  })
+  .catch((err) => {
+    sdk.console.error(err);
+  });
+```
+
+:::
+
+#### `asString(array: Bytes): string;`
+
+- A helper function that converts Bytes (`string/Array<number>/Uint8Array`) to a string, replacing unprintable characters with `�`.
+
+::: tip
+Example:
+
+```js
+export function run(input, sdk) {
+  let parsed = sdk.asString(input);
+  sdk.console.log(parsed);
+  return parsed;
+}
+```
+
+:::
+
+## typing.d.ts
 
 ::: details typing.d.ts
 
