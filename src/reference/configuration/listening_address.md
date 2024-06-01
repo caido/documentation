@@ -39,7 +39,9 @@ By default, Chrome does not proxy traffic to localhost/127.0.0.1. In order to by
 
 - [https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/](https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/)
 
-#### Use lvh.me (_this domain name resolves to 127.0.0.1_):
+#### Use lvh.me:
+
+This domain name resolves to 127.0.0.1.
 
 - [http://lvh.me/](http://lvh.me/)
 
