@@ -30,3 +30,33 @@ Open the Connection Manager and proceed with the following steps:
 
 2. Select the appropriate radio button. _If using a_ `Custom` _listening address - supply the address in the input field._
 3. Supply the value of the desired listening port.
+
+## Proxying Local Traffic
+
+By default, Chrome does not proxy traffic to localhost/127.0.0.1. In order to bypass this - try the following:
+
+#### Use a local DNS record:
+
+- [https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/](https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/)
+
+#### Use lvh.me (_this domain name resolves to 127.0.0.1_):
+
+- [http://lvh.me/](http://lvh.me/)
+
+#### Edit the proxy bypass rules:
+
+Implicitly, localhost is included as a proxy bypass address within the list of hosts used by your system/browser/extension. This can be overwritten by supplying `<-loopback>` (_the `-` character inverts the rule_).
+
+- Launch Chrome via the terminal using the `--proxy-bypass-list="<-loopback>"` flag. Click [here](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules) for more information.
+- If you are using the FoxyProxy browser extension: select `Options` and add `<-loopback>` to the `Global Exclude` list.
+- In general, this list can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is usually accompanied with a description that includes key-terms/keywords such as: `except these addresses`, `no-proxy for`, `exclude`, etc.
+
+#### Use the Firefox Browser:
+
+::: info
+If proxying localhost traffic is not working in Firefox as well:
+
+- Navigate to `about:config`.
+- Set `network.proxy.allow_hijacking_localhost` to `true`.
+- Restart Firefox.
+:::
