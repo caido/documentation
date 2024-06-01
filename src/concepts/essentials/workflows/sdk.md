@@ -65,9 +65,11 @@ The `constructor` creates an instance of the class. The `data` parameter can be 
 ::: tip
 Examples:
 
-- const body = new Body("Hello world.");
-- const body = new Body([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]);
-- const body = new Body(new Uint8Array([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]));
+```
+const body = new Body("Hello world.");
+const body = new Body([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]);
+const body = new Body(new Uint8Array([72, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100, 46]));
+```
 
 Will all create a body of `Hello world.`
 :::
@@ -86,7 +88,7 @@ Will all create a body of `Hello world.`
 
 ## Request
 
-The `Request` type interface represents a saved **immutable** HTTP request and provides methods for accessing the data within it.
+The `Request` type interface represents a saved **immutable** HTTP request object and provides methods for accessing the data within it.
 
 ```
 export declare type Request = {
@@ -145,9 +147,10 @@ The definition syntax is as follows: `Record`<`key`, `value`>;
 ::: tip
 Example:
 
+```
 const headers = request.getHeaders();
-
 sdk.console.log(headers);
+```
 
 _Returns:_
 
@@ -173,9 +176,10 @@ The definition syntax is as follows: `method`(`parameter`: `type`): `return type
 ::: tip
 Example:
 
+```
 const header = request.getHeader("Content-Type");
-
 sdk.console.log(header);
+```
 
 _Returns:_
 
@@ -215,16 +219,17 @@ updateContentLength is `true` by default.
 ::: tip
 Example:
 
+```
 const body = new Body("Hello world.");
-
 const options: SetBodyOptions = {updateContentLength: true;};
-
 request.setBody(body, options);
+```
+
 :::
 
 ## RequestSpec
 
-The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by `export declare type Request`_). This object class represents the HTTP request and provides methods for accessing and manipulating the data within it.
+The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by `export declare type Request`_). This object class represents an HTTP request and provides methods for accessing and manipulating the data within it.
 
 ```
 export declare class RequestSpec {
@@ -273,9 +278,11 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 ::: tip
 Example:
 
+```
 const request = new RequestSpec(`"https://example.com"`);
-
 request.setHost("caido.io"):
+```
+
 :::
 
 #### `getPort(): number;`
@@ -331,9 +338,10 @@ The definition syntax is as follows: `Record`<`key`, `value`>;
 ::: tip
 Example:
 
+```
 const headers = request.getHeaders();
-
 sdk.console.log(headers);
+```
 
 _Returns:_
 
@@ -359,9 +367,10 @@ The definition syntax is as follows: `method`(`parameter`: `type`): `return type
 ::: tip
 Example:
 
+```
 const header = request.getHeader("Content-Type");
-
 sdk.console.log(header);
+```
 
 _Returns:_
 
@@ -387,11 +396,12 @@ _Returns:_
 ::: tip
 Example:
 
+```
 const body = new Body("Hello world.");
-
 const options: SetBodyOptions = {updateContentLength: true;};
-
 request.setBody(body, options);
+```
+
 :::
 
 #### `setRaw(raw: Bytes): RequestSpecRaw;`
@@ -403,16 +413,17 @@ This method is useful when you have a pre-existing byte representation of an HTT
 
 Example:
 
+```
 const rawBytes = [`RAW BYTE ARRAY OF REQUEST INSERTED HERE`];
-
 const request = new RequestSpec(`"https://example.com"`);
-
 const rawRequest = request.setRaw(rawBytes);
+```
+
 :::
 
 ## RequestSpecRaw
 
-The `RequestSpecRaw` class interface defines the structure and methods for a request that has **been set using the `setRaw()` method of the [RequestSpec](#requestspec) class**. This object class represents the raw HTTP request and provides methods for accessing and manipulating the raw bytes within it.
+The `RequestSpecRaw` class interface defines the structure and methods for a request that has **been set using the `setRaw()` method of the [RequestSpec](#requestspec) class**. This object class represents a mutable raw HTTP request and provides methods for accessing and manipulating the raw bytes within it.
 
 ```
 export declare class RequestSpecRaw {
@@ -431,6 +442,335 @@ export declare class RequestSpecRaw {
 ::: info
 The `constructor` creates an instance of the class. The `url` parameter can be of type `string`.
 :::
+
+#### `getHost(): string;`
+
+- This method will return the `host` of the request in type `string`.
+
+#### `setHost(host: string): void;`
+
+- This method explicitly sets the host of the request in the case you want to change it. The `host` parameter value is the domain name in type `string`. The return type is `void` as no value is returned.
+
+#### `getPort(): number;`
+
+- This method will return the `port` that the request was sent to in type `number`.
+
+#### `setPort(port: number): void;`
+
+- This method sets the port of the request. The `port` parameter value is of type `number`. The return type is `void` as no value is returned.
+
+#### `getTls(): boolean;`
+
+- This method will return a `boolean` (true/false) value type - indicating whether the request was sent using TLS encryption (HTTPS).
+
+#### `setTls(tls: boolean): void;`
+
+- This method configures the request to utilize a TLS connection or not. The `tls` parameter value is of type `boolean` (true/false). The return type is `void` as no value is returned.
+
+#### `getRaw(): Uint8Array;`
+
+- This method will return the raw `body` of the request in type `Uint8Array`.
+
+#### `setRaw(raw: Bytes): void;`
+
+- This method sets the raw bytes of the request. The `raw` parameter can be a variable that stores a `Bytes` object of type `string/Array<number>/Uint8Array`.
+
+## Response
+
+The `Response` type interface represents a saved **immutable** HTTP response object and provides methods for accessing the data within it.
+
+```
+export declare type Response = {
+  getId(): ID;
+  getCode(): number;
+  getHeaders(): Record<string, Array<string>>;
+  getHeader(name: string): Array<string> | undefined;
+  getBody(): Body | undefined;
+};
+```
+
+#### `getId(): ID;`
+
+- This method will return the unique identifier of the response. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number). This is the same ID property seen in the request tables throughout Caido.
+
+#### `getCode(): number;`
+
+- This method will return the `HTTP Status Code` of the response in type `number`.
+
+#### `getHeaders(): Record<string, Array<string>>;`
+
+- This method returns an object representing the `headers` of the response. The `key` of the returned object is the header name in type `string`. The returned `value` of the key is type `Array<string>` since headers can contain multiple values
+
+::: info
+The definition syntax is as follows: `Record`<`key`, `value`>;
+
+`Record` allows you to define a mapped-object type by specifying key-value pairs.
+:::
+
+::: tip
+Example:
+
+```
+const headers = response.getHeaders();
+sdk.console.log(headers);
+```
+
+_Returns:_
+
+{
+
+  "Date": ["Sun, 26 May 2024 10:59:21 GMT"],
+
+  "Content-Type": ["text/html"]
+
+  ...
+
+}
+:::
+
+#### `getHeader(name: string): Array<string> | undefined;`
+
+- This method will return the value of a specified `header` in the response. The `name` parameter value is the header name in type `string`. The returned `value` is type `Array<string>` since the header can contain multiple values OR is of type `undefined` when there is an absence of a value (_the specified header isn't present in the response_).
+
+::: info
+The definition syntax is as follows: `method`(`parameter`: `type`): `return type` OR `return type`;
+:::
+
+::: tip
+Example:
+
+```
+const header = response.getHeader("Content-Type");
+sdk.console.log(header);
+```
+
+_Returns:_
+
+["text/html"]
+:::
+
+#### `getBody(): Body | undefined;`
+
+- This method will return the response `body` as a [Body instance](#body) OR `undefined` if no body exists.
+
+## RequestResponse
+
+- The `RequestResponse` type interface represents a saved **immutable** HTTP request **and** its associated saved **immutable** response as a pair. All of the methods available to the respective objects are available to use.
+
+```
+export declare type RequestResponse = {
+  request: Request;
+  response: Response;
+};
+```
+
+#### `request: Request;`
+
+- `request` stores the [Request](#request) object.
+
+#### `response: Response;`
+
+- `response` stores the [Response](#response) object.
+
+## RequestsSDK
+
+- The `RequestsSDK` type interface provides methods in order to interact with the request service.
+
+```
+export declare type RequestsSDK = {
+  send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;
+  inScope(request: Request | RequestSpec): boolean;
+};
+```
+
+#### `send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;`
+
+- This method will send an HTTP request. The `request` parameter can be a variable that stores a [RequestSpec](#requestspec) object OR a [RequestSpecRaw](#requestspecraw) object. The return type is a `Promise` (_since the function is asynchronous_) that resolves as a [RequestResponse](#response-response) pair. An `error` is logges if the request cannot be sent.
+
+::: tip TIPS
+const spec = new RequestSpec(`"https://example.com"`);
+
+```
+sdk.requests.send(spec)
+  .then((res) => {
+    sdk.console.log(res.request.getId());
+    sdk.console.log(res.response.getCode());
+  })
+  .catch((err) => {
+    sdk.console.error(err);
+  });
+```
+
+In this example:
+
+- The `res` variable stores the resolved value of the Promise returned by `sdk.requests.send(spec)`.
+- Upon successful resolution of the Promise, the request ID and response code will be printed as an entry to the backend log file using `sdk.console.log`.
+- If the request failed, an error message will be printed as an entry to the backend log file using `sdk.console.log`.
+:::
+
+#### `inScope(request: Request | RequestSpec): boolean;`
+
+This method will use the `request` parameter with a type of [Request](#request) OR [RequestSpec](#requestspec) to check if the request is in-scope or out-of-scope based on the `boolean` type return value of `true` or `false` (respectively).
+
+::: tip TIPS
+Example:
+
+```
+if (sdk.requests.inScope(request)) {
+  sdk.console.log("In scope");
+};
+```
+
+In this example:
+
+- The Boolean value will be printed as an entry to the backend log file using `sdk.console.log`.
+:::
+
+## Finding
+
+The `Finding` type interface represents a saved **immutable** Finding that has been identified and has not yet been created. All of the methods available to the respective objects are available to use.
+
+```
+export declare type Finding = {
+  getId(): ID;
+  getTitle(): string;
+  getDescription(): string | undefined;
+  getReporter(): string;
+};
+```
+
+#### `getID(): ID;`
+
+- This method will return the unique identifier of the Finding. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number).
+
+#### `getTitle(): string;`
+
+- This method will return the `Title` of the Finding in type `string`. The Title is associated with the Finding entry and is usually used as a label.
+
+#### `getDescription(): string | undefined;`
+
+- This method will return the `Description` of the Finding in type `string` OR `undefined` if no description exists. The Description is optional and provides details on the Finding.
+
+#### `getReporter(): string;`
+
+- This method will return the `Reporter` of the Finding in type `string`. The Reporter identifies what discovered the Finding (_for example, the Reporter value will be a Workflow_).
+
+## FindingSpec
+
+The `Finding` type interface represents a **mutable** Finding that has been identified and has not yet been created.
+
+```
+export declare type FindingSpec = {
+  title: string;
+  description?: string | undefined;
+  reporter: string;
+  request: Request;
+};
+```
+
+#### `title: string;`
+
+- The `title` property is of type `string` and is associated with the Finding entry and is usually used as a label.
+
+#### `description?: string | undefined;`
+
+- The `description` property is of type `string` OR `undefined` if no description exists. The Description is optional (`?`) and provides details on the Finding.
+
+#### `reporter: string;`
+
+- The `reporter` property is of type `string` and identifies what discovered the Finding (_for example, the Reporter value will be a Workflow_).
+
+#### `request: Request;`
+
+- `request` stores the [Request](#request) object.
+
+## FindingsSDK
+
+- The `FindingsSDK` type interface provides a method to create a new Finding.
+
+```
+export declare type FindingsSDK = {
+  create(spec: FindingSpec): Promise<Finding>;
+};
+```
+
+#### `create(spec: FindingSpec): Promise<Finding>;`
+
+- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding).
+
+::: tip
+Example:
+
+```
+sdk.findings.create({
+  title: "Title",
+  description: "Description",
+  reporter: "Reporter",
+  request,
+});
+```
+
+:::
+
+## Types
+
+#### `HttpInput`
+
+```
+export declare type HttpInput = {
+  request: Request | undefined;
+  response: Response | undefined;
+};
+```
+
+#### `BytesInput`
+
+```
+export declare type BytesInput = Array<number>;
+```
+
+#### `ID`
+
+```
+export declare type ID = string;
+```
+
+#### `Data`
+
+```
+export declare type Data = Bytes;
+```
+
+#### `Decision`
+
+```
+export declare type Decision = boolean;
+```
+
+#### `Bytes`
+
+```
+export declare type Bytes = string | Array<number> | Uint8Array;
+```
+
+#### `MaybePromise<T>`
+
+```
+export declare type MaybePromise<T> = T | Promise<T>;
+```
+
+## SDK
+
+The `SDK` object is an interface that provides access to various services and functionalities.
+
+```
+export declare type SDK = {
+  console: Console;
+  findings: FindingsSDK;
+  requests: RequestsSDK;
+  asString(array: Bytes): string;
+};
+```
 
 ::: details typing.d.ts
 
