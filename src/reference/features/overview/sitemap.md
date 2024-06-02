@@ -27,8 +27,8 @@ The padlock icon represents connections via HTTPS.
 ::: tip TIPS
 
 - Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/reference/features/logging/exports.md) documentation for more information.
-- [Applying a Scope Preset](/src/reference/features/overview/scope.md) is supported by Sitemap.
+- [Applying a Scope Preset](/reference/features/overview/scope.md) is supported by Sitemap.
 - Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](/src/quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
 :::
