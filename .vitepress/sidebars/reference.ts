@@ -94,6 +94,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                         link: '/reference/features/logging/search'
                     },
                     {
+                        text: 'Findings',
+                        link: '/reference/features/logging/findings'
+                    },
+                    {
                         text: 'Exports',
                         link: '/reference/features/logging/exports'
                     }

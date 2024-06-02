@@ -6,7 +6,7 @@ You might face of any these issues while using Caido.
 
 **You may encounter this error when trying to access an Instance that you do not own (_further information on Instances [here](/concepts/essentials/instances.md)_). This can occur if you've initially setup a Caido Instance using a different account.**
 
-<img alt="No access to Instance." src="/_images/no_access_error.png" center/>
+<img alt="No access to Instance." src="/_images/instance_error.png" width=600px center/>
 
 ### Resolution Method 1 - Login with your original Caido account:
 
@@ -32,7 +32,7 @@ While not ideal, deleting your Caido data folder will allow you to start with a 
 
 **You may encounter this error when trying to access an Instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).**
 
-<img alt="Login error." src="/_images/login_url_error.png" center/>
+<img alt="Login error." src="/_images/login_url_error.png" width=600px center/>
 
 ### Resolution:
 
@@ -42,7 +42,7 @@ The easiest way to fix this issue is to [reset the instance credentials](#resolu
 
 **If you encounter this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.**
 
-<img alt="Date mismatch." src="/_images/date_mismatch_error.png" center/>
+<img alt="Date mismatch." src="/_images/date_mismatch_error.png" width=600px center/>
 
 ::: info
 Caido allows 5 minutes of deviation between the "real" time and your computer time. To fix it, you will have to manually resync the time using NTP.
@@ -79,6 +79,38 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 1. Install the NTP package: `sudo apt-get install ntp`.
 1. Once the installation is complete, the NTP service should start automatically.
 1. Check its status by using this command `sudo systemctl status ntp`.
+
+## Error: Unexpected error when rendering on the frontend.
+
+**If you encounter this error, you are running Caido as root with `--no-renderer-sandbox`. In the [logs](/reference/configuration/data_location.md), you will see a similar message to the following:**
+
+```
+Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
+```
+
+### Resolution:
+
+Don't run Caido as root and remove the flag `--no-renderer-sandbox` when launching Caido.
+
+## Error: Could not initialize configuration.
+
+**If you encounter this error and receive a 404 status code on `https://api.caido.io/oauth2/register` along with a similar message to the following:**
+
+```
+Error: Could not initialize configuration
+Caused by:
+    0: Authentication service error
+    1: Cloud operation failed
+    2: Cloud unavailable
+    3: error sending request for url (https://api.caido.io/oauth2/register): error trying to connect: tcp connect error: Connection refused (os error 111)
+    4: error trying to connect: tcp connect error: Connection refused (os error 111)
+    5: tcp connect error: Connection refused (os error 111)
+    6: Connection refused (os error 111)
+```
+
+### Resolution:
+
+Check your internet connection.
 
 ## I have paid for "Pro" but it still shows "Community" in the application.
 

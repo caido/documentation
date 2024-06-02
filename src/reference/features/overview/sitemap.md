@@ -15,7 +15,7 @@ To familiarize yourself with the Sitemap interface, continue below:
 1. Select the `Sitemap` tab from the left-hand menu within the Caido window.
 2. This pane presents the domains that have been proxied through Caido. Toggling the `>` icon to `∨` will expand the associated domain/folder, revealing its contents. You can search for a specific domain/subdomain by utilizing the `Search domain...` bar.
 3. Upon selecting a node of the tree-like structure within the previously mentioned pane - all associated requests are displayed in this pane. Clicking the column names (_located at the top and spanning horizontally_) within this pane will sort the requests by the selected column category.
-4. The request and paired response panes are available here. At the bottom-right corner of the response pane, the response size (in bytes) and how long the response took to receive (in milliseconds) is provided.
+4. The request and paired response panes are available here. At the bottom-right corner of the response pane, the response size (_in bytes_) and how long the response took to receive (_in milliseconds_) is provided.
 5. Clicking the cog wheel icon will present a dropdown menu that lists the aforementioned column categories. Select/deselect to include/exclude them respectively.
 
 ## Additional Information
@@ -26,9 +26,9 @@ The padlock icon represents connections via HTTPS.
 
 ::: tip TIPS
 
-- Clicking `Export` will present you with options to export HTTP History data. View the [Exports](../logging/exports.md) documentation for more information.
-- [Applying a Scope Preset](../overview/scope.md) is supported by Sitemap.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
+- Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/reference/features/logging/exports.md) documentation for more information.
+- [Applying a Scope Preset](/src/reference/features/overview/scope.md) is supported by Sitemap.
+- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](../../../quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](/src/quickstart/beginner_guide/setup/config.md) documentation for more information.
 :::

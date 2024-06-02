@@ -31,6 +31,7 @@
 ## Features: _Logging_
 
 - **[Search](./features/logging/search.md)** - filtering using HTTPQL to find the exact request or response you're looking for that is contained in Caido.
+- **[Findings](./features/logging/findings.md)** - inspecting/analyzing discoveries produced by tools.
 - **[Exports](./features/logging/exports.md)** - exporting data from Caido.
 
 ## Features: _Workspace_
