@@ -88,9 +88,13 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
 ```
 
-### Resolution:
+### Resolution Method 1 - Do not run as root:
 
-Don't run Caido as root and remove the flag `--no-renderer-sandbox` when launching Caido.
+Do not run Caido as the root user.
+
+### Resolution Method 2 - Command flag removal:
+
+Remove the following flag `--no-renderer-sandbox` when launching Caido.
 
 ## Error: Could not initialize configuration.
 
