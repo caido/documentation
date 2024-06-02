@@ -33,11 +33,7 @@ Open the Connection Manager and proceed with the following steps:
 
 ## Proxying Local Traffic
 
-By default, Chrome does not proxy traffic to localhost/127.0.0.1. In order to bypass this - try the following:
-
-#### Use a local DNS record:
-
-- [https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/](https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/)
+If you are having issues proxying localhost traffic - try the following:
 
 #### Use lvh.me:
 
@@ -47,11 +43,24 @@ This domain name resolves to 127.0.0.1.
 
 #### Edit the proxy bypass rules:
 
-Implicitly, localhost may be included as a proxy bypass address within the list of hosts used by your system/browser/extension. This can be overwritten by supplying `<-loopback>` (_the `-` character inverts the rule_).
+By default, localhost may be included as a proxy bypass address within the list of hosts used by your system/browser/extension. This can be overwritten by supplying `<-loopback>` (_the `-` character inverts the rule_).
 
-- Launch Chrome via the terminal using `google-chrome --proxy-server=127.0.0.1:8080 --proxy-bypass-list="<-loopback>"`. If you customized the listening address/port of Caido - replace the values in the command to match. Click [here](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules) for more information.
+- Launch Chrome via the terminal using:
+
+```
+google-chrome --proxy-server=127.0.0.1:8080` --proxy-bypass-list="<-loopback>"
+```
+
+::: tip
+If you customized the listening address/port of Caido - replace the values in the command to match. Click [here](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules) for more information.
+:::
+
 - If you are using the FoxyProxy browser extension: select `Options` and add `<-loopback>` to the `Global Exclude` list.
-- In general, this list can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is usually accompanied with a title or description that includes key-terms/keywords such as: `except these addresses`, `no-proxy for`, `exclude`, etc.
+- In general, this bypass list can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is usually accompanied with a title or description that includes key-terms/keywords such as: `except these addresses`, `no-proxy for`, `exclude`, etc.
+
+#### Use a local DNS record:
+
+- [https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/](https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/)
 
 #### Use the Firefox Browser:
 
