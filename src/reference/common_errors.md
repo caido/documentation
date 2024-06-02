@@ -116,6 +116,16 @@ Caused by:
 
 Check your internet connection.
 
+::: info
+Caido requires an internet connection at the following moments:
+
+- On first launch.
+- During login.
+- After 7 days offline.
+
+View the [Authentication](concepts/internals/authentication.md) documentation for more information.
+:::
+
 ## I have paid for "Pro" but it still shows "Community" in the application.
 
 **Caido caches the state of your account. Any changes to your account can take some time to update.**
