@@ -94,7 +94,9 @@ Do not run Caido as the root user.
 
 ### Resolution Method 2 - Command flag removal:
 
-Remove the following flag `--no-renderer-sandbox` when launching Caido.
+Remove the following flag when launching Caido:
+
+- `--no-renderer-sandbox`
 
 ## Error: Could not initialize configuration.
 
@@ -121,9 +123,9 @@ Caido requires an internet connection at the following moments:
 
 - On first launch.
 - During login.
-- After 7 days offline.
+- After 7 days offline (_the time period after which your authentication token needs to be refreshed_).
 
-View the [Authentication](concepts/internals/authentication.md) documentation for more information.
+View the [Authentication](/concepts/internals/authentication.md) documentation for more information.
 :::
 
 ## I have paid for "Pro" but it still shows "Community" in the application.
