@@ -25,11 +25,7 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
                 items: [{
                     text: 'Nodes',
                     link: '/concepts/essentials/workflows/nodes/nodes'
-                },
-                {
-                    text: 'SDK',
-                    link: '/concepts/essentials/workflows/sdk'
-                    }]
+                }]
             },
             {
                 text: 'Tabs',

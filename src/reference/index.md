@@ -50,3 +50,4 @@
 - **[Workflows](./workflows/workflows.md)** - Caido Workflows.
 - **[Passive Workflows](./workflows/passive.md)** - creating and applying Passive Type Workflows.
 - **[Convert Workflows](./workflows/convert.md)** - creating and applying Convert Type Workflows.
+- **[SDK](./workflows/sdk.md)** - Software Development Kit.

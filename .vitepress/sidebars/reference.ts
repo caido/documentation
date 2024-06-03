@@ -150,6 +150,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                     text: 'Coding Nodes',
                     link: '/reference/workflows/convert/coding_nodes'
                     }]
+            },
+            {
+                text: 'SDK',
+                link: '/reference/workflows/sdk',
             }
         ]
     },

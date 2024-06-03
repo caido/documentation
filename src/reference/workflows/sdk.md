@@ -1,20 +1,12 @@
 # SDK
 
-The `typing.d.ts` file is the interface for Caido's SDK/API. Within it you can find the available methods. This SDK provides a simple way to interact with the Caido platform using your TypeScript or JavaScript code.
-
-::: info
-To view the **typing.d.ts** file - click [here](https://github.com/caido/sdk-workflow/blob/main/src/typing.d.ts).
-
-Or expand the collapsible element located at the bottom of this page.
-
-For quick navigation of this documentation - use the page contents menu located to the right.
-:::
+The **typing file** is the interface for Caido's SDK/API. Within it you can find the available methods. This SDK provides a simple way to interact with the Caido platform using your TypeScript or JavaScript code.
 
 ## Console
 
-The `Console` interface defines log printing methods. Currently, logs are only available in the [backend logs](/concepts/internals/files.md).
+The `Console` interface defines log printing methods. Currently, logs are only available in the [backend logs](/reference/configuration/data_location.md).
 
-```
+```ts
 export declare type Console = {
   debug(message: any): void;
   log(message: any): void;
@@ -49,7 +41,7 @@ The `message` parameter can accept `any` value type. The return type is `void` s
 
 The `Body` class interface defines the structure and methods for the data body of requests and responses. This object class represents the body content of an HTTP request/response and provides methods for accessing and manipulating the data within it.
 
-```
+```ts
 export declare class Body {
   constructor(data: string | Array<number> | Uint8Array);
   toText(): string;
@@ -92,7 +84,7 @@ Will all create a body of `Hello world.`
 
 The `Request` type interface represents a saved **immutable** HTTP request object and provides methods for accessing the data within it.
 
-```
+```ts
 export declare type Request = {
   getId(): ID;
   getHost(): string;
@@ -110,7 +102,7 @@ export declare type Request = {
 
 #### `getId(): ID;`
 
-- This method will return the unique identifier of the request. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number). This is the same ID property seen in the request tables throughout Caido.
+- This method will return the `ID` - a unique numerical identifier of the request.
 
 #### `getHost(): string;`
 
@@ -156,15 +148,15 @@ sdk.console.log(headers);
 
 _Returns:_
 
+```
 {
-
-  "Content-Type": ["application/json"],
-
-  "Authorization": ["Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"],
-
+  "Host": ["caido.io"],
+  "Connection": ["keep-alive"],
+  "Content-Length": ["95"],
   ...
-
 }
+```
+
 :::
 
 #### `getHeader(name: string): Array<string> | undefined;`
@@ -220,40 +212,11 @@ Essentially, this method converts the `Request` object (_which cannot be modifie
 Essentially, this method converts the `Request` object (_which cannot be modified_) into a new `RequestSpecRaw` object (_the request is now represented in 8-bit unsigned integers_) than can be modified.
 :::
 
-## SetBodyOptions
-
-The `SetBodyOptions` type definition allows you to configure certain properties of the data body.
-
-```
-type SetBodyOptions = {
-  updateContentLength: boolean;
-};
-```
-
-#### type SetBodyOptions = {updateContentLength: boolean;};
-
-- This type definition introduces the ability to update the Content-Length header value of a request (_for example, to match the size when considering the addition of payloads_) or not.
-
-::: info
-updateContentLength is `true` by default.
-:::
-
-::: tip
-Example:
-
-```js
-const body = new Body("Hello world.");
-const options: SetBodyOptions = {updateContentLength: true;};
-request.setBody(body, options);
-```
-
-:::
-
 ## RequestSpec
 
-The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by `export declare type Request`_). This object class represents a mutable HTTP request and provides methods for accessing and manipulating the data within it.
+The `RequestSpec` class interface defines the structure and methods for a request that has **not yet been sent** (_as opposed to the **saved** request used by [Request](#request)_). This object class represents a mutable HTTP request and provides methods for accessing and manipulating the data within it.
 
-```
+```ts
 export declare class RequestSpec {
   constructor(url: string);
   getHost(): string;
@@ -276,6 +239,10 @@ export declare class RequestSpec {
   setBody(body: Body | Bytes, options?: SetBodyOptions): void;
   setRaw(raw: Bytes): RequestSpecRaw;
 };
+
+type SetBodyOptions = {
+  updateContentLength: boolean;
+};
 ```
 
 ::: info
@@ -286,7 +253,7 @@ The `constructor` creates an instance of the class. The `url` parameter can be o
 
 - You can convert a saved immutable [Request](#request) object into a RequestSpec object by using the `toSpec()` method. _Example_: `request.toSpec();`
 - The default HTTP Method utilized is GET.
-- You can include the schema, host and port to the URL - allowing you to easily prepopulate some of the properties.
+- You can include the schema, host and port to the URL (_path and query are not supported_) - allowing you to easily prepopulate some of the properties.
 - Once initialized (_by supplying the constructor URL_), the `host` component is extracted from the URL and used internally within the RequestSpec class. To explicitly change the host, see the `setHost(host: string): void;` method below.
 :::
 
@@ -402,7 +369,10 @@ sdk.console.log(header);
 
 _Returns:_
 
+```
 ["application/json"]
+```
+
 :::
 
 #### `setHeader(name: string, value: string): void;`
@@ -431,12 +401,31 @@ The backend logs will have an entry containing the body data of the request.
 
 #### `setBody(body: Body | Bytes, options?: SetBodyOptions): void;`
 
-- This method sets the body of the request. The `body` parameter type is a [Body](#body) object class instance OR its value can be of type `string/Array<number>/Uint8Array`. The `?` in `options?` signifies that the parameter is optional. `options` is of type [SetBodyOptions](#setbodyoptions).
+- This method sets the body of the request. The `body` parameter type is a [Body](#body) object class instance OR its value can be of type `string/Array<number>/Uint8Array`. The `?` in `options?` signifies that the parameter is optional. `options` is of type `SetBodyOptions` (_see directly below_).
 
 ::: tip
 Example:
 
-```js
+```ts
+const body = new Body("Hello world.");
+const options: SetBodyOptions = {updateContentLength: true;};
+request.setBody(body, options);
+```
+
+:::
+
+#### type SetBodyOptions = {updateContentLength: boolean;};
+
+- This type definition introduces the ability to update the Content-Length header value of a request (_for example, to match the size when considering the addition of payloads_) or not.
+
+::: info
+updateContentLength is `true` by default.
+:::
+
+::: tip
+Example:
+
+```ts
 const body = new Body("Hello world.");
 const options: SetBodyOptions = {updateContentLength: true;};
 request.setBody(body, options);
@@ -476,7 +465,7 @@ In this example:
 
 The `RequestSpecRaw` class interface defines the structure and methods for a request that has **been set using the `setRaw()` method of the [RequestSpec](#requestspec) class**. This object class represents a mutable raw HTTP request and provides methods for accessing and manipulating the raw bytes within it.
 
-```
+```ts
 export declare class RequestSpecRaw {
   constructor(url: string);
   getHost(): string;
@@ -534,7 +523,7 @@ The `setHost()` method of `RequestSpecRaw` will apply **only** to the connection
 
 The `Response` type interface represents a saved **immutable** HTTP response object and provides methods for accessing the data within it.
 
-```
+```ts
 export declare type Response = {
   getId(): ID;
   getCode(): number;
@@ -572,15 +561,14 @@ sdk.console.log(headers);
 
 _Returns:_
 
+```
 {
-
   "Date": ["Sun, 26 May 2024 10:59:21 GMT"],
-
   "Content-Type": ["text/html"]
-
   ...
-
 }
+```
+
 :::
 
 #### `getHeader(name: string): Array<string> | undefined;`
@@ -624,7 +612,7 @@ The backend logs will have an entry containing the body data of the response.
 
 - The `RequestResponse` type interface represents a saved **immutable** HTTP request **and** its associated saved **immutable** response as a pair. All of the methods available to the respective objects are available to use.
 
-```
+```ts
 export declare type RequestResponse = {
   request: Request;
   response: Response;
@@ -643,7 +631,7 @@ export declare type RequestResponse = {
 
 - The `RequestsSDK` type interface provides methods in order to interact with requests.
 
-```
+```ts
 export declare type RequestsSDK = {
   send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;
   inScope(request: Request | RequestSpec): boolean;
@@ -652,7 +640,7 @@ export declare type RequestsSDK = {
 
 #### `send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;`
 
-- This method will send an HTTP request. The `request` parameter type is a [RequestSpec](#requestspec) object class instance OR a [RequestSpecRaw](#requestspecraw) object class instance. The return type is a `Promise` (_since the function is asynchronous_) that resolves as a [RequestResponse](#response-response) pair. An error is logged if the request cannot be sent.
+- This method will send an HTTP request. The `request` parameter type is a [RequestSpec](#requestspec) object class instance OR a [RequestSpecRaw](#requestspecraw) object class instance. The return type is a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves as a [RequestResponse](#response-response) pair. An error is logged if the request cannot be sent.
 
 ::: tip TIPS
 
@@ -697,7 +685,7 @@ In this example:
 
 The `Finding` type interface represents a saved **immutable** Finding.
 
-```
+```ts
 export declare type Finding = {
   getId(): ID;
   getTitle(): string;
@@ -724,13 +712,13 @@ export declare type Finding = {
 
 #### `toSpec(): FindingSpec;`
 
-- This method returns a `FindingSpec` object that represents a mutable version of the Finding. This now enables you to make modifications to the Finding (which was not possible before since the saved Finding from which toSpec() sources from is immutable which is why the methods available return data - not alter data).
+- This method returns a `FindingSpec` object that represents a mutable version of the Finding.
 
 ## FindingSpec
 
 The `Finding` type interface represents a **mutable** Finding that has been identified and has not yet been created.
 
-```
+```ts
 export declare type FindingSpec = {
   title: string;
   description?: string | undefined;
@@ -759,7 +747,7 @@ export declare type FindingSpec = {
 
 - The `FindingsSDK` type interface provides a method to create a new Finding.
 
-```
+```ts
 export declare type FindingsSDK = {
   create(spec: FindingSpec): Promise<Finding>;
 };
@@ -767,12 +755,12 @@ export declare type FindingsSDK = {
 
 #### `create(spec: FindingSpec): Promise<Finding>;`
 
-- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding). If the request cannot be saved - an error will be logged automatically.
+- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding).
 
 ::: tip
 Example:
 
-```js
+```ts
 sdk.findings.create({
   title: "Title",
   description: "Description",
@@ -783,11 +771,11 @@ sdk.findings.create({
 
 :::
 
-## Types
+## Others
 
 #### `HttpInput`
 
-```
+```ts
 export declare type HttpInput = {
   request: Request | undefined;
   response: Response | undefined;
@@ -796,31 +784,31 @@ export declare type HttpInput = {
 
 #### `BytesInput`
 
-```
+```ts
 export declare type BytesInput = Array<number>;
 ```
 
 #### `ID`
 
-```
+```ts
 export declare type ID = string;
 ```
 
 #### `Data`
 
-```
+```ts
 export declare type Data = Bytes;
 ```
 
 #### `Decision`
 
-```
+```ts
 export declare type Decision = boolean;
 ```
 
 #### `Bytes`
 
-```
+```ts
 export declare type Bytes = string | Array<number> | Uint8Array;
 ```
 
@@ -828,7 +816,7 @@ export declare type Bytes = string | Array<number> | Uint8Array;
 
 - Allows for the handling of both synchronous and asynchronous values.
 
-```
+```ts
 export declare type MaybePromise<T> = T | Promise<T>;
 ```
 
@@ -836,7 +824,7 @@ export declare type MaybePromise<T> = T | Promise<T>;
 
 The `SDK` object is an interface that provides access to various services and functionalities.
 
-```
+```ts
 export declare type SDK = {
   console: Console;
   findings: FindingsSDK;
@@ -849,38 +837,11 @@ export declare type SDK = {
 
 - The [Console](#console) object for logging.
 
-::: tip
-
-Examples:
-
-```js
-sdk.console.debug();
-sdk.console.log();
-sdk.console.warn();
-sdk.console.error();
-```
-
-:::
-
 #### `findings: FindingsSDK;`
 
 - The [FindingsSDK](#findingssdk) for interacting with Findings.
 
-::: tip
-Example:
-
-```js
-sdk.findings.create({
-  title: "Title",
-  description: "Description",
-  reporter: "Reporter",
-  request,
-});
-```
-
-:::
-
-#### `requests: ReequestsSDK;`
+#### `requests: RequestsSDK;`
 
 - The [RequestsSDK](#requestssdk) for interacting with requests.
 
@@ -914,264 +875,6 @@ export function run(input, sdk) {
   sdk.console.log(parsed);
   return parsed;
 }
-```
-
-:::
-
-## typing.d.ts
-
-::: details typing.d.ts
-
-```
-/**
- * Console interface for logging.
- *
- * Currently logs are only available in the backend logs.
- * See https://docs.caido.io/report_bug.html#1-backend-logs
- */
-export declare type Console = {
-  debug(message: any): void;
-  log(message: any): void;
-  warn(message: any): void;
-  error(message: any): void;
-};
-
-/**
- * The body of a Request or Response.
- *
- * Calling `to<FORMAT>` will try to convert the body to the desired format.
- */
-export declare class Body {
-  constructor(data: string | Array<number> | Uint8Array);
-  /**
-   * Parse the body as a string.
-   *
-   * Unprintable characters will be replaced with `�`.
-   */
-  toText(): string;
-  /**
-   * Try to parse the body as JSON.
-   *
-   * @throws {SyntaxError} If the body is not valid JSON.
-   */
-  toJson(): any;
-  /**
-   * Get the raw body as an array of bytes.
-   */
-  toRaw(): Uint8Array;
-}
-
-/**
- * A saved immutable Request.
- *
- * To modify, use `toSpec` to get a `RequestSpec` object.
- */
-export declare type Request = {
-  getId(): ID;
-  getHost(): string;
-  getPort(): number;
-  getTls(): boolean;
-  getMethod(): string;
-  getPath(): string;
-  getQuery(): string;
-  getHeaders(): Record<string, Array<string>>;
-  getHeader(name: string): Array<string> | undefined;
-  getBody(): Body | undefined;
-  toSpec(): RequestSpec;
-  toSpecRaw(): RequestSpecRaw;
-};
-
-type SetBodyOptions = {
-  /**
-   * Should update the Content-Type header.
-   *
-   * @default true
-   */
-  updateContentLength: boolean;
-};
-
-/**
- * A mutable Request not yet sent.
- */
-export declare class RequestSpec {
-  constructor(url: string);
-  getHost(): string;
-  setHost(host: string): void;
-  getPort(): number;
-  setPort(port: number): void;
-  getTls(): boolean;
-  setTls(tls: boolean): void;
-  getMethod(): string;
-  setMethod(method: string): void;
-  getPath(): string;
-  setPath(path: string): void;
-  getQuery(): string;
-  setQuery(query: string): void;
-  getHeaders(): Record<string, Array<string>>;
-  getHeader(name: string): Array<string> | undefined;
-  setHeader(name: string, value: string): void;
-  removeHeader(name: string): void;
-  getBody(): Body | undefined;
-  setBody(body: Body | Bytes, options?: SetBodyOptions): void;
-  setRaw(raw: Bytes): RequestSpecRaw;
-}
-
-/**
- * A mutable raw Request not yet sent.
- */
-export declare class RequestSpecRaw {
-  constructor(url: string);
-  getHost(): string;
-  setHost(host: string): void;
-  getPort(): number;
-  setPort(port: number): void;
-  getTls(): boolean;
-  setTls(tls: boolean): void;
-  getRaw(): Uint8Array;
-  setRaw(raw: Bytes): void;
-}
-
-/**
- * An immutable saved Response.
- */
-export declare type Response = {
-  getId(): ID;
-  getCode(): number;
-  getHeaders(): Record<string, Array<string>>;
-  getHeader(name: string): Array<string> | undefined;
-  getBody(): Body | undefined;
-};
-
-/**
- * An immutable saved Request and Response pair.
- */
-export declare type RequestResponse = {
-  request: Request;
-  response: Response;
-};
-
-/**
- * The SDK for the Requests service.
- */
-export declare type RequestsSDK = {
-  /**
-   * Sends a request.
-   *
-   * This respects the upstream proxy settings.
-   *
-   * @throws {Error} If the request cannot be sent.
-   *
-   * @example
-   * const spec = new RequestSpec("https://example.com");
-   * sdk.requests.send(request)
-   *   .then((res) => {
-   *     console.log(res.request.getId());
-   *     console.log(res.response.getCode());
-   *   })
-   *   .catch((err) => {
-   *     console.error(err);
-   *   });
-   */
-  send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;
-
-  /**
-   * Checks if a request is in scope.
-   *
-   * @example
-   * if (sdk.requests.inScope(request)) {
-   *  console.log("In scope");
-   * }
-   */
-  inScope(request: Request | RequestSpec): boolean;
-};
-
-/**
- * A saved immutable Finding.
- *
- * To modify, use `toSpec` to get a `FindingSpec` object.
- */
-export declare type Finding = {
-  getId(): ID;
-  getTitle(): string;
-  getDescription(): string | undefined;
-  getReporter(): string;
-};
-
-/**
- * A mutable Finding not yet created.
- */
-export declare type FindingSpec = {
-  title: string;
-  description?: string | undefined;
-  reporter: string;
-  request: Request;
-};
-
-/**
- * The SDK for the Findings service.
- */
-export declare type FindingsSDK = {
-  /**
-   * Creates a new Finding.
-   *
-   * @throws {Error} If the request cannot be saved.
-   *
-   * @example
-   * sdk.findings.create({
-   *   title: "Title",
-   *   description: "Description",
-   *   reporter: "Reporter",
-   *   request,
-   * });
-   */
-  create(spec: FindingSpec): Promise<Finding>;
-};
-
-export declare type HttpInput = {
-  request: Request | undefined;
-  response: Response | undefined;
-};
-/**
- * @deprecated Use HttpInput instead.
- */
-export declare type PassiveInput = HttpInput;
-export declare type BytesInput = Array<number>;
-/**
- * @deprecated Use BytesInput instead.
- */
-export declare type ConvertInput = BytesInput;
-
-export declare type ID = string;
-export declare type Data = Bytes;
-export declare type Decision = boolean;
-export declare type Bytes = string | Array<number> | Uint8Array;
-export declare type MaybePromise<T> = T | Promise<T>;
-
-/**
- * The SDK object available to all scripts.
- */
-export declare type SDK = {
-  /**
-   * The console.
-   *
-   * This is currently the same as the global `console`.
-   */
-  console: Console;
-  /**
-   * The SDK for the Findings service.
-   */
-  findings: FindingsSDK;
-  /**
-   * The SDK for the Requests services
-   */
-  requests: RequestsSDK;
-  /**
-   * Converts bytes to a string.
-   *
-   * Unprintable characters will be replaced with `�`.
-   */
-  asString(array: Bytes): string;
-};
 ```
 
 :::
