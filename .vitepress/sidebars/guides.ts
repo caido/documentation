@@ -24,6 +24,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         {
             text: 'Running in Docker',
             link: '/guides/user_guide/docker'
+        },
+        {
+            text: 'Proxying Local Traffic',
+            link: '/guides/user_guide/proxy_local'
         }
     ]
 },
