@@ -11,7 +11,7 @@ You can create a request from scratch from a blank template, or start from any e
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).
 2. Highlight the element(s) you wish to brute-force/fuzz.
-3. Once the element is highlighted - click `+` to convert it to a placeholder. **_You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`._**
+3. Once the element is highlighted - click `+` to convert it to a placeholder. You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`.
 4. Select a [Payload Type](#payload-types), apply [Preprocessors](#preprocessors) and set additional [Settings](#settings) within this pane.
 5. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
 7. The configuration tab as well as the associated results tab will be paired next to each other here.
@@ -76,8 +76,8 @@ Additional setting options allow you to fine tune how the Automate session will 
 
 ::: tip TIPS
 
-- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](../overview/sorting.md) documentation for more information.
+- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane (_not pictured above_) will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
 
 :::

@@ -25,4 +25,4 @@ Currently, files uploaded in this page are only available for use in the Automat
 
 Once you have uploaded your desired files - return to Automate documentation here:
 
-- [Automate](../testing/automate.md)
+- [Automate](/reference/features/testing/automate.md)

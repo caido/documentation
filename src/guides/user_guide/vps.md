@@ -8,7 +8,7 @@ By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the
 
 ## Hosting Caido on a Linux-based VPS:
 
-1. Once you have set up a VPS, you can install Caido on it by following the Linux installation guide found [here](./installation.md).
+1. Once you have set up a VPS, you can install Caido on it by following the Linux installation guide found [here](/guides/user_guide/installation.md).
 
 2. To access Caido from another machine or another network, you will need to create an SSH tunnel from your local machine to your VPS. This can be done by running the following command on your local machine:
 

@@ -20,7 +20,7 @@ Convert Workflows are **manually triggered** and are integrated in various areas
 
 <img alt="Testing Convert Workflow with user supplied input." src="/_images/reference_value_supplied.png"/>
 
-- Highlight the data to be changed, right-click in the associated pane and select either `Convert (Preview)` or `Convert (Replace)`. _**Preview** will present the output in a pop-up window and **Replace** will apply the conversion to the selected bytes._
+- Highlight the data to be changed, right-click in the associated pane and select either `Convert (Preview)` or `Convert (Replace)`. `Preview` will present the output in a pop-up window and `Replace` will apply the conversion to the selected bytes.
 
 <img alt="Applying a Convert Workflow to request data." src="/_images/rightclick_reference_value.png"/>
 
@@ -53,6 +53,6 @@ In this example - the Workflow created will perform MD5 hashing on the given inp
 Convert Workflows require an End Node to function properly.
 :::
 
-6. Select the `MD5 Hash` Node by clicking on it to display its properties in the right-hand pane. Here, the Node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured. _For this example creation, leave the default configuration as is._
+6. Select the `MD5 Hash` Node by clicking on it to display its properties in the right-hand pane. Here, the Node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured (_for this example creation, leave the default configuration as is_).
 7. Supply test input to be converted by the Workflow.
 8. Click `Save and Run` - the conversion output will be displayed in the Output pane.
