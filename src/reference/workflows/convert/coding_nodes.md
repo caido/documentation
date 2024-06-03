@@ -10,7 +10,7 @@ There are a few exceptions that require further explanation:
 
 ## JavaScript Node SDK
 
-_For advanced documentation on this topic - click [here](/concepts/essentials/workflows/sdk.md)._
+_For advanced documentation on this topic - click [here](/reference/workflows/sdk.md)._
 
 ::: info
 To view the **typing.d.ts** file - click [here](https://github.com/caido/sdk-workflow/blob/main/src/typing.d.ts).
