@@ -535,7 +535,7 @@ export declare type Response = {
 
 #### `getId(): ID;`
 
-- This method will return the unique identifier of the response. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number).
+- This method will return the `ID` - a unique numerical identifier of the response.
 
 #### `getCode(): number;`
 
@@ -696,7 +696,7 @@ export declare type Finding = {
 
 #### `getID(): ID;`
 
-- This method will return the unique identifier of the Finding. The `ID` return type is numerical and represents the order of occurence in which the associated item was processed by Caido measured in time (the most recent occurence will have a greater ID number).
+- This method will return the `ID` - a unique numerical identifier of the Finding.
 
 #### `getTitle(): string;`
 
