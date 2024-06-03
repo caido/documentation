@@ -82,7 +82,7 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 
 ## Error: Unexpected error when rendering on the frontend.
 
-**If you encounter a rendering error, accompanied by a [log](/reference/configuration/data_location.md) entry similar to the following:**
+**If you encounter a rendering error, accompanied by a [log](/reference/configuration/data_location.md) error message entry similar to the following:**
 
 ```
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
