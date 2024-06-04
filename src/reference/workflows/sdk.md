@@ -1,6 +1,4 @@
-# SDK
-
-The **typing file** is the interface for Caido's SDK/API. Within it you can find the available methods. This SDK provides a simple way to interact with the Caido platform using your TypeScript or JavaScript code.
+# Types
 
 ## Console
 
@@ -627,60 +625,6 @@ export declare type RequestResponse = {
 
 - `response` stores the [Response](#response) object.
 
-## RequestsSDK
-
-- The `RequestsSDK` type interface provides methods in order to interact with requests.
-
-```ts
-export declare type RequestsSDK = {
-  send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;
-  inScope(request: Request | RequestSpec): boolean;
-};
-```
-
-#### `send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;`
-
-- This method will send an HTTP request. The `request` parameter type is a [RequestSpec](#requestspec) object class instance OR a [RequestSpecRaw](#requestspecraw) object class instance. The return type is a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves as a [RequestResponse](#response-response) pair. An error is logged if the request cannot be sent.
-
-::: tip TIPS
-
-```js
-const spec = new RequestSpec(`"https://example.com"`);
-sdk.requests.send(spec)
-  .then((res) => {
-    sdk.console.log(res.request.getId());
-    sdk.console.log(res.response.getCode());
-  })
-  .catch((err) => {
-    sdk.console.error(err);
-  });
-```
-
-In this example:
-
-- The `res` variable stores the resolved value of the Promise returned by `sdk.requests.send(spec)`.
-- Upon successful resolution of the Promise, the request ID and response code will be printed as an entry to the backend log file using `sdk.console.log`.
-- If the request failed, an error message will be printed as an entry to the backend log file using `sdk.console.log`.
-:::
-
-#### `inScope(request: Request | RequestSpec): boolean;`
-
-This method will use the `request` parameter with a type of [Request](#request) OR [RequestSpec](#requestspec) to check if the request is in-scope or out-of-scope based on the `boolean` type return value of `true` or `false` (respectively).
-
-::: tip TIPS
-Example:
-
-```js
-if (sdk.requests.inScope(request)) {
-  sdk.console.log("In scope");
-};
-```
-
-In this example:
-
-- The Boolean value will be printed as an entry to the backend log file using `sdk.console.log`.
-:::
-
 ## Finding
 
 The `Finding` type interface represents a saved **immutable** Finding.
@@ -743,34 +687,6 @@ export declare type FindingSpec = {
 
 - `request` stores the [Request](#request) object.
 
-## FindingsSDK
-
-- The `FindingsSDK` type interface provides a method to create a new Finding.
-
-```ts
-export declare type FindingsSDK = {
-  create(spec: FindingSpec): Promise<Finding>;
-};
-```
-
-#### `create(spec: FindingSpec): Promise<Finding>;`
-
-- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding).
-
-::: tip
-Example:
-
-```ts
-sdk.findings.create({
-  title: "Title",
-  description: "Description",
-  reporter: "Reporter",
-  request,
-});
-```
-
-:::
-
 ## Others
 
 #### `HttpInput`
@@ -819,6 +735,10 @@ export declare type Bytes = string | Array<number> | Uint8Array;
 ```ts
 export declare type MaybePromise<T> = T | Promise<T>;
 ```
+
+---
+
+# SDK
 
 ## SDK
 
@@ -875,6 +795,88 @@ export function run(input, sdk) {
   sdk.console.log(parsed);
   return parsed;
 }
+```
+
+:::
+
+## RequestsSDK
+
+- The `RequestsSDK` type interface provides methods in order to interact with requests.
+
+```ts
+export declare type RequestsSDK = {
+  send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;
+  inScope(request: Request | RequestSpec): boolean;
+};
+```
+
+#### `send(request: RequestSpec | RequestSpecRaw): Promise<RequestResponse>;`
+
+- This method will send an HTTP request. The `request` parameter type is a [RequestSpec](#requestspec) object class instance OR a [RequestSpecRaw](#requestspecraw) object class instance. The return type is a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves as a [RequestResponse](#response-response) pair. An error is logged if the request cannot be sent.
+
+::: tip TIPS
+
+```js
+const spec = new RequestSpec(`"https://example.com"`);
+sdk.requests.send(spec)
+  .then((res) => {
+    sdk.console.log(res.request.getId());
+    sdk.console.log(res.response.getCode());
+  })
+  .catch((err) => {
+    sdk.console.error(err);
+  });
+```
+
+In this example:
+
+- The `res` variable stores the resolved value of the Promise returned by `sdk.requests.send(spec)`.
+- Upon successful resolution of the Promise, the request ID and response code will be printed as an entry to the backend log file using `sdk.console.log`.
+- If the request failed, an error message will be printed as an entry to the backend log file using `sdk.console.log`.
+:::
+
+#### `inScope(request: Request | RequestSpec): boolean;`
+
+This method will use the `request` parameter with a type of [Request](#request) OR [RequestSpec](#requestspec) to check if the request is in-scope or out-of-scope based on the `boolean` type return value of `true` or `false` (respectively).
+
+::: tip TIPS
+Example:
+
+```js
+if (sdk.requests.inScope(request)) {
+  sdk.console.log("In scope");
+};
+```
+
+In this example:
+
+- The Boolean value will be printed as an entry to the backend log file using `sdk.console.log`.
+:::
+
+## FindingsSDK
+
+- The `FindingsSDK` type interface provides a method to create a new Finding.
+
+```ts
+export declare type FindingsSDK = {
+  create(spec: FindingSpec): Promise<Finding>;
+};
+```
+
+#### `create(spec: FindingSpec): Promise<Finding>;`
+
+- This method will use the `spec` parameter with a type of [FindingSpec](#findingspec). The return type is a Promise (since the function is asynchronous) that resolves as [Finding](#finding).
+
+::: tip
+Example:
+
+```ts
+sdk.findings.create({
+  title: "Title",
+  description: "Description",
+  reporter: "Reporter",
+  request,
+});
 ```
 
 :::
