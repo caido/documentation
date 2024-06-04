@@ -10,7 +10,7 @@ This extra inclusion allows you to sort through the results of all your testing 
 <br>
 
 <ProContainer>
-An HTTPQL query search bar is available within Search for Pro users.
+An HTTPQL query search bar is only available within Search for Caido Pro users.
 </ProContainer>
 
 ## Filtering

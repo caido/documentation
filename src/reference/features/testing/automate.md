@@ -54,10 +54,14 @@ Preprocessors enable you to apply additional modifications to the payloads.
 
 <img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
 
-- **Workflow (Caido Pro Feature)**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/workflows/workflows.md) documentation for more information.
+- **Workflow**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/workflows/workflows.md) documentation for more information.
 - **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
 - **Prefix**: Allows you to prefix a payload value with a supplied value.
 - **Suffix**: Allows you to append a supplied suffix value to a payload value.
+
+<ProContainer>
+<b>Workflow Preprocessors</b> are only available to Caido Pro users.
+</ProContainer>
 
 ## Settings
 

@@ -9,7 +9,7 @@ Backups allow you to share your security audits with others - making sure you ar
 ## Creating a Backup
 
 <ProContainer>
-You create Backups directly from the `Projects` tab of your `Workspace` by clicking `⋮` located to the far-right of the desired Project row.
+You create Backups directly from the Projects tab of your Workspace by clicking ⋮ located to the far-right of the desired Project row.
 </ProContainer>
 
 ::: tip

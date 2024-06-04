@@ -1,6 +1,8 @@
 # Assistant
 
-> **PRO FEATURE**
+<ProContainer>
+<b>The Assistant</b> is only available to Caido Pro users.
+</ProContainer>
 
 The `Assistant` is an AI LLM avaiable to Caido Pro users. Specifically tailored for secutiry research - the Assistant can help you understand requests, provide explanations of web traffic elements and suggests attack vectors.
 

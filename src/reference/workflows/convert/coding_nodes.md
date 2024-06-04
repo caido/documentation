@@ -10,9 +10,7 @@ There are a few exceptions that require further explanation:
 
 ## JavaScript Node SDK
 
-::: info
-To view the **.d.ts** file - click [here](https://github.com/caido/sdk-workflow/blob/main/src/typing.d.ts).
-:::
+_For advanced documentation on this topic - click [here](/reference/workflows/sdk.md)._
 
 The `JavaScript Code Node` allows you to run custom scripts in your Convert Workflow. They have a minimal code editor available in the properties pane.
 
