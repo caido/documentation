@@ -1,12 +1,14 @@
 # JavaScript in Caido
 
+_Below includes in-depth foundational information, to skip to usage of JavaScript in Workflow Nodes - navigate to the [JavaScript Node Functions](#javascript-node-functions) section._
+
 ## TypeScript
 
 [TypeScript](https://www.typescriptlang.org/) is referred to as **superset** of JavaScript. A superset builds upon a programming language, adding additional capabilities.
 
 JavaScript is a [dynamically typed language](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing), meaning that entities do not have a fixed data type and can hold values of any data type. The data type is determined at runtime based on the assigned values. However, specific data types for entities may be required for code to run properly.
 
-With TypeScript, you can assign a data type to an entity - this process is known as adding a [type annotation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions). By assigning what data type an entity can use, you ensure that the intended input is supplied come runtime.
+With TypeScript, you can assign a data type to an entity - this process is known as [type annotation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions). By assigning what data type an entity can use, you ensure that the intended input is supplied come runtime.
 
 TypeScript builds upon JavaScript by introducing **static analysis** which will parse your code and notify you of any errors before running or compiling your code.
 
@@ -136,15 +138,70 @@ In the `greetFunction.ts` file:
 In the `script.ts` file:
 
 - The `greet()` function is imported from the `greetFunction.ts` file.
-- A new variable named `obj` is annotated to be of `WelcomeMessage` type (applied using the syntax `name: type`).
-- The constructor method is called and the static type-checking passes since a valid `string` type is supplied. A new object of the `WelcomeMessage` class is created.
-- The `greet()` method is called on the `obj` variable that stores the instance. The parameter value supplied of `123` satisfies the `number` type requirement.
+- The object has the `WelcomeMessage` type (applied using the syntax `entity: type`).
+- The constructor method is called and the static type-checking passes since a valid `string` type value is supplied. A new object of the `WelcomeMessage` class is created.
+- The `greet()` method is called on the `obj` variable that stores the instance. The parameter value of `123` satisfies the `number` type requirement.
 - The following message is printed to the console: `Welcome User 123!`
+:::
+
+::: info
+The constructor parameter used to create the instance will become a property. In the above example, if you used `console.log(obj.username)`, the output would be as follows:
+
+```
+“ninjeeter”
+```
+
+:::
+
+## SDK
+
+For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript Node to interact with the rest of Caido backend.
+
+These methods are the ones included within the SDK object:
+
+```ts
+export declare type SDK = {
+  console: Console;
+  findings: FindingsSDK;
+  requests: RequestsSDK;
+  asString(array: Bytes): string;
+};
+```
+
+::: info
+The SDK object inherits all the methods of `Console`, `FindingsSDK` and `RequestsSDK`.
+:::
+
+This SDK object is the second parameter of the `run` function used by the JavaScript Node in Workflows.
+
+::: tip Convert Type JavaScript Node Function
+
+```js
+export function run(input, sdk) {
+  let parsed = sdk.asString(array)
+  sdk.console.log(parsed);
+  return parsed;
+};
+```
+
+:::
+
+::: tip Passive & Active Type JavaScript Node Function
+
+```js
+export async function run({ request, response }, sdk) {
+  if (request) {
+    let host = request.getHost();
+    sdk.console.log(host);
+  }
+}
+```
+
 :::
 
 ## QuickJS
 
-Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating Workflows.
+Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/concepts/essentials/workflows.md).
 
 Caido leverages the QuickJS Engine to:
 
@@ -153,19 +210,35 @@ Caido leverages the QuickJS Engine to:
 3. Run the code - performing the actions and computations within it.
 
 ::: warning NOTE
-As QuickJS is a lightweight, embeddable JavaScript engine - it does NOT have built-in support for TypeScript.
+As QuickJS is a lightweight, embeddable JavaScript engine - it **does not** have built-in support for TypeScript.
 :::
 
 ## JSDoc
 
-Since JavaScript does not support type annotation due to it being a dynamically typed language.
-You can use JSDoc comment syntax in order to assign a type to a parameter.
+[JSDoc](https://jsdoc.app/) comment syntax provides a way to document JavaScript code using special comment annotations.
 
-```
+JSDoc comments start with  `/**` and end with `*/`. Within these comment blocks, you can use various tags and annotations to provide specific information about the code element being documented.
+
+::: info
+Some commonly used JSDoc tags include:
+
+- @param: Describes the parameters accepted by a function, including their names, types, and descriptions.
+
+- @returns: Describes the return value of a function, including its type and description.
+
+- @type: Specifies the data type of a variable or property.
+
+:::
+
+Below is the `run` function used by the JavaScript Convert Node - this time with the JSDoc comment type annotations included:
+
+::: tip Convert Type Function
+
+```js
 /**
  * @param {Bytes} input
  * @param {SDK} sdk
- * @returns {MaybePromise<Data>}
+ * @returns {MaybePromise<Data>}`
  */
 export function run(input, sdk) {
   let parsed = sdk.asString(array)
@@ -174,12 +247,50 @@ export function run(input, sdk) {
 };
 ```
 
-Where the value inside the {} is the custom type.
-Then, by looking at the .d.ts file - you can view which methods are available to be called upon that custom type tied to the parameter.
-So, since `console` under the custom created SDK type is tied to the custom created `Console` type - using regular type assignment syntax of `console: Console` - and this is listed as a method of SDK - all the methods of Console are available to SDK.
+The value inside the `{}` is the type.
+:::
 
-‘any’ accounts for any data type. `void` means nothing is returned (it is just printed to the console)
+Using the comments as reference, you can view the declaration file to determine which methods are available to be called upon the custom type assigned to the parameter.
 
- If a parameter does not receive a specific value, the function within the Node will fail.
+::: warning NOTE
+JSDoc comments for function parameters do not directly assign types to the parameters themselves. Meaning they will not enforce or assign types during runtime. However they are used in Caido to provide autocompletion. As well as providing you with a reference.
+:::
 
- This definition file is part of an SDK. ADD THIS TO AN SDK SECTION IN THIS FILE
+<img alt="SDK autocomplete." src="/_images/sdk_autocomplete.png">
+
+## JavaScript Node Functions
+
+When a JavaScript Node is executed inside a [Workflow](/concepts/essentials/workflows.md), one of two functions is ran - depending on the [Workflow Type](/concepts/essentials/workflows.html#workflow-types).
+
+### Convert Type JavaScript Node Function
+
+```js
+/**
+ * @param {BytesInput} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<Data>}
+ */
+export function run(input, sdk) {
+  let parsed = sdk.asString(input);
+  sdk.console.log(parsed);
+  return parsed;
+}
+```
+
+### Passive & Active Type JavaScript Node Function
+
+```js
+/**
+ * @param {HttpInput} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<Data | undefined>}
+ */
+export async function run({ request, response }, sdk) {
+  if (request) {
+    let host = request.getHost();
+    sdk.console.log(host);
+  }
+}
+```
+
+## Examples
