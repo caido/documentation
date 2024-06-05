@@ -277,7 +277,7 @@ export function run(input, sdk) {
 }
 ```
 
-::: tip Function Breakdown
+::: tip Function Breakdown & Declaration Associations
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
@@ -347,7 +347,7 @@ export async function run({ request, response }, sdk) {
 }
 ```
 
-::: tip Function Breakdown
+::: tip Function Breakdown & Declaration Associations
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
@@ -463,4 +463,67 @@ export async function run({ request, response }, sdk) {
 ```
 
 ::: tip Function Breakdown
+
+```js
+export async function run({ request, response }, sdk) {
+  if (request) {
+    let findingDes = ""
+    const methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    const spec = request.toSpec();
+    if (spec.getMethod() != "GET"){
+      spec.setBody("", {updateContentLength: true})
+    }
+```
+
+Within the above code block:
+
+- The asynchronous `run` function is created and is available to be imported in other scripts.
+- The first parameter of the function is a `request` object and `response` object pair. The second parameter of the function is the `SDK` object - used to interact with Caido's backend.
+- A variable named `findingDes` is declared - this will eventually store a string value that will be used for the Finding's description.
+- An array of HTTP Methods is stored in the variable `methods`.
+- The immutable request object that was proxied is converted to a mutable request object using the `toSpec()` method and stored in the variable `spec`.
+- If the HTTP Method used is not `GET` - the Content-Length header is to be automatically updated to match the true size.
+
+```js
+for (let i=0; i < methods.length; i++){
+      spec.setMethod(methods[i])
+      let res = await sdk.requests.send(spec)
+      let resLength = res.response.getBody().toText().length
+      findingDes += `METHOD: ${methods[i]}\nStatus Code: ${res.response.getCode()}\nContent-Length: ${resLength}\n\n`
+    }
+```
+
+Within the above code block:
+
+- Each HTTP Method included in the array is set in the request object using the `setMethod()` method.
+- The requests are sent using `sdk.requests.send(spec)`.
+- For each request sent, the response is the awaited promise and will be stored in the `res` variable once resolved.
+- The response body is converted to a string from bytes and then the length is evaluated.
+- The value stored in the `findingDes` variable that was declared earlier is updated to include the HTTP Method used as well as both the status code and body size of the associated response.
+
+```js
+let finding = {
+      title: `Allowed Methods For: https://${spec.getHost() + spec.getPath()}`,
+      description: findingDes,
+      reporter: "Allowed Methods",
+      request: request
+    }
+```
+
+Within the above code block:
+
+- A Finding object is declared. The properties of the object are stored in the `finding` variable.
+- The value of the `title` property will be the URL the request was sent to. Derived from the `getHost()` and `getPath()` methods called on the request object.
+- The value of the `description` property will be the value of the `findingDes` variable.
+- The value of the `reporter` property will be `"Allowed Methods"` - identifying the producing source the Finding.
+- The value of the `request` property will be the request object.
+
+```js
+await sdk.findings.create(finding)
+```
+
+In the above code line:
+
+- The `sdk.findings.create()` method is called using the `finding` variable as it's parameter.
+- This call will await the completion of the creation process of the `finding` object and then creates a new finding with it in the Caido interface.
 :::
