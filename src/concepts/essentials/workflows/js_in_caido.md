@@ -277,6 +277,64 @@ export function run(input, sdk) {
 }
 ```
 
+::: info Function Breakdown
+
+The JSDoc comment uses type tags to note what types are assigned to the function parameters:
+
+```
+/**
+ * @param {BytesInput} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<Data>}
+ */
+ ```
+
+ The input parameter type is of type `BytesInput`. The associated declaration is:
+
+ ```ts
+ export declare type BytesInput = Array<number>;
+ ```
+
+ The sdk parameter is of the object type `SDK`. The associated declaration is:
+
+ ```ts
+ export declare type SDK = {
+  console: Console;
+  findings: FindingsSDK;
+  requests: RequestsSDK;
+  asString(array: Bytes): string;
+};
+ ```
+
+The return value is of type `MaybePromise<Data>`. `MaybePromise<T>` allows the handling of both synchronous and asynchronous functions. `<T>` is a placeholder for another type. `Data` is the type used which itself has a type of `Bytes`. `Bytes` type can be of data types `string`, `Array<number>`, or `Uint8Array`. The associated declarations are:
+
+```ts
+export declare type MaybePromise<T> = T | Promise<T>;
+
+export declare type Data = Bytes;
+
+export declare type Bytes = string | Array<number> | Uint8Array;
+```
+
+The `run` function is available to be imported in external scripts. The function takes two parameters: `input` and `sdk`.
+
+The variable `parsed` stores the input of the parameter `sdk` which is calling the method `asString` which uses the `input` parameter to convert bytes into a string.
+
+The `SDK` object assigned to `sdk` then uses the `console.log` method that it inherited from the `Console` object. This method is called on the `parsed` variable. The associated declaration is:
+
+```ts
+export declare type Console = {
+  debug(message: any): void;
+  log(message: any): void;
+  warn(message: any): void;
+  error(message: any): void;
+};
+```
+
+Finally, `return parsed` returns the string converted data.
+
+ :::
+
 ### Passive & Active Type JavaScript Node Function
 
 ```js
