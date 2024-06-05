@@ -77,16 +77,16 @@ const account: Account = {
 
 In this example:
 
-- The type alias of `Account` defines that the `username` property should be of type `string`, the `age` property should be of type `number` and the `isVerified` property is optional (denoted by the `?`), but if it is present, it should be of type `boolean`.
+- The type alias of `Account` defines that the `username` property should be of type `string`, the `age` property should be of type `number` and the `isVerified` property is optional (denoted by the `?`), but if it is present, should be of type `boolean`.
 - The object in the external file `script.ts` has the `Account` type alias (applied using the syntax `entity: Alias`).
-- The `account` object passes static type-checking since the property values are all type valid.
+- The `account` object passes static type-checking since the property values are all valid types.
 :::
 
 ### Classes
 
 When you declare a custom class type, you are able to define an object's:
 
-- `Constructor`: A special method used to create an `instance` of the class. An instance is simply a new object that inherits the properties and methods that are included in that class. The constructor's parameter/s used to initialize the object and its property/properties or set its initial state can be type annotated.
+- `Constructor`: A special method used to create an `instance` of the class. An instance is simply a new object that inherits the properties and methods that are included in that class. The constructor's parameter/s, used to initialize the object and its property/properties or set its initial state, can be type annotated.
 - `Properties`: The characteristics of the object class, of which you can add type annotation.
 - `Methods`: The functions that perform actions/calculations using the object's properties and other logic. You can add [type annotation to the function parameter/s](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#parameter-type-annotations) as well as the [return value](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#return-type-annotations).
 
@@ -250,7 +250,7 @@ export function run(input, sdk) {
 The value inside the `{}` is the type.
 :::
 
-Using the comments as reference, you can view the declaration file to determine which methods are available to be called upon the custom type assigned to the parameter.
+Using the comments as reference, you can view the declaration file to determine which methods are available to be called upon.
 
 ::: warning NOTE
 JSDoc comments for function parameters do not directly assign types to the parameters themselves. Meaning they will not enforce or assign types during runtime. However they are used in Caido to provide autocompletion. As well as providing you with a reference.
@@ -277,7 +277,7 @@ export function run(input, sdk) {
 }
 ```
 
-::: info Function Breakdown
+::: tip Function Breakdown
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
@@ -347,7 +347,7 @@ export async function run({ request, response }, sdk) {
 }
 ```
 
-::: info Function Breakdown
+::: tip Function Breakdown
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
@@ -430,3 +430,37 @@ Finally, the value of `host` will be printed to the [backend logs](/concepts/int
 :::
 
 ## Examples
+
+### Allowed Methods
+
+The following program will take proxied request objects, convert them from their immutable state into a mutable state and resend the request to the host utilizing different HTTP Methods. The status code and body size of each requests' response will be published as a [Finding](/reference/features/logging/findings.md).
+
+```js
+export async function run({ request, response }, sdk) {
+  if (request) {
+    let findingDes = ""
+    const methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    const spec = request.toSpec();
+    if (spec.getMethod() != "GET"){
+      spec.setBody("", {updateContentLength: true})
+    }
+  
+    for (let i=0; i < methods.length; i++){
+      spec.setMethod(methods[i])
+      let res = await sdk.requests.send(spec)
+      let resLength = res.response.getBody().toText().length
+      findingDes += `METHOD: ${methods[i]}\nStatus Code: ${res.response.getCode()}\nContent-Length: ${resLength}\n\n`
+    }
+    let finding = {
+      title: `Allowed Methods For: https://${spec.getHost() + spec.getPath()}`,
+      description: findingDes,
+      reporter: "Allowed Methods",
+      request: request
+    }
+    await sdk.findings.create(finding)
+  }
+}
+```
+
+::: tip Function Breakdown
+:::
