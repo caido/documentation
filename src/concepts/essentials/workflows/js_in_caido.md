@@ -359,7 +359,7 @@ The JSDoc comment uses type tags to note what types are assigned to the function
  */
 ```
 
- The `input` parameter type is of the object type `HttpInput`. The `sdk` parameter is of the object type `SDK`. The associated declarations are:
+ The `input` parameter type is of the object type `HttpInput` which itself contains a `request` object and `response` object pair (_if they exist_). The `sdk` parameter is of the object type `SDK`. The associated declarations are:
 
 ```ts
 export declare type HttpInput = {
@@ -495,7 +495,7 @@ for (let i=0; i < methods.length; i++){
 
 Within the above code block:
 
-- Each HTTP Method included in the array is set in the request object using the `setMethod()` method.
+- Each HTTP Method element in the array is set in the request object using the `setMethod()` method.
 - The requests are sent using `sdk.requests.send(spec)`.
 - For each request sent, the response is the awaited promise and will be stored in the `res` variable once resolved.
 - The response body is converted to a string from bytes and then the length is evaluated.
@@ -526,4 +526,171 @@ In the above code line:
 
 - The `sdk.findings.create()` method is called using the `finding` variable as it's parameter.
 - This call will await the completion of the creation process of the `finding` object and then creates a new finding with it in the Caido interface.
+:::
+
+### LinkFinder
+
+The following program will take the body of response objects, convert them from byte data to string data and parse them for URLS and paths using regex. The unique URLS and paths found will be published as a [Finding](/reference/features/logging/findings.md).
+
+```js
+async function run(input, sdk) {
+  const { request, response } = input;
+
+  const responseBody = response.getBody()?.toText();
+  if (!responseBody) {
+    sdk.console.log("response body is empty");
+    return;
+  }
+
+  const regex = /(?:"|')(((?:[a-zA-Z]{1,10}:\/\/|\/\/)[^"'/]{1,}\.[a-zA-Z]{2,}[^"']{0,})|((?:\/|\.\.\/|\.\.\/)[^"'><,;| *()(%%$^\/\\\[\]][^"'><,;|()]{1,})|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{1,}\.(?:[a-zA-Z]{1,4}|action)(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{3,}(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-]{1,}\.(?:php|asp|aspx|jsp|json|action|html|js|txt|xml)(?:[\?|#][^"|']{0,}|)))(?:"|')/g;
+
+  const matches = responseBody.match(regex);
+
+  if (matches) {
+    const uniqueMatches = new Set(
+      matches
+        .map((match) => match.replace(/"/g, ""))
+        .filter((match) => !match.includes("http://www.w3.org/2000/svg"))
+    );
+
+    if (uniqueMatches.size > 0) {
+      const paths = Array.from(uniqueMatches);
+      sdk.console.log(`Found ${paths.length} unique path(s):`);
+      paths.forEach((path) => {
+        sdk.console.log(path);
+      });
+
+      const findingDescription = `The following paths were found:\n\n${paths.join("\n")}`;
+      await sdk.findings.create({
+        title: "Paths Found",
+        reporter: "Linkfinder",
+        request: request,
+        description: findingDescription,
+        severity: "info",
+      });
+
+      return paths;
+    } else {
+      sdk.console.log("No paths found");
+      return [];
+    }
+  } else {
+    sdk.console.log("No paths found");
+    return [];
+  }
+}
+
+export { run };
+```
+
+::: tip Function Breakdown
+
+```js
+async function run(input, sdk) {
+  const { request, response } = input;
+
+  const responseBody = response.getBody()?.toText();
+  if (!responseBody) {
+    sdk.console.log("response body is empty");
+    return;
+  }
+```
+
+Within the above code block:
+
+- The asynchronous `run` function is created.
+- The first parameter of the function is a request object and response object pair. The second parameter of the function is the SDK object - used to interact with Caido's backend.
+- A variable named `responseBody` is declared - this stores the string value of the response body. The `?` character in `response.getBody()?.toText();` ensures the `toText()` method is not called in the case of the response having no body.
+- If there is no response body - the message `"response body is empty"` will be printed to the [backend logs](/concepts/internals/files.md).
+
+```js
+  const regex = /(?:"|')(((?:[a-zA-Z]{1,10}:\/\/|\/\/)[^"'/]{1,}\.[a-zA-Z]{2,}[^"']{0,})|((?:\/|\.\.\/|\.\.\/)[^"'><,;| *()(%%$^\/\\\[\]][^"'><,;|()]{1,})|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{1,}\.(?:[a-zA-Z]{1,4}|action)(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{3,}(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-]{1,}\.(?:php|asp|aspx|jsp|json|action|html|js|txt|xml)(?:[\?|#][^"|']{0,}|)))(?:"|')/g;
+
+  const matches = responseBody.match(regex);
+```
+
+Within the above code block:
+
+- A regex expression is defined to match URLs or paths within the response body and is stored in the variable `regex`.
+- The regex expression is used as the input of the `match()` method called on the response body. This method returns an array to account for multiple matches.
+- Any strings that satisfy the regex expression will be stored in an array in the variable `matches`.
+
+```js
+  if (matches) {
+    const uniqueMatches = new Set(
+      matches
+        .map((match) => match.replace(/"/g, ""))
+        .filter((match) => !match.includes("http://www.w3.org/2000/svg"))
+    );
+```
+
+Within the above code block:
+
+- If the `matches` array contains at least one element (_evaluates to true_) - the code block is executed.
+- A new `Set` object is stored in the variable `uniqueMatches`. A Set is a collection of unique values, meaning it can only contain distinct elements. The Set constructor accepts the `matches` array as its input and it automatically removes duplicate values.
+- The `map()` method iterates over each element of the array and calls the `replace()` method them. The regex used as the input will replace any occurences of `"` with an empty string.
+- The `filter()` method is then called on each element of the array. If the element does not include `http://www.w3.org/2000/svg` - it is kept in the array. If the element does include `http://www.w3.org/2000/svg` it is removed from the array. This filtering ensures no SVG graphics are included.
+
+```js
+    if (uniqueMatches.size > 0) {
+      const paths = Array.from(uniqueMatches);
+      sdk.console.log(`Found ${paths.length} unique path(s):`);
+      paths.forEach((path) => {
+        sdk.console.log(path);
+      });
+```
+
+Within the above code block:
+
+- If there is at least one element in the `uniqueMatches` Set that made it through the filtering - a new array is created containing that element/those elements and is stored in the variable `paths`.
+- The `length` property of the array is taken and used as the template literal value of the message `Found ${paths.length} unique path(s):` - which will be printed to the [backend logs](/concepts/internals/files.md).
+- The URLS/paths are also printed individually as an entry to the backend log file using `sdk.console.log`.
+
+```js
+      const findingDescription = `The following paths were found:\n\n${paths.join("\n")}`;
+      await sdk.findings.create({
+        title: "Paths Found",
+        reporter: "Linkfinder",
+        request: request,
+        description: findingDescription,
+        severity: "info",
+      });
+```
+
+Within the above code block:
+
+- A variable named `findingDescription` is declared - this stores the string value of the URLs/paths found that have satisfied both the regex and filtering. The message and findings will be joined together in one string, separated by newlines.
+- The `sdk.findings.create()` method is called.
+- This call will await the completion of the creation process of the `finding` object and then creates a new finding with it in the Caido interface.
+- The value of the `title` property will be `"Paths Found"`.
+- The value of the `reporter` property will be `"Linkfinder"` - identifying the producing source the Finding.
+- The value of the `request` property will be the request object.
+- The value of the `description` property will be the value of the `findingDescription` variable.
+- The value of the `severity` property will be `"info"` - this is designation used in the [backend logs](/concepts/internals/files.md).
+
+```js
+ return paths;
+    } else {
+      sdk.console.log("No paths found");
+      return [];
+    }
+  } else {
+    sdk.console.log("No paths found");
+    return [];
+  }
+```
+
+Within the above code blocks:
+
+- The first occurence of the `else` statement handles the case in which no URLs/paths are found using the regex expression.
+- The second occurence of the `else` statement handles the case in which no URLs/paths pass the filtering logic of the code.
+- Both will print the message `"No paths found"` the [backend logs](/concepts/internals/files.md).
+
+```js
+export { run };
+```
+
+The above code line:
+
+Makes the `run` function available to be imported in other scripts
 :::
