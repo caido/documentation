@@ -2,15 +2,92 @@
 
 _Below includes in-depth foundational information, to skip to usage of JavaScript in Workflow Nodes - navigate to the [JavaScript Node Functions](#javascript-node-functions) section._
 
-## TypeScript
+## Why JavaScript?
+
+Caido's decision to implement JavaScript as opposed to another programming language was arrived at based on multiple factors.
+
+With JavaScript, context switching between the frontend and backend is minimal. JavaScript is a versitile language and the speed performance is noticeable in the Caido environment. Also, as an HTTP proxy, JavaScript is a familiar language to those that are using Caido as it is present in every engagement.
+
+## QuickJS
+
+Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/concepts/essentials/workflows.md).
+
+Caido leverages the QuickJS Engine to:
+
+1. Identify that the received input is JavaScript code.
+2. Parse and interpret the code.
+3. Run the code - performing the actions and computations within it.
+
+::: warning NOTE
+As QuickJS is a lightweight, embeddable JavaScript engine - it **does not** have built-in support for TypeScript.
+:::
+
+## Typing
+
+JavaScript is a [dynamically typed language](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing), meaning that entities do not have a fixed data type and can hold values of any data type. The data type is determined at runtime based on the assigned values.
+
+However, specific data types for entities may be required for code to run properly.
+
+In order to achieve this, Caido utilizes [JSDoc](#jsdoc) in the Workflow coding environment and external [TypeScript](#typescript).
+
+JSDoc comments in JavaScript inform you as to what data type an entity expects.
+
+TypeScript is used to explicitly assign data types to entities - a process known as [type annotation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions). TypeScript then verifies that the correct data type is supplied in a process known as **[static type-checking](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#static-type-checking)**.
+
+Static type-checking is a preemptive measure to make sure you supplied the correct parameter types that Caido’s backend requires in order for the proper execution of the `run` function.
+
+::: info
+The data types that Workflows use are: bytes, strings, Boolean values, integers, request objects and response objects.
+:::
+
+### JSDoc
+
+[JSDoc comments](https://jsdoc.app/about-getting-started) start with  `/**` and end with `*/`. Within these comment blocks, you can use various tags and annotations to provide specific information about the code element being documented.
+
+::: info
+Some commonly used JSDoc tags include:
+
+- @param: Describes the parameters accepted by a function, including their names, types, and descriptions.
+
+- @returns: Describes the return value of a function, including its type and description.
+
+- @type: Specifies the data type of a variable or property.
+
+:::
+
+Below is the default `run` function used by the JavaScript Convert Node:
+
+::: tip Convert Type Function
+
+```js
+/**
+ * @param {Bytes} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<Data>}`
+ */
+export function run(input, sdk) {
+  let parsed = sdk.asString(array)
+  sdk.console.log(parsed);
+  return parsed;
+};
+```
+
+The value inside the `{}` is the type.
+:::
+
+Using the comments as reference, you can view the declaration file to determine which methods are available to be called upon.
+
+::: warning NOTE
+JSDoc comments for function parameters do not directly assign types to the parameters themselves. Meaning they will not enforce or assign types during runtime. However they are used in Caido to provide autocompletion and inform you on the expected type.
+:::
+
+<img alt="SDK autocomplete." src="/_images/sdk_autocomplete.png">
+
+### TypeScript
 
 [TypeScript](https://www.typescriptlang.org/) is referred to as **superset** of JavaScript. A superset builds upon a programming language, adding additional capabilities.
 
-JavaScript is a [dynamically typed language](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing), meaning that entities do not have a fixed data type and can hold values of any data type. The data type is determined at runtime based on the assigned values. However, specific data types for entities may be required for code to run properly.
-
-With TypeScript, you can assign a data type to an entity - this process is known as [type annotation](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions). By assigning what data type an entity can use, you ensure that the intended input is supplied come runtime.
-
-TypeScript builds upon JavaScript by introducing **static analysis** which will parse your code and notify you of any errors before running or compiling your code.
+While not directly supported by the QuickJS engine - Caido uses TypeScript externally to assign data types to entities.
 
 ::: tip
 Example:
@@ -29,16 +106,8 @@ In this example:
 - Both `a` and `b` have a type annotation of `number` (applied using the syntax `entity: type`) - they each must have a value that is either an integer or float.
 - The return value is of type `number` (applied using the syntax `: return data type`).
 - Parameter `b` in the function call stored in the `result` variable has a string type value of `"Hello world!"` which is invalid.
-- With static analysis, you will receive the following error **before** the function is even ran: `Argument of type 'string' is not assignable to parameter of type 'number'.`
+- With static type-checking, you will receive the following error **before** the function is even ran: `Argument of type 'string' is not assignable to parameter of type 'number'.`
 :::
-
-This verification that the correct data type is used is known as **static type-checking**.
-
-::: info
-The data types that Workflows use are: bytes, strings, Boolean values, integers, request objects and response objects.
-:::
-
-## Defining Custom Types with TypeScript
 
 With TypeScript, you can **also** create custom data types. This is accomplished by defining the custom data types in what is known as a [declaration file](https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html) (_TypeScript declaration files have the `.d.ts` extension_).
 
@@ -48,7 +117,7 @@ Within a declaration file, you will find declared [type aliases](https://www.typ
 The `export declare` syntax in TypeScript is used to provide type definitions or declarations for external entities.
 :::
 
-### Type Aliases
+#### Type Aliases
 
 When you declare a type alias, you are able to define the type/s that an entity should have.
 
@@ -82,7 +151,7 @@ In this example:
 - The `account` object passes static type-checking since the property values are all valid types.
 :::
 
-### Classes
+#### Classes
 
 When you declare a custom class type, you are able to define an object's:
 
@@ -198,65 +267,6 @@ export async function run({ request, response }, sdk) {
 ```
 
 :::
-
-## QuickJS
-
-Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/concepts/essentials/workflows.md).
-
-Caido leverages the QuickJS Engine to:
-
-1. Identify that the received input is JavaScript code.
-2. Parse and interpret the code.
-3. Run the code - performing the actions and computations within it.
-
-::: warning NOTE
-As QuickJS is a lightweight, embeddable JavaScript engine - it **does not** have built-in support for TypeScript.
-:::
-
-## JSDoc
-
-[JSDoc](https://jsdoc.app/) comment syntax provides a way to document JavaScript code using special comment annotations.
-
-JSDoc comments start with  `/**` and end with `*/`. Within these comment blocks, you can use various tags and annotations to provide specific information about the code element being documented.
-
-::: info
-Some commonly used JSDoc tags include:
-
-- @param: Describes the parameters accepted by a function, including their names, types, and descriptions.
-
-- @returns: Describes the return value of a function, including its type and description.
-
-- @type: Specifies the data type of a variable or property.
-
-:::
-
-Below is the `run` function used by the JavaScript Convert Node - this time with the JSDoc comment type annotations included:
-
-::: tip Convert Type Function
-
-```js
-/**
- * @param {Bytes} input
- * @param {SDK} sdk
- * @returns {MaybePromise<Data>}`
- */
-export function run(input, sdk) {
-  let parsed = sdk.asString(array)
-  sdk.console.log(parsed);
-  return parsed;
-};
-```
-
-The value inside the `{}` is the type.
-:::
-
-Using the comments as reference, you can view the declaration file to determine which methods are available to be called upon.
-
-::: warning NOTE
-JSDoc comments for function parameters do not directly assign types to the parameters themselves. Meaning they will not enforce or assign types during runtime. However they are used in Caido to provide autocompletion. As well as providing you with a reference.
-:::
-
-<img alt="SDK autocomplete." src="/_images/sdk_autocomplete.png">
 
 ## JavaScript Node Functions
 
@@ -429,268 +439,46 @@ Finally, the value of `host` will be printed to the [backend logs](/concepts/int
 
 :::
 
-## Examples
-
-### Allowed Methods
-
-The following program will take proxied request objects, convert them from their immutable state into a mutable state and resend the request to the host utilizing different HTTP Methods. The status code and body size of each requests' response will be published as a [Finding](/reference/features/logging/findings.md).
+## Example
 
 ```js
+/**
+ * @param {HttpInput} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<Data | undefined>}
+ */
 export async function run({ request, response }, sdk) {
-  if (request) {
-    let findingDes = ""
-    const methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    const spec = request.toSpec();
-    if (spec.getMethod() != "GET"){
-      spec.setBody("", {updateContentLength: true})
-    }
-  
-    for (let i=0; i < methods.length; i++){
-      spec.setMethod(methods[i])
-      let res = await sdk.requests.send(spec)
-      let resLength = res.response.getBody().toText().length
-      findingDes += `METHOD: ${methods[i]}\nStatus Code: ${res.response.getCode()}\nContent-Length: ${resLength}\n\n`
-    }
-    let finding = {
-      title: `Allowed Methods For: https://${spec.getHost() + spec.getPath()}`,
-      description: findingDes,
-      reporter: "Allowed Methods",
-      request: request
-    }
-    await sdk.findings.create(finding)
-  }
-}
+  if (response.getCode() === 401 || response.getCode() === 403) {
+    let spec = request.toSpec();
+    spec.setHeader("X-Forwarded-For", "127.0.0.1");
+    let res = await sdk.requests.send(spec);
+    if (res.getCode() === 200) {
+      let finding = {
+        title: "401/403 Bypass",
+        description: "Auth bypass via X-Forwarded-For header.",
+        reporter: "X-Forwarded-For Passive Workflow",
+        request: request
+      };
+      await sdk.findings.create(finding);
+    };
+  };
+};
 ```
 
 ::: tip Function Breakdown
-
-```js
-export async function run({ request, response }, sdk) {
-  if (request) {
-    let findingDes = ""
-    const methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    const spec = request.toSpec();
-    if (spec.getMethod() != "GET"){
-      spec.setBody("", {updateContentLength: true})
-    }
-```
-
-Within the above code block:
 
 - The asynchronous `run` function is created and is available to be imported in other scripts.
-- The first parameter of the function is a `request` object and `response` object pair. The second parameter of the function is the `SDK` object - used to interact with Caido's backend.
-- A variable named `findingDes` is declared - this will eventually store a string value that will be used for the Finding's description.
-- An array of HTTP Methods is stored in the variable `methods`.
-- The immutable request object that was proxied is converted to a mutable request object using the `toSpec()` method and stored in the variable `spec`.
-- If the HTTP Method used is not `GET` - the Content-Length header is to be automatically updated to match the true size.
-
-```js
-for (let i=0; i < methods.length; i++){
-      spec.setMethod(methods[i])
-      let res = await sdk.requests.send(spec)
-      let resLength = res.response.getBody().toText().length
-      findingDes += `METHOD: ${methods[i]}\nStatus Code: ${res.response.getCode()}\nContent-Length: ${resLength}\n\n`
-    }
-```
-
-Within the above code block:
-
-- Each HTTP Method element in the array is set in the request object using the `setMethod()` method.
-- The requests are sent using `sdk.requests.send(spec)`.
-- For each request sent, the response is the awaited promise and will be stored in the `res` variable once resolved.
-- The response body is converted to a string from bytes and then the length is evaluated.
-- The value stored in the `findingDes` variable that was declared earlier is updated to include the HTTP Method used as well as both the status code and body size of the associated response.
-
-```js
-let finding = {
-      title: `Allowed Methods For: https://${spec.getHost() + spec.getPath()}`,
-      description: findingDes,
-      reporter: "Allowed Methods",
-      request: request
-    }
-```
-
-Within the above code block:
-
-- A Finding object is declared. The properties of the object are stored in the `finding` variable.
-- The value of the `title` property will be the URL the request was sent to. Derived from the `getHost()` and `getPath()` methods called on the request object.
-- The value of the `description` property will be the value of the `findingDes` variable.
-- The value of the `reporter` property will be `"Allowed Methods"` - identifying the producing source the Finding.
-- The value of the `request` property will be the request object.
-
-```js
-await sdk.findings.create(finding)
-```
-
-In the above code line:
-
-- The `sdk.findings.create()` method is called using the `finding` variable as it's parameter.
-- This call will await the completion of the creation process of the `finding` object and then creates a new finding with it in the Caido interface.
-:::
-
-### LinkFinder
-
-The following program will take the body of response objects, convert them from byte data to string data and parse them for URLS and paths using regex. The unique URLS and paths found will be published as a [Finding](/reference/features/logging/findings.md).
-
-```js
-async function run(input, sdk) {
-  const { request, response } = input;
-
-  const responseBody = response.getBody()?.toText();
-  if (!responseBody) {
-    sdk.console.log("response body is empty");
-    return;
-  }
-
-  const regex = /(?:"|')(((?:[a-zA-Z]{1,10}:\/\/|\/\/)[^"'/]{1,}\.[a-zA-Z]{2,}[^"']{0,})|((?:\/|\.\.\/|\.\.\/)[^"'><,;| *()(%%$^\/\\\[\]][^"'><,;|()]{1,})|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{1,}\.(?:[a-zA-Z]{1,4}|action)(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{3,}(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-]{1,}\.(?:php|asp|aspx|jsp|json|action|html|js|txt|xml)(?:[\?|#][^"|']{0,}|)))(?:"|')/g;
-
-  const matches = responseBody.match(regex);
-
-  if (matches) {
-    const uniqueMatches = new Set(
-      matches
-        .map((match) => match.replace(/"/g, ""))
-        .filter((match) => !match.includes("http://www.w3.org/2000/svg"))
-    );
-
-    if (uniqueMatches.size > 0) {
-      const paths = Array.from(uniqueMatches);
-      sdk.console.log(`Found ${paths.length} unique path(s):`);
-      paths.forEach((path) => {
-        sdk.console.log(path);
-      });
-
-      const findingDescription = `The following paths were found:\n\n${paths.join("\n")}`;
-      await sdk.findings.create({
-        title: "Paths Found",
-        reporter: "Linkfinder",
-        request: request,
-        description: findingDescription,
-        severity: "info",
-      });
-
-      return paths;
-    } else {
-      sdk.console.log("No paths found");
-      return [];
-    }
-  } else {
-    sdk.console.log("No paths found");
-    return [];
-  }
-}
-
-export { run };
-```
-
-::: tip Function Breakdown
-
-```js
-async function run(input, sdk) {
-  const { request, response } = input;
-
-  const responseBody = response.getBody()?.toText();
-  if (!responseBody) {
-    sdk.console.log("response body is empty");
-    return;
-  }
-```
-
-Within the above code block:
-
-- The asynchronous `run` function is created.
-- The first parameter of the function is a request object and response object pair. The second parameter of the function is the SDK object - used to interact with Caido's backend.
-- A variable named `responseBody` is declared - this stores the string value of the response body. The `?` character in `response.getBody()?.toText();` ensures the `toText()` method is not called in the case of the response having no body.
-- If there is no response body - the message `"response body is empty"` will be printed to the [backend logs](/concepts/internals/files.md).
-
-```js
-  const regex = /(?:"|')(((?:[a-zA-Z]{1,10}:\/\/|\/\/)[^"'/]{1,}\.[a-zA-Z]{2,}[^"']{0,})|((?:\/|\.\.\/|\.\.\/)[^"'><,;| *()(%%$^\/\\\[\]][^"'><,;|()]{1,})|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{1,}\.(?:[a-zA-Z]{1,4}|action)(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-\/]{1,}\/[a-zA-Z0-9_\-\/]{3,}(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-]{1,}\.(?:php|asp|aspx|jsp|json|action|html|js|txt|xml)(?:[\?|#][^"|']{0,}|)))(?:"|')/g;
-
-  const matches = responseBody.match(regex);
-```
-
-Within the above code block:
-
-- A regex expression is defined to match URLs or paths within the response body and is stored in the variable `regex`.
-- The regex expression is used as the input of the `match()` method called on the response body. This method returns an array to account for multiple matches.
-- Any strings that satisfy the regex expression will be stored in an array in the variable `matches`.
-
-```js
-  if (matches) {
-    const uniqueMatches = new Set(
-      matches
-        .map((match) => match.replace(/"/g, ""))
-        .filter((match) => !match.includes("http://www.w3.org/2000/svg"))
-    );
-```
-
-Within the above code block:
-
-- If the `matches` array contains at least one element (_evaluates to true_) - the code block is executed.
-- A new `Set` object is stored in the variable `uniqueMatches`. A Set is a collection of unique values, meaning it can only contain distinct elements. The Set constructor accepts the `matches` array as its input and it automatically removes duplicate values.
-- The `map()` method iterates over each element of the array and calls the `replace()` method them. The regex used as the input will replace any occurences of `"` with an empty string.
-- The `filter()` method is then called on each element of the array. If the element does not include `http://www.w3.org/2000/svg` - it is kept in the array. If the element does include `http://www.w3.org/2000/svg` it is removed from the array. This filtering ensures no SVG graphics are included.
-
-```js
-    if (uniqueMatches.size > 0) {
-      const paths = Array.from(uniqueMatches);
-      sdk.console.log(`Found ${paths.length} unique path(s):`);
-      paths.forEach((path) => {
-        sdk.console.log(path);
-      });
-```
-
-Within the above code block:
-
-- If there is at least one element in the `uniqueMatches` Set that made it through the filtering - a new array is created containing that element/those elements and is stored in the variable `paths`.
-- The `length` property of the array is taken and used as the template literal value of the message `Found ${paths.length} unique path(s):` - which will be printed to the [backend logs](/concepts/internals/files.md).
-- The URLS/paths are also printed individually as an entry to the backend log file using `sdk.console.log`.
-
-```js
-      const findingDescription = `The following paths were found:\n\n${paths.join("\n")}`;
-      await sdk.findings.create({
-        title: "Paths Found",
-        reporter: "Linkfinder",
-        request: request,
-        description: findingDescription,
-        severity: "info",
-      });
-```
-
-Within the above code block:
-
-- A variable named `findingDescription` is declared - this stores the string value of the URLs/paths found that have satisfied both the regex and filtering. The message and findings will be joined together in one string, separated by newlines.
+- The first parameter of the function is a `request` object and `response` object pair. The second parameter of the function is the `SDK` object - used to interact with Caido's backend. The return value is a `promise` - a resolved promise is returned as `Data` OR the return value can be `undefined` if the promise is rejected.
+- If the response status code is either 401 or 403 - then the associated request is converted into a mutable state using the `toSpec()` method and stored in the `spec` variable.
+- The `setHeader()` method is called on the mutable request - adding `X-Forwarded-For: 127.0.0.1` as a header.
+- The request is sent using the `sdk.requests.send()` method. The response to this request is awaited and stored in the `res` variable.
+- The `getCode()` method is called on this new response. If the status code is 200 - a Finding object is created and stored in the `finding` variable.
 - The `sdk.findings.create()` method is called.
-- This call will await the completion of the creation process of the `finding` object and then creates a new finding with it in the Caido interface.
-- The value of the `title` property will be `"Paths Found"`.
-- The value of the `reporter` property will be `"Linkfinder"` - identifying the producing source the Finding.
-- The value of the `request` property will be the request object.
-- The value of the `description` property will be the value of the `findingDescription` variable.
-- The value of the `severity` property will be `"info"` - this is designation used in the [backend logs](/concepts/internals/files.md).
-
-```js
- return paths;
-    } else {
-      sdk.console.log("No paths found");
-      return [];
-    }
-  } else {
-    sdk.console.log("No paths found");
-    return [];
-  }
-```
-
-Within the above code blocks:
-
-- The first occurence of the `else` statement handles the case in which no URLs/paths are found using the regex expression.
-- The second occurence of the `else` statement handles the case in which no URLs/paths pass the filtering logic of the code.
-- Both will print the message `"No paths found"` the [backend logs](/concepts/internals/files.md).
-
-```js
-export { run };
-```
-
-The above code line:
-
-Makes the `run` function available to be imported in other scripts
+- This call will await the completion of the creation process of the `finding` object and then creates a new Finding with it in the Caido interface.
 :::
+
+## Additional Information
+
+For further documentation on the SDK - click [here](/reference/workflows/sdk.md).
+
+For further documentation on coding in Workflows - click [here](/reference/workflows/convert/coding_nodes.html).
