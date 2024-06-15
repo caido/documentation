@@ -447,7 +447,7 @@ This Workflow will check the if the status code of responses to requests are eit
 
 If the status code of the response to this newly issued request is 200 - a new [Finding](/reference/features/logging/findings.md) will be created, alerting you of the bypass.
 
-The associated request/response pair to the bypass will be displayed rather than the original request/response pair as a Finding.
+The associated request/response pair to the bypass will be displayed rather than the original request/response pair in the Finding.
 
 ```js
 /**
