@@ -443,11 +443,11 @@ Finally, the value of `host` will be printed to the [backend logs](/concepts/int
 
 ### X-Forwarded-For Passive Workflow
 
-This Workflow will check the if the status code of responses to in-scope requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
+This Workflow will check the if the status code of responses to requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
 
-If the status code to this newly issued request is 200 - a new [Finding](/reference/features/logging/findings.md) will be created, alerting you of the bypass.
+If the status code of the response to this newly issued request is 200 - a new [Finding](/reference/features/logging/findings.md) will be created, alerting you of the bypass.
 
-The associated request/response pair to the bypass will be displayed rather than the original request/response pair.
+The associated request/response pair to the bypass will be displayed rather than the original request/response pair as a Finding.
 
 ```js
 /**
