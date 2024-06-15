@@ -448,30 +448,37 @@ Finally, the value of `host` will be printed to the [backend logs](/concepts/int
  * @returns {MaybePromise<Data | undefined>}
  */
 export async function run({ request, response }, sdk) {
-  if (response.getCode() === 401 || response.getCode() === 403) {
-    let spec = request.toSpec();
+  let reqID = request.getId();
+  let respCode = response.getCode();
+  sdk.console.log(`401/403 BYPASS WORKFLOW - Request ${reqID} received a code of: ${respCode}`);
+
+  if (respCode === 401 || respCode === 403) {
+    const spec = request.toSpec();
     spec.setHeader("X-Forwarded-For", "127.0.0.1");
-    let res = await sdk.requests.send(spec);
-    if (res.getCode() === 200) {
+
+    let bypass = await sdk.requests.send(spec);
+   
+    if (bypass.response.getCode() === 200) {
       let finding = {
         title: "401/403 Bypass",
-        description: "Auth bypass via X-Forwarded-For header.",
+        description: `SUCCESS! Auth bypass via X-Forwarded-For header for ${bypass.request.getMethod()} ${bypass.request.getPath()} to ${bypass.request.getHost()}.`,
         reporter: "X-Forwarded-For Passive Workflow",
-        request: request
+        request: bypass.request
       };
       await sdk.findings.create(finding);
-    };
-  };
-};
+    }
+  }
+}
 ```
 
 ::: tip Function Breakdown
 
 - The asynchronous `run` function is created and is available to be imported in other scripts.
 - The first parameter of the function is a `request` object and `response` object pair. The second parameter of the function is the `SDK` object - used to interact with Caido's backend. The return value is a `promise` - a resolved promise is returned as `Data` OR the return value can be `undefined` if the promise is rejected.
+- A message is printed in the logs that references the request `ID` of ones that result in either a 401 or 403.
 - If the response status code is either 401 or 403 - then the associated request is converted into a mutable state using the `toSpec()` method and stored in the `spec` variable.
 - The `setHeader()` method is called on the mutable request - adding `X-Forwarded-For: 127.0.0.1` as a header.
-- The request is sent using the `sdk.requests.send()` method. The response to this request is awaited and stored in the `res` variable.
+- The request is sent using the `sdk.requests.send()` method. The response to this request is awaited and stored in the `bypass` variable.
 - The `getCode()` method is called on this new response. If the status code is 200 - a Finding object is created and stored in the `finding` variable.
 - The `sdk.findings.create()` method is called.
 - This call will await the completion of the creation process of the `finding` object and then creates a new Finding with it in the Caido interface.
