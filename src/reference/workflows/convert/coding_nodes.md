@@ -51,7 +51,7 @@ Where the selected input was `aaa` will result in:
 2024-05-26T12:14:13.115630Z  INFO executor:0|arbiter:3 JsSdk: [ 97, 97, 97 ]
 ```
 
-being outputed to the [Caido Logs](/reference/configuration/data_location.md) since the Unicode codepoint for `a` is `97`.
+being outputed to the [backend logs](/reference/configuration/data_location.md) since the Unicode codepoint for `a` is `97`.
 
 In order to get the `String` version of the input, we use the `sdk.asString` function which will convert each byte of the array into its String character conterpart:
 
@@ -89,7 +89,7 @@ Depending on the platform on which Caido is running (Unix/Windows/MacOS) you wil
 - Select your shell from the drop-down menu.
 - For some shells, Caido will try to source the default `.[shell]rc` file in your home directory. If that doesn't work for you, you can manually override the `Init`.
 
-Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [Caido Log File](/reference/configuration/data_location.md). The command should also exit with `0`.
+Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/reference/configuration/data_location.md). The command should also exit with `0`.
 
 ## Control Flow Nodes
 

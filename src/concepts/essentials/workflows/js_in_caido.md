@@ -326,7 +326,7 @@ The `run` function is available to be imported in external scripts. The function
 
 The variable `parsed` stores `sdk.asString(input)` to convert bytes into a string.
 
-The `SDK` object assigned to `sdk` then uses the `console.log` method that it inherited from the `Console` object. This method is called on the `parsed` variable. The value of `parsed` will be printed to the [backend logs](/concepts/internals/files.md) The associated declaration is:
+The `SDK` object assigned to `sdk` then uses the `console.log` method that it inherited from the `Console` object. This method is called on the `parsed` variable. The value of `parsed` will be printed to the [backend logs](/concepts/internals/files.md). The associated declaration is:
 
 ```ts
 export declare type Console = {
