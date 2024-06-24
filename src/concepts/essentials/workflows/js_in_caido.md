@@ -483,7 +483,7 @@ export async function run({ request, response }, sdk) {
 
 - The asynchronous `run` function is created and is available to be imported in other scripts.
 - The first parameter of the function is a `request` object and `response` object pair. The second parameter of the function is the `SDK` object - used to interact with Caido's backend. The return value is a `promise` - a resolved promise is returned as `Data` OR the return value can be `undefined` if the promise is rejected.
-- A message is printed in the logs that references the request `ID` of ones that result in either a 401 or 403.
+- A message is printed in the logs that references the request `ID` of the currently handled request.
 - If the response status code is either 401 or 403 - then the associated request is converted into a mutable state using the `toSpec()` method and stored in the `spec` variable.
 - The `setHeader()` method is called on the mutable request - adding `X-Forwarded-For: 127.0.0.1` as a header.
 - The request is sent using the `sdk.requests.send()` method. The response to this request is awaited and stored in the `bypass` variable.
