@@ -6,7 +6,7 @@ _Below includes in-depth foundational information, to skip to usage of JavaScrip
 
 Caido's decision to implement JavaScript as opposed to another programming language was arrived at based on multiple factors.
 
-With JavaScript, context switching between the frontend and backend is minimal. JavaScript is a versitile language and the speed performance is noticeable in the Caido environment. Also, as an HTTP proxy, JavaScript is a familiar language to those that are using Caido as it is present in every engagement.
+With JavaScript, context switching between the frontend and backend is minimal. JavaScript is a versatile language and easy to learn. Also, JavaScript is a familiar language to those that are using Caido as it is present in every engagement.
 
 ## QuickJS
 
@@ -19,7 +19,7 @@ Caido leverages the QuickJS Engine to:
 3. Run the code - performing the actions and computations within it.
 
 ::: warning NOTE
-As QuickJS is a lightweight, embeddable JavaScript engine - it **does not** have built-in support for TypeScript.
+As QuickJS is a lightweight, embeddable JavaScript engine - it **does not** have built-in support for TypeScript or all modules you would find in the browser or in Node.js.
 :::
 
 ## Typing
@@ -87,7 +87,7 @@ JSDoc comments for function parameters do not directly assign types to the param
 
 [TypeScript](https://www.typescriptlang.org/) is referred to as **superset** of JavaScript. A superset builds upon a programming language, adding additional capabilities.
 
-While not directly supported by the QuickJS engine - Caido uses TypeScript externally to assign data types to entities.
+TypeScript can be used when building Workflows outside of Caido - such as when using the Workflow Starter Kit.
 
 ::: tip
 Example:
@@ -223,6 +223,8 @@ The constructor parameter used to create the instance will become a property. In
 :::
 
 ## SDK
+
+_For further documentation on this topic - click [here](/reference/workflows/sdk.md)._
 
 For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript Node to interact with the rest of Caido backend.
 
@@ -493,7 +495,5 @@ export async function run({ request, response }, sdk) {
 :::
 
 ## Additional Information
-
-For further documentation on the SDK - click [here](/reference/workflows/sdk.md).
 
 For further documentation on coding in Workflows - click [here](/reference/workflows/convert/coding_nodes.html).
