@@ -48,7 +48,7 @@ For each payload, you can choose a `Type` from the list:
 - **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
 - **Simple List:** For cases where you want to test a short manually created list of elements.
 - **Null Payload:** Generate requests without changing anything in it.
-- **Numbers:** Generates a specified number of requests.
+- **Numbers:** Generates a range of specified integers to use as a payload.
 
 ## Preprocessors
 
