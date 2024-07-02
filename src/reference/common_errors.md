@@ -8,11 +8,13 @@ You might face of any these issues while using Caido.
 
 <img alt="No access to Instance." src="/_images/instance_error.png" width=600px center/>
 
-### Resolution Method 1 - Login with your original Caido account:
+### Resolution Method 1:
 
 Login to the initial account that was used to setup your Caido Instance.
 
-### Resolution Method 2 - Reset the Instance credentials:
+### Resolution Method 2:
+
+Reset the Instance credentials:
 
 - If using the CLI, start Caido using `caido --reset-credentials`.
 
@@ -24,7 +26,9 @@ These settings will allow you to login with any account you want. Once you've cl
 
 <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" center/>
 
-### Resolution Method 3 - Delete your data folder:
+### Resolution Method 3:
+
+Delete your data folder.
 
 While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/concepts/internals/files.md) page to locate your data folder.
 
@@ -36,7 +40,7 @@ While not ideal, deleting your Caido data folder will allow you to start with a 
 
 ### Resolution:
 
-The easiest way to fix this issue is to [reset the instance credentials](#resolution-method-2---reset-the-instance-credentials).
+The easiest way to fix this issue is to [reset the instance credentials](#resolution-method-2).
 
 ## Error Message: "Date mismatch: make sure your device's date and time settings are correct".
 
@@ -88,11 +92,11 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
 ```
 
-### Resolution Method 1 - Do not run as root:
+### Resolution Method 1:
 
 Do not run Caido as the root user.
 
-### Resolution Method 2 - Command flag removal:
+### Resolution Method 2:
 
 Remove the following flag when launching Caido:
 

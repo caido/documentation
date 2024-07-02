@@ -25,7 +25,11 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
                 items: [{
                     text: 'Nodes',
                     link: '/concepts/essentials/workflows/nodes/nodes'
-                }]
+                },
+                {
+                    text: 'JavaScript in Caido',
+                    link: '/concepts/essentials/workflows/js_in_caido'
+            }]
             },
             {
                 text: 'Tabs',
