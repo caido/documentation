@@ -83,9 +83,9 @@ Time synchronization instructions for Windows can be found [here](https://www.ma
 :::
 
 1. Right-click on the clock.
-2. Select `Adjust date and time`.
-3. Go to `Date & Time` in `Settings`.
-4. Click `Sync now`.
+1. Select `Adjust date and time`.
+1. Go to `Date & Time` in `Settings`.
+1. Click `Sync now`.
 
 </details>
 
@@ -98,8 +98,8 @@ Time synchronization instructions for MacOS can be found [here](https://superuse
 :::
 
 1. Open a terminal window.
-2. Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`).
-3. Check the time synchronization status again using the same command.
+1. Use the `sntp` command with the `-S` option to slew the clock (`sudo sntp -S pool.ntp.org`).
+1. Check the time synchronization status again using the same command.
 
 </details>
 
@@ -112,9 +112,9 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 :::
 
 1. Open a terminal or SSH into your server.
-2. Install the NTP package: `sudo apt-get install ntp`.
-3. Once the installation is complete, the NTP service should start automatically.
-4. Check its status by using this command `sudo systemctl status ntp`.
+1. Install the NTP package: `sudo apt-get install ntp`.
+1. Once the installation is complete, the NTP service should start automatically.
+1. Check its status by using this command `sudo systemctl status ntp`.
 
 </details>
 
