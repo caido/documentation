@@ -12,8 +12,8 @@ The constructing primitives of HTTPQL Filter Clause, in order of position, are t
 
 1. [Namespace](#namespace)
 2. [Field](#field)
-3. [Operator](#operator)
-4. [Value](#value)
+3. [Operator](#operator-and-value)
+4. [Value](#operator-and-value)
 
 <img width="500" alt="Parts of a filter clause" src="/_images/httpql_clause.png" no-shadow center/>
 
@@ -29,7 +29,7 @@ The **Namespaces** that Caido supports include:
 
 ::: info
 
-- The `preset` and `source` Namespaces do not have a `Field` or an `Operator`. View [preset values](#preset)/[source values](#source) for usage.
+- The `preset` and `source` Namespaces do not have a `Field` or an `Operator`. View [Exception Values](#exception-values) for usage.
 - The `source` Namespace is available in [Search](/reference/features/logging/search.md).
 :::
 
@@ -55,23 +55,19 @@ Caido is liberal in what is accepted as an extension.
 
 - `code`: The status code of the reponse. If the response is malformed, this will contain everything after `HTTP/1.1` and the following whitespace.
 - `raw`: The full raw data of the response. This allows you to search by elements that Caido currently does not index (_such as headers_).
-- `roundtrip`: The total time taken for the request to travel from the client to the server and for the response to travel back from the server to the client.
-
-::: info
-View [roundtrip values](#roundtrip) for supported time formats.
-:::
+- `roundtrip`: The total time taken (_in milliseconds_) for the request to travel from the client to the server and for the response to travel back from the server to the client.
 
 ### row
 
 - `id`: The numerical ID of a table row.
 
-## Operator
+## Operator and Value
 
-The **Operators** that Caido supports include:
+The **Value** types and associated **Operators** that Caido supports include:
 
 ### Integers
 
-This category of Operators works on **Fields** that are numerical (_such as the `code` and `port`_).
+These Operators work on **Fields** that are numerical (_`port`, `code`, `roundtrip` and `id`_).
 
 - `eq`: **Equal to** the supplied value.
 - `gt`: **Greater than** the supplied value.
@@ -82,7 +78,7 @@ This category of Operators works on **Fields** that are numerical (_such as the 
 
 ### String/Bytes
 
-This category of Operators works on Fields that are text or byte values (_such as `path` and `raw`_).
+These Operators work on **Fields** that are text or byte values (_`ext`, `host`, `method`, `path`, `query` and `raw`_).
 
 - `cont`: **Contains** the supplied value.
 - `eq`: **Equal** to the supplied value.
@@ -100,7 +96,7 @@ This category of Operators works on Fields that are text or byte values (_such a
 
 ### Regex
 
-This category of Operators works on Fields that are text or byte values (_such as `path` and `raw`_).
+These Operators work on **Fields** that are text or byte values (_that are text or byte values (_`ext`, `host`, `method`, `path`, `query` and `raw`_).
 
 - `regex`: Matches the regex `/value.+/`.
 - `nregex`: Doesn't match the regex `/value.+/`.
@@ -113,9 +109,32 @@ Not all regex features are currently supported by Caido (_such as look-ahead exp
 Visit [https://regex101.com/](https://regex101.com/) and select **Rust** syntax for assistance in creating expressions.
 :::
 
-## Value
+### Date/Time
 
-This is the value against which the Field will be compared. The value type is either an **integer**, a **string** or a **regex** depending on the Field and Operator.
+These Operators work on the **`created_at` Field**.
+
+- `gt`: **Greater than** the supplied value.
+- `lt`: **Less than** the supplied value.
+
+The supported time formats for the values used with `created_at` Operators are:
+
+- [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) - _example:_ 2024-06-24T17:03:48+00:00
+- [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) - _example:_ 2024-06-24T17:03:48+0000
+- [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) - _example:_ Mon, 24 Jun 2024 17:03:48 +0000
+- [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) - _example:_ Mon, 24 Jun 2024 17:03:48 GMT
+- [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) - _example:_ 2024-06-24T17:03:48Z
+
+### Standalone
+
+Caido supports standalone string values. This serves as a search shortcut as the `Namespace`, `Field` and `Operator` do not have to be provided.
+
+Using a standalone string (_such as `"my value"`_) will search across both requests and responses. The supplied string is replaced at runtime by:
+
+```httpql
+(req.raw.cont:"my value" OR resp.raw.cont:"my value")
+```
+
+## Exception Values
 
 ### preset
 
@@ -142,26 +161,6 @@ Autocomplete is not currently available when using the `source` Namespace.
 - When using the `source` Namespace - use all lowercase characters when naming the desired Caido feature.
 - If you are not receiving results of a `source` query - click the `Advanced` settings button next to the HTTPQL query bar to ensure the desired `Sources` are enabled.
 :::
-
-### roundtrip
-
-The supported time formats for the values used with `roundtrip` Operators are:
-
-- [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) - _example:_ 2024-06-24T17:03:48+00:00
-- [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) - _example:_ 2024-06-24T17:03:48+0000
-- [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) - _example:_ Mon, 24 Jun 2024 17:03:48 +0000
-- [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) - _example:_ Mon, 24 Jun 2024 17:03:48 GMT
-- [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) - _example:_ 2024-06-24T17:03:48Z
-
-### Standalone
-
-Caido supports standalone string values. This serves as a search shortcut as the `Namespace`, `Field` and `Operator` do not have to be provided.
-
-Using a standalone string (_such as `"my value"`_) will search across both requests and responses. The supplied string is replaced at runtime by:
-
-```httpql
-(req.raw.cont:"my value" OR resp.raw.cont:"my value")
-```
 
 # Queries
 
