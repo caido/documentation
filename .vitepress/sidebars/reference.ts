@@ -110,6 +110,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [{
                         link: '/reference/features/workspace/files'
                     },
                     {
+                        text: 'Plugins',
+                        link: '/reference/features/workspace/plugins'
+                    },
+                    {
                         text: 'Projects',
                         link: '/reference/features/workspace/projects'
                     },

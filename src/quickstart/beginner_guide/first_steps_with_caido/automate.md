@@ -26,6 +26,7 @@ To inspect the results of your `Automate` campaign - proceed with the following 
 2. Each request will be displayed in this pane.
 3. This pane will display the selected request and it's associated response.
 4. This is the resulting list of options presented after right-clicking within the request pane.
+5. The [HTTPQL query](/concepts/essentials/httpql.md) input bar.
 
 ## Attack Strategies
 
@@ -47,6 +48,7 @@ For each payload, you can choose a `Type` from the list:
 - **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
 - **Simple List:** For cases where you want to test a short manually created list of elements.
 - **Null Payload:** Generate requests without changing anything in it.
+- **Numbers:** Generates a range of specified integers to use as a payload.
 
 ## Preprocessors
 
