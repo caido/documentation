@@ -42,6 +42,18 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
         ]
     },
     {
+        text: 'Plugins',
+        items: [{
+                text: 'Plugin Basics',
+                link: '/concepts/plugins/plugin_basics.md'
+            },
+            {
+                text: 'Frontend Plugins',
+                link: '/concepts/plugins/frontend.md'
+            }
+        ]
+    },
+    {
         text: 'Internals',
         items: [{
                 text: 'Files',

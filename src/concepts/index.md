@@ -10,6 +10,11 @@
 - **[Tabs](./essentials/tabs.md)** - managing/organizing your workspace using tabs in Replay and Automate.
 - **[Layout](./essentials/layout.md)** - customizing the user interface layout of Caido.
 
+## Plugins
+
+- **[Plugin Basics](./plugins/plugin_basics.md)** - foundational knowledge on Plugins.
+- **[Frontend Plugins](./plugins/frontend.md)** - creating frontend Plugins.
+
 ## Internals
 
 - **[Files: _Caido Generated_](./internals/files.md)** - inspecting the files that Caido generates.
