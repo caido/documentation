@@ -14,6 +14,11 @@
 
 - **[Plugin Basics](./plugins/plugin_basics.md)** - foundational knowledge on Plugins.
 - **[Frontend Plugins](./plugins/frontend.md)** - creating frontend Plugins.
+- **[Frontent Plugin SDK](./plugins/frontend_sdk.md)** - Frontend Software Development Kit.
+- **[Backend Plugins](./plugins/backend.md)** - creating backend Plugins.
+- **[Backend Plugin SDK](./plugins/backend_sdk.md)** - Backend Software Development Kit.
+- **[Full Stack Plugins](./plugins/fullstack.md)** - creating full stack Plugins.
+- **[Full Stack Plugin SDK](./plugins/fullstack_sdk.md)** - Full Stack Software Development Kit.
 
 ## Internals
 

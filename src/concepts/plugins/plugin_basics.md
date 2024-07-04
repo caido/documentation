@@ -14,6 +14,8 @@ Caido utilizes `client/server` architecture - inherently, this means Caido consi
 
 ### Frontend Plugins
 
+_For advanced documentation on Frontend Plugins - click [here](/concepts/plugins/frontend.md)._
+
 The frontend client component of Caido is the application running on your device. Frontend Plugins are designed to enhance the user interface.
 
 With frontend Plugins you can:
@@ -27,6 +29,8 @@ These Plugins are responsible for handing user interactions, rendering data and 
 
 ### Backend Plugins
 
+_For advanced documentation on Backend Plugins - click [here](/concepts/plugins/backend.md)._
+
 The backend component of Caido is the server responsible for data processing, storage and business logic. _View the [Cloud](/concepts/internals/cloud.md) documentation for more information._
 
 With backend Plugins you can:
@@ -35,14 +39,40 @@ With backend Plugins you can:
 - Interact with the application's data, databases and infrastructure.
 - Handle authentication, authorization and data calls.
 
-### Full-stack Plugins
+### Full Stack Plugins
 
-Full-stack Plugins combine both the frontend and backend functionality into a single plugin, allowing developers to extend and customize both the client-side and server-side ascpects of the Caido application. These Plugins utilize the entire technology stack - from the user interface to the underlying server infrastructure.
+_For advanced documentation on Full Stack Plugins - click [here](/concepts/plugins/fullstack.md)._
 
-With full-stack Plugins you can:
+Full Stack Plugins combine both the frontend and backend functionality into a single plugin, allowing developers to extend and customize both the client-side and server-side ascpects of the Caido application. These Plugins utilize the entire technology stack - from the user interface to the underlying server infrastructure.
+
+With full stack Plugins you can:
 
 - Facilitate the exchange of data and functionality between both the client and server.
 - Manage the flow of data between the frontend and backend.
+
+## SDKs
+
+An **SDK** (Software Development Kit) is an interface that provides access to various services and functionalities. Caido provides different types of SDKs dependent on the type of the Plugin being developed.
+
+A general description of the different SDK types are listed below:
+
+### Frontend SDKs
+
+_For advanced documentation on Caido's Frontend Plugin SDK - click [here](/concepts/plugins/frontend_sdk.md)._
+
+These development kits are specifically designed to help developers build plugins that run client-side. The tools, libraries and APIs that facilitate interaction with the user interface, handle client-side logic and communicate with the backend or APIs are included in the kit. Often, frontend SDKs include features such as user interface components, data manipulation libraries and integration with external services.
+
+### Backend SDKs
+
+_For advanced documentation on Caido's Backend Plugin SDK - click [here](/concepts/plugins/backend_sdk.md)._
+
+These SDKs assist developers in building server-side plugins. They also provide the tools, libraries and APIs to perform operations. Server-side operations include handling incoming requests from clients, managing databases, implementing business logic and integrating with external services. Scalability, security and performance optimization are all aspects given focus to server-side development.
+
+### Full Stack SDKs
+
+_For advanced documentation on Caido's Full Stack Plugin SDK - click [here](/concepts/plugins/fullstack_sdk.md)._
+
+These kits combine the frontend and backend functionality into a single package. Utilizing a full stack SDK enables developers to build Plugins that span both the client-side and server-side. These SDKs often include additional features for managing data flow between the two sides, handling authentication/authorization and providing seamless integration.
 
 ## Conceptualizing Plugins
 
@@ -143,7 +173,7 @@ Within the `plugins` array:
 - **REQUIRED**: `id` - Must be **unique** and must only consist of **lowercase** letters, **numbers**, **hyphens** and **underscores** (_the order of which must satisfy the regex: `^[a-z]+(?:[_-][a-z0-9]+)*$`).
 - **OPTIONAL**: `name` - If not supplied, the `id` will be used as the `name`. This property is not subject to the same rules of the `id` property.
 - **REQUIRED**: `entrypoint` - This property specifies the location of the primary script to be executed when the Caido application/Plugin is launched.
-- **REQUIRED**: `style` - This property specifies the location of the CSS file to be used to stylize elements of your Plugin.
+- **OPTIONAL**: `style` - This property specifies the location of the CSS file to be used to stylize elements of your Plugin.
 
 Additional information:
 
@@ -152,6 +182,249 @@ Additional information:
 - The `frontend` directory is generated upon the completion of the build process when using the Vite build tool.
 :::
 
+## Manifest Validation
+
+The specification for the `manifest.json` file is set in the [schema.json](https://github.com/caido/plugin-manifest/blob/main/src/schema.json) file.
+
+Expand the sections below to view the `schema.json` file:
+
+<details>
+<summary>JSON Schema.</summary>
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema",
+  "allOf": [
+    {
+      "$ref": "#/definitions/Manifest"
+    }
+  ],
+  "definitions": {
+    "Manifest": {
+      "type": "object",
+      "required": [
+        "id",
+        "plugins",
+        "version"
+      ],
+      "properties": {
+        "author": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ManifestAuthor"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "$ref": "#/definitions/ManifestID"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plugins": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ManifestPlugin"
+          }
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "ManifestAuthor": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "ManifestBackendPluginRuntime": {
+      "type": "string",
+      "enum": [
+        "javascript"
+      ]
+    },
+    "ManifestFrontendPluginConnection": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/ManifestID"
+        }
+      }
+    },
+    "ManifestID": {
+      "type": "string"
+    },
+    "ManifestPlugin": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "kind"
+          ],
+          "properties": {
+            "backend": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/ManifestFrontendPluginConnection"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "entrypoint": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "$ref": "#/definitions/ManifestID"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "frontend"
+              ]
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "style": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "entrypoint",
+            "id",
+            "kind",
+            "runtime"
+          ],
+          "properties": {
+            "entrypoint": {
+              "type": "string"
+            },
+            "id": {
+              "$ref": "#/definitions/ManifestID"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "backend"
+              ]
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "runtime": {
+              "$ref": "#/definitions/ManifestBackendPluginRuntime"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>TypeScript format.</summary>
+
+```ts
+export type Schema = Manifest
+export type ManifestID = string
+export type ManifestPlugin =
+  | {
+      backend?: ManifestFrontendPluginConnection | null
+      entrypoint: string
+      id: ManifestID
+      kind: "frontend"
+      name?: string | null
+      style: string
+      [k: string]: unknown
+    }
+  | {
+      entrypoint: string
+      id: ManifestID
+      kind: "backend"
+      name?: string | null
+      runtime: ManifestBackendPluginRuntime
+      [k: string]: unknown
+    }
+export type ManifestBackendPluginRuntime = "javascript"
+
+export interface Manifest {
+  author?: ManifestAuthor | null
+  description?: string | null
+  id: ManifestID
+  name?: string | null
+  plugins: ManifestPlugin[]
+  version: string
+  [k: string]: unknown
+}
+export interface ManifestAuthor {
+  email?: string | null
+  name?: string | null
+  url?: string | null
+  [k: string]: unknown
+}
+export interface ManifestFrontendPluginConnection {
+  id: ManifestID
+  [k: string]: unknown
+}
+```
+
+</details>
+
 ## The EntryPoint File
 
-## SDKs
+An entrypoint file is the initial script that is loaded and executed. These files initialize the Plugin - setting up the necessary resources and handling further logic and interactions.

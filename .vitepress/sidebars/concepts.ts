@@ -48,8 +48,37 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
                 link: '/concepts/plugins/plugin_basics.md'
             },
             {
-                text: 'Frontend Plugins',
-                link: '/concepts/plugins/frontend.md'
+                text: 'Frontend',
+                items: [{
+                    text: 'Frontend Plugins',
+                    link: '/concepts/plugins/frontend.md'
+                },
+                {
+                    text: 'Frontend Plugin SDK',
+                    link: '/concepts/plugins/frontend_sdk.md'
+                }]
+            },
+            {
+                text: 'Backend',
+                items: [{
+                    text: 'Backend Plugins',
+                    link: '/concepts/plugins/backend.md'
+                },
+                {
+                    text: 'Backend Plugin SDK',
+                    link: '/concepts/plugins/backend_sdk.md'
+                }]
+            },
+            {
+                text: 'Full Stack',
+                items: [{
+                    text: 'Full Stack Plugins',
+                    link: '/concepts/plugins/fullstack.md'
+                },
+                {
+                    text: 'Full Stack Plugin SDK',
+                    link: '/concepts/plugins/fullstack_sdk.md'
+                }]
             }
         ]
     },

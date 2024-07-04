@@ -78,7 +78,7 @@ Additional functionality of `sdk`:
 
 ## Shell Node
 
-The `Shell Node` allows you to call external programs in the Workflow
+The `Shell Node` allows you to call external programs in the Workflow.
 
 <img alt="Convert Shell Node." src="/_images/convert_shell_node.png" center/>
 
@@ -90,6 +90,15 @@ Depending on the platform on which Caido is running (Unix/Windows/MacOS) you wil
 - For some shells, Caido will try to source the default `.[shell]rc` file in your home directory. If that doesn't work for you, you can manually override the `Init`.
 
 Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/reference/configuration/data_location.md). The command should also exit with `0`.
+
+::: tip
+If you're running Caido on Windows and you'd like to call out to WSL for the shell node, use the following to trigger in the WSL environment:
+
+```
+wsl -- YOUR_COMMAND
+```
+
+:::
 
 ## Control Flow Nodes
 
