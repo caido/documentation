@@ -76,7 +76,7 @@ These kits combine the frontend and backend functionality into a single package.
 
 ## Conceptualizing Plugins
 
-Think of Plugins in Caido as extensive [Workflows](/src/concepts/essentials/workflows.md). While they both provide task automation - Plugin development offers a greater level of complexity.
+Think of Plugins in Caido as extensive [Workflows](/concepts/essentials/workflows.md). While they both provide task automation - Plugin development offers a greater level of complexity.
 
 ## Plugin Development
 
