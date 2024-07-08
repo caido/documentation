@@ -14,7 +14,7 @@ As Caido utilizes **client/server architecture** - inherently, this means plugin
 
 ## Plugin Packages
 
-A plugin is comprised of an installed **package** (_a collection of directories and files_). Everything from metadata properties, configuration details, dependency/type definitions, user-interface elements, function scripts, etc. are included in these packages.
+A plugin is comprised of an installed **package** (_a collection of directories and files_). Everything from metadata properties, configuration details, dependency declarations, user-interface elements, function scripts, etc. are included in these packages.
 
 ::: info
 For documentation on the tooling files shared by all plugin starterkits offered by Caido - click [here](/concepts/plugins/plugin_tooling.md).

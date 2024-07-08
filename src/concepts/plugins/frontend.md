@@ -10,24 +10,52 @@ Frontend development allows you to:
 - Provide additional features and customization options.
 - Handle user interactions, render data and communicate with the backend server via Caido's API.
 
-## Frontend Starterkit Repository
+## Frontend Interfaces
+
+_For advanced documentation on this topic - click [here](./frontend_sdk.md)._
+
+`ui` - Used to create **cards** (_bordered boxes with padding around their content_), **wells** (_a rounded border around an element with a gray background color and some padding_) and buttons. Content options for each element are also provided. These elements provide a visually appealing way to sectionalize the user-interface of your plugin.
+
+`scopes` - Used to set, create, update and delete **target scoping rules**, ensuring your plugin is directed at desired hosts.
+
+`commands` - Used to register **actions** to expose functionality, bind actions to the user-interface and implement business logic.
+
+`menu` - Used to register right-click **context menu** actions/options, allowing quick access to your plugin functionality.
+
+`navigation` - Used to create pages in the application, giving your plugin its own **tab**.
+
+`window` - Used to interact with **text** within the application environment, allowing highlight to action flows.
+
+`storage` - Used to **persist data** across different sessions or instances.
 
 ::: info
-For documentation on the tooling files shared by all plugin starterkits offered by Caido - click [here](/concepts/plugins/plugin_tooling.md).
+Caido has heavily referenced [Visual Studio Code's Command Model](https://code.visualstudio.com/api/extension-guides/command).
 :::
 
-The [frontend starterkit](https://github.com/caido/starterkit-plugin-frontend) package offered by Caido consists of the following directories and files:
+::: tip
+Be aware that your plugin can be loaded in multiple user tabs.
+:::
 
-### public
+## Frontend Starterkit Repository Contents
 
-The `public` directory stores the `styles.css` file used to stylize elements of your Plugin.
+::: info
 
-### src
+- For documentation on the tooling files shared by all plugin starterkits offered by Caido - click [here](/concepts/plugins/plugin_tooling.md).
+- The frontend starterkit can be found [here](https://github.com/caido/starterkit-plugin-frontend).
+:::
+
+### Frontend Starterkit Directories
+
+The `public` directory stores the `styles.css` file used to stylize elements of your plugin.
 
 The `src` directory stores the following files:
 
-- `index.ts`: This file acts as the entrypoint file (the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions).
+- `index.ts`: This file acts as the entrypoint file (the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions). View the script breakdown below.
 - `types.ts`: This file defines and exports type delcarations/definitions to be bundled with your code and be consumable by dependents.
+
+::: info
+You may only have one CSS and entrypoint file per plugin package.
+:::
 
 ### manifest.json
 
@@ -446,6 +474,6 @@ export const init = (caido: Caido) => {
 - The page is constructed by `caido.navigation.addPage`. The `addPage` method takes the `Page` and `body` variables as parameters.
 - The `init` function takes the `Caido` interface object as a parameter in order to access the API.
 - Within `init` the call `addPage(caido)` creates the page and makes it interactive by listening for events and updates the interface when needed.
-- Within `init` the call `caido.sidebar.registerItem("My plugin", Page, {icon: "fas fa-rocket",});` creates a plugin entry in the left-hand side menu of the application.
+- Within `init` the call `caido.sidebar.registerItem("My plugin", Page, {icon: "fas fa-rocket",});` creates a plugin entry in the left-hand side menu of the application. _For more icons and icon styles - visit [https://fontawesome.com/icons](https://fontawesome.com/icons)._
 
 :::
