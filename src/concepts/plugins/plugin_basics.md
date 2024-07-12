@@ -14,16 +14,32 @@ As Caido utilizes **client/server architecture** - inherently, this means plugin
 
 ## Plugin Packages
 
-A plugin is comprised of an installed **package** (_a collection of directories and files_). Everything from metadata properties, configuration details, dependency declarations, user-interface elements, function scripts, etc. are included in these packages.
+Plugins are installed through plugin packages which can contain one or more plugins. Everything from metadata properties, configuration details, dependency declarations, user-interface elements, function scripts, etc. are included in these packages.
 
 ::: info
 For documentation on the tooling files shared by all plugin starterkits offered by Caido - click [here](/concepts/plugins/plugin_tooling.md).
 :::
 
-### manifest.json
+### Manifest
 
-The `manifest.json` configuration file defines the plugin structure and also contains metadata used by the Caido installer. The properties, values and their necessity of inclusion vary dependent on their component association (_frontend or backend_).
+The `manifest.json` configuration file defines the plugin package structure and also contains metadata used by the Caido installer. The properties, values and their necessity of inclusion vary dependent on their component association (_frontend or backend_).
 
-### index.ts
+#### Manifest Contents
 
-The `index.ts` file is acts as the entrypoint file (_the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions_). Within this file - an `init` function is required in order to initialize the plugin.
+Within the first data object:
+
+- `id`: Must be **unique** and must only consist of **lowercase** letters, **numbers**, **hyphens** and **underscores** (_the order of which must satisfy the regex: `^[a-z]+(?:[_-][a-z0-9]+)*$`_). This property is **required**.
+- `name`: If not supplied, the `id` will be used as the `name`. This property is not subject to the same rules of the `id` property. This property is **optional**.
+- `version`: Versioning follows the `MAJOR.MINOR.PATCH` syntax. This property is **required**.
+- `description`: A description of the plugin. This property is **optional**.
+- `author`: Within this object are the `name`, `email` and `url` properties. These may be supplied for crediting purposes. This property is **optional**.
+
+Within the `plugins` array:
+
+- `kind`: Specifies the plugin type: `frontend` or `backend`. This property is **required**.
+- `id`: Must be **unique** and must only consist of **lowercase** letters, **numbers**, **hyphens** and **underscores** (_the order of which must satisfy the regex: `^[a-z]+(?:[_-][a-z0-9]+)*$`). This property is **required**.
+- `name`: If not supplied, the `id` will be used as the `name`. This property is not subject to the same rules of the `id` property. This property is **optional**.
+- `entrypoint`: Specifies the location of the primary script to be executed when the Caido application/plugin is launched. This property is **required**. **Only one entrypoint file per plugin package is allowed.**
+- `style`: Specifies the location of the CSS file to be used to stylize elements of your plugin. This property is **optional**. **Only one style file per plugin package is allowed.**
+- `backend`: This object contains the `id` of the associated backend plugin. This property is **required** when linking a frontend plugin to a backend plugin.
+- `runtime`: Specifies that JavaScript code will be executed. This property is **required** for backend plugins.

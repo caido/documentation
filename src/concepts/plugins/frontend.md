@@ -14,7 +14,7 @@ Frontend development allows you to:
 
 _For advanced documentation on this topic - click [here](./frontend_sdk.md)._
 
-`ui` - Used to create **cards** (_bordered boxes with padding around their content_), **wells** (_a rounded border around an element with a gray background color and some padding_) and buttons. Content options for each element are also provided. These elements provide a visually appealing way to sectionalize the user-interface of your plugin.
+`ui` - Used to create visual elements. Content options for each element are also provided. These elements provide a way to sectionalize the user-interface of your plugin.
 
 `scopes` - Used to set, create, update and delete **target scoping rules**, ensuring your plugin is directed at desired hosts.
 
@@ -50,12 +50,9 @@ The `public` directory stores the `styles.css` file used to stylize elements of 
 
 The `src` directory stores the following files:
 
-- `index.ts`: This file acts as the entrypoint file (the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions). View the script breakdown below.
-- `types.ts`: This file defines and exports type delcarations/definitions to be bundled with your code and be consumable by dependents.
+- `index.ts` file is acts as the entrypoint file (_the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions_). Within this file - an `init` function export is required in order to initialize the plugin.
 
-::: info
-You may only have one CSS and entrypoint file per plugin package.
-:::
+- `types.ts`: This file defines and exports type delcarations/definitions to be bundled with your code and be consumable by dependents.
 
 ### manifest.json
 
@@ -86,22 +83,6 @@ The example manifest file in the frontend starterkit is as follows:
 }
 
 ```
-
-Within the first data object:
-
-- **REQUIRED**: `id` - Must be **unique** and must only consist of **lowercase** letters, **numbers**, **hyphens** and **underscores** (_the order of which must satisfy the regex: `^[a-z]+(?:[_-][a-z0-9]+)*$`).
-- **OPTIONAL**: `name` - If not supplied, the `id` will be used as the `name`. This property is not subject to the same rules of the `id` property.
-- **REQUIRED**: `version` - Versioning follows the `MAJOR.MINOR.PATCH` syntax.
-- **OPTIONAL**: `description`
-- **OPTIONAL**: `author`
-
-Within the `plugins` array:
-
-- **REQUIRED**: `kind` - This property specifies the Plugin type: `frontend`, `backend` or `fullstack`.
-- **REQUIRED**: `id` - Must be **unique** and must only consist of **lowercase** letters, **numbers**, **hyphens** and **underscores** (_the order of which must satisfy the regex: `^[a-z]+(?:[_-][a-z0-9]+)*$`).
-- **OPTIONAL**: `name` - If not supplied, the `id` will be used as the `name`. This property is not subject to the same rules of the `id` property.
-- **REQUIRED**: `entrypoint` - This property specifies the location of the primary script to be executed when the Caido application/Plugin is launched.
-- **OPTIONAL**: `style` - This property specifies the location of the CSS file to be used to stylize elements of your Plugin.
 
 Additional information:
 
