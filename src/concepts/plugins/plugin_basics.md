@@ -22,9 +22,9 @@ For documentation on the tooling files shared by all plugin starterkits offered 
 
 ### Manifest
 
-The `manifest.json` configuration file defines the plugin package structure and also contains metadata used by the Caido installer. The properties, values and their necessity of inclusion vary dependent on their component association (_frontend or backend_).
+The `manifest.json` configuration file defines the plugin package structure and also contains metadata used by the Caido installer.
 
-#### Manifest Contents
+The properties, values and their necessity of inclusion vary dependent on their component association (_frontend or backend_).
 
 Within the first data object:
 

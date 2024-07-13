@@ -21,7 +21,7 @@ The file related to TypeScript within the starterkit repository is:
 
 ## Build Tool
 
-Once the package is developed, the package is processed by the [Vite](https://vitejs.dev/guide/) build tool. In general, a build tool automates the process of compiling, testing and packaging code into a deployable package - ensuring the plugin is ready for use and sharing.
+Once the package is developed, the code is processed by the [Vite](https://vitejs.dev/guide/) build tool. In general, a build tool automates the process of compiling, testing and packaging code into a deployable package - ensuring the plugin is ready for use and sharing.
 
 The file related to the Vite build tool within the starterkit repository is:
 
