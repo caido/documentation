@@ -7,6 +7,10 @@
 - **[Caido on Dockerhub](./user_guide/docker.md)** - running Caido in a Docker container.
 - **[Proxying Local Traffic](./user_guide/proxy_local.md)** - capturing localhost traffic.
 
+## Workflows
+
+- \*\*[JWT Decode](./workflows/jwt_decode.md) - Building a convert workflow to decode JWTs
+
 ## Contributions
 
 - **[Documentation](./contributions/documentation.md)** - contributing to Caido's documentation.
