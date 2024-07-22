@@ -2,9 +2,11 @@
 
 While plugins can be developed with raw JavaScript - Caido offers **plugin starterkits**, preassembled packages that also provide tooling to assist in development.
 
+The frontend starterkit can be found [here](https://github.com/caido/starterkit-plugin-frontend).
+
 ## Package Management
 
-Internally, Caido utilizes the [Pinned Node Package Manager(a.k.a. pnpm)](https://pnpm.io/) for plugin package management. In general, a package manager handles the installation, updating and removal of packages. This includes ensuring the correct dependency versions are installed and resolving and dependency conflicts between packages.
+Caido utilizes the [Performant Node Package Manager(a.k.a. pnpm)](https://pnpm.io/) for plugin package management. You have a couple choices of package management (_npm, yarn, pnpm, etc._) - we chose pnpm. Plugins do not have dependencies, they are self contained. The Javascript dependencies are bundled into them.
 
 The files related to package management within the starterkit repository are:
 

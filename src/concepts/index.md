@@ -2,6 +2,7 @@
 
 ## Essentials
 
+- **[CLI vs Desktop](./essentials/cli_vs_desktop.md)** - the differences between CLI and Desktop versions.
 - **[Instances](./essentials/instances.md)** - running/managing multiple Caido instances at once.
 - **[HTTPQL](./essentials/httpql.md)** - filtering requests and responses using HTTP Query Language.
 - **[Workflows](./essentials/workflows.md)** - automating input/output modifications.
