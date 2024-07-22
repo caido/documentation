@@ -43,3 +43,10 @@ Within the `plugins` array:
 - `style`: Specifies the location of the CSS file to be used to stylize elements of your plugin. This property is **optional**. **Only one style file per plugin package is allowed.**
 - `backend`: This object contains the `id` of the associated backend plugin. This property is **required** when linking a frontend plugin to a backend plugin.
 - `runtime`: Specifies that JavaScript code will be executed. This property is **required** for backend plugins.
+
+::: tip Additional information:
+
+- Multiple plugins are allowed in the array of each `manifest.json` file.
+- The first instance of the `name` property is the cosmetic plugin package name and is displayed in the [Plugins](/reference/features/workspace/plugins.md) table. If the array includes multiple plugins - additional instances of the `name` property are displayed next to the plugins when expanding the parent element by toggling the `>` icon to `∨`.
+- The `frontend` directory is generated upon the completion of the build process when using the Vite build tool.
+:::
