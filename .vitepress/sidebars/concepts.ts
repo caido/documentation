@@ -1,8 +1,7 @@
-import {
-    DefaultTheme
-} from "vitepress";
+import { DefaultTheme } from "vitepress";
 
-export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
+export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
+    {
         text: "Introduction",
         items: [{
             text: 'Directory',
@@ -12,10 +11,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
     {
         text: 'Essentials',
         items: [{
-                text: 'CLI vs Desktop',
-                link: '/concepts/essentials/cli_vs_desktop'
-            },
-            {
                 text: 'Instances',
                 link: '/concepts/essentials/instances'
             },
@@ -42,34 +37,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
             {
                 text: 'Layout',
                 link: '/concepts/essentials/layout'
-            }
-        ]
-    },
-    {
-        text: 'Plugins',
-        items: [{
-                text: 'Plugin Basics',
-                link: '/concepts/plugins/plugin_basics.md',
-                items: [{
-                    text: 'Tooling',
-                    link: '/concepts/plugins/plugin_tooling.md'
-                }]
-            },
-            {
-                text: 'Frontend',
-                link: '/concepts/plugins/frontend.md',
-                items: [{
-                    text: 'Frontend Plugin SDK',
-                    link: '/concepts/plugins/frontend_sdk.md'
-                }]
-            },
-            {
-                text: 'Backend',
-                link: '/concepts/plugins/backend.md',
-                items: [{
-                    text: 'Backend Plugin SDK',
-                    link: '/concepts/plugins/backend_sdk.md'
-                }]
             }
         ]
     },

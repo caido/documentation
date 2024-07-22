@@ -88,3 +88,18 @@ h4 {
   width: 100%;
   height: 100%;
 }
+
+.vignettes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  padding: 0.5rem;
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+  .vignettes {
+    grid-template-columns: 1fr;
+    /* Single column layout */
+  }
+}
