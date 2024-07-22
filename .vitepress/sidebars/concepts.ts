@@ -12,6 +12,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [{
     {
         text: 'Essentials',
         items: [{
+                text: 'CLI vs Desktop',
+                link: '/concepts/essentials/cli_vs_desktop'
+            },
+            {
                 text: 'Instances',
                 link: '/concepts/essentials/instances'
             },
