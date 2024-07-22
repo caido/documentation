@@ -13,7 +13,7 @@ To use Caido to intercept (and tamper with) your HTTP/S traffic, it is necessary
 
 <img alt="Downloading the CA Certificate." src="/_images/cert_instructions_new.png" center/>
 
-4. Download the certificate and follow the importation instructions provided within Caido. After you've successfully imported the certificate, your browser is now configured to proxy it's traffic through Caido.
+4. Download the certificate and follow the importation instructions provided within Caido. After you've successfully imported the certificate, your browser is now configured to proxy its traffic through Caido.
 
 ::: tip
 Ensure to select the importation instructions specific to your browser of choice.
