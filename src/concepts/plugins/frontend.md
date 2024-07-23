@@ -54,4 +54,4 @@ The `src` directory stores the following files:
 
 - `index.ts` file is acts as the entrypoint file (_the initial script that is loaded and executed, setting up the necessary resources and handling further logic and interactions with the plugin_). Within this file - an `init` function export is required in order to initialize the plugin. The init function receives a `caido` object of type `Caido` which is the SDK (_importable from `@caido/sdk-frontend`_) used to interact with the frontend application. Click [here](https://github.com/caido/sdk-frontend/blob/main/src/types/index.d.ts) for the full type definition.
 
-- `types.ts`: This file defines and exports type delcarations/definitions to be bundled with your code and be consumable by dependents.
+- `types.ts`: This file allows you the ability to declare new types usable in your plugin.
