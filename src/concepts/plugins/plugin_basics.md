@@ -4,7 +4,7 @@
 
 **Plugins** provide a way to enhance the functionality of the Caido application by allowing users to develop custom features and components. The ability to create and install plugins allows for modular extension - ensuring that your testing needs are met even if a feature is not available in the default installation.
 
-Conceptualize them as extensive [Workflows](/concepts/essentials/workflows.md). While they both provide task automation - plugin development offers a greater level of complexity.
+Conceptualize them as extensive [Workflows](/concepts/essentials/workflows.md). While they both provide task automation - plugin development offers a greater level of complexity and flexibility.
 
 ::: warning
 Plugins are community driven by Caido users. Since development and distribution are done in this 3rd-party sense - Caido makes no warranty on the safety, functionality or quality of any plugin installed.

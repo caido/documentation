@@ -4,11 +4,9 @@ _For general documentation on Plugins - click [here](/concepts/plugins/plugin_ba
 
 _For advanced documentation on Frontend Plugins - click [here](/concepts/plugins/frontend.md)._
 
-## What is Notebook?
+**Notebook** is a note taking plugin. The repository for Notebook can be found [here](https://github.com/caido-community/notebook).
 
-**Notebook** is a note taking plugin. The repository for Notebook can be found [here](https://github.com/ninjeeter/notebook).
-
-### manifest.json
+## manifest.json
 
 For a full breakdown on the properties of the manifest file - view the [Plugin Basics](/concepts/plugins/plugin_basics.md#manifest) page.
 
@@ -36,9 +34,9 @@ For a full breakdown on the properties of the manifest file - view the [Plugin B
 
 ```
 
-### types.ts
+## types.ts
 
-The Notebook `types.ts` file exports a type alias of `PluginStorage` to define the structure of the `notes` array.
+The Notebook `types.ts` file exports a type alias of `PluginStorage`. This is a custom type created to define the structure of the `notes` array.
 
 ::: tip types.ts
 
@@ -48,20 +46,21 @@ export type PluginStorage = {
 }
 ```
 
- Each note element within the array is an object that has the following properties:
+ Each note element within the array will be an object that has the following properties:
 
 - `datetime` - The date and time the note was stored of type `string`.
 - `note` - The note itself of type `string`.
 - `projectName` - The Project that the note was taken in of type `string`. This property is **optional**.
 :::
 
-### index.ts
+## index.ts
 
 The file first imports the `Caido` type which is the interface to the SDK and the `PluginStorage` type defined in the `types.ts` file.
 
 ::: tip index.ts
 
 ```ts
+// Imports.
 import type { Caido } from "@caido/sdk-frontend";
 
 import type { PluginStorage } from "./types";
@@ -74,6 +73,7 @@ Next, the `Page` variable stores the path for the plugin page.
 ::: tip index.ts
 
 ```ts
+// Creates path.
 const Page = "/notebook";
 ```
 
@@ -85,13 +85,13 @@ The `Commands` object has two command properties.
 ::: tip index.ts
 
 ```ts
+// Syntax of - identifier: "namespace.namespaceIdentifier".
 const Commands = {
   clear: "notebook.clear",
-  addNoteMenu: "notebook.addNoteMenu"
+  addNoteMenu: "notebook.addNoteMenu",
 };
 ```
 
-These commands are assigned an identifier and the namespace `notebook` plus a unique identifier.
 :::
 
 The `getNotes` function is responsible for retrieving the notes array from storage.
@@ -99,6 +99,7 @@ The `getNotes` function is responsible for retrieving the notes array from stora
 ::: tip index.ts
 
 ```ts
+// Get notes from storage.
 const getNotes = (caido: Caido): PluginStorage["notes"] => {
   const storage = caido.storage.get() as PluginStorage | undefined;
   if (storage && storage.notes) {
@@ -106,13 +107,13 @@ const getNotes = (caido: Caido): PluginStorage["notes"] => {
     return [...storage.notes];
   }
   return [];
-}
+};
 ```
 
 - The function takes the `caido` parameter of type `Caido` which represents the Caido SDK object and is used as the interface.
 - The return value of the function will be of type `PluginStorage["notes"]`.
 - It starts by calling the `caido.storage.get()` method to retrieve the current stored `notes` array.
-- If `storage` exists AND if it has a `notes` property it logs the retrieved notes to the console and returns a copy of the array using the spread operator `[...storage.notes]`. This copy ensures the array is persistent across multiple closing and openings of the Caido application. If there are no notes stored, the function returns an empty array.
+- If `storage` exists AND if it has a `notes` property it logs the retrieved notes to the console and returns a copy of the array using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `[...storage.notes]`. This copy ensures the array is persistent across multiple closing and openings of the Caido application. If there are no notes stored, the function returns an empty array.
 :::
 
 The `addNoteStorage` function is responsible for adding to the storage.
@@ -120,12 +121,18 @@ The `addNoteStorage` function is responsible for adding to the storage.
 ::: tip index.ts
 
 ```ts
-const addNoteStorage = (caido: Caido, datetime: string, note: string, projectName?: string) => {
+// Add note to storage.
+const addNoteStorage = (
+  caido: Caido,
+  datetime: string,
+  note: string,
+  projectName?: string
+) => {
   let storage = caido.storage.get() as PluginStorage | undefined;
   if (!storage) {
     storage = { notes: [] };
   }
-  
+
   const updatedNotes = [...storage.notes, { datetime, note, projectName }];
   caido.storage.set({ ...storage, notes: updatedNotes });
 
@@ -137,7 +144,7 @@ const addNoteStorage = (caido: Caido, datetime: string, note: string, projectNam
 - It takes the `caido`, `datetime`, `note` and optional `projectName` parameters.
 - It first checks if `storage` exist and creates an empty array if it doesn't.
 - The `updatedStorage` variable keeps the notes in the existing stored notes array and appends a new note object.
-- The `caido.storage.set()` method is called which updates the array with the new note.
+- The `caido.storage.set()` method is called which updates the array with the new note. Before calling this method - the plugin is solely working in the frontend environment. So, if you close the Caido application, the data will be lost. This method calls the backend and persists the new note. Storage uses a last-write-wins strategy, meaning that if you add a note in another browser tab it will be overwritten unless you have a `storage.onChange()` method call that syncs your local storage.
 - The added note data is then printed to the console.
 :::
 
@@ -146,6 +153,7 @@ Next an HTML table element is created.
 ::: tip index.ts
 
 ```ts
+// Global scope table.
 const table = document.createElement("table");
 table.id = "notesTable";
 ```
@@ -159,6 +167,7 @@ The `clear` function is responsible for clearing the table of all note entries.
 ::: tip index.ts
 
 ```ts
+// Resetting the page table.
 const clear = (caido: Caido) => {
   if (table) {
     const tbody = table.querySelector("tbody");
@@ -167,7 +176,7 @@ const clear = (caido: Caido) => {
     }
   }
   caido.storage.set({ notes: [] });
-}
+};
 ```
 
 - This will eventually be tied to the `clear command` as its handler function.
@@ -178,6 +187,7 @@ The async `addNoteMenu` function is responsible for awaiting notes to add to the
 ::: tip index.ts
 
 ```ts
+// Add note via prompt or highlight selecting text and selecting context menu option.
 const addNoteMenu = async (caido: Caido) => {
   let currentSelect = caido.window.getActiveEditor()?.getSelectedText();
 
@@ -189,14 +199,14 @@ const addNoteMenu = async (caido: Caido) => {
     const project = await caido.graphql.currentProject();
     const projectData = project?.currentProject;
     if (projectData) {
-      const projectName = projectData.name || 'No Project Selected';
+      const projectName = projectData.name || "No Project Selected";
       const datetime = new Date().toLocaleString();
       const row = table.insertRow();
       const datetimeCell = row.insertCell();
       const inputCell = row.insertCell();
 
       datetimeCell.textContent = `${datetime} Project: ${projectName}`;
-      datetimeCell.classList.add('datetime-cell');
+      datetimeCell.classList.add("datetime-cell");
       inputCell.textContent = currentSelect;
 
       // Add the note to storage.
@@ -208,7 +218,6 @@ const addNoteMenu = async (caido: Caido) => {
 
 - The editor panes are accessed using the `caido.window.getActiveEditor()?.getSelectedText();` method.
 - If no selection is made, a prompt window will appear asking the user to supply input.
-- Either note value options are stored in the `currentSelect` variable.
 - Once the value is received, if the note was taken while within a specific Caido [Project](/reference/features/workspace/projects.md) then the API call to get the current Project name is made via the `caido.graphql.currentProject()` method.
 - If you are currently within a Project, then the Project's name will be included in the `datetimeCell` of the table.
 - If you are not currently within a project, "No Project Selected" will be included instead.
@@ -220,7 +229,8 @@ The `addPage` function creates the tab's page.
 ::: tip index.ts
 
 ```ts
-const addPage = (caido: Caido) => {}
+// Plugin page construction.
+const addPage = (caido: Caido) => {
 ```
 
 - It takes the `caido` parameter.
@@ -232,47 +242,42 @@ Within the `addPage` function is the creation of HTML elements.
 ::: tip index.ts
 
 ```ts
-const headerText = document.createElement("h1");
-headerText.textContent = "Notebook";
-headerText.className = "center";
-```
+  // Header.
+  const headerText = document.createElement("h1");
+  headerText.textContent = "Notebook";
+  headerText.className = "center";
 
-Such as a header.
+  // Instructions.
+  const details = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = "Instructions";
+  summary.classList.add("center", "bold-brown");
+  details.appendChild(summary);
 
-```ts
-const details = document.createElement("details");
-const summary = document.createElement("summary");
-summary.textContent = "Instructions";
-summary.classList.add("center", "bold-brown");
-details.appendChild(summary);
+  const instructions = document.createElement("p");
+  instructions.innerHTML = `<span class="bold-brown">To add a note:</span><br>
+  1. Supply input in the textarea located at the bottom and click the <span class="light-brown">Add Note</span> button.<br>
+  2. Click the <span class="light-brown">>_ Commands</span> button located at the topbar in the upper-right corner. Search/Select <span class="light-brown">Add Note to Notebook</span>. Supply input in the prompt and click <span class="light-brown">OK</span>.<br>
+  3. Highlight select text within a request/response pane and open the context menu by right-clicking. Hover over the <span class="light-brown">Plugins</span> item and select <span class="light-brown">Add Note to Notebook</span>.<br>
+  4. <span class="light-brown">CTRL+C</span> and <span class="light-brown">CTRL+V</span> within request and response panes is available as well but <span class="red">ensure to deselect the text and unfocus the pane to avoid needing to restart the Caido application.</span><br>***Copying within panes using <span class="light-brown">Copy</span> from the right-click context menu is functional as normal.***<br>
+  <br>
+  <span class="bold-brown">To clear all notes:</span><br>
+  <span class="bold-red">***This will reset the notes in storage. This action cannot be undone.***</span><br>
+  1. Click the <span class="light-brown">>_ Commands</span> button located at the topbar in the upper-right corner. Search/Select <span class="light-brown">Clear Notes in Notebook</span>.`;
+  instructions.className = "center";
 
-const instructions = document.createElement("p");
-instructions.innerHTML = `<span class="bold-brown">To add a note:</span><br>
-1. Supply input in the textarea located at the bottom and click the <span class="light-brown">Add Note</span> button.<br>
-2. Click the <span class="light-brown">>_ Commands</span> button located at the topbar in the upper-right corner. Search/Select <span class="light-brown">Add Note to Notebook</span>. Supply input in the prompt and click <span class="light-brown">OK</span>.<br>
-3. Highlight select text within a request/response pane and open the context menu by right-clicking. Hover over the <span class="light-brown">Plugins</span> item and select <span class="light-brown">Add Note to Notebook</span>.<br>
-4. <span class="light-brown">CTRL+C</span> within request and response panes and <span class="light-brown">CTRL+V</span> within the textarea/prompt input field.<br>***Copying within panes using <span class="light-brown">Copy</span> from the right-click context menu is also an option.***<br>
-<br>
-<span class="bold-brown">To clear all notes:</span><br>
-<span class="bold-red">***This will reset the notes in storage. This action cannot be undone.***</span><br>
-1. Click the <span class="light-brown">>_ Commands</span> button located at the topbar in the upper-right corner. Search/Select <span class="light-brown">Clear Notes in Notebook</span>.`
-instructions.className = "center";
+  details.appendChild(instructions);
 
-details.appendChild(instructions);
-```
+  // Input textarea.
+  const textarea = document.createElement("textarea");
+  textarea.placeholder = "Enter note here...";
+  textarea.classList.add("text-area");
 
-A collapsible instuctions paragraph.
-
-```ts
-const textarea = document.createElement("textarea");
-textarea.placeholder = "Enter note here...";
-textarea.classList.add("text-area");
-
-
-const addNoteButton = caido.ui.button({
+  // `Add note.` button.
+  const addNoteButton = caido.ui.button({
     variant: "primary",
-    label: "Add Note"
-});
+    label: "Add Note",
+  });
 ```
 
 As well as a textarea input field and corresponding submit button.
@@ -283,26 +288,28 @@ The `addNoteButton` has an async handler function and is responsible for awaitin
 ::: tip index.ts
 
 ```ts
-addNoteButton.addEventListener("click", async () => {
-  const datetime = new Date().toLocaleString();
-  let inputValue = textarea.value;
+  addNoteButton.addEventListener("click", async () => {
+    const datetime = new Date().toLocaleString();
+    let inputValue = textarea.value;
 
-  if (inputValue) {
-    const project = await caido.graphql.currentProject();
-    const projectData = project?.currentProject;
-    const projectName = projectData?.name || 'No Project Selected';
-    const row = table.insertRow();
-    const datetimeCell = row.insertCell();
-    const inputCell = row.insertCell();
+    if (inputValue) {
+      const project = await caido.graphql.currentProject();
+      const projectData = project?.currentProject;
+      const projectName = projectData?.name || "No Project Selected";
+      const row = table.insertRow();
+      const datetimeCell = row.insertCell();
+      const inputCell = row.insertCell();
 
-    datetimeCell.textContent = `${datetime} Project: ${projectName}`;
-    datetimeCell.classList.add('datetime-cell');
-    inputCell.textContent = inputValue;
+      datetimeCell.textContent = `${datetime} Project: ${projectName}`;
+      datetimeCell.classList.add("datetime-cell");
+      inputCell.textContent = inputValue;
 
-    addNoteStorage(caido, datetime, inputValue, projectName);
+      // Add the note to storage.
+      addNoteStorage(caido, datetime, inputValue, projectName);
 
-    inputValue = "";
-    textarea.value = "";
+      // Clear textarea and reset value.
+      inputValue = "";
+      textarea.value = "";
     }
   });
 ```
@@ -321,21 +328,23 @@ A card is an element that consists of a header, body and footer. Since the UI in
 ::: tip index.ts
 
 ```ts
-const headerContainer = document.createElement("div");
-headerContainer.appendChild(headerText);
-headerContainer.appendChild(details);
+ // Combining elements into divs since card properties cannot accept arrays.
 
-const tableContainer = document.createElement("div");
-tableContainer.appendChild(table);
-tableContainer.classList.add("table-container");
+  const headerContainer = document.createElement("div");
+  headerContainer.appendChild(headerText);
+  headerContainer.appendChild(details);
 
-const buttonContainer = document.createElement("div");
-buttonContainer.appendChild(addNoteButton);
-buttonContainer.classList.add("button-container")
+  const tableContainer = document.createElement("div");
+  tableContainer.appendChild(table);
+  tableContainer.classList.add("table-container");
 
-const footerContainer = document.createElement("div");
-footerContainer.appendChild(textarea);
-footerContainer.appendChild(buttonContainer);
+  const buttonContainer = document.createElement("div");
+  buttonContainer.appendChild(addNoteButton);
+  buttonContainer.classList.add("button-container");
+
+  const footerContainer = document.createElement("div");
+  footerContainer.appendChild(textarea);
+  footerContainer.appendChild(buttonContainer);
 ```
 
 :::
@@ -345,11 +354,12 @@ The card propeties are then populated with the HTML elements that were previousl
 ::: tip index.ts
 
 ```ts
-const card = caido.ui.card({
-  header: headerContainer,
-  body: tableContainer,
-  footer: footerContainer
-});
+  // Card elements.
+  const card = caido.ui.card({
+    header: headerContainer,
+    body: tableContainer,
+    footer: footerContainer,
+  });
 ```
 
 :::
@@ -359,9 +369,11 @@ The `notebook` page is created, allowing Caido users to be able to navigate to i
 ::: tip index.ts
 
 ```ts
-caido.navigation.addPage(Page, {
-  body: card,
-});
+  // Create plugin page in left tab menu.
+  caido.navigation.addPage(Page, {
+    body: card,
+  });
+};
 ```
 
 - The `body` property stores the previously created card.
@@ -373,7 +385,7 @@ The `init` function is responsible for initializing the plugin.
 ::: tip index.ts
 
 ```ts
-export const init = (caido: Caido) => {}
+export const init = (caido: Caido) => {
 ```
 
 - The function also receives the `caido` parameter.
@@ -384,22 +396,24 @@ Within the `init` function is the following:
 ::: tip index.ts
 
 ```ts
-const notes = getNotes(caido);
-console.log("Current notes:", notes);
+  // Retrieve notes from storage.
+  const notes = getNotes(caido);
+  console.log("Current notes:", notes);
 ```
 
 The notes are retrieved from storage by calling the `getNotes(caido)` function and logged to the console.
 
 ```ts
-if (notes && notes.length > 0) {
-  notes.forEach((note) => {
-    const row = table.insertRow();;
-    const datetimeCell = row.insertCell();
-    const noteCell = row.insertCell();
-          
-    datetimeCell.textContent = `${note.datetime} Project: ${note.projectName}`;
-    datetimeCell.classList.add('datetime-cell');
-    noteCell.textContent = note.note;
+  // Populate table with stored notes.
+  if (notes && notes.length > 0) {
+    notes.forEach((note) => {
+      const row = table.insertRow();
+      const datetimeCell = row.insertCell();
+      const noteCell = row.insertCell();
+
+      datetimeCell.textContent = `${note.datetime} Project: ${note.projectName}`;
+      datetimeCell.classList.add("datetime-cell");
+      noteCell.textContent = note.note;
     });
   }
 ```
@@ -407,40 +421,46 @@ if (notes && notes.length > 0) {
 If the notes array exists in storage and the number of notes in the array is greater than zero, then the array is iterated through and each note is added to the table - ensuring notes taken in prior application sessions are included.
 
 ```ts
-caido.commands.register(Commands.clear, {
-  name: "Clear Notes in Notebook",
-  run: () => clear(caido),
-});
+  // Register commands.
+  // Commands are registered with a unique identifier and a handler function.
+  // The run function is called when the command is executed.
+  // These commands can be registered in various places like command palette, context menu, etc.
+  caido.commands.register(Commands.clear, {
+    name: "Clear Notes in Notebook",
+    run: () => clear(caido),
+  });
 
-caido.commands.register(Commands.addNoteMenu, {
-  name: "Add Note to Notebook",
-  run: () => addNoteMenu(caido),
-});
+  caido.commands.register(Commands.addNoteMenu, {
+    name: "Add Note to Notebook",
+    run: () => addNoteMenu(caido),
+  });
 ```
 
 The commands that were assigned identifiers in the beginning of the script are registered via the `caido.commands.register()` method and assigned a display name as well as their handler functions.
 
 ```ts
-caido.commandPalette.register(Commands.clear);
+  // Register command palette items.
+  caido.commandPalette.register(Commands.clear);
 
-caido.commandPalette.register(Commands.addNoteMenu);
+  caido.commandPalette.register(Commands.addNoteMenu);
 ```
 
 - The commands are then registered to the command palette via the `caido.commandPalette.register()` method.
 - The commands are now accessible via the `>_Command` button in the Caido application.
 
 ```ts
-caido.menu.registerItem({
-  type: "Request",
-  commandId: Commands.addNoteMenu,
-  leadingIcon: "fas fa-book"
-});
+  // Register context menu options.
+  caido.menu.registerItem({
+    type: "Request",
+    commandId: Commands.addNoteMenu,
+    leadingIcon: "fas fa-book",
+  });
 
-caido.menu.registerItem({
-  type: "Response",
-  commandId: Commands.addNoteMenu,
-  leadingIcon: "fas fa-book"
-});
+  caido.menu.registerItem({
+    type: "Response",
+    commandId: Commands.addNoteMenu,
+    leadingIcon: "fas fa-book",
+  });
 ```
 
 - The commands are then made available within the right-click context menu via the `caido.menu.registerItem()` method.
@@ -462,3 +482,95 @@ caido.sidebar.registerItem("Notebook", Page, {
 
 - The tab in the left-hand menu of the Caido application is registered via the `caido.sidebar.registerItem()` method.
 - The `sidebar` takes a `name`, `path` and optional additional `options` properties (_the `icon` property is used by Notebook to display a book icon in the tab_). Again, icons can be found at [https://fontawesome.com/icons](https://fontawesome.com/icons).
+:::
+
+## style.css
+
+::: tip style.css
+
+```css
+/* Preserves line breaks and wraps lines that exceed content width. */
+#instructions {
+  white-space: pre-line;
+}
+
+#notesTable {
+  width: 100%;
+}
+
+/* Allow user to select text. */
+#notesTable td {
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+/* Settings for the datetime column rows. */
+#notesTable td:nth-child(1) {
+  width: 200px;
+  white-space: pre-wrap;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Settings for the note column rows. */
+#notesTable td:nth-child(2) {
+  width: auto;
+  white-space: pre-line;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* Expands width of textarea input to fill width. */
+.text-area {
+  width: 100%;
+  resize: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Settings for the table. */
+.table-container {
+  overflow: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Border to separate table elements. */
+.table-container table td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bold-brown {
+  font-weight: bold;
+  color: #b49566;
+}
+
+.red {
+  color: #f58e97;
+}
+
+.bold-red {
+  font-weight: bold;
+  color: #f58e97;
+}
+
+.light-brown {
+  color: #e9c38b;
+}
+
+/* Moves the datetime and Project name to the top of the table entry. */
+.datetime-cell {
+  vertical-align: top;
+  color: #d1bfa5;
+}
+```
+
+:::
