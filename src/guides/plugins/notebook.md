@@ -102,18 +102,14 @@ The `getNotes` function is responsible for retrieving the notes array from stora
 // Get notes from storage.
 const getNotes = (caido: Caido): PluginStorage["notes"] => {
   const storage = caido.storage.get() as PluginStorage | undefined;
-  if (storage && storage.notes) {
-    console.log("Retrieved notes from storage: ", storage.notes);
-    return [...storage.notes];
-  }
-  return [];
+  return storage?.notes ?? [];
 };
 ```
 
 - The function takes the `caido` parameter of type `Caido` which represents the Caido SDK object and is used as the interface.
 - The return value of the function will be of type `PluginStorage["notes"]`.
 - It starts by calling the `caido.storage.get()` method to retrieve the current stored `notes` array.
-- If `storage` exists AND if it has a `notes` property it logs the retrieved notes to the console and returns a copy of the array using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `[...storage.notes]`. This copy ensures the array is persistent across multiple closing and openings of the Caido application. If there are no notes stored, the function returns an empty array.
+- The `?.` operator checks if `storage` is not null/undefined before attempting to access the `notes` property. If the `notes` property exists, its value is returned. Otherwise, if the `notes` property does not exist or is null/undefined - an empty array is returned.
 :::
 
 The `addNoteStorage` function is responsible for adding to the storage.
@@ -122,30 +118,24 @@ The `addNoteStorage` function is responsible for adding to the storage.
 
 ```ts
 // Add note to storage.
-const addNoteStorage = (
+const addNoteStorage = async (
   caido: Caido,
   datetime: string,
   note: string,
-  projectName?: string
+  projectName?: string,
 ) => {
-  let storage = caido.storage.get() as PluginStorage | undefined;
-  if (!storage) {
-    storage = { notes: [] };
-  }
-
-  const updatedNotes = [...storage.notes, { datetime, note, projectName }];
-  caido.storage.set({ ...storage, notes: updatedNotes });
+  const currentNotes = getNotes(caido);
+  const updatedNotes = [...currentNotes, { datetime, note, projectName }];
+  await caido.storage.set({ notes: updatedNotes });
 
   // Print added note to console.
   console.log("Added Note:", { datetime, note, projectName });
 };
 ```
 
-- It takes the `caido`, `datetime`, `note` and optional `projectName` parameters.
-- It first checks if `storage` exist and creates an empty array if it doesn't.
-- The `updatedStorage` variable keeps the notes in the existing stored notes array and appends a new note object.
-- The `caido.storage.set()` method is called which updates the array with the new note. Before calling this method - the plugin is solely working in the frontend environment. So, if you close the Caido application, the data will be lost. This method calls the backend and persists the new note. Storage uses a last-write-wins strategy, meaning that if you add a note in another browser tab it will be overwritten unless you have a `storage.onChange()` method call that syncs your local storage.
-- The added note data is then printed to the console.
+- It first calls the `currentNotes` function to retrieve existing notes/return an empty array.
+- The `updatedStorage` variable keeps the notes in the existing stored notes array and appends a new note object using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `[...storage.notes]`.
+- The `caido.storage.set()` method is called which updates the array with the new note. Before calling this method - the plugin is solely working in the frontend environment. So, if you close the Caido application, the data will be lost. This method calls the backend and persists the new note. Storage uses a last-write-wins strategy, meaning that if you add a note in another browser tab it will be overwritten unless you have a `storage.onChange()` method call that syncs your local storage. This `storage.onChange()` method call appears later in the script.
 :::
 
 Next an HTML table element is created.
@@ -201,16 +191,9 @@ const addNoteMenu = async (caido: Caido) => {
     if (projectData) {
       const projectName = projectData.name || "No Project Selected";
       const datetime = new Date().toLocaleString();
-      const row = table.insertRow();
-      const datetimeCell = row.insertCell();
-      const inputCell = row.insertCell();
-
-      datetimeCell.textContent = `${datetime} Project: ${projectName}`;
-      datetimeCell.classList.add("datetime-cell");
-      inputCell.textContent = currentSelect;
 
       // Add the note to storage.
-      addNoteStorage(caido, datetime, currentSelect, projectName);
+      await addNoteStorage(caido, datetime, currentSelect, projectName);
     }
   }
 };
@@ -296,16 +279,9 @@ The `addNoteButton` has an async handler function and is responsible for awaitin
       const project = await caido.graphql.currentProject();
       const projectData = project?.currentProject;
       const projectName = projectData?.name || "No Project Selected";
-      const row = table.insertRow();
-      const datetimeCell = row.insertCell();
-      const inputCell = row.insertCell();
-
-      datetimeCell.textContent = `${datetime} Project: ${projectName}`;
-      datetimeCell.classList.add("datetime-cell");
-      inputCell.textContent = inputValue;
 
       // Add the note to storage.
-      addNoteStorage(caido, datetime, inputValue, projectName);
+      await addNoteStorage(caido, datetime, inputValue, projectName);
 
       // Clear textarea and reset value.
       inputValue = "";
@@ -315,7 +291,6 @@ The `addNoteButton` has an async handler function and is responsible for awaitin
 ```
 
 - The function will execute upon the `addNoteButton` being clicked.
-- The note supplied in the textarea input field is stored in the `inputValue` variable.
 - Once the value is received, if the note was taken while within a specific Caido [Project](/reference/features/workspace/projects.md) then the API call to get the current Project name is made via the `caido.graphql.currentProject()` method.
 - If you are currently within a Project, then the Project's name will be included in the `datetimeCell` of the table.
 - If you are not currently within a project, "No Project Selected" will be included instead.
@@ -380,6 +355,37 @@ The `notebook` page is created, allowing Caido users to be able to navigate to i
 - Now the page just awaits registration.
 :::
 
+The `displayNotes` function populates the table with notes.
+
+::: tip index.ts
+
+```ts
+const displayNotes = (notes: PluginStorage["notes"] | undefined) => {
+  const tbody = table.querySelector("tbody");
+  if (tbody) {
+    table.textContent = "";
+  }
+
+  if (!notes) {
+    return;
+  }
+
+  notes.forEach((note) => {
+    const row = table.insertRow();
+    const datetimeCell = row.insertCell();
+    const noteCell = row.insertCell();
+
+    datetimeCell.textContent = `${note.datetime} Project: ${note.projectName}`;
+    datetimeCell.classList.add("datetime-cell");
+    noteCell.textContent = note.note;
+  });
+};
+```
+
+- The function takes the array of notes and iterates through each note element.
+- For each note element, a table row is added and populated with the `datetimeCell` and `noteCell`.
+:::
+
 The `init` function is responsible for initializing the plugin.
 
 ::: tip index.ts
@@ -405,20 +411,16 @@ The notes are retrieved from storage by calling the `getNotes(caido)` function a
 
 ```ts
   // Populate table with stored notes.
-  if (notes && notes.length > 0) {
-    notes.forEach((note) => {
-      const row = table.insertRow();
-      const datetimeCell = row.insertCell();
-      const noteCell = row.insertCell();
+  displayNotes(notes);
 
-      datetimeCell.textContent = `${note.datetime} Project: ${note.projectName}`;
-      datetimeCell.classList.add("datetime-cell");
-      noteCell.textContent = note.note;
-    });
-  }
+  caido.storage.onChange((value) => {
+    displayNotes((value as PluginStorage | undefined)?.notes);
+  });
 ```
 
-If the notes array exists in storage and the number of notes in the array is greater than zero, then the array is iterated through and each note is added to the table - ensuring notes taken in prior application sessions are included.
+- The `displayNotes` function is called to populate the table with notes.
+- The `onChange` method is used to register a callback function that will be executed whenever the value of the storage changes. This method ensures that data persists across different sessions (_such as when you add a note in another browser tab_) by syncing local storage. Without the `onChange` method, notes would be overwritten by different sessions.
+- _Conceptual explanation_: Caido is open in two browser tabs on 127.0.0.1:8080. Tab 1 has Note A. Tab 2 has Note A and Note B. The server knows about Note A and Note B. Without the `onChange` method - if Tab 1 adds its own Note B, the original Note B will be overwritten.
 
 ```ts
   // Register commands.
