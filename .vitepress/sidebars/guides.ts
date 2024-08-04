@@ -32,6 +32,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Plugins",
+    items: [
+      {
+        text: "Notebook",
+        link: "/guides/plugins/notebook"
+      },
+    ],
+  },
+  {
     text: "Workflows",
     items: [
       {
