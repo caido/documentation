@@ -27,10 +27,6 @@ The `Desktop` application has some advantages over the `CLI`:
 - You can record multiple Caido [Instances](/concepts/essentials/instances) in one place.
 - You can launch pre-configured browsers on your desktop.
 
-::: warning
-We are currently in the process of re-writing the `Desktop` application to better support our `Linux` users. Currently, we suggest people use the `CLI` on `Linux`.
-:::
-
 <img width="800" alt="Desktop" src="/_images/cli_vs_desktop_2.png" center no-shadow/>
 
 ## Conclusion
