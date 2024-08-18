@@ -47,6 +47,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "JWT Decode",
         link: "/guides/workflows/jwt_decode",
       },
+      {
+        text: "Add Header & Resend Request",
+        link: "/guides/workflows/jwt_decode",
+      },
     ],
   },
   {
