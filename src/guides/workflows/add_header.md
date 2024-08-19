@@ -31,14 +31,14 @@ The JSDoc comments note the types of the parameters and return value.
 
 - This function will take the `input` and `sdk` parameters. The `SDK` object is an interface to the Caido backend.
 - The `input` object is a `HttpInput` object, which represents a request and its associated reponse.
-- The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a `byte` value or return `undefined`.
+- The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a [byte](/reference/workflows/sdk.html#bytes) value or return `undefined`.
 :::
 
 ## Creating the JavaScript Node
 
 <img alt="The Workflow environment." src="/_images/build.png" center/>
 
-The function is exported so it can be executed by QuickJS, the JavaScript engine used by Caido.
+The function is exported so it can be executed by QuickJS, the [JavaScript engine used by Caido](/concepts/essentials/workflows/js_in_caido.md).
 
 ::: tip 2.
 
@@ -81,6 +81,7 @@ We must wait for the request to be sent and response to be returned before using
     let resend = await sdk.requests.send(spec);
 
     if (resend.response) {
+      sdk.console.log("Response to Add Header & Resend Request Workflow received.")
       let finding = {
         title: `Custom Header Passive Workflow.`,
         description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,
