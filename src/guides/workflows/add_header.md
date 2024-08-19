@@ -10,7 +10,7 @@ For this Workflow, the overall Node layout will be:
 
 - The `On intercept request` will output `$on_intercept_request.request` which represents the request that passed through the Caido proxy.
 - The request will be sent to the `In Scope` Node. This will check if the request is within your current scope.
-- If the request is within scope it will be passed to the `JavaScript` Node. If it is not - the Workflow be exited.
+- If the request is within scope it will be passed to the `JavaScript` Node. If it is not - the Workflow will end.
 - Once the request has been processed by the script in the `JavaScript Node`, the Workflow will come to an end.
 
 ## Typing
