@@ -69,7 +69,7 @@ That's it! Now you should have a nice JWT Decoder all ready to use as a Convert 
 The full Workflow is provided below, ready to be imported.
 
 <details>
-<summary>Full workflow</summary>
+<summary>Full Workflow</summary>
 
 ```json
 {

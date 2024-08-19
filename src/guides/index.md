@@ -14,6 +14,7 @@
 ## Workflows
 
 - **[JWT Decode](./workflows/jwt_decode.md)** - Building a Convert Workflow to decode JWTs.
+- **[Add Header & Send Request](./workflows/add_header.md)** - Building a Passive Workflow that will add a request header and resend the request.
 
 ## Contributions
 
