@@ -31,7 +31,7 @@ The JSDoc comments note the types of the parameters and return value.
 
 - This function will take the `input` and `sdk` parameters. The `SDK` object is an interface to the Caido backend.
 - The `input` object is a `HttpInput` object, which represents a request and its associated reponse.
-- The type alias of `{MaybePromise<Data | undefined>}` handles both synchhronous and asynchronous values. It will either return a `byte` value or return `undefined`.
+- The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a `byte` value or return `undefined`.
 :::
 
 ## Creating the JavaScript Node
