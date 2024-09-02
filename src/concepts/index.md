@@ -13,12 +13,14 @@
 
 ## Plugins
 
-- **[Plugin Basics](./plugins/plugin_basics.md)** - foundational knowledge on Plugins.
-- **[Plugin Tooling](./plugins/plugin_tooling.md)** - tools for the ease of Plugin development.
-- **[Plugin Frontend](./plugins/frontend.md)** - the frontend component.
-- **[Frontend SDK](./plugins/frontend_sdk.md)** - Frontend Software Development Kit.
-- **[Plugin Backend](./plugins/backend.md)** - the backend component.
-- **[Backend SDK](./plugins/backend_sdk.md)** - Backend Software Development Kit.
+- **[Basics](./plugins/plugin_basics.md)** - foundational knowledge on Plugins.
+  - **[Frontend](./plugins/frontend.md)** - the frontend component
+  - **[(WIP) Backend](./plugins/backend.md)** - the backend component.
+- **[Tooling](./plugins/plugin_tooling.md)** - tools for the ease of Plugin development.
+  - **[(WIP) SDK Frontend](./plugins/frontend_sdk.md)** - Frontend Software Development Kit.
+  - **[(WIP SDK Backend](./plugins/backend_sdk.md)** - Backend Software Development Kit.
+- **[Store](./plugins/store.md)** - how to publish to the store.
+  - **[Developer Policy](./plugins/developer_policy.md)** - developper policy.
 
 ## Internals
 
