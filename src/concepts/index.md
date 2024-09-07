@@ -13,17 +13,17 @@
 
 ## Plugins
 
-- **[Basics](./plugins/plugin_basics.md)** - foundational knowledge on Plugins.
-  - **[Frontend](./plugins/frontend.md)** - the frontend component
-  - **[(WIP) Backend](./plugins/backend.md)** - the backend component.
+- **[Basics](./plugins/plugin_basics.md)** - foundational knowledge on plugins.
+  - **[Frontend](./plugins/frontend.md)** - the frontend component.
+  - **[Backend](./plugins/backend.md)** - the backend component.
+- **[Frontend SDK](./plugins/frontend_sdk.md)** - frontend Software Development Kit.
+- **[Backend SDK](./plugins/backend_sdk.md)** - backend Software Development Kit.
 - **[Tooling](./plugins/plugin_tooling.md)** - tools for the ease of Plugin development.
-  - **[(WIP) SDK Frontend](./plugins/frontend_sdk.md)** - Frontend Software Development Kit.
-  - **[(WIP SDK Backend](./plugins/backend_sdk.md)** - Backend Software Development Kit.
 - **[Store](./plugins/store.md)** - how to publish to the store.
   - **[Developer Policy](./plugins/developer_policy.md)** - developper policy.
 
 ## Internals
 
 - **[Files: _Caido Generated_](./internals/files.md)** - inspecting the files that Caido generates.
-- **[Cloud](./internals/cloud.md)** - Cloud service information.
+- **[Cloud](./internals/cloud.md)** - cloud service information.
 - **[Authentication](./internals/authentication.md)** - authentication information.

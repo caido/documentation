@@ -61,24 +61,22 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
             link: "/concepts/plugins/frontend",
           },
           {
-            text: "(WIP) Backend",
+            text: "Backend",
             link: "/concepts/plugins/backend",
           },
         ],
       },
       {
+        text: "Frontend SDK",
+        link: "/concepts/plugins/frontend_sdk",
+      },
+      {
+        text: "Backend SDK",
+        link: "/concepts/plugins/backend_sdk",
+      },
+      {
         text: "Tooling",
         link: "/concepts/plugins/plugin_tooling",
-        items: [
-          {
-            text: "(WIP) SDK Frontend",
-            link: "/concepts/plugins/frontend_sdk",
-          },
-          {
-            text: "(WIP) SDK Backend",
-            link: "/concepts/plugins/backend_sdk",
-          },
-        ],
       },
       {
         text: "Store",

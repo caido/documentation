@@ -22,13 +22,15 @@ _For advanced documentation on this topic - click [here](./frontend_sdk.md)._
 
 `sdk.findings` - Used to create [Findings](/reference/features/logging/findings.md).
 
-`sdk.commands` - Used to register **actions** to expose functionality, bind actions to the user-interface and implement business logic.
+`sdk.commands` - Used to register actions to expose functionality, bind actions to the user-interface and implement business logic.
 
-`sdk.menu` - Used to register right-click **context menu** actions/options and create a plugin specific **settings page**, allowing quick access to your plugin functionality.
+`sdk.menu` - Used to register right-click context menu actions/options and create a plugin specific settings page, allowing quick access to your plugin functionality.
 
-`sdk.window` - Used to interact with **text** within the application environment, allowing text selection, replacement, read permission designations, focusing and editor related messaging.
+`sdk.window` - Used to interact with text within the application environment, allowing text selection, replacement, read permission designations, focusing and editor related messaging.
 
-`sdk.storage` - Used to **persist data** across different sessions or instances.
+`sdk.storage` - Used to persist data across different sessions or instances.
+
+`sdk.shortcuts` - Used to register a command shortcut.
 
 ::: info
 Caido has heavily referenced [Visual Studio Code's Command Model](https://code.visualstudio.com/api/extension-guides/command).

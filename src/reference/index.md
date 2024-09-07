@@ -39,7 +39,7 @@
 - **[Files: _User Uploads_](./features/workspace/files.md)** - uploading files to Caido for use/reuse.
 - **[Plugins](./features/workspace/plugins.md)** - installing and managing plugin packages.
 - **[Projects](./features/workspace/projects.md)** - organizing your assessments.
-- **[Backups](./features/workspace/backups.md)** - creating Backup files of your Projects/recovering Projects from Backup files.
+- **[Backups](./features/workspace/backups.md)** - creating backup files of your Projects/recovering Projects from backup files.
 
 ## Plugins
 

@@ -19,6 +19,10 @@ This creates a page of which the contents are the [card](/concepts/plugins/front
 
 The `topbar` property is optional and appears to the right of the Caido logo in the top-left corner.
 
+::: warning
+The inclusion of a topbar will remove the Browser button, >_Commands button, Forwarding/Queuing button, Project Dropdown Menu and Account Menu from the top-right corner of the Caido UI in your plugin page.
+:::
+
 ### To navigate to a page:
 
 ``` ts
@@ -162,15 +166,11 @@ All properties are optional. The value of each property is a defined HTML elemen
 const reqEditor = sdk.ui.httpRequestEditor();
 ```
 
-This creates a request pane.
-
 ### To create a response editor:
 
 ``` ts
 const respEditor = sdk.ui.httpResponseEditor();
 ```
-
-This creates a response pane.
 
 ## scopes
 
@@ -255,7 +255,7 @@ Used to register actions to expose functionality, bind actions to the user-inter
 ### To register a command:
 
 ``` ts
-sdk.commands.register('newCommand',{
+sdk.commands.register('hello',{
     name: "Print to console.",
     run: () => console.log("Hello world!"),
     group: "Custom Commands",
@@ -362,7 +362,7 @@ export type CaidoSDK = Caido<API>;
 const createPage = (sdk: CaidoSDK) => {
   const messageButton = sdk.ui.button({
     variant: "primary",
-    label: "Add Note",
+    label: "Message Button",
   });
 
   messageButton.addEventListener("click", async () => {
@@ -430,24 +430,48 @@ export const init = (sdk: CaidoSDK) => {
 
 Used to persist data across different sessions or instances.
 
-First create a data type:
+First define a data type in the frontend `types.ts` file:
 
 ``` ts
 export type PluginStorage = {
-  notes: { datetime: string; note: string; projectName?: string; comment?: string; }[];
+  count: number;
 }
 ```
 
 ### To store items:
 
 ``` ts
+const increment = (sdk: CaidoSDK) => {
+  const count = getCount(sdk);
+  sdk.storage.set({ count: count + 1 });
+}
+
+const decrement = async (sdk: CaidoSDK) => {
+  const count = getCount(sdk);
+  sdk.storage.set({ count: count - 1 });
+}
 ```
 
 ### To retrieve stored items:
 
 ``` ts
-export const getNotes = (sdk: CaidoSDK) => {
+const getCount = (sdk: CaidoSDK) => {
   const storage = sdk.storage.get() as PluginStorage | undefined;
-  return storage?.notes ?? [];
-};
+
+  if (storage) {
+    return storage.count;
+  }
+
+  return 0;
+}
 ```
+
+## shortcuts
+
+Used to register a command shortcut.
+
+``` ts
+sdk.shortcuts.register('hello', ['Ctrl+Z'])
+```
+
+This registers a shortcut of CRTL+Z to execute the previously created `hello` command.
