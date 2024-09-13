@@ -25,5 +25,7 @@
 ## Internals
 
 - **[Files: _Caido Generated_](./internals/files.md)** - inspecting the files that Caido generates.
+- **[GraphQL](./internals/graphql.md)** - information about Caido GraphQL API.
+- **[Download](./internals/download.md)** - download links information.
 - **[Cloud](./internals/cloud.md)** - Cloud service information.
 - **[Authentication](./internals/authentication.md)** - authentication information.

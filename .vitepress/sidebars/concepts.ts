@@ -104,6 +104,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/internals/graphql",
       },
       {
+        text: "Download",
+        link: "/concepts/internals/download",
+      },
+      {
         text: "Cloud",
         link: "/concepts/internals/cloud",
       },
