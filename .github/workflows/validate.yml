@@ -1,16 +1,13 @@
-name: Lint
+name: Lint & Build
 on:
   pull_request:
-    paths:
-      - '**.md'
 
 concurrency:
-  group: lint-${{ github.ref_name }}
+  group: validate-${{ github.ref_name }}
   cancel-in-progress: true
 
 env:
   CAIDO_PNPM_VERSION: 9
-
 
 jobs:
   lint:
@@ -20,10 +17,21 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Lint
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.CAIDO_PNPM_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@510b996878fc0d1a46c8a04ec86b06dbfba09de7 # v15
         with:
-          globs: '**/*.md'
+          globs: 'src/**/*.md'
+
+      - name: Lint JS
+        run: pnpm lint:js
 
   build:
     runs-on: ubuntu-latest
@@ -33,7 +41,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@v4
         with:
           version: ${{ env.CAIDO_PNPM_VERSION }}
 
@@ -42,5 +50,3 @@ jobs:
 
       - name: Run build
         run: pnpm build
-
-

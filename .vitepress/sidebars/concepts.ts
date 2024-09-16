@@ -1,4 +1,4 @@
-import { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
   {
@@ -50,49 +50,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Plugins",
-    items: [
-      {
-        text: "Basics",
-        link: "/concepts/plugins/plugin_basics",
-        items: [
-          {
-            text: "Frontend",
-            link: "/concepts/plugins/frontend",
-          },
-          {
-            text: "(WIP) Backend",
-            link: "/concepts/plugins/backend",
-          },
-        ],
-      },
-      {
-        text: "Tooling",
-        link: "/concepts/plugins/plugin_tooling",
-        items: [
-          {
-            text: "(WIP) SDK Frontend",
-            link: "/concepts/plugins/frontend_sdk",
-          },
-          {
-            text: "(WIP) SDK Backend",
-            link: "/concepts/plugins/backend_sdk",
-          },
-        ],
-      },
-      {
-        text: "Store",
-        link: "/concepts/plugins/store",
-        items: [
-          {
-            text: "Developer Policy",
-            link: "/concepts/plugins/developer_policy",
-          },
-        ],
-      },
-    ],
-  },
-  {
     text: "Internals",
     items: [
       {
@@ -114,6 +71,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Authentication",
         link: "/concepts/internals/authentication",
+      },
+      {
+        text: "Developer",
+        link: "https://developer.caido.io",
       },
     ],
   },
