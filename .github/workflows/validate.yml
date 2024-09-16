@@ -2,6 +2,10 @@ name: Lint & Build
 on:
   pull_request:
 
+  push:
+    branches:
+      - 'main'
+
 concurrency:
   group: validate-${{ github.ref_name }}
   cancel-in-progress: true
