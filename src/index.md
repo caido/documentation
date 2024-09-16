@@ -26,5 +26,9 @@ hero:
     - theme: alt
       text: Concepts
       link: /concepts/
----
 
+features:
+  - icon: 🛠️
+    title: Looking for the developer documentation? Click here
+    link: https://developer.caido.io
+---

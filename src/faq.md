@@ -12,7 +12,7 @@ You can check our [website](https://caido.io) to stay informed about the new fea
 
 ## Is Caido open source?
 
-Caido is not currently open source, but we have plans to offer an API for open source plugin development. We also employ standard open formats whenever possible.
+Caido is not currently open source, but we have plans to offer an API for [open source plugin development](https://developer.caido.io/). We also employ standard open formats whenever possible.
 
 ## On how many devices can I install Caido?
 

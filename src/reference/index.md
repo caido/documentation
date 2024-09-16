@@ -41,12 +41,6 @@
 - **[Projects](./features/workspace/projects.md)** - organizing your assessments.
 - **[Backups](./features/workspace/backups.md)** - creating Backup files of your Projects/recovering Projects from Backup files.
 
-## Plugins
-
-- **[Custom CSS](./plugins/custom_css.md)** - customizing Caido's UI with your own CSS code.
-- **[Custom JavaScript](./plugins/custom_js.md)** - `WORK IN PROGESS`
-- **[Custom Workflow Nodes](./plugins/custom_workflow_nodes.md)** - `WORK IN PROGRESS`
-
 ## Workflows
 
 - **[Workflows](./workflows/workflows.md)** - Caido Workflows.
