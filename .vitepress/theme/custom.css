@@ -5,6 +5,7 @@
 
   --vp-button-brand-active-bg: var(--vp-c-brand-3);
 
+  --vp-home-features-title-font-size: 20px;
 }
 
 @media (min-width: 1536px) {

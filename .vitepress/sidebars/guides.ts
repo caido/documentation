@@ -1,4 +1,4 @@
-import { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export const guidesSidebar: DefaultTheme.SidebarItem[] = [
   {
@@ -28,15 +28,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Proxying Local Traffic",
         link: "/guides/user_guide/proxy_local",
-      },
-    ],
-  },
-  {
-    text: "Plugins",
-    items: [
-      {
-        text: "Notebook",
-        link: "/guides/plugins/notebook"
       },
     ],
   },

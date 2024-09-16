@@ -17,3 +17,9 @@ These packages expand Caido's functionality, offering a means to futher customiz
 ::: info
 If at least one Plugin is enabled - a new `Plugins` section within the left-hand side menu in Caido will be generated. From here, you can select specific Plugins to access additional information/functionality/usage instructions/etc.
 :::
+
+## Developing Plugins
+
+Caido offers a full frontend and backend SDK to develop your own plugins!
+
+Head over to our [developer documentation](https://developer.caido.io) to learn more.

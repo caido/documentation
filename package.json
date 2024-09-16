@@ -1,18 +1,27 @@
 {
   "name": "documentation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Caido User Documentation",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "lint": "markdownlint-cli2 'src/**/*.md'"
+    "lint": "pnpm lint:js && pnpm lint:md",
+    "lint:js": "ESLINT_ENV=production eslint ./.vitepress -c ./eslint.config.mjs --max-warnings 0",
+    "lint:md": "markdownlint-cli2 'src/**/*.md'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Caido Labs Inc. <dev@caido.io>",
+  "license": "CC-BY-4.0",
   "devDependencies": {
-    "vitepress": "^1.2.2"
+    "eslint": "9.10.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-vue": "9.27.0",
+    "markdownlint-cli2": "0.14.0",
+    "typescript": "5.6.2",
+    "typescript-eslint": "8.5.0",
+    "vitepress": "1.2.2",
+    "vue-eslint-parser": "9.4.3"
   }
 }

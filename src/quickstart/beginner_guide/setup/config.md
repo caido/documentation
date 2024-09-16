@@ -36,9 +36,7 @@ Download a rendering engine in order to view a visual representation of a respon
 
 Customize Caido by writing your own CSS/JavaScript.
 
-_For advanced documentation on customizing Caido with CSS - click [here](/reference/plugins/custom_css.md)._
-
-_For advanced documentation on customizing Caido with JavaScript - click [here](/reference/plugins/custom_js.md)._ `WORK IN PROGRESS`
+_For advanced documentation on customizing Caido - visit our [Developer Documentation](https://developer.caido.io/)._
 
 ## Creating Your First Project
 
