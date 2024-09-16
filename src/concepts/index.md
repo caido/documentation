@@ -11,17 +11,6 @@
 - **[Tabs](./essentials/tabs.md)** - managing/organizing your workspace using tabs in Replay and Automate.
 - **[Layout](./essentials/layout.md)** - customizing the user interface layout of Caido.
 
-## Plugins
-
-- **[Basics](./plugins/plugin_basics.md)** - foundational knowledge on plugins.
-  - **[Frontend](./plugins/frontend.md)** - the frontend component.
-  - **[Backend](./plugins/backend.md)** - the backend component.
-- **[Frontend SDK](./plugins/frontend_sdk.md)** - frontend Software Development Kit.
-- **[Backend SDK](./plugins/backend_sdk.md)** - backend Software Development Kit.
-- **[Tooling](./plugins/plugin_tooling.md)** - tools for the ease of Plugin development.
-- **[Store](./plugins/store.md)** - how to publish to the store.
-  - **[Developer Policy](./plugins/developer_policy.md)** - developper policy.
-
 ## Internals
 
 - **[Files: _Caido Generated_](./internals/files.md)** - inspecting the files that Caido generates.
