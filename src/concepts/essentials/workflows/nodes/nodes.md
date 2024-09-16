@@ -70,11 +70,11 @@ These Nodes are color categorized together by their green marked tabs and allow 
 
 ### Code Nodes
 
-These Nodes are color categorized together by their green marked tabs and provide a way to integrate Shell commands and Javascript.
+These Nodes are color categorized together by their red marked tabs and provide a way to integrate Shell commands and Javascript.
 
 ### Miscellaneous Nodes (Blue)
 
-These Nodes are color categorized together by their green marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
+These Nodes are color categorized together by their blue marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
 
 <img alt="List of nodes." src="/_images/nodes_all_types.png" center/>
 
