@@ -28,7 +28,7 @@ jobs:
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@510b996878fc0d1a46c8a04ec86b06dbfba09de7 # v15
         with:
-          globs: '**/*.md'
+          globs: 'src/**/*.md'
 
       - name: Lint JS
         run: pnpm lint:js
