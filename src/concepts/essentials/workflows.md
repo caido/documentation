@@ -6,7 +6,7 @@ _For advanced documentation on this topic - click [here](/reference/workflows/wo
 
 **Workflows** provide an intuitive way to create, save and reuse customizable actions or sequences of actions that will be performed under certain specified conditions. With Workflows, you have the ability to extend the functionality of Caido to suit your individual needs.
 
-As Caido utilizes a client/server architecture, the Workflows you create are executed server-side - thereby offloading processing power, providing enhanced performance and allowing seemless usage across multiple devices.
+As Caido utilizes a client/server architecture, the Workflows you create are executed server-side - thereby offloading processing power, providing enhanced performance and allowing seamless usage across multiple devices.
 
 Workflows created by others can also be downloaded and imported into your Caido instance.
 
