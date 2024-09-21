@@ -4,7 +4,7 @@
 <b>The Assistant</b> is only available to Caido Pro users.
 </ProContainer>
 
-The `Assistant` is an AI LLM avaiable to Caido Pro users. Specifically tailored for secutiry research - the Assistant can help you understand requests, provide explanations of web traffic elements and suggests attack vectors.
+The `Assistant` is an AI LLM avaiable to Caido Pro users. Specifically tailored for security research - the Assistant can help you understand requests, provide explanations of web traffic elements and suggests attack vectors.
 
 ::: warning
 Make sure to **anonymize sensitive information** when you use this tool. See [our privacy policy](https://caido.io/privacy) for more information.
