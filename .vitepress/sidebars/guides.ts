@@ -29,6 +29,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Proxying Local Traffic",
         link: "/guides/user_guide/proxy_local",
       },
+      {
+        text: "Proxying Android Mobile Traffic",
+        link: "/guides/user_guide/android"
+      },
     ],
   },
   {
