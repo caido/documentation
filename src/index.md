@@ -29,6 +29,6 @@ hero:
 
 features:
   - icon: 🛠️
-    title: Looking for the developer documentation? Click here
+    title: Looking for the developer documentation? Click here.
     link: https://developer.caido.io
 ---
