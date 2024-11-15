@@ -92,11 +92,26 @@ Depending on the platform on which Caido is running (Unix/Windows/MacOS) you wil
 Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/reference/configuration/data_location.md). The command should also exit with `0`.
 
 ::: tip
-If you're running Caido on Windows and you'd like to call out to WSL for the shell node, use the following to trigger in the WSL environment:
+
+We can use `WSL` with Caido’s Shell Node (powershell variant) by placing the following in the init section of the node:
 
 ```
-wsl -- YOUR_COMMAND
+$Env:WSLENV = ($Env:WSLENV + ":" + ((Get-ChildItem Env: | Where-Object { $_.Name -like 'CAIDO_*' }).Name -join ":")).Trim(":")
 ```
+
+Which will pass through all CAIDO_ environmental variables to `WSL`.
+Then, when making calls in the code section, perform the calls like this:
+
+```
+wsl -- 'echo' '$CAIDO_URL' '>' '/tmp/fun'
+wsl -- 'cat' '/tmp/fun'
+```
+
+Note the single quotes are important as they prevent Powershell from expanding the variables inside the single quotes as `Powershell` variables instead of bash variables inside `WSL`.
+
+`STDIN` is also passed through to `WSL` by default, so that should be accessible via `’cat’ ‘-’` as it normally would be.
+
+Since it is a bit cumbersome to write everything with single quotes around it, we recommend just running a shell script from the code section and performing all your `bash` actions inside that script.
 
 :::
 
