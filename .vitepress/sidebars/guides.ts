@@ -29,6 +29,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Changing the Listening Address/Port",
         link: "/guides/listening_address",
       },
+      {
+        text: "Installing the CA Certificate",
+        link: "/guides/import_ca_certificate",
+      },
     ],
   },
   {

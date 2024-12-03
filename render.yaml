@@ -72,6 +72,9 @@ services:
       - type: redirect
         source: /reference/configuration/listening_address
         destination: /guides/listening_address
+      - type: redirect
+        source: /reference/configuration/import_ca_certificate
+        destination: /guides/import_ca_certificate
     domains:
       - docs.caido.io
     envVars:
