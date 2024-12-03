@@ -75,6 +75,9 @@ services:
       - type: redirect
         source: /reference/configuration/import_ca_certificate
         destination: /guides/import_ca_certificate
+      - type: redirect
+        source: /reference/configuration/data_location
+        destination: /guides/data_location
     domains:
       - docs.caido.io
     envVars:

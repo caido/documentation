@@ -15,15 +15,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Configuration",
-    items: [
-      {
-        text: "Data Location",
-        link: "/reference/configuration/data_location",
-      },
-    ],
-  },
-  {
     text: "Features",
     items: [
       {

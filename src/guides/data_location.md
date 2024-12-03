@@ -1,4 +1,4 @@
-# Data Location
+# Configuring the Data Directory
 
 All the data Caido creates is stored in a single folder. The default location of this folder is dependent on your OS:
 

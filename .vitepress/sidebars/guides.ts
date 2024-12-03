@@ -33,6 +33,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Installing the CA Certificate",
         link: "/guides/import_ca_certificate",
       },
+      {
+        text: "Configuring the Data Directory",
+        link: "/guides/data_location",
+      },
     ],
   },
   {
