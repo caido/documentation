@@ -66,6 +66,9 @@ services:
       - type: redirect
         source: /guides/workflows/add_header
         destination: /tutorials/workflows/add_header
+      - type: redirect
+        source: /guides/user_guide/installation
+        destination: /guides/
     domains:
       - docs.caido.io
     envVars:
