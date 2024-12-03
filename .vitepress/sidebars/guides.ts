@@ -39,6 +39,108 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
+{
+    text: "Features",
+    items: [
+      {
+        text: "Overview",
+        items: [
+          {
+            text: "Sitemap",
+            link: "/guides/sitemap",
+          },
+          {
+            text: "Sorting",
+            link: "/guides/sorting",
+          },
+          {
+            text: "Scope",
+            link: "/guides/scope",
+          },
+          {
+            text: "Filters",
+            link: "/guides/filters",
+          },
+        ],
+      },
+      {
+        text: "Proxy",
+        items: [
+          {
+            text: "Intercept",
+            link: "/guides/intercept",
+          },
+          {
+            text: "HTTP History",
+            link: "/guides/http_history",
+          },
+          {
+            text: "WS History",
+            link: "/guides/ws_history",
+          },
+          {
+            text: "Match & Replace",
+            link: "/guides/match_replace",
+          },
+        ],
+      },
+      {
+        text: "Testing",
+        items: [
+          {
+            text: "Replay",
+            link: "/guides/replay",
+          },
+          {
+            text: "Automate",
+            link: "/guides/automate",
+          },
+          {
+            text: "Assistant",
+            link: "/guides/assistant",
+          },
+        ],
+      },
+      {
+        text: "Logging",
+        items: [
+          {
+            text: "Search",
+            link: "/guides/search",
+          },
+          {
+            text: "Findings",
+            link: "/guides/findings",
+          },
+          {
+            text: "Exports",
+            link: "/guides/exports",
+          },
+        ],
+      },
+      {
+        text: "Workspace",
+        items: [
+          {
+            text: "Files",
+            link: "/guides/files",
+          },
+          {
+            text: "Plugins",
+            link: "/guides/plugins",
+          },
+          {
+            text: "Projects",
+            link: "/guides/projects",
+          },
+          {
+            text: "Backups",
+            link: "/guides/backups",
+          },
+        ],
+      },
+    ],
+  },
   {
     text: "Contributions",
     items: [

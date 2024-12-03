@@ -78,6 +78,22 @@ services:
       - type: redirect
         source: /reference/configuration/data_location
         destination: /guides/data_location
+      - type: redirect
+        source: /reference/features/overview/*
+        destination: /guides/*
+      - type: redirect
+        source: /reference/features/logging/*
+        destination: /guides/*
+      - type: redirect
+        source: /reference/features/proxy/*
+        destination: /guides/*
+      - type: redirect
+        source: /reference/features/testing/*
+        destination: /guides/*
+      - type: redirect
+        source: /reference/features/workspace/*
+        destination: /guides/*
+
     domains:
       - docs.caido.io
     envVars:
