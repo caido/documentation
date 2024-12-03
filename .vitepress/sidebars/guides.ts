@@ -23,6 +23,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Configuration",
+    items: [
+      {
+        text: "Changing the Listening Address/Port",
+        link: "/guides/listening_address",
+      },
+    ],
+  },
+  {
     text: "Contributions",
     items: [
       {

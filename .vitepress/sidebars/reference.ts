@@ -18,10 +18,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     text: "Configuration",
     items: [
       {
-        text: "Listening Address/Port",
-        link: "/reference/configuration/listening_address",
-      },
-      {
         text: "CA Certificate",
         link: "/reference/configuration/import_ca_certificate",
       },
