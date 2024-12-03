@@ -60,6 +60,12 @@ services:
       - type: redirect
         source: /reference/features/testing/workflows/*
         destination: /reference/workflows/*
+      - type: redirect
+        source: /guides/workflows/jwt_decode
+        destination: /tutorials/workflows/jwt_decode
+      - type: redirect
+        source: /guides/workflows/add_header
+        destination: /tutorials/workflows/add_header
     domains:
       - docs.caido.io
     envVars:

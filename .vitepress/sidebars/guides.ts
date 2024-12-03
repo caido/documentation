@@ -32,19 +32,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Workflows",
-    items: [
-      {
-        text: "JWT Decode",
-        link: "/guides/workflows/jwt_decode",
-      },
-      {
-        text: "Add Header & Resend Request",
-        link: "/guides/workflows/add_header",
-      },
-    ],
-  },
-  {
     text: "Contributions",
     items: [
       {
