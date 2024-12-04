@@ -18,8 +18,7 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
-  
-  {
+{
     text: "Workflows",
     items: [
       {
@@ -29,6 +28,15 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "SDK",
         link: "https://developer.caido.io/reference/sdks/workflow/",
+      },
+    ],
+  },
+  {
+    text: "Internals",
+    items: [
+      {
+        text: "Files",
+        link: "/reference/internal_files",
       },
     ],
   },

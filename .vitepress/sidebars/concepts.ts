@@ -47,10 +47,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Internals",
     items: [
       {
-        text: "Files",
-        link: "/concepts/internals/files",
-      },
-      {
         text: "GraphQL",
         link: "/concepts/internals/graphql",
       },

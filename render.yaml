@@ -114,6 +114,10 @@ services:
       - type: redirect
         source: /concepts/essentials/httpql
         destination: /reference/httpql
+      - type: redirect
+        source: /concepts/internals/files
+        destination: /reference/internal_files
+    
     domains:
       - docs.caido.io
     envVars:
