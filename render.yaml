@@ -108,6 +108,9 @@ services:
       - type: redirect
         source: /concepts/essentials/workflows/js_in_caido
         destination: /concepts/workflows_js
+      - type: redirect
+        source: /reference/workflows/convert/coding_nodes
+        destination: /reference/workflow_convert_nodes
     domains:
       - docs.caido.io
     envVars:

@@ -19,17 +19,12 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     text: "Workflows",
     items: [
       {
-        text: "Convert",
-        items: [
-          {
-            text: "Coding Nodes",
-            link: "/reference/workflows/convert/coding_nodes",
-          },
-        ],
+        text: "Convert Nodes",
+        link: "/reference/workflow_convert_nodes",
       },
       {
         text: "SDK",
-        link: "/reference/workflows/sdk",
+        link: "https://developer.caido.io/reference/sdks/workflow/",
       },
     ],
   },

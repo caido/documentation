@@ -1,18 +1,14 @@
-# Convert Coding Nodes
+# Convert Nodes
 
-Most Convert Nodes have intuitive inputs that are covered by the [Nodes](/concepts/essentials/workflows/nodes/nodes.md) documentation.
+Here you'll find the list of Nodes available to use in your Convert Workflows.
 
-There are a few exceptions that require further explanation:
+::: warning
+This page is currently under construction. We're working on adding more detailed documentation for each Node.
+:::
 
-- [JavaScript Node](#javascript-node-sdk)
-- [Shell Node](#shell-node)
-- [Control Flow Nodes](#control-flow-nodes)
+## JavaScript
 
-## JavaScript Node SDK
-
-_For advanced documentation on this topic - click [here](/reference/workflows/sdk.md)._
-
-The `JavaScript Code Node` allows you to run custom scripts in your Convert Workflow. They have a minimal code editor available in the properties pane.
+The `JavaScript` Code Node allows you to run custom scripts in your Workflows. They have a minimal code editor available in the properties pane.
 
 When a JavaScript Node is executed inside a [Workflow](/concepts/essentials/workflows.md), the `run` function will be triggered.
 
@@ -76,7 +72,7 @@ Additional functionality of `sdk`:
 
 :::
 
-## Shell Node
+## Shell
 
 The `Shell Node` allows you to call external programs in the Workflow.
 
@@ -113,15 +109,11 @@ Note the single quotes are important as they prevent Powershell from expanding t
 Since it is a bit cumbersome to write everything with single quotes around it, we recommend just running a shell script from the code section and performing all your `bash` actions inside that script.
 :::
 
-## Control Flow Nodes
-
-Control Flow Nodes allow you to take various paths based on conditions.
-
-### If/Else Node
+## If/Else
 
 The `If/Else Node` can split the Workflow into two paths of action - based on the Boolean evalutation of a previous Node.
 
-### If/Else JavaScript Node
+## If/Else JavaScript
 
 The `If/Else Javascript` Node is very similar to the `JavaScript Code Node`, with the exception that **it must return a Boolean value**.
 
@@ -130,7 +122,3 @@ export function run(input, sdk) {
   return false;
 }
 ```
-
-::: info
-The development of Nodes will be ongoing and new nodes will be included in future Caido releases.
-:::
