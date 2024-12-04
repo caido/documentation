@@ -117,6 +117,9 @@ services:
       - type: redirect
         source: /concepts/internals/files
         destination: /reference/internal_files
+      - type: redirect
+        source: /concepts/internals/download
+        destination: /reference/download_links
     
     domains:
       - docs.caido.io

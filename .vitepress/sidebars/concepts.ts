@@ -51,21 +51,13 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/internals/graphql",
       },
       {
-        text: "Download",
-        link: "/concepts/internals/download",
-      },
-      {
         text: "Cloud",
         link: "/concepts/internals/cloud",
       },
       {
         text: "Authentication",
         link: "/concepts/internals/authentication",
-      },
-      {
-        text: "Developer",
-        link: "https://developer.caido.io",
-      },
+      }
     ],
   },
 ];

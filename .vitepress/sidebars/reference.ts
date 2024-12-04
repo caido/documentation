@@ -38,6 +38,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         text: "Files",
         link: "/reference/internal_files",
       },
+      {
+        text: "Download Links",
+        link: "/reference/download_links",
+      },
     ],
   },
 ];
