@@ -38,7 +38,7 @@ These settings will allow you to login with any account you want. Once you've cl
 
 Delete your data folder.
 
-While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/concepts/internals/files.md) page to locate your data folder.
+While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/guides/files.md) page to locate your data folder.
 </details>
 
 ## Error Message: "Login URL generation failed: invalid authentication token".
@@ -120,7 +120,7 @@ Time synchronization instructions for Linux can be found [here](https://unix.sta
 
 ## Error: Unexpected error when rendering on the frontend.
 
-**If you encounter a rendering error, accompanied by a [log](/reference/configuration/data_location.md) error message entry similar to the following:**
+**If you encounter a rendering error, accompanied by a [log](/guides/data_location.md) error message entry similar to the following:**
 
 ```
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
@@ -214,7 +214,7 @@ To acquire your token:
 - Right-click inside the Caido application.
 - Select `Inspect`.
 - Select the `Application` tab.
-- Under `Storage` - `Local storage` within the left-hand side menu, select the [listening address/port](/reference/configuration/listening_address.md) of Caido.
+- Under `Storage` - `Local storage` within the left-hand side menu, select the [listening address/port](/guides/listening_address.md) of Caido.
 - Copy the value of the `accessToken` (_within the value of the `CAIDO_AUTHENTICATION` key_).
 :::
 
@@ -230,3 +230,9 @@ To acquire your token:
 
 [Resize the pane](/concepts/essentials/layout.md).
 </details>
+
+## Listening Address
+
+By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the recommended configuration as there is currently no built-in access control on the proxy portion of Caido. Listening on 127.0.0.1 limits access to the local machine only.
+
+For more information on configuring the listening address, see the [Listening Address](/quickstart/beginner_guide/setup/config.md#network) documentation.

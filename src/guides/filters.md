@@ -5,7 +5,7 @@
 Caido's Filter Preset feature makes it easy to evaluate a large amount of data as you delve into your testing engagement.
 
 ::: info
-View the [HTTPQL](/concepts/essentials/httpql.md) documentation for more information on query syntax.
+View the [HTTPQL](/reference/httpql.md) documentation for more information on query syntax.
 :::
 
 ## Filter Preset Rules
@@ -28,7 +28,7 @@ In this example - the Filter Preset created will display requests that include t
 
 1. Select the `Filters` tab from the left-hand menu within the Caido window.
 2. This pane displays all saved Filters. To create a new Filter - click on the `+ New Preset` button.
-3. Provide a `Name` and an `Alias` for your new Preset. In the `Expression` field - supply one or more [HTTPQL](/concepts/essentials/httpql.md) queries. Click `Save` once the Filter is defined to your liking. Clicking `Delete` will remove the associated Filter Preset from the current Caido Project.
+3. Provide a `Name` and an `Alias` for your new Preset. In the `Expression` field - supply one or more [HTTPQL](/reference/httpql.md) queries. Click `Save` once the Filter is defined to your liking. Clicking `Delete` will remove the associated Filter Preset from the current Caido Project.
 
 ## Using a Filter Preset
 

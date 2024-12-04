@@ -36,7 +36,7 @@ The historical record of the request Session can be viewed at the bottom of the 
 ::: tip TIPS
 
 - Navigate quickly through the history of requests and responses in your Session by using the arrows at the top of the Replay table.
-- You can use Convert Workflows in Replay. View the [Workflows](/reference/workflows/convert.md) documentation for more information.
+- You can use Convert Workflows in Replay. View the [Workflows](/concepts/workflows_intro.md) documentation for more information.
 - Right-click within a request and select `On toggle verb` to convert the request from a POST request with a body to a GET request with query parameters.
 - To send a request to `Automate` from `Replay`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.

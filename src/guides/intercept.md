@@ -35,8 +35,8 @@ To familiarize yourself with the Intercept interface, continue below:
 
 ::: tip TIPS
 
-- [Applying a Scope Preset](/reference/features/overview/scope.md) is supported by Intercept.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request and response panes will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
+- [Applying a Scope Preset](/guides/search.md) is supported by Intercept.
+- Clicking the column names (_located at the top and spanning horizontally_) within the top request and response panes will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
 - To send a request to `Replay` from `Intercept`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
 - To send a request to `Automate` from `Intercept`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.

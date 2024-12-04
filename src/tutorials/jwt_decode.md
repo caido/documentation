@@ -1,11 +1,11 @@
 # JWT Decode
 
-The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [Convert Workflow](/reference/workflows/convert.md). We will only be using built-in Nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
+The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [Convert Workflow](/concepts/workflows_intro.md#convert-workflows). We will only be using built-in Nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
 
 ::: info
 It is, obviously, also possible to build it easily using a single Javascript Code Node.
 
-To learn more about how to use Javascript in Workflows, head over [here](/reference/workflows/convert/coding_nodes.md).
+To learn more about how to use Javascript in Workflows, head over [here](/reference/workflow_convert_nodes.md).
 :::
 
 For this guide we will use the following token as our input:
@@ -54,7 +54,7 @@ Since we know the first two parts of the JWT are JSON, we can use two `JSON Pret
 
 <img width="300" alt="Workflow for step 3" src="/_images/jwt_decode_step_3_workflow.png" center/>
 
-Since we have two Nodes of the same type, I suggest we rename them and change their [aliases](/concepts/essentials/workflows/nodes/nodes.md#node-alias). For the first, we prettify the `$jwt_decode.header` and we give it the alias `pretty_header`.
+Since we have two Nodes of the same type, I suggest we rename them and change their [aliases](/concepts/workflows_nodes#aliases). For the first, we prettify the `$jwt_decode.header` and we give it the alias `pretty_header`.
 
 <img width="500" alt="Settings for the pretty Node" src="/_images/jwt_decode_step_3_pretty.png" center/>
 

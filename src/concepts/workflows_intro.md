@@ -14,10 +14,10 @@ _A Workflow that will take user-provided input, base64 encode it and then output
 
 `Passive Workflows` take **requests** or **responses** as input. Their execution occurs in the "background" as you conduct your testing, extending the efficiency of your process.
 
-Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](/concepts/essentials/workflows/nodes/nodes.md) and include prerequisites such as:
+Passive Workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the Workflow are not met throughout every step of the Workflow - the Workflow will stop processing the request/response. These specifications/conditions are set by [Nodes](/guides/workflows.md) and include prerequisites such as:
 
-- If the request/response is within a set [Scope](/reference/features/overview/scope.md).
-- If the request/response is a match according to [HTTPQL](/concepts/essentials/httpql.md) syntax.
+- If the request/response is within a set [Scope](/guides/search.md).
+- If the request/response is a match according to [HTTPQL](/reference/httpql.md) syntax.
 - If the prior Node's specification/condition evaluated to True or False (_Boolean value_).
 
 ## Active Workflows

@@ -10,7 +10,7 @@ This page is currently under construction. We're working on adding more detailed
 
 The `JavaScript` Code Node allows you to run custom scripts in your Workflows. They have a minimal code editor available in the properties pane.
 
-When a JavaScript Node is executed inside a [Workflow](/concepts/essentials/workflows.md), the `run` function will be triggered.
+When a JavaScript Node is executed inside a [Workflow](/guides/workflows.md), the `run` function will be triggered.
 
 <img alt="Convert JS Node." src="/_images/convert_js_node.png" center/>
 
@@ -27,7 +27,7 @@ export function run(input, sdk) {
 The `sdk` parameter is an object that supplies various functionality for the Caido JS Node SDK.
 
 ::: info
-Below you will find a summary of its various functions, but for now, just know that `sdk.console.log()` is a way to output data for debugging to the [Caido Log File](/reference/configuration/data_location.md).
+Below you will find a summary of its various functions, but for now, just know that `sdk.console.log()` is a way to output data for debugging to the [Caido Log File](/guides/data_location.md).
 :::
 
 The `input` object is a `BytesInput` object, which is essentially an array of `number` objects which represent the Unicode codepoints of the selected text over each index of the user supplied input.
@@ -47,7 +47,7 @@ Where the selected input was `aaa` will result in:
 2024-05-26T12:14:13.115630Z  INFO executor:0|arbiter:3 JsSdk: [ 97, 97, 97 ]
 ```
 
-being outputed to the [backend logs](/reference/configuration/data_location.md) since the Unicode codepoint for `a` is `97`.
+being outputed to the [backend logs](/guides/data_location.md) since the Unicode codepoint for `a` is `97`.
 
 In order to get the `String` version of the input, we use the `sdk.asString` function which will convert each byte of the array into its String character conterpart:
 
@@ -85,7 +85,7 @@ Depending on the platform on which Caido is running (Unix/Windows/MacOS) you wil
 - Select your shell from the drop-down menu.
 - For some shells, Caido will try to source the default `.[shell]rc` file in your home directory. If that doesn't work for you, you can manually override the `Init`.
 
-Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/reference/configuration/data_location.md). The command should also exit with `0`.
+Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/guides/data_location.md). The command should also exit with `0`.
 
 ::: tip
 If you're running Caido on Windows and you'd like to call out to `WSL` for the shell node from `powershell`, add the following in the init section of the node:

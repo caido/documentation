@@ -10,7 +10,7 @@ We need a few items in order to be able to reproduce bugs and help you.
 
 Caido is using a [client/server architecture](/concepts/essentials/instances.md), that means that we need logs from two places.
 
-The first place to look for logs is in your [data folder](/reference/configuration/data_location.md), you should see a `logs` folder.
+The first place to look for logs is in your [data folder](/guides/data_location.md), you should see a `logs` folder.
 
 <img width="500" alt="Backend Logs Location" src="/_images/backend_logs.png" center/>
 

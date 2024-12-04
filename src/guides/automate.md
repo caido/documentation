@@ -26,7 +26,7 @@ To inspect the results of your `Automate` campaign - proceed with the following 
 2. Each request will be displayed in this pane.
 3. This pane will display the selected request and it's associated response.
 4. This is the resulting list of options presented after right-clicking within the request pane.
-5. The [HTTPQL query](/concepts/essentials/httpql.md) input bar.
+5. The [HTTPQL query](/reference/httpql.md) input bar.
 
 ## Attack Strategies
 
@@ -45,7 +45,7 @@ For each payload, you can choose a `Type` from the list:
 
 <img alt="Automate Types." src="/_images/types_automate.png" center/>
 
-- **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/reference/features/workspace/files.md) documentation for more information.
+- **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/guides/files.md) documentation for more information.
 - **Simple List:** For cases where you want to test a short manually created list of elements.
 - **Null Payload:** Generate requests without changing anything in it.
 - **Numbers:** Generates a range of specified integers to use as a payload.
@@ -56,7 +56,7 @@ Preprocessors enable you to apply additional modifications to the payloads.
 
 <img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
 
-- **Workflow**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/reference/workflows/workflows.md) documentation for more information.
+- **Workflow**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/guides/workflows.md) documentation for more information.
 - **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.
 - **Prefix**: Allows you to prefix a payload value with a supplied value.
 - **Suffix**: Allows you to append a supplied suffix value to a payload value.
@@ -82,7 +82,7 @@ Additional setting options allow you to fine tune how the Automate session will 
 
 ::: tip TIPS
 
-- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
+- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
 - If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
 

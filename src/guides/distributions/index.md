@@ -6,7 +6,7 @@ This is by no mean a requirement since you can [install Caido on all major OS](/
 
 ## Linux
 
-- [Athena OS](/quickstart/distributions/linux/athena_os): Arch & NixOS based pentesting distribution
+- [Athena OS](/guides/distributions/athena_os): Arch & NixOS based pentesting distribution
 
 ## You are a maintainer?
 

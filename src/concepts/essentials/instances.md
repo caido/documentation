@@ -2,7 +2,7 @@
 
 We use the concept of an `Instance` to refer approximately to an installation of Caido.
 
-To be precise, an Instance is the set of files contained in the the [data location](/reference/configuration/data_location.md), thus you can have _multiple_ Caido Instances on one machine if you change the data path.
+To be precise, an Instance is the set of files contained in the the [data location](/guides/data_location.md), thus you can have _multiple_ Caido Instances on one machine if you change the data path.
 
 ## Why?
 
@@ -14,13 +14,13 @@ You can find all details in our [guide on the topic](/concepts/internals/authent
 
 ## Desktop Application
 
-When you use the `Desktop Application`, you will see by default a `Local Instance`. This means that you will spawn a `Caido CLI` process locally on the given port and with the default [data path](/reference/configuration/data_location.md).
+When you use the `Desktop Application`, you will see by default a `Local Instance`. This means that you will spawn a `Caido CLI` process locally on the given port and with the default [data path](/guides/data_location.md).
 
 <img alt="Desktop application Instances." src="/_images/instances_desktop.png" no-shadow/>
 
 ### Local
 
-You can add Instances with the `New instance` button, those can be other `Local` Instances if you want to use another [data path](/reference/configuration/data_location.md) or port.
+You can add Instances with the `New instance` button, those can be other `Local` Instances if you want to use another [data path](/guides/data_location.md) or port.
 
 <img alt="New local Instance." src="/_images/instances_local.png" center width="500"/>
 

@@ -32,7 +32,7 @@ You can download the installer package from your <a href="https://dashboard.caid
 3. Name your Caido instance.
 4. Allow access to your Caido instance.
 5. Navigate through the brief tutorial on creating a new Project.
-6. In order for Caido to capture your web traffic, you must [download and import Caido's CA Certificate to your browser.](/reference/configuration/import_ca_certificate.md)
+6. In order for Caido to capture your web traffic, you must [download and import Caido's CA Certificate to your browser.](/guides/import_ca_certificate.md)
 
 ## Configuration
 

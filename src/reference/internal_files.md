@@ -12,7 +12,7 @@ It can be moved to another computer, but you might encounter issues (we are work
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
 ::: tip
-The `log` directory will contain the log files used to view output from the Coding Nodes using the [SDK](/reference/workflows/sdk.md).
+The `log` directory will contain the log files used to view output from the Coding Nodes using the [SDK](https://developer.caido.io/reference/sdks/workflow/).
 :::
 
 ## Folder Structure

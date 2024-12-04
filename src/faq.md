@@ -42,6 +42,6 @@ At the moment, Caido Desktop is considered experimental and does not perform as 
 
 There are 3 options available:
 
-- Go check out the [Common Errors](/reference/common_errors.md) page.
+- Go check out the [Common Errors](/guides/troubleshooting.md) page.
 - Join the [Discord](https://links.caido.io/www-discord).
 - Raise an issue on [Github](https://github.com/caido/caido) if it's a bug.

@@ -21,7 +21,7 @@ In this example - the Match & Replace rule created will change the value of the 
 - `Search as regex`: If the `Search term` is a regex or a simple string match.
 - `Search term`: The term to search for in the defined part of the request or response.
 - `Replace term`: The term to replace the search term with.
-- `Condition`: An [HTTPQL](/concepts/essentials/httpql.html) query that defines which requests/responses this rule applies to.
+- `Condition`: An [HTTPQL](/reference/httpql.md) query that defines which requests/responses this rule applies to.
 
 4. When you're done updating your rule, you can use the bottom panes to test your rule against a mock request/response. Click on the `Test` button and see if your rule works as intended.
 5. You can enable or disable individual rules by clicking on the checkbox next to each rule in the tree view. Enabled rules will be shown in the `Active rules` section of the page. This section displays the list of the rules that are currently active and will be applied to the requests/responses that pass through the proxy.

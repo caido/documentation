@@ -16,8 +16,8 @@ To familiarize yourself with the HTTP History interface, continue below:
 2. This pane lists all the **requests** that have been proxied through Caido. Select one from the list by clicking on it to view its contents.
 3. The contents of the selected **request** will be displayed in this pane.
 4. The contents of the **response** paired with the selected **request** will be displayed in this pane.
-5. Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/reference/features/logging/exports.md) documentation for more information.
-6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed. View the [HTTQL](/concepts/essentials/httpql.md) and [Filters](/reference/features/overview/filters.md) documentation for more information.
+5. Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/guides/exports.md) documentation for more information.
+6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed. View the [HTTQL](/reference/httpql.md) and [Filters](/guides/filters.md) documentation for more information.
 7. All active Filter Presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
 
 ## Modifications of Requests/Responses
@@ -27,7 +27,7 @@ To familiarize yourself with the HTTP History interface, continue below:
 In the `HTTP History` and `Search` tabs, a dropdown menu will appear in any requests or responses that you modified within Intercept before forwarding. The `Manual` selection will display the edits while the `Original` selection will show the request/response in its initial state.
 
 ::: info
-This includes any modifications made by any active [Match & Replace](/reference/features/proxy/match_replace.md) rule(s).
+This includes any modifications made by any active [Match & Replace](/guides/match_replace.md) rule(s).
 :::
 
 <img alt="Manual edit." src="/_images/edited_history_marked_layout.png" center/>
@@ -36,9 +36,9 @@ This includes any modifications made by any active [Match & Replace](/reference/
 
 ::: tip TIPS
 
-- [Applying a Scope Preset](/reference/features/overview/scope.md) is supported by HTTP History.
-- [Applying a Filter Preset](/reference/features/overview/filters.md) is supported by HTTP History.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/reference/features/overview/sorting.md) documentation for more information.
+- [Applying a Scope Preset](/guides/search.md) is supported by HTTP History.
+- [Applying a Filter Preset](/guides/filters.md) is supported by HTTP History.
+- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
 - To send a request to `Replay` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
 - To send a request to `Automate` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.

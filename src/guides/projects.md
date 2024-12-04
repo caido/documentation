@@ -15,8 +15,8 @@ Think of `Projects` as separate directories for your audits. Projects allow you 
 5. Clicking on `⋮` will present the following additional options:
 
 - **Rename**: Rename your Project.
-- **Copy path**: Copy the Project's data location on your device to your clipboard. View the [Files](/concepts/internals/files.md) documentation for more information.
-- **Create backup**: Create a Backup of the Project data. View the [Backups](/reference/features/workspace/backups.md) documentation for more information.
+- **Copy path**: Copy the Project's data location on your device to your clipboard. View the [Files](/guides/files.md) documentation for more information.
+- **Create backup**: Create a Backup of the Project data. View the [Backups](/guides/backups.md) documentation for more information.
 - **Delete**: Delete the Project from your Instance.
 
 <ProContainer>
@@ -39,7 +39,7 @@ Caido offers the ability to switch between your Projects with ease. Switching Pr
 
 ## Restoring a Project from a Backup
 
-To restore your Projects from a Backup, click the `Restore` button within the [Backups](/reference/features/workspace/backups.md) interface or use the `Import` button near the search bar within the Projects interface and provide a path to a `.caidobak` file.
+To restore your Projects from a Backup, click the `Restore` button within the [Backups](/guides/backups.md) interface or use the `Import` button near the search bar within the Projects interface and provide a path to a `.caidobak` file.
 
 ## Project Updating
 

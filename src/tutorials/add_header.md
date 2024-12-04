@@ -1,6 +1,6 @@
 # Add Header & Send Request Workflow
 
-This guide will assist you in building a [Passive Workflow](/concepts/essentials/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
+This guide will assist you in building a [Passive Workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 
@@ -31,14 +31,14 @@ The JSDoc comments note the types of the parameters and return value.
 
 - This function will take the `input` and `sdk` parameters. The `SDK` object is an interface to the Caido backend.
 - The `input` object is a `HttpInput` object, which represents a request and its associated reponse.
-- The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a [byte](/reference/workflows/sdk.html#bytes) value or return `undefined`.
+- The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a [byte](https://developer.caido.io/reference/sdks/workflow/#bytes) value or return `undefined`.
 :::
 
 ## Creating the JavaScript Node
 
 <img alt="The Workflow environment." src="/_images/build.png" center/>
 
-The function is exported so it can be executed by QuickJS, the [JavaScript engine used by Caido](/concepts/essentials/workflows/js_in_caido.md).
+The function is exported so it can be executed by QuickJS, the JavaScript engine used by Caido.
 
 ::: tip 2.
 
@@ -95,7 +95,7 @@ We must wait for the request to be sent and response to be returned before using
 ```
 
 - To stall the function from executing until the promise that represents the request and response objects is returned - the `await` keyword is used.
-- Once the response is received (_the exchange is complete_) a [Finding](/reference/features/logging/findings.md) is created. Supply anything you want to the `title`, `description` and `reporter` properties of the `finding` object.
+- Once the response is received (_the exchange is complete_) a [Finding](/guides/findings.md) is created. Supply anything you want to the `title`, `description` and `reporter` properties of the `finding` object.
 - The `request` property will include the request sent that includes our custom header.
 - Finally, the creation of the Finding is awaited to give it time to be processed on the backend.
 :::

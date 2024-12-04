@@ -1,10 +1,10 @@
 # Uploading Files for Use in Automate
 
-_For advanced documentation on this topic - click [here](/reference/features/workspace/files.md)._
+_For advanced documentation on this topic - click [here](/guides/files.md)._
 
 `Automate` allows you to brute-force/fuzz designated elements of a request.
 
-- In order to utilize the [Hosted File Payload Type](/reference/features/testing/automate.md#payload-types) in `Automate` - you must first upload payload files/wordlists in the `Files` tab within Caido.
+- In order to utilize the [Hosted File Payload Type](/guides/automate.md#payload-types) in `Automate` - you must first upload payload files/wordlists in the `Files` tab within Caido.
 
 ## Files
 

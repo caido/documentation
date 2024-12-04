@@ -2,7 +2,7 @@
 
 ## What are Projects?
 
-_For advanced documentation on this topic - click [here](/reference/features/workspace/projects.md)._
+_For advanced documentation on this topic - click [here](/guides/projects.md)._
 
 Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
 

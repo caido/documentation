@@ -10,7 +10,7 @@ With JavaScript, context switching between the frontend and backend is minimal. 
 
 ## QuickJS
 
-Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/concepts/essentials/workflows.md).
+Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/guides/workflows.md).
 
 Caido leverages the QuickJS Engine to:
 
@@ -224,7 +224,7 @@ The constructor parameter used to create the instance will become a property. In
 
 ## SDK
 
-_For further documentation on this topic - click [here](/reference/workflows/sdk.md)._
+_For further documentation on this topic - click [here](https://developer.caido.io/reference/sdks/workflow/)._
 
 For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript Node to interact with the rest of Caido backend.
 
@@ -272,7 +272,7 @@ export async function run({ request, response }, sdk) {
 
 ## JavaScript Node Functions
 
-When a JavaScript Node is executed inside a [Workflow](/concepts/essentials/workflows.md), one of two functions is ran - depending on the [Workflow Type](/concepts/essentials/workflows.html#workflow-types).
+When a JavaScript Node is executed inside a [Workflow](/guides/workflows.md), one of two functions is ran - depending on the [Workflow Type](/guides/workflows.md#workflow-types).
 
 ### Convert Type JavaScript Node Function
 
@@ -328,7 +328,7 @@ The `run` function is available to be imported in external scripts. The function
 
 The variable `parsed` stores `sdk.asString(input)` to convert bytes into a string.
 
-The `SDK` object assigned to `sdk` then uses the `console.log` method that it inherited from the `Console` object. This method is called on the `parsed` variable. The value of `parsed` will be printed to the [backend logs](/concepts/internals/files.md). The associated declaration is:
+The `SDK` object assigned to `sdk` then uses the `console.log` method that it inherited from the `Console` object. This method is called on the `parsed` variable. The value of `parsed` will be printed to the backend logs. The associated declaration is:
 
 ```ts
 export declare type Console = {
@@ -437,7 +437,7 @@ export declare type Console = {
 };
 ```
 
-Finally, the value of `host` will be printed to the [backend logs](/concepts/internals/files.md).
+Finally, the value of `host` will be printed to the backend logs.
 
 :::
 
@@ -447,7 +447,7 @@ Finally, the value of `host` will be printed to the [backend logs](/concepts/int
 
 This Workflow will check the if the status code of responses to requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
 
-If the status code of the response to this newly issued request is 200 - a new [Finding](/reference/features/logging/findings.md) will be created, alerting you of the bypass.
+If the status code of the response to this newly issued request is 200 - a new [Finding](/guides/findings.md) will be created, alerting you of the bypass.
 
 The associated request/response pair to the bypass will be displayed rather than the original request/response pair in the Finding.
 
@@ -496,4 +496,4 @@ export async function run({ request, response }, sdk) {
 
 ## Additional Information
 
-For further documentation on coding in Workflows - click [here](/reference/workflows/convert/coding_nodes.html).
+For further documentation on coding in Workflows - click [here](/guides/workflows.md).
