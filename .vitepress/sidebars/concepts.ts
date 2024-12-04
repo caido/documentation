@@ -57,7 +57,7 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Authentication",
         link: "/concepts/internals/authentication",
-      }
+      },
     ],
   },
 ];

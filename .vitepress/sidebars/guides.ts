@@ -39,7 +39,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
-{
+  {
     text: "Features",
     items: [
       {

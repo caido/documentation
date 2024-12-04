@@ -18,7 +18,7 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
-{
+  {
     text: "Workflows",
     items: [
       {
