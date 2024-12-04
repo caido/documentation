@@ -34,14 +34,10 @@ You can ask for support and submit feature requests through our public <a href="
 
 The Caido CLI is self-contained binary that launches the Caido proxy (also called Instance). You can use it on remote servers or locally and access the Instance using your browser. The Caido Desktop acts a connection manager to your Instances and can also launch the Caido proxy in the background. It uses webviews to access the Instance instead of the browser.
 
-::: warning
-At the moment, Caido Desktop is considered experimental and does not perform as well as the browser on Linux.
-:::
-
 ## I've encountered an error, what do I do?
 
-There are 3 options available:
+Depending on the error, you can try the following:
 
-- Go check out the [Common Errors](/guides/troubleshooting.md) page.
+- Check out the [Troubleshooting](/guides/troubleshooting.md) page.
 - Join the [Discord](https://links.caido.io/www-discord).
 - Raise an issue on [Github](https://github.com/caido/caido) if it's a bug.
