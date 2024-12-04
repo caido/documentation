@@ -7,7 +7,7 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 /** @type {import('eslint').Linter.Config } */
 export default [
   {
-    ignores: [".vitepress/cache"],
+    ignores: [".vitepress/cache", ".vitepress/dist"],
   },
   eslintjs.configs.recommended,
   ...typescriptEslint.configs.recommendedTypeChecked,
