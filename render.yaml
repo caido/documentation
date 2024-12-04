@@ -95,9 +95,6 @@ services:
         destination: /guides/*
       - type: redirect
         source: /reference/workflows/passive
-        destination: /tutorials/color_requests
-      - type: redirect
-        source: /reference/workflows/passive
         destination: /concepts/workflows_intro
       - type: redirect
         source: /reference/workflows/convert

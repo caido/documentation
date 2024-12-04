@@ -3,7 +3,7 @@
 In this tutorial, we will create a [Passive Workflow](/concepts/essentials/workflows#passive-workflows) that will highlight GET requests within the HTTP History tab if they are within the Project's Scope.
 
 ::: info
-This example Workflow is available for download and import. [Download the example workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json)
+This example Workflow is available for download and import. [Download the workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json)
 :::
 
 ## Creating a Passive Workflow

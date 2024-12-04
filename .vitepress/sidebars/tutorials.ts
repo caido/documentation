@@ -17,6 +17,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "JWT Decode",
         link: "/tutorials/jwt_decode",
       },
+      {
+        text: "MD5 Hash",
+        link: "/tutorials/md5_hash",
+      },
     ],
   },
   {

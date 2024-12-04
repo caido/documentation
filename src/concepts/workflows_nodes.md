@@ -17,7 +17,7 @@ Workflows use a top-down heirachical structure (_the Node at the very top repres
 1. The down arrow within a circle icon represents a Node's `socket`.
 2. Click and drag a bottom socket to the top socket of the next/a subsequent Node in the flow to create a `Connection`.
 
-## Node Alias
+## Aliases
 
 A Node's `Alias` is an arbitrarily set identifier used to uniquely reference the associated Node within a Workflow.
 
@@ -27,7 +27,7 @@ Aliases can consist of lowercase letters, hyphens, underscores and numbers.
 This differs from a Node's Name which simply serves cosmetic purposes to assist in the visual representation.
 :::
 
-## Node Input Types: Constant Value & Reference Value
+## Input Types
 
 ### 1. Constant Value Type
 
@@ -54,7 +54,7 @@ _Example (pictured above):_
 - _The value_ `$start.data` _is the output of the_ **Start** _Node being taken as input by the_ **Base64 Encode** _Node_.
 - _The output of the_ **Base64 Encode** _Node will be referenced by the_ **End** _Node as_ `$base64_encode.data`.
 
-## Node Categories
+## Categories
 
 Certain Nodes are specific to a Workflow type (Passive/Active/Convert). Though, in general, Nodes can be categorized broadly and associated together by color:
 
