@@ -31,7 +31,7 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     text: "Internals",
     items: [
       {
-        text: "Files",
+        text: "Internal Files",
         link: "/reference/internal_files",
       },
       {

@@ -21,7 +21,7 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/essentials/tabs",
       },
       {
-        text: "Layout",
+        text: "Layout Customization",
         link: "/concepts/essentials/layout",
       },
     ],

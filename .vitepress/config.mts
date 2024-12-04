@@ -62,6 +62,10 @@ export default defineConfig({
       "/tutorials/": tutorialsSidebar,
     },
 
+    outline: {
+      level: [2, 3],
+    },
+
     socialLinks: [
       { icon: "discord", link: "https://links.caido.io/discord" },
       { icon: "twitter", link: "https://twitter.com/caidoio" },

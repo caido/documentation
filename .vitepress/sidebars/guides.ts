@@ -160,10 +160,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Contributions",
+    text: "Community",
     items: [
       {
-        text: "Documentation",
+        text: "Contributing to the Documentation",
         link: "/guides/contributions/documentation",
       },
     ],
