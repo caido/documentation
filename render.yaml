@@ -120,6 +120,13 @@ services:
       - type: redirect
         source: /concepts/internals/download
         destination: /reference/download_links
+      - type: redirect
+        source: /quickstart/showcase
+        destination: /tutorials/
+      - type: redirect
+        source: /quickstart/welcome_to_caido/onboarding
+        destination: /quickstart/
+
     
     domains:
       - docs.caido.io
