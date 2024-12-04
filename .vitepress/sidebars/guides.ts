@@ -96,6 +96,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/automate",
           },
           {
+            text: "Workflows",
+            link: "/guides/workflows",
+          },
+          {
             text: "Assistant",
             link: "/guides/assistant",
           },

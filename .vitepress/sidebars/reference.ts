@@ -19,10 +19,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     text: "Workflows",
     items: [
       {
-        text: "Workflow Basics",
-        link: "/reference/workflows/workflows",
-      },
-      {
         text: "Convert",
         link: "/reference/workflows/convert",
         items: [

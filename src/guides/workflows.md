@@ -1,23 +1,10 @@
-# Enhanced Testing Using Workflows
+# Workflows
 
-_For conceptual documentation on Workflows - click [here](/concepts/essentials/workflows.md)._
-
-Incorporating **Workflows** into your methodology greatly extends the functionality of Caido. The level of customization offered by Caido Workflows allows you to  repeatedly apply certain actions/conversions that are commonly used in your testing process. Anything from encoding data to complex sequences of modifications based on certain conditions by utilizing flow paths are possible with Workflows.
+Incorporating [Workflows](/concepts/essentials/workflows.md) into your methodology greatly extends the functionality of Caido. The level of customization offered by Caido Workflows allows you to repeatedly apply certain actions/conversions that are commonly used in your testing process. Anything from encoding data to complex sequences of modifications based on certain conditions by utilizing flow paths are possible with Workflows.
 
 Multi-step processes that, before, needed to be performed manually can be saved within a Workflow for immediate, discretionary and repeated use - ensuring your testing is as time-efficient as possible.
 
-## Workflow Data Types
-
-The data types that Workflows use include:
-
-- **Bytes**
-- **Strings**
-- **Boolean Values**
-- **Integers**
-- **Request Objects**
-- **Response Objects**
-
-## The Workflows Tab
+## Workflows Layout
 
 <img alt="Workflows tab." src="/_images/workflows_tab_layout.png">
 
@@ -58,9 +45,3 @@ The name and description pane will switch to a pane that displays a Node's prope
 1. The available Nodes based on the selected Workflow type are displayed in this pane. They are represented as draggable blocks. To use a Node, simply **click, hold and drag** one into the pane directly right.
 2. This pane is where your Workflow is created. Here, [Connections](/concepts/essentials/workflows/nodes/nodes.md#connecting-nodes) between Nodes are made. Clicking a Node will select it (_observe the highlighted border_). The ability to save the Workflow as well as view options are included within this pane as well.
 3. After selecting a Node, the Node's properties are displayed here. The ability to delete the currently selected Node is included in this pane as well.
-
-## Advanced Workflow Types Documentation
-
-1. [Passive Workflows](/reference/workflows/passive.md)
-2. Active Workflows - `WORK IN PROGRESS`
-3. [Convert Workflows](/reference/workflows/convert.md)

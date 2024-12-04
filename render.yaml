@@ -98,8 +98,19 @@ services:
         destination: /tutorials/color_requests
       - type: redirect
         source: /reference/workflows/passive
-        destination: /concepts/essentials/workflows
-
+        destination: /concepts/workflows_intro
+      - type: redirect
+        source: /reference/workflows/convert
+        destination: /concepts/workflows_intro
+      - type: redirect
+        source: /concepts/essentials/workflows
+        destination: /concepts/workflows_intro
+      - type: redirect
+        source: /concepts/essentials/workflows/nodes/nodes
+        destination: /concepts/workflows_nodes
+      - type: redirect
+        source: /concepts/essentials/workflows/js_in_caido
+        destination: /concepts/workflows_js
     domains:
       - docs.caido.io
     envVars:

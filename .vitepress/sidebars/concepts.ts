@@ -26,26 +26,29 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/essentials/httpql",
       },
       {
-        text: "Workflows",
-        link: "/concepts/essentials/workflows",
-        items: [
-          {
-            text: "Nodes",
-            link: "/concepts/essentials/workflows/nodes/nodes",
-          },
-          {
-            text: "JavaScript in Caido",
-            link: "/concepts/essentials/workflows/js_in_caido",
-          },
-        ],
-      },
-      {
         text: "Tabs",
         link: "/concepts/essentials/tabs",
       },
       {
         text: "Layout",
         link: "/concepts/essentials/layout",
+      },
+    ],
+  },
+  {
+    text: "Workflows",
+    items: [
+      {
+        text: "What are Workflows?",
+        link: "/concepts/workflows_intro",
+      },
+      {
+        text: "Understanding Nodes",
+        link: "/concepts/workflows_nodes",
+      },
+      {
+        text: "Writing JavaScript",
+        link: "/concepts/workflows_js",
       },
     ],
   },

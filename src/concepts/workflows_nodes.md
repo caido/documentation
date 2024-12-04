@@ -1,6 +1,4 @@
-# Nodes
-
-## What are Nodes?
+# Understanding Nodes
 
 **Nodes** are simply **actions** or **conditions**. By connecting Nodes together, complex action sequences based on certain conditions are created.
 
