@@ -72,4 +72,16 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/caido/caido" },
     ],
   },
+  transformPageData: (page) => {
+    const canonicalUrl = `https://docs.caido.io/${page.relativePath}`
+      .replace(/index\.md$/, "")
+      .replace(/\.md$/, "")
+      .replace(/.html$/, "");
+
+    page.frontmatter.head ??= [];
+    page.frontmatter.head.push([
+      "link",
+      { rel: "canonical", href: canonicalUrl },
+    ]);
+  },
 });
