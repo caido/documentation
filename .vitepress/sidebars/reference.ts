@@ -9,10 +9,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/",
       },
       {
-        text: "Common Errors",
-        link: "/reference/common_errors",
-      },
-      {
         text: "HTTPQL",
         link: "/reference/httpql",
       },

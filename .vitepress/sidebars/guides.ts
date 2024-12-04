@@ -17,6 +17,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/user_guide/docker",
       },
       {
+        text: "Troubleshooting",
+        link: "/guides/troubleshooting",
+      },
+      {
         text: "Distributions",
         items: [
           {
