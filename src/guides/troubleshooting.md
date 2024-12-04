@@ -230,9 +230,3 @@ To acquire your token:
 
 [Resize the pane](/concepts/essentials/layout.md).
 </details>
-
-## Listening Address
-
-By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the recommended configuration as there is currently no built-in access control on the proxy portion of Caido. Listening on 127.0.0.1 limits access to the local machine only.
-
-For more information on configuring the listening address, see the [Listening Address](/quickstart/beginner_guide/setup/config.md#network) documentation.

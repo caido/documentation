@@ -10,7 +10,7 @@ With JavaScript, context switching between the frontend and backend is minimal. 
 
 ## QuickJS
 
-Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating [Workflows](/guides/workflows.md).
+Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating Workflows.
 
 Caido leverages the QuickJS Engine to:
 
@@ -272,7 +272,7 @@ export async function run({ request, response }, sdk) {
 
 ## JavaScript Node Functions
 
-When a JavaScript Node is executed inside a [Workflow](/guides/workflows.md), one of two functions is ran - depending on the [Workflow Type](/guides/workflows.md#workflow-types).
+When a JavaScript Node is executed inside a Workflow, one of two functions is ran - depending on the [Workflow Type](/concepts/workflows_intro.md).
 
 ### Convert Type JavaScript Node Function
 
@@ -493,7 +493,3 @@ export async function run({ request, response }, sdk) {
 - The `sdk.findings.create()` method is called.
 - This call will await the completion of the creation process of the `finding` object and then creates a new Finding with it in the Caido interface.
 :::
-
-## Additional Information
-
-For further documentation on coding in Workflows - click [here](/guides/workflows.md).

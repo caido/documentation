@@ -36,9 +36,9 @@ This includes any modifications made by any active [Match & Replace](/guides/mat
 
 ::: tip TIPS
 
-- [Applying a Scope Preset](/guides/search.md) is supported by HTTP History.
+- [Applying a Scope Preset](/guides/scope.md) is supported by HTTP History.
 - [Applying a Filter Preset](/guides/filters.md) is supported by HTTP History.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
+- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/sorting.md) documentation for more information.
 - To send a request to `Replay` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
 - To send a request to `Automate` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.

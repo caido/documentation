@@ -11,7 +11,7 @@ The Exports feature offers two export options:
 <img alt="Exports." src="/_images/export_types.png" center/>
 
 1. **Export all**: Exports all data of the specified tool.
-2. **Export current rows**: Exports only rows that match the filter and [Scope](/guides/search.md) currently set.
+2. **Export current rows**: Exports only rows that match the filter and [Scope](/guides/scope.md) currently set.
 
 <ProContainer>
 <b>Export current rows</b> is only available to Caido Pro users.
