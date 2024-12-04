@@ -22,6 +22,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Distributions",
+        link: "/guides/distributions",
         items: [
           {
             text: "Athena OS",

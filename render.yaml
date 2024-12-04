@@ -130,6 +130,9 @@ services:
         source: /quickstart/distributions/linux/athena_os
         destination: /guides/distributions/athena_os
       - type: redirect
+        source: /quickstart/distributions
+        destination: /guides/distributions
+      - type: redirect
         source: /reference/common_errors
         destination: /guides/troubleshooting
 
