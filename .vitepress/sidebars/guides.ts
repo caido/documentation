@@ -17,14 +17,23 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/user_guide/docker",
       },
       {
-        text: "Proxying Local Traffic",
-        link: "/guides/user_guide/proxy_local",
+        text: "Distributions",
+        items: [
+          {
+            text: "Athena OS",
+            link: "/guides/distributions/athena_os",
+          },
+        ],
       },
     ],
   },
   {
     text: "Configuration",
     items: [
+      {
+        text: "Proxying Local Traffic",
+        link: "/guides/user_guide/proxy_local",
+      },
       {
         text: "Changing the Listening Address/Port",
         link: "/guides/listening_address",

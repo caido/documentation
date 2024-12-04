@@ -57,19 +57,4 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
-  {
-    text: "Distributions",
-    link: "/quickstart/distributions",
-    items: [
-      {
-        text: "Linux",
-        items: [
-          {
-            text: "Athena OS",
-            link: "/quickstart/distributions/linux/athena_os",
-          },
-        ],
-      },
-    ],
-  },
 ];

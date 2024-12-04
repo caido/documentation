@@ -126,6 +126,9 @@ services:
       - type: redirect
         source: /quickstart/welcome_to_caido/onboarding
         destination: /quickstart/
+      - type: redirect
+        source: /quickstart/distributions/linux/athena_os
+        destination: /guides/distributions/athena_os
 
     
     domains:
