@@ -2,17 +2,12 @@ import type { DefaultTheme } from "vitepress";
 
 export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Introduction",
+    text: "Concepts",
     items: [
       {
-        text: "Directory",
+        text: "Introduction",
         link: "/concepts/",
       },
-    ],
-  },
-  {
-    text: "Essentials",
-    items: [
       {
         text: "CLI vs Desktop",
         link: "/concepts/essentials/cli_vs_desktop",
@@ -20,24 +15,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Instances",
         link: "/concepts/essentials/instances",
-      },
-      {
-        text: "HTTPQL",
-        link: "/concepts/essentials/httpql",
-      },
-      {
-        text: "Workflows",
-        link: "/concepts/essentials/workflows",
-        items: [
-          {
-            text: "Nodes",
-            link: "/concepts/essentials/workflows/nodes/nodes",
-          },
-          {
-            text: "JavaScript in Caido",
-            link: "/concepts/essentials/workflows/js_in_caido",
-          },
-        ],
       },
       {
         text: "Tabs",
@@ -50,19 +27,28 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Workflows",
+    items: [
+      {
+        text: "What are Workflows?",
+        link: "/concepts/workflows_intro",
+      },
+      {
+        text: "Understanding Nodes",
+        link: "/concepts/workflows_nodes",
+      },
+      {
+        text: "Writing JavaScript",
+        link: "/concepts/workflows_js",
+      },
+    ],
+  },
+  {
     text: "Internals",
     items: [
       {
-        text: "Files",
-        link: "/concepts/internals/files",
-      },
-      {
         text: "GraphQL",
         link: "/concepts/internals/graphql",
-      },
-      {
-        text: "Download",
-        link: "/concepts/internals/download",
       },
       {
         text: "Cloud",
@@ -71,10 +57,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Authentication",
         link: "/concepts/internals/authentication",
-      },
-      {
-        text: "Developer",
-        link: "https://developer.caido.io",
       },
     ],
   },

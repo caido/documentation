@@ -1,8 +1,4 @@
-# Creating Your First Project
-
-## What are Projects?
-
-_For advanced documentation on this topic - click [here](/guides/projects.md)._
+# Projects
 
 Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
 
@@ -19,9 +15,13 @@ Think of `Projects` as separate directories for your audits. Projects allow you 
 5. Clicking on `⋮` will present the following additional options:
 
 - **Rename**: Rename your Project.
-- **Copy path**: Copy the Project's data location on your device to your clipboard.
-- **Create backup (Caido Pro Feature)**: Create a Backup of the Project data.
+- **Copy path**: Copy the Project's data location on your device to your clipboard. View the [Files](/guides/files.md) documentation for more information.
+- **Create backup**: Create a Backup of the Project data. View the [Backups](/guides/backups.md) documentation for more information.
 - **Delete**: Delete the Project from your Instance.
+
+<ProContainer>
+<b>Create backup</b> is only available to Caido Pro users.
+</ProContainer>
 
 ## Switching Between Projects
 
@@ -30,8 +30,23 @@ Caido offers the ability to switch between your Projects with ease. Switching Pr
 1. Selecting the `Workspace` tab from the left-hand menu within the Caido window and clicking the `Select` button next to the desired Project.
 2. Selecting the desired Project in the drop-down menu, located in the upper-right corner of the Caido window.
 
-## Capturing and Inspecting Web Traffic
+::: tip TIPS
 
-Once you have familiarized yourself with creating Projects - basic capture and inspection of web traffic steps are available here:
+- It is encouraged to keep your work organized by creating many smaller Projects.
+- **No restart is required in order to switch Projects.** You can navigate different assessments quickly without losing track of the information you've collected.
 
-- [Capturing and Inspecting Web Traffic](./traffic.md)
+:::
+
+## Restoring a Project from a Backup
+
+To restore your Projects from a Backup, click the `Restore` button within the [Backups](/guides/backups.md) interface or use the `Import` button near the search bar within the Projects interface and provide a path to a `.caidobak` file.
+
+## Project Updating
+
+When structural changes occur after a Caido update, sometimes it is necessary for Caido to update a Project to a new format. This can take time but will ensure you're working with the latest capabilities in Caido.
+
+::: info
+Projects are automatically upgraded when you use them with a newer Caido version and **CANNOT** be downgraded.
+:::
+
+<img width="400" alt="Upgrade Projects" src="/_images/projects_upgrade.png" center>

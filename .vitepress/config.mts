@@ -5,6 +5,7 @@ import {
   guidesSidebar,
   quickstartSidebar,
   referenceSidebar,
+  tutorialsSidebar,
 } from "./sidebars";
 
 // https://vitepress.dev/reference/site-config
@@ -45,6 +46,7 @@ export default defineConfig({
 
     nav: [
       { text: "Quickstart", link: "/quickstart/" },
+      { text: "Tutorials", link: "/tutorials/" },
       { text: "Guides", link: "/guides/" },
       { text: "Reference", link: "/reference/" },
       { text: "Concepts", link: "/concepts/" },
@@ -57,6 +59,7 @@ export default defineConfig({
       "/reference/": referenceSidebar,
       "/guides/": guidesSidebar,
       "/concepts/": conceptsSidebar,
+      "/tutorials/": tutorialsSidebar,
     },
 
     socialLinks: [

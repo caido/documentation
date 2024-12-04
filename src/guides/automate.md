@@ -1,17 +1,17 @@
-# Automating Brute-Forcing/Fuzzing
+# Automate
 
-## Automate
+The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidly modify certain parameters of requests using wordlists.
 
-::: tip
-To send a request to `Automate`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+M`.
-:::
+Advanced setting options ensure your campaign can account for events such as failed requests or rate-limiting. You can transfer requests to the Automate interface from many other Caido interfaces.
+
+You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
 <img alt="Automate tab." src="/_images/automate_tab.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).
 2. Highlight the element(s) you wish to brute-force/fuzz.
-3. Once the element is highlighted - click `+` to convert it to a placeholder. **_You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`._**
+3. Once the element is highlighted - click `+` to convert it to a placeholder. You can remove a placeholder/placeholders by selecting them and then clicking `-` or you can clear all placeholders by clicking `Clear`.
 4. Select a [Payload Type](#payload-types), apply [Preprocessors](#preprocessors) and set additional [Settings](#settings) within this pane.
 5. Click `Run` when your automation campaign is configured to begin brute-forcing/fuzzing.
 7. The configuration tab as well as the associated results tab will be paired next to each other here.
@@ -20,7 +20,7 @@ To send a request to `Automate`, either right-click inside the request pane of `
 
 To inspect the results of your `Automate` campaign - proceed with the following steps:
 
-<img alt="Automate results." src="/_images/automate_results_tab.png">
+<img alt="Automate results." src="/_images/automate_results_tab.png" center/>
 
 1. Click the paired tab.
 2. Each request will be displayed in this pane.
@@ -77,3 +77,13 @@ Additional setting options allow you to fine tune how the Automate session will 
 - **# of workers:** The number of threads to run.
 - **Delay (ms) before retry:** The time in milliseconds to sleep until retrying a failed request.
 - **Max retries:** The number of reattempts to perform upon a failed request before moving on to the following requests.
+
+## Additional Information
+
+::: tip TIPS
+
+- Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
+- Clicking the `{}` button will toggle the Pretty/Raw display option.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
+
+:::

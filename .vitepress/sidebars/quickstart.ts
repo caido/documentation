@@ -2,26 +2,11 @@ import type { DefaultTheme } from "vitepress";
 
 export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Welcome",
+    text: "Quickstart",
     items: [
       {
         text: "Introduction",
         link: "/quickstart/",
-      },
-      { text: "Showcase", link: "/quickstart/showcase" },
-    ],
-  },
-  {
-    text: "Beginner Guide",
-    items: [
-      {
-        text: "Welcome to Caido",
-        items: [
-          {
-            text: "Onboarding",
-            link: "/quickstart/beginner_guide/welcome_to_caido/onboarding",
-          },
-        ],
       },
       {
         text: "Setup",
@@ -67,21 +52,6 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "Common Errors and Solutions",
             link: "/quickstart/beginner_guide/getting_help/support",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    text: "Distributions",
-    link: "/quickstart/distributions",
-    items: [
-      {
-        text: "Linux",
-        items: [
-          {
-            text: "Athena OS",
-            link: "/quickstart/distributions/linux/athena_os",
           },
         ],
       },

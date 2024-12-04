@@ -2,20 +2,11 @@ import type { DefaultTheme } from "vitepress";
 
 export const guidesSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Introduction",
-    items: [
-      {
-        text: "Directory",
-        link: "/guides/",
-      },
-    ],
-  },
-  {
-    text: "User Guide",
+    text: "Guides",
     items: [
       {
         text: "Installation",
-        link: "/guides/user_guide/installation",
+        link: "/guides/",
       },
       {
         text: "Running on a VPS",
@@ -26,21 +17,144 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/user_guide/docker",
       },
       {
-        text: "Proxying Local Traffic",
-        link: "/guides/user_guide/proxy_local",
+        text: "Troubleshooting",
+        link: "/guides/troubleshooting",
+      },
+      {
+        text: "Distributions",
+        items: [
+          {
+            text: "Athena OS",
+            link: "/guides/distributions/athena_os",
+          },
+        ],
       },
     ],
   },
   {
-    text: "Workflows",
+    text: "Configuration",
     items: [
       {
-        text: "JWT Decode",
-        link: "/guides/workflows/jwt_decode",
+        text: "Proxying Local Traffic",
+        link: "/guides/user_guide/proxy_local",
       },
       {
-        text: "Add Header & Resend Request",
-        link: "/guides/workflows/add_header",
+        text: "Changing the Listening Address/Port",
+        link: "/guides/listening_address",
+      },
+      {
+        text: "Installing the CA Certificate",
+        link: "/guides/import_ca_certificate",
+      },
+      {
+        text: "Configuring the Data Directory",
+        link: "/guides/data_location",
+      },
+    ],
+  },
+  {
+    text: "Features",
+    items: [
+      {
+        text: "Overview",
+        items: [
+          {
+            text: "Sitemap",
+            link: "/guides/sitemap",
+          },
+          {
+            text: "Sorting",
+            link: "/guides/sorting",
+          },
+          {
+            text: "Scope",
+            link: "/guides/scope",
+          },
+          {
+            text: "Filters",
+            link: "/guides/filters",
+          },
+        ],
+      },
+      {
+        text: "Proxy",
+        items: [
+          {
+            text: "Intercept",
+            link: "/guides/intercept",
+          },
+          {
+            text: "HTTP History",
+            link: "/guides/http_history",
+          },
+          {
+            text: "WS History",
+            link: "/guides/ws_history",
+          },
+          {
+            text: "Match & Replace",
+            link: "/guides/match_replace",
+          },
+        ],
+      },
+      {
+        text: "Testing",
+        items: [
+          {
+            text: "Replay",
+            link: "/guides/replay",
+          },
+          {
+            text: "Automate",
+            link: "/guides/automate",
+          },
+          {
+            text: "Workflows",
+            link: "/guides/workflows",
+          },
+          {
+            text: "Assistant",
+            link: "/guides/assistant",
+          },
+        ],
+      },
+      {
+        text: "Logging",
+        items: [
+          {
+            text: "Search",
+            link: "/guides/search",
+          },
+          {
+            text: "Findings",
+            link: "/guides/findings",
+          },
+          {
+            text: "Exports",
+            link: "/guides/exports",
+          },
+        ],
+      },
+      {
+        text: "Workspace",
+        items: [
+          {
+            text: "Files",
+            link: "/guides/files",
+          },
+          {
+            text: "Plugins",
+            link: "/guides/plugins",
+          },
+          {
+            text: "Projects",
+            link: "/guides/projects",
+          },
+          {
+            text: "Backups",
+            link: "/guides/backups",
+          },
+        ],
       },
     ],
   },

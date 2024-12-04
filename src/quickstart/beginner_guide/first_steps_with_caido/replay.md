@@ -2,7 +2,7 @@
 
 ## Replay
 
-_For advanced documentation on this topic - click [here](/reference/features/testing/replay.md)._
+_For advanced documentation on this topic - click [here](/guides/replay.md)._
 
 `Replay` allows you to repeatedly forward modified requests. **Requests** are shown on the left and **responses** are shown on the right.
 

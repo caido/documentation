@@ -2,9 +2,9 @@
 
 _Advanced documentation on where Caido saves data, customizing the listening address/port used by Caido and importing Caido's CA certificate - can be found below:_
 
-- [Data Location](/reference/configuration/data_location.md)
-- [Listening Address/Port](/reference/configuration/listening_address.md)
-- [Importing Caido's CA Certificate](/reference/configuration/import_ca_certificate.md)
+- [Data Location](/guides/data_location.md)
+- [Listening Address/Port](/guides/listening_address.md)
+- [Importing Caido's CA Certificate](/guides/import_ca_certificate.md)
 
 ## Changing Default Settings
 
