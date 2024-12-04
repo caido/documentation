@@ -22,10 +22,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/essentials/instances",
       },
       {
-        text: "HTTPQL",
-        link: "/concepts/essentials/httpql",
-      },
-      {
         text: "Tabs",
         link: "/concepts/essentials/tabs",
       },

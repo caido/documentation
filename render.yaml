@@ -111,6 +111,9 @@ services:
       - type: redirect
         source: /reference/workflows/convert/coding_nodes
         destination: /reference/workflow_convert_nodes
+      - type: redirect
+        source: /concepts/essentials/httpql
+        destination: /reference/httpql
     domains:
       - docs.caido.io
     envVars:

@@ -2,15 +2,19 @@ import type { DefaultTheme } from "vitepress";
 
 export const referenceSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Introduction",
+    text: "Reference",
     items: [
       {
-        text: "Directory",
+        text: "Introduction",
         link: "/reference/",
       },
       {
         text: "Common Errors",
         link: "/reference/common_errors",
+      },
+      {
+        text: "HTTPQL",
+        link: "/reference/httpql",
       },
     ],
   },
