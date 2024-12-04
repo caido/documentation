@@ -1,6 +1,6 @@
 # Add Header & Send Request Workflow
 
-This guide will assist you in building a [Passive Workflow](/reference/workflows/passive.md) that will add a header to an in-scope request and resend the request with it.
+This guide will assist you in building a [Passive Workflow](/concepts/essentials/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 

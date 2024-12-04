@@ -62,10 +62,10 @@ services:
         destination: /reference/workflows/*
       - type: redirect
         source: /guides/workflows/jwt_decode
-        destination: /tutorials/workflows/jwt_decode
+        destination: /tutorials/jwt_decode
       - type: redirect
         source: /guides/workflows/add_header
-        destination: /tutorials/workflows/add_header
+        destination: /tutorials/add_header
       - type: redirect
         source: /guides/user_guide/installation
         destination: /guides/
@@ -93,6 +93,12 @@ services:
       - type: redirect
         source: /reference/features/workspace/*
         destination: /guides/*
+      - type: redirect
+        source: /reference/workflows/passive
+        destination: /tutorials/color_requests
+      - type: redirect
+        source: /reference/workflows/passive
+        destination: /concepts/essentials/workflows
 
     domains:
       - docs.caido.io

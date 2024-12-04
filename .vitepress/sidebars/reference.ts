@@ -23,10 +23,6 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/workflows/workflows",
       },
       {
-        text: "Passive",
-        link: "/reference/workflows/passive",
-      },
-      {
         text: "Convert",
         link: "/reference/workflows/convert",
         items: [

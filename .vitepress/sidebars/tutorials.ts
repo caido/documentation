@@ -11,15 +11,24 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Example Workflows",
+    text: "Convert Workflows",
     items: [
       {
         text: "JWT Decode",
-        link: "/tutorials/workflows/jwt_decode",
+        link: "/tutorials/jwt_decode",
+      },
+    ],
+  },
+  {
+    text: "Passive Workflows",
+    items: [
+      {
+        text: "Add Header",
+        link: "/tutorials/add_header",
       },
       {
-        text: "Add Header & Resend Request",
-        link: "/tutorials/workflows/add_header",
+        text: "Color Requests",
+        link: "/tutorials/color_requests",
       },
     ],
   },
