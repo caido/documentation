@@ -22,8 +22,8 @@ services:
         source: /features/workflows/convert
         destination: /features/testing/workflows/convert
       - type: redirect
-        source: /internals/httpql
-        destination: /concepts/httpql
+        source: /internals/httpql*
+        destination: /reference/httpql
       - type: redirect
         source: /internals/instances
         destination: /concepts/instances
