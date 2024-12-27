@@ -21,6 +21,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "MD5 Hash",
         link: "/tutorials/md5_hash",
       },
+      {
+        text: "AWS Signature",
+        link: "/tutorials/aws_signature",
+      },
     ],
   },
   {
