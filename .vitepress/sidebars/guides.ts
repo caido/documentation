@@ -61,6 +61,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "Installing the CA Certificate",
             link: "/guides/import_ca_certificate",
           },
+          {
+            text: "CA Certificate Management",
+            link: "/guides/tls",
+          },
         ],
       },
       {
