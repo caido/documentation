@@ -19,13 +19,20 @@ In order to send traffic to another proxy from Caido:
 
 9. Click the `+ Create` button to save the configuration.
 
-<img alt="Upstream proxies." src="/_images/new_proxies.png" center/>
+<div style="display: flex; justify-content: center; gap: 10px;">
+    <img alt="Upstream HTTP proxy." src="/_images/http_proxy_new.png" style="width: 45%;">
+    <img alt="Upstream SOCKS proxy." src="/_images/socks_proxy.png" style="width: 45%;">
+</div>
 
 ::: tip TIPS
 
 - Ensure the upstream HTTP proxy is running using a different port than Caido.
+- If both SOCKS and HTTP proxies are enabled, traffic will flow through the SOCKS proxy first, then through the HTTP proxy.
 - You can enable/disable usage using the toggle switch associated with the table row of your saved configuration.
-- Proxies can be edited or deleted with the pencil icon or trashbin buttons respectively.
+- Proxies can be edited or deleted with the pencil icon or trash bin buttons respectively.
 
-<img alt="Upstream proxies." src="/_images/upstream_actions.png" center no-shadow/>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <img alt="Upstream HTTP proxy actions." src="/_images/actions_http_proxy.png" style="width: 60%;" no-shadow>
+    <img alt="Upstream SOCKS proxy actions." src="/_images/actions_socks_proxy.png" style="width: 60%;" no-shadow>
+</div>
 :::
