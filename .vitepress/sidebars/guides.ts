@@ -37,7 +37,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Network",
-        link: "/guides/network",
         items: [
           {
             text: "Proxying Local Traffic",
@@ -55,7 +54,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "CA Certificate",
-        link: "/guides/network",
         items: [
           {
             text: "Installing the CA Certificate",
@@ -69,7 +67,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Other",
-        link: "/guides/network",
         items: [
           {
             text: "Configuring the Data Directory",
