@@ -16,6 +16,10 @@ hero:
       link: /quickstart/
 
     - theme: alt
+      text: Tutorials
+      link: /tutorials/
+
+    - theme: alt
       text: Guides
       link: /guides/
 
