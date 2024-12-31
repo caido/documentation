@@ -1,19 +1,19 @@
-# Resign AWS requests
+# Resign AWS Requests
 
 When dealing with AWS APIs, there is often a need to resign requests so they can be accepted by AWS.
 In this tutorial, we will build a [Convert Workflow](/concepts/workflows_intro.md#convert-workflows) to rebuild the [AWS Signature V4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) on send in [Replay](/guides/replay).
 A similar method can be used for other cloud providers since a lot of them follow the same signature process.
 
-## Setting the environment
+## Setting the Environment
 
 We assume at this point that you have access to an `AWS Access Key` (like `AKIAIOSFODNN7EXAMPLE`) and an `AWS Secret Access key` (like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`).
 
-Enter them in the global environment for your project as `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`.
+Enter them in the global environment for your Project as `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`.
 We will also need a two other variables: `AWS_REGION` (like `us-east-1`) and `AWS_SERVICE` (like `s3`).
 
 <img alt="Setup the variables in the global environment" src="/_images/aws_environment.png" center no-shadow width="900"/>
 
-## Creating the workflow
+## Creating the Workflow
 
 For this tutorial, we will use AWS v4 authentication via headers. Note that it is [also possible to authenticate via query parameters](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv-authentication-methods.html).
 
@@ -21,16 +21,16 @@ The algorithm to craft the signature is illustrated in the following diagram. Yo
 
 <img alt="AWS Signature process" src="/_images/aws_signature_process.png" center no-shadow width="600"/>
 
-### Linking up the nodes
+### Linking up the Nodes
 
-Let's create a new `Convert Workflow` and drop in a `Javascript` node. This will provide us with [a full Javascript environment](https://developer.caido.io/concepts/essentials/runtime.html#backend) to code our algorithm.
+Let's create a new `Convert Workflow` and drop in a `Javascript` Node. This will provide us with [a full Javascript environment](https://developer.caido.io/concepts/essentials/runtime.html#backend) to code our algorithm.
 Make sure that all the references are setup properly. If that is the case if you enter `test` in the input and run it, it should output `test`.
 
 <img alt="Workflow setup" src="/_images/aws_workflow_setup.png" center no-shadow width="800"/>
 
-### Inserting the script
+### Inserting the Script
 
-Here is the script we are going to use for that workflow, replace the content of the `Javascript` node with it.
+Here is the script we are going to use for that Workflow, replace the content of the `Javascript` Node with it.
 It will output three headers (`Authorization`, `x-amz-date` and `x-amz-content-sha256`) that we will inject in our request.
 
 ```javascript
@@ -125,22 +125,22 @@ export function run(input, sdk) {
 }
 ```
 
-## Using the workflow in replay
+## Using the Workflow in Replay
 
-Now that our workflow is created, the last step is to use it inside `Replay`. For the purpose of this tutorial, we will try to access a private file on an S3 bucket. If we try to access this file without authentication, we get an error.
+Now that our Workflow is created, the last step is to use it inside `Replay`. For the purpose of this tutorial, we will try to access a private file on an S3 bucket. If we try to access this file without authentication, we get an error.
 
 <img alt="AWS error when trying to access the file" src="/_images/aws_s3_error.png" center no-shadow width="800"/>
 
-### Adding the header
+### Adding the Header
 
 Next add a new authorization header placeholder by highlighting it and clicking on the `+` icon.
 Then, open the placeholder settings by using the pen icon.
 
 <img alt="Adding an header placeholder" src="/_images/aws_header_placeholder.png" center no-shadow width="600"/>
 
-On the left part of the new window, you can select what the input of our workflow will be. By default, only the placeholder is selected but in our case we will need the whole request. You can either select with the mouse or type `CTRL + A` to grab the whole request.
+On the left part of the new window, you can select what the input of our Workflow will be. By default, only the placeholder is selected but in our case we will need the whole request. You can either select with the mouse or type `CTRL + A` to grab the whole request.
 
-On the right, remove the default `URL Encode` preprocessor and add our `AWS Signature` workflow instead.
+On the right, remove the default `URL Encode` preprocessor and add our `AWS Signature` Workflow instead.
 
 <img alt="Placeholder settings" src="/_images/aws_placeholder_settings.png" center no-shadow width="800"/>
 
@@ -156,8 +156,8 @@ In `Search`, you can also view the fully expanded request and the properly craft
 
 ## Conclusion
 
-With this new workflow you are now able to re-sign any `AWS` request.
-You should also be more familiar with workflow integration in `Replay` and how to really customize your requests at runtime.
+With this new Workflow you are now able to re-sign any `AWS` request.
+You should also be more familiar with Workflow integration in `Replay` and how to really customize your requests at runtime.
 
 The full `Workflow` is provided below, ready to be imported!
 
