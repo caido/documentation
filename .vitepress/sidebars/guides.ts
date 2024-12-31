@@ -36,20 +36,46 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Configuration",
     items: [
       {
-        text: "Proxying Local Traffic",
-        link: "/guides/user_guide/proxy_local",
+        text: "Network",
+        link: "/guides/network",
+        items: [
+          {
+            text: "Proxying Local Traffic",
+            link: "/guides/proxy_local",
+          },
+          {
+            text: "Changing the Listening Address/Port",
+            link: "/guides/listening_address",
+          },
+          {
+            text: "Upstream to Another Proxy",
+            link: "/guides/upstream",
+          },
+        ],
       },
       {
-        text: "Changing the Listening Address/Port",
-        link: "/guides/listening_address",
+        text: "CA Certificate",
+        link: "/guides/network",
+        items: [
+          {
+            text: "Installing the CA Certificate",
+            link: "/guides/import_ca_certificate",
+          },
+        ],
       },
       {
-        text: "Installing the CA Certificate",
-        link: "/guides/import_ca_certificate",
-      },
-      {
-        text: "Configuring the Data Directory",
-        link: "/guides/data_location",
+        text: "Other",
+        link: "/guides/network",
+        items: [
+          {
+            text: "Configuring the Data Directory",
+            link: "/guides/data_location",
+          },
+          {
+            text: "Creating Shortcuts",
+            link: "/guides/shortcuts",
+          },
+        ],
       },
     ],
   },
