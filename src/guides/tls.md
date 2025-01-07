@@ -13,3 +13,7 @@ If you regenerate the certificate, you will need to [import the new one into you
 :::
 
 <img alt="CA certificate management." src="/_images/tls_settings.png" center/>
+
+::: info
+We currently do not support CA certificates from other tools.
+:::
