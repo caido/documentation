@@ -28,6 +28,8 @@ Please read our [reference on internal files](/reference/internal_files) first t
 1. Switch to WAL mode: `PRAGMA raw.journal_mode = WAL;`
 1. Enable foreign keys: `PRAGMA foreign_keys = ON;`
 
+Do NOT skip the foreign keys step!!!
+
 ## Deleting requests
 
 The requests are stored in multiple tables and thus we need to be careful when cleaning them.
@@ -42,9 +44,10 @@ We will keep that in a temporary table.
 CREATE TEMP TABLE requests_to_delete AS
 SELECT id, response_id
 FROM requests
-WHERE host = 'kagi.com'-- <your_condition_here> -- Replace with your condition
-LIMIT 1000;
+WHERE <your_condition_here> -- Replace with your condition
 ```
+
+The condition could be, for example, `host = "www.youtube.com"`.
 
 ```sql
 CREATE TEMP TABLE responses_to_delete AS
@@ -59,9 +62,6 @@ WITH RECURSIVE recursive_responses AS (
  )
 SELECT id FROM recursive_responses;
 ```
-
-The condition could be, for example, `host = "www.youtube.com"`.
-We also suggest doing batches of delete of 1000-10000 at a time.
 
 ### Cleaning requests raw
 
