@@ -40,4 +40,13 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
       },
     ],
   },
+  {
+    text: "Advanced",
+    items: [
+      {
+        text: "Deleting data",
+        link: "/tutorials/deleting_data",
+      },
+    ],
+  },
 ];
