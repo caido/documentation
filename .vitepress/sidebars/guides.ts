@@ -73,6 +73,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/data_location",
           },
           {
+            text: "Deleting data",
+            link: "/guides/deleting_data",
+          },
+          {
             text: "Creating Shortcuts",
             link: "/guides/shortcuts",
           },
