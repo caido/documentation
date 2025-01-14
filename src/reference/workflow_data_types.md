@@ -13,6 +13,10 @@ You can view the data type by clicking on a Node and viewing the value within th
 <img alt="Node reference dropdown menu." src="/_images/node_reference_selection.png" center no-shadow/>
 :::
 
+::: info
+[View the SDK for the types here.](https://developer.caido.io/reference/sdks/workflow/#data)
+:::
+
 ### String
 
 Strings are compatible with:
