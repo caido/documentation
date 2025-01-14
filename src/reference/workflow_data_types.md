@@ -30,7 +30,7 @@ Bytes are compatible with:
 
 - **String**: Bytes as UTF-8 encoded.
 - **Bool**: Converts to `"true"` or `"false"` in bytes.
-- **Integer**: Converts to string representation in bytes.
+- **Integer**: First converts to string type and then to  bytes UTF-8 encoded.
 
 ### Bool
 
