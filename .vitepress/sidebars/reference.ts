@@ -22,6 +22,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/workflow_convert_nodes",
       },
       {
+        text: "Node Data Types",
+        link: "/reference/workflow_data_types",
+      },
+      {
         text: "SDK",
         link: "https://developer.caido.io/reference/sdks/workflow/",
       },
