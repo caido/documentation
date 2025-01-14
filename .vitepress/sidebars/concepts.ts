@@ -41,6 +41,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Writing JavaScript",
         link: "/concepts/workflows_js",
       },
+      {
+        text: "Workflow Operation",
+        link: "/concepts/workflow_flow",
+      },
     ],
   },
   {

@@ -1,0 +1,56 @@
+# Node Data Types
+
+Nodes are defined by various different input and output data types.
+
+When referencing a Node's data for use in another, the types must be compatible with each other.
+
+## Data Type Conversions
+
+Data can be shared across Nodes as long as the types are `Exact` (expected) or are `Compatible` based on the following conversions:
+
+::: tip
+You can view the data type by clicking on a Node and viewing the value within the parenthesis. This will be above the reference data dropdown menu.
+<img alt="Node reference dropdown menu." src="/_images/node_reference_selection.png" center no-shadow/>
+:::
+
+::: info
+[View the SDK for the types here.](https://developer.caido.io/reference/sdks/workflow/#data)
+:::
+
+### String
+
+Strings are compatible with:
+
+- **String**
+  - **Choice**: Variation of string.
+  - **Code**: Variation of string.
+- **Bytes**: Encoded as UTF-8 with lossy conversion (invalid characters are replaced with `�`).
+- **Bool**: Converts to `"true"` or `"false"`.
+- **Integer**: Base-10 decimal encoding.
+
+### Bytes
+
+Bytes are compatible with:
+
+- **String**: Bytes as UTF-8 encoded.
+- **Bool**: Converts to `"true"` or `"false"` in bytes.
+- **Integer**: First converts to string type and then to  bytes UTF-8 encoded.
+
+### Bool
+
+Booleans are compatible with:
+
+- **Integer**: Is `true` if integer is not zero - otherwise `false`.
+- **Bytes/String**: Is `true` for "true", "on", "yes", and "1" - otherwise `false`.
+
+### Integer
+
+Integers are compatible with:
+
+- **Bool**: Is `true` if integer is `1` - `false` if `0`.
+- **Bytes**: Converted to string loosely, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
+- **String**: Parsed from string, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
+
+### Request & Responses
+
+There is no conversion besides their own.
