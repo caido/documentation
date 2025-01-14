@@ -1,4 +1,4 @@
-# Workflow Data Types
+# Node Data Types
 
 Nodes are defined by various different input and output data types.
 
@@ -10,42 +10,42 @@ Data can be shared across Nodes as long as the types are `Exact` (expected) or a
 
 ::: tip
 You can view the data type by clicking on a Node and viewing the value within the parenthesis. This will be above the reference data dropdown menu.
-
+<img alt="Node reference dropdown menu." src="/_images/node_reference_selection.png" center no-shadow/>
 :::
 
 ### String
 
-::: info
-The `Choice` and `Code` are not types in of themselves but rather just specializations of `String`.
-:::
-
 Strings are compatible with:
 
-- **Bytes**: String (UTF-8 with lossy conversion, invalid characters are replaced with `�`).
-- **Bool**: String (converts to `"true"` or `"false"`).
-- **Integer**: String (base-10 decimal encoding).
+- **String**
+  - **Choice**: Variation of string.
+  - **Code**: Variation of string.
+- **Bytes**: Encoded as UTF-8 with lossy conversion (invalid characters are replaced with `�`).
+- **Bool**: Converts to `"true"` or `"false"`.
+- **Integer**: Base-10 decimal encoding.
 
 ### Bytes
 
 Bytes are compatible with:
 
-- **String**: Bytes (UTF-8 encoding).
-- **Bool**: String (converts to `"true"` or `"false"` in bytes).
-- **Integer**: String (converts to string representation in bytes).
+- **String**: Bytes as UTF-8 encoded.
+- **Bool**: Converts to `"true"` or `"false"` in bytes.
+- **Integer**: Converts to string representation in bytes.
 
 ### Bool
 
 Booleans are compatible with:
 
-- **Integer**: Bool(`true` if integer is not zero - otherwise `false`).
-- **Bytes/String**: Bool(`true` for "true", "on", "yes", and "1" - otherwise false).
+- **Integer**: Is `true` if integer is not zero - otherwise `false`.
+- **Bytes/String**: Is `true` for "true", "on", "yes", and "1" - otherwise `false`.
 
 ### Integer
 
 Integers are compatible with:
 
-- **Bool**: Integer(`true` if integer !=0 - otherwise `false`).
-- **Bytes/String**: Integer(parseIt ("0x123", "10", "#0b0", "0o123", "-123"), lossy string conversion for bytes).
+- **Bool**: Is `true` if integer is `1` - `false` if `0`.
+- **Bytes**: Converted to string loosely, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
+- **String**: Parsed from string, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
 
 ### Request & Responses
 

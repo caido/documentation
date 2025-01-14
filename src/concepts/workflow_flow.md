@@ -27,7 +27,7 @@ The `Choice` and `Code` types are just variations of `String`.
 With this typed data system, even though Nodes are processed sequentially, you do not need a direct line between two Nodes in order to pass data from one to another. Instead, data can be referenced using dot notation of a Node's alias and it's output alias:
 
 ```
-[node_alias].[output_alias]
+$[node_alias].[output_alias]
 ```
 
 ::: tip
