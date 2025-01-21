@@ -28,6 +28,29 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Mobile Traffic",
+    items: [
+      {
+        text: "Android",
+        items: [
+          {
+            text: "Proxying Android Device Traffic",
+            link: "/tutorials/android_device",
+          },
+        ],
+      },
+      {
+        text: "iOS",
+        items: [
+          {
+            text: "Proxying iOS Device Traffic",
+            link: "/tutorials/ios_device",
+          },
+        ],
+      },
+    ],
+  },
+  {
     text: "Passive Workflows",
     items: [
       {
