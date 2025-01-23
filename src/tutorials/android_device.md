@@ -23,7 +23,7 @@ Connect the Android device to your computer over USB, navigate to the `/platform
 
 To configure your Android device to use Caido:
 
-1. Ensure the device is on the same Wi-Fi network the computer running Caido.
+1. Ensure the device is on the same Wi-Fi network as the computer running Caido.
 2. Navigate to the device Wi-Fi settings and select your network SSID.
 3. Access the `Advanced` settings of the network and select the `Manual` option from the `Proxy` dropdown menu:
 
