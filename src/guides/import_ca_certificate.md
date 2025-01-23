@@ -1,6 +1,6 @@
 # Installing the CA Certificate
 
-To use Caido to intercept (and tamper with) your HTTP/S traffic, it is necessary to import and trust the CA Certificate of Caido in your browser.
+To use Caido to intercept (and tamper with) your HTTPS traffic, it is necessary to import and trust the CA Certificate of Caido in your browser.
 
 ## Importing the CA Certificate in Your Browser
 
