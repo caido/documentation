@@ -34,7 +34,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Android",
         items: [
           {
-            text: "Proxying Android Device Traffic",
+            text: "Proxying Android Traffic",
             link: "/tutorials/android_device",
           },
         ],
@@ -43,7 +43,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "iOS",
         items: [
           {
-            text: "Proxying iOS Device Traffic",
+            text: "Proxying iOS Traffic",
             link: "/tutorials/ios_device",
           },
         ],
