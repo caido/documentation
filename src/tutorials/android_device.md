@@ -50,7 +50,7 @@ This command forwards traffic from `localhost:8080` on your device to port `8080
 
 ## Intercepting Application Traffic
 
-Android mobile applications are packaged as `.apk` (*_Android Package Kit_*) files. You can download these files using sites such as [apkpure.com](~https://apkpure.com/~).
+Android mobile applications are packaged as `.apk` (_Android Package Kit_) files. You can download these files using sites such as [apkpure.com](~https://apkpure.com/~).
 
 Once downloaded, you can install the application to your device using:
 
@@ -66,7 +66,7 @@ If this is the case, you will need the following:
 
 ### Apktool
 
-Apktool is a tool for reverse engineering Android applications. With Apktool, you can decompile APK files to their original resources (*_such as XML files, images, and code_*) and then rebuild them after making modifications.
+Apktool is a tool for reverse engineering Android applications. With Apktool, you can decompile APK files to their original resources (_such as XML files, images, and code_) and then rebuild them after making modifications.
 
 This process involves working with `.smali` files, which are a readable representation of the code within Android apps.
 
@@ -131,7 +131,7 @@ The value of the `android:name` attribute of this `<activity>` tag is the full A
 Syntax of `<Keyword>Activity` (_e.g. `MainActivity`, `SplashActivity`, `WindowActivity`, `LauncherActivity`, etc._).
 :::
 
-7. Recursively search through the unpacked directory for the AppActivity’s full package name (*_e.g. `com.example.app.MainActivity`_*) to locate its corresponding `.smali` file (*_typically under `smali/` or `smali_classes2/`_*).
+7. Recursively search through the unpacked directory for the AppActivity’s full package name (_e.g. `com.example.app.MainActivity`_) to locate its corresponding `.smali` file (_typically under `smali/` or `smali_classes2/`_).
 
 ```
 grep -r <package-name>
