@@ -7,7 +7,7 @@ Don't hesitate to join our [Discord](https://links.caido.io/www-discord) if you 
 ## Requirements
 
 - [Git](https://git-scm.com/)
-- [mdBook](https://rust-lang.github.io/mdBook/)
+- [pnpm](https://pnpm.io)
 - [Github Account](https://github.com)
 
 ## Steps
@@ -25,8 +25,8 @@ You are now ready to edit files. 🚀
 ### Edits
 
 - Pages are primarily markdown files, but HTML can be used too.
-- **Always** link pages in the `SUMMARY.md` file otherwise they won't show up.
-- To render the website we suggest using: `mdbook serve`.
+- **Always** link pages in the correct sidebar inside of `.vitepress/sidebars`.
+- To render the website we suggest using: `pnpm dev`.
 
 ### Publish
 
