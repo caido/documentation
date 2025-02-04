@@ -50,7 +50,7 @@ If the command output contains the message "adb.exe: device unauthorized", accep
 
 ## Intercepting Mobile Browser Traffic
 
-1. Navigate to [http://127.0.0.1:8080/ca.crt](~http://127.0.0.1:8080/ca.crt~) in your device's browser to download Caido's CA certificate. Provide an arbitrary certificate name and select `Wi-Fi` in the `Used for` dropdown menu.
+1. Navigate to [http://127.0.0.1:8080/ca.crt](http://127.0.0.1:8080/ca.crt) in your device's browser to download Caido's CA certificate. Provide an arbitrary certificate name and select `Wi-Fi` in the `Used for` dropdown menu.
 
 <img alt="Mobile browser Caido certificate options." src="/_images/android_cert_options.png" center no-shadow width="300"/>
 
@@ -62,7 +62,7 @@ If the command output contains the message "adb.exe: device unauthorized", accep
 Android mobile applications are packaged as `.apk` (_Android Package Kit_) files.
 
 ::: tip
-You can download these files using sites such as [apkpure.com](~https://apkpure.com/~).
+You can download these files using sites such as [apkpure.com](https://apkpure.com/).
 :::
 
 Once downloaded, you can install the application to your device using:
@@ -181,7 +181,7 @@ If this is the case, you will need the following:
 
 Frida is a toolkit that allows you to inject custom scripts into running application processes, enabling real-time analysis and modification.
 
-[Download Frida's CLI tools.](~https://frida.re/docs/installation/~)
+[Download Frida's CLI tools.](https://frida.re/docs/installation/)
 
 ## Bypassing Cerificate Pinning
 
