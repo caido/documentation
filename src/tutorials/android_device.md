@@ -1,6 +1,6 @@
 # Proxying Android Traffic
 
-In this tutorial, we will cover the process of configuring an Android device to proxy its traffic through Caido.
+In this tutorial, we will cover the process of manually configuring an Android device to proxy its traffic through Caido.
 
 ::: info
 
@@ -8,6 +8,10 @@ In this tutorial, we will cover the process of configuring an Android device to 
 - Be aware that the names and locations of settings options may vary between devices.
 - Ensure to pay attention to any prompts on the device itself while proceeding through these steps.
 - Ensure to restart your terminal after adding to the PATH environment variable.
+:::
+
+::: tip
+If you want to automate this entire process, you can use [apk-mitm](https://github.com/niklashigi/apk-mitm).
 :::
 
 ## Android SDK Platform-Tools: adb
@@ -18,9 +22,16 @@ To interface with the Android device using your computer's terminal, you will ne
 
 To use `abd` with your Android device, navigate to the device settings and enable the [`Developer options`](https://developer.android.com/studio/debug/dev-options#enable). Then enable `USB debugging`.
 
+<img alt="Enable developer options." src="/_images/developer_options.png" center no-shadow/>
+<img alt="USB debugging." src="/_images/usb_debugging_settings.png" center no-shadow/>
+
 Connect the Android device to your computer over USB and verify the connection by running `adb devices` in your terminal. If the device is connected, it will be listed in the output.
 
 <img alt="List of connected Android devices." src="/_images/adb_device_list.png" center no-shadow/>
+
+::: tip
+If the command output lists the device as "unauthorized", disconnect and reconnect the device, and then accept the "Allow USB debugging?" permission prompt on your device.
+:::
 
 ## Configuring the Android Device
 
@@ -29,24 +40,27 @@ To configure your Android device to use Caido:
 1. Ensure the device is on the same Wi-Fi network as the computer running Caido.
 2. Navigate to the device Wi-Fi settings and select your network SSID.
 3. Access the `Advanced` settings of the network and select the `Manual` option from the `Proxy` dropdown menu:
-
-<img alt="Android proxy settings." src="/_images/android_proxy_settings.png" center no-shadow width="300"/>
-
 4. Set the proxy address to: `127.0.0.1:8080`
+
+<img alt="Android proxy settings." src="/_images/android_proxy_config.png" center no-shadow width="300"/>
+
 5. Click `Save` to set the proxy configurations.
 
 ### Port Forwarding
 
-As Caido is running on your computer, not your phone - run the following command from the `/platform-tools` directory:
+Since Caido is running on your computer, not your phone - run the following command to forward traffic from `localhost:8080` on your device to port `8080` on your computer through the USB connection:
 
 ```
 adb reverse tcp:8080 tcp:8080
 ```
 
-This command forwards traffic from `localhost:8080` on your device to port `8080` on your computer through the USB connection.
+::: tip TIPS
 
-::: tip
-If the command output contains the message "adb.exe: device unauthorized", accept the permissions prompt on your device, run `adb kill-server` and then `adb reverse tcp:8080 tcp:8080` again.
+- If the command output contains the message "adb.exe: device unauthorized", accept the permissions prompt on your device, run `adb kill-server` and then `adb reverse tcp:8080 tcp:8080` again.
+
+- To verify the proxy is working, run `adb shell settings list global`.
+
+- To check if the app is actually using the proxy, run `adb shell dumpsys connectivity | grep -A 2 "Active network"`.
 :::
 
 ## Intercepting Mobile Browser Traffic
@@ -55,40 +69,28 @@ If the command output contains the message "adb.exe: device unauthorized", accep
 
 <img alt="Mobile browser Caido certificate options." src="/_images/android_cert_options.png" center no-shadow width="300"/>
 
-2. Access the `Advanced` general Wi-Fi settings, select `Install network certificates`, and select the Caido `ca.crt` file.
-3. Navigate to a website using your device's browser, you will now see the traffic in Caido's HTTP History.
+2. Click `OK` and navigate to a website using your device's browser, you will now see the traffic in Caido's HTTP History.
 
 ## Intercepting Application Traffic
 
-Android mobile applications are packaged as `.apk` (_Android Package Kit_) files.
+Android mobile applications are files bundled as `.apk` (_Android Package Kit_) packages and must be modified for use with Caido.
 
-::: tip
-You can download these files using sites such as [apkpure.com](https://apkpure.com/).
+::: warning NOTE
+In this tutorial, we’ll use the HTTPToolkit Pinning Demo application to demonstrate how to modify an APK so that Caido can proxy its traffic, and we’ll test these changes using the app’s various HTTP requests. If you are new to mobile application testing, we recommend you [download the HTTPToolkit SSL Pinning Demo APK](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk) to ensure the steps align exactly.
 :::
 
-Once downloaded, you can install the application to your device using:
+<img alt="List of connected Android devices." src="/_images/pinning_demo_requests.png" center no-shadow width="300"/>
+
+Once downloaded, install the application to your connected device with:
 
 ```
-adb install <file-name>
+adb install pinning-demo.apk
 ```
 
-### "I am not seeing any traffic in Caido and I cannot navigate the application. What is happening?"
+APKs can be acquired by downloading them directly from repositories or sites such as [apkmirror.com](https://www.apkmirror.com/) or [apkpure.com](https://apkpure.com/).
 
-For some applications, you will immediately see the traffic they generate in Caido's history. Others implement security measures to prevent MITM attacks by specifying one or more trusted CA certificates, rather than relying on Android's built-in system certificate store.
-
-This security measure, known as "certificate pinning", ensures that the application will only trust SSL/TLS certificates from servers it is specifically designed to communicate with.
-
-If you are unable to navigate the application and are not seeing its traffic in Caido, you will need to make modifications to its files.
-
-[Download the HTTPToolkit android-ssl-pinning-demo application](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk) and install it on your device. This is the application we will be using in the following sections to demonstrate how to make the necessary modifications.
-
-## Unpacking APKs
-
-**Apktool** is a tool for reverse engineering Android applications. With Apktool, you can decompile APK files to their original resources (_such as XML files, images, and code_) and then rebuild them after making modifications.
-
-[Download Apktools for your operating system.](https://apktool.org/docs/install)
-
-Once installed, to unpack an APK:
+<details>
+<summary>APKs can also be extracted from applications already installed on your device. Expand this section to learn how.</summary>
 
 1. Initialize a command-line interface on your Android device:
 
@@ -114,11 +116,21 @@ adb pull /data/app/tech.httptoolkit.pinning_demo-1wMoq8214ewjz2S-xt-sCA==/base.a
 
 <img alt="Pulling the base package." src="/_images/apk_pulled.png" center no-shadow/>
 
-5. Unpack the contents of the `base.apk` package to a new directory within the current directory using:
+</details>
+
+### Unpacking APKs
+
+**Apktool** is a tool for reverse engineering Android applications. Once you have an application's APK, with Apktool you can decompile the package into its individual resources (_such as XML files, images, and code_) and then rebuild them after making modifications.
+
+[Download Apktools for your operating system.](https://apktool.org/docs/install)
+
+To unpack the contents of an APK to a new directory within the current directory, use the following command:
 
 ```
-apktool d -o unpacked base.apk
+apktool d -o unpacked pinning-demo.apk
 ```
+
+_If you extracted the APK, ensure to replace `pinning-demo.apk` with `base.apk`._
 
 <img alt="Unpacking the APK." src="/_images/apk_unpacked.png" center no-shadow/>
 
@@ -127,52 +139,9 @@ apktool d -o unpacked base.apk
 One of the reasons that Caido may not be able to proxy the application traffic is due to the presence of a [Network Security Configuration file](https://developer.android.com/privacy-and-security/security-config).
 Introduced in Android 7.0 (API level 24), the `network_security_config.xml` file allows developers to customize network security settings for their applications.
 
-To modify this file so Caido's self-signed CA Certificate is trusted:
+1. Open the `/res/xml/network_security_config.xml` file, or if it doesn't exist, create it.
 
-1. Open the file in a text editor. It will be located at `/res/xml/network_security_config.xml`.
-
-``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-<!-- Root element for Android network security configurations. -->
-    <domain-config>
-    <!-- Configuration block for a specific domain (sha256.badssl.com). -->
-        <domain includeSubdomains="false">sha256.badssl.com</domain>
-        <!-- Specifies the domain this config applies to. includeSubdomains="false" means 
-             it only applies to exact domain match, not subdomains. -->
-        <pin-set>
-        <!-- Defines SSL certificate pinning rules. -->
-            <pin digest="SHA-256">C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M=</pin>
-            <pin digest="SHA-256">ABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFA</pin>
-            <!-- Two certificate pins using SHA-256 hashes. The app will only trust 
-                 certificates matching these public key hashes. -->
-        </pin-set>
-        <trust-anchors>
-            <certificates src="@raw/lets_encrypt_isrg_root" />
-            <!-- Specifies trusted root certificates. Here it's using a Let's Encrypt 
-                 ISRG root certificate stored in the app's raw resources. -->
-        </trust-anchors>
-        <trustkit-config enforcePinning="true">
-            <!-- TrustKit-specific configuration. -->
-            <report-uri>http://trustkit-report-url.test</report-uri>
-            <!-- URL where pin validation failures will be reported. -->
-        </trustkit-config>
-    </domain-config>
-    <domain-config>
-    <!-- Second configuration block for a different domain (rsa4096.badssl.com). -->
-        <domain includeSubdomains="false">rsa4096.badssl.com</domain>
-        <pin-set>
-            <pin digest="SHA-256">C5+lpZ7tcVwmwQIMcRtPbsQtWLABXhQzejna0wHFr8M=</pin>
-        </pin-set>
-        <trust-anchors>
-            <certificates src="@raw/lets_encrypt_isrg_root" />
-            <!-- Same trust anchor configuration as above. -->
-        </trust-anchors>
-    </domain-config>
-</network-security-config>
-```
-
-2. Change the contents of the file to:
+2. Replace or write the content of the file to:
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -190,7 +159,9 @@ To modify this file so Caido's self-signed CA Certificate is trusted:
 </network-security-config>
 ```
 
-3. From the directory of the unpacked APK, repack it with:
+3. Ensure that the main configuration file, `AndroidManifest.xml` references the `network_security_config.xml` file via the `android:networkSecurityConfig="@xml/network_security_config"` attribute in the `<application>` tag. If you created a new `network_security_config.xml` file, you will have to explicitly add this.
+
+4. From the directory of the unpacked APK, repack it with:
 
 ```
 apktool b -o modified.apk ./
@@ -198,11 +169,11 @@ apktool b -o modified.apk ./
 
 <img alt="Repacking the APK." src="/_images/apk_repack.png" center no-shadow/>
 
-4. You will need the `keytool` and `jarsigner` tools in order to repack the APK. These tools are included in the Java Development Kit (JDK).
+5. You will need the `keytool` and `jarsigner` tools in order to repack the APK. These tools are included in the Java Development Kit (JDK).
 
 [Download the JDK for your operating system.](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html) and add it to your system's PATH environment variable.
 
-5. Generate a signing key with:
+6. Generate a signing key with:
 
 ```
 keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysize 2048 -validity 10000
@@ -210,7 +181,7 @@ keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysi
 
 <img alt="Generating a key." src="/_images/apk_keytool_genkey.png" center no-shadow/>
 
-6. Sign the APK with:
+7. Sign the APK with:
 
 ```
 jarsigner -keystore custom.keystore -verbose modified.apk aliasname
@@ -218,88 +189,32 @@ jarsigner -keystore custom.keystore -verbose modified.apk aliasname
 
 <img alt="Signing the APK." src="/_images/apk_signed.png" center no-shadow/>
 
-7. Uninstall the original application from the device:
+8. Uninstall the original application from the device:
 
 ```
 adb uninstall tech.httptoolkit.pinning_demo
 ```
 
-8. Install the modified APK:
+9. Install the modified APK:
 
 ```
 adb install modified.apk
 ```
 
-9. Navigate to `http://127.0.0.1:8080` in the phone browser to download the Caido CA Certificate again. However, this time select the `Used for VPN and apps` option. You will now see traffic generated by the demo application in Caido's HTTP History when selecting the `CONFIG-PINNED-REQUEST` option.
+10. Navigate to your device settings and search for "certificates". Select `Install from phone storage` and select Caido's CA Certificate. Click `Done` to continue. Provide an arbitrary certificate name. This time select the `VPN and apps` option in the `Used for` dropdown menu. Click `OK` to save.
 
-<img alt="APK traffic." src="/_images/apk_traffic.png" center/>
+<img alt="Mobile app Caido certificate options." src="/_images/android_app_cert_option.png" center no-shadow width="300"/>
 
-::: tip
+11. Next, open the HTTPToolkit application on your device. You should be able to make the following requests:
 
-- Verify the proxy is working:
+<img alt="Testing requests." src="/_images/pinning_demo_test.png" center no-shadow width="300"/>
 
-```
-adb shell settings list global
-```
+11. You will now see traffic generated by the application in Caido's HTTP History.
 
-- Verify the certificate is properly installed:
+<img alt="APK traffic." src="/_images/apk_test_traffic.png" center/>
 
-```
-adb shell ls /system/etc/security/cacerts
-```
+## Known Issues
 
-- Check if the app is actually using the proxy:
+As you can see, certain requests result in an error message and are not proxied through Caido. This is due to additional security measures.
 
-```
-adb shell dumpsys connectivity | grep -A 2 "Active network"
-```
-
-If you want to automate this entire process, you can use [apk-mitm](https://github.com/niklashigi/apk-mitm).
-:::
-
-## Intercepting Certificate Pinned Application Traffic
-
-If the application is generating HTTPS errors, it is utilizing its own set of trusted CA certificates, rather than relying on Android's built-in system certificate store. This security measure, known as "certificate pinning", ensures that the application will only trust SSL/TLS certificates from servers it is specifically designed to communicate with.
-
-If this is the case, you will need the following:
-
-### Frida
-
-Frida is a toolkit that allows you to inject custom scripts into running application processes, enabling real-time analysis and modification.
-
-[Download Frida's CLI tools.](https://frida.re/docs/installation/)
-
-## Bypassing Cerificate Pinning
-
-To modify an application to bypass certificate pinning protections:
-
-1. Open the `AndroidManifest.xml` file of the unpacked APK in a text editor.
-
-2. Next, search for the `activity` tag with a nested `intent-filter` tag that contains:
-
-- `<action android:name="android.intent.action.MAIN"/>`
-
-- `<category android:name="android.intent.category.LAUNCHER"/>`
-
-The value of the `android:name` attribute of this `<activity>` tag is the full AppActivity package name which serves as the entry point of the application upon launch.
-
-```
-<activity android:name="com.example.app.MainActivity">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
-    </intent-filter>
-</activity>
-```
-
-::: info
-Syntax of `<Keyword>Activity` (_e.g. `MainActivity`, `SplashActivity`, `WindowActivity`, `LauncherActivity`, etc._).
-:::
-
-3. Recursively search through the unpacked directory for the AppActivity’s full package name (_e.g. `com.example.app.MainActivity`_) to locate its corresponding `.smali` file (_typically under `smali/` or `smali_classes2/`_).
-
-```
-grep -r <package-name>
-```
-
-4. After searching, look for the AppActivity file in the results (_e.g. `smali/com/example/app/dir/main/activity/MainActivity.smali`_).
+If you are unable to navigate the application and are still not seeing its traffic in Caido, continue to the [Bypassing Certificate Pinning](/tutorials/certificate_pinning.md) tutorial.
