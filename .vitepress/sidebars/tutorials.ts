@@ -37,6 +37,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
             text: "Proxying Android Traffic",
             link: "/tutorials/android_device",
           },
+          {
+            text: "Intercepting Certificate Pinned Application Traffic",
+            link: "/tutorials/certificate_pinning",
+          },
         ],
       },
       {

@@ -217,4 +217,4 @@ adb install modified.apk
 
 As you can see, certain requests result in an error message and are not proxied through Caido. This is due to additional security measures.
 
-If you are unable to navigate the application and are still not seeing its traffic in Caido, continue to the [Bypassing Certificate Pinning](/tutorials/certificate_pinning.md) tutorial.
+If you are unable to navigate the application and are still not seeing its traffic in Caido, continue to the [Intercepting Certificate Pinned Application Traffic](/tutorials/certificate_pinning.md) tutorial.
