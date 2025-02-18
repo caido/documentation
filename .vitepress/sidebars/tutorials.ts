@@ -31,7 +31,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Mobile Traffic",
     items: [
       {
-        text: "Android",
+        text: "Android: Unrooted Device",
         items: [
           {
             text: "Proxying Android Traffic",
