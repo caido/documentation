@@ -21,7 +21,7 @@ A Workflow processes Nodes in sequential order:
 Each Node in a Workflow has an input and output data type.
 
 ::: info
-The `Choice` and `Code` types are just variations of `String`.
+[Learn more about the Node data types.](/reference/workflow_data_types.md)
 :::
 
 With this typed data system, even though Nodes are processed sequentially, you do not need a direct line between two Nodes in order to pass data from one to another. Instead, data can be referenced using dot notation of a Node's alias and it's output alias:
