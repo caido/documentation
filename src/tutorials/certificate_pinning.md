@@ -164,7 +164,7 @@ adb uninstall tech.httptoolkit.pinning_demo
 adb install unpinned.apk
 ```
 
-12. Next, open the HTTPToolkit application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization. Supply it with:
+12. Next, open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization. Supply it with:
 
 ```
 frida -U gadget --codeshare fdciabdul/frida-multiple-bypass
