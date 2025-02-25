@@ -1,4 +1,4 @@
-# Proxying Android Traffic
+# Proxying Android Device Traffic
 
 In this tutorial, we will cover the process of manually configuring an Android device to proxy its traffic through Caido.
 

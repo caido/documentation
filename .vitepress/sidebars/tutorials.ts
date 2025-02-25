@@ -31,11 +31,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Mobile Traffic",
     items: [
       {
-        text: "Android: Unrooted Device",
+        text: "Android",
         items: [
           {
-            text: "Proxying Android Traffic",
+            text: "Proxying Android Device Traffic",
             link: "/tutorials/android_device",
+          },
+          {
+            text: "Proxying Android Emulator Traffic",
+            link: "/tutorials/android_emulator",
           },
           {
             text: "Intercepting Certificate Pinned Application Traffic",
