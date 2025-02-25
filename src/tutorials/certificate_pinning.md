@@ -1,12 +1,12 @@
 # Intercepting Certificate Pinned Application Traffic
 
-In the [previous tutorial](/tutorials/android_device.md), we demonstrated how to configure and bypass the security protections provided by the `network_security_config.xml` file of an Android application. The technique that was being utilized is known as "certificate pinning" which ensures that an application will only trust SSL/TLS certificates from servers it is specifically designed to communicate with.
+In the [previous tutorial](/tutorials/android_device.md), we demonstrated how to bypass the security protections provided by the `network_security_config.xml` file of an Android application. The technique that was being utilized is known as "certificate pinning" which ensures that an application will only trust SSL/TLS certificates from servers it is specifically designed to communicate with.
 
 By defining our own security rules and including the `<certificates src="user" overridePins="true" />` directive, we configured the application to trust user-installed certificates and added Caido's CA certificate to the store.
 
-However, there are many different libraries used in Android applications to provide HTTP support that implement certificate pinning directly in the application's code or by pulling certificates from a remote server.
+However, there are many different libraries used in Android applications to provide HTTP support that implement certificate pinning directly in the application's code or pull certificates from a remote server.
 
-If you are unable to navigate the application and are still not seeing its traffic in Caido, you will need to take additional steps to successfully proxy the application's traffic with Caido.
+If you are unable to navigate the application and are still not seeing its traffic in Caido, you will need to make additional modifications.
 
 ::: danger WARNING
 Caido is not liable for any malfunctions, failures, damages, loss/theft of data, or other technical issues that may occur with your device as a result of following this tutorial. Proceed at your own risk.
@@ -26,7 +26,7 @@ This tutorial is a continuation of [Proxying Android Traffic](/tutorials/android
 
 ## Frida
 
-**Frida** is a toolkit that allows you to hook custom JavaScript scripts into running Android application processes, enabling real-time analysis and modification. Since the application processes are checking the SSL/TLS certificates, this is what we will use to modify them to bypass the checks.
+**Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This is what we will use to modify the processes are checking the SSL/TLS certificates.
 
 [Download Frida's CLI tools.](https://frida.re/docs/installation/)
 
@@ -40,7 +40,7 @@ You can check what download you will need for your device's architecture with:
 adb shell getprop ro.product.cpu.abi
 ```
 
-Choose the appropriate Frida Gadget library download based on your device's architecture:
+Then, choose the appropriate Frida Gadget library download:
 
 - For `armeabi-v7a` or `armeabi`: [android-arm.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm.so.xz)
 - For `arm64-v8a`: [android-arm64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm64.so.xz)
@@ -48,7 +48,7 @@ Choose the appropriate Frida Gadget library download based on your device's arch
 - For `x86_64`: [android-x86_64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-x86_64.so.xz)
 
 ::: tip
-The provided links will download the v16.6.6. [View the latest releases in the Frida repository.](https://github.com/frida/frida/releases)
+The provided links will download v16.6.6. [View the latest releases in the Frida repository.](https://github.com/frida/frida/releases)
 :::
 
 Once downloaded, extract the library and rename it to:
@@ -59,7 +59,7 @@ libfrida-gadget.so
 
 ## Bypassing Cerificate Pinning
 
-To modify an Android application to bypass certificate pinning protections, we will need to insert the Frida Gadget library into the main **activity** of the `AndroidManifest.xml` configuration file. In Android development, an activity is the term used to refer to a specific page/screen of the application that users nagivate through.
+To modify an Android application to bypass certificate pinning protections, we will need to insert the Frida Gadget library into the main **activity** stated in the `AndroidManifest.xml` configuration file. In Android development, an activity is the term used to refer to a specific page/screen of the application.
 
 ::: tip
 Learn how to access the invididual files of an Android application APK in the previous tutorial: [Proxying Android Traffic](/tutorials/android_device.md)
@@ -105,7 +105,7 @@ tech.httptoolkit.pinning_demo.MainActivity
 The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e.g. `MainActivity`, `SplashActivity`, `WindowActivity`, `LauncherActivity`, etc._).
 :::
 
-4. Recursively search through the unpacked directory for the package name `tech.httptoolkit.pinning_demo.MainActivity` to locate its corresponding `.smali` file.
+4. Recursively search through the unpacked APK for the package name `tech.httptoolkit.pinning_demo.MainActivity` to locate its corresponding `.smali` file.
 
 5. Open the `smali/tech/httptoolkit/pinning_demo/MainActivity.smali` file and locate the `.method public constructor <init>()V` initialization function:
 
@@ -136,7 +136,7 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 .end method
 ```
 
-7. Next, create a `lib` directory in the unpacked APK folder and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/arm64-v8a/libfrida-gadget.so`_).
+7. Next, create a `lib` directory in the unpacked APK folder, an architecture specific subdirectory, and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/arm64-v8a/libfrida-gadget.so`_).
 
 8. From the directory of the unpacked APK, repack it with:
 
