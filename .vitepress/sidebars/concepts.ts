@@ -27,6 +27,15 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Proxying",
+    items: [
+      {
+        text: "Invisible Proxying",
+        link: "/concepts/proxying_invisible",
+      },
+    ],
+  },
+  {
     text: "Workflows",
     items: [
       {
