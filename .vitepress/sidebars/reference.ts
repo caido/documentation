@@ -12,6 +12,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         text: "HTTPQL",
         link: "/reference/httpql",
       },
+      {
+        text: "Proxying",
+        link: "/reference/proxying",
+      },
     ],
   },
   {
