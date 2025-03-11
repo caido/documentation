@@ -61,6 +61,6 @@ Clients maintain two certificate stores:
 
 In order to bypass this security mechanism:
 
-[You will need to add Caido's CA certificate to the system-store with root level permissions.](/tutorials/android_emulator.md)
+[You will need to add Caido's CA certificate to the system-store with root level permissions.](/tutorials/add_certificate.md)
 
-[You will need to unpack the APK, make modifications, and repack it back into a functioning application.](/tutorials/android_device.md)
+[You will need to unpack the APK, make modifications, and repack it back into a functioning application.](/tutorials/modifying_apk.md)
