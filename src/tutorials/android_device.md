@@ -11,7 +11,7 @@ Caido is not liable for any malfunctions, failures, damages, loss/theft of data,
 - ****This process does not require a rooted device.****
 - Be aware that the names and locations of settings options may vary between devices.
 - Ensure to pay attention to any prompts on the device itself while proceeding through these steps.
-- Ensure to restart your terminal after adding to the PATH environment variable.
+- Ensure to restart your terminal after adding to the `PATH` environment variable.
 :::
 
 ::: tip
@@ -22,7 +22,7 @@ If you want to automate this entire process, you can use [apk-mitm](https://gith
 
 To interface with the Android device using your computer's terminal, you will need the **Android Debug Bridge (adb)** which is included in the Platform-Tools package of the Android SDK.
 
-[Download the Platform-Tools for your operating system.](https://developer.android.com/tools/releases/platform-tools#downloads) Once downloaded, unzip the folder and make it globally accessible by adding it to your system's PATH environment variable.
+[Download the Platform-Tools for your operating system.](https://developer.android.com/tools/releases/platform-tools#downloads) Once downloaded, unzip the folder and make it globally accessible by adding it to your system's `PATH` environment variable.
 
 To use `abd` with your Android device, navigate to the device settings and enable the [`Developer options`](https://developer.android.com/studio/debug/dev-options#enable). Then enable `USB debugging`.
 
@@ -175,7 +175,7 @@ apktool b -o modified.apk ./
 
 5. You will need the `keytool` and `jarsigner` tools in order to repack the APK. These tools are included in the Java Development Kit (JDK).
 
-[Download the JDK for your operating system](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html) and add it to your system's PATH environment variable.
+[Download the JDK for your operating system](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html) and add it to your system's `PATH` environment variable.
 
 6. Generate a signing key with:
 

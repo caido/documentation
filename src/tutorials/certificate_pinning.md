@@ -17,7 +17,7 @@ Caido is not liable for any malfunctions, failures, damages, loss/theft of data,
 - ****This process does not require a rooted device.****
 - Be aware that the names and locations of settings options may vary between devices.
 - Ensure to pay attention to any prompts on the device itself while proceeding through these steps.
-- Ensure to restart your terminal after adding to the PATH environment variable.
+- Ensure to restart your terminal after adding to the `PATH` environment variable.
 :::
 
 ::: warning NOTE
@@ -178,7 +178,7 @@ Various HTTP libraries and their versions will require certain scripts in order 
 
 ### Frida CodeShare
 
-[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official respository of scripts that can be called using the `--codeshare` command-line arguement.
+[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line argument.
 
 ```
 frida -U gadget --codeshare <author>/<file>
@@ -188,7 +188,7 @@ frida -U gadget --codeshare <author>/<file>
 When sourcing files online, ensure to evaluate the code for any malicious operations before executing it.
 :::
 
-You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line arguement followed by the file's location:
+You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line argument followed by the file's location:
 
 ```
 frida -U gadget -l <file>
