@@ -9,6 +9,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/",
       },
       {
+        text: "Proxying HTTPS Traffic",
+        link: "/concepts/essentials/https_traffic",
+      },
+      {
         text: "CLI vs Desktop",
         link: "/concepts/essentials/cli_vs_desktop",
       },
