@@ -45,10 +45,6 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
             text: "Modifying an Android Application",
             link: "/tutorials/modifying_apk",
           },
-          {
-            text: "Intercepting Certificate Pinned Application Traffic",
-            link: "/tutorials/certificate_pinning",
-          },
         ],
       },
       {
