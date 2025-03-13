@@ -1,4 +1,4 @@
-# Adding Caido's CA Certificate
+# Adding Caido's CA Certificate to the System-Store
 
 In this tutorial, we will cover the process of adding Caido's CA certificate to the system-store of an Android device.
 
@@ -12,7 +12,7 @@ This tutorial is a continuation of [Android Setup and Configuration](/tutorials/
 
 ::: info
 
-- ****This process does require a rooted device.****
+- ****This process requires a rooted device.****
 - Be aware that the exact names and locations of setting options may vary between devices.
 - Ensure to pay attention to any prompts on the device itself while proceeding through these steps.
 - For convenience, add all installed tools to your system's `PATH` envrionment variable to make them globally accessible. Ensure to restart your terminal afterwards so the changes take effect.
@@ -20,6 +20,10 @@ This tutorial is a continuation of [Android Setup and Configuration](/tutorials/
 :::
 
 ## Android Studio
+
+::: warning NOTE
+This tutorial will demonstrate adding a system certificate using a virtual device.
+:::
 
 **Android Studio** is the official IDE for developing Android applications. It features the **Android Emulator** that can create a variety of Android Virtual Devices at specified API levels.
 
@@ -67,13 +71,17 @@ openssl x509 -inform DER -subject_hash_old -in </path/to/your/ca.crt>
 
 ## Adding a System CA Certificate
 
+How to add a certificate to the system-store will depend on the API level of the system image.
+
+### For Android API level <= 33:
+
 1. List your available AVDs:
 
 ```
 emulator -list-avds
 ```
 
-2. Launch the desired AVD with write permissions:
+2. Launch the desired AVD with write permissions (_if your virtual device is currently running, terminate it first_):
 
 ```
 emulator -avd <avd> -writable-system
@@ -101,7 +109,7 @@ adb shell avbctl disable-verification
 adb reboot
 ```
 
-6. Restart the device with root permissions:
+6. Gain root permissions again:
 
 ```
 adb root
@@ -137,6 +145,16 @@ adb shell chmod 664 -v /system/etc/security/cacerts/<certificate>
 adb reboot
 ```
 
-To verify that the certificate was added, navigate to your device's settings and search for and select `Trusted credentials`. In the `SYSTEM` tab, it will be included in the list.
+To verify that the certificate was added, list the contents of the `/system/etc/security/cacerts` directory and find the certificate:
+
+```
+adb shell ls /system/etc/security/cacerts
+```
+
+You can also view the certificate addition in the device's interface. Navigate to your device's settings and search for and select `Trusted credentials`. In the `SYSTEM` tab, it will be included in the list.
 
 <img alt="System certificate injected." src="/_images/android_trusted_credentials.png" center no-shadow/>
+
+## What's next?
+
+If the application is still not working properly and traffic is still not being proxied, continue with the [Modifying an Android Application](/tutorials/modifying_apk.md) tutorial.

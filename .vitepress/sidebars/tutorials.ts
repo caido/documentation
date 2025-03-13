@@ -38,7 +38,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
             link: "/tutorials/android_configuration",
           },
           {
-            text: "Adding Caido's CA Certificate",
+            text: "Adding Caido's CA Certificate to the System-Store",
             link: "/tutorials/add_certificate",
           },
           {

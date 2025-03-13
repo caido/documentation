@@ -20,7 +20,9 @@ To interface with the Android device using your computer's terminal, you will ne
 
 [Download the Platform-Tools for your operating system.](https://developer.android.com/tools/releases/platform-tools#downloads) Once downloaded, unzip the folder.
 
-To use `abd` with your Android device, navigate to the device settings and enable the [`Developer options`](https://developer.android.com/studio/debug/dev-options#enable). Then enable `USB debugging`.
+### Developer Options
+
+To use `abd` with a physical Android device, navigate to the device's settings and enable the [`Developer options`](https://developer.android.com/studio/debug/dev-options#enable). Then enable `USB debugging`.
 
 <img alt="Enable developer options." src="/_images/developer_options.png" center no-shadow/>
 <img alt="USB debugging." src="/_images/usb_debugging_settings.png" center no-shadow/>
@@ -32,7 +34,7 @@ If the device is connected, it will be listed in the output of the `adb devices`
 
 ## Configuring the Proxy Settings
 
-To configure your Android device to use Caido:
+For both physical and virtual devices:
 
 1. Navigate to the device Wi-Fi settings and select your network SSID.
 2. Access the `Advanced` settings of the network and select the `Manual` option from the `Proxy` dropdown menu:
@@ -40,7 +42,7 @@ To configure your Android device to use Caido:
 
 <img alt="Android proxy settings." src="/_images/android_proxy_config.png" center no-shadow width="300"/>
 
-5. Click `Save` to set the proxy configurations.
+4. Click `Save` to set the proxy configurations.
 
 ### Port Forwarding
 
@@ -50,17 +52,28 @@ Since Caido is running on your computer, not your phone - run the following comm
 adb reverse tcp:8080 tcp:8080
 ```
 
-## What's next?
-
-In order for [Caido to proxy the HTTPS traffic](/concepts/essentials/https_traffic.md) an application generates, you must bypass any implementations of **certificate pinning**. This security technique configures an application to only trust system-store or explicitly defined CA certificates. This becomes an issue since we want the application to trust the Caido's CA certificate in order to inspect, modify, and forward the traffic it generates.
+## Certificate Stores
 
 Clients maintain two certificate stores:
 
 1. System-store certificates: Pre-installed trusted Root and Intermediary CA certificates.
 2. User-store certificates: Added by the end user.
 
-In order to bypass this security mechanism:
+### Adding a User Certificate
 
-[You will need to add Caido's CA certificate to the system-store with root level permissions.](/tutorials/add_certificate.md)
+To proxy the HTTPS traffic that the device's mobile browser or an application generates:
 
-[You will need to unpack the APK, make modifications, and repack it back into a functioning application.](/tutorials/modifying_apk.md)
+1. With Caido running, navigate to [http://127.0.0.1:8080/ca.crt](http://127.0.0.1:8080/ca.crt) in your device's browser to download Caido's CA certificate.
+2. In the device's settings, search for "Install a certificate", select `Wi-Fi certificate`, and then select Caido's certificate. Provide an arbitrary name and click `OK` to save the configuration.
+
+To test if the certificate was successfully installed, launch the device's browser and navigate to a website. You should see the traffic in Caido's HTTP History table.
+
+## What's next?
+
+Applications may have security measures that will prevent them from working properly and allowing Caido to proxy the HTTPS traffic they generate. In some applications, only system certificates are trusted. For others, a security technique known as **certificate pinning** is used, which configures an application to only trust explicitly defined CA certificates.
+
+To learn how to bypass these security mechanisms, continue with the tutorials below:
+
+[Adding Caido's CA Certificate to the System-Store](/tutorials/add_certificate.md)
+
+[Modifiying an Android Application](/tutorials/modifying_apk.md)
