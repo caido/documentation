@@ -76,7 +76,7 @@ To test if the certificate was successfully installed for Wi-Fi, launch the devi
 
 ## What's next?
 
-Applications may have security measures that will prevent them from working properly and allowing Caido to proxy the HTTPS traffic they generate. In some applications, only system certificates are trusted. For others, a security technique known as **certificate pinning** is used, which configures an application to only trust explicitly defined CA certificates.
+Applications may have security measures that will prevent them from working properly and allowing [Caido to proxy the HTTPS traffic](/concepts/essentials/https_traffic.md) they generate. In some applications, only system certificates are trusted. For others, a security technique known as **certificate pinning** is used, which configures an application to only trust explicitly defined CA certificates.
 
 To learn how to bypass these security mechanisms, continue with the tutorials below:
 
