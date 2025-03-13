@@ -73,7 +73,9 @@ openssl x509 -inform DER -subject_hash_old -in </path/to/your/ca.crt>
 
 How to add a certificate to the system-store will depend on the API level of the system image.
 
-### For Android API level <= 33:
+::: warning NOTE
+This method will only work for Android API level <= 33.
+:::
 
 1. List your available AVDs:
 
