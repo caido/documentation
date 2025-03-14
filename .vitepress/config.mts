@@ -7,6 +7,7 @@ import {
   referenceSidebar,
   tutorialsSidebar,
 } from "./sidebars";
+import MermaidExample from "./mermaid";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -33,6 +34,12 @@ export default defineConfig({
     ],
   ],
   ignoreDeadLinks: "localhostLinks",
+
+  markdown: {
+    config: (md) => {
+      MermaidExample(md);
+    },
+  },
 
   themeConfig: {
     logo: {
