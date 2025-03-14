@@ -23,7 +23,7 @@ You can download the installer package from your <a href="https://dashboard.caid
 2. Open the downloaded package and follow the prompts to install Caido on your system.
 3. Once the installation is complete, you can launch Caido from the Applications folder or by searching for it in Spotlight.
 
-## What's Next?
+## What's next?
 
 Once Caido is launched:
 

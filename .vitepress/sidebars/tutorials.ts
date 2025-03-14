@@ -28,18 +28,22 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Mobile Traffic",
+    text: "Proxying Mobile Traffic",
     items: [
       {
-        text: "Android: Unrooted Device",
+        text: "Android",
         items: [
           {
-            text: "Proxying Android Traffic",
-            link: "/tutorials/android_device",
+            text: "Android Setup and Configuration",
+            link: "/tutorials/android_configuration",
           },
           {
-            text: "Intercepting Certificate Pinned Application Traffic",
-            link: "/tutorials/certificate_pinning",
+            text: "Adding Caido's CA Certificate to the System-Store",
+            link: "/tutorials/add_certificate",
+          },
+          {
+            text: "Modifying an Android Application",
+            link: "/tutorials/modifying_apk",
           },
         ],
       },
