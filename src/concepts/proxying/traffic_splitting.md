@@ -1,18 +1,9 @@
-# Proxying
+# Traffic splitting
 
-## Listeners
-
-By default Caido will listen on `127.0.0.1:8080`, it uses a traffic splitting algorithm to determine if a request is for the UI/[GraphQL API](/concepts/internals/graphql) or if it a normal user request that needs to be forwarded.
-
-To change the main listener, use the CLI argument `-l <IP:PORT>` as outlined in the [guide](http://localhost:5173/guides/listening_address.html).
-
-To add other listeners you have to use the follow arguments, you can repeat them as many times as you need:
-
-- `--ui-listen <IP:PORT>`: This will listen on the given address ONLY for the UI/GraphQL API
-- `--proxy-listen <IP:PORT>`: This will listen on the given address ONLY for the proxy
+By default Caido will listen on a single port for all traffic, it uses a splitting algorithm to determine if a request is for the UI/[GraphQL API](/concepts/internals/graphql) or if it a normal user request that needs to be forwarded. This allows for a simpler user experience, but can sometimes have unexpected behaviour.
 
 ::: info
-Currently we do not offer the multi-listeners configuration in the Desktop application.
+To add other listeners, refer to the [guide on the topic](/guides/listening_address.md).
 :::
 
 ## Traffic split algorithm
