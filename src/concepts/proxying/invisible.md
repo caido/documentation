@@ -1,5 +1,9 @@
 # Invisible proxying
 
+:::warning
+Invisible proxying is disabled by default, see [the guide on how to enable it](/guides/invisible_proxying).
+:::
+
 Generally applications can be configured to use a forward proxy to connect to their target.
 For example, we use the browsers proxy configurations to setup Caido.
 This is what allows us to intercept the traffic.

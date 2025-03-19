@@ -20,7 +20,7 @@ _Example: to listen on all available network interfaces on port 8000, use the fo
 caido -l 0.0.0.0:8000
 ```
 
-### Adding ohter Listeners
+### Adding other Listeners
 
 To add other listeners you have to use the follow arguments, you can repeat them as many times as you need:
 

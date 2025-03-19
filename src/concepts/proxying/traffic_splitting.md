@@ -14,14 +14,18 @@ In the diagram, `Proxy` is for forwarded requests and `API` is for Caido UI/Grap
 ```mermaid
 flowchart TD
   Request --> TLS{{Is TLS Client Hello}}
-  TLS --Yes --> Proxy
+  TLS --Yes --> InvisibleTLS{{Is Invisible Proxying}}
   TLS --No --> HTTP{{Is HTTP Request}}
+  InvisibleTLS --Yes --> Proxy
+  InvisibleTLS --No --> API
   HTTP --No --> API
   HTTP --Yes --> Connect{{Is method CONNECT}}
   Connect --Yes --> Proxy
   Connect --No --> Tunnel{{Host/Port in URI<br><small>Default Port: Scheme</small>}}
   Tunnel --Yes --> DNS{{Host IP/Port matches Caido listener}}
-  Tunnel --No --> Invisible{{Host/Port in Header<br><small>Default Port: Listener</small>}}
+  Tunnel --No --> InvisibleHttp{{Is Invisible Proxying}}
+  InvisibleHttp --No --> API
+  InvisibleHttp --Yes --> Invisible{{Host/Port in Header<br><small>Default Port: Listener</small>}}
   Invisible --No --> API
   Invisible --Yes --> DNS
   DNS --Yes --> API
@@ -35,10 +39,14 @@ Once Caido has determined that the request should be forwarded (`Proxy`), it use
 ```mermaid
 flowchart TD
   Request --> TLS{{Is TLS}}
-  TLS --Yes --> SNI[Domain: SNI<br>Port: Listener]
+  TLS --Yes --> InvisibleTLS{{Is Invisible Proxying}}
+  InvisibleTLS --Yes --> SNI[Domain: SNI<br>Port: Listener]
+  InvisibleTLS --No --> Error
   TLS --No --> Url{{Authority in URL}}
   Url --Yes --> Tunnel[Domain: Authority domain<br/>Port: Authority port or default for scheme]
-  Url --No --> Header{{Host in headers}}
+  Url --No --> InvisibleHttp{{Is Invisible Proxying}}
+  InvisibleHttp --Yes --> Header{{Host in headers}}
+  InvisibleHttp --No --> Error
   Header --No --> Error
   Header --Yes --> Direct[Domain: Host domain<br/>Port: Host port or default for listener]
 ```
