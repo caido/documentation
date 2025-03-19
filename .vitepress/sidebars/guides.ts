@@ -50,6 +50,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "Upstream to Another Proxy",
             link: "/guides/upstream",
           },
+          {
+            text: "Enabling invisible proxying",
+            link: "/guides/invisible_proxying",
+          },
         ],
       },
       {
