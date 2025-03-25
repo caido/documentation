@@ -95,6 +95,8 @@ make sure you're looking at the un-prettified version of the request/response bo
 
 Using [HTTPQL](/reference/httpql.html) statements, a `Condition` can be defined in order to target specific requests or responses.
 
+<img alt="Replacer Workflow options." src="/_images/match_replace_condition.png" center/>
+
 ## Testing
 
 Once a rule has been defined, you can test its efficacy by supplying a mock request or response in the `Before` pane, clicking the `Test` button, and viewing the results in the `After` pane.
@@ -107,13 +109,13 @@ Collections allow you to help you stay organized during testing by grouping rule
 
 To create a new Collection, select the down carat button attatched to the `+ New Rule` button in the upper-left corner of the interface and select `New Collection`.
 
-<img alt="New match and replace Collection." src="/_images/new_match_replace_collection.png" center/>
+<img alt="New match and replace Collection." src="/_images/match_replace_create_collection.png" center/>
 
 To move rules between collections - **click, hold and drag** a rule into the Collection folder you wish to include the rule in.
 
 To list all the rules of a certain Collection, expand its contents by clicking on the leading carat button of the Collection entry. Clicking the carat button again will collapse the list.
 
-<img alt="Match and replace Collection rules list." src="/_images/match_replace_collection_rules_list.png" center/>
+<img alt="Match and replace Collection rules list." src="/_images/match_replace_collection_list_rules.png" center/>
 
 By clicking on the `...` button of a Collection, you can add a rule, rename the Collection, and delete the Collection.
 
