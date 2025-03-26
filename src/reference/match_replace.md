@@ -59,10 +59,10 @@ When targeting either the `Request Header` or `Response Header` sections:
 The `Matcher` specifies which search term will be matched for replacement. To specify a Matcher, expand the dropdown menu and select one of the available options:
 
 - `Full`: The entire Section will be replaced. If there are multiple Section parameters, such as when dealing with headers, all instances will be replaced.
-- `Regex`: Matches to ECMAScript (JavaScript) flavor regular expressions will be replaced.
+- `Regex`: Matches to Rust flavor regular expressions will be replaced.
 
 ::: warning NOTE
-Caido does not currently support look-around and back-reference regular expressions.
+Caido does not currently support look-around and backreference regular expressions.
 :::
 
 - `String`: Matches to string values will be replaced.
