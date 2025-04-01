@@ -135,4 +135,4 @@ The order of the rules in the Active Rules section determines the order in which
 
 ## What's next?
 
-[Learn how to create match and replace rules for three different use cases here.](/guides/match_replace.md)
+[Learn how to create match and replace rules for three different use cases.](/guides/match_replace.md)

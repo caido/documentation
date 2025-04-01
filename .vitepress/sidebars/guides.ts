@@ -141,6 +141,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/replay",
           },
           {
+            text: "Using Environment Variables in Replay",
+            link: "/guides/replay_environment_variables",
+          },
+          {
             text: "Automate",
             link: "/guides/automate",
           },
