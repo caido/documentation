@@ -12,6 +12,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         text: "HTTPQL",
         link: "/reference/httpql",
       },
+      {
+        text: "Match & Replace",
+        link: "/reference/match_replace",
+      },
     ],
   },
   {
