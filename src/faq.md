@@ -30,6 +30,10 @@ We do not collect any data stored on your Instances nor interactions within the 
 
 You can ask for support and submit feature requests through our public <a href="https://links.caido.io/www-discord" target="_blank">Discord</a> or <a href="https://links.caido.io/www-github-issues" target="_blank">Github repository</a>. Both are great places to share feedback and help improve Caido.
 
+## How do I gain access to the dedicated Discord support channels?
+
+Caido Individual and Team level subscriptions come with prioritized customer support. To access these channels, you must first [link your Discord account](/guides/discord.md).
+
 ## What is the difference between Caido CLI and Caido Desktop?
 
 The Caido CLI is self-contained binary that launches the Caido proxy (also called Instance). You can use it on remote servers or locally and access the Instance using your browser. The Caido Desktop acts a connection manager to your Instances and can also launch the Caido proxy in the background. It uses webviews to access the Instance instead of the browser.

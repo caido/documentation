@@ -205,6 +205,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Contributing to the Documentation",
         link: "/guides/contributions/documentation",
       },
+      {
+        text: "Joining Caido's Discord Server",
+        link: "/guides/discord",
+      },
     ],
   },
 ];
