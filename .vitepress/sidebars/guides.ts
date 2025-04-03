@@ -141,6 +141,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/replay",
           },
           {
+            text: "Using Environment Variables in Replay",
+            link: "/guides/replay_environment_variables",
+          },
+          {
             text: "Automate",
             link: "/guides/automate",
           },
@@ -200,6 +204,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Contributing to the Documentation",
         link: "/guides/contributions/documentation",
+      },
+      {
+        text: "Joining Caido's Discord Server",
+        link: "/guides/discord",
       },
     ],
   },

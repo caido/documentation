@@ -9,6 +9,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/",
       },
       {
+        text: "Environment",
+        link: "/reference/environment",
+      },
+      {
         text: "HTTPQL",
         link: "/reference/httpql",
       },
