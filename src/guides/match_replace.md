@@ -19,6 +19,10 @@ There are numerous ways to create a new rule in the Match & Replace interface:
 
 :::
 
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/DIPup787Fc8?si=yT3L0jPcvyHcQuZX" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Adding a Custom Request Header
 
 To add an additional header to a request, select the `Request Header` option from the `Section` dropdown menu. Then select the `Add` action. Provide the key name of the header and a string value.

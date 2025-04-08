@@ -24,6 +24,12 @@ Then, depending on if the environment is new or existing, click on either the `C
 
 <img alt="Update button for environment." src="/_images/update_button.png" center/>
 
+---
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/QbW4K0nhykg?si=7eXllbShqhGd2Gzs" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Inserting an Environment Variable
 
 With a defined environment variable, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, click, hold, and drag the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
