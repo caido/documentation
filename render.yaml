@@ -133,7 +133,7 @@ services:
         source: /quickstart/distributions
         destination: /guides/distributions
       - type: redirect
-        source: /reference/common_errors
+        source: /reference/common_errors*
         destination: /guides/troubleshooting
 
     
