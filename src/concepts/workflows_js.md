@@ -441,6 +441,10 @@ Finally, the value of `host` will be printed to the backend logs.
 
 :::
 
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/0lYC0EZY1cc?si=8aqTDvwefk45kKAu" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Example
 
 ### X-Forwarded-For Passive Workflow

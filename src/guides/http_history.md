@@ -20,6 +20,10 @@ To familiarize yourself with the HTTP History interface, continue below:
 6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed. View the [HTTQL](/reference/httpql.md) and [Filters](/guides/filters.md) documentation for more information.
 7. All active Filter Presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
 
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/MZGr_u22UiA?si=IHDYqnGQ687BE8Qd" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Modifications of Requests/Responses
 
 **If you previously edited content directly in the Intercept interface:**

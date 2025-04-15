@@ -34,7 +34,7 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Proxying",
     items: [
       {
-        text: "Traffic splitting",
+        text: "Traffic Splitting",
         link: "/concepts/proxying/traffic_splitting",
       },
       {

@@ -13,7 +13,7 @@ In order to send traffic to another proxy from Caido:
 :::
 
 4. Click the `Add Proxy` button in the appropriate panel depending on the type.
-5. Input the hostname or IP address and port number of the upstream proxy.
+5. Input the hostname or IP address in the `Host` field and port number in the `Port` field of the upstream proxy.
 6. Specify the scope of hosts that should be sent from Caido. To include all traffic, use `*`.
 7. You can test the configuration by clicking the `Test` button.
 
@@ -24,8 +24,21 @@ In order to send traffic to another proxy from Caido:
     <img alt="Upstream SOCKS proxy." src="/_images/socks_proxy.png" style="width: 45%;">
 </div>
 
+---
+
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/QFzaseG2Buk?si=j3KA6-ol-LrXG9bd" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
+---
+
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/KFJt1LyC_FI?si=xjhR2zbItb7CqnlU" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ::: tip TIPS
 
+- You can also set your credentials in the `Username` and `Password` fields.
 - Ensure the upstream HTTP proxy is running using a different port than Caido.
 - If both SOCKS and HTTP proxies are enabled, traffic will flow through the SOCKS proxy first, then through the HTTP proxy.
 - You can enable/disable usage using the toggle switch associated with the table row of your saved configuration.
