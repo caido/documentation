@@ -26,7 +26,7 @@ Then, depending on if the environment is new or existing, click on either the `C
 
 ---
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/QbW4K0nhykg?si=7eXllbShqhGd2Gzs" title="YouTube video player." frameborder="0"></iframe>
 </div>
 

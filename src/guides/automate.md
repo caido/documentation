@@ -28,7 +28,7 @@ To inspect the results of your `Automate` campaign - proceed with the following 
 4. This is the resulting list of options presented after right-clicking within the request pane.
 5. The [HTTPQL query](/reference/httpql.md) input bar.
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/NSmamQyyL3o?si=gaRx9-5blq_X3WCW" title="YouTube video player." frameborder="0"></iframe>
 </div>
 
@@ -65,7 +65,7 @@ Preprocessors enable you to apply additional modifications to the payloads.
 - **Prefix**: Allows you to prefix a payload value with a supplied value.
 - **Suffix**: Allows you to append a supplied suffix value to a payload value.
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/PrXVDR-YCXE?si=XbnW0YRhlydOXlji" title="YouTube video player." frameborder="0"></iframe>
 </div>
 

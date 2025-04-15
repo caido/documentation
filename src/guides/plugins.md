@@ -14,7 +14,7 @@ These packages expand Caido's functionality, offering a means to futher customiz
 4. Toggling the checkbox from filled to empty will enable/disable the associated Plugin.
 5. To remove a plugin from your Caido Instance - click `Uninstall`.
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/lO-WB_cXPfk?si=kou_6r8GDF1yl5Jm" title="YouTube video player." frameborder="0"></iframe>
 </div>
 

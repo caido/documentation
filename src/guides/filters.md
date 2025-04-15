@@ -40,7 +40,7 @@ Currently, the tabs that support Scope selection are **HTTP History** and **Sear
 2. In the `Advanced options` side menu that is presented - select/deselect the Filter Presets you want to apply.
 3. As the example Filter Preset created is reliant on the presence of the **/about** path - you can confirm it is working properly based on the Path filter category of the displayed requests.
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/0SxdQVjzRss?si=7bb3aoxU8anKV4Sc" title="YouTube video player." frameborder="0"></iframe>
 </div>
 

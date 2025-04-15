@@ -26,13 +26,13 @@ In order to send traffic to another proxy from Caido:
 
 ---
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/QFzaseG2Buk?si=j3KA6-ol-LrXG9bd" title="YouTube video player." frameborder="0"></iframe>
 </div>
 
 ---
 
-<div class="video">
+<div class="video small">
   <iframe src="https://www.youtube.com/embed/KFJt1LyC_FI?si=xjhR2zbItb7CqnlU" title="YouTube video player." frameborder="0"></iframe>
 </div>
 

@@ -90,6 +90,13 @@ h4 {
   height: 100%;
 }
 
+.video.small {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 33.75%;
+}
+
 .vignettes {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
