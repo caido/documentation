@@ -62,8 +62,8 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Active Workflows",
     items: [
       {
-        text: "Sending a Fetch Request",
-        link: "/tutorials/fetch",
+        text: "Sending a notification to Discord",
+        link: "/tutorials/discord_notification",
       },
     ],
   },

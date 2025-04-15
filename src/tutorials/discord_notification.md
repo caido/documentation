@@ -1,6 +1,8 @@
-# Sending a Fetch Request to Discord via Workflows
+# Sending a notification to Discord
 
-Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
+In this tutorial, we will learn how to use an Active Workflow to send a notification to Discord. This method can also be used with other types of workflows.
+
+We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
 ::: warning NOTE
 The request and response objects of this module differ from those used in the [Backend SDK](https://developer.caido.io/reference/sdks/backend/) and [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/). Due to this, their properties and methods differ as well. Additionally, they are not routed through the proxy and must adhere to the HTTP specification in order to be interpreted correctly.
@@ -22,14 +24,14 @@ Now, click within the coding environment, select all the existing code, and dele
 
 To send a request, you will first need to import the `Request` class and the `fetch()` function from the `caido:http` module.
 
-``` js
+```js
 // Request object under the alias of FetchRequest.
 import { Request as FetchRequest, fetch } from "caido:http";
 ```
 
 Next, define an asynchronous function and the parameters of your Discord message.
 
-``` js
+```js
 export async function run(input, sdk) {
   // Discord webhook data.
   const webhookData = {
@@ -51,6 +53,12 @@ export async function run(input, sdk) {
           value: "Value B",
           inline: true
         }
+        // You could also add elements from the request like
+        // {
+        //   name: "Host",
+        //   value: input.request.getHost(),
+        //   inline: true
+        // },
       ],
       footer: {
         text: "Sent via Caido"
@@ -70,23 +78,23 @@ Then, define the request object, using your Discord Webhook URL as the input par
 [Learn how to create a Discord Webhook.](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 :::
 
-``` js
-  // Create a new request to Discord webhook.
-  const fetchRequest = new FetchRequest("YOUR-DISCORD-WEBHOOK-URL", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(webhookData)
-  });
+```js
+// Create a new request to Discord webhook.
+const fetchRequest = new FetchRequest("YOUR-DISCORD-WEBHOOK-URL", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(webhookData),
+});
 ```
 
 We must await for the request to be sent and processed before we are able to obtain data from the response. By accessing the response properties, we can print the data to the backend logs.
 
-``` js
+```js
   try {
     const response = await fetch(fetchRequest);
-    
+
     // Create response data object.
     const responseData = {
       status: response.status,
@@ -96,7 +104,7 @@ We must await for the request to be sent and processed before we are able to obt
 
     // Log the response data with proper formatting.
     sdk.console.log("Response data:", JSON.stringify(responseData, null, 2));
-    
+
     // For Discord webhooks, 204 means success.
     if (response.status === 204) {
       return "Webhook sent successfully";
@@ -119,7 +127,7 @@ To view the entire script, expand the following:
 <details>
 <summary>Full Script</summary>
 
-``` js
+```js
 // Request object under the alias of FetchRequest.
 import { Request as FetchRequest, fetch } from "caido:http";
 
@@ -129,36 +137,38 @@ export async function run(input, sdk) {
     username: "Caido Bot",
     avatar_url: "https://caido.io/images/logo.color.webp",
     content: "Message from Caido Workflow",
-    embeds: [{
-      title: "Webhook Fetch Request",
-      description: "Hello World!",
-      color: 14329120,
-      fields: [
-        {
-          name: "Field A",
-          value: "Value A",
-          inline: true
+    embeds: [
+      {
+        title: "Webhook Fetch Request",
+        description: "Hello World!",
+        color: 14329120,
+        fields: [
+          {
+            name: "Field A",
+            value: "Value A",
+            inline: true,
+          },
+          {
+            name: "Field B",
+            value: "Value B",
+            inline: true,
+          },
+        ],
+        footer: {
+          text: "Sent via Caido",
         },
-        {
-          name: "Field B",
-          value: "Value B",
-          inline: true
-        }
-      ],
-      footer: {
-        text: "Sent via Caido"
+        timestamp: new Date().toISOString(),
       },
-      timestamp: new Date().toISOString()
-    }]
+    ],
   };
 
   // Create a new request to Discord webhook.
   const fetchRequest = new FetchRequest("YOUR-DISCORD-WEBHOOK-URL", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(webhookData)
+    body: JSON.stringify(webhookData),
   });
 
   try {
@@ -168,12 +178,12 @@ export async function run(input, sdk) {
     const responseData = {
       status: response.status,
       statusText: response.statusText,
-      headers: Object.fromEntries(response.headers.entries())
+      headers: Object.fromEntries(response.headers.entries()),
     };
 
     // Log the response data with proper formatting.
     sdk.console.log("Response data:", JSON.stringify(responseData, null, 2));
-    
+
     // For Discord webhooks, 204 means success.
     if (response.status === 204) {
       return "Webhook sent successfully";
@@ -205,9 +215,9 @@ Soon after, you will receive a message in your Discord channel.
 Within the logs, the message will resemble:
 
 ```
-2025-04-09T00:45:25.697833Z  INFO main service|workflow: Executing workflow (g:58) as task    
-2025-04-09T00:45:25.697858Z  INFO main service|task: Running task    
-2025-04-09T00:45:25.697862Z  INFO main service|workflow: Workflow (g:58) task assigned ID: 26    
+2025-04-09T00:45:25.697833Z  INFO main service|workflow: Executing workflow (g:58) as task
+2025-04-09T00:45:25.697858Z  INFO main service|task: Running task
+2025-04-09T00:45:25.697862Z  INFO main service|workflow: Workflow (g:58) task assigned ID: 26
 2025-04-09T00:45:26.134839Z  INFO executor:0|arbiter:7 js|sdk: Response data:, {
   "status": 204,
   "statusText": "No Content",
@@ -233,8 +243,8 @@ Within the logs, the message will resemble:
     "server": "cloudflare",
     "cf-ray": "92d5fb4c58d5f7ab-LAX"
   }
-}    
-2025-04-09T00:45:26.135041Z  INFO executor:0|arbiter:7 service|task: Task (26) done    
+}
+2025-04-09T00:45:26.135041Z  INFO executor:0|arbiter:7 service|task: Task (26) done
 2025-04-09T00:45:26.135079Z  INFO main service|task: Finishing task 26
 
 ```
