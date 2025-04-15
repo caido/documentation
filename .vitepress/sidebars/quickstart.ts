@@ -9,6 +9,19 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         link: "/quickstart/",
       },
       {
+        text: "Installation",
+        items: [
+          {
+            text: "Windows",
+            link: "/quickstart/beginner_guide/setup/windows",
+          },
+          {
+            text: "macOS",
+            link: "/quickstart/beginner_guide/setup/mac",
+          },
+        ],
+      },
+      {
         text: "Setup",
         items: [
           {
