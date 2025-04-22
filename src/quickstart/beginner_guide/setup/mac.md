@@ -20,65 +20,48 @@ Caido provides a desktop application for both Intel-based (x86_64) and Apple sil
 
 <img alt="macOS Caido download." src="/_images/macos_download_applications.png" width=690px center/>
 
-3. Next, open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
-
-4. With Caido launched, click the `Start` button and sign in with your credentials or create an account.
-
-5. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
-
-::: info
-The Instance requires access to your account username, email address, and subscription. By default, `Enable the AI assistant feature` (_[for Individual & Team subscriptions](https://caido.io/pricing)_) and `Stay logged-in for an extended period` will be selected. You can deselect these checkboxes if you do not want these features enabled.
-:::
-
-6. Once authorized, return to Caido and navigate through the brief tutorial on creating a new [Project](/guides/projects.md) and how to download and import [Caido's CA Certificate](/guides/import_ca_certificate.md) to your browser.
-
-::: info
-[Learn about why you need to import Caido's CA Certificate.](/concepts/essentials/https_traffic.md)
-:::
-
-## CLI
-
-```
-curl https://api.github.com/repos/caido/caido/releases/latest
-```
-
-```
-wget https://caido.download/releases/vX.XX.X/caido-cli-vX.XX.X-mac-aarch64.zip
-```
-
-```
-wget https://caido.download/releases/vX.XX.X/caido-cli-vX.XX.X-mac-x86_64.zip
-```
-
-```
-unzip caido-cli-vX.XX.X-mac-aarch64.zip
-```
-
-```
-unzip caido-cli-vX.XX.X-mac-x86_64.zip
-```
-
-```
-./caido-cli --help
-```
+3. [Continue to the setup instructions.](#shared-steps)
 
 ## Homebrew (Unofficial)
 
-Homebrew is a popular package manager that simplifies the installation and management of software. It allows users to easily install, update, and manage software packages from the command line.
+[Homebrew](https://brew.sh/) is a popular package manager that simplifies the installation and management of software. It allows users to easily install, update, and manage software packages from the command line.
 
 ::: danger
  Using an unofficial Homebrew tap to install Caido may expose you to potential security risks. The installation is managed by third-party maintainers, not the official Caido team, which means it may not be as regularly updated or audited. For maximum security and control, consider installing Caido directly from the official website or GitHub releases.
 :::
 
+::: tip
+To download and install Homebrew, use the following command:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once installed, Homebrew can be used globally by adding it to your PATH environment variable:
+
+```
+echo >> /Users/<username>/.zprofile
+```
+
+```
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
+```
+
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+:::
+
+1. To download and install the Caido desktop application on your macOS device, run the following terminal command:
+
 ```
 brew install --cask caido
 ```
 
-```
-caido-cli --help
-```
-
 ::: info
+
+The output should resemble:
 
 ```
 ==> Downloading https://caido.download/releases/vX.XX.X/caido-desktop-vX.XX.X-mac-<architecture>.zip
@@ -92,20 +75,26 @@ caido-cli --help
 
 :::
 
-::: tip
-If running caido-cli doesn't work as expected, make sure `/opt/homebrew/bin/` is included in your `$PATH`. You can check your path with:
+2. [Continue to the setup instructions.](#shared-steps)
 
-```
-echo $PATH
-```
+## Shared Steps
 
-If `/opt/homebrew/bin/` isn't included, you can add it like this (if using zsh, which is the default shell on newer macOS versions):
+After Caido has been installed using either method:
 
-```
-echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-```
+1. Open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
 
+2. With Caido launched, click the `Start` button and sign in with your credentials or create an account.
+
+3. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
+
+::: info
+The Instance requires access to your account username, email address, and subscription. By default, `Enable the AI assistant feature` (_[for Individual & Team subscriptions](https://caido.io/pricing)_) and `Stay logged-in for an extended period` will be selected. You can deselect these checkboxes if you do not want these features enabled.
+:::
+
+4. Once authorized, return to Caido and navigate through the brief tutorial on creating a new [Project](/guides/projects.md) and how to download and import [Caido's CA Certificate](/guides/import_ca_certificate.md) to your browser.
+
+::: info
+[Learn about why you need to import Caido's CA Certificate.](/concepts/essentials/https_traffic.md)
 :::
 
 ## What's next?

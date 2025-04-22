@@ -9,7 +9,7 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         link: "/quickstart/",
       },
       {
-        text: "Installation",
+        text: "Desktop Application Installation",
         items: [
           {
             text: "Windows",
