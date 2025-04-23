@@ -2,7 +2,7 @@
 
 Caido is included natively in a couple OS distributions. If you already use one of them, it is the easiest way to get started :sparkles:
 
-This is by no mean a requirement since you can [install Caido on all major OS](/quickstart/beginner_guide/setup/install).
+This is by no mean a requirement since you can [install Caido on all major OS](/quickstart/).
 
 ## Linux
 
