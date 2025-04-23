@@ -1,24 +1,24 @@
 # Installing Caido on macOS
 
+::: tip
+Caido provides a desktop application for both Intel-based (x86_64) and Apple silicon (M1/M2/M3, AArch64) architectures. [Learn which download is suitable for your device.](https://support.apple.com/en-us/116943)
+:::
+
 ## Disk Image (.dmg)
 
 A `.dmg` file is a macOS disk image used to distribute applications. It's the most common and user-friendly way to install apps on Mac.
 
-1. To download the Caido desktop application on your macOS device, visit [caido.io/download](https://caido.io/download) or check out the latest release on [Github](https://github.com/caido/caido/releases/latest).
-
-::: tip
-Caido provides a desktop application for both Intel-based (x86_64) and Apple silicon (M1/M2/M3, AArch64) architectures. [Learn which download is suitable for your device.](https://support.apple.com/en-us/116943)
-:::
+1. To download the Caido desktop application on your macOS device, visit [caido.io/download](https://caido.io/download) or check out the latest releases page on [Github](https://github.com/caido/caido/releases/latest).
 
 <img alt="macOS dashboard download." src="/_images/macos_dashboard_download.png" center/>
 
 2. Once the download is complete, open the installation package and click, hold, and drag the Caido icon into the `Applications` folder.
 
-<img alt="macOS Caido download." src="/_images/macos_download.png" width=690px center/>
+<img alt="macOS .dmg Caido download." src="/_images/macos_download.png" width=690px center/>
 
 ---
 
-<img alt="macOS Caido download." src="/_images/macos_download_applications.png" width=690px center/>
+<img alt="macOS Caido installed application." src="/_images/macos_download_applications.png" width=690px center/>
 
 3. [Continue to the setup instructions.](#shared-steps)
 
@@ -27,11 +27,11 @@ Caido provides a desktop application for both Intel-based (x86_64) and Apple sil
 [Homebrew](https://brew.sh/) is a popular package manager that simplifies the installation and management of software. It allows users to easily install, update, and manage software packages from the command line.
 
 ::: danger
- Using an unofficial Homebrew tap to install Caido may expose you to potential security risks. The installation is managed by third-party maintainers, not the official Caido team, which means it may not be as regularly updated or audited. For maximum security and control, consider installing Caido directly from the official website or GitHub releases.
+ Using an unofficial Homebrew tap to install Caido may expose you to potential security risks. The installation is managed by third-party maintainers, not the official Caido team, which means it may not be as regularly updated or audited.
 :::
 
 ::: tip
-To download and install Homebrew, use the following command:
+To download and install Homebrew, use the following terminal command:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -83,7 +83,7 @@ After Caido has been installed using either method:
 
 1. Open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
 
-2. With Caido launched, click the `Start` button and sign in with your credentials or create an account.
+2. With Caido launched, click the `Start` button and log in with your credentials or create an account.
 
 3. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
 

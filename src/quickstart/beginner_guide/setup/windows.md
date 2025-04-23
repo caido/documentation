@@ -1,6 +1,6 @@
 # Installing Caido on Windows
 
-1. To download the Caido desktop application on your Windows device, visit [caido.io/download](https://caido.io/download) or check out the latest release on [Github](https://github.com/caido/caido/releases/latest).
+1. To download the Caido desktop application on your Windows device, visit [caido.io/download](https://caido.io/download) or check out the latest releases page on [Github](https://github.com/caido/caido/releases/latest).
 
 <img alt="Windows dashboard download." src="/_images/windows_dashboard_download.png" center/>
 
@@ -8,11 +8,11 @@
 
 <img alt="Windows Caido download." src="/_images/windows_download.png" width=690px center/>
 
-3. After installation, you can launch Caido by double-clicking on the shortcut icon, or by searching for "Caido" in the `Start` menu and opening the application.
+3. After installation, you can launch Caido by double clicking on the shortcut icon, or by searching for "Caido" in the `Start` menu and opening the application.
 
 <img alt="Launching Caido on Windows." src="/_images/windows_caido_search.png" center/>
 
-4. With Caido launched, click the `Start` button and sign in with your credentials or create an account.
+4. With Caido launched, click the `Start` button and log in with your credentials or create an account.
 
 5. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
 
