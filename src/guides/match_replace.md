@@ -6,17 +6,18 @@ In this guide, we'll cover how to create match and replace rules for three diffe
 For additional documentation on Caido's Match & Replace feature - click [here](/reference/match_replace.md).
 :::
 
+::: warning
+If you're having an issue with your Match & Replace rule not working, ensure you're looking at the un-prettified version of the request/response body by pressing the `{} Prettify` button within the request/response panes to ensure your spacing is correct. While the prettified format provides easier readability, it is not an accurate representation of JSON body data.
+:::
+
 ## Creating a New Rule
 
 There are numerous ways to create a new rule in the Match & Replace interface:
 
 <img alt="Creating a new match and replace rule." src="/_images/create_match_replace_rule.png" center/>
 
-::: tip TIPS
-
-- If you're having an issue with your Match & Replace rule not taking affect make sure you're looking at the un-prettified version of the request/response body by pressing the `{} Prettify` button within any request/response pane to ensure your spacing is correct.
-- The order of the rules in the Active Rules section determines the order in which they will be applied to the requests and responses. You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
-
+::: tip
+The order of the rules in the Active Rules section determines the order in which they will be applied to the requests and responses. You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
 :::
 
 <div class="video">

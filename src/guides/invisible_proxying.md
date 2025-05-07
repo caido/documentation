@@ -1,4 +1,4 @@
-# Invisible proxying
+# Invisible Proxying
 
 Invisible proxying a setting that you can enable/disable for your listeners.
 To learn more about this operation mode of operation, see our [concept page](/concepts/proxying/invisible) on the subject.
