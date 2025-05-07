@@ -156,7 +156,7 @@ caido --reset-credentials
 
 - While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/reference/internal_files.md) page to locate your data folder.
 
-### "Login URL generation failed: invalid authentication token".
+### "Login URL generation failed: invalid authentication token."
 
 You may encounter this error when trying to access an Instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).
 
@@ -178,7 +178,7 @@ These settings will allow you to login with any account you want. Once you've cl
 
 <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" center/>
 
-### "Date mismatch: make sure your device's date and time settings are correct".
+### "Date mismatch: make sure your device's date and time settings are correct."
 
 If you encounter this error during login, it means that your computer time is likely out of sync. Visit [time.is](https://time.is/) to confirm it.
 
@@ -239,7 +239,7 @@ To fix it, you can either:
 
 - `--no-renderer-sandbox`
 
-### I have paid for "Pro" but it still shows "Community" in the application.
+### Unable to Access 'Individual' Subscription Features
 
 Caido caches the state of your account. Any changes to your account can take some time to update.
 
@@ -272,3 +272,7 @@ To acquire your token:
 ### A Section of the UI is Missing
 
 Caido allows you to [resize parts of the UI](/concepts/essentials/layout.md). You might have accidentally minimized one of the sections.
+
+### Match & Replace Rule Not Working
+
+If your [Match & Replace](/guides/match_replace.md) rule is not working, ensure you're looking at the un-prettified version of the request/response body by pressing the `{} Prettify` button within the request/response panes to ensure your spacing is correct. While the prettified format provides easier readability, it is not an accurate representation of JSON body data.

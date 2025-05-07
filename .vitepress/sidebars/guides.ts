@@ -54,6 +54,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "Enabling Invisible Proxying",
             link: "/guides/invisible_proxying",
           },
+          {
+            text: "DNS Rewrites",
+            link: "/guides/dns_rewrites",
+          },
         ],
       },
       {
