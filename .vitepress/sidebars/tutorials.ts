@@ -51,8 +51,8 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "iOS",
         items: [
           {
-            text: "Proxying iOS Traffic",
-            link: "/tutorials/ios_device",
+            text: "iOS Setup and Configuration",
+            link: "/tutorials/ios_configuration",
           },
         ],
       },
