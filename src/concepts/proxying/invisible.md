@@ -23,7 +23,7 @@ In this mode, Caido acts as the destination server, making the application unawa
 
 This means that Caido needs to listen on the same port as the destination server (_typically `443` or `80`_).
 
-Additionally, DNS Rewrite rules are required to override the local DNS resolution of the target domain, pointing it `127.0.0.1` (_the listening address of Caido_). Then, another rule needs to revert the resolution back to the real IP address of the server to ensure proper forwarding.
+You will need to change your host DNS resolution (in the `/etc/hosts` on Linux for example) and from there, revert the resolution back with a Caido DNS override.
 
 [Learn how to create DNS Rewrite rules.](/guides/dns_rewrites.md)
 
