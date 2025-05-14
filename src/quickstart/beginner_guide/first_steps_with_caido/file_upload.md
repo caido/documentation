@@ -17,6 +17,6 @@ _For advanced documentation on this topic - click [here](/guides/files.md)._
 
 ## Automating Brute-Forcing/Fuzzing
 
-Once you have uploaded your desired files - return to Automate documentation here:
+Once you have uploaded your desired files - return to the Automate documentation here:
 
-- [Automating Brute-Forcing/Fuzzing](../first_steps_with_caido/automate.md)
+- [Automating Brute-Forcing/Fuzzing](./automate.md)

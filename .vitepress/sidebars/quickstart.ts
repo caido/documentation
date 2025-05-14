@@ -32,10 +32,6 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
             text: "Basic Configuration",
             link: "/quickstart/beginner_guide/setup/config",
           },
-          {
-            text: "Uploading Files for Use in Automate",
-            link: "/quickstart/beginner_guide/setup/file_upload",
-          },
         ],
       },
       {
@@ -56,6 +52,10 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "Automating Brute-Forcing/Fuzzing",
             link: "/quickstart/beginner_guide/first_steps_with_caido/automate",
+          },
+          {
+            text: "Uploading Files for Use in Automate",
+            link: "/quickstart/beginner_guide/first_steps_with_caido/file_upload",
           },
         ],
       },

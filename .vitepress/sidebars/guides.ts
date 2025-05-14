@@ -25,6 +25,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/distributions",
         items: [
           {
+            text: "Parrot Security",
+            link: "/guides/distributions/parrot_os",
+          },
+          {
             text: "Athena OS",
             link: "/guides/distributions/athena_os",
           },

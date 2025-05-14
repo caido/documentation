@@ -45,7 +45,7 @@ For each payload, you can choose a `Type` from the list:
 
 <img alt="Automate Types." src="/_images/types_automate.png" center/>
 
-- **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Files](/guides/files.md) documentation for more information.
+- **Hosted File:** Allows you to select one of the files you had previously uploaded to the Caido Instance. View the [Uploading Files for Use in Automate Quickstart Guide](./file_upload.md) for more information.
 - **Simple List:** For cases where you want to test a short manually created list of elements.
 - **Null Payload:** Generate requests without changing anything in it.
 - **Numbers:** Generates a range of specified integers to use as a payload.
