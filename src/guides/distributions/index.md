@@ -6,7 +6,7 @@ Though, this is by no means a requirement since you can also [install Caido on a
 
 ## Linux
 
-- [Parrot Security](): A Debian-based distribution that uses the MATE desktop environment, focused on security and privacy.
+- [Parrot Security](/guides/distributions/parrot_os): A Debian-based distribution that uses the MATE desktop environment, focused on security and privacy.
 - [Athena OS](/guides/distributions/athena_os): An Arch & NixOS based pentesting distribution.
 
 ## You are a maintainer?

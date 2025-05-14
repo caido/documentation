@@ -4,7 +4,6 @@
 
 <img width="600" alt="Athena OS Banner" src="/_images/athena_os_banner.png" no-shadow/>
 
-
 Caido is available natively in [Athena OS](https://athenaos.org/) in the `Red Team Web Application Analysis` section.
 You can install either the [Desktop or CLI version](/concepts/essentials/cli_vs_desktop).
 
