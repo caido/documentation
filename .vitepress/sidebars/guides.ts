@@ -34,6 +34,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           },
         ],
       },
+      {
+        text: "Guest Mode",
+        link: "/guides/guest_mode",
+      },
     ],
   },
   {
@@ -42,6 +46,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Network",
         items: [
+          {
+            text: "Domain Allowlist",
+            link: "/guides/domain_allowlist",
+          },
           {
             text: "Proxying Local Traffic",
             link: "/guides/proxy_local",

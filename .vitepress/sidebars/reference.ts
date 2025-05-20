@@ -9,6 +9,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/",
       },
       {
+        text: "CLI Options",
+        link: "/reference/cli",
+      },
+      {
         text: "Environment",
         link: "/reference/environment",
       },
