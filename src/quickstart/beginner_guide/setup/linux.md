@@ -1,12 +1,13 @@
 # Installing Caido on Linux
 
-::: tip
+::: tip TIPS
 Caido provides a desktop application for both x86_64 and AArch64 architectures. To discover which download is suitable for your device, run the following terminal command:
 
 ```
 uname -m
 ```
 
+- If you are using [Parrot OS](/guides/distributions/parrot_os.md) or [Athena OS](/guides/distributions/athena_os.md), Caido already comes preinstalled.
 :::
 
 ## Deb (.deb)

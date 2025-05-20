@@ -1,12 +1,13 @@
 # Distributions
 
-Caido is included natively in a couple OS distributions. If you already use one of them, it is the easiest way to get started :sparkles:
+Caido is included natively in a couple OS distributions. If you already use one of them, it is the easiest way to get started! :sparkles:
 
-This is by no mean a requirement since you can [install Caido on all major OS](/quickstart/).
+Though, this is by no means a requirement since you can also [install Caido on all major operating systems](/guides/).
 
 ## Linux
 
-- [Athena OS](/guides/distributions/athena_os): Arch & NixOS based pentesting distribution
+- [Parrot Security](/guides/distributions/parrot_os): A Debian-based distribution that uses the MATE desktop environment, focused on security and privacy.
+- [Athena OS](/guides/distributions/athena_os): An Arch & NixOS based pentesting distribution.
 
 ## You are a maintainer?
 
