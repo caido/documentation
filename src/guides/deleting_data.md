@@ -43,7 +43,7 @@ The first step is to find a list of requests we want to delete. We will keep tha
 
 ```sql
 CREATE TEMP TABLE requests_to_delete AS
-SELECT id, response_id
+SELECT id, response_id, raw_id
 FROM requests
 WHERE <your_condition_here> -- Replace with your condition.
 ```
@@ -53,11 +53,11 @@ For example, the condition could be: `host = "www.youtube.com"`.
 ```sql
 CREATE TEMP TABLE responses_to_delete AS
 WITH RECURSIVE recursive_responses AS (
-    SELECT r.id, r.parent_id
+    SELECT r.id, r.parent_id, r.raw_id
     FROM responses r
     INNER JOIN requests_to_delete rd ON r.id = rd.response_id
     UNION ALL
-    SELECT r.id, r.parent_id
+    SELECT r.id, r.parent_id, r.raw_id
     FROM responses r
     INNER JOIN recursive_responses rr ON r.parent_id = rr.id
  )
@@ -69,7 +69,7 @@ SELECT id FROM recursive_responses;
 ```sql
 DELETE FROM requests_raw
 WHERE id IN (
-  SELECT id
+  SELECT raw_id
   FROM requests_to_delete
 );
 ```
@@ -79,7 +79,7 @@ WHERE id IN (
 ```sql
 DELETE FROM responses_raw
 WHERE id IN (
-  SELECT id
+  SELECT raw_id
   FROM responses_to_delete
 );
 ```
