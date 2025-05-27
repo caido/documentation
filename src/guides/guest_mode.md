@@ -1,5 +1,9 @@
 # Guest Mode
 
+::: warning
+In Guest mode, anybody can access your instance without authentication. This means that binding to 0.0.0.0 would, for example, allow anybody on the same network as you to use it and have full RCE on your machine.
+:::
+
 Caido can be used without an account in Guest Mode by selecting the `Continue as guest` option in the authentication prompt.
 
 <img alt="Guest Mode selection." src="/_images/guest_mode_selection.png" center/>
