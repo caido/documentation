@@ -25,5 +25,14 @@ When using the Caido CLI, to add a domain to the allowlist, use `--ui-domain=` t
 To add a domain to the allowlist when running the Caido Docker image, you need to override the default command with:
 
 ```
-caido-cli --no-renderer-sandbox --no-open --listen 0.0.0.0:8080 --ui-domain=example.com
+docker run caido/caido caido-cli --no-renderer-sandbox --no-open --listen 0.0.0.0:8080 --ui-domain=example.com
+```
+
+Or you can override the Docker Compose:
+
+```
+services:
+  caido:
+    image: caido/caido
+    command: ["caido-cli", "--no-renderer-sandbox", "--no-open", "--listen", "0.0.0.0:8080", "--ui-domain", "example.com"]
 ```
