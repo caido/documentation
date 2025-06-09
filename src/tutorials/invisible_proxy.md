@@ -85,7 +85,7 @@ netsh interface portproxy add v4tov4 listenport=80 listenaddress=127.0.0.1 conne
 ```
 
 ```
-netsh interface portproxy add v4tov4 listenport=443 listenaddress=127.0.0.1 connectport=8443 connectaddress=127.0.0.1
+netsh interface portproxy add v4tov4 listenport=443 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
 ```
 
 ::: tip TIPS
@@ -139,6 +139,14 @@ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
 
 ---
 
+### Enabled Invisible Proxying
+
+By default, invisible proxying is disabled. To enable it, click on the `⋮` icon to the right of the Instance you want to apply a custom listening address to and select `Edit`.
+
+<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center />
+
+Then, expand the `Advanced` settings and check the `Enable invisible proxying` checkbox.
+
 ### DNS Rewrite
 
 The target domain will now resolve to Caido. However, Caido will also resolve the domain to itself, since DNS queries will check the `hosts` file before being sent to a resolver.
@@ -164,11 +172,7 @@ Check the `Use static IP` checkbox and providing the IP address in the `Redirect
 
 Next, add `www.example.com` to the `Included Hosts` list and click the `+ Create` button to save the rule.
 
-<img alt="Demo DNS rewrite." src="/_images/invisible_proxy_dns_rewrite.png" center/>
-
 ---
-
-<img alt="Added demo DNS rewrite." src="/_images/listed_dns_rewrite.png" center/>
 
 ::: tip
 Glob syntax (*) is supported to account for varying subdomains and top-level domains/extended top-level domains.
