@@ -62,25 +62,27 @@ This can be done by adding `127.0.0.1 www.example.com` as an entry to either:
 
 ### Port Forwarding
 
-Since the thick client application will expect the destination server to be running on either port 80 (_for HTTP_) or 443 (_for HTTPS_), you will also need to change Caido’s default listening port of 8080.
+The thick client application will expect the destination server to be running on either port 80 (_for HTTP_) or 443 (_for HTTPS_).
 
-::: danger
 However, ports below 1024 are considered privileged ports which can only bind to services running with root/administrative privileges.
 
 Running Caido with root/administrative privileges can create issues later on because any files created will require elevated permission to access which would interfere with runtime processes.
 
+::: danger
 Although this could be avoided by running Caido as root/administrator every time, doing so would expose your computer to additional risk if Caido or any dependency is compromised.
 :::
 
-We can instead bind Caido to a higher port, like `8443`, and redirect traffic intended for port 443 to it.
-
-<img alt="Changing Caido's listening port." src="/_images/port_forwarding_invisible_proxy.png" center/>
+We can instead redirect traffic intended for port 443 to Caido's listening port.
 
 ---
 
 #### Port Forwarding on Windows:
 
 Open Command Prompt as Administrator and run:
+
+```
+netsh interface portproxy add v4tov4 listenport=80 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
+```
 
 ```
 netsh interface portproxy add v4tov4 listenport=443 listenaddress=127.0.0.1 connectport=8443 connectaddress=127.0.0.1
