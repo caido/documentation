@@ -42,7 +42,7 @@ fetch(url)
 To execute this script, navigate to the directory in which the file is saved to and enter:
 
 ```
-node fetch-test.js https://www.example.com/
+node thick-client.js http://www.example.com/
 ```
 
 :::
@@ -51,8 +51,16 @@ node fetch-test.js https://www.example.com/
 
 In order for Caido to capture the traffic, the domain name of a destination server needs to resolve to Caido’s listening address.
 
-::: tip
-To discover the domain/domains the thick client is communicating with, use a network traffic inspection tool like [Wireshark](https://www.wireshark.org/) and filter traffic by the DNS protocol.
+::: tip TIPS
+
+- To discover the domain/domains the thick client is communicating with, use a network traffic inspection tool like [Wireshark](https://www.wireshark.org/) and filter traffic by the DNS protocol.
+
+- To discover the IP address of a domain name, run the terminal command:
+
+```
+nslookup www.example.com
+```
+
 :::
 
 This can be done by adding `127.0.0.1 www.example.com` as an entry to either:
@@ -143,9 +151,9 @@ sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
 
 By default, invisible proxying is disabled. To enable it, click on the `⋮` icon to the right of the Instance you want to apply a custom listening address to and select `Edit`.
 
-<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center />
-
 Then, expand the `Advanced` settings and check the `Enable invisible proxying` checkbox.
+
+<img alt="Connection manager instance more options." src="/_images/enable_invisible_proxying.png" center />
 
 ### DNS Rewrite
 
@@ -157,17 +165,6 @@ To access this feature, click on your account icon in the upper-rightmost corner
 
 Click on the `+ Add Rewrite` button to create a new rule.
 
-::: tip
-Discover the IP address of a domain name with either:
-
-```
-nslookup www.example.com
-
-dig www.example.com
-```
-
-:::
-
 Check the `Use static IP` checkbox and providing the IP address in the `Redirect to static IP` input field.
 
 Next, add `www.example.com` to the `Included Hosts` list and click the `+ Create` button to save the rule.
@@ -178,17 +175,13 @@ Next, add `www.example.com` to the `Included Hosts` list and click the `+ Create
 Glob syntax (*) is supported to account for varying subdomains and top-level domains/extended top-level domains.
 :::
 
-### Domain Allowlist
-
-For security, only defined domains can access the Caido API and interface.
-
-For instance, when utilizing a domain that resolves to `127.0.0.1` for proxying local traffic, the domain must be added to the `Allowed Domains` list.
-
-In the Caido desktop application, this list can be found within your `Instance` settings.
-
-Add `www.example.com` to the list.
-
 ### Testing
+
+Now, run the script:
+
+```
+node thick-client.js http://www.example.com/
+```
 
 ::: tip
 You may need to flush the DNS cache.
