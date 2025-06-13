@@ -1,3 +1,7 @@
+---
+outline: [2, 4]
+---
+
 # Invisible Proxying for Non-Proxy Aware Thick Clients
 
 In this tutorial you will be guided through the process of configuring desktop applications to proxy traffic through Caido.
@@ -20,22 +24,22 @@ In invisible proxying, Caido acts as the destination server that the thick clien
 ::: warning NOTE
 In this tutorial we will demonstrate setting up invisible proxying using a simple Node.js script that will act as a thick client communicating with `https://www.example.com/`. To follow along, ensure you have Node.js installed and create a file named `thick-client.js` with the following content:
 
-``` js
+```js
 const url = process.argv[2];
 
 if (!url) {
-  console.error('Usage: node fetch-test.js <url>');
+  console.error("Usage: node fetch-test.js <url>");
   process.exit(1);
 }
 
 fetch(url)
-  .then(res => res.text())
-  .then(body => {
-    console.log('Response:');
+  .then((res) => res.text())
+  .then((body) => {
+    console.log("Response:");
     console.log(body);
   })
-  .catch(err => {
-    console.error('Fetch error:', err);
+  .catch((err) => {
+    console.error("Fetch error:", err);
   });
 ```
 
@@ -68,25 +72,28 @@ This can be done by adding `127.0.0.1 www.example.com` as an entry to either:
 - The `/etc/hosts` file in Linux/macOS
 - The `C:\Windows\System32\drivers\etc\hosts` file in Windows.
 
-### Port Forwarding
+### Port Binding / Forwarding
 
 The thick client application will expect the destination server to be running on either port 80 (_for HTTP_) or 443 (_for HTTPS_).
 
-However, ports below 1024 are considered privileged ports which can only bind to services running with root/administrative privileges.
+However, ports below 1024 are considered privileged ports which only bind to services running with root/administrative privileges (some work arounds do exist).
 
-Running Caido with root/administrative privileges can create issues later on because any files created will require elevated permission to access which would interfere with runtime processes.
+Running Caido with root/administrative privileges is **NOT** recommended. Doing so **will** create issues later on since any resource created by Caido will be owned by the root/administrator user.
 
 ::: danger
-Although this could be avoided by running Caido as root/administrator every time, doing so would expose your computer to additional risk if Caido or any dependency is compromised.
+Although this could be avoided by running Caido as root/administrator every time, doing so would expose your computer to additional risk if Caido or any dependency is compromised. **DO NOT DO THIS.**
 :::
 
-We can instead redirect traffic intended for port 443 to Caido's listening port.
+Instead, we must do one of the following:
+
+- Use port forwarding to redirect traffic intended for ports 80 and 443 to Caido's listening port **(prefered)**
+- Use some tricks that some OS give us to bind to the port
 
 ---
 
-#### Port Forwarding on Windows:
+#### Windows
 
-Open Command Prompt as Administrator and run:
+To setup port forwarding on Windows, open Command Prompt as Administrator and run:
 
 ```
 netsh interface portproxy add v4tov4 listenport=80 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
@@ -113,14 +120,15 @@ netsh interface portproxy delete v4tov4 listenport=443 listenaddress=127.0.0.1
 
 ---
 
-#### Port Forwarding on macOS:
+#### macOS
 
-You can use `pfctl` (Packet Filter) to write a redirection rule in a `pf.conf` file.
+To setup port forwarding on macOS, you can use `pfctl` (Packet Filter) to write a redirection rule in a `pf.conf` file.
 
 To do this, open the `/etc/pf.conf` file and add:
 
 ```
-rdr pass on lo0 inet proto tcp from any to any port 443 -> 127.0.0.1 port 8443
+rdr pass on lo0 inet proto tcp from any to any port 80 -> 127.0.0.1 port 8080
+rdr pass on lo0 inet proto tcp from any to any port 443 -> 127.0.0.1 port 8080
 ```
 
 Reload the rules with:
@@ -135,15 +143,36 @@ Ensure pf is enabled with:
 sudo pfctl -e
 ```
 
+:::warning
+Packet Filter will hijack your port 8080 and it might cause the Caido interface to stop loading on that port.
+Right now, the only workaround is to use the CLI parameter `--ui-listen 8081` to bind another port for the UI.
+:::
+
+:::tip
+On macOS, there is one workaround to bind 443 and 80 without root: you must listen on all interfaces (`0.0.0.0`).
+If you setup Caido that way, you won't have to deal with port forwarding.
+
+We do **NOT** recommend doing this in untrusted networks since this allows **ANY** computer on the same network as you to proxy through your computer.
+:::
+
 ---
 
-#### Port Forwarding on Linux:
+#### Linux
 
 You can use use `iptables`:
 
 ```
-sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8080
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
+
+:::tip
+On Linux, you can grant a binary the permission to bind to 443 and 80.
+You have to run: `sudo setcap 'cap_net_bind_service=+ep' ./path/to/caido-cli`.
+
+If you are using the Desktop application, make sure you grant that permission of the **CLI** not the desktop application.
+Usually it will be found under `resources/bin/caido-cli` in your installation directory.
+:::
 
 ---
 
@@ -172,7 +201,7 @@ Next, add `www.example.com` to the `Included Hosts` list and click the `+ Create
 ---
 
 ::: tip
-Glob syntax (*) is supported to account for varying subdomains and top-level domains/extended top-level domains.
+Glob syntax (\*) is supported to account for varying subdomains and top-level domains/extended top-level domains.
 :::
 
 ### Testing
