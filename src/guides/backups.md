@@ -9,7 +9,7 @@ Backups allow you to share your security audits with others - making sure you ar
 ## Creating a Backup
 
 <ProContainer>
-You create backups directly from the Projects tab of your Workspace by clicking ⋮ located to the far-right of the desired Project row.
+You create backups directly from the Projects interface of your Workspace by clicking ⋮ located to the far-right of the desired Project row.
 </ProContainer>
 
 ::: tip
@@ -20,7 +20,7 @@ It is possible to backup any Project including the currently selected one.
 
 ## Downloading a Backup
 
-Once the backup file creation is complete, it will be available in the `Backups` tab. If your Instance is remote, you can `Download` the backup to your local machine. Otherwise, you can click on the `⋮` to get the path on disk if you wish to copy it directly.
+Once the backup file creation is complete, it will be available in the `Backups` tab interface. If your Instance is remote, you can `Download` the backup to your local machine. Otherwise, you can click on the `⋮` to get the path on disk if you wish to copy it directly.
 
 <img alt="Backup import." src="/_images/backup_download.png" center/>
 

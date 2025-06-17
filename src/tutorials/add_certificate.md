@@ -64,7 +64,7 @@ In order for Caido's CA Certificate to be compatible with the Android system, it
 1. Generate the legacy hash of Caido's CA certificate's subject field:
 
 ```
-openssl x509 -inform DER -subject_hash_old -in </path/to/your/ca.crt>
+openssl x509 -inform PEM -subject_hash_old -in </path/to/your/ca.crt>
 ```
 
 2. Rename the Caido CA certificate to the hash with a `.0` extension.

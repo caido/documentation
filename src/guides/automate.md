@@ -1,12 +1,12 @@
 # Automate
 
-The `Automate` tab allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidly modify certain parameters of requests using wordlists.
+The `Automate` interface allows you to send requests in bulk. This feature provides a flexible way to initiate bruteforce/fuzzing campaigns to rapidly modify certain parameters of requests using wordlists.
 
 Advanced setting options ensure your campaign can account for events such as failed requests or rate-limiting. You can transfer requests to the Automate interface from many other Caido interfaces.
 
 You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
-<img alt="Automate tab." src="/_images/automate_tab.png" center/>
+<img alt="Automate interface." src="/_images/automate_interface.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).

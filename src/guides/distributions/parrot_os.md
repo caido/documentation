@@ -6,6 +6,7 @@
 
 ::: info
 [ParrotOS](https://parrotsec.org/) is a versatile, security-focused Linux distribution designed for penetration testing, security research, and privacy protection. With a rich suite of security tools, it's an ideal operating system for ethical hackers, security professionals, and privacy-conscious users.
+[Parrot OS](https://parrotsec.org/) is a versatile, security-focused Linux distribution designed for penetration testing, security research, and privacy protection. With a rich suite of security tools, it's an ideal operating system for ethical hackers, security professionals, and privacy-conscious users.
 
 Known for its intuitive interface, regular updates, and strong commitment to open-source principles, ParrotOS stands out as an exceptional option in the security space.
 :::

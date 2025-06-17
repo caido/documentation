@@ -1,6 +1,6 @@
 # Replay
 
-The `Replay` tab allows you to edit and replay requests individually. This feature provides a quick way to test your web applications by forwarding certain requests repeatedly with different modifications.
+The `Replay` interface allows you to edit and replay requests individually. This feature provides a quick way to test your web applications by forwarding certain requests repeatedly with different modifications.
 
 Requests can easily be sent to Replay from other interfaces within Caido - enabling further investigation of requests that seem interesting from a testing perspective.
 
@@ -10,7 +10,7 @@ You can create requests from scratch from a blank template, or start from any ex
 
 To familiarize yourself with the Replay interface, continue below:
 
-<img alt="Intercept tab." src="/_images/replay_tab.png" center/>
+<img alt="Replay interface." src="/_images/replay_interface.png" center/>
 
 1. Select the `Replay` tab from the left-hand menu within the Caido window.
 2. These numerically named tabs are the requests that have been sent to `Replay` in the order they were sent. To select a request, simply click on the desired tab. You can arbitrarily rename a tab by right-clicking it and selecting `Rename`.

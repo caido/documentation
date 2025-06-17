@@ -6,7 +6,7 @@ Multi-step processes that, before, needed to be performed manually can be saved 
 
 ## Workflows Layout
 
-<img alt="Workflows tab." src="/_images/workflows_tab_layout.png">
+<img alt="Workflows interface." src="/_images/workflows_interface_layout.png">
 
 1. Select the `Workflows` tab from the left-hand menu within the Caido window.
 2. The three types of Workflows (`Passive`/`Active`/`Convert`) are listed horizontally here as tabs. Click to toggle between them.

@@ -1,8 +1,12 @@
 # Creating Shortcuts
 
-If you click on your account icon in the upper-rightmost corner of the Caido window and select `Settings`, you can set, unset, or change keybindings to commands in the `Shortcuts` tab.
+If you click on your account icon in the upper-rightmost corner of the Caido window and select `Settings`, you can set, unset, or change keybindings to commands in the `Shortcuts` interface.
 
-<img alt="Shortcuts tab." src="/_images/shortcuts.png" center/>
+<img alt="Shortcuts interface." src="/_images/shortcuts.png" center/>
+
+::: info
+[View all of the available command shortcuts.](/reference/command_shortcuts.md)
+:::
 
 ## Set or Change a Shortcut:
 

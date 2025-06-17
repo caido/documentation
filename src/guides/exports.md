@@ -1,6 +1,6 @@
 # Exports
 
-The `Exports` tab allows you to export data from the HTTP History and Search pages and use data collected by Caido in other tools.
+The `Exports` interface allows you to export data from the HTTP History and Search pages and use data collected by Caido in other tools.
 
 This feature can also be used for archival purposes or audit purposes sometimes required by clients.
 
@@ -44,6 +44,6 @@ For the CSV format, each request/response pair will be exported on a row. Since 
 
 Once the Export is completed, it will be available on the Exports page.
 
-<img alt="Exports tab." src="/_images/exports_tab.png">
+<img alt="Exports interface." src="/_images/exports_tab.png">
 
 From here you can download/rename/delete the Export.

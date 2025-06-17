@@ -1,6 +1,6 @@
 # Scopes
 
-Scopes are defined through the creation of **Scope Presets** within the `Scopes` tab interface. Your **Scope Presets** will match requests throughout the application by using a supplied list of `Hosts` that are designated either `In Scope` or `Out of Scope`. Scoping improves the efficiency of your testing process by quickly filtering the display of targets that are relevant/irrelevant to your engagement.
+Scopes are defined through the creation of **Scope Presets** within the `Scopes` interface. Your **Scope Presets** will match requests throughout the application by using a supplied list of `Hosts` that are designated either `In Scope` or `Out of Scope`. Scoping improves the efficiency of your testing process by quickly filtering the display of targets that are relevant/irrelevant to your engagement.
 
 Caido offers the ability to switch between your Scope Presets with ease throughout the application.
 

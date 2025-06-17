@@ -1,6 +1,6 @@
 # Plugins
 
-The `Plugins` tab allows you to install and manage plugin packages in Caido.
+The `Plugins` interface allows you to install and manage plugin packages in Caido.
 
 These packages expand Caido's functionality, offering a means to futher customize your Instance.
 

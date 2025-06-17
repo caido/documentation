@@ -2,11 +2,11 @@
 
 ## Intercept
 
-_For advanced documentation on this topic - click [here](/guides/intercept.md)._
+_For advanced documentation on this topic, view the [Intercept](/guides/intercept.md)._
 
 `Intercept` allows you to capture **requests** as well as **responses** for inspection/modification and forward or drop them arbitrarily. **Requests** are shown on the left and **responses** are shown on the right.
 
-<img alt="Intercept tab." src="/_images/intercept_tab.png" center/>
+<img alt="Intercept tab." src="/_images/intercept_interface.png" center/>
 
 1. Select the `Intercept` tab from the left-hand menu within the Caido window.
 2. Clicking this button will toggle between `Queuing` (_intercept traffic_) and `Forwarding` (_forward traffic_).
@@ -15,11 +15,11 @@ _For advanced documentation on this topic - click [here](/guides/intercept.md)._
 
 ## HTTP History
 
-_For advanced documentation on this topic - click [here](/guides/http_history.md)._
+_For advanced documentation on this topic, view the [HTTP History](/guides/http_history.md) guide._
 
 The `HTTP History` tab lists all the traffic that Caido has proxied.
 
-<img alt="Intercept tab." src="/_images/history_tab.png" center/>
+<img alt="Intercept tab." src="/_images/history_interface.png" center/>
 
 1. Select the `HTTP History` tab from the left-hand menu within the Caido window.
 2. All the proxied **requests** will appear in this pane. Select them arbitrarily.
@@ -29,11 +29,11 @@ The `HTTP History` tab lists all the traffic that Caido has proxied.
 
 ## WS History
 
-_For advanced documentation on this topic - click [here](/guides/ws_history.md)._
+_For advanced documentation on this topic, view the [WS History](/guides/ws_history.md) guide._
 
 The `WS History` tab lists all of the WebSocket stream traffic that Caido has proxied.
 
-<img alt="WS History tab." src="/_images/ws_history_tab.png" center/>
+<img alt="WS History tab." src="/_images/ws_history_interface.png" center/>
 
 1. Select the `WS History` tab from the left-hand menu within the Caido window.
 2. All the proxied WebSocket streams will appear in this pane. Select them arbitrarily.
