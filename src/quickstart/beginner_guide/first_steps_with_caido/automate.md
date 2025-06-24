@@ -6,7 +6,7 @@
 To send a request to `Automate`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+M`.
 :::
 
-<img alt="Automate tab." src="/_images/automate_tab.png" center/>
+<img alt="Automate tab." src="/_images/automate_interface.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).

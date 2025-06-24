@@ -13,6 +13,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/cli",
       },
       {
+        text: "Command Shortcuts",
+        link: "/reference/command_shortcuts",
+      },
+      {
         text: "Environment",
         link: "/reference/environment",
       },

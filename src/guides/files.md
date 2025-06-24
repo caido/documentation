@@ -1,6 +1,6 @@
 # Files
 
-The `Files` tab allows users to upload files to the Caido Instance for future use in other features. This feature is particularly useful when you need to use the same file in different parts of the application.
+The `Files` interface allows users to upload files to the Caido Instance for future use in other features. This feature is particularly useful when you need to use the same file in different parts of the application.
 
 ::: info
 Currently, files uploaded in this page are only available for use in the Automate page.
@@ -10,11 +10,11 @@ Currently, files uploaded in this page are only available for use in the Automat
 
 `Automate` allows you to brute-force/fuzz designated elements of a request.
 
-- In order to utilize the [Hosted File Payload Type](/guides/automate.md#payload-types) in Automate - you must first upload payload files/wordlists in the `Files` tab within Caido.
+- In order to utilize the [Hosted File Payload Type](/guides/automate.md#payload-types) in Automate - you must first upload payload files/wordlists in the `Files` interface within Caido.
 
 ## Files
 
-<img alt="Files tab." src="/_images/upload_wordlist_tab.png" center/>
+<img alt="Files interface." src="/_images/upload_wordlist_interface.png" center/>
 
 1. Select the `Files` tab from the left-hand menu within the Caido window.
 2. Drag and drop the files you wish to upload into this box or click `Browse` to navigate/select the file within your device's file system.

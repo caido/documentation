@@ -1,12 +1,12 @@
 # Projects
 
-Caido utilizes a client-server architecture model. An **Instance** of Caido is essentially an installation. Click [here](/concepts/essentials/instances.md) for more information on Instances.
+Caido utilizes a client-server architecture model. An [Instance](/concepts/essentials/instances.md) of Caido is essentially an installation.
 
 Think of `Projects` as separate directories for your audits. Projects allow you to stay organized when testing against multiple targets within the same Caido instance.
 
 ## Creating a New Project
 
-<img alt="Projects tab." src="/_images/projects_tab.png">
+<img alt="Projects interface." src="/_images/projects_interface.png">
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.

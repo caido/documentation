@@ -89,16 +89,24 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Other",
         items: [
           {
+            text: "Creating Shortcuts",
+            link: "/guides/shortcuts",
+          },
+          {
             text: "Configuring the Data Directory",
             link: "/guides/data_location",
+          },
+          {
+            text: "Debugging",
+            link: "/guides/debugging",
           },
           {
             text: "Deleting Data",
             link: "/guides/deleting_data",
           },
           {
-            text: "Creating Shortcuts",
-            link: "/guides/shortcuts",
+            text: "Guest Mode",
+            link: "/guides/guest_mode",
           },
         ],
       },

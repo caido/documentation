@@ -1,6 +1,6 @@
 # Sitemap
 
-The `Sitemap` tab allows you to visualize the structure of any website that is proxied through Caido.
+The `Sitemap` interface allows you to visualize the structure of any website that is proxied through Caido.
 
 It keeps track of domains, folders, and requests, as well as any variations in query parameters and POST bodies. The Sitemap page provides a clear, hierarchical view of the website's structure, making it easy to identify and explore different parts of the site.
 

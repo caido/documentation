@@ -2,7 +2,7 @@
 
 Each Caido instance generates its own CA certificate to be able to negotiate TLS handshakes and intercept HTTPS traffic.
 
-If you click on your account icon in the upper-rightmost corner of the Caido window and select `Settings`, the following options are available in the `TLS` tab:
+If you click on your account icon in the upper-rightmost corner of the Caido window and select `Settings`, the following options are available in the `Certificate` interface:
 
 - `Export`: Save the CA certificate so it can be used in another instance.
 - `Import`: Import a previously saved CA certificate.

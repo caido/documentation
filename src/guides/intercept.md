@@ -1,6 +1,6 @@
 # Intercept
 
-The `Intercept` tab allows you to manually control the flow of proxied traffic between your client and the server. With the ability to pause and resume the flow - you can gain a clear understanding of what is occuring.
+The `Intercept` interface allows you to manually control the flow of proxied traffic between your client and the server. With the ability to pause and resume the flow - you can gain a clear understanding of what is occuring.
 
 When forwarding is paused, Caido will list all of the requests and responses awaiting forwarding in a queue list. Select any request or response within this list to view its contents. From here - you can make modifications, transfer the request to another Caido feature, forward the request/response or drop the request/response completely.
 

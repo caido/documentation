@@ -2,12 +2,13 @@
 
 ---
 
-<img alt="Athena OS Banner" src="/_images/caido_parrot.png" />
+<img alt="ParrotOS Banner" src="/_images/caido_parrot.png" />
 
 ::: info
-The [Parrot OS](https://parrotsec.org/) is a versatile, security-focused Linux distribution designed for penetration testing, security research, and privacy protection. With a rich suite of security tools, it's an ideal operating system for ethical hackers, security professionals, and privacy-conscious users.
+[ParrotOS](https://parrotsec.org/) is a versatile, security-focused Linux distribution designed for penetration testing, security research, and privacy protection. With a rich suite of security tools, it's an ideal operating system for ethical hackers, security professionals, and privacy-conscious users.
+[Parrot OS](https://parrotsec.org/) is a versatile, security-focused Linux distribution designed for penetration testing, security research, and privacy protection. With a rich suite of security tools, it's an ideal operating system for ethical hackers, security professionals, and privacy-conscious users.
 
-Known for its intuitive interface, regular updates, and strong commitment to open-source principles, Parrot OS stands out as an exceptional option in the security space.
+Known for its intuitive interface, regular updates, and strong commitment to open-source principles, ParrotOS stands out as an exceptional option in the security space.
 :::
 
 [Here at Caido, we are thrilled to maintain a partnership with the Parrot team.](https://parrotsec.org/blog/2025-01-11-parrot-caido/)
@@ -31,4 +32,12 @@ Or, enter the following terminal command from any directory:
 caido
 ```
 
-<img alt="Athena OS Banner" src="/_images/parrot.png" no-shadow/>
+<img alt="Parrot desktop." src="/_images/parrot.png" no-shadow/>
+
+## ParrotOS WSL
+
+Caido is also included in [ParrotOS WSL](https://parrotsec.org/docs/installation/install-with-wsl/)!
+
+## Rocket
+
+Caido can also be ran as a Docker container with [Rocket](https://gitlab.com/parrotsec/project/rocket)!

@@ -10,10 +10,10 @@ _Advanced documentation on where Caido saves data, customizing the listening add
 
 In order to change Caido's default settings:
 
-<img alt="General settings." src="/_images/settings_tab.png">
+<img alt="General settings." src="/_images/settings_menu.png">
 
-1. Click on your `account icon` in the upper-rightmost corner of the Caido window.
-2. Select the `Settings` tab.
+1. Click on your account icon in the upper-rightmost corner of the Caido window.
+2. Select `Settings`.
 3. You will see the following five tabs: `General`, `Shortcuts`, `Network`, `Rendering` and `Developer`.
 
 ### General

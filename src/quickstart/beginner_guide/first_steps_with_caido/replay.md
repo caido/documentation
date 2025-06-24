@@ -2,7 +2,7 @@
 
 ## Replay
 
-_For advanced documentation on this topic - click [here](/guides/replay.md)._
+_For advanced documentation on this topic, view the [Replay](/guides/replay.md) guide._
 
 `Replay` allows you to repeatedly forward modified requests. **Requests** are shown on the left and **responses** are shown on the right.
 
@@ -10,7 +10,7 @@ _For advanced documentation on this topic - click [here](/guides/replay.md)._
 To send a request to `Replay`, either right-click inside the request pane of `Intercept` or `HTTP History` or focus the request pane and use `CTRL+R`.
 :::
 
-<img alt="Intercept tab." src="/_images/replay_tab.png" center/>
+<img alt="Intercept tab." src="/_images/replay_interface.png" center/>
 
 1. Select the `Replay` tab from the left-hand menu within the Caido window.
 2. These numerically named tabs are the requests that have been sent to `Replay` in the order they were sent. To select a request, simply click on the desired tab. _You can arbitrarily rename a tab by right-clicking it and selecting `Rename`_.
