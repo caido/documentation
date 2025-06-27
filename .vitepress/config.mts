@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import llmstxt from "vitepress-plugin-llms";
 
 import {
   conceptsSidebar,
@@ -19,6 +20,10 @@ export default defineConfig({
   appearance: "force-dark",
   sitemap: {
     hostname: "https://docs.caido.io",
+  },
+
+  vite: {
+    plugins: [llmstxt()],
   },
 
   head: [
