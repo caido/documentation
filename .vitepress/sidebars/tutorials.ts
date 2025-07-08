@@ -71,12 +71,16 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Passive Workflows",
     items: [
       {
-        text: "Add Header",
+        text: "Adding a Header",
         link: "/tutorials/add_header",
       },
       {
-        text: "Color Requests",
+        text: "Coloring Requests",
         link: "/tutorials/color_requests",
+      },
+      {
+        text: "Refreshing Authentication",
+        link: "/tutorials/refresh_authentication",
       },
     ],
   },

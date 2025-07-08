@@ -1,4 +1,4 @@
-# Convert Nodes
+# Workflow Nodes
 
 Here you'll find the list of Nodes available to use in your Convert Workflows.
 

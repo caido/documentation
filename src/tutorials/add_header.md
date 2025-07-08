@@ -1,6 +1,6 @@
-# Add Header & Send Request Workflow
+# Adding a Header Workflow
 
-This guide will assist you in building a [Passive Workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
+In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 
@@ -8,14 +8,14 @@ For this Workflow, the overall Node layout will be:
 
 <img alt="Nodes used and their connections." src="/_images/nodes_adding_header.png" center>
 
-- The `On intercept request` will output `$on_intercept_request.request` which represents the request that passed through the Caido proxy.
+- The `On Intercept Request` will output `$on_intercept_request.request` which represents the request that passed through the Caido proxy.
 - The request will be sent to the `In Scope` Node. This will check if the request is within your current scope.
 - If the request is within scope it will be passed to the `JavaScript` Node. If it is not - the Workflow will end.
-- Once the request has been processed by the script in the `JavaScript Node`, the Workflow will come to an end.
+- Once the request has been processed by the script in the `JavaScript` Node, the Workflow will come to an end.
 
 ## Typing
 
-When a JavaScript Node is executed inside a Workflow, the `run` function will be triggered.
+When a `JavaScript` Node is executed inside a Workflow, the `run` function will be triggered.
 
 The JSDoc comments note the types of the parameters and return value.
 
@@ -34,7 +34,7 @@ The JSDoc comments note the types of the parameters and return value.
 - The type alias of `{MaybePromise<Data | undefined>}` handles both synchronous and asynchronous values. It will either return a [byte](https://developer.caido.io/reference/sdks/workflow/#bytes) value or return `undefined`.
 :::
 
-## Creating the JavaScript Node
+## Scripting the JavaScript Node
 
 <img alt="The Workflow environment." src="/_images/build.png" center/>
 
@@ -100,7 +100,7 @@ We must wait for the request to be sent and response to be returned before using
 - Finally, the creation of the Finding is awaited to give it time to be processed on the backend.
 :::
 
-## Conclusion
+## The Result
 
 The generated finding should resemble:
 

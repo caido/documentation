@@ -1,4 +1,4 @@
-# Node Data Types
+# Workflow Node Data Types
 
 Nodes are defined by various different input and output data types.
 

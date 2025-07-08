@@ -1,6 +1,6 @@
-# Sending a notification to Discord
+# Sending a Notification to Discord
 
-In this tutorial, we will learn how to use an Active Workflow to send a notification to Discord. This method can also be used with other types of workflows.
+In this tutorial, we create an Active Workflow to send a notification to Discord. This method can also be used with other types of workflows.
 
 We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
@@ -20,7 +20,7 @@ Next, **click**, **hold** and **drag** a `Javascript` Node into the Workflow Edi
 
 ## Creating and Sending a Request
 
-Now, click within the coding environment, select all the existing code, and delete it.
+Now, click within the coding environment of the `JavaScript` Node, select all of the existing code, and delete it.
 
 To send a request, you will first need to import the `Request` class and the `fetch()` function from the `caido:http` module.
 

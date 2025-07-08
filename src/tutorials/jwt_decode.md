@@ -5,7 +5,7 @@ The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wik
 ::: info
 It is, obviously, also possible to build it easily using a single Javascript Code Node.
 
-To learn more about how to use Javascript in Workflows, head over [here](/reference/workflow_convert_nodes.md).
+[Learn how to use Javascript in Workflows.](/reference/workflow_nodes.md).
 :::
 
 For this guide we will use the following token as our input:
