@@ -11,6 +11,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Configuration",
+    items: [
+      {
+        text: "Invisible Proxying",
+        link: "/tutorials/invisible_proxy",
+      },
+    ],
+  },
+  {
     text: "Convert Workflows",
     items: [
       {
