@@ -19,3 +19,7 @@ To enable this feature in Caido's desktop application:
 ::: warning NOTE
 Debug information is required when [reporting bugs](/report_bug.md) to the Caido team.
 :::
+
+::: info
+If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/guides/troubleshooting.html#instance-is-unreachable).
+:::

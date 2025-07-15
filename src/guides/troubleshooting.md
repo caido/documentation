@@ -100,6 +100,41 @@ sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
 ## Startup Issues
 
+### "Instance is unreachable."
+
+If you encounter this error when attempting to launch a Caido instance, it indicates the Caido subprocess failed to spawn. [View the backend logs for more insight](/guides/data_location.html).
+
+<img alt="Instance is unreachable." src="/_images/instance_is_unreachable.png" width=700px center/>
+
+#### Plugin Failure
+
+This can occur if a backend component of a plugin is dead locked. To resolve this issue, enable safe mode to disable either the frontend or backend plugin components and recover the Instance:
+
+- To disable the frontend component of a plugin, access Caido in your browser by navigating to [http://127.0.0.1:8080/?safe](http://127.0.0.1:8080/?safe).
+- To disable the backend component of a plugin, launch the Caido CLI with the `--safe` flag:
+
+```
+caido --safe
+```
+
+### "Encountered an error when communicating with the destination server."
+
+If you encounter a similar message to the following:
+
+```
+Encountered an error when communicating with the destination server
+
+Failed to acquire connection
+
+Caused by:
+    0: Failed to perform TLS handshake
+    1: error:1408F10B:SSL routines:ssl3_get_record:wrong version number:ssl/record/ssl3_record:c:332
+```
+
+Check your proxy settings and ensure the `Type` is set to HTTP.
+
+<img alt="Proxy settings type." src="/_images/proxy_settings_type.png" width=900px center/>
+
 ### "Could not initialize configuration."
 
 If you encounter a similar message to the following:
@@ -138,19 +173,19 @@ To resolve this issue, you can either:
 
 2. Reset the Instance credentials:
 
-- If using the CLI, start Caido using:
+- If you're using the CLI, start Caido using:
 
 ```
 caido --reset-credentials
 ```
 
-- If using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
+- If you're using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
 
   ::: warning
   These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
   :::
 
-  <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" center/>
+  <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
 
 3. Delete your data folder.
 
@@ -164,19 +199,19 @@ You may encounter this error when trying to access an Instance that you **delete
 
 To resolve this, reset the Instance credentials:
 
-- If using the CLI, start Caido using:
+- If you're using the CLI, start Caido using:
 
 ```
 caido --reset-credentials
 ```
 
-- If using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
+- If you're using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
 
 ::: warning
 These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
 :::
 
-<img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" center/>
+<img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
 
 ### "Date mismatch: make sure your device's date and time settings are correct."
 
