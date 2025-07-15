@@ -102,14 +102,16 @@ sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
 ### "Instance is unreachable."
 
-If you encounter this error when attempting to launch a Caido instance, it indicates the Caido subprocess failed to spawn. This can occur if a backend component of a plugin is dead locked. [View the backend logs for more insight](/guides/data_location.html).
+If you encounter this error when attempting to launch a Caido instance, it indicates the Caido subprocess failed to spawn. [View the backend logs for more insight](/guides/data_location.html).
 
 <img alt="Instance is unreachable." src="/_images/instance_is_unreachable.png" width=700px center/>
 
-To resolve this issue, enable safe mode to disable backend plugins and recover the Instance:
+#### Plugin Failure
 
-- Access Caido in your browser by navigating to [http://127.0.0.1:8080/?safe](http://127.0.0.1:8080/?safe).
-- If you're using the CLI, start Caido with:
+This can occur if a backend component of a plugin is dead locked. To resolve this issue, enable safe mode to disable either the frontend or backend plugin components and recover the Instance:
+
+- To disable the frontend component of a plugin, access Caido in your browser by navigating to [http://127.0.0.1:8080/?safe](http://127.0.0.1:8080/?safe).
+- To disable the backend component of a plugin, launch the Caido CLI with the `--safe` flag:
 
 ```
 caido --safe
