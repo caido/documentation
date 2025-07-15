@@ -32,11 +32,11 @@ Then, depending on if the environment is new or existing, click on either the `C
 
 ## Inserting an Environment Variable
 
-With a defined environment variable, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, click, hold, and drag the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
+With a defined environment variable, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder.png" center/>
 
-Next, click the edit button located to the right of the placeholder. Doing so will present the `Placeholder Settings` window. Select `Environment Variable` from the top dropdown menu. Then, select the desired environment variable by name from the other dropdown menu. Click on the `Add` button to save the configuration. The addition will be reflected in the list of `Active preprocessors`.
+Next, click the edit button located to the right of the placeholder. Doing so will present the `Placeholder Settings` window. Select `Environment Variable` from the top dropdown menu. Then, select the desired environment variable by name from the other dropdown menu. Click on the `Add` button to save the configuration. The addition will be reflected in the list below.
 
 <img alt="Adding an environment variable to a Replay request." src="/_images/replay_global_variable.png" center/>
 

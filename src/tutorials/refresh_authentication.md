@@ -124,21 +124,22 @@ Click on the `Javascript` Node to access its detailed view. Then click within th
 
 ```js
 export async function run({ request, response }, sdk) {
-  if (response) {
+  const authFilter = `req.path.cont:"/auth" OR req.path.cont:"/login" OR req.path.cont:"/token" OR req.path.cont:"/oauth" OR req.path.cont:"/refresh"`;
+  if (sdk.requests.matches(authFilter, request, response)) {
     let body = response.getBody();
-      if (body) {
-        let json = body.toJson();
-        let accessToken = json.access_token;
-        if (accessToken) {
-          await sdk.env.setVar({
-            name: "Bearer",
-            value: accessToken,
-            secret: false,
-            global: true
-          });
-        }
+    if (body) {
+      let json = body.toJson();
+      let accessToken = json.access_token;
+      if (accessToken) {
+        await sdk.env.setVar({
+          name: "Bearer",
+          value: accessToken,
+          secret: false,
+          global: true,
+        });
       }
-   }
+    }
+  }
 }
 ```
 
@@ -148,28 +149,32 @@ First an asynchronous function is defined that takes a `request` and `response` 
 
 ```js
 export async function run({ request, response }, sdk) {
-  if (response) {
 ```
 
-Then, using the `.getBody()` method, we extract the response body and parse it as JSON using `.toJson()`. If an `access_token` parameter exists, we use the `.setVar()` method of the environment service to set an environment variable.
+Using `sdk.requests.matches()` we can scope the execution of the script to common authentication endpoints with HTTPQL statements.
 
 ```js
-export async function run({ request, response }, sdk) {
-  if (response) {
+  const authFilter = `req.path.cont:"/auth" OR req.path.cont:"/login" OR req.path.cont:"/token" OR req.path.cont:"/oauth" OR req.path.cont:"/refresh"`;
+  if (sdk.requests.matches(authFilter, request, response)) {
+```
+
+Then, using the `.getBody()` method, we extract the response body and if it exists we parse it as JSON using `.toJson()`. If an `access_token` parameter exists, we use the `.setVar()` method of the environment service to set an environment variable.
+
+```js
     let body = response.getBody();
-      if (body) {
-        let json = body.toJson();
-        let accessToken = json.access_token;
-        if (accessToken) {
-          await sdk.env.setVar({
-            name: "Bearer",
-            value: accessToken,
-            secret: false,
-            global: true
-          });
-        }
+    if (body) {
+      let json = body.toJson();
+      let accessToken = json.access_token;
+      if (accessToken) {
+        await sdk.env.setVar({
+          name: "Bearer",
+          value: accessToken,
+          secret: false,
+          global: true,
+        });
       }
-   }
+    }
+  }
 }
 ```
 
@@ -178,3 +183,17 @@ export async function run({ request, response }, sdk) {
 To view the set environment variable, navigate to the `Environment` interface and refresh the `Global` environment.
 
 <img alt="Workflow token environment variable." src="/_images/workflow_token_env.png" center>
+
+## Using the Environment Variables
+
+Now, with these Workflows providing up-to-date session identifiers, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
+
+<img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder_tutorial.png" center/>
+
+Next, click the edit button located to the right of the placeholder. Doing so will present the `Placeholder Settings` window. Select `Environment Variable` from the top dropdown menu. Then, select the desired environment variable by name from the other dropdown menu. Click on the `Add` button to save the configuration. The addition will be reflected in the list below.
+
+<img alt="Adding an environment variable to a Replay request." src="/_images/replay_bearer_variable.png" center/>
+
+Close the settings window and send the request. To verify the addition was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.
+
+<img alt="Viewing the Replay request environment variable addition." src="/_images/search_env_variable_request_bearer.png" center/>
