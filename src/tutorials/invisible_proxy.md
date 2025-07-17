@@ -152,14 +152,14 @@ However, we do **NOT** recommend doing this in untrusted networks since this all
 
 #### Linux
 
-You can use use `iptables`:
+On Linux, you can use the `iptables` command-line utility to setup port forwarding. Open a terminal and run:
 
 ```
-sudo iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDIRECT --to-port 8080
+sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-port 8080
 ```
 
 ```
-sudo iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDIRECT --to-port 8080
+sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 443 -j REDIRECT --to-port 8080
 ```
 
 ::: tip TIPS
