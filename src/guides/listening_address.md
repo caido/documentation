@@ -22,10 +22,14 @@ caido -l 0.0.0.0:8000
 
 ### Adding other Listeners
 
-To add other listeners you have to use the follow arguments, you can repeat them as many times as you need:
+To add other listeners you have to use the follow arguments to bypass the traffic splitting algorithm, you can repeat them as many times as you need:
 
 - `--ui-listen <IP:PORT>`: This will listen on the given address ONLY for the UI/GraphQL API
 - `--proxy-listen <IP:PORT>`: This will listen on the given address ONLY for the proxy
+
+::: warning
+If you use the same port for both arguments, Caido will revert back to the traffic splitting algorithm. To avoid this behavior, use a different port for each argument.
+:::
 
 ::: info
 Currently we do not offer the multi-listeners configuration in the Desktop application.

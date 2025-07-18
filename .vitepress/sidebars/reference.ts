@@ -17,6 +17,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/command_shortcuts",
       },
       {
+        text: "Context Menu Options",
+        link: "/reference/context_menu",
+      },
+      {
         text: "Environment",
         link: "/reference/environment",
       },

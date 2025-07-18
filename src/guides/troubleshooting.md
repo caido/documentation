@@ -2,6 +2,14 @@
 
 Here you'll find solutions to common issues you might face while using Caido.
 
+## Download Issues
+
+### "This site can't be reached."
+
+When attempting to download Caido, if you encounter a "This site can't be reached" error due to a request time out, your IP address may be blocked by the storage provider's firewall.
+
+If this is the case, try using a VPN or changing your DNS provider and refreshing the page.
+
 ## Installation Issues
 
 ### "The SUID sandbox helper binary was found, but is not configured correctly."
