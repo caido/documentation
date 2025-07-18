@@ -34,8 +34,8 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     text: "Workflows",
     items: [
       {
-        text: "Convert Nodes",
-        link: "/reference/workflow_convert_nodes",
+        text: "Nodes",
+        link: "/reference/workflow_nodes",
       },
       {
         text: "Node Data Types",
