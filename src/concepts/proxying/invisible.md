@@ -13,7 +13,7 @@ This is the case with Caido. By manually configuring the connection settings (_o
 When proxying in this "normal" context, the application will send a `CONNECT` request to establish a TCP tunnel before sending the request itself:
 
 ```http
-CONNECT https://example.com/ HTTP/1.1
+CONNECT example.com:443 HTTP/1.1
 Host: localhost:8080
 ```
 
