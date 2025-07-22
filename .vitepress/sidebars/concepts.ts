@@ -20,14 +20,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Instances",
         link: "/concepts/essentials/instances",
       },
-      {
-        text: "Tabs",
-        link: "/concepts/essentials/tabs",
-      },
-      {
-        text: "Layout Customization",
-        link: "/concepts/essentials/layout",
-      },
     ],
   },
   {

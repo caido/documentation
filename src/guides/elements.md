@@ -1,4 +1,8 @@
-# Context Menu Options
+# Managing Elements
+
+As you use Caido, the user-interface will populate with elements that reflect your activity. The majority of these elements come with various controls, presented a buttons or menu options, that are designed to give you fine-grained control over your workspace.
+
+## Context Menu Options
 
 Right-clicking on certain elements in the Caido user-interface will open a context menu with various actions/options to select from.
 

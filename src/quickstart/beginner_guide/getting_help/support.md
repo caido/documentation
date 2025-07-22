@@ -14,12 +14,12 @@ View the roadmap to stay up-to-date with Caido's development here:
 
 We have documented some of the common errors you might encounter while using Caido:
 
-- [Common Errors](/guides/troubleshooting.md)
+- [Troubleshooting](/guides/troubleshooting.md)
 
-### Join Caido's Discord Server
+## Caido on Discord
 
 <img alt="Discord banner." src="/_images/discord_banner.png"/>
 
 With an active community and constant discussion, feel free to ask any questions!
 
-Click [here](https://links.caido.io/www-discord) to join the server!
+[Join Caido's Discord server!](https://links.caido.io/www-discord)
