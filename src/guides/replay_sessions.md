@@ -1,6 +1,20 @@
 # Managing Sessions
 
-Everytime a request is sent in Replay it is tracked as a `Session`, providing you with a historical record of its state.
+Every time a request is sent in Replay it is tracked as a `Session`, providing you with a historical record of its state.
+
+## Clearing Sessions
+
+To remove a Session from the user-interface, click on the `X` button within its tab.
+
+To remove multiple Sessions right-click on a tab a choose a `Close...` option.
+
+<img alt="Tab context menu Close options." src="/_images/replay_session.png" center>
+
+::: info
+To restore a Session to the user-interface, select it from its associated [Collection](/guides/replay_collections.md).
+
+[Learn how to delete a Session permanently.](/guides/replay_collections.md#deleting-a-session)
+:::
 
 ## Viewing the Requests in a Session
 

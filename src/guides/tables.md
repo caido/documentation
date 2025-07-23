@@ -15,3 +15,15 @@ In certain tables, you can include/exclude columns by clicking on the gear icon 
 Additional filtering options are accessible by clicking the `Advanced` button, located above tables it is available to.
 
 <img alt="Additional filtering options menu." src="/_images/general_usage_filtering.png" center>
+
+## Deleting Rows
+
+Right-click on a row to and select `Delete` to remove it from its table.
+
+Select `Delete all` to remove all rows from a table.
+
+<img alt="Deleting table rows." src="/_images/general_usage_delete_rows.png" center>
+
+To delete multiple rows, hold `CTRL`, click specific rows, and then select `Delete selected ()...` from the right-click context menu.
+
+You can also use `Delete selected ()...` on a range of rows by holding `SHIFT` and selecting a starting and ending row.

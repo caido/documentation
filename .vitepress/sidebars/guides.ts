@@ -157,6 +157,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/replay_collections",
           },
           {
+            text: "Using Workflows in Replay",
+            link: "/guides/replay_workflows",
+          },
+          {
             text: "Using Environment Variables in Replay",
             link: "/guides/replay_environment_variables",
           },
