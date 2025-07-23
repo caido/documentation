@@ -1,6 +1,6 @@
 # Using Workflows in Replay
 
-To apply a Workflow to a value in a Replay request, click on the associated `🖉` button of the placeholder.
+To apply a Workflow to a value in a Replay request, click on the associated `🖉` button of the placeholder. Doing so will present the `Placeholder Settings` window.
 
 With `Workflow` as the `Type`, click on the `Select a workflow` drop-down menu, select a Workflow from the list, and click `Add` to save the configuration.
 
@@ -8,8 +8,6 @@ With `Workflow` as the `Type`, click on the `Select a workflow` drop-down menu, 
 
 Applied Workflows will be listed in the window table. If multiple Workflows are applied, they will execute in top to bottom order.
 
-To change the order, **left-click**, **drag**, and **hold** a Workflow row either above or below other rows in the table.
+To change the order, **left-click**, **drag**, and **hold** a row either above or below other rows in the table and **release**.
 
-::: tip
-View the result of any applied Workflows by identifying the request within the [Search](/guides/search.md) table.
-:::
+Close the settings window and send the request. To verify the application was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.
