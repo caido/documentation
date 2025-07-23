@@ -6,7 +6,7 @@ To be precise, an Instance is the set of files contained in the the [data locati
 
 ## Why?
 
-First, let's revisit the fact that Caido is built around a `client/server` architecture. This means you can deploy the `Caido CLI` anywhere (like on [VPS](/guides/user_guide/vps.md) or on [Docker](/guides/user_guide/docker.md)). We thus need some form of _access control_ to authenticate the client (`Browser` or `Desktop Application`) that connects to that server.
+First, let's revisit the fact that Caido is built around a `client/server` architecture. This means you can deploy the `Caido CLI` anywhere (like on [VPS](/guides/vps.md) or on [Docker](/guides/docker.md)). We thus need some form of _access control_ to authenticate the client (`Browser` or `Desktop Application`) that connects to that server.
 
 You can find all details in our [guide on the topic](/concepts/internals/authentication.md), but in essence each Instance is tied to your account so only you can access it (sharing will be added eventually). Each Instance has a set of OAuth credentials given to it by our cloud service that it uses to identify itself when communicating with us.
 

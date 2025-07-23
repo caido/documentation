@@ -35,7 +35,7 @@ If you run Athena OS in [Windows Subsystem for Linux](https://en.wikipedia.org/w
 
 ## Docker
 
-Caido is also available as a [Docker container](/guides/user_guide/docker) in the [Athena Cyber Hub](https://athenaos.org/en/resources/cyber-hub/).
+Caido is also available as a [Docker container](/guides/docker) in the [Athena Cyber Hub](https://athenaos.org/en/resources/cyber-hub/).
 This allows you to easily spawn Caido completely isolated from the rest on the system.
 
 <img width="700" alt="Caido running in Docker" src="/_images/athena_os_docker.png" center/>
