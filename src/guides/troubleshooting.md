@@ -314,7 +314,7 @@ To acquire your token:
 
 ### A Section of the UI is Missing
 
-Caido allows you to [resize parts of the UI](/concepts/essentials/layout.md). You might have accidentally minimized one of the sections.
+Caido allows you to [resize parts of the UI](/guides/ui.md). You might have accidentally minimized one of the sections.
 
 ### Match & Replace Rule Not Working
 
