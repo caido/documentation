@@ -22,7 +22,7 @@ By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the
    ssh -L 1337:127.0.0.1:8080 <username>@<your vps IP address>
    ```
 
-   ::: tip AWS SSM Alternative
+   ::: tip
    If you're using AWS and have [SSM](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html) configured, you can use port forwarding instead of SSH:
 
    ```bash
@@ -33,14 +33,16 @@ By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the
    ```
 
    Example for forwarding local port 9000:
+   
    ```bash
    aws ssm start-session \
      --target <instance-id> \
      --document-name AWS-StartPortForwardingSession \
      --parameters '{"portNumber":["8080"],"localPortNumber":["9000"]}'
    ```
+   
    :::
 
-3. Once the tunnel is set up, you can access Caido by navigating to `http://127.0.0.1:<local port>` in your web browser.
+4. Once the tunnel is set up, you can access Caido by navigating to `http://127.0.0.1:<local port>` in your web browser.
 
    In the example above, you would navigate to `http://127.0.0.1:1337`. You will also have to configure your browser to proxy requests to `127.0.0.1:1337`.
