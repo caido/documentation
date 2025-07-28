@@ -1,6 +1,6 @@
 # Resending Requests
 
-You can send requests to the `Replay` interface in various ways:
+You can send requests from other interfaces to the `Replay` interface in various ways:
 
 - By right-clicking on a request row in a traffic table or within a request pane, hovering your mouse cursor over `Send to Replay`, and selecting the Collection to include it in.
 

@@ -1,6 +1,6 @@
 # Managing Sessions
 
-Every time a request is sent in Replay it is tracked as a `Session`, providing you with a historical record of its state.
+Every time a request is sent in Replay it is tracked as a `Session`, providing you with a historical record of its various states.
 
 ## Clearing Sessions
 
