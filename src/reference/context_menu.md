@@ -1,6 +1,6 @@
 # Context Menu Options
 
-Right-clicking on certain elements in the Caido user interface will open a context menu with various actions/options to select from.
+Right-clicking on certain elements in the Caido user-interface will open a context menu with various actions/options to select from.
 
 <img alt="Reset Credentials" src="/_images/context_menu.png" center/>
 
@@ -22,7 +22,7 @@ Right-clicking on certain elements in the Caido user interface will open a conte
 - `View response in browser`: Copies a URL to your clipboard that allows you to view a response in your browser while actively proxying traffic.
 - `Highlight`: Color highlights a request's table row.
 - `Add in Scope`: Adds a request's host as in scope to either an existing or new [Scope Preset](/guides/scope.md).
-- `Add out of Scope`: Adds a request's host as out of scope to either an existing or new [Scope Preset](/guides/scope.md).
+- `Add out of Scope`: Adds a request's host as out of scope to either an existing or new Scope Preset.
 - `Convert (Preview)`: Displays a preview of the result of a Convert Workflow on a selection.
 - `Convert (Replace)`: Replaces a selection with the result of a Convert Workflow.
 - `Run workflow`: Executes an Active Workflow.

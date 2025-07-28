@@ -5,16 +5,25 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Guides",
     items: [
       {
-        text: "Installation",
+        text: "Introduction",
         link: "/guides/",
       },
       {
-        text: "Running on a VPS",
-        link: "/guides/user_guide/vps",
+        text: "Installation",
+        link: "/guides/installation",
       },
       {
-        text: "Running in Docker",
-        link: "/guides/user_guide/docker",
+        text: "Environments",
+        items: [
+          {
+            text: "Running on a VPS",
+            link: "/guides/vps",
+          },
+          {
+            text: "Running in Docker",
+            link: "/guides/docker",
+          },
+        ],
       },
       {
         text: "Troubleshooting",
@@ -33,10 +42,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/distributions/athena_os",
           },
         ],
-      },
-      {
-        text: "Guest Mode",
-        link: "/guides/guest_mode",
       },
     ],
   },
@@ -113,6 +118,57 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "General Usage",
+    items: [
+      {
+        text: "Navigating Caido",
+        link: "/guides/navigation",
+      },
+      {
+        text: "Customizing the User Interface",
+        link: "/guides/ui",
+      },
+      {
+        text: "Customizing Tables",
+        link: "/guides/tables",
+      },
+      {
+        text: "Managing Elements",
+        link: "/guides/elements",
+      },
+    ],
+  },
+  {
+    text: "Tools",
+    items: [
+      {
+        text: "Replay",
+        items: [
+          {
+            text: "Resending Requests",
+            link: "/guides/replay_resend",
+          },
+          {
+            text: "Managing Sessions",
+            link: "/guides/replay_sessions",
+          },
+          {
+            text: "Managing Collections",
+            link: "/guides/replay_collections",
+          },
+          {
+            text: "Using Workflows in Replay",
+            link: "/guides/replay_workflows",
+          },
+          {
+            text: "Using Environment Variables in Replay",
+            link: "/guides/replay_environment_variables",
+          },
+        ],
+      },
+    ],
+  },
+  {
     text: "Features",
     items: [
       {
@@ -163,10 +219,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "Replay",
             link: "/guides/replay",
-          },
-          {
-            text: "Using Environment Variables in Replay",
-            link: "/guides/replay_environment_variables",
           },
           {
             text: "Automate",
