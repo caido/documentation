@@ -60,5 +60,5 @@ Please note that these videos are not endorsed by Caido.
             <br>
             By: <a href="https://amrelsagaei.com">Amr Elsagaei</a>
         </div>
-    </div>   
+    </div>
 </div>
