@@ -141,14 +141,14 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: "Sitemap",
     items: [
-        {
-          text: "Viewing a Sitemap",
-          link: "/guides/sitemap_view",
-        },
-        {
-          text: "Deleting a Sitemap",
-          link: "/guides/sitemap_delete",
-        },
+      {
+        text: "Viewing a Sitemap",
+        link: "/guides/sitemap_view",
+      },
+      {
+        text: "Deleting a Sitemap",
+        link: "/guides/sitemap_delete",
+      },
     ],
   },
   {
@@ -200,16 +200,8 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Overview",
         items: [
           {
-            text: "Sitemap",
-            link: "/guides/sitemap",
-          },
-          {
             text: "Sorting",
             link: "/guides/sorting",
-          },
-          {
-            text: "Scope",
-            link: "/guides/scope",
           },
           {
             text: "Filters",
@@ -241,10 +233,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Testing",
         items: [
-          {
-            text: "Replay",
-            link: "/guides/replay",
-          },
           {
             text: "Automate",
             link: "/guides/automate",

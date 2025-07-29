@@ -4,7 +4,9 @@ To view the root domain or subdomains of a Sitemap, reveal the child nodes of a 
 
 <img alt="Expanding the root node of a Sitemap." src="/_images/sitemap_root.png" center>
 
----
+::: info
+The padlock icon represents connections via HTTPS.
+:::
 
 <img alt="Expanding the Sitemap of a Fully Qualified Domain Name (FQDN)." src="/_images/sitemap_expand.png" center>
 
