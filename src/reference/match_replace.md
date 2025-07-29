@@ -107,7 +107,7 @@ Once a rule has been defined, you can test its efficacy by supplying a mock requ
 
 Collections allow you to help you stay organized during testing by grouping rules together. By default, once a rule is saved by clicking the `+ Add` button, it will be added to the `Default Collection`.
 
-To create a new Collection, select the down carat button attatched to the `+ New Rule` button in the upper-left corner of the interface and select `New Collection`.
+To create a new Collection, select the down carat button attached to the `+ New Rule` button in the upper-left corner of the interface and select `New Collection`.
 
 <img alt="New match and replace Collection." src="/_images/match_replace_create_collection.png" center/>
 

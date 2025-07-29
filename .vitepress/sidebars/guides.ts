@@ -139,32 +139,57 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Tools",
+    text: "Sitemap",
+    items: [
+        {
+          text: "Viewing a Sitemap",
+          link: "/guides/sitemap_view",
+        },
+        {
+          text: "Deleting a Sitemap",
+          link: "/guides/sitemap_delete",
+        },
+    ],
+  },
+  {
+    text: "Scopes",
     items: [
       {
-        text: "Replay",
-        items: [
-          {
-            text: "Resending Requests",
-            link: "/guides/replay_resend",
-          },
-          {
-            text: "Managing Sessions",
-            link: "/guides/replay_sessions",
-          },
-          {
-            text: "Managing Collections",
-            link: "/guides/replay_collections",
-          },
-          {
-            text: "Using Workflows in Replay",
-            link: "/guides/replay_workflows",
-          },
-          {
-            text: "Using Environment Variables in Replay",
-            link: "/guides/replay_environment_variables",
-          },
-        ],
+        text: "Defining a Scope",
+        link: "/guides/scopes_define",
+      },
+      {
+        text: "Using a Scope",
+        link: "/guides/scopes_use",
+      },
+      {
+        text: "Editing Scopes",
+        link: "/guides/scopes_edit",
+      },
+    ],
+  },
+  {
+    text: "Replay",
+    items: [
+      {
+        text: "Resending Requests",
+        link: "/guides/replay_resend",
+      },
+      {
+        text: "Managing Sessions",
+        link: "/guides/replay_sessions",
+      },
+      {
+        text: "Managing Collections",
+        link: "/guides/replay_collections",
+      },
+      {
+        text: "Using Workflows in Replay",
+        link: "/guides/replay_workflows",
+      },
+      {
+        text: "Using Environment Variables in Replay",
+        link: "/guides/replay_environment_variables",
       },
     ],
   },
