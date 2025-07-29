@@ -32,7 +32,7 @@ Then, depending on if the environment is new or existing, **click** on either th
 
 ## Inserting an Environment Variable
 
-With a defined environment variable, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, **click**, **hold**, and **drag** over the value you want to replace and then **click** the `+` button to add it as a placeholder.
+With a defined environment variable, navigate to the Replay interface. Within a request editing pane, **click**, **hold**, and **drag** over the value you want to replace and then **click** the `+` button to add it as a placeholder.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder.png" center/>
 

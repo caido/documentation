@@ -11,7 +11,7 @@ For convenience, Caido provides a number of command shortcuts.
 ::: info
 
 - For macOS, replace `CTRL` with `⌘`.
-- Additional commands may be available depending on the [Plugins](/guides/plugins.md) you have installed.
+- Additional commands may be available depending on the Plugins you have installed.
 :::
 
 ## Automate
@@ -33,7 +33,7 @@ For convenience, Caido provides a number of command shortcuts.
 
 | Command               | Description                                                                       | Default Keybinding |
 |-----------------------|-----------------------------------------------------------------------------------|--------------------|
-| Send to Findings      | Manually create a [Finding](/guides/findings.md).                                 | -                  |
+| Send to Findings      | Manually create a Finding.                                                        | -                  |
 
 ## Intercept
 
@@ -55,23 +55,23 @@ For convenience, Caido provides a number of command shortcuts.
 
 | Command               | Description                                                                       | Default Keybinding |
 |-----------------------|-----------------------------------------------------------------------------------|--------------------|
-| Go to Assistant       | Navigate to the [Assistant](/guides/assistant.md) interface.                      | -                  |
-| Go to Automate        | Navigate to the [Automate](/guides/automate.md) interface.                        | CTRL + SHIFT + A   |
-| Go to Exports         | Navigate to the [Exports](/guides/exports.md) interface.                          | -                  |
-| Go to Files           | Navigate to the [Files](/guides/files.md) interface.                              | -                  |
-| Go to Filters         | Navigate to the [Filters](/guides/filters.md) interface.                          | -                  |
-| Go to HTTP History    | Navigate to the [HTTP History](/guides/http_history.md) interface.                | CTRL + \|          |
-| Go to Intercept       | Navigate to the [Intercept](/guides/intercept.md) interface.                      | -                  |
-| Go to Match & Replace | Navigate to the [Match & Replace](/guides/match_replace.md) interface.            | -                  |
-| Go to Plugins         | Navigate to the [Plugins](/guides/plugins.md) interface.                          | -                  |
-| Go to Replay          | Navigate to the [Replay](/guides/replay.md) interface.                            | CTRL + SHIFT + R   |
-| Go to Scope           | Navigate to the [Scope](/guides/scope.md) interface.                              | -                  |
-| Go to Search          | Navigate to the [Search](/guides/search.md) interface.                            | -                  |
+| Go to Assistant       | Navigate to the Assistant interface.                                              | -                  |
+| Go to Automate        | Navigate to the Automate interface.                                               | CTRL + SHIFT + A   |
+| Go to Exports         | Navigate to the Exports interface.                                                | -                  |
+| Go to Files           | Navigate to the Files interface.                                                  | -                  |
+| Go to Filters         | Navigate to the Filters interface.                                                | -                  |
+| Go to HTTP History    | Navigate to the HTTP History interface.                                           | CTRL + \|          |
+| Go to Intercept       | Navigate to the Intercept interface.                                              | -                  |
+| Go to Match & Replace | Navigate to the Match & Replace interface.                                        | -                  |
+| Go to Plugins         | Navigate to the Plugins interface.                                                | -                  |
+| Go to Replay          | Navigate to the Replay interface.                                                 | CTRL + SHIFT + R   |
+| Go to Scope           | Navigate to the Scope interface.                                                  | -                  |
+| Go to Search          | Navigate to the Search interface.                                                 | -                  |
 | Go to Settings        | Navigate to the application settings interface.                                   | -                  |
-| Go to Sitemap         | Navigate to the [Sitemap](/guides/sitemap.md) interface.                          | -                  |
-| Go to Workflows       | Navigate to the [Workflows](/guides/workflows.md) interface.                      | -                  |
-| Go to Workspace       | Navigate to the [Workspace](/guides/projects.md) interface.                       | -                  |
-| Go to WS History      | Navigate to the [WS History](/guides/ws_history.md) interface.                    | -                  |
+| Go to Sitemap         | Navigate to the Sitemap interface.                                                | -                  |
+| Go to Workflows       | Navigate to the Workflows interface.                                              | -                  |
+| Go to Workspace       | Navigate to the Workspace interface.                                              | -                  |
+| Go to WS History      | Navigate to the WS History interface.                                             | -                  |
 | Next Tab              | Navigate to the next tab from the currently selected tab.                         | CTRL +  ]          |
 | Previous Tab          | Navigate to the previous tab from the currently selected tab.                     | CTRL +  [          |
 

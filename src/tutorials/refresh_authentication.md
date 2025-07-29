@@ -186,7 +186,7 @@ To view the set environment variable, navigate to the `Environment` interface an
 
 ## Using the Environment Variables
 
-Now, with these Workflows providing up-to-date session identifiers, navigate to the [Replay](/guides/replay.md) interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
+Now, with these Workflows providing up-to-date session identifiers, navigate to the Replay interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder_tutorial.png" center/>
 

@@ -19,7 +19,6 @@ To familiarize yourself with the WS History interface, continue below:
 
 ::: tip TIPS
 
-- [Applying a Scope Preset](/guides/scope.md) is supported by WS History.
 - Clicking the column names (_located at the top and spanning horizontally_) within the Streams pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/sorting.md) documentation for more information.
 
 :::
