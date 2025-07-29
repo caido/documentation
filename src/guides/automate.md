@@ -6,7 +6,7 @@ Advanced setting options ensure your campaign can account for events such as fai
 
 You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
-<img alt="Automate interface." src="/_images/automate_interface.png" center/>
+<img alt="Automate interface." src="/_images/automate_interface_guides.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).

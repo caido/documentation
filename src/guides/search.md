@@ -6,7 +6,7 @@ Search differs from other tables in Caido in that way - as the other tabs do not
 
 This extra inclusion allows you to sort through the results of all your testing using other Caido features in a single location.
 
-<img alt="Search overview." src="/_images/search_interface.png" center/>
+<img alt="Search overview." src="/_images/search_interface_guides.png" center/>
 <br>
 
 <ProContainer>

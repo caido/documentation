@@ -10,7 +10,7 @@ You can create requests from scratch from a blank template, or start from any ex
 
 To familiarize yourself with the Replay interface, continue below:
 
-<img alt="Replay interface." src="/_images/replay_interface.png" center/>
+<img alt="Replay interface." src="/_images/replay_interface_guides.png" center/>
 
 1. Select the `Replay` tab from the left-hand menu within the Caido window.
 2. These numerically named tabs are the requests that have been sent to `Replay` in the order they were sent. To select a request, simply click on the desired tab. You can arbitrarily rename a tab by right-clicking it and selecting `Rename`.

@@ -50,7 +50,7 @@ Processing triggers for desktop-file-utils (0.26-1) ...
 caido
 ```
 
-4. [Continue to the setup instructions.](#shared-steps)
+4. [Continue to Setup.](/quickstart/setup.md)
 
 ## AppImage
 
@@ -79,7 +79,7 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 
 :::
 
-4. [Continue to the setup instructions.](#shared-steps)
+4. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
 If Caido is not launching and you are getting a FATAL error message, view the [Troubleshooting](/guides/troubleshooting.md) page for possible fixes.
@@ -138,30 +138,8 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 
 :::
 
-7. [Continue to the setup instructions.](#shared-steps)
+7. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
 If Caido is not launching and you are getting a FATAL error message, view the [Troubleshooting](/guides/troubleshooting.md) page for possible fixes.
 :::
-
-## Shared Steps
-
-After Caido has been installed and launched:
-
-1. Click the `Start` button and log in with your credentials or create an account.
-
-3. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
-
-::: info
-The Instance requires access to your account username, email address, and subscription. By default, `Enable the AI assistant feature` (_[for Individual & Team subscriptions](https://caido.io/pricing)_) and `Stay logged-in for an extended period` will be selected. You can deselect these checkboxes if you do not want these features enabled.
-:::
-
-4. Once authorized, return to Caido and navigate through the brief tutorial on creating a new [Project](/guides/projects.md) and how to download and import [Caido's CA Certificate](/guides/import_ca_certificate.md) to your browser.
-
-::: info
-[Learn about why you need to import Caido's CA Certificate.](/concepts/essentials/https_traffic.md)
-:::
-
-## What's next?
-
-[Learn how to change the default settings and explore other basic configuration options.](/quickstart/beginner_guide/setup/config.md)

@@ -49,6 +49,19 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Configuration",
     items: [
       {
+        text: "CA Certificate",
+        items: [
+          {
+            text: "Importing Caido's CA Certificate",
+            link: "/guides/import_ca_certificate",
+          },
+          {
+            text: "CA Certificate Management",
+            link: "/guides/tls",
+          },
+        ],
+      },
+      {
         text: "Network",
         items: [
           {
@@ -74,19 +87,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "DNS Rewrites",
             link: "/guides/dns_rewrites",
-          },
-        ],
-      },
-      {
-        text: "CA Certificate",
-        items: [
-          {
-            text: "Installing the CA Certificate",
-            link: "/guides/import_ca_certificate",
-          },
-          {
-            text: "CA Certificate Management",
-            link: "/guides/tls",
           },
         ],
       },

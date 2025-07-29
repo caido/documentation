@@ -8,7 +8,7 @@ This interface provides you with information such as when the connection was est
 
 To familiarize yourself with the WS History interface, continue below:
 
-<img alt="WS History interface." src="/_images/ws_history_interface.png" center/>
+<img alt="WS History interface." src="/_images/ws_history_interface_guides.png" center/>
 
 1. Select the `WS History` tab from the left-hand menu within the Caido window.
 2. All the proxied WebSocket streams will appear in this pane. Select them arbitrarily.
