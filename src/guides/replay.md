@@ -10,7 +10,7 @@ You can create requests from scratch from a blank template, or start from any ex
 
 To familiarize yourself with the Replay interface, continue below:
 
-<img alt="Replay interface." src="/_images/replay_interface.png" center/>
+<img alt="Replay interface." src="/_images/replay_interface_guides.png" center/>
 
 1. Select the `Replay` tab from the left-hand menu within the Caido window.
 2. These numerically named tabs are the requests that have been sent to `Replay` in the order they were sent. To select a request, simply click on the desired tab. You can arbitrarily rename a tab by right-clicking it and selecting `Rename`.
@@ -40,6 +40,6 @@ The historical record of the request Session can be viewed at the bottom of the 
 - Right-click within a request and select `On toggle verb` to convert the request from a POST request with a body to a GET request with query parameters.
 - To send a request to `Automate` from `Replay`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response.
 
 :::

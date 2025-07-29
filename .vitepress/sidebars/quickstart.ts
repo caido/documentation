@@ -9,64 +9,106 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         link: "/quickstart/",
       },
       {
-        text: "Desktop Application Installation",
+        text: "Installation",
         items: [
           {
             text: "Windows",
-            link: "/quickstart/beginner_guide/setup/windows",
+            link: "/quickstart/windows",
           },
           {
             text: "Linux",
-            link: "/quickstart/beginner_guide/setup/linux",
+            link: "/quickstart/linux",
           },
           {
             text: "macOS",
-            link: "/quickstart/beginner_guide/setup/mac",
+            link: "/quickstart/mac",
           },
         ],
       },
       {
         text: "Setup",
-        items: [
-          {
-            text: "Basic Configuration",
-            link: "/quickstart/beginner_guide/setup/config",
-          },
-        ],
+        link: "/quickstart/setup",
       },
       {
-        text: "First Steps with Caido",
+        text: "Features Overview",
         items: [
           {
-            text: "Creating Your First Project",
-            link: "/quickstart/beginner_guide/first_steps_with_caido/project",
+            text: "Sitemap",
+            link: "/quickstart/sitemap",
           },
           {
-            text: "Capturing and Inspecting Traffic",
-            link: "/quickstart/beginner_guide/first_steps_with_caido/traffic",
+            text: "Scopes",
+            link: "/quickstart/scopes",
           },
           {
-            text: "Forwarding and Modifying Requests Repeatedly",
-            link: "/quickstart/beginner_guide/first_steps_with_caido/replay",
+            text: "Filters",
+            link: "/quickstart/filters",
           },
           {
-            text: "Automating Brute-Forcing/Fuzzing",
-            link: "/quickstart/beginner_guide/first_steps_with_caido/automate",
+            text: "Intercept",
+            link: "/quickstart/intercept",
           },
           {
-            text: "Uploading Files for Use in Automate",
-            link: "/quickstart/beginner_guide/first_steps_with_caido/file_upload",
+            text: "HTTP History",
+            link: "/quickstart/http_history",
+          },
+          {
+            text: "WS History",
+            link: "/quickstart/ws_history",
+          },
+          {
+            text: "Match & Replace",
+            link: "/quickstart/match_replace",
+          },
+          {
+            text: "Replay",
+            link: "/quickstart/replay",
+          },
+          {
+            text: "Automate",
+            link: "/quickstart/automate",
+          },
+          {
+            text: "Workflows",
+            link: "/quickstart/workflows",
+          },
+          {
+            text: "Assistant",
+            link: "/quickstart/assistant",
+          },
+          {
+            text: "Environment",
+            link: "/quickstart/environment",
+          },
+          {
+            text: "Search",
+            link: "/quickstart/search",
+          },
+          {
+            text: "Findings",
+            link: "/quickstart/findings",
+          },
+          {
+            text: "Exports",
+            link: "/quickstart/exports",
+          },
+          {
+            text: "Files",
+            link: "/quickstart/files",
+          },
+          {
+            text: "Plugins",
+            link: "/quickstart/plugins",
+          },
+          {
+            text: "Workspace",
+            link: "/quickstart/workspace",
           },
         ],
       },
       {
         text: "Support",
-        items: [
-          {
-            text: "Common Errors and Solutions",
-            link: "/quickstart/beginner_guide/getting_help/support",
-          },
-        ],
+        link: "/quickstart/support",
       },
     ],
   },

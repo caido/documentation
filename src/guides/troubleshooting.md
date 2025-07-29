@@ -14,7 +14,7 @@ If this is the case, try using a VPN or changing your DNS provider and refreshin
 
 ### "The SUID sandbox helper binary was found, but is not configured correctly."
 
-If you're using Linux and have installed Caido using the [AppImage](/quickstart/beginner_guide/setup/linux.html#appimage) installation method, you may encounter an error, accompanied by a message similar to the following:
+If you're using Linux and have installed Caido using the [AppImage](/quickstart/linux#appimage) installation method, you may encounter an error, accompanied by a message similar to the following:
 
 ```
 [142547:0410/141348.635410:FATAL:setuid_sandbox_host.cc(163)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /tmp/.mount_caido-PMiQot/chrome-sandbox is owned by root and has mode 4755.

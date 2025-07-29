@@ -20,7 +20,9 @@ A `.dmg` file is a macOS disk image used to distribute applications. It's the mo
 
 <img alt="macOS Caido installed application." src="/_images/macos_download_applications.png" width=690px center/>
 
-3. [Continue to the setup instructions.](#shared-steps)
+3. Open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
+
+4. [Continue to Setup.](/quickstart/setup.md)
 
 ## Homebrew (Unofficial)
 
@@ -75,28 +77,6 @@ The output should resemble:
 
 :::
 
-2. [Continue to the setup instructions.](#shared-steps)
+2. Open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
 
-## Shared Steps
-
-After Caido has been installed using either method:
-
-1. Open the `Applications` folder, launch Caido, and select `Open` when met with the security window.
-
-2. With Caido launched, click the `Start` button and log in with your credentials or create an account.
-
-3. Once authenticated, name and allow access to your Caido [Instance](/concepts/essentials/instances.md).
-
-::: info
-The Instance requires access to your account username, email address, and subscription. By default, `Enable the AI assistant feature` (_[for Individual & Team subscriptions](https://caido.io/pricing)_) and `Stay logged-in for an extended period` will be selected. You can deselect these checkboxes if you do not want these features enabled.
-:::
-
-4. Once authorized, return to Caido and navigate through the brief tutorial on creating a new [Project](/guides/projects.md) and how to download and import [Caido's CA Certificate](/guides/import_ca_certificate.md) to your browser.
-
-::: info
-[Learn about why you need to import Caido's CA Certificate.](/concepts/essentials/https_traffic.md)
-:::
-
-## What's next?
-
-[Learn how to change the default settings and explore other basic configuration options.](/quickstart/beginner_guide/setup/config.md)
+3. [Continue to Setup.](/quickstart/setup.md)

@@ -1,10 +1,8 @@
-# Installing the CA Certificate
+# Importing Caido's CA Certificate
 
 To use Caido to intercept (and tamper with) your HTTPS traffic, it is necessary to import and trust the CA Certificate of Caido in your browser.
 
-## Importing the CA Certificate in Your Browser
-
-1. After starting Caido on your machine, navigate to `localhost:8080` (or the port you've configured for Caido to listen to) and log in.
+1. After starting Caido on your machine, navigate to `localhost:8080` (_or the port you've configured for Caido to listen to_) and log in.
 
 <img alt="User dropdown." src="/_images/import_cert_config.png" center/>
 

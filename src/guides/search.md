@@ -6,7 +6,7 @@ Search differs from other tables in Caido in that way - as the other tabs do not
 
 This extra inclusion allows you to sort through the results of all your testing using other Caido features in a single location.
 
-<img alt="Search overview." src="/_images/search_interface.png" center/>
+<img alt="Search overview." src="/_images/search_interface_guides.png" center/>
 <br>
 
 <ProContainer>
@@ -35,6 +35,6 @@ View the [Filters](/guides/filters.md) documentation for more information.
 - [Applying a Filter Preset](/guides/filters.md) is supported by Search.
 - Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response.
 
 :::

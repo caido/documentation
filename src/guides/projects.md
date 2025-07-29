@@ -6,7 +6,7 @@ Think of `Projects` as separate directories for your audits. Projects allow you 
 
 ## Creating a New Project
 
-<img alt="Projects interface." src="/_images/projects_interface.png">
+<img alt="Projects interface." src="/_images/projects_interface_guides.png">
 
 1. Select the `Workspace` tab from the left-hand menu within the Caido window.
 2. Ensure the `Projects` tab in the top-left area of the Caido window is selected.

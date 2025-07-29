@@ -6,7 +6,7 @@ Advanced setting options ensure your campaign can account for events such as fai
 
 You can create a request from scratch from a blank template, or start from any existing request inside the application.
 
-<img alt="Automate interface." src="/_images/automate_interface.png" center/>
+<img alt="Automate interface." src="/_images/automate_interface_guides.png" center/>
 
 1. Select the `Automate` tab from the left-hand menu within the Caido window.
 2. Select the [Attack Strategy](#attack-strategies).
@@ -92,6 +92,6 @@ Additional setting options allow you to fine tune how the Automate session will 
 
 - Clicking the column names (_located at the top and spanning horizontally_) within the results payload list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/search.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
-- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response. View the [Basic Configuration](/quickstart/beginner_guide/setup/config.md) documentation for more information.
+- If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response.
 
 :::
