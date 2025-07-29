@@ -34,75 +34,75 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         items: [
           {
             text: "Sitemap",
-            link: "/quickstart/features/sitemap",
+            link: "/quickstart/sitemap",
           },
           {
             text: "Scopes",
-            link: "/quickstart/features/scopes",
+            link: "/quickstart/scopes",
           },
           {
             text: "Filters",
-            link: "/quickstart/features/filters",
+            link: "/quickstart/filters",
           },
           {
             text: "Intercept",
-            link: "/quickstart/features/intercept",
+            link: "/quickstart/intercept",
           },
           {
             text: "HTTP History",
-            link: "/quickstart/features/http_history",
+            link: "/quickstart/http_history",
           },
           {
             text: "WS History",
-            link: "/quickstart/features/ws_history",
+            link: "/quickstart/ws_history",
           },
           {
             text: "Match & Replace",
-            link: "/quickstart/features/match_replace",
+            link: "/quickstart/match_replace",
           },
           {
             text: "Replay",
-            link: "/quickstart/features/replay",
+            link: "/quickstart/replay",
           },
           {
             text: "Automate",
-            link: "/quickstart/features/automate",
+            link: "/quickstart/automate",
           },
           {
             text: "Workflows",
-            link: "/quickstart/features/workflows",
+            link: "/quickstart/workflows",
           },
           {
             text: "Assistant",
-            link: "/quickstart/features/assistant",
+            link: "/quickstart/assistant",
           },
           {
             text: "Environment",
-            link: "/quickstart/features/environment",
+            link: "/quickstart/environment",
           },
           {
             text: "Search",
-            link: "/quickstart/features/search",
+            link: "/quickstart/search",
           },
           {
             text: "Findings",
-            link: "/quickstart/features/findings",
+            link: "/quickstart/findings",
           },
           {
             text: "Exports",
-            link: "/quickstart/features/exports",
+            link: "/quickstart/exports",
           },
           {
             text: "Files",
-            link: "/quickstart/features/files",
+            link: "/quickstart/files",
           },
           {
             text: "Plugins",
-            link: "/quickstart/features/plugins",
+            link: "/quickstart/plugins",
           },
           {
             text: "Workspace",
-            link: "/quickstart/features/workspace",
+            link: "/quickstart/workspace",
           },
         ],
       },
