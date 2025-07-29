@@ -50,4 +50,13 @@ Please note that these videos are not endorsed by Caido.
             By: <a href="https://twitter.com/ssgcythes">Alex Kollar</a>
         </div>
     </div>
+    <div class="video">
+        <iframe width="585" height="315" src="https://www.youtube.com/embed/HjZxwcBJl7Y" title="YouTube video player" frameborder="0"></iframe>
+        <br>
+        <div class="caption" style="color:#ffffff">
+            Tutorial: Caido Masterclass – From Setup to Exploits
+            <br>
+            By: <a href="https://amrelsagaei.com">Amr Elsagaei</a>
+        </div>
+    </div>
 </div>
