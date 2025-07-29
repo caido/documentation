@@ -67,7 +67,7 @@ For convenience, Caido provides a number of command shortcuts.
 | Go to Replay          | Navigate to the [Replay](/guides/replay.md) interface.                            | CTRL + SHIFT + R   |
 | Go to Scope           | Navigate to the [Scope](/guides/scope.md) interface.                              | -                  |
 | Go to Search          | Navigate to the [Search](/guides/search.md) interface.                            | -                  |
-| Go to Settings        | Navigate to the [Settings](/quickstart/beginner_guide/setup/config.md) interface. | -                  |
+| Go to Settings        | Navigate to the application settings interface.                                   | -                  |
 | Go to Sitemap         | Navigate to the [Sitemap](/guides/sitemap.md) interface.                          | -                  |
 | Go to Workflows       | Navigate to the [Workflows](/guides/workflows.md) interface.                      | -                  |
 | Go to Workspace       | Navigate to the [Workspace](/guides/projects.md) interface.                       | -                  |
