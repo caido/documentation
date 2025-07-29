@@ -31,7 +31,6 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Features Overview",
-        link: "/quickstart/features/",
         items: [
           {
             text: "Sitemap",
