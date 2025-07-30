@@ -18,7 +18,7 @@ To restore a Session to the user-interface, select it from its associated [Colle
 
 ## Searching for a Session
 
-You can search for a Session by typing it's tab name in the `⌕ Search` input field.
+You can search for a Session by typing its tab name in the `⌕ Search` input field.
 
 <img alt="Searching for a Session." src="/_images/replay_search.png" center>
 
