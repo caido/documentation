@@ -4,13 +4,13 @@ Caido offers a high degree of customization, so you can customize the user-inter
 
 ## Resizing Panes
 
-To customize the layout of an interface, hover your cursor between two panes until it is replaced with with `⭠||➝` or its vertical equivalent. Then, **left-click**, **hold**, and **drag** the divider to resize a pane according to your preferences.
+To customize the layout of an interface, hover your mouse cursor between two panes until it is replaced with with `⭠||➝` or its vertical equivalent. Then, **left-click**, **hold**, and **drag** the gutter to resize a pane according to your preferences.
 
 <img alt="Resizing panes." src="/_images/general_usage_resize.png" center>
 
 ## Adjusting the Font Size
 
-Caido allows you to adjust the font size of text within the user-interface and editors separately by providing two horizontal sliders. To access the font size settings, click on the `👤` button in the top-right corner of the Caido user-interface, select `Settings`, and open the `Appearance` tab.
+Caido allows you to adjust the font size of text within the user-interface and editors separately by providing two horizontal sliders. To access the font size settings, **click** on the `👤` button in the top-right corner of the Caido user-interface, select `Settings`, and open the `Appearance` tab.
 
 <img alt="Font size settings." src="/_images/general_usage_font_size.png" center>
 

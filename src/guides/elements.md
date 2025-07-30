@@ -4,7 +4,7 @@ As you use Caido, the user-interface will populate with elements that reflect yo
 
 ## Context Menu Options
 
-Right-clicking on certain elements in the Caido user-interface will open a context menu with various actions/options to select from.
+**Right-clicking** on certain elements in the Caido user-interface will open a context menu with various actions and options to select from.
 
 <img alt="A context menu." src="/_images/context_menu.png" center/>
 
