@@ -1,6 +1,6 @@
-# Customizing Tables
+# Customizing Traffic Tables
 
-Throughout Caido, you will encounter various tables.
+As you use Caido, proxied traffic will be recorded and presented in traffic tables.
 
 ## Sorting Rows
 
@@ -12,7 +12,7 @@ In certain tables, you can include and exclude columns by **clicking** on the `â
 
 <img alt="Column inclusion/exclusion options menu." src="/_images/general_usage_table.png" center>
 
-Additional filtering options are accessible by **clicking** the `Advanced` button, located above tables it is available to.
+Additional filtering options are accessible by **clicking** the `Advanced` button, located above traffic tables it is available to.
 
 <img alt="Additional filtering options menu." src="/_images/general_usage_filtering.png" center>
 

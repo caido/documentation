@@ -1,4 +1,4 @@
-# Editing Scopes
+# Managing Scopes
 
 Once a Scope Preset is created, there are various actions that can be taken against it.
 

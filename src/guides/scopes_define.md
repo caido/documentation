@@ -14,9 +14,7 @@ To create a new Scope Preset, **click** on the `+ New Preset` button and press `
 
 <img alt="Creating a new Scope Preset manually." src="/_images/scopes_new_preset.png" center>
 
-::: tip
-By default, new Scope Presets are named "New preset". We recommend changing the name to a name that is more descriptive, such as the base domain of your target. Once the Scope Preset is created, you can edit its name by typing within the `Name *` input field. To save the new name, press `ENTER`.
-:::
+Once the Scope Preset is created, you can edit its display name by typing within the `Name *` input field. To save the new name, press `ENTER`.
 
 ### Defining Targets
 
