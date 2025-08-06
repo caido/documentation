@@ -32,6 +32,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         text: "Match & Replace",
         link: "/reference/match_replace",
       },
+      {
+        text: "Table Columns",
+        link: "/reference/table_columns",
+      },
     ],
   },
   {

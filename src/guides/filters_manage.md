@@ -9,3 +9,7 @@ To edit an existing Filter Preset, select it from the Filters interface, edit it
 ## Downloading a Filter Preset
 
 To export a Filter Preset as a `.json` file, click on the `⤓ Download` button.
+
+## Deleting a Filter Preset
+
+To permanently delete a Filter Preset, **click** on the `Delete` button.

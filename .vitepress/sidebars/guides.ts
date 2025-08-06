@@ -133,6 +133,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/tables",
       },
       {
+        text: "Interfacing with HTTP Traffic Panes",
+        link: "/guides/traffic_panes",
+      },
+      {
         text: "Managing Elements",
         link: "/guides/elements",
       },
@@ -186,6 +190,23 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Intercept",
+    items: [
+      {
+        text: "Intercepting Traffic",
+        link: "/guides/intercept_traffic",
+      },
+      {
+        text: "Managing Intercepted Traffic",
+        link: "/guides/intercept_manage",
+      },
+      {
+        text: "Disabling Interception",
+        link: "/guides/intercept_disable",
+      },
+    ],
+  },
+  {
     text: "Replay",
     items: [
       {
@@ -214,25 +235,8 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Features",
     items: [
       {
-        text: "Overview",
-        items: [
-          {
-            text: "Sorting",
-            link: "/guides/sorting",
-          },
-          {
-            text: "Filters",
-            link: "/guides/filters",
-          },
-        ],
-      },
-      {
         text: "Proxy",
         items: [
-          {
-            text: "Intercept",
-            link: "/guides/intercept",
-          },
           {
             text: "HTTP History",
             link: "/guides/http_history",
