@@ -25,14 +25,10 @@ Additional default Filter Presets in the `Advanced options` panel are included t
 There is an implicit AND in-between each of those sections.
 :::
 
-View the [Filters](/guides/filters.md) documentation for more information.
-
 <img alt="Advanced search options" src="/_images/search_adv_menu.png" center/>
 
 ::: tip TIPS
 
-- [Applying a Filter Preset](/guides/filters.md) is supported by Search.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/sorting.md) documentation for more information.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.
 - If you have installed the rendering engine - clicking the image icon located at the top-right corner of the response pane will present a visual representation of the response.
 
