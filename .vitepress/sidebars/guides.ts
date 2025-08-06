@@ -125,6 +125,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/navigation",
       },
       {
+        text: "Changing Request & Response View Modes",
+        link: "/guides/request_response_modes",
+      },
+      {
         text: "Customizing the User Interface",
         link: "/guides/ui",
       },
@@ -133,12 +137,12 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/tables",
       },
       {
-        text: "Interfacing with HTTP Traffic Panes",
-        link: "/guides/traffic_panes",
-      },
-      {
         text: "Managing Elements",
         link: "/guides/elements",
+      },
+      {
+        text: "Previewing Responses",
+        link: "/guides/preview_responses",
       },
     ],
   },
@@ -183,10 +187,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Applying a Filter",
         link: "/guides/filters_apply",
       },
-      {
-        text: "Managing Filters",
-        link: "/guides/filters_manage",
-      },
     ],
   },
   {
@@ -195,14 +195,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Intercepting Traffic",
         link: "/guides/intercept_traffic",
-      },
-      {
-        text: "Managing Intercepted Traffic",
-        link: "/guides/intercept_manage",
-      },
-      {
-        text: "Disabling Interception",
-        link: "/guides/intercept_disable",
       },
     ],
   },

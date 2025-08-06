@@ -1,4 +1,4 @@
-# Customizing Traffic Tables
+# Customizing Tables
 
 As you use Caido, proxied traffic will be recorded and presented in traffic tables.
 
