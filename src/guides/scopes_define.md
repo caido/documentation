@@ -8,15 +8,21 @@ Scopes are defined by creating sets of target lists referred to as `Scope Preset
 
 The targets in either list will be compared against the value of the `Host` header or destination IP address of proxied requests.
 
+::: info
+Scope Presets are specific to the Project they are created in.
+:::
+
+::: tip
+Paths are not supported in Scope Presets but can be included or excluded from traffic tables with Filter Presets.
+:::
+
 ## Creating a New Scope Preset Manually
 
 To create a new Scope Preset, **click** on the `+ New Preset` button and press `ENTER`.
 
 <img alt="Creating a new Scope Preset manually." src="/_images/scopes_new_preset.png" center>
 
-::: tip
-By default, new Scope Presets are named "New preset". We recommend changing the name to a name that is more descriptive, such as the base domain of your target. Once the Scope Preset is created, you can edit its name by typing within the `Name *` input field. To save the new name, press `ENTER`.
-:::
+Once the Scope Preset is created, you can edit its display name by typing within the `Name *` input field. To save the new name, press `ENTER`.
 
 ### Defining Targets
 
@@ -46,7 +52,7 @@ Once you have defined the target lists, **click** on the `🖫 Save` button to u
 
 ## Creating a New Scope from the Context Menu
 
-To quickly create a new Scope Preset and add a request's target domain to be either in-scope or out-of-scope, **right-click** on a request pane, hover your mouse cursor over `Add in Scope` or `Add out of Scope`, and select `+ Create New Scope`.
+To quickly create a new Scope Preset and add a request's target domain to be either in-scope or out-of-scope, **right-click** within a request pane to open the context menu, hover your mouse cursor over `Add in Scope` or `Add out of Scope`, and select `+ Create New Scope`.
 
 <img alt="Creating a new Scope Preset from a request context menu." src="/_images/scopes_context_menu_create.png" center>
 

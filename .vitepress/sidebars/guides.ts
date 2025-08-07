@@ -125,6 +125,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/navigation",
       },
       {
+        text: "Changing Request & Response View Modes",
+        link: "/guides/request_response_modes",
+      },
+      {
         text: "Customizing the User Interface",
         link: "/guides/ui",
       },
@@ -135,6 +139,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Managing Elements",
         link: "/guides/elements",
+      },
+      {
+        text: "Previewing Responses",
+        link: "/guides/preview_responses",
       },
     ],
   },
@@ -159,12 +167,34 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/scopes_define",
       },
       {
-        text: "Using a Scope",
-        link: "/guides/scopes_use",
+        text: "Applying a Scope",
+        link: "/guides/scopes_apply",
       },
       {
-        text: "Editing Scopes",
-        link: "/guides/scopes_edit",
+        text: "Managing Scopes",
+        link: "/guides/scopes_manage",
+      },
+    ],
+  },
+  {
+    text: "Filters",
+    items: [
+      {
+        text: "Defining a Filter",
+        link: "/guides/filters_define",
+      },
+      {
+        text: "Applying a Filter",
+        link: "/guides/filters_apply",
+      },
+    ],
+  },
+  {
+    text: "Intercept",
+    items: [
+      {
+        text: "Intercepting Traffic",
+        link: "/guides/intercept_traffic",
       },
     ],
   },
@@ -197,25 +227,8 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Features",
     items: [
       {
-        text: "Overview",
-        items: [
-          {
-            text: "Sorting",
-            link: "/guides/sorting",
-          },
-          {
-            text: "Filters",
-            link: "/guides/filters",
-          },
-        ],
-      },
-      {
         text: "Proxy",
         items: [
-          {
-            text: "Intercept",
-            link: "/guides/intercept",
-          },
           {
             text: "HTTP History",
             link: "/guides/http_history",

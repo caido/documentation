@@ -1,6 +1,6 @@
 # Customizing the User Interface
 
-Caido offers a high degree of customization, so you can customize the user-interface to suit your preferences and needs.
+Caido offers a high-degree of customization, so you can adjust the user-interface to suit your preferences and needs.
 
 ## Resizing Panes
 

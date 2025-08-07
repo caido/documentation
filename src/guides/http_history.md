@@ -21,7 +21,7 @@ To familiarize yourself with the HTTP History interface, continue below:
 3. The contents of the selected **request** will be displayed in this pane.
 4. The contents of the **response** paired with the selected **request** will be displayed in this pane.
 5. Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/guides/exports.md) documentation for more information.
-6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed. View the [HTTQL](/reference/httpql.md) and [Filters](/guides/filters.md) documentation for more information.
+6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed.
 7. All active Filter Presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
 
 <div class="video small">
@@ -44,8 +44,6 @@ This includes any modifications made by any active [Match & Replace](/guides/mat
 
 ::: tip TIPS
 
-- [Applying a Filter Preset](/guides/filters.md) is supported by HTTP History.
-- Clicking the column names (_located at the top and spanning horizontally_) within the top request list pane will sort the requests by the selected column category. View the [Sorting by Properties](/guides/sorting.md) documentation for more information.
 - To send a request to `Replay` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+R`.
 - To send a request to `Automate` from `HTTP History`, either right-click inside the request pane or focus the request pane and use `CTRL+M`.
 - Clicking the `{}` button will toggle the Pretty/Raw display option.

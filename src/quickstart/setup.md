@@ -2,7 +2,7 @@
 
 Once Caido has been launched:
 
-1. Click on the `Start` button and log in with your account credentials or create an account.
+1. **Click** on the `Start` button and log in with your account credentials or create an account.
 2. Once you are authenticated, name your [Instance](/concepts/essentials/instances.md) and grant access to your account username, email address, and subscription.
 
 ::: info ADDITIONAL OPTIONS
@@ -10,7 +10,7 @@ Once Caido has been launched:
 
 `Stay logged-in for an extended period`: Extends the validity of an authenticated session.
 
-Both options are enabled by default. However, you can disable either by clicking on their checkboxes.
+Both options are enabled by default. However, you can disable either by **clicking** on their checkboxes.
 :::
 
 3. Return to Caido to:

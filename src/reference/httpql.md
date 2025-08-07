@@ -6,6 +6,10 @@ HTTPQL is the query language we use in Caido to let you filtering requests and r
 The development of Fields is ongoing. [Let us know](https://github.com/caido/caido/issues/new?template=feature.md&title=New%20HttpQL%20field:) which ones you need!
 :::
 
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/0SxdQVjzRss?si=7bb3aoxU8anKV4Sc" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Primitives
 
 The constructing primitives of HTTPQL Filter Clause, in order of position, are the:
@@ -138,12 +142,10 @@ Using a standalone string (_such as `"my value"`_) will search across both reque
 
 ### preset
 
-When using the `preset` Namespace - the value can be reference by either the `Name` or the `Alias` of the Preset:
+When using the `preset` Namespace - the value can be reference by either the name or the alias of a Filter Preset:
 
 - **Name**: `preset:"Preset name"`.
 - **Alias**: `preset:preset-alias`.
-
-View the [Filters](/guides/filters.md) documentation for more information.
 
 ### source
 
