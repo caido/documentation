@@ -36,7 +36,7 @@ To create a new Collection, **click** on the `⏷` button attached to the `+ New
 
 ## Moving Sessions Between Collections
 
-To move a Session from one Collection to another, **click**, **drag**, and **hold** a Session from a list over a Collection table row and **release**.
+To move a Session from one Collection to another, **click**, **hold**, and **drag** a Session from a list over a Collection table row and **release**.
 
 <img alt="Moving a Session to a new Collection." src="/_images/replay_move_session.png" center>
 

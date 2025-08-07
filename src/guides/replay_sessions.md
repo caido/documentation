@@ -1,6 +1,6 @@
 # Managing Sessions
 
-Every time a request is sent in Replay it is tracked as a `Session`, providing you with a historical record of its various states.
+Once a Session is created, there are various actions that can be taken against it.
 
 ## Clearing Sessions
 
@@ -24,7 +24,7 @@ You can search for a Session by typing its tab name in the `⌕ Search` input fi
 
 ## Viewing the Requests in a Session
 
-The number of times a request has been sent is displayed at the bottom of its pane.
+Every time a request is sent, a historical record of its various states is tracked by its Session. The number recorded states is displayed at the bottom of its pane.
 
 <img alt="A display of the number of requests in a Session." src="/_images/replay_session.png" center>
 
