@@ -22,8 +22,6 @@ To remove multiple tabs **right-click** on a tab a choose a `Close...` option.
 
 ::: info
 To restore a tab to the user-interface, select it from the Session list.
-
-[Learn how to delete a Session or paired result permanently.](/guides/automate_collections.md#deleting-a-session)
 :::
 
 ## Searching for a Session
@@ -35,3 +33,11 @@ You can search for a Session or a paired result by typing its tab name in the `â
 ## Creating a New Session
 
 **Clicking** on the `+ New Session` button will generate a new request tab, allowing you to manually create a request.
+
+## Deleting a Session
+
+**Right-click** on a row from the Session list and select `Delete` to permanently delete a Session or a paired result.
+
+::: warning
+Once a Session list item is deleted, it is unrecoverable.
+:::

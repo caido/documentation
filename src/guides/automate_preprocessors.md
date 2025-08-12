@@ -8,6 +8,10 @@ Additional modifications can be made to payload values before they are included 
 
 <img alt="The Preprocessors interface." src="/_images/automate_preprocessors.png" center/>
 
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/PrXVDR-YCXE?si=XbnW0YRhlydOXlji" title="YouTube video player." frameborder="0"></iframe>
+</div>
+
 ## Applying a Workflow
 
 With `Workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a Workflow to apply to a payload.
