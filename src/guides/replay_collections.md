@@ -8,11 +8,11 @@ By default, every request sent to Replay is stored in the Default Collection.
 
 ## Viewing Collection Sessions
 
-To view all the Sessions in a Collection, expand the Collection listing by **clicking** on the `>` button attached to its table row.
+To view all the Sessions in a Collection, expand the Collection listing by **clicking** on the `>` button attached to its list row.
 
 <img alt="A list of Sessions in a Collection." src="/_images/replay_collection_sessions.png" center>
 
-To collapse a Collection listing, **click** on the `˅` button attached to its table row.
+To collapse a Collection listing, **click** on the `˅` button attached to its list row.
 
 ## Creating a New Collection
 
@@ -22,11 +22,11 @@ To create a new Collection, **click** on the `⏷` button attached to the `+ New
 
 ---
 
-<img alt="A new Collection table row." src="/_images/replay_new_collection_row.png" center>
+<img alt="A new Collection list row." src="/_images/replay_new_collection_row.png" center>
 
 ## Adding Sessions to a Collection
 
-**Clicking** on the `+` button within a Collection table row will create a new Session within the respective Collection.
+**Clicking** on the `+` button within a Collection list row will create a new Session within the respective Collection.
 
 ## Duplicating a Session
 
@@ -36,7 +36,7 @@ To create a new Collection, **click** on the `⏷` button attached to the `+ New
 
 ## Moving Sessions Between Collections
 
-To move a Session from one Collection to another, **click**, **hold**, and **drag** a Session from a list over a Collection table row and **release**.
+To move a Session from one Collection to another, **click**, **hold**, and **drag** a Session from a list over a Collection list row and **release**.
 
 <img alt="Moving a Session to a new Collection." src="/_images/replay_move_session.png" center>
 

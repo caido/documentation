@@ -20,8 +20,6 @@ You can create a request from scratch from a blank template, or start from any e
 
 To inspect the results of your `Automate` campaign - proceed with the following steps:
 
-<img alt="Automate results." src="/_images/automate_results_tab.png" center/>
-
 1. Click the paired tab.
 2. Each request will be displayed in this pane.
 3. This pane will display the selected request and it's associated response.
@@ -57,8 +55,6 @@ For each payload, you can choose a `Type` from the list:
 ## Preprocessors
 
 Preprocessors enable you to apply additional modifications to the payloads.
-
-<img alt="Automate Types." src="/_images/automate_preprocessors.png" center/>
 
 - **Workflow**: Select a default or custom made Workflow to apply to the requests that will be sent in your campaign. View the [Workflow](/guides/workflows.md) documentation for more information.
 - **URL Encode**: This option includes an input bar in which you can supply characters to URL encode before the requests of your campaign are sent. There is also a checkbox to toggle between encoding/not encoding non-ASCII characters.

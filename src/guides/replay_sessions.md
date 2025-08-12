@@ -1,26 +1,6 @@
-# Managing Sessions
+# Managing Replay Sessions
 
-Once a Session is created, there are various actions that can be taken against it.
-
-## Clearing Sessions
-
-To remove a Session from the user-interface, **click** on the `X` button within its tab.
-
-To remove multiple Sessions **right-click** on a tab a choose a `Close...` option.
-
-<img alt="Tab context menu Close options." src="/_images/replay_session.png" center>
-
-::: info
-To restore a Session to the user-interface, select it from its associated [Collection](/guides/replay_collections.md).
-
-[Learn how to delete a Session permanently.](/guides/replay_collections.md#deleting-a-session)
-:::
-
-## Searching for a Session
-
-You can search for a Session by typing its tab name in the `⌕ Search` input field.
-
-<img alt="Searching for a Session." src="/_images/replay_search.png" center>
+Once a Replay Session is created, there are various actions that can be taken against it.
 
 ## Viewing the Requests in a Session
 
@@ -33,6 +13,24 @@ Every time a request is sent, a historical record of its various states is track
 By **clicking** on the `<` or `>` buttons, you can navigate through a Session to view how modifications to a request have altered its associated response.
 
 <img alt="The buttons used to navigate through a Session." src="/_images/replay_session_buttons.png" center>
+
+## Clearing Sessions
+
+To remove a Session tab from the user-interface, **click** on the `X` button within it.
+
+To remove multiple tabs **right-click** on a tab a choose a `Close...` option.
+
+::: info
+To restore a tab to the user-interface, select it from its associated [Collection](/guides/replay_collections.md).
+
+[Learn how to delete a Session permanently.](/guides/replay_collections.md#deleting-a-session)
+:::
+
+## Searching for a Session
+
+You can search for a Session by typing its tab name in the `⌕ Search` input field.
+
+<img alt="Searching for a Session." src="/_images/replay_search.png" center>
 
 ## Creating a New Session
 
