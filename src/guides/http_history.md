@@ -20,7 +20,7 @@ To familiarize yourself with the HTTP History interface, continue below:
 2. This pane lists all the **requests** that have been proxied through Caido. Select one from the list by clicking on it to view its contents.
 3. The contents of the selected **request** will be displayed in this pane.
 4. The contents of the **response** paired with the selected **request** will be displayed in this pane.
-5. Clicking `Export` will present you with options to export HTTP History data. View the [Exports](/guides/exports.md) documentation for more information.
+5. Clicking `Export` will present you with options to export HTTP History data.
 6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed.
 7. All active Filter Presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
 

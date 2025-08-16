@@ -3,7 +3,7 @@
 Filters are defined by creating sets of HTTPQL expressions referred to as `Filter Presets`.
 
 ::: info
-Filter Presets are specific to the Project they are created in.
+Filter Presets are specific to the project they are created in.
 :::
 
 ## Creating a New Filter Preset

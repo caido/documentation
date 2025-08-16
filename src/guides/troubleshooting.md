@@ -171,15 +171,15 @@ For more information on why/when this is required, view the [Authentication](/co
 
 ### Can't Access Instance
 
-You may encounter this error when trying to access an [Instance](/concepts/essentials/instances.md) that you do not own. This can occur if you've initially setup a Caido Instance using a different account.
+You may encounter this error when trying to access an [instance](/concepts/essentials/instances.md) that you do not own. This can occur if you've initially setup a Caido instance using a different account.
 
-<img alt="No access to Instance." src="/_images/instance_error.png" width=600px center/>
+<img alt="No access to instance." src="/_images/instance_error.png" width=600px center/>
 
 To resolve this issue, you can either:
 
-1. Login to the initial account that was used to setup your Caido Instance.
+1. Login to the initial account that was used to setup your Caido instance.
 
-2. Reset the Instance credentials:
+2. Reset the instance credentials:
 
 - If you're using the CLI, start Caido using:
 
@@ -187,10 +187,10 @@ To resolve this issue, you can either:
 caido --reset-credentials
 ```
 
-- If you're using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
+- If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
 
   ::: warning
-  These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
+  These settings will allow you to login with any account you want. Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
   :::
 
   <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
@@ -201,11 +201,11 @@ caido --reset-credentials
 
 ### "Login URL generation failed: invalid authentication token."
 
-You may encounter this error when trying to access an Instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).
+You may encounter this error when trying to access an instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).
 
 <img alt="Login error." src="/_images/login_url_error.png" width=600px center/>
 
-To resolve this, reset the Instance credentials:
+To resolve this, reset the instance credentials:
 
 - If you're using the CLI, start Caido using:
 
@@ -213,10 +213,10 @@ To resolve this, reset the Instance credentials:
 caido --reset-credentials
 ```
 
-- If you're using the desktop application, check the `Reset Credentials` checkbox in your Instance's advanced settings.
+- If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
 
 ::: warning
-These settings will allow you to login with any account you want. Once you've claimed your Instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your Instance credentials will be reset on every launch.
+These settings will allow you to login with any account you want. Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
 :::
 
 <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
@@ -286,7 +286,7 @@ To fix it, you can either:
 
 Caido caches the state of your account. Any changes to your account can take some time to update.
 
-Refresh your account state by logging out/logging into your Caido Instance.
+Refresh your account state by logging out/logging into your Caido instance.
 
 ### The GraphQL Playground Doesn't Work
 

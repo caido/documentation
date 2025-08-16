@@ -1,4 +1,4 @@
-# Resending Request Sessions
+# Resending Requests
 
 To resend a request, **click** on the `Send` button. You can resend requests as many times as you want, allowing you to test how modifications alter the response.
 

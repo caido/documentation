@@ -4,7 +4,7 @@
 <b>Preprocessors</b> are only available to users with Individual or Team tier subscriptions.
 </ProContainer>
 
-Additional modifications can be made to payload values before they are included in Automate Session requests from the `Preprocessors` tab.
+Additional modifications can be made to payload values before they are included in Automate session requests from the `Preprocessors` tab.
 
 <img alt="The Preprocessors interface." src="/_images/automate_preprocessors.png" center/>
 

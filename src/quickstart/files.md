@@ -1,5 +1,5 @@
 # Files
 
-Within the `Files` interface, you can upload files to make them available to your Caido Instance.
+Within the `Files` interface, you can upload files to make them available to your Caido instance.
 
 <img alt="The Files interface." src="/_images/files_interface.png" center>

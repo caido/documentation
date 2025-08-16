@@ -275,7 +275,7 @@ The `Name` property identifies an item.
 - Toggling to `˅` means the sorting of the Name property will display **Z-A**.
 
 ::: info
-The Name property is available for sorting in Projects.
+The Name property is available for sorting in projects.
 :::
 
 ## Size
@@ -285,7 +285,7 @@ The `Size` property states the storage size of a file in bytes.
 - Toggling to `^` means the sorting of the Size property will display the **smallest sized** file at the top of the list.
 - Toggling to `˅` means the sorting of the Size property will display the **largest sized** file at the top of the list.
 ::: info
-The Size property is available for sorting in Projects.
+The Size property is available for sorting in projects.
 :::
 
 ## Updated At
@@ -295,5 +295,5 @@ The `Updated At` property represents the last time the file was overwritten.
 - Toggling to `^` means the sorting of the Updated At property will display the **least recent** overwritten file at the top of the list.
 - Toggling to `˅` means the sorting of the Updated At property will display the **most recent** overwritten file at the top of the list.
 ::: info
-The Updated At property is available for sorting in Projects.
+The Updated At property is available for sorting in projects.
 :::

@@ -14,6 +14,6 @@ Once a placeholder has been marked, you will be presented with options in the `P
 
 <img alt="Manually creating a wordlist with Simple List." src="/_images/automate_simple_list.png" center/>
 
-Once a selection has been made, **click** on the `Run` button to launch the Automate Session. A new tab will be generated that contains a traffic table of the payload requests. To view the results of the Session, **click** on this paired tab.
+Once a selection has been made, **click** on the `Run` button to launch the Automate session. A new tab will be generated that contains a traffic table of the payload requests. To view the results of the session, **click** on this paired tab.
 
-<img alt="The traffic table of Automate Session requests." src="/_images/automate_wordlist_results.png" center/>
+<img alt="The traffic table of Automate session requests." src="/_images/automate_wordlist_results.png" center/>

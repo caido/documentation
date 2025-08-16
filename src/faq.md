@@ -22,9 +22,9 @@ At this time, Caido can be installed on an unlimited number of devices. You are 
 
 When you register for Caido, we collect your name and email address, as well as information about your user agent.
 
-When you use Caido, we collect interaction data between your Instances and our cloud services. This includes the IP address of the Instance and API call actions/timestamps.
+When you use Caido, we collect interaction data between your instances and our cloud services. This includes the IP address of the instance and API call actions/timestamps.
 
-We do not collect any data stored on your Instances nor interactions within the Caido application.
+We do not collect any data stored on your instances nor interactions within the Caido application.
 
 ## Where can I ask for support and/or feature requests?
 
@@ -36,7 +36,7 @@ Caido Individual and Team level subscriptions come with prioritized customer sup
 
 ## What is the difference between Caido CLI and Caido Desktop?
 
-The Caido CLI is self-contained binary that launches the Caido proxy (also called Instance). You can use it on remote servers or locally and access the Instance using your browser. The Caido Desktop acts a connection manager to your Instances and can also launch the Caido proxy in the background. It uses webviews to access the Instance instead of the browser.
+The Caido CLI is self-contained binary that launches the Caido proxy (also called instance). You can use it on remote servers or locally and access the instance using your browser. The Caido Desktop acts a connection manager to your instances and can also launch the Caido proxy in the background. It uses webviews to access the instance instead of the browser.
 
 ## I've encountered an error, what do I do?
 
