@@ -210,14 +210,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/replay_resend",
       },
       {
-        text: "Managing Replay Sessions",
-        link: "/guides/replay_sessions",
-      },
-      {
-        text: "Managing Collections",
-        link: "/guides/replay_collections",
-      },
-      {
         text: "Using Workflows in Replay",
         link: "/guides/replay_workflows",
       },
@@ -253,10 +245,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Preprocessing Payloads",
         link: "/guides/automate_preprocessors",
-      },
-      {
-        text: "Managing Automate Sessions",
-        link: "/guides/automate_sessions",
       },
       {
         text: "Avoiding Rate-Limiting Protections",
