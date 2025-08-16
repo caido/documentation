@@ -202,16 +202,12 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Replay",
     items: [
       {
-        text: "Resending Requests",
+        text: "Sending Requests to Replay",
+        link: "/guides/replay_requests",
+      },
+      {
+        text: "Resending Request Sessions",
         link: "/guides/replay_resend",
-      },
-      {
-        text: "Managing Sessions",
-        link: "/guides/replay_sessions",
-      },
-      {
-        text: "Managing Collections",
-        link: "/guides/replay_collections",
       },
       {
         text: "Using Workflows in Replay",
@@ -220,6 +216,39 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Using Environment Variables in Replay",
         link: "/guides/replay_environment_variables",
+      },
+    ],
+  },
+  {
+    text: "Automate",
+    items: [
+      {
+        text: "Sending Requests to Automate",
+        link: "/guides/automate_requests",
+      },
+      {
+        text: "Sending Payloads from a Wordlist",
+        link: "/guides/automate_wordlists",
+      },
+      {
+        text: "Sending Numerical Payloads",
+        link: "/guides/automate_numerical",
+      },
+      {
+        text: "Repeating Requests with No Payload",
+        link: "/guides/automate_null",
+      },
+      {
+        text: "Sending Multiple Payloads",
+        link: "/guides/automate_multiple",
+      },
+      {
+        text: "Preprocessing Payloads",
+        link: "/guides/automate_preprocessors",
+      },
+      {
+        text: "Avoiding Rate-Limiting Protections",
+        link: "/guides/automate_rate",
       },
     ],
   },
@@ -246,10 +275,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Testing",
         items: [
-          {
-            text: "Automate",
-            link: "/guides/automate",
-          },
           {
             text: "Workflows",
             link: "/guides/workflows",

@@ -43,8 +43,6 @@ An overview of the process is as follows:
 1. Commit changes to the branch using the VS Code interface
 1. Create a pull request to main via VS Code interface or normal GitHub interface
 
-Here is a link to our [style guide (WIP)](style-guide.md).
-
 > Accounts get 60 hours per month of `codespace` run-time before you start getting charged; so don't forget to stop/delete your codespace after you've made your modification!
 
 ## 💚 Community
