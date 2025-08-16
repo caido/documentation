@@ -15,7 +15,7 @@ The `Findings` interface allows you to view the discoveries made by Workflows or
 ## Additional Information
 
 ::: info
-Findings are Project specific.
+Findings are project specific.
 :::
 
 ::: tip TIPS

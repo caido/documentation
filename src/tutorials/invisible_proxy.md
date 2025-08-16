@@ -188,7 +188,7 @@ Ensure you grant permission to the CLI, **NOT** the desktop application. Usually
 
 ### Enable Invisible Proxying
 
-By default, invisible proxying is disabled. To enable invisible proxying, click on the `⋮` icon to the right of the Instance you're using and select `Edit`. Then, expand the `Advanced` settings, check the `Enable invisible proxying` checkbox, and click the `Save` button.
+By default, invisible proxying is disabled. To enable invisible proxying, click on the `⋮` icon to the right of the instance you're using and select `Edit`. Then, expand the `Advanced` settings, check the `Enable invisible proxying` checkbox, and click the `Save` button.
 
 <img alt="Connection manager instance more options." src="/_images/enable_invisible_proxying.png" center />
 

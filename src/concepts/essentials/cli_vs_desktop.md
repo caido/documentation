@@ -24,7 +24,7 @@ When you click `start`, the application will spawn the `Caido CLI` in the backgr
 
 The `Desktop` application has some advantages over the `CLI`:
 
-- You can record multiple Caido [Instances](/concepts/essentials/instances) in one place.
+- You can record multiple Caido [instances](/concepts/essentials/instances) in one place.
 - You can launch pre-configured browsers on your desktop.
 
 <img width="800" alt="Desktop" src="/_images/cli_vs_desktop_2.png" center no-shadow/>

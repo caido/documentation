@@ -8,7 +8,7 @@ A similar method can be used for other cloud providers since a lot of them follo
 
 We assume at this point that you have access to an `AWS Access Key` (like `AKIAIOSFODNN7EXAMPLE`) and an `AWS Secret Access key` (like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`).
 
-Enter them in the global environment for your Project as `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`.
+Enter them in the global environment for your project as `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`.
 We will also need a two other variables: `AWS_REGION` (like `us-east-1`) and `AWS_SERVICE` (like `s3`).
 
 <img alt="Setup the variables in the global environment" src="/_images/aws_environment.png" center no-shadow width="900"/>

@@ -13,11 +13,11 @@ The `log` directory will contain the log files used to view output from the Codi
 :::
 
 ::: info
-Currently, it is **not possible** to create Caido Projects outside this folder. However, you can change the location of the whole folder if needed.
+Currently, it is **not possible** to create Caido projects outside this folder. However, you can change the location of the whole folder if needed.
 :::
 
 ::: warning
-Make sure to copy your existing data to the new location before restarting your Instance.
+Make sure to copy your existing data to the new location before restarting your instance.
 Otherwise it will restart as if you were on a new device.
 :::
 
@@ -35,7 +35,7 @@ Open the Connection Manager and proceed with the following steps:
 
 <img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center/>
 
-1. Click on the `⋮` icon to the right of the Instance of which you want to change the location of the data folder and select `Edit`.
+1. Click on the `⋮` icon to the right of the instance of which you want to change the location of the data folder and select `Edit`.
 
 <img alt="Advanced options." src="/_images/advanced_options.png" center/>
 

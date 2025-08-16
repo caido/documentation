@@ -8,4 +8,4 @@ You can send requests from other interfaces to the Automate interface in various
 
 - Or by selecting a request row or focusing a request pane and using the default keyboard shortcut `CTRL+M`.
 
-Requests in the Automate interface are referred to as `Sessions`. Each Session is listed as a tab that stores the associated request.
+Requests in the Automate interface are referred to as "sessions". Each session is listed as a tab that stores the associated request.

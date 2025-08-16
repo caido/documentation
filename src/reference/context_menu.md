@@ -30,12 +30,12 @@ Right-clicking on certain elements in the Caido user-interface will open a conte
 - `Set request`: Generates a corresponding request to a URL.
 - `Toggle GET/POST`: Toggles a request between GET and POST methods.
 - `Plugins`: Plugin specific options. These will vary depending on which plugins are installed.
-- `Select`: Loads the associated Project.
+- `Select`: Loads the associated project.
 - `Rename`: Allows you to rename an entity.
 - `Duplicate`: Creates a copy of an entity.
 - `Copy path`: Copies an entity's file system location to your clipboard.
-- `Create backup`: Creates a backup of a Project.
-- `Restore`: Recreates a Project from a backup.
+- `Create backup`: Creates a backup of a project.
+- `Restore`: Recreates a project from a backup.
 - `Download`: Downloads a backup.
 - `Delete...`: Deletes an entity.
 - `Delete selected`: Deletes all selected entities.

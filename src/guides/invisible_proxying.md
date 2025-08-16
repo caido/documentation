@@ -21,7 +21,7 @@ caido --invisible
 
 By default, invisible proxying is enabled for local instances. You can change that by going in the options.
 
-1. Click on the `⋮` icon to the right of the Instance you want to apply a custom listening address to and select `Edit`.
+1. Click on the `⋮` icon to the right of the instance you want to apply a custom listening address to and select `Edit`.
 
 <img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center no-shadow width=800px/>
 

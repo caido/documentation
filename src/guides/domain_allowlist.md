@@ -4,11 +4,11 @@ For security, only defined domains can access the Caido API and interface.
 
 <img alt="Desktop Allowed Domains setting." src="/_images/unallowed_domain.png" center/>
 
-For instance, when utilizing a domain that resolves to `127.0.0.1` for [proxying local traffic](/guides/proxy_local.md), the domain must be added to the `Allowed Domains` list.
+For example, when utilizing a domain that resolves to `127.0.0.1` for [proxying local traffic](/guides/proxy_local.md), the domain must be added to the `Allowed Domains` list.
 
 ## Desktop Application
 
-In the Caido desktop application, this list can be found within your Instance settings.
+In the Caido desktop application, this list can be found within your instance settings.
 
 <img alt="Desktop Allowed Domains setting." src="/_images/instance_settings_allowed_domains.png" center/>
 

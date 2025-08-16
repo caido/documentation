@@ -18,7 +18,7 @@ For M1 users, it is now possible to enable [Rosetta](https://docs.docker.com/des
 
 ## Project Persistence
 
-By default, Projects created in the Docker container are not saved between `docker run` commands.
+By default, projects created in the Docker container are not saved between `docker run` commands.
 
 We recommend mounting a volume to keep your data on your file system and to avoid losing data between Caido updates.
 

@@ -206,7 +206,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/replay_requests",
       },
       {
-        text: "Resending Request Sessions",
+        text: "Resending Requests",
         link: "/guides/replay_resend",
       },
       {
@@ -249,6 +249,42 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Avoiding Rate-Limiting Protections",
         link: "/guides/automate_rate",
+      },
+    ],
+  },
+  {
+    text: "Environment",
+    items: [
+      {
+        text: "Creating Environment Variables",
+        link: "/guides/environment_variables",
+      },
+    ],
+  },
+  {
+    text: "Exports",
+    items: [
+      {
+        text: "Exporting Request Data",
+        link: "/guides/exports_requests",
+      },
+    ],
+  },
+  {
+    text: "Files",
+    items: [
+      {
+        text: "Uploading Files",
+        link: "/guides/files_upload",
+      },
+    ],
+  },
+  {
+    text: "Projects",
+    items: [
+      {
+        text: "Saving Projects",
+        link: "/guides/projects_backups",
       },
     ],
   },
@@ -296,19 +332,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "Findings",
             link: "/guides/findings",
           },
-          {
-            text: "Exports",
-            link: "/guides/exports",
-          },
         ],
       },
       {
         text: "Workspace",
         items: [
-          {
-            text: "Files",
-            link: "/guides/files",
-          },
           {
             text: "Plugins",
             link: "/guides/plugins",
@@ -316,10 +344,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "Projects",
             link: "/guides/projects",
-          },
-          {
-            text: "Backups",
-            link: "/guides/backups",
           },
         ],
       },

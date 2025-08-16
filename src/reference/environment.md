@@ -6,7 +6,7 @@ The `Environment` interface allows you to define and manage sets of variables th
 
 ## Global
 
-The `Global` environment is always active within a [Project](/guides/projects.md), and all variables in this environment are accessible, regardless of the active environment selected.
+The `Global` environment is always active within a project, and all variables in this environment are accessible, regardless of the active environment selected.
 
 <img alt="Global environment." src="/_images/global_environment.png" center/>
 

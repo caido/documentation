@@ -9,7 +9,7 @@ Scopes are defined by creating sets of target lists referred to as `Scope Preset
 The targets in either list will be compared against the value of the `Host` header or destination IP address of proxied requests.
 
 ::: info
-Scope Presets are specific to the Project they are created in.
+Scope Presets are specific to the project they are created in.
 :::
 
 ::: tip

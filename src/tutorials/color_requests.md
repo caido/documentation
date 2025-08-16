@@ -1,6 +1,6 @@
 # Coloring Requests Workflow
 
-In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will highlight GET requests within the HTTP History tab if they are within the Project's Scope.
+In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will highlight GET requests within the HTTP History tab if they are within the project's Scope.
 
 ::: info
 This example Workflow is available for download and import. [Download the Workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Color_In_Scope_GET_Requests_Example.json)
@@ -43,7 +43,7 @@ _The flow of the example Workflow provided above is described below:_
 
 2. `In Scope` - this Node "_Checks if a request is in scope"_:
 
-- It takes the output of `$on_intercept_request.request` as the value of it's `Request` input property and checks if the Host of the request is included in any Scopes you have set in the current Caido Project.
+- It takes the output of `$on_intercept_request.request` as the value of it's `Request` input property and checks if the Host of the request is included in any scopes you have set in the current Caido project.
 - This Node's output is `$in_scope.result`.
 
 <img alt="Flow of In Scope Node in example Passive Workflow." src="/_images/in_scope_flow_example_wf.png"/>
@@ -91,6 +91,6 @@ In summary:
 
 ## Results
 
-Once we're done, this workflow will highlight GET requests within the HTTP History tab if they are within the Project's Scope.
+Once we're done, this workflow will highlight GET requests within the HTTP History tab if they are within the project's scope.
 
 <img alt="Passive set color result." src="/_images/passive_setcolor_result.png"/>
