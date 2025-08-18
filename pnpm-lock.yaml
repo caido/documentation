@@ -7,6 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fortawesome/fontawesome-svg-core':
+        specifier: 6.7.2
+        version: 6.7.2
+      '@fortawesome/free-solid-svg-icons':
+        specifier: 6.7.2
+        version: 6.7.2
+      '@fortawesome/vue-fontawesome':
+        specifier: 3.1.1
+        version: 3.1.1(@fortawesome/fontawesome-svg-core@6.7.2)(vue@3.4.27(typescript@5.6.2))
     devDependencies:
       eslint:
         specifier: 9.10.0
@@ -343,6 +353,24 @@ packages:
   '@eslint/plugin-kit@0.1.0':
     resolution: {integrity: sha512-autAXT203ixhqei9xt+qkYOvY8l6LAFIdT2UXc/RPNeUVfqRF1BV94GTJyVPFKT8nFM6MyVJhjLj9E8JWvf5zQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fortawesome/fontawesome-common-types@6.7.2':
+    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.7.2':
+    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.7.2':
+    resolution: {integrity: sha512-GsBrnOzU8uj0LECDfD5zomZJIjrPhIlWU82AHwa2s40FKH+kcxQaBvBo3Z4TxyZHIyX8XTDxsyA33/Vx9eFuQA==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/vue-fontawesome@3.1.1':
+    resolution: {integrity: sha512-U5azn4mcUVpjHe4JO0Wbe7Ih8e3VbN83EH7OTBtA5/QGw9qcPGffqcmwsLyZYgEkpVkYbq/6dX1Iyl5KUGMp6Q==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6 || ~7
+      vue: '>= 3.0.0 < 4'
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -2313,6 +2341,21 @@ snapshots:
   '@eslint/plugin-kit@0.1.0':
     dependencies:
       levn: 0.4.1
+
+  '@fortawesome/fontawesome-common-types@6.7.2': {}
+
+  '@fortawesome/fontawesome-svg-core@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
+  '@fortawesome/free-solid-svg-icons@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
+  '@fortawesome/vue-fontawesome@3.1.1(@fortawesome/fontawesome-svg-core@6.7.2)(vue@3.4.27(typescript@5.6.2))':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.7.2
+      vue: 3.4.27(typescript@5.6.2)
 
   '@humanwhocodes/module-importer@1.0.1': {}
 

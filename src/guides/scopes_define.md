@@ -46,7 +46,7 @@ _Example:_ To account for all subdomains of example.com, add `*.example.com` to 
 
 :::
 
-Once you have defined the target lists, **click** on the `🖫 Save` button to update and save the Scope Preset.
+Once you have defined the target lists, **click** on the <Icon icon="fas fa-save" /> `Save` button to update and save the Scope Preset.
 
 <img alt="Saving a Scope Preset." src="/_images/scopes_save.png" center>
 
