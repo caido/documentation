@@ -318,4 +318,4 @@ Caido allows you to [resize parts of the UI](/guides/ui.md). You might have acci
 
 ### Match & Replace Rule Not Working
 
-If your [Match & Replace](/guides/match_replace.md) rule is not working, ensure you're looking at the un-prettified version of the request/response body by pressing the `{} Prettify` button within the request/response panes to ensure your spacing is correct. While the prettified format provides easier readability, it is not an accurate representation of JSON body data.
+If your Match & Replace rule is not working, ensure you're looking at the un-prettified version of the request/response body by pressing the `{} Prettify` button within the request/response panes to ensure your spacing is correct. While the prettified format provides easier readability, it is not an accurate representation of JSON body data.

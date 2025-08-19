@@ -13,7 +13,4 @@ Once Caido has been launched:
 Both options are enabled by default. However, you can disable either by **clicking** on their checkboxes.
 :::
 
-3. Return to Caido to:
-
-- [Create a Project](/guides/projects.md)
-- [Import Caido's CA Certificate](/guides/import_ca_certificate.md)
+3. Return to Caido and follow the in-app tutorials on how to create a project and import Caido's CA certificate.
