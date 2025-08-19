@@ -323,10 +323,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "WS History",
             link: "/guides/ws_history",
           },
-          {
-            text: "Match & Replace",
-            link: "/guides/match_replace",
-          },
         ],
       },
       {
@@ -361,10 +357,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "Plugins",
             link: "/guides/plugins",
-          },
-          {
-            text: "Projects",
-            link: "/guides/projects",
           },
         ],
       },
