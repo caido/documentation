@@ -6,8 +6,6 @@ With `Workflow` as the `Type`, **click** on the `Select a workflow` drop-down me
 
 <img alt="Applying a Workflow to a Replay request." src="/_images/replay_workflows.png" center/>
 
-Applied Workflows will be listed in the window table. If multiple Workflows are applied, they will execute in top to bottom order.
-
-To change the order, **click**, **hold**, and **drag** a row either above or below other rows in the table and **release**.
+Applied Workflows are listed and will be applied in top to bottom order. To avoid collisions between Workflows, you can rearrange their order by **left-clicking**, **dragging**, **holding**, and **releasing** a Workflow either above or below other Workflows in the list.
 
 Close the settings window and send the request. To verify the application was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.

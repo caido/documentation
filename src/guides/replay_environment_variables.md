@@ -10,9 +10,7 @@ With `Environment Variable` as the `Type`, **click** on the `Select an environme
 
 <img alt="Adding an environment variable to a Replay request." src="/_images/replay_global_variable.png" center/>
 
-Applied environment variables will be listed in the window table. If multiple environment variables are listed, they will overwrite in top to bottom order.
-
-To change the order, **left-click**, **drag**, and **hold** a row either above or below other rows in the table and **release**.
+Applied environment variables are listed in the `Active preprocessors` list and will be applied in top to bottom order. To avoid collisions between variables, you can rearrange their order by **left-clicking**, **dragging**, **holding**, and **releasing** a variable either above or below other variables in the list.
 
 Close the settings window and send the request. To verify the addition was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.
 

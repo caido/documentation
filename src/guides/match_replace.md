@@ -3,7 +3,7 @@
 In this guide, we'll cover how to create match and replace rules for three different use cases.
 
 ::: info
-For additional documentation on Caido's Match & Replace feature - click [here](/reference/match_replace.md).
+For additional documentation on Caido's Match & Replace feature - click [view the Reference](/reference/match_replace.md).
 :::
 
 ::: warning

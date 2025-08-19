@@ -199,6 +199,27 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Match & Replace",
+    items: [
+      {
+        text: "Adding a Header",
+        link: "/guides/match_replace_header",
+      },
+      {
+        text: "Using Capturing Groups",
+        link: "/guides/match_replace_capturing",
+      },
+      {
+        text: "Encoding Body Data",
+        link: "/guides/match_replace_encoding",
+      },
+      {
+        text: "Testing Rules",
+        link: "/guides/match_replace_testing",
+      },
+    ],
+  },
+  {
     text: "Replay",
     items: [
       {
