@@ -5,7 +5,8 @@ To view the root domain or subdomains of a Sitemap, reveal the child nodes of a 
 <img alt="Expanding the root node of a Sitemap." src="/_images/sitemap_root.png" center>
 
 ::: info
-The padlock icon represents connections via HTTPS.
+The lock icon **<Icon icon="fas fa-lock" />**
+ represents connections via HTTPS.
 :::
 
 <img alt="Expanding the Sitemap of a Fully Qualified Domain Name (FQDN)." src="/_images/sitemap_expand.png" center>
@@ -19,5 +20,5 @@ To view the content of a specific Fully Qualified Domain Name (FQDN), continue r
 <img alt="Viewing a Sitemap node's requests." src="/_images/sitemap_requests.png" center>
 
 ::: tip
-You can search for a specific Sitemap by typing its Fully Qualified Domain Name (FQDN) in the `⌕ Search` input field.
+You can search for a specific Sitemap by typing its Fully Qualified Domain Name (FQDN) in the **<Icon icon="fas fa-magnifying-glass" /> Search domain...** input field.
 :::

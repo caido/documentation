@@ -4,7 +4,7 @@ To insert an environment variable in a Replay request, **click**, **hold**, and 
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder.png" center/>
 
-Then, **click** on the associated `🖉` button of the placeholder to open the `Placeholder Settings` window.
+Then, **click** on the associated edit button **<Icon icon="fas fa-pen-to-square" />** of the placeholder to open the `Placeholder Settings` window.
 
 With `Environment Variable` as the `Type`, **click** on the `Select an environment variable` drop-down menu, select a environment variable from the list, and **click** `Add` to save the configuration.
 

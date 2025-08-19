@@ -8,7 +8,7 @@ Backups save all of a project's data as a self-contained file.
 
 ## Creating Backups
 
-To create a backup file, **right-click** on a project's row or **click** on the `...` button and select `⊟ Create backup` from the context menu.
+To create a backup file, **right-click** on a project's row or **click** on the `...` button and select `Create backup` from the context menu.
 
 Messages will appear notifying you that the operation has been started. A subsequent message will appear once the backup has been created.
 
@@ -18,7 +18,7 @@ Messages will appear notifying you that the operation has been started. A subseq
 
 <img alt="Backup creation success toast message." src="/_images/backups_toast_message_success.png" center>
 
-Backup files will be available for download in the Backups tab interface.
+**Click** on the download button **<Icon icon="fas fa-download" />** in the Backups tab interface to export a backup file.
 
 <img alt="List of backed up projects." src="/_images/backups_list.png" center>
 
