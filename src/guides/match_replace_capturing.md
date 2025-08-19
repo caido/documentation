@@ -20,7 +20,7 @@ Use the following regular expression:
 - `$2` will reference `value`.
 
 ::: tip
-To test your regular expressions, visit [regex101.com](regex101.com).
+To test your regular expressions, visit [regex101.com](https://regex101.com).
 :::
 
 ::: warning NOTE
@@ -32,5 +32,5 @@ Caido does not currently support look-around and backreference regular expressio
 ::: tip
 To use `$` and an integer literally, escape the `$` with another `$`:
 
-`{"$$1":"$2"}` becomes `{"$1":"value"}`
+`{"$$1":"$2"}` becomes `{"$1":"value"}`.
 :::
