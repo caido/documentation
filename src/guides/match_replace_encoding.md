@@ -1,6 +1,6 @@
 # Encoding Request Body Data
 
-To encode the body data of either HTTP requests or responses, click on the `Section` drop-down menu and select either `Request Body` or `Response Body`.
+To encode the body data of either HTTP requests or responses, **click** on the `Section` drop-down menu and select either `Request Body` or `Response Body`.
 
 <img alt="The Section drop-down menu options." src="/_images/match_replace_bodies.png" center/>
 
