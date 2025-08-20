@@ -8,4 +8,4 @@ You can send requests from other interfaces to the Replay interface in various w
 
 - Or by selecting a request row or focusing a request pane and using the default keyboard shortcut `CTRL+R`.
 
-Requests in the Replay interface are referred to as `Sessions`. Each Session is listed as a tab that stores the associated request.
+Requests in the Replay interface are referred to as "sessions". Each session is listed as a tab that stores the associated request.

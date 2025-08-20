@@ -2,7 +2,7 @@
 
 The `Plugins` interface allows you to install and manage plugin packages in Caido.
 
-These packages expand Caido's functionality, offering a means to futher customize your Instance.
+These packages expand Caido's functionality, offering a means to futher customize your instance.
 
 ## Plugins Layout
 
@@ -12,7 +12,7 @@ These packages expand Caido's functionality, offering a means to futher customiz
 2. To import a new Plugin package - click the `Install Package` button. Your device's file manager will pop-up. Select the plugin to upload.
 3. Toggle the `>` icon to `∨` to expand/collapse the details of the associated Plugin.
 4. Toggling the checkbox from filled to empty will enable/disable the associated Plugin.
-5. To remove a plugin from your Caido Instance - click `Uninstall`.
+5. To remove a plugin from your Caido instance - click `Uninstall`.
 
 <div class="video small">
   <iframe src="https://www.youtube.com/embed/lO-WB_cXPfk?si=kou_6r8GDF1yl5Jm" title="YouTube video player." frameborder="0"></iframe>

@@ -3,7 +3,7 @@
 Filters are defined by creating sets of HTTPQL expressions referred to as `Filter Presets`.
 
 ::: info
-Filter Presets are specific to the Project they are created in.
+Filter Presets are specific to the project they are created in.
 :::
 
 ## Creating a New Filter Preset
@@ -34,6 +34,6 @@ To define filters, **click** in the `Expression` input field to type your HTTPQL
 Filter Presets do not support the `preset` HTTPQL namespace.
 :::
 
-Once you have defined the filter, **click** on the `🖫 Save` button to update and save the Filter Preset.
+Once you have defined the filter, **click** on the <code><Icon icon="fas fa-floppy-disk" /> Save</code> button to update and save the Filter Preset.
 
 <img alt="Saving a Filter Preset." src="/_images/filters_save.png" center>

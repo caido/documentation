@@ -10,6 +10,6 @@ This option will present a `Number of payloads to generate` input field that all
 
 <img alt="Specifying the number of times to resend the request." src="/_images/automate_null.png" center/>
 
-Once the number has been specified, **click** on the `Run` button to launch the Automate Session. A new tab will be generated that contains a traffic table of the requests. To view the results of the Session, **click** on this paired tab.
+Once the number has been specified, **click** on the `Run` button to launch the Automate session. A new tab will be generated that contains a traffic table of the requests. To view the results of the session, **click** on this paired tab.
 
-<img alt="The traffic table of Automate Session requests." src="/_images/automate_null_results.png" center/>
+<img alt="The traffic table of Automate session requests." src="/_images/automate_null_results.png" center/>

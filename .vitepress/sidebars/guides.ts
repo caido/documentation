@@ -199,6 +199,27 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Match & Replace",
+    items: [
+      {
+        text: "Adding a Header",
+        link: "/guides/match_replace_header",
+      },
+      {
+        text: "Using Capturing Groups",
+        link: "/guides/match_replace_capturing",
+      },
+      {
+        text: "Encoding Body Data",
+        link: "/guides/match_replace_encoding",
+      },
+      {
+        text: "Testing Rules",
+        link: "/guides/match_replace_testing",
+      },
+    ],
+  },
+  {
     text: "Replay",
     items: [
       {
@@ -206,7 +227,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/replay_requests",
       },
       {
-        text: "Resending Request Sessions",
+        text: "Resending Requests",
         link: "/guides/replay_resend",
       },
       {
@@ -253,6 +274,42 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Environment",
+    items: [
+      {
+        text: "Creating Environment Variables",
+        link: "/guides/environment_variables",
+      },
+    ],
+  },
+  {
+    text: "Exports",
+    items: [
+      {
+        text: "Exporting Request Data",
+        link: "/guides/exports_requests",
+      },
+    ],
+  },
+  {
+    text: "Files",
+    items: [
+      {
+        text: "Uploading Files",
+        link: "/guides/files_upload",
+      },
+    ],
+  },
+  {
+    text: "Projects",
+    items: [
+      {
+        text: "Saving Projects",
+        link: "/guides/projects_backups",
+      },
+    ],
+  },
+  {
     text: "Features",
     items: [
       {
@@ -265,10 +322,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
           {
             text: "WS History",
             link: "/guides/ws_history",
-          },
-          {
-            text: "Match & Replace",
-            link: "/guides/match_replace",
           },
         ],
       },
@@ -296,30 +349,14 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             text: "Findings",
             link: "/guides/findings",
           },
-          {
-            text: "Exports",
-            link: "/guides/exports",
-          },
         ],
       },
       {
         text: "Workspace",
         items: [
           {
-            text: "Files",
-            link: "/guides/files",
-          },
-          {
             text: "Plugins",
             link: "/guides/plugins",
-          },
-          {
-            text: "Projects",
-            link: "/guides/projects",
-          },
-          {
-            text: "Backups",
-            link: "/guides/backups",
           },
         ],
       },

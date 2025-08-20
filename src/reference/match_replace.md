@@ -132,7 +132,3 @@ All enabled rules will appear in the `Active Rules` pane.
 ::: tip
 The order of the rules in the Active Rules section determines the order in which they will be applied to the requests and responses. You can change the order of the rules by dragging and dropping. This allows you to adjust the order to suit your needs and can be useful when working with multiple rules that may have conflicting or overlapping conditions.
 :::
-
-## What's next?
-
-[Learn how to create match and replace rules for three different use cases.](/guides/match_replace.md)

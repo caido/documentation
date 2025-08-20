@@ -18,7 +18,7 @@ Guest Mode is disabled by default in the Caido CLI, and must be explicitly enabl
 
 When using Caido in Guest Mode, there are certain limitations compared to an authenticated session:
 
-- No [Projects](/guides/projects.md) are saved.
+- No projects are saved.
 - All user settings are shared between all guests such as: Custom Developer Settings, [HTTPQL](/reference/httpql.md) queries, and [user-interface customization](/guides/ui.md).
 
 ::: info
@@ -30,5 +30,5 @@ Shared Guest Mode settings are not shared with your account. This includes plugi
 - You are limited to a single plugin.
 
 ::: tip
-[Register an account](https://dashboard.caido.io/signup) and use an authenticated session to gain the ability to save two Projects and utilize up to three plugins.
+[Register an account](https://dashboard.caido.io/signup) and use an authenticated session to gain the ability to save two projects and utilize up to three plugins.
 :::

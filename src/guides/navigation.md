@@ -6,4 +6,4 @@ On the left-hand side of the Caido user-interface is a navigation menu that cont
 
 ## Toggling Navigation Menu Visibility
 
-To hide the navigation menu, **click** on the `<< Collapse Sidebar` button. To view the navigation menu, **click** on the `>>` button.
+To hide the navigation menu, **click** on the <code><Icon icon="fas fa-angles-left" /> Collapse Sidebar</code> button. To view the navigation menu, **click** on the <code><Icon icon="fas fa-angles-right" /></code> button.

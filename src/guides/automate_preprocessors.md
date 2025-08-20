@@ -4,9 +4,11 @@
 <b>Preprocessors</b> are only available to users with Individual or Team tier subscriptions.
 </ProContainer>
 
-Additional modifications can be made to payload values before they are included in Automate Session requests from the `Preprocessors` tab.
+Additional modifications can be made to payload values before they are included in Automate session requests from the `Preprocessors` tab.
 
 <img alt="The Preprocessors interface." src="/_images/automate_preprocessors.png" center/>
+
+---
 
 <div class="video small">
   <iframe src="https://www.youtube.com/embed/PrXVDR-YCXE?si=XbnW0YRhlydOXlji" title="YouTube video player." frameborder="0"></iframe>
@@ -48,6 +50,6 @@ By selecting either `Prefix` or `Suffix` from the Preprocessor type drop-down me
 
 ## Ordering
 
-Any added Preprocessors are displayed in the `Active preprocessors` list and are applied to payloads in ascending order. To reorder their application, **click** on a Preprocessor from the list and use the `^` and `˅` buttons.
+Any added Preprocessors are displayed in the `Active preprocessors` list and are applied to payloads in ascending order. To reorder their application, **click** on a Preprocessor from the list and use the <code><Icon icon="fas fa-chevron-up" /></code> and <code><Icon icon="fas fa-chevron-down" /></code> buttons.
 
 <img alt="The list of applied Preprocessors." src="/_images/automate_preprocessors_order.png" center/>

@@ -9,7 +9,7 @@ Scopes are defined by creating sets of target lists referred to as `Scope Preset
 The targets in either list will be compared against the value of the `Host` header or destination IP address of proxied requests.
 
 ::: info
-Scope Presets are specific to the Project they are created in.
+Scope Presets are specific to the project they are created in.
 :::
 
 ::: tip
@@ -46,7 +46,7 @@ _Example:_ To account for all subdomains of example.com, add `*.example.com` to 
 
 :::
 
-Once you have defined the target lists, **click** on the <Icon icon="fas fa-save" /> `Save` button to update and save the Scope Preset.
+Once you have defined the target lists, **click** on the <code><Icon icon="fas fa-floppy-disk" /> Save</code> button to update and save the Scope Preset.
 
 <img alt="Saving a Scope Preset." src="/_images/scopes_save.png" center>
 
