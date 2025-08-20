@@ -2,15 +2,15 @@
 
 To create a new environment variable, **click** on the `+ Add` button. A new variable row will be added to the table.
 
-Next, **click** on the edit button **<Icon icon="fas fa-pen-to-square" />** to edit it.
+Next, **click** on the edit button <code><Icon icon="fas fa-pen-to-square" /></code> to edit it.
 
 <img alt="Editing an environment variable." src="/_images/edit_global_env_variable.png" center/>
 
-Once you have made the desired edits, **click** on the save button **<Icon icon="fas fa-save" />** to save the variable.
+Once you have made the desired edits, **click** on the save button <code><Icon icon="fas fa-save" /></code> to save the variable.
 
 <img alt="Saving an environment variable." src="/_images/save_global_env_variable.png" center/>
 
-Then, depending on if the environment is new or existing, **click** on either the `Create` or `Update` button in the bottom left corner of the pane.
+Then, depending on if the environment is new or existing, **click** on either the `+ Create` or <code><Icon icon="fas fa-save" /> Update</code> button in the bottom left corner of the pane.
 
 <img alt="Create button for environment variable." src="/_images/create_button.png" center/>
 

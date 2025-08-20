@@ -1,6 +1,6 @@
 # Uploading Files
 
-To upload files to your Caido instance, **click** on the `Upload` button.
+To upload files to your Caido instance, **click** on the <code><Icon icon="fas fa-cloud-arrow-up" /> Upload</code> button.
 
 <img alt="The Upload button." src="/_images/files_upload.png" center>
 

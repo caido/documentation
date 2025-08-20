@@ -50,6 +50,6 @@ By selecting either `Prefix` or `Suffix` from the Preprocessor type drop-down me
 
 ## Ordering
 
-Any added Preprocessors are displayed in the `Active preprocessors` list and are applied to payloads in ascending order. To reorder their application, **click** on a Preprocessor from the list and use the `^` and `˅` buttons.
+Any added Preprocessors are displayed in the `Active preprocessors` list and are applied to payloads in ascending order. To reorder their application, **click** on a Preprocessor from the list and use the <code><Icon icon="fas fa-chevron-up" /></code> and <code><Icon icon="fas fa-chevron-down" /></code> buttons.
 
 <img alt="The list of applied Preprocessors." src="/_images/automate_preprocessors_order.png" center/>
