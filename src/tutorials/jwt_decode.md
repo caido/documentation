@@ -1,6 +1,6 @@
 # JWT Decode
 
-The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [Convert] workflow(/concepts/workflows_intro.md#convert-workflows). We will only be using built-in nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
+The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [convert](/concepts/workflows_intro.md#convert-workflows) workflow. We will only be using built-in nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
 
 ::: info
 It is, obviously, also possible to build it easily using a single Javascript node.
@@ -64,7 +64,7 @@ We also have to change the Join node, to use the new references from the pretty 
 
 ## Conclusion
 
-That's it! Now you should have a nice JWT Decoder all ready to use as a Convert workflow! :tada:
+That's it! Now you should have a nice JWT Decoder all ready to use as a convert workflow! :tada:
 
 The full workflow is provided below, ready to be imported.
 

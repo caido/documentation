@@ -2,7 +2,7 @@
 
 To apply a workflow to a value in a Replay request, **click**, **hold**, and **drag** over the value you want to replace and then **click** the `+` button to add it as a placeholder. Then, **click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.
 
-With `workflow` as the `Type`, **click** on the `Select a workflow` drop-down menu, select a workflow from the list, and **click** `Add` to save the configuration.
+With `Workflow` as the `Type`, **click** on the `Select a workflow` drop-down menu, select a workflow from the list, and **click** `Add` to save the configuration.
 
 <img alt="Applying a workflow to a Replay request." src="/_images/replay_workflows.png" center/>
 

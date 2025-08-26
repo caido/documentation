@@ -14,9 +14,9 @@ Additional modifications can be made to payload values before they are included 
   <iframe src="https://www.youtube.com/embed/PrXVDR-YCXE?si=XbnW0YRhlydOXlji" title="YouTube video player." frameborder="0"></iframe>
 </div>
 
-## Applying a workflow
+## Applying a Workflow
 
-With `workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a workflow to apply to a payload.
+With `Workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a workflow to apply to a payload.
 
 <img alt="The drop-down menu workflow options." src="/_images/automate_workflow.png" center/>
 

@@ -1,12 +1,12 @@
 # Workflow Nodes
 
-Here you'll find the list of nodes available to use in your Convert workflows.
+Here you'll find the list of nodes available to use in your convert workflows.
 
 ## JavaScript
 
 The `JavaScript` node allows you to run custom scripts in your workflows. They have a minimal code editor available in the properties pane.
 
-When a JavaScript node is executed inside a [workflow](/guides/workflows.md), the `run` function will be triggered.
+When a JavaScript node is executed inside a workflow, the `run` function will be triggered.
 
 <img alt="Convert JS node." src="/_images/convert_js_node.png" center/>
 

@@ -1,7 +1,7 @@
 # Resigning AWS Requests
 
 When dealing with AWS APIs, there is often a need to resign requests so they can be accepted by AWS.
-In this tutorial, we will build a [Convert workflow](/concepts/workflows_intro.md#convert-workflows) to rebuild the [AWS Signature V4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) on send in Replay.
+In this tutorial, we will build a [convert](/concepts/workflows_intro.md#convert-workflows) workflow to rebuild the [AWS Signature V4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) on send in Replay.
 A similar method can be used for other cloud providers since a lot of them follow the same signature process.
 
 ## Setting the Environment
@@ -13,7 +13,7 @@ We will also need a two other variables: `AWS_REGION` (like `us-east-1`) and `AW
 
 <img alt="Setup the variables in the global environment" src="/_images/aws_environment.png" center no-shadow width="900"/>
 
-## Creating the workflow
+## Creating the Workflow
 
 For this tutorial, we will use AWS v4 authentication via headers. Note that it is [also possible to authenticate via query parameters](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv-authentication-methods.html).
 
@@ -23,7 +23,7 @@ The algorithm to craft the signature is illustrated in the following diagram. Yo
 
 ### Linking up the Nodes
 
-Let's create a new `Convert workflow` and drop in a `Javascript` node. This will provide us with [a full Javascript environment](https://developer.caido.io/concepts/essentials/runtime.html#backend) to code our algorithm.
+Let's create a new convert workflow and drop in a `Javascript` node. This will provide us with [a full Javascript environment](https://developer.caido.io/concepts/essentials/runtime.html#backend) to code our algorithm.
 Make sure that all the references are setup properly. If that is the case if you enter `test` in the input and run it, it should output `test`.
 
 <img alt="Workflows setup" src="/_images/aws_workflow_setup.png" center no-shadow width="800"/>
@@ -125,7 +125,7 @@ export function run(input, sdk) {
 }
 ```
 
-## Using the workflow in Replay
+## Using the Workflow in Replay
 
 Now that our workflow is created, the last step is to use it inside `Replay`. For the purpose of this tutorial, we will try to access a private file on an S3 bucket. If we try to access this file without authentication, we get an error.
 
@@ -159,10 +159,10 @@ In `Search`, you can also view the fully expanded request and the properly craft
 With this new workflow you are now able to re-sign any `AWS` request.
 You should also be more familiar with workflow integration in `Replay` and how to really customize your requests at runtime.
 
-The full `workflow` is provided below, ready to be imported!
+The full workflow is provided below, ready to be imported!
 
 <details>
-<summary>Full workflow</summary>
+<summary>Full Workflow</summary>
 
 ```json
 {

@@ -1,6 +1,6 @@
 # JavaScript in Caido
 
-_Below includes in-depth foundational information, to skip to usage of JavaScript in workflow nodes - navigate to the [JavaScript node Functions](#javascript-node-functions) section._
+_Below includes in-depth foundational information, to skip to usage of JavaScript in workflow nodes - navigate to the [JavaScript node functions](#javascript-node-functions) section._
 
 ## Why JavaScript?
 
@@ -447,7 +447,7 @@ Finally, the value of `host` will be printed to the backend logs.
 
 ## Example
 
-### X-Forwarded-For Passive workflow
+### X-Forwarded-For Passive Workflow
 
 This workflow will check the if the status code of responses to requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
 
@@ -476,7 +476,7 @@ export async function run({ request, response }, sdk) {
       let finding = {
         title: "401/403 Bypass",
         description: `SUCCESS! Auth bypass via X-Forwarded-For header for ${bypass.request.getMethod()} ${bypass.request.getPath()} to ${bypass.request.getHost()}.`,
-        reporter: "X-Forwarded-For Passive workflow",
+        reporter: "X-Forwarded-For Passive Workflow",
         request: bypass.request
       };
       await sdk.findings.create(finding);

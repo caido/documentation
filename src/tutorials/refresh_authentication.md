@@ -1,6 +1,6 @@
-# Refreshing Authentication workflow
+# Refreshing Authentication Workflow
 
-In this tutorial, we will create a [Passive workflow](/guides/workflows.md#passive-workflows) that will automatically store and update either session cookies or tokens, as environment variables.
+In this tutorial, we will create a passive workflow that will automatically store and update either session cookies or tokens, as environment variables.
 
 Then, by using [placeholders in requests for the environment variables](/guides/replay_environment_variables.md), you can achieve continuous, uninterrupted testing without manually updating expired sessions.
 
@@ -37,17 +37,17 @@ This specification will take precedence over the `global` flag.
 
 :::
 
-## Creating a Passive workflow
+## Creating a Passive Workflow
 
-To begin, navigate to the [Workflows](/guides/workflows.md) interface, select the `Passive` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
 
-<img alt="Creating a new Passive workflow." src="/_images/new_passive_workflow.png" center>
+<img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
 
 ## Nodes and Connections
 
 For both workflows, the overall node layout will be:
 
-<img alt="Refresh Authentication workflow." src="/_images/nodes_auth_refresh.png" center>
+<img alt="Refresh authentication workflow." src="/_images/nodes_auth_refresh.png" center>
 
 - The `On Intercept Response` node will output `$on_intercept_response.request` which represents a response's associated request.
 - The request will be sent to the `In Scope` node. This will check if the request is within your current scope.

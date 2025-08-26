@@ -78,7 +78,7 @@ To test your regular expressions, visit [regex101.com](https://regex101.com/).
 The `Replacer` specifies the modification that will replace Matcher. To specify a Replacer, expand the dropdown menu and select one of the available options:
 
 - `Term`: Replace the Matcher with a string value.
-- `workflow`: Apply a [Convert] workflow (/concepts/workflows_intro.html#convert-workflows) to the Matcher.
+- `Workflow`: Apply a [convert](/concepts/workflows_intro.html#convert-workflows) workflow to the Matcher.
 
 <img alt="Replacer options." src="/_images/replacer.png" center/>
 

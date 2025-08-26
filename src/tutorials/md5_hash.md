@@ -1,16 +1,16 @@
 # MD5 Hash
 
-In this tutorial, we will create a new [Convert workflow](/concepts/workflows_intro.md#convert-workflows) that will perform MD5 hashing on the given input.
+In this tutorial, we will create a new [convert](/concepts/workflows_intro.md#convert-workflows) workflow that will perform MD5 hashing on the given input.
 
 ::: info
 This example workflow is available for download and import. [Download the workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json).
 :::
 
-## Creating a New workflow
+## Creating a New Workflow
 
-> Navigate to the **workflow Editor** for the Convert type by following these steps:
+> Navigate to the **workflow editor** for the convert type by following these steps:
 >
-> - Select the `workflow` tab from the left-hand menu within the Caido window.
+> - Select the `Workflow` tab from the left-hand menu within the Caido window.
 > - Select the `Convert` tab.
 > - Click `+ New workflow`.
 
@@ -24,7 +24,7 @@ This example workflow is available for download and import. [Download the workfl
 5. Drag the nodes into a top-down heirachical structure. Connect them together by making node `Connections`.
 
 ::: warning
-Convert Workflows require an End node to function properly.
+Convert workflows require an End node to function properly.
 :::
 
 6. Select the `MD5 Hash` node by clicking on it to display its properties in the right-hand pane. Here, the node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured (_for this example creation, leave the default configuration as is_).

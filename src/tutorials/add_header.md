@@ -1,6 +1,6 @@
-# Adding a Header workflow
+# Adding a Header Workflow
 
-In this tutorial, we will create a [Passive workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
+In this tutorial, we will create a passive workflow that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 
@@ -81,9 +81,9 @@ We must wait for the request to be sent and response to be returned before using
     let resend = await sdk.requests.send(spec);
 
     if (resend.response) {
-      sdk.console.log("Response to Add Header & Resend Request workflow received.")
+      sdk.console.log("Response to Add Header & Resend Request Workflow received.")
       let finding = {
-        title: `Custom Header Passive workflow.`,
+        title: `Custom Header Passive Workflow.`,
         description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,
         reporter: "Add Header & Resend Request",
         request: resend.request
@@ -104,7 +104,7 @@ We must wait for the request to be sent and response to be returned before using
 
 The generated finding should resemble:
 
-<img alt="Finding of Add Header & Send Request workflow." src="/_images/finding_adding_header.png" center/>
+<img alt="Finding of Add Header & Send Request Workflow." src="/_images/finding_adding_header.png" center/>
 
 The full JavaScript node script is provided below:
 
@@ -129,7 +129,7 @@ export async function run({ request, response }, sdk) {
    
     if (resend.response) {
       let finding = {
-        title: `Custom Header Passive workflow.`,
+        title: `Custom Header Passive Workflow.`,
         description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,
         reporter: "Add Header & Resend Request",
         request: resend.request
@@ -238,7 +238,7 @@ The full workflow is provided below, ready to be imported.
           {
             "alias": "code",
             "value": {
-              "data": "/**\n * @param {HttpInput} input\n * @param {SDK} sdk\n * @returns {MaybePromise<Data | undefined>}\n */\nexport async function run({ request, response }, sdk) {\n  let reqID = request.getId();\n  sdk.console.log(`Request ${reqID} is in-scope and will be sent with your header addition.`);\n\n  if (request) {  \n    const spec = request.toSpec();\n    spec.setHeader(\"Header-Name\", \"header-value\");\n\n    let resend = await sdk.requests.send(spec);\n   \n    if (resend.response) {\n      let finding = {\n        title: `Custom Header Passive workflow.`,\n        description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,\n        reporter: \"Add Header & Resend Request\",\n        request: resend.request\n      };\n      await sdk.findings.create(finding);\n    }\n  }\n}\n",
+              "data": "/**\n * @param {HttpInput} input\n * @param {SDK} sdk\n * @returns {MaybePromise<Data | undefined>}\n */\nexport async function run({ request, response }, sdk) {\n  let reqID = request.getId();\n  sdk.console.log(`Request ${reqID} is in-scope and will be sent with your header addition.`);\n\n  if (request) {  \n    const spec = request.toSpec();\n    spec.setHeader(\"Header-Name\", \"header-value\");\n\n    let resend = await sdk.requests.send(spec);\n   \n    if (resend.response) {\n      let finding = {\n        title: `Custom Header Passive Workflow.`,\n        description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,\n        reporter: \"Add Header & Resend Request\",\n        request: resend.request\n      };\n      await sdk.findings.create(finding);\n    }\n  }\n}\n",
               "kind": "string"
             }
           }
