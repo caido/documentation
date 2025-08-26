@@ -1,6 +1,6 @@
 # Findings
 
-The `Findings` interface allows you to view the discoveries made by Workflows or tools using the SDK. This interface provides a convenient interface of aggregated Findings so you can examine them efficiently.
+The `Findings` interface allows you to view the discoveries made by workflows or tools using the SDK. This interface provides a convenient interface of aggregated Findings so you can examine them efficiently.
 
 ## Findings Layout
 

@@ -1,6 +1,6 @@
 # JavaScript in Caido
 
-_Below includes in-depth foundational information, to skip to usage of JavaScript in Workflow Nodes - navigate to the [JavaScript Node Functions](#javascript-node-functions) section._
+_Below includes in-depth foundational information, to skip to usage of JavaScript in workflow nodes - navigate to the [JavaScript node Functions](#javascript-node-functions) section._
 
 ## Why JavaScript?
 
@@ -10,7 +10,7 @@ With JavaScript, context switching between the frontend and backend is minimal. 
 
 ## QuickJS
 
-Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating Workflows.
+Caido uses the [QuickJS Engine](https://github.com/bellard/quickjs) to handle any JavaScript code it receives. Without implementing an engine - Caido would not be able to utilize JavaScript for creating workflows.
 
 Caido leverages the QuickJS Engine to:
 
@@ -28,7 +28,7 @@ JavaScript is a [dynamically typed language](https://developer.mozilla.org/en-US
 
 However, specific data types for entities may be required for code to run properly.
 
-In order to achieve this, Caido utilizes [JSDoc](#jsdoc) in the Workflow coding environment and external [TypeScript](#typescript).
+In order to achieve this, Caido utilizes [JSDoc](#jsdoc) in the workflow coding environment and external [TypeScript](#typescript).
 
 JSDoc comments in JavaScript inform you as to what data type an entity expects.
 
@@ -37,7 +37,7 @@ TypeScript is used to explicitly assign data types to entities - a process known
 Static type-checking is a preemptive measure to make sure you supplied the correct parameter types that Caido’s backend requires in order for the proper execution of the `run` function.
 
 ::: info
-The data types that Workflows use are: bytes, strings, Boolean values, integers, request objects and response objects.
+The data types that workflows use are: bytes, strings, Boolean values, integers, request objects and response objects.
 :::
 
 ### JSDoc
@@ -55,7 +55,7 @@ Some commonly used JSDoc tags include:
 
 :::
 
-Below is the default `run` function used by the JavaScript Convert Node:
+Below is the default `run` function used by the JavaScript Convert node:
 
 ::: tip Convert Type Function
 
@@ -87,7 +87,7 @@ JSDoc comments for function parameters do not directly assign types to the param
 
 [TypeScript](https://www.typescriptlang.org/) is referred to as **superset** of JavaScript. A superset builds upon a programming language, adding additional capabilities.
 
-TypeScript can be used when building Workflows outside of Caido - such as when using the Workflow Starter Kit.
+TypeScript can be used when building workflows outside of Caido - such as when using the workflow Starter Kit.
 
 ::: tip
 Example:
@@ -224,9 +224,9 @@ The constructor parameter used to create the instance will become a property. In
 
 ## SDK
 
-_For further documentation on this topic - click [here](https://developer.caido.io/reference/sdks/workflow/)._
+_[View the developer documentation for more information.](https://developer.caido.io/reference/sdks/workflow/)
 
-For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript Node to interact with the rest of Caido backend.
+For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript node to interact with the rest of Caido backend.
 
 These methods are the ones included within the SDK object:
 
@@ -243,7 +243,7 @@ export declare type SDK = {
 The SDK object inherits all the methods of `Console`, `FindingsSDK` and `RequestsSDK`.
 :::
 
-This SDK object is the second parameter of the `run` function used by the JavaScript Node in Workflows.
+This SDK object is the second parameter of the `run` function used by the JavaScript node in workflows.
 
 ::: tip Convert Type JavaScript Node Function
 
@@ -272,7 +272,7 @@ export async function run({ request, response }, sdk) {
 
 ## JavaScript Node Functions
 
-When a JavaScript Node is executed inside a Workflow, one of two functions is ran - depending on the [Workflow Type](/concepts/workflows_intro.md).
+When a JavaScript node is executed inside a workflow, one of two functions is ran - depending on the [workflow type](/concepts/workflows_intro.md).
 
 ### Convert Type JavaScript Node Function
 
@@ -447,9 +447,9 @@ Finally, the value of `host` will be printed to the backend logs.
 
 ## Example
 
-### X-Forwarded-For Passive Workflow
+### X-Forwarded-For Passive workflow
 
-This Workflow will check the if the status code of responses to requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
+This workflow will check the if the status code of responses to requests are either **401** or **403**. If so, a new request will be sent with the `X-Forwarded-For: 127.0.0.1` header.
 
 If the status code of the response to this newly issued request is 200 - a new [Finding](/guides/findings.md) will be created, alerting you of the bypass.
 
@@ -476,7 +476,7 @@ export async function run({ request, response }, sdk) {
       let finding = {
         title: "401/403 Bypass",
         description: `SUCCESS! Auth bypass via X-Forwarded-For header for ${bypass.request.getMethod()} ${bypass.request.getPath()} to ${bypass.request.getHost()}.`,
-        reporter: "X-Forwarded-For Passive Workflow",
+        reporter: "X-Forwarded-For Passive workflow",
         request: bypass.request
       };
       await sdk.findings.create(finding);

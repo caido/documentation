@@ -35,7 +35,7 @@ google-chrome --proxy-server=127.0.0.1:8080` --proxy-bypass-list="<-loopback>"
 ```
 
 ::: tip
-If you customized the listening address/port of Caido - replace the values in the command to match. Click [here](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules) for more information.
+If you customized the listening address/port of Caido - replace the values in the command to match. [View the Chromium documentation for more information.](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules)
 :::
 
 - If you are using the FoxyProxy browser extension: select `Options` and add `<-loopback>` to the `Global Exclude` list.

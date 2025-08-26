@@ -1,26 +1,26 @@
 # Sending a Notification to Discord
 
-In this tutorial, we create an Active Workflow to send a notification to Discord. This method can also be used with other types of workflows.
+In this tutorial, we create an Active workflow to send a notification to Discord. This method can also be used with other types of workflows.
 
 We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
 ::: warning NOTE
-The request and response objects of this module differ from those used in the [Backend SDK](https://developer.caido.io/reference/sdks/backend/) and [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/). Due to this, their properties and methods differ as well. Additionally, they are not routed through the proxy and must adhere to the HTTP specification in order to be interpreted correctly.
+The request and response objects of this module differ from those used in the [Backend SDK](https://developer.caido.io/reference/sdks/backend/) and [workflow SDK](https://developer.caido.io/reference/sdks/workflow/). Due to this, their properties and methods differ as well. Additionally, they are not routed through the proxy and must adhere to the HTTP specification in order to be interpreted correctly.
 :::
 
-## Creating an Active Workflow
+## Creating an Active workflow
 
 To begin, navigate to the [Workflows](/guides/workflows.md) interface, select the `Active` tab, and click the `+ New workflow` button.
 
-<img alt="Creating a new Active Workflow." src="/_images/new_active_workflow.png" center/>
+<img alt="Creating a new Active workflow." src="/_images/new_active_workflow.png" center/>
 
-Next, **click**, **hold** and **drag** a `Javascript` Node into the Workflow Editor field and make [Connections](/concepts/workflows_nodes.md#connecting-nodes) to the `Active Start` and `Active End` Nodes. Then click on the `Javascript` Node to access its detailed view.
+Next, **click**, **hold** and **drag** a `Javascript` node into the workflow Editor field and make [Connections](/concepts/workflows_nodes.md#connecting-nodes) to the `Active Start` and `Active End` nodes. Then click on the `Javascript` node to access its detailed view.
 
-<img alt="Building the Active Workflow." src="/_images/discord_workflow.png" center/>
+<img alt="Building the Active workflow." src="/_images/discord_workflow.png" center/>
 
 ## Creating and Sending a Request
 
-Now, click within the coding environment of the `JavaScript` Node, select all of the existing code, and delete it.
+Now, click within the coding environment of the `JavaScript` node, select all of the existing code, and delete it.
 
 To send a request, you will first need to import the `Request` class and the `fetch()` function from the `caido:http` module.
 
@@ -37,7 +37,7 @@ export async function run(input, sdk) {
   const webhookData = {
     username: "Caido Bot",
     avatar_url: "https://caido.io/images/logo.color.webp",
-    content: "Message from Caido Workflow",
+    content: "Message from Caido workflow",
     embeds: [{
       title: "Webhook Fetch Request",
       description: "Hello World!",
@@ -119,7 +119,7 @@ We must await for the request to be sent and processed before we are able to obt
 }
 ```
 
-Finally, click the `Save` button in the bottom right corner of the Workflow Editor.
+Finally, click the `Save` button in the bottom right corner of the workflow Editor.
 
 ::: tip
 To view the entire script, expand the following:
@@ -136,7 +136,7 @@ export async function run(input, sdk) {
   const webhookData = {
     username: "Caido Bot",
     avatar_url: "https://caido.io/images/logo.color.webp",
-    content: "Message from Caido Workflow",
+    content: "Message from Caido workflow",
     embeds: [
       {
         title: "Webhook Fetch Request",
@@ -201,11 +201,11 @@ export async function run(input, sdk) {
 </details>
 :::
 
-## Using the Active Workflow
+## Using the Active workflow
 
-To use your newly created Workflow, right click on a request to open up the context menu. Hover over the `Run workflow` option and select the given name.
+To use your newly created workflow, right click on a request to open up the context menu. Hover over the `Run workflow` option and select the given name.
 
-<img alt="Running the Active Workflow." src="/_images/trigger_discord_workflow.png" center/>
+<img alt="Running the Active workflow." src="/_images/trigger_discord_workflow.png" center/>
 
 Soon after, you will receive a message in your Discord channel.
 
@@ -217,7 +217,7 @@ Within the logs, the message will resemble:
 ```
 2025-04-09T00:45:25.697833Z  INFO main service|workflow: Executing workflow (g:58) as task
 2025-04-09T00:45:25.697858Z  INFO main service|task: Running task
-2025-04-09T00:45:25.697862Z  INFO main service|workflow: Workflow (g:58) task assigned ID: 26
+2025-04-09T00:45:25.697862Z  INFO main service|workflow: workflow (g:58) task assigned ID: 26
 2025-04-09T00:45:26.134839Z  INFO executor:0|arbiter:7 js|sdk: Response data:, {
   "status": 204,
   "statusText": "No Content",

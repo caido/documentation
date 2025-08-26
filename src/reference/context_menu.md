@@ -23,9 +23,9 @@ Right-clicking on certain elements in the Caido user-interface will open a conte
 - `Highlight`: Color highlights a request's table row.
 - `Add in Scope`: Adds a request's host as in scope to either an existing or new Scope Preset.
 - `Add out of Scope`: Adds a request's host as out of scope to either an existing or new Scope Preset.
-- `Convert (Preview)`: Displays a preview of the result of a Convert Workflow on a selection.
-- `Convert (Replace)`: Replaces a selection with the result of a Convert Workflow.
-- `Run workflow`: Executes an Active Workflow.
+- `Convert (Preview)`: Displays a preview of the result of a Convert workflow on a selection.
+- `Convert (Replace)`: Replaces a selection with the result of a Convert workflow.
+- `Run workflow`: Executes an Active workflow.
 - `Assistant`: Prompts the Assistant to either explain a request or generate a CSRF proof-of-concept.
 - `Set request`: Generates a corresponding request to a URL.
 - `Toggle GET/POST`: Toggles a request between GET and POST methods.

@@ -14,13 +14,13 @@ Additional modifications can be made to payload values before they are included 
   <iframe src="https://www.youtube.com/embed/PrXVDR-YCXE?si=XbnW0YRhlydOXlji" title="YouTube video player." frameborder="0"></iframe>
 </div>
 
-## Applying a Workflow
+## Applying a workflow
 
-With `Workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a Workflow to apply to a payload.
+With `workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a workflow to apply to a payload.
 
-<img alt="The drop-down menu Workflow options." src="/_images/automate_workflow.png" center/>
+<img alt="The drop-down menu workflow options." src="/_images/automate_workflow.png" center/>
 
-Once a Workflow has been selected, **click** on the `Add` button to apply the Preprocessor.
+Once a workflow has been selected, **click** on the `Add` button to apply the Preprocessor.
 
 ## URL Encoding
 

@@ -274,6 +274,19 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Workflows",
+    items: [
+      {
+        text: "Creating Workflows",
+        link: "/guides/workflows_create",
+      },
+      {
+        text: "Passing Data Between Nodes",
+        link: "/guides/workflows_references",
+      },
+    ],
+  },
+  {
     text: "Environment",
     items: [
       {

@@ -1,6 +1,6 @@
-# Refreshing Authentication Workflow
+# Refreshing Authentication workflow
 
-In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will automatically store and update either session cookies or tokens, as environment variables.
+In this tutorial, we will create a [Passive workflow](/guides/workflows.md#passive-workflows) that will automatically store and update either session cookies or tokens, as environment variables.
 
 Then, by using [placeholders in requests for the environment variables](/guides/replay_environment_variables.md), you can achieve continuous, uninterrupted testing without manually updating expired sessions.
 
@@ -37,22 +37,22 @@ This specification will take precedence over the `global` flag.
 
 :::
 
-## Creating a Passive Workflow
+## Creating a Passive workflow
 
 To begin, navigate to the [Workflows](/guides/workflows.md) interface, select the `Passive` tab, and click the `+ New workflow` button.
 
-<img alt="Creating a new Passive Workflow." src="/_images/new_passive_workflow.png" center>
+<img alt="Creating a new Passive workflow." src="/_images/new_passive_workflow.png" center>
 
 ## Nodes and Connections
 
-For both Workflows, the overall Node layout will be:
+For both workflows, the overall node layout will be:
 
-<img alt="Refresh Authentication Workflow." src="/_images/nodes_auth_refresh.png" center>
+<img alt="Refresh Authentication workflow." src="/_images/nodes_auth_refresh.png" center>
 
-- The `On Intercept Response` Node will output `$on_intercept_response.request` which represents a response's associated request.
-- The request will be sent to the `In Scope` Node. This will check if the request is within your current scope.
-- If the request is within scope the request and response pair will be passed to the `JavaScript` Node. If it is not - the Workflow will end.
-Once the response has been processed by the script in the `JavaScript` Node, the Workflow will come to an end.
+- The `On Intercept Response` node will output `$on_intercept_response.request` which represents a response's associated request.
+- The request will be sent to the `In Scope` node. This will check if the request is within your current scope.
+- If the request is within scope the request and response pair will be passed to the `JavaScript` node. If it is not - the workflow will end.
+Once the response has been processed by the script in the `JavaScript` node, the workflow will come to an end.
 
 ## Session Cookies
 
@@ -64,7 +64,7 @@ Set-Cookie: session=757365723D636169646F3B726F6C653D75736572
 
 ### Extracting a Session Cookie
 
-Click on the `Javascript` Node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
+Click on the `Javascript` node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
 export async function run({ request, response }, sdk) {
@@ -120,7 +120,7 @@ Consider a response to a successful credential submission that issues a session 
 
 ### Extracting a Session Token
 
-Click on the `Javascript` Node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
+Click on the `Javascript` node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
 export async function run({ request, response }, sdk) {
@@ -186,7 +186,7 @@ To view the set environment variable, navigate to the `Environment` interface an
 
 ## Using the Environment Variables
 
-Now, with these Workflows providing up-to-date session identifiers, navigate to the Replay interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
+Now, with these workflows providing up-to-date session identifiers, navigate to the Replay interface. Within a request editing pane, **click**, **hold**, and **drag** the left mouse button over the value you want to be replaced and then click the `+` button to add it as a placeholder.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder_tutorial.png" center/>
 

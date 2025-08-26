@@ -1,21 +1,21 @@
-# Adding a Header Workflow
+# Adding a Header workflow
 
-In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
+In this tutorial, we will create a [Passive workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 
-For this Workflow, the overall Node layout will be:
+For this workflow, the overall node layout will be:
 
 <img alt="Nodes used and their connections." src="/_images/nodes_adding_header.png" center>
 
 - The `On Intercept Request` will output `$on_intercept_request.request` which represents the request that passed through the Caido proxy.
-- The request will be sent to the `In Scope` Node. This will check if the request is within your current scope.
-- If the request is within scope it will be passed to the `JavaScript` Node. If it is not - the Workflow will end.
-- Once the request has been processed by the script in the `JavaScript` Node, the Workflow will come to an end.
+- The request will be sent to the `In Scope` node. This will check if the request is within your current scope.
+- If the request is within scope it will be passed to the `JavaScript` node. If it is not - the workflow will end.
+- Once the request has been processed by the script in the `JavaScript` node, the workflow will come to an end.
 
 ## Typing
 
-When a `JavaScript` Node is executed inside a Workflow, the `run` function will be triggered.
+When a `JavaScript` node is executed inside a workflow, the `run` function will be triggered.
 
 The JSDoc comments note the types of the parameters and return value.
 
@@ -36,7 +36,7 @@ The JSDoc comments note the types of the parameters and return value.
 
 ## Scripting the JavaScript Node
 
-<img alt="The Workflow environment." src="/_images/build.png" center/>
+<img alt="The workflow environment." src="/_images/build.png" center/>
 
 The function is exported so it can be executed by QuickJS, the JavaScript engine used by Caido.
 
@@ -81,9 +81,9 @@ We must wait for the request to be sent and response to be returned before using
     let resend = await sdk.requests.send(spec);
 
     if (resend.response) {
-      sdk.console.log("Response to Add Header & Resend Request Workflow received.")
+      sdk.console.log("Response to Add Header & Resend Request workflow received.")
       let finding = {
-        title: `Custom Header Passive Workflow.`,
+        title: `Custom Header Passive workflow.`,
         description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,
         reporter: "Add Header & Resend Request",
         request: resend.request
@@ -104,9 +104,9 @@ We must wait for the request to be sent and response to be returned before using
 
 The generated finding should resemble:
 
-<img alt="Finding of Add Header & Send Request Workflow." src="/_images/finding_adding_header.png" center/>
+<img alt="Finding of Add Header & Send Request workflow." src="/_images/finding_adding_header.png" center/>
 
-The full JavaScript Node script is provided below:
+The full JavaScript node script is provided below:
 
 <details>
 <summary>Full Script</summary>
@@ -129,7 +129,7 @@ export async function run({ request, response }, sdk) {
    
     if (resend.response) {
       let finding = {
-        title: `Custom Header Passive Workflow.`,
+        title: `Custom Header Passive workflow.`,
         description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,
         reporter: "Add Header & Resend Request",
         request: resend.request
@@ -142,10 +142,10 @@ export async function run({ request, response }, sdk) {
 
 </details>
 
-The full Workflow is provided below, ready to be imported.
+The full workflow is provided below, ready to be imported.
 
 <details>
-<summary>Full Workflow</summary>
+<summary>Full workflow</summary>
 
 ``` json
 {
@@ -238,7 +238,7 @@ The full Workflow is provided below, ready to be imported.
           {
             "alias": "code",
             "value": {
-              "data": "/**\n * @param {HttpInput} input\n * @param {SDK} sdk\n * @returns {MaybePromise<Data | undefined>}\n */\nexport async function run({ request, response }, sdk) {\n  let reqID = request.getId();\n  sdk.console.log(`Request ${reqID} is in-scope and will be sent with your header addition.`);\n\n  if (request) {  \n    const spec = request.toSpec();\n    spec.setHeader(\"Header-Name\", \"header-value\");\n\n    let resend = await sdk.requests.send(spec);\n   \n    if (resend.response) {\n      let finding = {\n        title: `Custom Header Passive Workflow.`,\n        description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,\n        reporter: \"Add Header & Resend Request\",\n        request: resend.request\n      };\n      await sdk.findings.create(finding);\n    }\n  }\n}\n",
+              "data": "/**\n * @param {HttpInput} input\n * @param {SDK} sdk\n * @returns {MaybePromise<Data | undefined>}\n */\nexport async function run({ request, response }, sdk) {\n  let reqID = request.getId();\n  sdk.console.log(`Request ${reqID} is in-scope and will be sent with your header addition.`);\n\n  if (request) {  \n    const spec = request.toSpec();\n    spec.setHeader(\"Header-Name\", \"header-value\");\n\n    let resend = await sdk.requests.send(spec);\n   \n    if (resend.response) {\n      let finding = {\n        title: `Custom Header Passive workflow.`,\n        description: `Request ${resend.request.getId()} ${resend.request.getMethod()} ${resend.request.getPath()} to ${resend.request.getHost()} was resent with custom header.`,\n        reporter: \"Add Header & Resend Request\",\n        request: resend.request\n      };\n      await sdk.findings.create(finding);\n    }\n  }\n}\n",
               "kind": "string"
             }
           }

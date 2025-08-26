@@ -10,7 +10,7 @@ Next, select an option from the `Matcher` drop-down menu to specify what data to
 - `Regex`: Matches a value determined by a regular expression.
 - `String`: Matches a string value.
 
-Then, select the `Workflow` option from the `Replacer` drop-down menu and select the encoding method.
+Then, select the `workflow` option from the `Replacer` drop-down menu and select the encoding method.
 
 <img alt="The drop-down menu encoding options." src="/_images/match_replace_encoding.png" center/>
 
