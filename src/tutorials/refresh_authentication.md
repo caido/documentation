@@ -1,4 +1,4 @@
-# Refreshing Authentication Workflow
+# Refresh Authentication Workflow
 
 In this tutorial, we will create a passive workflow that will automatically store and update either session cookies or tokens, as environment variables.
 

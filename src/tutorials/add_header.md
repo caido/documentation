@@ -1,4 +1,4 @@
-# Adding a Header Workflow
+# Add a Header Workflow
 
 In this tutorial, we will create a passive workflow that will add a header to an in-scope request and resend the request with it.
 

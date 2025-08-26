@@ -1,4 +1,4 @@
-# Resigning AWS Requests
+# Resign AWS Requests Workflow
 
 When dealing with AWS APIs, there is often a need to resign requests so they can be accepted by AWS.
 In this tutorial, we will build a [convert](/concepts/workflows_intro.md#convert-workflows) workflow to rebuild the [AWS Signature V4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) on send in Replay.

@@ -1,4 +1,4 @@
-# MD5 Hash
+# MD5 Hash Input Workflow
 
 In this tutorial, we will create a new [convert](/concepts/workflows_intro.md#convert-workflows) workflow that will perform MD5 hashing on the given input.
 

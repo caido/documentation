@@ -1,4 +1,4 @@
-# Sending a Notification to Discord Workflow
+# Send a Notification to Discord Workflow
 
 In this tutorial, we create an active workflow to send a notification to Discord. This method can also be used with other types of workflows.
 

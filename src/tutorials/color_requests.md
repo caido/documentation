@@ -1,4 +1,4 @@
-# Coloring Requests Workflow
+# Color Request Rows Workflow
 
 In this tutorial, we will create a passive workflow that will highlight GET requests within the HTTP History tab if they are within the project's Scope.
 

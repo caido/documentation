@@ -20,23 +20,6 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Convert Workflows",
-    items: [
-      {
-        text: "JWT Decode",
-        link: "/tutorials/jwt_decode",
-      },
-      {
-        text: "MD5 Hash",
-        link: "/tutorials/md5_hash",
-      },
-      {
-        text: "AWS Signature",
-        link: "/tutorials/aws_signature",
-      },
-    ],
-  },
-  {
     text: "Proxying Mobile Traffic",
     items: [
       {
@@ -71,20 +54,32 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Workflows",
     items: [
       {
-        text: "Sending a Notification to Discord",
+        text: "Send a Notification to Discord",
         link: "/tutorials/discord_notification",
       },
       {
-        text: "Adding a Header",
+        text: "Add a Header",
         link: "/tutorials/add_header",
       },
       {
-        text: "Coloring Requests",
+        text: "Color Request Rows",
         link: "/tutorials/color_requests",
       },
       {
-        text: "Refreshing Authentication",
+        text: "Refresh Authentication",
         link: "/tutorials/refresh_authentication",
+      },
+      {
+        text: "Decode a JWT",
+        link: "/tutorials/decode_jwt",
+      },
+      {
+        text: "MD5 Hash",
+        link: "/tutorials/md5_hash",
+      },
+      {
+        text: "Resign AWS Requests",
+        link: "/tutorials/aws_signature",
       },
     ],
   },
