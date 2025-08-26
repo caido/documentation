@@ -18,8 +18,7 @@ To add targets to an existing Scope Preset, you can either:
 
 ## Duplicating a Scope Preset
 
-To create a copy of a Scope Preset, **click** on the <code><Icon icon="fas fa-clone" /> Duplicate</code>
- button.
+To create a copy of a Scope Preset, **click** on the <code><Icon icon="fas fa-clone" /> Duplicate</code> button.
 
 <img alt="Duplicating a Scope Preset." src="/_images/scopes_duplicate.png" center>
 

@@ -1,7 +1,7 @@
 # Creating Workflows
 
 ::: tip
-The Tutorials section includes detailed walk-throughs on creating a variety of workflows.
+View the [Tutorials](/tutorials) section of the documentation for detailed walk-throughs on creating a variety of workflows.
 :::
 
 To create a new workflow, select a [workflow type](/concepts/workflows_intro.md) by **clicking** on either the `Passive`, `Active`, or `Convert` tabs and **click** the `+ New workflow` button.

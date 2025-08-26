@@ -68,17 +68,12 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Active Workflows",
+    text: "Workflows",
     items: [
       {
         text: "Sending a Notification to Discord",
         link: "/tutorials/discord_notification",
       },
-    ],
-  },
-  {
-    text: "Passive Workflows",
-    items: [
       {
         text: "Adding a Header",
         link: "/tutorials/add_header",
