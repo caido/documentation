@@ -5,5 +5,5 @@ To use the output of a workflow node as the input of a connected downstream node
 <img alt="Selecting a reference." src="/_images/workflows_reference.png" center>
 
 ::: tip
-[View the data compatibility reference.](/reference/workflow_data_types.md)
+View the [Workflow Node Data Types](/reference/workflow_data_types.md) reference to learn which input and output types are exact matches, compatible, and incompatible with one another.
 :::
