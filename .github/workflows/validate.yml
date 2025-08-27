@@ -12,6 +12,7 @@ concurrency:
 
 env:
   CAIDO_PNPM_VERSION: 9
+  MISE_VERSION: 2025.8.1
 
 jobs:
   lint:
@@ -21,10 +22,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install Mise
+        uses: caido/action-mise-action@v3.2.0
         with:
-          version: ${{ env.CAIDO_PNPM_VERSION }}
+          version: ${{ env.MISE_VERSION }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
