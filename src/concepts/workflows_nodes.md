@@ -1,45 +1,45 @@
 # Understanding Nodes
 
-**Nodes** are simply **actions** or **conditions**. By connecting Nodes together, complex action sequences based on certain conditions are created.
+**Nodes** are simply **actions** or **conditions**. By connecting nodes together, complex action sequences based on certain conditions are created.
 
-Nodes are visually represented by Caido as draggable blocks, colorized by category. They utilize an input/output model that can be used to send data altered by one Node to a subsequent Node.
+Nodes are visually represented by Caido as draggable blocks, colorized by category. They utilize an input/output model that can be used to send data altered by one node to a subsequent node.
 
-<img alt="Convert workflow" src="/_images/workflow_convert_basic.png" center/>
+<img alt="Convert workflow." src="/_images/workflow_convert_basic.png" center/>
 
 ## Connecting Nodes
 
-A `Connection` is visually represented by the gray line between Nodes and determine the order of execution.
+A `Connection` is visually represented by the gray line between nodes and determine the order of execution.
 
-Workflows use a top-down heirachical structure (_the Node at the very top represents the beginning of the flow and the Node at the bottom represents the end of the flow_).
+Workflows use a top-down heirachical structure (_the node at the very top represents the beginning of the flow and the Node at the bottom represents the end of the flow_).
 
-<img alt="Workflow Connections" src="/_images/node_connect.png" center/>
+<img alt="Workflow connections." src="/_images/node_connect.png" center/>
 
-1. The down arrow within a circle icon represents a Node's `socket`.
-2. Click and drag a bottom socket to the top socket of the next/a subsequent Node in the flow to create a `Connection`.
+1. The down arrow within a circle icon represents a node's `socket`.
+2. Click and drag a bottom socket to the top socket of the next/a subsequent node in the flow to create a `connection`.
 
 ## Aliases
 
-A Node's `Alias` is an arbitrarily set identifier used to uniquely reference the associated Node within a Workflow.
+A node's `Alias` is an arbitrarily set identifier used to uniquely reference the associated node within a workflow.
 
 Aliases can consist of lowercase letters, hyphens, underscores and numbers.
 
 ::: info
-This differs from a Node's Name which simply serves cosmetic purposes to assist in the visual representation.
+This differs from a node's name which simply serves cosmetic purposes to assist in the visual representation.
 :::
 
 ## Input Types
 
 ### 1. Constant Value Type
 
-`Constant Values` - the input used by the Node's execution will be the **_supplied value_**.
+`Constant Values` - the input used by the node's execution will be the **_supplied value_**.
 
-- To use this input type, manually enter the data to be used in the `Data` field under `Inputs` with the `Use reference` checkbox **_deselected_**.
+- To use this input type, manually enter the data to be used in the `Data` field.
 
-<img alt="Base64 Node" src="/_images/const_value_node.png" center/>
+<img alt="The Data field." src="/_images/const_value_node.png" center/>
 
 ### 2. Reference Value Type
 
-`Reference Values` - the input used by the Node's execution will be the **_output of a previous Node_**.
+`Reference Values` - the input used by the node's execution will be the **_output of a previous node_**.
 
 - To use this input type, the content of the `Data` field under `Inputs` with the `Use reference` checkbox **_selected_** should be formatted using the following syntax:
 
@@ -47,35 +47,35 @@ This differs from a Node's Name which simply serves cosmetic purposes to assist 
 $[node_alias].[property_alias]
 ```
 
-<img alt="Workflow Node Inputs" src="/_images/reference_value_node.png" center/>
+<img alt="Workflow node inputs." src="/_images/reference_value_node.png" center/>
 
 _Example (pictured above):_
 
-- _The value_ `$start.data` _is the output of the_ **Start** _Node being taken as input by the_ **Base64 Encode** _Node_.
-- _The output of the_ **Base64 Encode** _Node will be referenced by the_ **End** _Node as_ `$base64_encode.data`.
+- _The value_ `$start.data` _is the output of the_ **Start** _node being taken as input by the_ **Base64 Encode** _node_.
+- _The output of the_ **Base64 Encode** _node will be referenced by the_ **End** _node as_ `$base64_encode.data`.
 
 ## Categories
 
-Certain Nodes are specific to a Workflow type (Passive/Active/Convert). Though, in general, Nodes can be categorized broadly and associated together by color:
+Certain nodes are specific to a workflow type (Passive/Active/Convert). Though, in general, nodes can be categorized broadly and associated together by color:
 
 ### Start/End Nodes
 
-These Nodes are color categorized together by their yellow marked tabs. They mark the beginning and end of a Workflow.
+These nodes are color categorized together by their yellow marked tabs. They mark the beginning and end of a workflow.
 
 ### Control Nodes
 
-These Nodes are color categorized together by their green marked tabs and allow you to dictate the execution flow.
+These nodes are color categorized together by their green marked tabs and allow you to dictate the execution flow.
 
 ### Code Nodes
 
-These Nodes are color categorized together by their red marked tabs and provide a way to integrate Shell commands and Javascript.
+These nodes are color categorized together by their red marked tabs and provide a way to integrate Shell commands and Javascript.
 
 ### Miscellaneous Nodes (Blue)
 
-These Nodes are color categorized together by their blue marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
+These nodes are color categorized together by their blue marked tabs. The actions they perform include encoding/decoding, hashing/dehashing and filtering.
 
 <img alt="List of nodes." src="/_images/nodes_all_types.png" center/>
 
 ::: info
-The development of Nodes will be ongoing and new nodes will be included in future Caido releases.
+The development of nodes will be ongoing and new nodes will be included in future Caido releases.
 :::

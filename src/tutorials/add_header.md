@@ -1,21 +1,21 @@
-# Adding a Header Workflow
+# Add a Header Workflow
 
-In this tutorial, we will create a [Passive Workflow](/guides/workflows.md#passive-workflows) that will add a header to an in-scope request and resend the request with it.
+In this tutorial, we will create a passive workflow that will add a header to an in-scope request and resend the request with it.
 
 ## Nodes and Connections
 
-For this Workflow, the overall Node layout will be:
+For this workflow, the overall node layout will be:
 
 <img alt="Nodes used and their connections." src="/_images/nodes_adding_header.png" center>
 
 - The `On Intercept Request` will output `$on_intercept_request.request` which represents the request that passed through the Caido proxy.
-- The request will be sent to the `In Scope` Node. This will check if the request is within your current scope.
-- If the request is within scope it will be passed to the `JavaScript` Node. If it is not - the Workflow will end.
-- Once the request has been processed by the script in the `JavaScript` Node, the Workflow will come to an end.
+- The request will be sent to the `In Scope` node. This will check if the request is within your current scope.
+- If the request is within scope it will be passed to the `JavaScript` node. If it is not - the workflow will end.
+- Once the request has been processed by the script in the `JavaScript` node, the workflow will come to an end.
 
 ## Typing
 
-When a `JavaScript` Node is executed inside a Workflow, the `run` function will be triggered.
+When a `JavaScript` node is executed inside a workflow, the `run` function will be triggered.
 
 The JSDoc comments note the types of the parameters and return value.
 
@@ -36,7 +36,7 @@ The JSDoc comments note the types of the parameters and return value.
 
 ## Scripting the JavaScript Node
 
-<img alt="The Workflow environment." src="/_images/build.png" center/>
+<img alt="The workflow environment." src="/_images/build.png" center/>
 
 The function is exported so it can be executed by QuickJS, the JavaScript engine used by Caido.
 
@@ -106,7 +106,7 @@ The generated finding should resemble:
 
 <img alt="Finding of Add Header & Send Request Workflow." src="/_images/finding_adding_header.png" center/>
 
-The full JavaScript Node script is provided below:
+The full JavaScript node script is provided below:
 
 <details>
 <summary>Full Script</summary>
@@ -142,10 +142,10 @@ export async function run({ request, response }, sdk) {
 
 </details>
 
-The full Workflow is provided below, ready to be imported.
+The full workflow is provided below, ready to be imported.
 
 <details>
-<summary>Full Workflow</summary>
+<summary>Full workflow</summary>
 
 ``` json
 {

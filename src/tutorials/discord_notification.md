@@ -1,6 +1,6 @@
-# Sending a Notification to Discord
+# Send a Notification to Discord Workflow
 
-In this tutorial, we create an Active Workflow to send a notification to Discord. This method can also be used with other types of workflows.
+In this tutorial, we create an active workflow to send a notification to Discord. This method can also be used with other types of workflows.
 
 We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
@@ -10,17 +10,17 @@ The request and response objects of this module differ from those used in the [B
 
 ## Creating an Active Workflow
 
-To begin, navigate to the [Workflows](/guides/workflows.md) interface, select the `Active` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Active` tab, and click the `+ New workflow` button.
 
-<img alt="Creating a new Active Workflow." src="/_images/new_active_workflow.png" center/>
+<img alt="Creating a new active workflow." src="/_images/new_active_workflow.png" center/>
 
-Next, **click**, **hold** and **drag** a `Javascript` Node into the Workflow Editor field and make [Connections](/concepts/workflows_nodes.md#connecting-nodes) to the `Active Start` and `Active End` Nodes. Then click on the `Javascript` Node to access its detailed view.
+Next, **click**, **hold** and **drag** a `Javascript` node into the workflow editor field and make [Connections](/concepts/workflows_nodes.md#connecting-nodes) to the `Active Start` and `Active End` nodes. Then click on the `Javascript` node to access its detailed view.
 
-<img alt="Building the Active Workflow." src="/_images/discord_workflow.png" center/>
+<img alt="Building the active workflow." src="/_images/discord_workflow.png" center/>
 
 ## Creating and Sending a Request
 
-Now, click within the coding environment of the `JavaScript` Node, select all of the existing code, and delete it.
+Now, click within the coding environment of the `JavaScript` node, select all of the existing code, and delete it.
 
 To send a request, you will first need to import the `Request` class and the `fetch()` function from the `caido:http` module.
 
@@ -119,7 +119,7 @@ We must await for the request to be sent and processed before we are able to obt
 }
 ```
 
-Finally, click the `Save` button in the bottom right corner of the Workflow Editor.
+Finally, click the `Save` button in the bottom right corner of the workflow editor.
 
 ::: tip
 To view the entire script, expand the following:
@@ -203,9 +203,9 @@ export async function run(input, sdk) {
 
 ## Using the Active Workflow
 
-To use your newly created Workflow, right click on a request to open up the context menu. Hover over the `Run workflow` option and select the given name.
+To use your newly created workflow, right click on a request to open up the context menu. Hover over the `Run workflow` option and select the given name.
 
-<img alt="Running the Active Workflow." src="/_images/trigger_discord_workflow.png" center/>
+<img alt="Running the active workflow." src="/_images/trigger_discord_workflow.png" center/>
 
 Soon after, you will receive a message in your Discord channel.
 

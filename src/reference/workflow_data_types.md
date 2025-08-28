@@ -2,14 +2,14 @@
 
 Nodes are defined by various different input and output data types.
 
-When referencing a Node's data for use in another, the types must be compatible with each other.
+When referencing a node's data for use in another, the types must be compatible with each other.
 
 ## Data Type Conversions
 
-Data can be shared across Nodes as long as the types are `Exact` (expected) or are `Compatible` based on the following conversions:
+Data can be shared across nodes as long as the types are `Exact` (expected) or are `Compatible` based on the following conversions:
 
 ::: tip
-You can view the data type by clicking on a Node and viewing the value within the parenthesis. This will be above the reference data dropdown menu.
+You can view the data type by clicking on a node and viewing the value within the parenthesis. This will be above the reference data dropdown menu.
 <img alt="Node reference dropdown menu." src="/_images/node_reference_selection.png" center no-shadow/>
 :::
 

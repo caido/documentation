@@ -16,11 +16,11 @@ Additional modifications can be made to payload values before they are included 
 
 ## Applying a Workflow
 
-With `Workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a Workflow to apply to a payload.
+With `Workflow` selected from the Preprocessor type drop-down menu, you can expand the `Select a workflow` drop-down menu and select a workflow to apply to a payload.
 
-<img alt="The drop-down menu Workflow options." src="/_images/automate_workflow.png" center/>
+<img alt="The drop-down menu workflow options." src="/_images/automate_workflow.png" center/>
 
-Once a Workflow has been selected, **click** on the `Add` button to apply the Preprocessor.
+Once a workflow has been selected, **click** on the `Add` button to apply the Preprocessor.
 
 ## URL Encoding
 

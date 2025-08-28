@@ -1,18 +1,14 @@
 # Workflow Nodes
 
-Here you'll find the list of Nodes available to use in your Convert Workflows.
-
-::: warning
-This page is currently under construction. We're working on adding more detailed documentation for each Node.
-:::
+Here you'll find the list of nodes available to use in your convert workflows.
 
 ## JavaScript
 
-The `JavaScript` Code Node allows you to run custom scripts in your Workflows. They have a minimal code editor available in the properties pane.
+The `JavaScript` node allows you to run custom scripts in your workflows. They have a minimal code editor available in the properties pane.
 
-When a JavaScript Node is executed inside a [Workflow](/guides/workflows.md), the `run` function will be triggered.
+When a JavaScript node is executed inside a workflow, the `run` function will be triggered.
 
-<img alt="Convert JS Node." src="/_images/convert_js_node.png" center/>
+<img alt="Convert JS node." src="/_images/convert_js_node.png" center/>
 
 This function will take the `input` and `sdk` input parameters:
 
@@ -24,7 +20,7 @@ export function run(input, sdk) {
 }
 ```
 
-The `sdk` parameter is an object that supplies various functionality for the Caido JS Node SDK.
+The `sdk` parameter is an object that supplies various functionality for the Caido JS node SDK.
 
 ::: info
 Below you will find a summary of its various functions, but for now, just know that `sdk.console.log()` is a way to output data for debugging to the [Caido Log File](/guides/data_location.md).
@@ -74,9 +70,9 @@ Additional functionality of `sdk`:
 
 ## Shell
 
-The `Shell Node` allows you to call external programs in the Workflow.
+The `Shell` node allows you to call external programs in the workflow.
 
-<img alt="Convert Shell Node." src="/_images/convert_shell_node.png" center/>
+<img alt="Convert Shell node." src="/_images/convert_shell_node.png" center/>
 
 Depending on the platform on which Caido is running (Unix/Windows/MacOS) you will have access to different shells:
 
@@ -88,7 +84,7 @@ Depending on the platform on which Caido is running (Unix/Windows/MacOS) you wil
 Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR` will be printed in the [backend logs](/guides/data_location.md). The command should also exit with `0`.
 
 ::: tip
-If you're running Caido on Windows and you'd like to call out to `WSL` for the shell node from `powershell`, add the following in the init section of the node:
+If you're running Caido on Windows and you'd like to call out to `WSL` for the Shell node from `powershell`, add the following in the init section of the node:
 
 ```
 $Env:WSLENV = ($Env:WSLENV + ":" + ((Get-ChildItem Env: | Where-Object { $_.Name -like 'CAIDO_*' }).Name -join ":")).Trim(":")
@@ -111,11 +107,11 @@ Since it is a bit cumbersome to write everything with single quotes around it, w
 
 ## If/Else
 
-The `If/Else Node` can split the Workflow into two paths of action - based on the Boolean evalutation of a previous Node.
+The `If/Else` node can split the workflow into two paths of action - based on the Boolean evalutation of a previous node.
 
 ## If/Else JavaScript
 
-The `If/Else Javascript` Node is very similar to the `JavaScript Code Node`, with the exception that **it must return a Boolean value**.
+The `If/Else Javascript` node is very similar to the `JavaScript Code` node, with the exception that **it must return a Boolean value**.
 
 ```javascript
 export function run(input, sdk) {

@@ -78,13 +78,13 @@ To test your regular expressions, visit [regex101.com](https://regex101.com/).
 The `Replacer` specifies the modification that will replace Matcher. To specify a Replacer, expand the dropdown menu and select one of the available options:
 
 - `Term`: Replace the Matcher with a string value.
-- `Workflow`: Apply a [Convert Workflow](/concepts/workflows_intro.html#convert-workflows) to the Matcher.
+- `Workflow`: Apply a [convert](/concepts/workflows_intro.html#convert-workflows) workflow to the Matcher.
 
 <img alt="Replacer options." src="/_images/replacer.png" center/>
 
 ---
 
-<img alt="Replacer Workflow options." src="/_images/replacer_workflow.png" center/>
+<img alt="Replacer workflow options." src="/_images/replacer_workflow.png" center/>
 
 ::: tip
 If you're having an issue with your Match & Replace rule not taking affect,
@@ -95,7 +95,7 @@ make sure you're looking at the un-prettified version of the request/response bo
 
 Using [HTTPQL](/reference/httpql.html) statements, a `Condition` can be defined in order to target specific requests or responses.
 
-<img alt="Replacer Workflow options." src="/_images/match_replace_condition.png" center/>
+<img alt="Replacer workflow options." src="/_images/match_replace_condition.png" center/>
 
 ## Testing
 

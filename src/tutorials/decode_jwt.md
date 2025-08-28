@@ -1,11 +1,11 @@
-# JWT Decode
+# Decode a JWT Workflow
 
-The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [Convert Workflow](/concepts/workflows_intro.md#convert-workflows). We will only be using built-in Nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
+The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [convert](/concepts/workflows_intro.md#convert-workflows) workflow. We will only be using built-in nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
 
 ::: info
-It is, obviously, also possible to build it easily using a single Javascript Code Node.
+It is, obviously, also possible to build it easily using a single Javascript node.
 
-[Learn how to use Javascript in Workflows.](/reference/workflow_nodes.md).
+[Learn how to use Javascript in workflows.](/reference/workflow_nodes.md).
 :::
 
 For this guide we will use the following token as our input:
@@ -16,7 +16,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 
 ## Step 1: Decoding the Token
 
-This is super easy since Caido offers a Node just for that called `JWT Decode`. Just drag it into your Workflow and connect it! :rocket:
+This is super easy since Caido offers a node just for that called `JWT Decode`. Just drag it into your workflow and connect it! :rocket:
 
 <img width="300" alt="Workflow for step 1" src="/_images/jwt_decode_step_1_workflow.png" center/>
 
@@ -24,7 +24,7 @@ If you hit `Save and Run` just then, you will see that nothing is displayed in t
 
 This is normal since we have not selected what we want as an output! :grimacing:
 
-Go ahead and click on the `Convert End` Node to select the output, we'll choose `$jwt_decode.header`.
+Go ahead and click on the `Convert End` node to select the output, we'll choose `$jwt_decode.header`.
 
 <img width="600" alt="Selection of convert end input" src="/_images/jwt_decode_step_1_end.png" center/>
 
@@ -33,14 +33,14 @@ Now you should see the header displayed in the output when you click on `Save an
 ## Step 2: Displaying the Header and Payload
 
 It would be great if we could see both the header and the payload in one go wouldn't it?
-This is where the `Join` Node comes in real handy. Try dragging it into your Workflow and connecting it.
+This is where the `Join` node comes in real handy. Try dragging it into your workflow and connecting it.
 
 <img width="300" alt="Workflow for step 2" src="/_images/jwt_decode_step_2_workflow.png" center/>
 
-This Node requires a bit of configuration, you need to specify the `Left` and `Right` elements of the join and the `Separator` you want to see in between those elements.
+This node requires a bit of configuration, you need to specify the `Left` and `Right` elements of the join and the `Separator` you want to see in between those elements.
 We will use a reference to `$jwt_decode.header` as our left element, a reference to `$jwt_decode.payload` as our right element and a `.` as our separator.
 
-<img width="600" alt="Settings for the join Node" src="/_images/jwt_decode_step_2_join.png" center/>
+<img width="600" alt="Settings for the join node" src="/_images/jwt_decode_step_2_join.png" center/>
 
 Lastly, we need to change our `Convert End` data to reference our new `$join.data`, now we are talking! :sunglasses:
 
@@ -50,26 +50,26 @@ Lastly, we need to change our `Convert End` data to reference our new `$join.dat
 
 As a bonus step, we will make things pretty! :star_struck:
 
-Since we know the first two parts of the JWT are JSON, we can use two `JSON Prettify` Nodes to format them before we join them.
+Since we know the first two parts of the JWT are JSON, we can use two `JSON Prettify` nodes to format them before we join them.
 
 <img width="300" alt="Workflow for step 3" src="/_images/jwt_decode_step_3_workflow.png" center/>
 
-Since we have two Nodes of the same type, I suggest we rename them and change their [aliases](/concepts/workflows_nodes#aliases). For the first, we prettify the `$jwt_decode.header` and we give it the alias `pretty_header`.
+Since we have two nodes of the same type, I suggest we rename them and change their [aliases](/concepts/workflows_nodes#aliases). For the first, we prettify the `$jwt_decode.header` and we give it the alias `pretty_header`.
 
-<img width="500" alt="Settings for the pretty Node" src="/_images/jwt_decode_step_3_pretty.png" center/>
+<img width="500" alt="Settings for the pretty node" src="/_images/jwt_decode_step_3_pretty.png" center/>
 
-We also have to change the Join Node, to use the new references from the pretty Nodes. Namely, `$pretty_header.data` on the left and `$pretty_payload.data` on the right.
+We also have to change the Join node, to use the new references from the pretty nodes. Namely, `$pretty_header.data` on the left and `$pretty_payload.data` on the right.
 
-<img width="500" alt="Settings for the join Node" src="/_images/jwt_decode_step_3_join.png" center/>
+<img width="500" alt="Settings for the join node" src="/_images/jwt_decode_step_3_join.png" center/>
 
 ## Conclusion
 
-That's it! Now you should have a nice JWT Decoder all ready to use as a Convert Workflow! :tada:
+That's it! Now you should have a nice JWT Decoder all ready to use as a convert workflow! :tada:
 
-The full Workflow is provided below, ready to be imported.
+The full workflow is provided below, ready to be imported.
 
 <details>
-<summary>Full Workflow</summary>
+<summary>Full workflow</summary>
 
 ```json
 {
