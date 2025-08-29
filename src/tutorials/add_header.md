@@ -95,9 +95,9 @@ We must wait for the request to be sent and response to be returned before using
 ```
 
 - To stall the function from executing until the promise that represents the request and response objects is returned - the `await` keyword is used.
-- Once the response is received (_the exchange is complete_) a [Finding](/guides/findings.md) is created. Supply anything you want to the `title`, `description` and `reporter` properties of the `finding` object.
+- Once the response is received (_the exchange is complete_) a finding is created. Supply anything you want to the `title`, `description` and `reporter` properties of the `finding` object.
 - The `request` property will include the request sent that includes our custom header.
-- Finally, the creation of the Finding is awaited to give it time to be processed on the backend.
+- Finally, the creation of the finding is awaited to give it time to be processed on the backend.
 :::
 
 ## The Result

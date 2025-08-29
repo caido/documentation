@@ -33,7 +33,7 @@ For convenience, Caido provides a number of command shortcuts.
 
 | Command               | Description                                                                       | Default Keybinding |
 |-----------------------|-----------------------------------------------------------------------------------|--------------------|
-| Send to Findings      | Manually create a Finding.                                                        | -                  |
+| Send to Findings      | Manually create a finding.                                                        | -                  |
 
 ## Intercept
 

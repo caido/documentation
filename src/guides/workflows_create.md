@@ -18,7 +18,7 @@ To add new nodes, **click** on the `+ Add Node` button and the `+ Add` button of
 
 <img alt="The node selection window." src="/_images/workflows_add_node.png" center>
 
-In the workflow editor, **click**, **hold** and **drag** a node to rearrange its position. Once the nodes are arranged, **click** and **hold** on a node's <code><Icon icon="fas fa-caret-down" /></code> output socket and **drag** the line to the next node's <code><Icon icon="fas fa-caret-down" /></code> input socket to create connections.
+In the workflow editor, **click**, **hold** and **drag** a node to rearrange its position. Once the nodes are arranged, **click** and **hold** on a node's <code><Icon icon="fas fa-caret-right" /></code> output socket and **drag** the line to the next node's <code><Icon icon="fas fa-caret-right" /></code> input socket to create connections.
 
 <img alt="The connection lines between nodes." src="/_images/workflows_connect.png" center>
 
@@ -28,16 +28,16 @@ In the workflow editor, **click**, **hold** and **drag** a node to rearrange its
 
 <img alt="The editor for a On Intercept Request node." src="/_images/workflows_node_editor.png" center>
 
+::: tip
+To open the editor in a larger window, **click** on the <code><Icon icon="fa-solid fa-up-right-and-down-left-from-center" /></code> button.
+:::
+
 ::: info
 A node's `Alias` is a unique identifier used to reference it within a workflow. Aliases can only contain the following characters:
 
 - Lowercase letters: `a`-`z`
 - Numbers: `0`-`9`
 - Symbols: `-`, `_`
-:::
-
-::: tip
-You can test your workflow by **clicking** on the <code><Icon icon="fas fa-play" /> Run</code> button.
 :::
 
 Once you are done creating the workflow, **click** on the <code><Icon icon="fas fa-floppy-disk" /> Save</code> button. A message will appear notifying you that the operation was successful and the new workflow will be added to its associated type list.
