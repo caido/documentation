@@ -60,7 +60,7 @@ export async function run({ request, response }, sdk) {
 <img alt="The Javascript node editor." src="/_images/workflows_finding_javascript_node.png" center>
 
 ::: tip
-[View the workflow SDK reference in the developer documentation.](https://developer.caido.io/reference/sdks/workflow/)
+[View the workflow SDK reference](https://developer.caido.io/) in the developer documentation to learn more about JavaScript in workflows.
 :::
 
 ## Viewing Findings
