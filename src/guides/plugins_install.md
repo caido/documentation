@@ -8,7 +8,7 @@ Disclaimer: Plugins available in the Community Store run third-party code, which
 :::
 
 ::: tip
-[View the developer documenation to learn how to create your own Caido plugins!](https://developer.caido.io/)
+[View the developer documenation](https://developer.caido.io/) to learn how to create your own Caido plugins!
 :::
 
 To install a plugin, either:
