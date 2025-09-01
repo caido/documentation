@@ -247,24 +247,24 @@ The Source property is available for sorting in Search.
 
 ## Reporter
 
-The `Reporter` property identifies which feature was responsible for making an entry in the Findings table.
+The `Reporter` property identifies which feature was responsible for making an entry in the findings table.
 
 - Toggling to `^` means the sorting of the Reporter property will display **A-Z**.
 - Toggling to `˅` means the sorting of the Reporter property will display **Z-A**.
 
 ::: info
-The Reporter property is available for sorting in Findings.
+The Reporter property is available for sorting in findings.
 :::
 
 ## Title
 
-The `Title` property includes a message that is tied to an entry in the Findings table.
+The `Title` property includes a message that is tied to an entry in the findings table.
 
 - Toggling to `^` means the sorting of the Title property will display **A-Z**.
 - Toggling to `˅` means the sorting of the Title property will display **Z-A**.
 
 ::: info
-The Title property is available for sorting in Findings.
+The Title property is available for sorting in findings.
 :::
 
 ## Name

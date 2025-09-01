@@ -17,7 +17,7 @@ Right-clicking on certain elements in the Caido user-interface will open a conte
 - `Close to the Right`: Closes all other request tabs to the right of the one selected.
 - `Close All`: Closes all request tabs.
 - `Send to Automate`: Sends a request to the Automate interface.
-- `Send to Findings...`: Sends a request and response pair to the Findings interface. Selecting this option will present a window in which you can enter Finding details.
+- `Send to Findings...`: Sends a request and response pair to the findings interface. Selecting this option will present a window in which you can enter finding details.
 - `Replay in browser`: Copies a request to your clipboard as a URL. This request includes any modifications that have been made and can be entered into your browser while actively proxying traffic.
 - `View response in browser`: Copies a URL to your clipboard that allows you to view a response in your browser while actively proxying traffic.
 - `Highlight`: Color highlights a request's table row.

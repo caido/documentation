@@ -281,8 +281,29 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/workflows_create",
       },
       {
+        text: "Creating Findings",
+        link: "/guides/workflows_findings",
+      },
+      {
         text: "Passing Data Between Nodes",
         link: "/guides/workflows_references",
+      },
+    ],
+  },
+  {
+    text: "Assistant",
+    items: [
+      {
+        text: "Generating CSRF PoCs",
+        link: "/guides/assistant_csrf",
+      },
+      {
+        text: "Prompting the Assistant to Explain Requests",
+        link: "/guides/assistant_explain",
+      },
+      {
+        text: "Changing the LLM Model",
+        link: "/guides/assistant_model",
       },
     ],
   },
@@ -314,6 +335,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Plugins",
+    items: [
+      {
+        text: "Installing Plugins",
+        link: "/guides/plugins_install",
+      },
+    ],
+  },
+  {
     text: "Projects",
     items: [
       {
@@ -339,33 +369,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         ],
       },
       {
-        text: "Testing",
-        items: [
-          {
-            text: "Assistant",
-            link: "/guides/assistant",
-          },
-        ],
-      },
-      {
         text: "Logging",
         items: [
           {
             text: "Search",
             link: "/guides/search",
-          },
-          {
-            text: "Findings",
-            link: "/guides/findings",
-          },
-        ],
-      },
-      {
-        text: "Workspace",
-        items: [
-          {
-            text: "Plugins",
-            link: "/guides/plugins",
           },
         ],
       },
