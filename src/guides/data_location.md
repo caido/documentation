@@ -33,8 +33,6 @@ caido --data-path /some/data/path
 
 Open the Connection Manager and proceed with the following steps:
 
-<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center/>
-
 1. Click on the `⋮` icon to the right of the instance of which you want to change the location of the data folder and select `Edit`.
 
 <img alt="Advanced options." src="/_images/advanced_options.png" center/>
