@@ -8,7 +8,7 @@ Caido can be used without an account in Guest Mode by selecting the `Continue as
 
 <img alt="Guest Mode selection." src="/_images/guest_mode_selection.png" center/>
 
-Guest Mode is enabled by default in the desktop application via the `Allow guests` option within the `Advanced` dropdown selection in your Instance settings.
+Guest Mode is enabled by default in the desktop application via the `Allow guests` option within the `Advanced` drop-down selection in your Instance settings.
 
 <img alt="Guest Mode setting." src="/_images/guest_mode_setting.png" center/>
 

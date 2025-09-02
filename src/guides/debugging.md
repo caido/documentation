@@ -11,7 +11,7 @@ This can be enabled with the inclusion of the `--debug` command-line argument wh
 To enable this feature in Caido's desktop application:
 
 1. In the launcher window, click on the `⋮` icon and select `Edit`.
-2. Click the `Advanced` settings drop down menu to expand it.
+2. Click the `Advanced` settings drop-down menu to expand it.
 3. Select the `Debug logging` radio button and click the `Save` button.
 
 <img alt="Debug logging." src="/_images/debug_logging.png" center/>

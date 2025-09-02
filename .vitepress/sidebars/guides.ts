@@ -8,56 +8,25 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Introduction",
         link: "/guides/",
       },
-      {
-        text: "Installation",
-        link: "/guides/installation",
-      },
-      {
-        text: "Environments",
-        items: [
-          {
-            text: "Running on a VPS",
-            link: "/guides/vps",
-          },
-          {
-            text: "Running in Docker",
-            link: "/guides/docker",
-          },
-        ],
-      },
-      {
-        text: "Troubleshooting",
-        link: "/guides/troubleshooting",
-      },
-      {
-        text: "Distributions",
-        link: "/guides/distributions",
-        items: [
-          {
-            text: "Parrot Security",
-            link: "/guides/distributions/parrot_os",
-          },
-          {
-            text: "Athena OS",
-            link: "/guides/distributions/athena_os",
-          },
-        ],
-      },
     ],
   },
   {
-    text: "Configuration",
+    text: "Setup & Configuration",
     items: [
       {
-        text: "CA Certificate",
+        text: "Setup",
         items: [
           {
+            text: "Installation",
+            link: "/guides/installation",
+          },
+          {
             text: "Importing Caido's CA Certificate",
-            link: "/guides/import_ca_certificate",
+            link: "/guides/ca_certificate_importing",
           },
           {
             text: "CA Certificate Management",
-            link: "/guides/tls",
+            link: "/guides/ca_certificate_managing",
           },
         ],
       },
@@ -77,6 +46,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
             link: "/guides/listening_address",
           },
           {
+            text: "Listening on Multiple Ports",
+            link: "/guides/listening_ports",
+          },
+          {
             text: "Upstream to Another Proxy",
             link: "/guides/upstream",
           },
@@ -94,26 +67,64 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Other",
         items: [
           {
-            text: "Creating Shortcuts",
-            link: "/guides/shortcuts",
+            text: "Debugging",
+            link: "/guides/debugging",
           },
           {
             text: "Configuring the Data Directory",
             link: "/guides/data_location",
           },
           {
-            text: "Debugging",
-            link: "/guides/debugging",
-          },
-          {
             text: "Deleting Data",
-            link: "/guides/deleting_data",
+            link: "/guides/data_deleting",
           },
           {
             text: "Guest Mode",
             link: "/guides/guest_mode",
           },
         ],
+      },
+    ],
+  },
+  {
+    text: "Troubleshooting",
+    items: [
+      {
+        text: "Download & Installation",
+        link: "/guides/troubleshooting_download_installation",
+      },
+      {
+        text: "Startup",
+        link: "/guides/troubleshooting_startup",
+      },
+      {
+        text: "Authentication",
+        link: "/guides/troubleshooting_authentication",
+      },
+      {
+        text: "Runtime",
+        link: "/guides/troubleshooting_runtime",
+      },
+    ],
+  },
+  {
+    text: "Environments",
+    items: [
+      {
+        text: "Running on a VPS",
+        link: "/guides/vps",
+      },
+      {
+        text: "Running in Docker",
+        link: "/guides/docker",
+      },
+      {
+        text: "Parrot Security",
+        link: "/guides/distributions/parrot_os",
+      },
+      {
+        text: "Athena OS",
+        link: "/guides/distributions/athena_os",
       },
     ],
   },
@@ -133,8 +144,12 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/ui",
       },
       {
-        text: "Customizing Tables",
-        link: "/guides/tables",
+        text: "Sorting Traffic Table Rows",
+        link: "/guides/sorting",
+      },
+      {
+        text: "Creating Shortcuts",
+        link: "/guides/shortcuts",
       },
       {
         text: "Managing Elements",
@@ -151,11 +166,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Viewing a Sitemap",
-        link: "/guides/sitemap_view",
+        link: "/guides/sitemap_viewing",
       },
       {
         text: "Deleting a Sitemap",
-        link: "/guides/sitemap_delete",
+        link: "/guides/sitemap_deleting",
       },
     ],
   },
@@ -164,15 +179,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Defining a Scope",
-        link: "/guides/scopes_define",
+        link: "/guides/scopes_defining",
       },
       {
         text: "Applying a Scope",
-        link: "/guides/scopes_apply",
+        link: "/guides/scopes_applying",
       },
       {
         text: "Managing Scopes",
-        link: "/guides/scopes_manage",
+        link: "/guides/scopes_managing",
       },
     ],
   },
@@ -181,11 +196,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Defining a Filter",
-        link: "/guides/filters_define",
+        link: "/guides/filters_defining",
       },
       {
         text: "Applying a Filter",
-        link: "/guides/filters_apply",
+        link: "/guides/filters_applying",
       },
     ],
   },
@@ -195,6 +210,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Intercepting Traffic",
         link: "/guides/intercept_traffic",
+      },
+    ],
+  },
+  {
+    text: "HTTP History",
+    items: [
+      {
+        text: "Filtering Traffic Table Rows",
+        link: "/guides/http_history_filtering",
       },
     ],
   },
@@ -228,7 +252,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Resending Requests",
-        link: "/guides/replay_resend",
+        link: "/guides/replay_resending",
       },
       {
         text: "Using Workflows in Replay",
@@ -269,7 +293,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Avoiding Rate-Limiting Protections",
-        link: "/guides/automate_rate",
+        link: "/guides/automate_rate_limiting",
       },
     ],
   },
@@ -278,7 +302,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Creating Workflows",
-        link: "/guides/workflows_create",
+        link: "/guides/workflows_creating",
       },
       {
         text: "Creating Findings",
@@ -317,6 +341,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Search",
+    items: [
+      {
+        text: "Filtering Traffic Table Rows",
+        link: "/guides/search_filtering",
+      },
+    ],
+  },
+  {
     text: "Exports",
     items: [
       {
@@ -330,7 +363,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Uploading Files",
-        link: "/guides/files_upload",
+        link: "/guides/files_uploading",
       },
     ],
   },
@@ -384,7 +417,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Contributing to the Documentation",
-        link: "/guides/contributions/documentation",
+        link: "/guides/documentation",
       },
       {
         text: "Joining Caido's Discord Server",

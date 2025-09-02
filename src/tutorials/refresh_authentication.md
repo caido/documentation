@@ -190,7 +190,7 @@ Now, with these workflows providing up-to-date session identifiers, navigate to 
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder_tutorial.png" center/>
 
-Next, click the edit button located to the right of the placeholder. Doing so will present the `Placeholder Settings` window. Select `Environment Variable` from the top dropdown menu. Then, select the desired environment variable by name from the other dropdown menu. Click on the `Add` button to save the configuration. The addition will be reflected in the list below.
+Next, click the edit button located to the right of the placeholder. Doing so will present the `Placeholder Settings` window. Select `Environment Variable` from the top drop-down menu. Then, select the desired environment variable by name from the other drop-down menu. Click on the `Add` button to save the configuration. The addition will be reflected in the list below.
 
 <img alt="Adding an environment variable to a Replay request." src="/_images/replay_bearer_variable.png" center/>
 

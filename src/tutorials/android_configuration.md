@@ -37,7 +37,7 @@ If the device is connected, it will be listed in the output of the `adb devices`
 For both physical and virtual devices:
 
 1. Navigate to the device Wi-Fi settings and select your network SSID.
-2. Access the `Advanced` settings of the network and select the `Manual` option from the `Proxy` dropdown menu:
+2. Access the `Advanced` settings of the network and select the `Manual` option from the `Proxy` drop-down menu:
 3. Set the proxy address to: `127.0.0.1:8080`
 
 <img alt="Android proxy settings." src="/_images/android_proxy_config.png" center no-shadow width="300"/>

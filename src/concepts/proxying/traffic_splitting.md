@@ -12,7 +12,7 @@ We use the following algorithm to route a given request to the right location.
 In the diagram, `Proxy` represents forwarded requests, `API` represents the Caido UI/GraphQL API and `Kill Connection` means the client connection will be closed.
 
 :::info
-If you the algorithm doesn't work for your particular setup, consider [adding other specific listeners](http://localhost:5173/guides/listening_address.html#adding-other-listeners) that will route directly to the proxy or the UI/API.
+If you the algorithm doesn't work for your particular setup, consider [adding other specific listeners](/guides/listening_ports.md) that will route directly to the proxy or the UI/API.
 :::
 
 ```mermaid

@@ -22,7 +22,7 @@ To familiarize yourself with the HTTP History interface, continue below:
 4. The contents of the **response** paired with the selected **request** will be displayed in this pane.
 5. Clicking `Export` will present you with options to export HTTP History data.
 6. The `Enter an HTTPQL query...` input bar and `Advanced` button provide filtering options for the history feed.
-7. All active Filter Presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
+7. All active filter presets are listed here. Click on the cog wheel icon in the bottom-right corner of this pane to select/deselect filtering options.
 
 <div class="video small">
   <iframe src="https://www.youtube.com/embed/MZGr_u22UiA?si=IHDYqnGQ687BE8Qd" title="YouTube video player." frameborder="0"></iframe>
@@ -32,7 +32,7 @@ To familiarize yourself with the HTTP History interface, continue below:
 
 **If you previously edited content directly in the Intercept interface:**
 
-In the `HTTP History` and `Search` tabs, a dropdown menu will appear in any requests or responses that you modified within Intercept before forwarding. The `Manual` selection will display the edits while the `Original` selection will show the request/response in its initial state.
+In the `HTTP History` and `Search` tabs, a drop-down menu will appear in any requests or responses that you modified within Intercept before forwarding. The `Manual` selection will display the edits while the `Original` selection will show the request/response in its initial state.
 
 ::: info
 This includes any modifications made by any active Match & Replace rule(s).
