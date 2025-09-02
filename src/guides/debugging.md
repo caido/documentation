@@ -21,5 +21,5 @@ Debug information is required when [reporting bugs](/report_bug.md) to the Caido
 :::
 
 ::: info
-If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/guides/troubleshooting.html#instance-is-unreachable).
+If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/guides/troubleshooting_startup.html#instance-is-unreachable).
 :::

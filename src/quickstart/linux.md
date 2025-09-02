@@ -7,7 +7,7 @@ Caido provides a desktop application for both x86_64 and AArch64 architectures. 
 uname -m
 ```
 
-- If you are using [Parrot OS](/guides/distributions/parrot_os.md) or [Athena OS](/guides/distributions/athena_os.md), Caido already comes preinstalled.
+- If you are using [Parrot OS](/guides/parrot_os.md) or [Athena OS](/guides/athena_os.md), Caido already comes preinstalled.
 :::
 
 ## Deb (.deb)
@@ -82,7 +82,7 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 4. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
-If Caido is not launching and you are getting a FATAL error message, view the [Troubleshooting](/guides/troubleshooting.md) page for possible fixes.
+If Caido is not launching and you are getting a FATAL error message, view the [Download & Installation](/guides/troubleshooting_download_installation.md) troubleshooting guide for possible fixes.
 :::
 
 ## AUR (Arch User Repository)
@@ -141,5 +141,5 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 7. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
-If Caido is not launching and you are getting a FATAL error message, view the [Troubleshooting](/guides/troubleshooting.md) page for possible fixes.
+If Caido is not launching and you are getting a FATAL error message, view the [Download & Installation](/guides/troubleshooting_download_installation.md) troubleshooting guide for possible fixes.
 :::

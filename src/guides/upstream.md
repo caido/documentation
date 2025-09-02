@@ -11,7 +11,7 @@ Ensure upstream HTTP proxies are listening on a different address/port than Caid
 The additional configuration settings are optional:
 
 - `Use HTTPS`: Establishes an encrypted connection with the upstream proxy.
-- `Included Hosts`/`Excluded Hosts`: Allows you to [define a scope preset](/guides/scopes_define.md) to manage what traffic is sent upstream.
+- `Included Hosts`/`Excluded Hosts`: Allows you to [define a scope preset](/guides/scopes_defining.md) to manage what traffic is sent upstream.
 - `Resolve DNS over SOCKS proxy`: DNS resolution will be performed by the SOCKS proxy.
 - `Username`/`Password`: These input fields allow you to supply credentials for upstream proxies that require authentication.
 

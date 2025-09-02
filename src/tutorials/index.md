@@ -8,7 +8,7 @@ Learn from the community through these contributed guides and videos. 🎉
 
 ::: info Got a tutorial?
 
-If you have a tutorial you'd like to share with the community, please follow the [Contribution Guidelines](/guides/contributions/documentation.md)!
+If you have a tutorial you'd like to share with the community, please follow the [Contribution Guidelines](/guides/documentation.md)!
 
 Please note that these videos are not endorsed by Caido.
 :::
