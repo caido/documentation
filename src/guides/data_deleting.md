@@ -1,16 +1,16 @@
 # Deleting Data in Caido
 
-::: warning
+::: danger
 We do not recommend modifying the files directly as this might result in problems in the application and/or corruption of data. Proceed at your own risk.
 :::
 
-Although we do not recommend doing this, we are aware that deleting data is not currently possible via the application.
+Caido does not currently support a CLI argument or desktop application functionality for deleting data. However, although it is not recommended, data can be deleted manually using the SQLite CLI.
 
-Thus we will go over some SQL commands you can run to clean it manually.
+::: tip
+View the [internal files](/reference/internal_files.md) reference to learn about the file system structure.
+:::
 
-Please read our [reference on internal files](/reference/internal_files.md) first to get familiar with the different files.
-
-## Finding the Project
+## Finding a Project
 
 1. Decide which project you want to clean.
 2. Navigate to your Caido data path.
@@ -22,20 +22,22 @@ Please read our [reference on internal files](/reference/internal_files.md) firs
 ## Preparing the Project Database
 
 1. If Caido is running, kill the application.
-2. Navigate to `projects/<PROJECT UUID>/`.
+2. Navigate to `projects/<project-uuid>/`.
 3. Open the main data: `sqlite3 database.caido`
 4. Switch to WAL mode: `PRAGMA main.journal_mode = WAL;`
 5. Attach the raw database: `ATTACH DATABASE 'database_raw.caido' AS raw;`
 6. Switch to WAL mode: `PRAGMA raw.journal_mode = WAL;`
 7. Enable foreign keys: `PRAGMA foreign_keys = ON;`
 
-::: warning
+::: danger
 Do NOT skip the foreign keys step!
 :::
 
 ## Deleting Requests
 
-The requests are stored in multiple tables and thus we need to be careful when cleaning them. The order of operations is important.
+::: danger
+As traffic is stored in multiple tables, to avoid data corruption, ensure to follow the order of operations below.
+:::
 
 ### Determining Requests & Responses to Delete
 

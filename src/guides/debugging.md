@@ -2,19 +2,21 @@
 
 To assist with troubleshooting, Caido can be configured to include debug entries in the generated log files.
 
-## CLI
+## Caido CLI
 
-This can be enabled with the inclusion of the `--debug` command-line argument when using the Caido CLI.
+To enable the inclusion of debug entries in the log files with the Caido CLI, launch Caido with the `--debug` argument.
 
-## Desktop
+## Desktop Application
 
-To enable this feature in Caido's desktop application:
+To enable the inclusion of debug entries in the log files within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
 
-1. In the launcher window, click on the `⋮` icon and select `Edit`.
-2. Click the `Advanced` settings drop-down menu to expand it.
-3. Select the `Debug logging` radio button and click the `Save` button.
+<img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
 
-<img alt="Debug logging." src="/_images/debug_logging.png" center/>
+Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to expand the drop-down settings menu options and **click** on the `Debug logging` checkbox.
+
+<img alt="The Advanced instance options." src="/_images/launch_window_advanced_options.png" center/>
+
+**Click** on the `Save` button to update and save the configuration.
 
 ::: warning NOTE
 Debug information is required when [reporting bugs](/report_bug.md) to the Caido team.

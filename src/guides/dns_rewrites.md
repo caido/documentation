@@ -6,9 +6,9 @@ To control the domain to IP address resolutions for specified hosts, **click** o
 
 ## Upstream Servers
 
-To resolve DNS queries using an alternative upstream DNS server, instead of your local or ISP's DNS server:
+To resolve DNS queries using an alternative upstream DNS server, instead of your local or ISP's DNS server, either:
 
-- You can select either Google's or Cloudflare's public recursive DNS servers from the drop-down menu.
+- Select Google's or Cloudflare's public recursive DNS servers from the drop-down menu.
 
 <img alt="Google or Cloudflare DNS server options." src="/_images/upstream_dns.png" center no-shadow/>
 
@@ -18,13 +18,13 @@ To resolve DNS queries using an alternative upstream DNS server, instead of your
 
 ## Static IP
 
-Domain names can also be resolved to an IP address of your choosing by checking the `Use static IP` checkbox and providing the desired IP address in the `Redirect to static IP` input field.
+To resolve a domain names to a specific IP address, **click** on the `Use static IP` checkbox and type in the IP address in the `Redirect to static IP` input field.
 
 <img alt="Setting a static IP." src="/_images/static_ip_dns_rewrite.png" center no-shadow/>
 
 ## Hosts
 
-You can define which hosts your custom DNS configurations do/do not apply to by adding them to the `Included Hosts` and `Excluded Hosts` lists respectively.
+To define which hosts your custom DNS configurations do/do not apply to, add them to the `Included Hosts` and `Excluded Hosts` lists.
 
 ::: tip
 Glob syntax (_`*`_) is supported to account for varying subdomains and top-level domains/extended top-level domains.

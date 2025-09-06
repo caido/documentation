@@ -120,11 +120,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Parrot Security",
-        link: "/guides/distributions/parrot_os",
+        link: "/guides/parrot_os",
       },
       {
         text: "Athena OS",
-        link: "/guides/distributions/athena_os",
+        link: "/guides/athena_os",
       },
     ],
   },
@@ -219,6 +219,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Filtering Traffic Table Rows",
         link: "/guides/http_history_filtering",
+      },
+      {
+        text: "Viewing Modifications",
+        link: "/guides/http_history_modifications",
       },
     ],
   },
@@ -347,6 +351,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Filtering Traffic Table Rows",
         link: "/guides/search_filtering",
       },
+      {
+        text: "Viewing Modifications",
+        link: "/guides/search_modifications",
+      },
     ],
   },
   {
@@ -372,43 +380,20 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Installing Plugins",
-        link: "/guides/plugins_install",
+        link: "/guides/plugins_installing",
       },
     ],
   },
   {
-    text: "Projects",
+    text: "Workspace",
     items: [
       {
         text: "Saving Projects",
         link: "/guides/projects_backups",
       },
-    ],
-  },
-  {
-    text: "Features",
-    items: [
       {
-        text: "Proxy",
-        items: [
-          {
-            text: "HTTP History",
-            link: "/guides/http_history",
-          },
-          {
-            text: "WS History",
-            link: "/guides/ws_history",
-          },
-        ],
-      },
-      {
-        text: "Logging",
-        items: [
-          {
-            text: "Search",
-            link: "/guides/search",
-          },
-        ],
+        text: "Recovering Read-Only Projects",
+        link: "/guides/projects_recovering",
       },
     ],
   },

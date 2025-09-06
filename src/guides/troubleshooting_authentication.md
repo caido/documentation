@@ -1,4 +1,4 @@
-# Authentication
+# Troubleshooting: Authentication
 
 ### Can't Access Instance
 

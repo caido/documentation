@@ -16,6 +16,14 @@ Actively applied advanced options are listed below the table.
 
 <img alt="The applied filters list." src="/_images/search_applied.png" center>
 
+<ProContainer>
+The Search interface <b>HTTPQL</b> input field is available to users with Individual or Team tier subscriptions.
+</ProContainer>
+
 ::: tip
 View the [HTTPQL reference](/reference/httpql.md) to learn how to filter traffic based on certain traits.
 :::
+
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/MZGr_u22UiA?si=IHDYqnGQ687BE8Qd" title="YouTube video player." frameborder="0"></iframe>
+</div>

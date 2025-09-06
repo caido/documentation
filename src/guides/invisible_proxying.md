@@ -24,6 +24,6 @@ By default, invisible proxying is **enabled** for local instances. To disable in
 
 Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to expand the drop-down settings menu options and **click** on the `Enable invisible proxying` checkbox to remove its fill.
 
-<img alt="The Advanced instance options." src="/_images/launch_window_invisible_proxying.png" center/>
+<img alt="The Advanced instance options." src="/_images/launch_window_advanced_options.png" center/>
 
-**Click** on the Save button to update and save the configuration.
+**Click** on the `Save` button to update and save the configuration.
