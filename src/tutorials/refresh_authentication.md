@@ -194,6 +194,6 @@ Next, click the edit button located to the right of the placeholder. Doing so wi
 
 <img alt="Adding an environment variable to a Replay request." src="/_images/replay_bearer_variable.png" center/>
 
-Close the settings window and send the request. To verify the addition was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.
+Close the settings window and send the request. To verify the addition was successful, you can view the request by navigating to the Search interface.
 
 <img alt="Viewing the Replay request environment variable addition." src="/_images/search_env_variable_request_bearer.png" center/>
