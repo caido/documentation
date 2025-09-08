@@ -1,4 +1,4 @@
-# Troubleshooting: Download & Installation
+# Download & Installation
 
 ## "This site can't be reached."
 

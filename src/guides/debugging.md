@@ -19,9 +19,9 @@ Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to e
 **Click** on the `Save` button to update and save the configuration.
 
 ::: warning NOTE
-Debug information is required when [reporting bugs](/report_bug.md) to the Caido team.
+Debug information is required when [reporting bugs](/troubleshooting/report_bug.md) to the Caido team.
 :::
 
 ::: info
-If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/guides/troubleshooting_startup.html#instance-is-unreachable).
+If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/troubleshooting/startup.html#instance-is-unreachable).
 :::

@@ -87,27 +87,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Troubleshooting",
-    items: [
-      {
-        text: "Download & Installation",
-        link: "/guides/troubleshooting_download_installation",
-      },
-      {
-        text: "Startup",
-        link: "/guides/troubleshooting_startup",
-      },
-      {
-        text: "Authentication",
-        link: "/guides/troubleshooting_authentication",
-      },
-      {
-        text: "Runtime",
-        link: "/guides/troubleshooting_runtime",
-      },
-    ],
-  },
-  {
     text: "Environments",
     items: [
       {

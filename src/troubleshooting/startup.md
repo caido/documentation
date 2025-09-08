@@ -1,4 +1,4 @@
-# Troubleshooting: Startup
+# Startup
 
 ## "Instance is unreachable."
 
