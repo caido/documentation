@@ -6,8 +6,8 @@ import {
   guidesSidebar,
   quickstartSidebar,
   referenceSidebar,
-  tutorialsSidebar,
   troubleshootingSidebar,
+  tutorialsSidebar,
 } from "./sidebars";
 import MermaidExample from "./mermaid";
 
