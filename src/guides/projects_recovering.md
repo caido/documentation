@@ -9,4 +9,4 @@ Deleted projects are unrecoverable unless a [backup file was created](/guides/pr
 :::
 
 - Delete one of the first three by **clicking** on the `...` button associated with a project row and selecting <code><Icon icon="fas fa-trash" /> Delete</code>.
-- Or [create a backup file of the project](/guides/projects_backups.md), [create a new Caido instance](/concepts/essentials/instances.md) that [stores data outside of the default location](/guides/data_location.md), and [import the project backup file](/guides/projects_backups.md) to the instance.
+- Or [create a backup file of the project](/guides/projects_backups.md), create a new Caido instance that [stores data outside of the default location](/guides/data_location.md), and [import the project backup file](/guides/projects_backups.md) to the instance.
