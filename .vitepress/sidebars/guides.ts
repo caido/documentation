@@ -5,84 +5,53 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Guides",
     items: [
       {
-        text: "Introduction",
-        link: "/guides/",
+        text: "Importing Caido's CA Certificate",
+        link: "/guides/ca_certificate_importing",
+      },
+      {
+        text: "Guest Mode",
+        link: "/guides/guest_mode",
       },
     ],
   },
   {
-    text: "Setup & Configuration",
+    text: "Configuration",
     items: [
       {
-        text: "Setup",
-        items: [
-          {
-            text: "Installation",
-            link: "/guides/installation",
-          },
-          {
-            text: "Importing Caido's CA Certificate",
-            link: "/guides/ca_certificate_importing",
-          },
-          {
-            text: "CA Certificate Management",
-            link: "/guides/ca_certificate_managing",
-          },
-        ],
+        text: "CA Certificate Management",
+        link: "/guides/ca_certificate_managing",
       },
       {
-        text: "Network",
-        items: [
-          {
-            text: "Domain Allowlist",
-            link: "/guides/domain_allowlist",
-          },
-          {
-            text: "Proxying Local Traffic",
-            link: "/guides/proxy_local",
-          },
-          {
-            text: "Changing the Listening Address/Port",
-            link: "/guides/listening_address",
-          },
-          {
-            text: "Listening on Multiple Ports",
-            link: "/guides/listening_ports",
-          },
-          {
-            text: "Upstream to Another Proxy",
-            link: "/guides/upstream",
-          },
-          {
-            text: "Enabling Invisible Proxying",
-            link: "/guides/invisible_proxying",
-          },
-          {
-            text: "DNS Rewrites",
-            link: "/guides/dns_rewrites",
-          },
-        ],
+        text: "Domain Allowlist",
+        link: "/guides/domain_allowlist",
       },
       {
-        text: "Other",
-        items: [
-          {
-            text: "Debugging",
-            link: "/guides/debugging",
-          },
-          {
-            text: "Configuring the Data Directory",
-            link: "/guides/data_location",
-          },
-          {
-            text: "Deleting Data",
-            link: "/guides/data_deleting",
-          },
-          {
-            text: "Guest Mode",
-            link: "/guides/guest_mode",
-          },
-        ],
+        text: "Proxying Local Traffic",
+        link: "/guides/proxy_local",
+      },
+      {
+        text: "Changing the Listening Address/Port",
+        link: "/guides/listening_address",
+      },
+      {
+        text: "Listening on Multiple Ports",
+        link: "/guides/listening_ports",
+      },
+      {
+        text: "Upstream to Another Proxy",
+        link: "/guides/upstream",
+      },
+      {
+        text: "Enabling Invisible Proxying",
+        link: "/guides/invisible_proxying",
+      },
+      {
+        text: "DNS Rewrites",
+        link: "/guides/dns_rewrites",
+      },
+      {
+        text: "Configuring the Data Directory",
+        link: "/guides/data_location",
       },
     ],
   },
@@ -373,6 +342,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Recovering Read-Only Projects",
         link: "/guides/projects_recovering",
+      },
+    ],
+  },
+  {
+    text: "Advanced",
+    items: [
+      {
+        text: "Deleting Data",
+        link: "/guides/data_deleting",
       },
     ],
   },

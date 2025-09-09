@@ -6,6 +6,10 @@ To assist with troubleshooting, Caido can be configured to include debug entries
 
 To enable the inclusion of debug entries in the log files with the Caido CLI, launch Caido with the `--debug` argument.
 
+```
+caido --debug
+```
+
 ## Desktop Application
 
 To enable the inclusion of debug entries in the log files within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
@@ -20,8 +24,4 @@ Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to e
 
 ::: warning NOTE
 Debug information is required when [reporting bugs](/troubleshooting/report_bug.md) to the Caido team.
-:::
-
-::: info
-If you are presented with an error message of "Instance is unreachable", [refer to the troubleshooting guide](/troubleshooting/startup.html#instance-is-unreachable).
 :::

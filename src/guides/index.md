@@ -1,3 +1,7 @@
-# Guides
+# Installation
 
-The Guides section covers everything from how to install and configure Caido to both basic and advanced usage instructions.
+Learn how to download and install Caido based on your operating system:
+
+- [Caido for Windows](/quickstart/windows.md)
+- [Caido for Linux](/quickstart/linux.md)
+- [Caido for macOS](/quickstart/mac.md)
