@@ -1,5 +1,9 @@
 # Creating Environment Variables
 
+::: info
+Global environment variables are accessible across all projects. Custom environment variables are only accessible if the environment is selected.
+:::
+
 To create a new environment variable, **click** on the `+ Add` button. A new variable row will be added to the table.
 
 Next, **click** on the edit button <code><Icon icon="fas fa-pen-to-square" /></code> to edit it.
@@ -15,6 +19,14 @@ Then, depending on if the environment is new or existing, **click** on either th
 <img alt="Create button for environment variable." src="/_images/create_button.png" center/>
 
 <img alt="Update button for environment." src="/_images/update_button.png" center/>
+
+::: warning NOTE
+If a `Global` environment variable and a custom environment variable share the same name, the custom variable value will take precedence.
+:::
+
+::: info
+Environment variables set to `Secret` are obfuscated in both the frontend and on-disk.
+:::
 
 ---
 
