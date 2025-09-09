@@ -21,20 +21,12 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/context_menu",
       },
       {
-        text: "Environment",
-        link: "/reference/environment",
-      },
-      {
         text: "HTTPQL",
         link: "/reference/httpql",
       },
       {
         text: "Match & Replace",
         link: "/reference/match_replace",
-      },
-      {
-        text: "Table Columns",
-        link: "/reference/table_columns",
       },
     ],
   },
