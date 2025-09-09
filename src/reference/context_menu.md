@@ -21,8 +21,8 @@ Right-clicking on certain elements in the Caido user-interface will open a conte
 - `Replay in browser`: Copies a request to your clipboard as a URL. This request includes any modifications that have been made and can be entered into your browser while actively proxying traffic.
 - `View response in browser`: Copies a URL to your clipboard that allows you to view a response in your browser while actively proxying traffic.
 - `Highlight`: Color highlights a request's table row.
-- `Add in Scope`: Adds a request's host as in scope to either an existing or new Scope Preset.
-- `Add out of Scope`: Adds a request's host as out of scope to either an existing or new Scope Preset.
+- `Add in Scope`: Adds a request's host as in scope to either an existing or new scope preset.
+- `Add out of Scope`: Adds a request's host as out of scope to either an existing or new scope preset.
 - `Convert (Preview)`: Displays a preview of the result of a convert workflow on a selection.
 - `Convert (Replace)`: Replaces a selection with the result of a convert workflow.
 - `Run workflow`: Executes an active workflow.

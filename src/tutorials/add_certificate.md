@@ -34,7 +34,7 @@ The installation also includes the **Android SDK** which provides multiple packa
 - `adb`: The **Android Debug Bridge**, included in the Platform-Tools package, allows you to interface with the Android device using your computer's terminal.
 - `emulator`: Included in **Emulator** package, this terminal command gives you control over an AVD.
 
-You can view the location of the available SDK developer tools by selecting `SDK Manager` from the `More Actions` dropdown menu of the `Projects` interface.
+You can view the location of the available SDK developer tools by selecting `SDK Manager` from the `More Actions` drop-down menu of the `Projects` interface.
 
 <img alt="List of connected Android devices." src="/_images/sdk_manager.png" center no-shadow/>
 

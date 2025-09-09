@@ -6,7 +6,7 @@ The `Match & Replace` interface allows you to define rules to automate the modif
 
 ## Section
 
-The `Section` refers to the portion of the request or response that the rule will apply to. To target a Section, expand the dropdown menu and select one of the available options.
+The `Section` refers to the portion of the request or response that the rule will apply to. To target a Section, expand the drop-down menu and select one of the available options.
 
 ### Request Sections
 
@@ -30,7 +30,7 @@ The `Section` refers to the portion of the request or response that the rule wil
 
 ## Section Actions
 
-Certain Sections will include additional modification options that will be located to the right of the Section dropdown menu.
+Certain Sections will include additional modification options that will be located to the right of the Section drop-down menu.
 
 When targeting the `Request Query` section:
 
@@ -56,7 +56,7 @@ When targeting either the `Request Header` or `Response Header` sections:
 
 ## Matcher
 
-The `Matcher` specifies which search term will be matched for replacement. To specify a Matcher, expand the dropdown menu and select one of the available options:
+The `Matcher` specifies which search term will be matched for replacement. To specify a Matcher, expand the drop-down menu and select one of the available options:
 
 - `Full`: The entire Section will be replaced. If there are multiple Section parameters, such as when dealing with headers, all instances will be replaced.
 - `Regex`: Matches to Rust flavor regular expressions will be replaced.
@@ -75,7 +75,7 @@ To test your regular expressions, visit [regex101.com](https://regex101.com/).
 
 ## Replacer
 
-The `Replacer` specifies the modification that will replace Matcher. To specify a Replacer, expand the dropdown menu and select one of the available options:
+The `Replacer` specifies the modification that will replace Matcher. To specify a Replacer, expand the drop-down menu and select one of the available options:
 
 - `Term`: Replace the Matcher with a string value.
 - `Workflow`: Apply a [convert](/concepts/workflows_intro.html#convert-workflows) workflow to the Matcher.

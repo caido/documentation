@@ -8,4 +8,4 @@ With `Workflow` as the `Type`, **click** on the `Select a workflow` drop-down me
 
 Applied workflows are listed and will be applied in top to bottom order. To avoid collisions between workflows, you can rearrange their order by **left-clicking**, **dragging**, **holding**, and **releasing** a workflow either above or below other workflows in the list.
 
-Close the settings window and send the request. To verify the application was successful, you can view the request by navigating to the [Search](/guides/search.md) interface.
+Close the settings window and send the request. To verify the application was successful, you can view the request by navigating to the Search interface.

@@ -1,30 +1,29 @@
 # Invisible Proxying
 
-Invisible proxying a setting that you can enable/disable for your listeners.
-To learn more about this operation mode of operation, see our [concept page](/concepts/proxying/invisible) on the subject.
-
-:::warning
-If you enable invisible proxying on a remote instance, you MUST make sure to use the **same address and port**.
-This includes any SSH port forwarding you might use.
-Otherwise, Caido will not be able to [split the traffic](/concepts/proxying/traffic_splitting) correctly and will NOT work.
+::: tip
+View the [Invisible Proxying for Non-Proxy Aware Thick Clients](/tutorials/invisible_proxy.md) tutorial for a detailed walk-through on configuring invisible proxying.
 :::
 
-## Enabling for the CLI
+::: warning NOTE
+If you enable invisible proxying on a remote instance, you must ensure the **same address and port** is used. This includes any SSH port forwarding you may use. Otherwise, Caido will not be able to [split the traffic](/concepts/proxying/traffic_splitting) correctly and will not work.
+:::
 
-By default, invisible proxying is disabled for the CLI, you can enable with by using the `--invisible` option.
+## Caido CLI
+
+By default, invisible proxying is **disabled** for the Caido CLI. To enable invisible proxying with the Caido CLI, launch Caido with the `--invisible` argument.
 
 ```
 caido --invisible
 ```
 
-## Enabling for the Desktop Application
+## Desktop Application
 
-By default, invisible proxying is enabled for local instances. You can change that by going in the options.
+By default, invisible proxying is **enabled** for local instances. To disable invisible proxying within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
 
-1. Click on the `⋮` icon to the right of the instance you want to apply a custom listening address to and select `Edit`.
+<img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
 
-<img alt="Connection manager instance more options." src="/_images/connection_manager_instance_more_options.png" center no-shadow width=800px/>
+Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to expand the drop-down settings menu options and **click** on the `Enable invisible proxying` checkbox to remove its fill.
 
-2. Expand the `Advanced` settings and toggle the `Enable invisible proxying`
+<img alt="The Advanced instance options." src="/_images/launch_window_advanced_options.png" center/>
 
-<img alt="Connection manager invisible proxying" src="/_images/connection_manager_invisible_proxying.png" center width=600px/>
+**Click** on the `Save` button to update and save the configuration.

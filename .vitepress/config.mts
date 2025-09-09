@@ -6,6 +6,7 @@ import {
   guidesSidebar,
   quickstartSidebar,
   referenceSidebar,
+  troubleshootingSidebar,
   tutorialsSidebar,
 } from "./sidebars";
 import MermaidExample from "./mermaid";
@@ -63,7 +64,7 @@ export default defineConfig({
       { text: "Reference", link: "/reference/" },
       { text: "Concepts", link: "/concepts/" },
       { text: "FAQ", link: "/faq" },
-      { text: "Report a Bug", link: "/report_bug" },
+      { text: "Troubleshooting", link: "/troubleshooting" },
     ],
 
     sidebar: {
@@ -72,6 +73,7 @@ export default defineConfig({
       "/guides/": guidesSidebar,
       "/concepts/": conceptsSidebar,
       "/tutorials/": tutorialsSidebar,
+      "/troubleshooting/": troubleshootingSidebar,
     },
 
     outline: {

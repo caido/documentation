@@ -27,7 +27,7 @@ The **Namespaces** that Caido supports include:
 
 - `req`: HTTP requests.
 - `resp`: HTTP responses.
-- `preset`: Filter Presets.
+- `preset`: Filter presets.
 - `row`: A table row.
 - `source`: The Caido feature source.
 
@@ -142,7 +142,7 @@ Using a standalone string (_such as `"my value"`_) will search across both reque
 
 ### preset
 
-When using the `preset` Namespace - the value can be reference by either the name or the alias of a Filter Preset:
+When using the `preset` Namespace - the value can be reference by either the name or the alias of a filter preset:
 
 - **Name**: `preset:"Preset name"`.
 - **Alias**: `preset:preset-alias`.

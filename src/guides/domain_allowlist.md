@@ -2,33 +2,41 @@
 
 For security, only defined domains can access the Caido API and interface.
 
+For example, when utilizing a domain that resolves to `127.0.0.1` to [proxy local traffic](/guides/proxy_local.md), the domain must be added to the `Allowed Domains` list.
+
 <img alt="Desktop Allowed Domains setting." src="/_images/unallowed_domain.png" center/>
 
-For example, when utilizing a domain that resolves to `127.0.0.1` for [proxying local traffic](/guides/proxy_local.md), the domain must be added to the `Allowed Domains` list.
+## Caido CLI
+
+To add a domain to the allowlist with the Caido CLI, launch Caido with the `--ui-domain <domain>` argument.
+
+```
+--ui-domain example.com
+```
 
 ## Desktop Application
 
-In the Caido desktop application, this list can be found within your instance settings.
+To add a domain to the allowlist within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
 
-<img alt="Desktop Allowed Domains setting." src="/_images/instance_settings_allowed_domains.png" center/>
+<img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
 
-## CLI
+Type a domain name in the `Enter domain (e.g., example.com)` input field and **click** on the `+` button.
 
-When using the Caido CLI, to add a domain to the allowlist, use `--ui-domain=` to specify the addition:
+<img alt="Adding a domain to the allowlist." src="/_images/launch_window_allowlist.png" center/>
 
-```
---ui-domain=example.com
-```
+Once you have defined the allowlist, **click** on the `Save` button to update and save the configuration.
 
 ## Docker
 
-To add a domain to the allowlist when running the Caido Docker image, you need to override the default command with:
+To add a domain to the allowlist when running the Caido Docker image, either:
+
+- Override the default command with:
 
 ```
 docker run caido/caido caido-cli --no-renderer-sandbox --no-open --listen 0.0.0.0:8080 --ui-domain=example.com
 ```
 
-Or you can override the Docker Compose:
+- Or override the Docker Compose:
 
 ```
 services:

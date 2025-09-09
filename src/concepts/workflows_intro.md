@@ -16,7 +16,7 @@ _A workflow that will take user-provided input, base64 encode it and then output
 
 Passive workflows are **automatically triggered** when their specifications/conditions are met. If the specifications/conditions of the workflow are not met throughout every step of the workflow - the workflow will stop processing the request/response. These specifications/conditions are set by nodes and include prerequisites such as:
 
-- If the request/response is within a set [Scope](/guides/search.md).
+- If the request/response is within a set scope.
 - If the request/response is a match according to [HTTPQL](/reference/httpql.md) syntax.
 - If the prior node's specification/condition evaluated to True or False (_Boolean value_).
 

@@ -1,47 +1,43 @@
 # Running in Docker
 
-## Running the Image
+Caido is available as an image on [Docker Hub](https://hub.docker.com/r/caido/caido) that can be ran directly on x86 architecture.
 
-We offer images on [Dockerhub](https://hub.docker.com/r/caido/caido) that you can run directly on `x86`:
+## Launching the Docker Image
+
+To launch the image, specify the port with the `-p` argument.
+
+For example, to launch the image on port `7000`, enter:
 
 ```
 docker run --rm -p 7000:8080 caido/caido:latest
 ```
 
-This will start Caido on port 7000. You can then point your browser's proxy settings to `127.0.0.1:7000`.
+You can then point your browser's proxy settings to `127.0.0.1:7000`.
 
-To use another port, replace `7000` in the command above with a different port.
-
-::: info
+::: tip
 For M1 users, it is now possible to enable [Rosetta](https://docs.docker.com/desktop/settings/mac/#use-rosetta-for-x86amd64-emulation-on-apple-silicon) in the Docker settings. You can then run images with `--platform linux/amd64`.
 :::
 
 ## Project Persistence
 
-By default, projects created in the Docker container are not saved between `docker run` commands.
+By default, projects created in the Docker container are not saved between `docker run` commands. Due to this, we recommend mounting a volume to store data on your file system to avoid losing data between Caido updates.
 
-We recommend mounting a volume to keep your data on your file system and to avoid losing data between Caido updates.
+To mount a volume, append the `-v <host-path>:/home/caido/.local/share/caido` argument to the `docker run` command.
 
-This is done by appending the `-v` parameter to the `docker run` command using the format `-v <HOST PATH>:/home/caido/.local/share/caido`.
+::: warning NOTE
+The host path must be an absolute path with the necessary permissions. Ensure the necessary permissions are granted to the host path with: `chown -R 999:999 <host-path>`
+:::
 
-Note that the host path must be an absolute path.
-
-Make sure you give the right permissions to `<HOST PATH>` via `chown -R 999:999 <HOSTPATH>`.
-
-Your running command should look like the following:
+For example, to store Caido projects in `/home/my_user/my_data`, enter:
 
 ```
 docker run --rm -p 7000:8080 \
   -v /home/my_user/my_data:/home/caido/.local/share/caido caido/caido:latest
 ```
 
-::: info
-`/home/my_user/my_data` will be the folder containing Caido projects.
-:::
-
 ## Building the Image
 
-If you prefer to build the image yourself, here is a `Dockerfile` sample you can use:
+If you prefer to build the image yourself, a `Dockerfile` example is provided below:
 
 ```Dockerfile
 ## Base ##

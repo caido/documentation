@@ -12,9 +12,7 @@ View the roadmap to stay up-to-date with Caido's development here:
 
 ## Check Our Directory of Common Errors
 
-We have documented some of the common errors you might encounter while using Caido:
-
-- [Troubleshooting](/guides/troubleshooting.md)
+We have documented some of the common errors you might encounter while using Caido. View the Troubleshooting guides for possible resolutions.
 
 ## Caido on Discord
 
