@@ -87,7 +87,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Environments",
+    text: "Deployments",
     items: [
       {
         text: "Running on a VPS",
