@@ -6,13 +6,11 @@ In this tutorial, we will create a new [convert](/concepts/workflows_intro.md#co
 This example workflow is available for download and import. [Download the workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json).
 :::
 
-## Creating a New Workflow
+## Creating a Passive Workflow
 
-> Navigate to the **workflow editor** for the convert type by following these steps:
->
-> - Select the `Workflow` tab from the left-hand menu within the Caido window.
-> - Select the `Convert` tab.
-> - Click `+ New workflow`.
+To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
+
+<img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
 
 1. Enter an arbitrary name for your workflow.
 2. (_Optional_) Enter a description of the workflow.

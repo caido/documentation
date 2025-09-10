@@ -43,28 +43,34 @@ To begin, navigate to the Workflows interface, select the `Passive` tab, and cli
 
 <img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
 
+Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
+
 ## Nodes and Connections
 
 For both workflows, the overall node layout will be:
 
 <img alt="Refresh authentication workflow." src="/_images/nodes_auth_refresh.png" center>
 
-- The `On Intercept Response` node will output `$on_intercept_response.request` which represents a response's associated request.
-- The request will be sent to the `In Scope` node. This will check if the request is within your current scope.
-- If the request is within scope the request and response pair will be passed to the `JavaScript` node. If it is not - the workflow will end.
-Once the response has been processed by the script in the `JavaScript` node, the workflow will come to an end.
+- The `On Intercept Response` node outputs `$on_intercept_response.request` and `$on_intercept_response.response` objects which represent proxied requests and their corresponding responses.
+- The `In Scope` node checks if the value of a request's Host header is included in the in-scope list of a scope preset. If it is not - the workflow will end.
+- In-scope request and response objects will be passed to the `Javascript` node.
+- Once a request or response has been processed by the script in the `Javascript` node, the workflow will end.
 
 ## Session Cookies
 
 Consider a response to a successful credential submission that issues a session cookie via the `Set-Cookie` header:
 
 ```http
-Set-Cookie: session=757365723D636169646F3B726F6C653D75736572
+Set-Cookie: session=757365723D636169646F3B726F6C653D75736572;
 ```
 
 ### Extracting a Session Cookie
 
-Click on the `Javascript` node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
+**Click** on the `In Scope` node to access its editor and ensure the `$on_intercept_response.request` object is [referenced as input](/guides/workflows_references.md).
+
+<img alt="Referencing the request object." src="/_images/workflows_response_reference_request.png" center>
+
+Close the editor window, **click** on the `Javascript` node to access its editor, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
 export async function run({ request, response }, sdk) {
@@ -82,16 +88,22 @@ export async function run({ request, response }, sdk) {
 }
 ```
 
+Also ensure to reference the `$on_intercept_response.request` and `$on_intercept_response.response` objects in the `Javascript` node.
+
+<img alt="Referencing the request object." src="/_images/workflows_response_reference_request_response.png" center>
+
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
+
 ### Script Breakdown
 
-First, an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters. The script will execute everytime an in-scope response passes through the proxy.
+First, an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters. The script will execute every time an in-scope response object is passed from the `In Scope` node.
 
 ```js
 export async function run({ request, response }, sdk) {
   if (response) {
 ```
 
-Then, using the `.getHeader()` method, we extract the `Set-Cookie` header and store it in a variable named `cookie`. If the header exists, we use the `.setVar()` method of the environment service to set an environment variable.
+Then, using the `.getHeader()` method, the `Set-Cookie` header is extracted and stored in the `cookie` variable. If the header exists, the `.setVar()` method is used to set an environment variable.
 
 ```js
     let cookie = response.getHeader("Set-Cookie");
@@ -104,9 +116,19 @@ Then, using the `.getHeader()` method, we extract the `Set-Cookie` header and st
       });
 ```
 
+### Testing the Workflow
+
+To test the workflow, type in an in-scope domain in the connection URL input field, and add a `Set-Cookie: session=<value>;` header to the response.
+
+<img alt="Creating the test response." src="/_images/refresh_authentication_cookie_test.png" center/>
+
+Next, **click** on the `Run` button. A message will appear notifying you that the workflow executed successfully.
+
+<img alt="Workflow execution success toast message." src="/_images/workflows_toast_message_success.png" center/>
+
 ### The Result
 
-To view the set environment variable, navigate to the `Environment` interface and refresh the `Global` environment.
+To view the set environment variable, navigate to the `Environment` interface and refresh the `Global` environment by **clicking** on its list row.
 
 <img alt="Workflow cookie environment variable." src="/_images/workflow_cookie_env.png" center>
 
@@ -120,7 +142,11 @@ Consider a response to a successful credential submission that issues a session 
 
 ### Extracting a Session Token
 
-Click on the `Javascript` node to access its detailed view. Then click within the coding environment, select all of the existing code, and replace it with the following script:
+**Click** on the `In Scope` node to access its editor and ensure the `$on_intercept_response.request` object is [referenced as input](/guides/workflows_references.md).
+
+<img alt="Referencing the request object." src="/_images/workflows_response_reference_request.png" center>
+
+Close the editor window, **click** on the `Javascript` node to access its editor, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
 export async function run({ request, response }, sdk) {
@@ -142,23 +168,29 @@ export async function run({ request, response }, sdk) {
   }
 }
 ```
+
+Also ensure to reference the `$on_intercept_response.request` and `$on_intercept_response.response` objects in the `Javascript` node.
+
+<img alt="Referencing the request object." src="/_images/workflows_response_reference_request_response.png" center>
+
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
 
 ### Script Breakdown
 
-First an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters. The script will execute everytime an in-scope response passes through the proxy.
+First an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters.
 
 ```js
 export async function run({ request, response }, sdk) {
 ```
 
-Using `sdk.requests.matches()` we can scope the execution of the script to common authentication endpoints with HTTPQL statements.
+Using `sdk.requests.matches()` the execution of the script is scoped to common authentication endpoints with HTTPQL statements. The script will execute every time an in-scope request object to one of these endpoints is passed from the `In Scope` node.
 
 ```js
   const authFilter = `req.path.cont:"/auth" OR req.path.cont:"/login" OR req.path.cont:"/token" OR req.path.cont:"/oauth" OR req.path.cont:"/refresh"`;
   if (sdk.requests.matches(authFilter, request, response)) {
 ```
 
-Then, using the `.getBody()` method, we extract the response body and if it exists we parse it as JSON using `.toJson()`. If an `access_token` parameter exists, we use the `.setVar()` method of the environment service to set an environment variable.
+Then, using the `.getBody()` method, we extract the response body and if it exists we parse it as JSON using `.toJson()`. If an `access_token` parameter exists, we use the `.setVar()` method to set an environment variable.
 
 ```js
     let body = response.getBody();
@@ -178,9 +210,23 @@ Then, using the `.getBody()` method, we extract the response body and if it exis
 }
 ```
 
+### Testing the Workflow
+
+To test the workflow, type in an in-scope domain in the connection URL input field, edit the request endpoint to be in-scope and add the following body data to the response:
+
+``` json
+{"access_token":"BQA_QoGKzM2I7sqcQ5cKB0oM4F_1VjwYXyUBdFJZ63nMwbrAejF0hel0dA0Ox9IRH_IT-rbt7F7dBudUOGX-kQExt3ezVuL0OBOOXYPaTVjQ5ZpE_ybkkKNEsyIjzIwOtx_7_xhuXvdaVp0BM_Lq2empsCauwvMujhPNf0HcTG0D-zIfLx9wh465oeGk0qVPM0ypFRxRWjkzM0BVMcRzG07pNk9HT_t3cBhuXt3r57o8XqKUQXlhNhWfMNca9N2v","token_type":"Bearer","expires_in":3600,"scope":"email"}
+```
+
+<img alt="Creating the test response." src="/_images/refresh_authentication_token_test.png" center/>
+
+Next, **click** on the `Run` button. A message will appear notifying you that the workflow executed successfully.
+
+<img alt="Workflow execution success toast message." src="/_images/workflows_toast_message_success.png" center/>
+
 ### The Result
 
-To view the set environment variable, navigate to the `Environment` interface and refresh the `Global` environment.
+To view the set environment variable, navigate to the `Environment` interface and refresh the `Global` environment by **clicking** on its list row.
 
 <img alt="Workflow token environment variable." src="/_images/workflow_token_env.png" center>
 

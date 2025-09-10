@@ -1,6 +1,6 @@
 # Send a Notification to Discord Workflow
 
-In this tutorial, we create an active workflow to send a notification to Discord. This method can also be used with other types of workflows.
+In this tutorial, we create an active workflow that will send a notification to Discord.
 
 We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
@@ -10,31 +10,39 @@ The request and response objects of this module differ from those used in the [B
 
 ## Creating an Active Workflow
 
-To begin, navigate to the Workflows interface, select the `Active` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Active` tab, and **click** on the `+ New workflow` button.
 
 <img alt="Creating a new active workflow." src="/_images/new_active_workflow.png" center/>
 
-Next, **click**, **hold** and **drag** a `Javascript` node into the workflow editor field and make [Connections](/concepts/workflows_nodes.md#connecting-nodes) to the `Active Start` and `Active End` nodes. Then click on the `Javascript` node to access its detailed view.
+Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
-<img alt="Building the active workflow." src="/_images/discord_workflow.png" center/>
+## Nodes and Connections
+
+Too add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
+
+For this workflow, the overall node layout will be:
+
+<img alt="The nodes used and their connections." src="/_images/discord_notification_nodes.png" center>
+
+- The `Active Start` node outputs `$active_start.request` and `$active_start.response` objects which represent proxied requests the workflow was initiated on and their corresponding responses.
+- The request and response objects will be passed to the `Javascript` node.
+- Once the request and response objects have been processed by the script in the `Javascript` node, the workflow will end.
 
 ## Creating and Sending a Request
 
-Now, click within the coding environment of the `JavaScript` node, select all of the existing code, and delete it.
+**Click** on the `Javascript` node to access its editor. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
-To send a request, you will first need to import the `Request` class and the `fetch()` function from the `caido:http` module.
+::: warning NOTE
+Replace `<webhook-url>` with the URL of your own [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+:::
 
 ```js
 // Request object under the alias of FetchRequest.
 import { Request as FetchRequest, fetch } from "caido:http";
-```
 
-Next, define an asynchronous function and the parameters of your Discord message.
-
-```js
 export async function run(input, sdk) {
   // Discord webhook data.
-  const webhookData = {
+  const message = {
     username: "Caido Bot",
     avatar_url: "https://caido.io/images/logo.color.webp",
     content: "Message from Caido Workflow",
@@ -53,12 +61,6 @@ export async function run(input, sdk) {
           value: "Value B",
           inline: true
         }
-        // You could also add elements from the request like
-        // {
-        //   name: "Host",
-        //   value: input.request.getHost(),
-        //   inline: true
-        // },
       ],
       footer: {
         text: "Sent via Caido"
@@ -66,35 +68,19 @@ export async function run(input, sdk) {
       timestamp: new Date().toISOString()
     }]
   };
-```
 
-::: tip
-[Visit this guide for a list of Discord message parameter options.](https://birdie0.github.io/discord-webhooks-guide/discord_webhook.html)
-:::
+  // Create a new request to Discord webhook.
+  const fetchRequest = new FetchRequest("<webhook-url>", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(message)
+  });
 
-Then, define the request object, using your Discord Webhook URL as the input parameter of the constructor and specify the HTTP method and Content-Type header in the [RequestOpts](https://developer.caido.io/reference/modules/caido/http.html#requestopts) parameter object.
-
-::: tip
-[Learn how to create a Discord Webhook.](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
-:::
-
-```js
-// Create a new request to Discord webhook.
-const fetchRequest = new FetchRequest("YOUR-DISCORD-WEBHOOK-URL", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(webhookData),
-});
-```
-
-We must await for the request to be sent and processed before we are able to obtain data from the response. By accessing the response properties, we can print the data to the backend logs.
-
-```js
   try {
     const response = await fetch(fetchRequest);
-
+    
     // Create response data object.
     const responseData = {
       status: response.status,
@@ -104,7 +90,7 @@ We must await for the request to be sent and processed before we are able to obt
 
     // Log the response data with proper formatting.
     sdk.console.log("Response data:", JSON.stringify(responseData, null, 2));
-
+    
     // For Discord webhooks, 204 means success.
     if (response.status === 204) {
       return "Webhook sent successfully";
@@ -119,71 +105,100 @@ We must await for the request to be sent and processed before we are able to obt
 }
 ```
 
-Finally, click the `Save` button in the bottom right corner of the workflow editor.
+Next, ensure the `$active_start.request` and `$active_start.response` objects are [referenced as input](/guides/workflows_references.md) to the `Javascript` node.
 
-::: tip
-To view the entire script, expand the following:
+<img alt="Referencing the request object." src="/_images/workflows_active_reference_request_response.png" center>
 
-<details>
-<summary>Full Script</summary>
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
+
+## Script Breakdown
+
+To be able to send a fetch request, the `Request` class and the `fetch()` function are imported from the `caido:http` module.
 
 ```js
 // Request object under the alias of FetchRequest.
 import { Request as FetchRequest, fetch } from "caido:http";
+```
 
+Next, an asynchronous function is defined that takes the `input` and the `sdk` interface object as parameters.
+
+``` js
 export async function run(input, sdk) {
+```
+
+::: tip
+[View this guide for a list of Discord message options.](https://birdie0.github.io/discord-webhooks-guide/discord_webhook.html)
+:::
+
+The body data of the fetch request is defined as an object and stored in the `message` variable.
+
+```js
   // Discord webhook data.
-  const webhookData = {
+  const message = {
     username: "Caido Bot",
     avatar_url: "https://caido.io/images/logo.color.webp",
     content: "Message from Caido Workflow",
-    embeds: [
-      {
-        title: "Webhook Fetch Request",
-        description: "Hello World!",
-        color: 14329120,
-        fields: [
-          {
-            name: "Field A",
-            value: "Value A",
-            inline: true,
-          },
-          {
-            name: "Field B",
-            value: "Value B",
-            inline: true,
-          },
-        ],
-        footer: {
-          text: "Sent via Caido",
+    embeds: [{
+      title: "Webhook Fetch Request",
+      description: "Hello World!",
+      color: 14329120,
+      fields: [
+        {
+          name: "Field A",
+          value: "Value A",
+          inline: true
         },
-        timestamp: new Date().toISOString(),
+        {
+          name: "Field B",
+          value: "Value B",
+          inline: true
+        }
+      ],
+      footer: {
+        text: "Sent via Caido"
       },
-    ],
+      timestamp: new Date().toISOString()
+    }]
   };
+```
 
+Then, using `new FetchRequest()` the fetch request is defined, using a Discord Webhook URL as the `input` parameter of the constructor. The HTTP `method`, `headers`, and `body` data are specified in the [RequestOpts](https://developer.caido.io/reference/modules/caido/http.html#requestopts) object parameter.
+
+```js
   // Create a new request to Discord webhook.
-  const fetchRequest = new FetchRequest("YOUR-DISCORD-WEBHOOK-URL", {
+  const fetchRequest = new FetchRequest("<webhook-url>", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(webhookData),
+    body: JSON.stringify(message)
   });
+```
 
+Then, `fetch(fetchRequest)` is used to send the constructed request.
+
+Since we must wait for the request to be sent and response to be returned, the `await` directive is used.
+
+The response is stored in the `response` variable.
+
+```js
   try {
     const response = await fetch(fetchRequest);
+```
 
+By accessing the `response` object properties, we can print the data to the backend logs.
+
+``` js
     // Create response data object.
     const responseData = {
       status: response.status,
       statusText: response.statusText,
-      headers: Object.fromEntries(response.headers.entries()),
+      headers: Object.fromEntries(response.headers.entries())
     };
 
     // Log the response data with proper formatting.
     sdk.console.log("Response data:", JSON.stringify(responseData, null, 2));
-
+    
     // For Discord webhooks, 204 means success.
     if (response.status === 204) {
       return "Webhook sent successfully";
@@ -198,20 +213,18 @@ export async function run(input, sdk) {
 }
 ```
 
-</details>
-:::
+## Testing the Workflow
 
-## Using the Active Workflow
+To test the workflow, **right-click** on a request to open the context menu, hover over the `Run workflow` option, and select the workflow.
 
-To use your newly created workflow, right click on a request to open up the context menu. Hover over the `Run workflow` option and select the given name.
+<img alt="Running the active workflow." src="/_images/discord_notification_test.png" center/>
 
-<img alt="Running the active workflow." src="/_images/trigger_discord_workflow.png" center/>
+## The Result
 
-Soon after, you will receive a message in your Discord channel.
+You will receive a message in your Discord channel.
 
-<img alt="Discord message." src="/_images/caido_discord_message.png" center/>
+<img alt="The Discord message." src="/_images/discord_notification_result.png" center/>
 
-::: info
 Within the logs, the message will resemble:
 
 ```
@@ -248,5 +261,3 @@ Within the logs, the message will resemble:
 2025-04-09T00:45:26.135079Z  INFO main service|task: Finishing task 26
 
 ```
-
-:::
