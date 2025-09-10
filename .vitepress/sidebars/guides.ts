@@ -5,6 +5,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Guides",
     items: [
       {
+        text: "Installation",
+        link: "/guides/",
+      },
+      {
         text: "Importing Caido's CA Certificate",
         link: "/guides/ca_certificate_importing",
       },
