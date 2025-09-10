@@ -30,6 +30,10 @@ export const troubleshootingSidebar: DefaultTheme.SidebarItem[] = [
     text: "Reporting a Bug",
     items: [
       {
+        text: "Enabling Debug Mode",
+        link: "/troubleshooting/debugging",
+      },
+      {
         text: "Submitting a Report",
         link: "/troubleshooting/report_bug",
       },
