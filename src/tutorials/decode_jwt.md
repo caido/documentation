@@ -1,79 +1,80 @@
 # Decode a JWT Workflow
 
-The goal of this guide is to build a pleasant [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) decoder as a [convert](/concepts/workflows_intro.md#convert-workflows) workflow. We will only be using built-in nodes. JSON Web Tokens (JWT) are composed of three base64 encoded parts separated by dots. The first is the header, the second is the payload and the third is the signature.
+In this tutorial, we will create a convert workflow that will decode a [JSON Web Token](https://en.wikipedia.org/wiki/JSON_Web_Token) (JWT).
 
-::: info
-It is, obviously, also possible to build it easily using a single Javascript node.
+## Creating a Convert Workflow
 
-[Learn how to use Javascript in workflows.](/reference/workflow_nodes.md).
-:::
+To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
 
-For this guide we will use the following token as our input:
+<img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
+
+Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
+
+## Nodes and Connections
+
+Too add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
+
+For this workflow, the overall node layout will be:
+
+<img alt="The nodes used and their connections." src="/_images/decode_jwt_nodes.png" center>
+
+- The `Convert Start` node outputs `$convert_start.data` that represents the input that will undergo conversion.
+- The JWT input will be passed to the `JWT Decode` node, which will extract the header and body segments of the JWT, decode them, and output them separately as `$jwt_decode.header` and `$jwt_decode.payload`.
+- The `Join` node will concatenate the decoded header and body segments with a specified separator and output `$join.data`.
+- Once the decoded segments have been processed by the `Join` node, the data will be output, and the workflow will end.
+
+- Once the request and response objects have been processed by the script in the `Javascript` node, the workflow will end.
+
+## Decoding a JWT
+
+1. **Click** on the `JWT Decode` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
+
+<img alt="Referencing the input data." src="/_images/workflows_convert_reference_data.png" center>
+
+2. Close the editor window and **click** on the `Join` node to access its editor.
+
+3. Reference `$jwt_decode.header` as the value of the `Left (bytes)` input data and `$jwt_decode.payload` as the value of the `Right (bytes)` input data.
+
+<img alt="Referencing the header and payload segments as input data." src="/_images/workflows_join_reference_header_payload.png" center>
+
+4. Next, type in a `.` character in the `Separator` input field.
+
+<img alt="Specifying the separator value." src="/_images/decode_jwt_separator.png" center>
+
+5. Close the editor window and **click** on the `Convert End` node to access its editor.
+
+6. Reference `$join.data` as input data.
+
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
+
+## Testing the Workflow
+
+To test the workflow, add the following JWT in the `Input` text area:
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
-## Step 1: Decoding the Token
+and **click** on the `Run` button.
 
-This is super easy since Caido offers a node just for that called `JWT Decode`. Just drag it into your workflow and connect it! :rocket:
+To test the workflow, paste a valid JWT in the `Input` text area and **click** on the `Run` button.  A message will appear notifying you that the workflow executed successfully.
 
-<img width="300" alt="Workflow for step 1" src="/_images/jwt_decode_step_1_workflow.png" center/>
+<img alt="Workflow execution success toast message." src="/_images/workflows_toast_message_success.png" center/>
 
-If you hit `Save and Run` just then, you will see that nothing is displayed in the output.
+## The Result
 
-This is normal since we have not selected what we want as an output! :grimacing:
+The decoded and joined header and payload of the JWT will appear in the `Output` text area:
 
-Go ahead and click on the `Convert End` node to select the output, we'll choose `$jwt_decode.header`.
-
-<img width="600" alt="Selection of convert end input" src="/_images/jwt_decode_step_1_end.png" center/>
-
-Now you should see the header displayed in the output when you click on `Save and Run`. :fire:
-
-## Step 2: Displaying the Header and Payload
-
-It would be great if we could see both the header and the payload in one go wouldn't it?
-This is where the `Join` node comes in real handy. Try dragging it into your workflow and connecting it.
-
-<img width="300" alt="Workflow for step 2" src="/_images/jwt_decode_step_2_workflow.png" center/>
-
-This node requires a bit of configuration, you need to specify the `Left` and `Right` elements of the join and the `Separator` you want to see in between those elements.
-We will use a reference to `$jwt_decode.header` as our left element, a reference to `$jwt_decode.payload` as our right element and a `.` as our separator.
-
-<img width="600" alt="Settings for the join node" src="/_images/jwt_decode_step_2_join.png" center/>
-
-Lastly, we need to change our `Convert End` data to reference our new `$join.data`, now we are talking! :sunglasses:
-
-<img width="600" alt="Output for the step" src="/_images/jwt_decode_step_2_output.png" center/>
-
-## Step 3: Prettifying the Whole Thing
-
-As a bonus step, we will make things pretty! :star_struck:
-
-Since we know the first two parts of the JWT are JSON, we can use two `JSON Prettify` nodes to format them before we join them.
-
-<img width="300" alt="Workflow for step 3" src="/_images/jwt_decode_step_3_workflow.png" center/>
-
-Since we have two nodes of the same type, I suggest we rename them and change their [aliases](/concepts/workflows_nodes#aliases). For the first, we prettify the `$jwt_decode.header` and we give it the alias `pretty_header`.
-
-<img width="500" alt="Settings for the pretty node" src="/_images/jwt_decode_step_3_pretty.png" center/>
-
-We also have to change the Join node, to use the new references from the pretty nodes. Namely, `$pretty_header.data` on the left and `$pretty_payload.data` on the right.
-
-<img width="500" alt="Settings for the join node" src="/_images/jwt_decode_step_3_join.png" center/>
-
-## Conclusion
-
-That's it! Now you should have a nice JWT Decoder all ready to use as a convert workflow! :tada:
+<img alt="The decoded header and payload segments of the JWT." src="/_images/decode_jwt_result.png" center/>
 
 The full workflow is provided below, ready to be imported.
 
 <details>
 <summary>Full workflow</summary>
 
-```json
+``` json
 {
-  "description": "",
+  "description": "Decodes the header and payload segments of a JWT.",
   "edition": 2,
   "graph": {
     "edges": [
@@ -104,26 +105,6 @@ The full workflow is provided below, ready to be imported.
         },
         "target": {
           "exec_alias": "exec",
-          "node_id": 4
-        }
-      },
-      {
-        "source": {
-          "exec_alias": "exec",
-          "node_id": 4
-        },
-        "target": {
-          "exec_alias": "exec",
-          "node_id": 5
-        }
-      },
-      {
-        "source": {
-          "exec_alias": "exec",
-          "node_id": 5
-        },
-        "target": {
-          "exec_alias": "exec",
           "node_id": 1
         }
       }
@@ -133,8 +114,8 @@ The full workflow is provided below, ready to be imported.
         "alias": "convert_start",
         "definition_id": "caido/convert-start",
         "display": {
-          "x": 20,
-          "y": -250
+          "x": -90,
+          "y": 0
         },
         "id": 0,
         "inputs": [],
@@ -145,8 +126,8 @@ The full workflow is provided below, ready to be imported.
         "alias": "convert_end",
         "definition_id": "caido/convert-end",
         "display": {
-          "x": 20,
-          "y": 310
+          "x": 530,
+          "y": 0
         },
         "id": 1,
         "inputs": [
@@ -165,8 +146,8 @@ The full workflow is provided below, ready to be imported.
         "alias": "jwt_decode",
         "definition_id": "caido/jwt-decode",
         "display": {
-          "x": 20,
-          "y": -150
+          "x": 120,
+          "y": 0
         },
         "id": 2,
         "inputs": [
@@ -182,65 +163,25 @@ The full workflow is provided below, ready to be imported.
         "version": "0.1.0"
       },
       {
-        "alias": "pretty_header",
-        "definition_id": "caido/json-prettify",
+        "alias": "join",
+        "definition_id": "caido/join-two",
         "display": {
-          "x": 20,
-          "y": -40
+          "x": 330,
+          "y": 0
         },
         "id": 3,
         "inputs": [
           {
-            "alias": "data",
-            "value": {
-              "data": "$jwt_decode.header",
-              "kind": "ref"
-            }
-          }
-        ],
-        "name": "Prettify Header",
-        "version": "0.1.0"
-      },
-      {
-        "alias": "pretty_payload",
-        "definition_id": "caido/json-prettify",
-        "display": {
-          "x": 20,
-          "y": 70
-        },
-        "id": 4,
-        "inputs": [
-          {
-            "alias": "data",
-            "value": {
-              "data": "$jwt_decode.payload",
-              "kind": "ref"
-            }
-          }
-        ],
-        "name": "Prettify Paylaod",
-        "version": "0.1.0"
-      },
-      {
-        "alias": "join",
-        "definition_id": "caido/join-two",
-        "display": {
-          "x": 20,
-          "y": 190
-        },
-        "id": 5,
-        "inputs": [
-          {
             "alias": "left",
             "value": {
-              "data": "$pretty_header.data",
+              "data": "$jwt_decode.header",
               "kind": "ref"
             }
           },
           {
             "alias": "right",
             "value": {
-              "data": "$pretty_payload.data",
+              "data": "$jwt_decode.payload",
               "kind": "ref"
             }
           },
@@ -257,12 +198,10 @@ The full workflow is provided below, ready to be imported.
       }
     ]
   },
-  "id": "7d3a6af4-eefa-4065-8b37-42263c4a71ed",
+  "id": "786191d6-a205-4360-9122-715629645280",
   "kind": "convert",
   "name": "JWT Decode"
 }
 ```
 
 </details>
-
-<img width="600" alt="Output for step 3" src="/_images/jwt_decode_step_3_output.png" center/>

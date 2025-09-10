@@ -30,7 +30,9 @@ For this workflow, the overall node layout will be:
 
 ## Creating and Sending a Request
 
-**Click** on the `Javascript` node to access its editor. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
+1. **Click** on the `Javascript` node to access its editor.
+
+2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ::: warning NOTE
 Replace `<webhook-url>` with the URL of your own [Discord webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
@@ -105,7 +107,7 @@ export async function run(input, sdk) {
 }
 ```
 
-Next, ensure the `$active_start.request` and `$active_start.response` objects are [referenced as input](/guides/workflows_references.md) to the `Javascript` node.
+3. Next, ensure the `$active_start.request` and `$active_start.response` objects are [referenced as input data](/guides/workflows_references.md).
 
 <img alt="Referencing the request object." src="/_images/workflows_active_reference_request_response.png" center>
 
@@ -215,7 +217,11 @@ By accessing the `response` object properties, we can print the data to the back
 
 ## Testing the Workflow
 
-To test the workflow, **right-click** on a request to open the context menu, hover over the `Run workflow` option, and select the workflow.
+To test the workflow:
+
+1. **Right-click** on a request to open the context menu.
+
+2. Hover over the `Run workflow` option, and select the workflow.
 
 <img alt="Running the active workflow." src="/_images/discord_notification_test.png" center/>
 

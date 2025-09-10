@@ -29,7 +29,9 @@ Passive workflows do not require `Passive End` nodes in order to exit execution 
 
 ## Adding a Header to a Request
 
-**Click** on the `Javascript` node to access its editor. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
+1. **Click** on the `Javascript` node to access its editor.
+
+2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ``` js
 /**
@@ -57,7 +59,7 @@ export async function run({ request, response }, sdk) {
 }
 ```
 
-Next, ensure the `$on_intercept_request.request` object is [referenced as input](/guides/workflows_references.md) to the `Javascript` node.
+3. Next, ensure the `$on_intercept_request.request` object is [referenced as input data](/guides/workflows_references.md).
 
 <img alt="Referencing the request object." src="/_images/workflows_reference_request.png" center>
 
@@ -118,11 +120,15 @@ Finally, the creation of the finding is awaited to give it time to be processed 
 
 ## Testing the Workflow
 
-To test the workflow, type in an in-scope domain in the connection URL input field. Also ensure it is the value of the request's Host header.
+To test the workflow:
+
+1. Type in an in-scope domain in the connection URL input field.
+
+2. Ensure the domain is also the value of the request's Host header.
 
 <img alt="Creating the test request." src="/_images/adding_header_test.png" center/>
 
-Next, **click** on the `Run` button. A message will appear notifying you that the workflow executed successfully.
+3. Next, **click** on the `Run` button. A message will appear notifying you that the workflow executed successfully.
 
 <img alt="Workflow execution success toast message." src="/_images/workflows_toast_message_success.png" center/>
 
