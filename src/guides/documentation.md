@@ -1,42 +1,50 @@
-# Documentation
+# Contributing to the Documentation
 
-Our documentation is totally [open source](https://github.com/caido/documentation) and is there to help the community.
-We are doing our best to improve it, but we would gladly welcome your contributions.
-Don't hesitate to join our [Discord](https://links.caido.io/www-discord) if you need help.
+Caido's documentation is [open source](https://github.com/caido/documentation) and is open to community member contributions.
 
-## Requirements
+::: info
+You will need a [Github](https://github.com) account, [Git](https://git-scm.com/downloads), and the [pnpm](https://pnpm.io/installation) package manager.
+:::
 
-- [Git](https://git-scm.com/)
-- [pnpm](https://pnpm.io)
-- [Github Account](https://github.com)
+## Creating a Workspace
 
-## Steps
+To contribute to the documentation, first [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and create a clone.
 
-### Prepare
+```
+git clone https://github.com/<username>/documentation
+```
 
-1. (Optional) Open an issue on the [repository](https://github.com/caido/documentation) to let us know you are working on something.
-2. [Fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
-3. Clone your fork: `git clone https://github.com/[USERNAME]/documentation`.
-4. Move into the directory: `cd documentation`.
-5. Create a new branch: `git branch -b [BRANCH NAME]`.
+Then, navigate into the directory and create a new branch.
 
-You are now ready to edit files. 🚀
+```
+cd documenation && git branch -b <branch-name>
+```
 
-### Edits
+## Style Guidelines
 
-- Pages are primarily markdown files, but HTML can be used too.
-- **Always** link pages in the correct sidebar inside of `.vitepress/sidebars`.
-- To render the website we suggest using: `pnpm dev`.
+- Pages are primarily written in Markdown, although HTML can be used as well.
+- Ensure to always link pages in the correct sidebar by editing the `.vitepress/sidebars` file.
+- Button icons are sourced from the [FontAwesome Classic Solid](https://fontawesome.com/search?f=classic&s=solid&o=r) collection.
 
-### Publish
+::: tip
+To serve the documentation locally and view edits live run `pnpm dev`.
+:::
 
-1. Commit changes: `git add . && git commit -m "[WHAT IS MY COMMIT ABOUT]"`.
-2. Push changes to your fork: `git push`.
-3. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on the [Caido repository](https://github.com/caido/documentation).
-4. A preview link will appear in a comment.
-5. Sign the CLA using the link that will also appear in a comment.
+## Publishing
 
-We will then check your pull request, make changes if necessary and merge it. It will then appear on the official documentation. 🎉
+When you are finished editing, commit the changes and push them to your fork.
+
+```
+git add . && git commit -m "<description>" && git push
+```
+
+Then, open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on the [documentation repository](https://github.com/caido/documentation).
+
+::: info
+To contribute, you must sign the Contributor License Agreement which will be available as a link within the pull request.
+:::
+
+Your pull request will await and undergo review. You will be notified of any requested changes and its status. Once the changes are merged, you work will appear in the official documentation.
 
 <center>
   <h1>Thanks for your contributions!</h1>

@@ -1,52 +1,31 @@
 # Proxying Local Traffic
 
-When running a web page or web application locally, Caido may not be capturing the traffic due to what is known as **implicit bypass rules**. These rules match URLs whose host portion is either a localhost name or a link-local IP literal. If a match is detected - requests will not be routed through a proxy and are instead sent directly.
+To proxy local traffic, it is necessary to bypass implicit rules that match against localhost addresses using a method mentioned below.
 
-Implicit bypass rules match against the following:
+## FoxyProxy
 
-- localhost
+**Click** on the FoxyProxy browser extension, select `Options`, type `<-loopback>` to the `Global Exclude` input field, and **click** on the `Save` button to update and save the configuration.
 
-- *.localhost [::1]
+<img alt="The Global Exclude list." src="/_images/foxyproxy_loopback.png" center/>
 
-- 127.0.0.1/8
+::: info
+In general, the implicit bypass rules can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is typically accompanied with a title or description that includes terms or keywords such as: `except these addresses`/`no-proxy for`/`exclude`.
+:::
 
-- 169.254/16
+## Chrome
 
-- [FE80::]/10
-
-## Resolutions
-
-If you are having issues proxying localhost traffic - try the following:
-
-#### Use lvh.me:
-
-This domain name resolves to 127.0.0.1.
-
-- [http://lvh.me/](http://lvh.me/)
-
-#### Edit the proxy bypass rules:
-
-By default, localhost may be included as a proxy bypass address within the list of hosts used by your system/browser/extension. This can be overwritten by supplying `<-loopback>` (_the `-` character inverts the rule_).
-
-- Launch Chrome via the terminal using:
+Launch Chrome via the terminal with the `--proxy-server=<address:port>` and `--proxy-bypass-list="<-loopback>"` arguments.
 
 ```
 google-chrome --proxy-server=127.0.0.1:8080` --proxy-bypass-list="<-loopback>"
 ```
 
-::: tip
-If you customized the listening address/port of Caido - replace the values in the command to match. View the [Chromium documentation](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md#Overriding-the-implicit-bypass-rules) for more information.
-:::
+## Firefox
 
-- If you are using the FoxyProxy browser extension: select `Options` and add `<-loopback>` to the `Global Exclude` list.
-- In general, this bypass list can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is usually accompanied with a title or description that includes key-terms/keywords such as: `except these addresses`, `no-proxy for`, `exclude`, etc.
+Launch Firefox, navigate to `about:config`, set `network.proxy.allow_hijacking_localhost` to `true`, and restart the browser.
 
-#### Use the Firefox Browser:
+<img alt="The Firefox configuration page." src="/_images/firefox_localhost.png" center/>
 
-::: info
-If proxying localhost traffic is not working in Firefox as well:
+## lvh.me
 
-- Navigate to `about:config`.
-- Set `network.proxy.allow_hijacking_localhost` to `true`.
-- Restart Firefox.
-:::
+Navigate to [http://lvh.me/](http://lvh.me/). This domain name resolves to 127.0.0.1.

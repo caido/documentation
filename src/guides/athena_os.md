@@ -2,40 +2,32 @@
 
 ---
 
-<img width="600" alt="Athena OS Banner" src="/_images/athena_os_banner.png" no-shadow/>
+<img alt="Athena OS Banner" src="/_images/athena_os.png"/>
 
-Caido is available natively in [Athena OS](https://athenaos.org/) in the `Red Team Web Application Analysis` section.
-You can install either the [Desktop or CLI version](/concepts/essentials/cli_vs_desktop).
+[Athena OS](https://athenaos.org/) is an Arch-derived Linux distribution designed for penetration testing and security research. Athena's [cybersecurity role-based system](https://athenaos.org/en/resources/athena-welcome/#cyber-security-roles) equips you with the relevant tools needed to conduct comprehensive security assessments, making it an exceptional choice for security professionals.
 
-- `Desktop`: `sudo pacman -S caido-desktop`
-- `CLI`: `sudo pacman -S caido-cli`
+Additionally, with Athena's ability to connect directly to educational platforms, it's an ideal operating system for information security students.
 
-Multiple [Athena Roles](https://athenaos.org/en/resources/athena-welcome/#cyber-security-roles) will install Caido for you:
+## Native Support
 
-- 🐞 Bug Bounty Hunter 🐞
-- 🌐 Network Analyst 🌐
-- ❤️ Red Teamer ❤️
-- 🎓 Enthusiast Student 🎓
-- 🕸️ Web Pentester 🕸️
+Caido now comes pre-installed with the following roles in Athena OS:
 
-<div class="vignettes">
-  <div>
-    <img alt="Athena OS Menu with Caido" src="/_images/athena_os_desktop.png"/>
-  </div>
-  <div>
-    <img alt="Athena OS Wheel with Caido" src="/_images/athena_os_wheel.png"/>
-  </div>
-</div>
+- Bug Bounty Hunter
+- Network Analyst
+- Red Teamer
+- Enthusiast Student
+- Web Pentester
 
-## WSL
+::: info
+Caido is also available as a [Athena Cyber Hub Docker container](https://athenaos.org/en/resources/cyber-hub/) and within [AthenaOS WSL](https://athenaos.org/en/wsl/wsl/).
+:::
 
-If you run Athena OS in [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux), you should be able to use both the Desktop and CLI versions of Caido.
+## Launching Caido
 
-<img width="700" alt="Caido running in WSL" src="/_images/athena_os_wsl.png" center/>
+To launch Caido, select the `Web Application Analysis` category from either the menu or application wheel and select `Caido`.
 
-## Docker
+<img alt="Athena OS menu." src="/_images/athena_os_desktop.png" center/>
 
-Caido is also available as a [Docker container](/guides/docker) in the [Athena Cyber Hub](https://athenaos.org/en/resources/cyber-hub/).
-This allows you to easily spawn Caido completely isolated from the rest on the system.
+---
 
-<img width="700" alt="Caido running in Docker" src="/_images/athena_os_docker.png" center/>
+<img alt="Athena OS application wheel." src="/_images/athena_os_wheel.png" center/>
