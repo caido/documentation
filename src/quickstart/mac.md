@@ -1,7 +1,9 @@
 # Installing Caido on macOS
 
+Caido provides a desktop application for both Intel-based (x86_64) and Apple silicon (M1/M2/M3, AArch64) architectures.
+
 ::: tip
-Caido provides a desktop application for both Intel-based (x86_64) and Apple silicon (M1/M2/M3, AArch64) architectures. [Learn which download is suitable for your device.](https://support.apple.com/en-us/116943)
+[Learn which download is suitable for your device.](https://support.apple.com/en-us/116943)
 :::
 
 ## Disk Image (.dmg)
