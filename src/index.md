@@ -9,27 +9,10 @@ hero:
     src: /logo.png
     "no-shadow": true
 
-  tagline: Guides and Documentation
   actions:
     - theme: brand
-      text: Quickstart
+      text: Get Started
       link: /quickstart/
-
-    - theme: alt
-      text: Tutorials
-      link: /tutorials/
-
-    - theme: alt
-      text: Guides
-      link: /guides/
-
-    - theme: alt
-      text: Reference
-      link: /reference/
-
-    - theme: alt
-      text: Concepts
-      link: /concepts/
 
 features:
   - icon: 🛠️
