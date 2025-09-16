@@ -2,11 +2,11 @@
 
 In this tutorial, we will create a convert workflow that will MD5 hash input.
 
-## Creating a Passive Workflow
+## Creating a Convert Workflow
 
-To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
 
-<img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
+<img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
 
 Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
