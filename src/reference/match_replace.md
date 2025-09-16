@@ -47,7 +47,7 @@ make sure you're looking at the un-prettified version of the request/response bo
 
 | Matcher | Description |
 |---------|-------------|
-| `Full` | Matches aginst the entire section will be replaced. If there are multiple section items, such as when dealing with headers, all instances will be replaced. |
+| `Full` | Matches against the entire section will be replaced. If there are multiple section items, such as when dealing with headers, all instances will be replaced. |
 | `Regex` | Matches against Rust flavor regular expressions. |
 | `String` | Matches against string values. |
 
