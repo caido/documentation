@@ -12,7 +12,7 @@ Next, rename the workflow by typing in the `Name` input field. You can also prov
 
 ## Nodes and Connections
 
-Too add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
+To add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
 
 For this workflow, the overall node layout will be:
 
