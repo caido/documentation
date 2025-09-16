@@ -188,20 +188,33 @@ Ensure you grant permission to the CLI, **NOT** the desktop application. Usually
 
 ### Enable Invisible Proxying
 
-By default, invisible proxying is disabled. To enable invisible proxying, click on the `⋮` icon to the right of the instance you're using and select `Edit`. Then, expand the `Advanced` settings, check the `Enable invisible proxying` checkbox, and click the `Save` button.
+To enable invisible proxying:
+
+1. In the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
+
+<img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
+
+2. Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to expand the drop-down settings menu options and **click** on the `Enable invisible proxying` checkbox.
 
 <img alt="Connection manager instance more options." src="/_images/enable_invisible_proxying.png" center />
 
+3. **Click** on the `Save` button to update and save the configuration.
+
 ### DNS Rewrite
 
-The target domain will now resolve to Caido. However, Caido will also resolve the domain to itself, since DNS queries will check the `hosts` file before being sent to a resolver.
+The target domain will now resolve to Caido. However, Caido will also resolve the domain to itself, since DNS queries will check the `hosts` file before being sent to a resolver. In order for Caido to pass the request along to the actual destination server, you must create a [DNS Rewrite](/guides/dns_rewrites.md) rule to preserve the original IP address of the target domain.
 
-In order for Caido to pass the request along to the actual destination server, you must create a [DNS Rewrite](/guides/dns_rewrites.md) rule to preserve the original IP address of the target domain. To create a rule:
+To create a rule:
 
-1. Click on your account icon in the upper-rightmost corner of the Caido window, select `Settings`, and click on the `Network` tab.
-2. Scroll down and click on the `+ Add Rewrite` button.
-3. Check the `Use static IP` checkbox and provide the IP address in the `Redirect to static IP` input field.
-4. Add `www.example.com` to the `Included Hosts` list and click the `+ Create` button to save the rule.
+1. **Click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `Network` tab.
+
+<img alt="DNS Rewrite navigation." src="/_images/settings_dns_rewrite.png" center no-shadow/>
+
+2. Scroll down and **click** on the `+ Add Rewrite` button.
+
+3. **Click** on the `Use static IP` checkbox and type in the IP address in the `Redirect to static IP` input field.
+
+4. Add `www.example.com` to the `Included Hosts` list and **click** on the `+ Create` button to save the rule.
 
 <img alt="DNS rewrite rule." src="/_images/tutorial_dns_rewrite_rule.png" center />
 

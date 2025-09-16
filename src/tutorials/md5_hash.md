@@ -1,30 +1,147 @@
 # MD5 Hash Input Workflow
 
-In this tutorial, we will create a new [convert](/concepts/workflows_intro.md#convert-workflows) workflow that will perform MD5 hashing on the given input.
+In this tutorial, we will create a convert workflow that will MD5 hash input.
 
-::: info
-This example workflow is available for download and import. [Download the workflow](https://github.com/caido/documentation/tree/main/diagrams/data/Base64_Decode_Example.json).
-:::
+## Creating a Convert Workflow
 
-## Creating a Passive Workflow
+To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
 
-To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
+<img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
 
-<img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
+Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
-1. Enter an arbitrary name for your workflow.
-2. (_Optional_) Enter a description of the workflow.
-3. Click `Save`.
+## Nodes and Connections
 
-<img alt="Convert MD5 hash." src="/_images/md5_hash_example.png"/>
+Too add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
 
-4. **Click, hold and drag** the `MD5 Hash` node into the pane directly right.
-5. Drag the nodes into a top-down heirachical structure. Connect them together by making node `Connections`.
+For this workflow, the overall node layout will be:
 
-::: warning
-Convert workflows require an End node to function properly.
-:::
+<img alt="The nodes used and their connections." src="/_images/md5_hash_nodes.png" center>
 
-6. Select the `MD5 Hash` node by clicking on it to display its properties in the right-hand pane. Here, the node's Name, `Alias` and input type (`Constant Value` or `Reference Value`) can be configured (_for this example creation, leave the default configuration as is_).
-7. Supply test input to be converted by the workflow.
-8. Click `Save and Run` - the conversion output will be displayed in the Output pane.
+- The `Convert Start` node outputs `$convert_start.data` that represents the input that will undergo conversion.
+- The input will be passed to the `MD5 Hash` node.
+- Once the input has been hashed and encoded by the `MD5 Hash` node, the `$md5_hash.data` will be output, and the workflow will end.
+
+## MD5 Hashing
+
+1. Click on the `MD5 Hash` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
+
+2. Then, select an encoding type from the `Encoding (choice)` drop-down menu.
+
+<img alt="The MD5 hash node reference and encoding." src="/_images/workflows_convert_reference_data_encoding.png" center>
+
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
+
+## Testing the Workflow
+
+To test the workflow, type in the value to be MD5 hashed in the `Input` text area and **click** on the `Run` button. A message will appear notifying you that the workflow executed successfully.
+
+<img alt="Workflow execution success toast message." src="/_images/workflows_toast_message_success.png" center/>
+
+## The Result
+
+The MD5 hash digest will appear in the `Output` text area:
+
+<img alt="The MD5 hash digest." src="/_images/md5_hash_result.png" center/>
+
+The full workflow is provided below, ready to be imported.
+
+<details>
+<summary>Full workflow</summary>
+
+``` json
+{
+  "description": "Converts a value to an MD5 hash digest.",
+  "edition": 2,
+  "graph": {
+    "edges": [
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 0
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 2
+        }
+      },
+      {
+        "source": {
+          "exec_alias": "exec",
+          "node_id": 2
+        },
+        "target": {
+          "exec_alias": "exec",
+          "node_id": 1
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "alias": "convert_start",
+        "definition_id": "caido/convert-start",
+        "display": {
+          "x": -210,
+          "y": 90
+        },
+        "id": 0,
+        "inputs": [],
+        "name": "Convert Start",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "convert_end",
+        "definition_id": "caido/convert-end",
+        "display": {
+          "x": 200,
+          "y": 90
+        },
+        "id": 1,
+        "inputs": [
+          {
+            "alias": "data",
+            "value": {
+              "data": "$md5_hash.data",
+              "kind": "ref"
+            }
+          }
+        ],
+        "name": "Convert End",
+        "version": "0.1.0"
+      },
+      {
+        "alias": "md5_hash",
+        "definition_id": "caido/md5-hash",
+        "display": {
+          "x": 0,
+          "y": 90
+        },
+        "id": 2,
+        "inputs": [
+          {
+            "alias": "data",
+            "value": {
+              "data": "$convert_start.data",
+              "kind": "ref"
+            }
+          },
+          {
+            "alias": "encoding",
+            "value": {
+              "data": "HEX",
+              "kind": "string"
+            }
+          }
+        ],
+        "name": "MD5 Hash",
+        "version": "0.1.0"
+      }
+    ]
+  },
+  "id": "1b185861-258c-48a6-8450-a73d0eae9ad5",
+  "kind": "convert",
+  "name": "MD5 Hash"
+}
+```
+
+</details>
