@@ -23,8 +23,6 @@ For this workflow, the overall node layout will be:
 - The `Join` node will concatenate the decoded header and body segments with a specified separator and output `$join.data`.
 - Once the decoded segments have been processed by the `Join` node, the data will be output, and the workflow will end.
 
-- Once the request and response objects have been processed by the script in the `Javascript` node, the workflow will end.
-
 ## Decoding a JWT
 
 1. **Click** on the `JWT Decode` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
