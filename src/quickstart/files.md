@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Files interface for uploading and managing files within your security testing instance."
+---
+
 # Files
 
 Within the `Files` interface, you can upload files to make them available to your Caido instance.

@@ -1,3 +1,7 @@
+---
+description: "Learn how to create an active workflow that sends notifications to Discord using webhooks and Caido's HTTP module."
+---
+
 # Send a Notification to Discord Workflow
 
 In this tutorial, we create an active workflow that will send a notification to Discord.

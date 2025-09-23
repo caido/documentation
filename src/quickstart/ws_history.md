@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's WebSocket History interface for viewing and analyzing all proxied WebSocket streams and messages."
+---
+
 # WS History
 
 The `WS History` interface provides a table that contains all of the WebSocket streams and associated messages that have been proxied through Caido.

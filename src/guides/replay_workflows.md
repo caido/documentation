@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to applying workflows to Replay requests in Caido for dynamic value modification and automated request processing."
+---
+
 # Using Workflows in Replay
 
 To apply a workflow to a value in a Replay request, **click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder. Then, **click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.

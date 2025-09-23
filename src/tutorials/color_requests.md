@@ -1,3 +1,7 @@
+---
+description: "Learn how to create a passive workflow that color highlights in-scope GET requests in Caido traffic tables for visual identification."
+---
+
 # Color Request Rows Workflow
 
 In this tutorial, we will create a passive workflow that will color highlight in-scope GET requests within traffic tables.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to recovering read-only projects in Caido when account types revert to Basic, including project deletion and backup restoration methods."
+---
+
 # Recovering Read-Only Projects
 
 If your account type reverts to Basic, only the first three projects will keep read/write permissions. Any additional projects will become read-only.

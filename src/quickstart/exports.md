@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to exporting data from Caido for use with other security tools or client presentations."
+---
+
 # Exports
 
 The `Exports` interface allows you to export data from Caido that can then be used by other tools or presented to clients.

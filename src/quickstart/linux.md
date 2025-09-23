@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to installing Caido on Linux using .deb packages, AppImage, or AUR for different architectures."
+---
+
 # Installing Caido on Linux
 
 Caido provides a desktop application for both x86_64 and AArch64 architectures.

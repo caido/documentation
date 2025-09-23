@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to adding custom headers to HTTP requests and responses in Caido's Match & Replace feature for traffic modification."
+---
+
 # Adding a Header
 
 To add an additional header to either HTTP requests or responses, **click** on the `Section` drop-down menu and select either `Request Header` or `Response Header`.

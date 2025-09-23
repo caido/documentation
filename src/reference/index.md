@@ -1,3 +1,7 @@
+---
+description: "Find detailed reference information on Caido shortcuts, workflow nodes, HTTPQL, and other features."
+---
+
 # Reference
 
 The Reference section provides precise, factual resources to help you use Caido effectively.

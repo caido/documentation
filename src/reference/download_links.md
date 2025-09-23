@@ -1,3 +1,7 @@
+---
+description: "Find detailed reference information on Caido download links API and file formats for automated download systems and third-party integrations."
+---
+
 # Download
 
 The download links of Caido are hosted under the domain `caido.download`.

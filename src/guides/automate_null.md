@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to repeating requests multiple times without payload values in Caido's Automate feature for load testing and request repetition."
+---
+
 # Repeating Requests with No Payload
 
 To send the same request multiple times without any payload values, **click** anywhere within the request and then **click** on the `+ Add Placeholder` button.

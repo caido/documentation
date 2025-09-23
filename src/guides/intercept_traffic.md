@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to intercepting, modifying, and controlling HTTP/HTTPS traffic in Caido including forwarding, dropping, and editing capabilities."
+---
+
 # Intercepting Traffic
 
 To begin intercepting proxied traffic, **click** on the <code><Icon icon="fas fa-angles-right" /> Forwarding</code> button to toggle it to <code><Icon icon="fas fa-pause" /> Queuing</code>.

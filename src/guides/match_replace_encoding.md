@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to encoding request and response body data in Caido's Match & Replace feature using workflows and various encoding methods."
+---
+
 # Encoding Request Body Data
 
 To encode the body data of either HTTP requests or responses, **click** on the `Section` drop-down menu and select either `Request Body` or `Response Body`.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to managing CA certificates in Caido including importing, exporting, and regenerating certificates for HTTPS traffic interception."
+---
+
 # CA Certificate Management
 
 Each Caido instance generates its own CA certificate to be able to negotiate TLS handshakes and proxy HTTPS traffic.

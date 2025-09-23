@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind Caido's traffic splitting algorithm routes requests between proxy forwarding and UI/API, including upstream determination logic."
+---
+
 # Traffic Splitting
 
 By default Caido will listen on a single port for all traffic, it uses a splitting algorithm to determine if a request is for the UI/[GraphQL API](/concepts/internals/graphql) or if it's a normal user request that needs to be forwarded. This allows for a simpler user experience, but can sometimes have unexpected behaviour.

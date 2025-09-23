@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to exporting request data from Caido traffic tables in JSON or CSV format for analysis, reporting, and integration with other security tools."
+---
+
 # Exporting Request Data
 
 By **clicking** on the `Export` drop-down menu, you can export the data stored in traffic tables.

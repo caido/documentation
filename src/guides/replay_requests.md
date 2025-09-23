@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to sending requests from other Caido interfaces to the Replay interface for manual request testing and modification."
+---
+
 # Sending Requests to Replay
 
 You can send requests from other interfaces to the Replay interface in various ways:

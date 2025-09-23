@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind Caido instances - the client/server architecture, local vs remote instances, and instance management."
+---
+
 # Instances
 
 We use the concept of an `instance` to refer approximately to an installation of Caido.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to running Caido on a virtual private server (VPS) including SSH port forwarding and AWS SSM configuration for remote access."
+---
+
 # Running on a VPS
 
 Caido is designed to be a flexible web application security testing tool, and one of its key features is the ability for users to host it anywhere, such as on a virtual private server (VPS).

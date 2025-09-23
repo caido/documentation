@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido support resources including GitHub issues, troubleshooting guides, and Discord community access."
+---
+
 # Support
 
 ## Github: Issues and Roadmap

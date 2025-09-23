@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to creating, modifying, and removing keyboard shortcuts in Caido for efficient navigation and command execution."
+---
+
 # Creating Shortcuts
 
 To set, unset, or change shortcut keybindings, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `Shortcuts` tab.

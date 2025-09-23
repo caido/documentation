@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to managing scope presets in Caido including adding targets, duplicating presets, and deleting scope configurations."
+---
+
 # Managing Scopes
 
 Once a scope preset is created, there are various actions that can be taken against it.

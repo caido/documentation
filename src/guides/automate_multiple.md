@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to sending multiple payloads in Caido's Automate feature using different strategies like All, Sequential, Parallel, and Matrix combinations."
+---
+
 # Sending Multiple Payloads
 
 To use multiple payload values, **click**, **drag**, and **hold** over multiple request elements you want to replace and then **click** on the `+ Add Placeholder` button.

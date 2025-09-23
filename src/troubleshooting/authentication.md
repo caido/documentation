@@ -1,3 +1,7 @@
+---
+description: "Troubleshooting authentication issues in Caido including instance access problems and login URL generation failures."
+---
+
 # Authentication
 
 ### Can't Access Instance

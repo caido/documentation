@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Sitemap interface for visualizing target file systems and domain structures from proxied traffic."
+---
+
 # Sitemap
 
 As you proxy traffic through Caido, the content you access across domains and subdomains and will be presented as a hierarchal, tree-like structures within the `Sitemap` interface, providing you with a visual representation of a target's file system.

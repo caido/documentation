@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Plugins interface for installing and managing extension packages to customize functionality."
+---
+
 # Plugins
 
 The `Plugins` interface allows you to install and manage plugin packages in Caido. These packages extend Caido's functionality, offering high degree of customization.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's HTTP History interface for viewing and analyzing all proxied HTTP requests and responses."
+---
+
 # HTTP History
 
 The `HTTP History` interface provides a table that contains all of the HTTP requests and their associated responses that have been proxied through Caido.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to previewing HTTP responses in Caido using the rendering engine to view content as it would appear in a browser window."
+---
+
 # Previewing Responses
 
 You can preview responses directly within HTTP response panes just as they would appear in your browser window.
