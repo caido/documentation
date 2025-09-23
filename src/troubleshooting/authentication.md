@@ -1,53 +1,83 @@
-# Authentication
+# Login Issues
 
-### Can't Access Instance
+## "You do not have access to this instance. Go to dashboard." - "Login URL generation failed: invalid authentication token." - "The instance is no longer valid."
 
-You may encounter this error when trying to access an [instance](/concepts/essentials/instances.md) that you do not own. This can occur if you've initially setup a Caido instance using a different account.
+These errors may occur when you are trying to access an instance of a different account or the instance has been deleted from the [Dashboard](https://dashboard.caido.io).
 
 <img alt="No access to instance." src="/_images/instance_error.png" width=600px center/>
 
-To resolve this issue, you can either:
-
-1. Login to the initial account that was used to setup your Caido instance.
-
-2. Reset the instance credentials:
-
-- If you're using the CLI, start Caido using:
-
-```
-caido --reset-credentials
-```
-
-- If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
-
-  ::: warning
-  These settings will allow you to login with any account you want. Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
-  :::
-
-  <img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
-
-3. Delete your data folder.
-
-- While not ideal, deleting your Caido data folder will allow you to start with a fresh installation. View the [Files](/reference/internal_files.md) page to locate your data folder.
-
-### "Login URL generation failed: invalid authentication token."
-
-You may encounter this error when trying to access an instance that you **deleted** in the Caido [Dashboard](https://dashboard.caido.io).
+---
 
 <img alt="Login error." src="/_images/login_url_error.png" width=600px center/>
 
-To resolve this, reset the instance credentials:
+### Resolutions
 
-- If you're using the CLI, start Caido using:
+If you encounter one of these error messages after attempting to login, either:
+
+#### Use the Other Account
+
+To gain access to the instance, login to the account that created the instance.
+
+#### Reset the Instance Credentials
+
+To reset the instance credentials with the Caido CLI, launch Caido with the `--reset-credentials` argument.
 
 ```
 caido --reset-credentials
 ```
 
-- If you're using the desktop application, check the `Reset Credentials` checkbox in your instance's advanced settings.
+To reset the instance credentials within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
 
-::: warning
-These settings will allow you to login with any account you want. Once you've claimed your instance, make sure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
+<img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
+
+Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to expand the drop-down settings menu options and **click** on the `Reset credentials` checkbox.
+
+<img alt="The Advanced instance options." src="/_images/launch_window_reset_credentials.png" center/>
+
+**Click** on the `Save` button to update and save the configuration.
+
+::: warning NOTE
+Once you have authenticated to the instance, ensure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
 :::
 
-<img src="/_images/reset_credentials_marked.png" alt="Reset Credentials" width=900px center/>
+#### Delete the Data Storage Directory
+
+Although it is not recommended, deleting the [data storage directory](/reference/internal_files.md) reset the installation.
+
+## "Date mismatch: make sure your device's date and time settings are correct."
+
+This error may occur due to your computer time being out of synchronization with the Coordinated Universal Time (UTC). For authentication, Caido only allows up to 5 minutes of deviation.
+
+<img alt="Date mismatch." src="/_images/date_mismatch_error.png" width=600px center/>
+
+### Resolutions
+
+If you encounter this error after attempting to login, manually adjust the time utilized by your operating system.
+
+#### Windows
+
+To synchronize the time on Windows, **right-click** on the clock, select <code><Icon icon="fas fa-gear" /> Adjust date and time</code>, and **click** on the `Sync now` button.
+
+#### macOS
+
+To synchronize the time on macOS, use the `sntp` utility with the `-S` argument.
+  
+```
+sudo sntp -S pool.ntp.org
+```
+
+::: tip
+Check the time synchronization status with the same command.
+:::
+
+#### Linux
+
+To synchronize the time on Linux, install the `ntp` package. Once the installation is complete, the service will start automatically.
+
+```
+sudo apt-get install ntp
+```
+
+::: tip
+
+Check the time synchronization status with `sudo systemctl status ntp`.

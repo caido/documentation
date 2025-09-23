@@ -1,47 +1,10 @@
-# Reporting a Bug
+# Submitting a Report
 
-Found a bug in Caido or need help debugging? You are at the right place!
+To report a bug or receive support, please contact a member of the Caido team by submitting a [contact form](https://caido.io/contact) or [send us a message on Discord](https://links.caido.io/www-discord) and be prepared to provide the following resources/information.
 
-To help us resolve the issue quickly, please provide the necessary details to reproduce the bug.
+## Setup Information
 
-## Retrieve Logs
-
-### Backend Logs
-
-Caido is using a [client/server architecture](/concepts/essentials/instances.md), that means that we need logs from two places.
-
-The first place to look for logs is in your [data folder](/reference/internal_files.md), you should see a `logs` folder.
-
-<img width="500" alt="Backend Logs Location" src="/_images/backend_logs.png" center/>
-
-### Frontend Logs
-
-The second place to look for logs is in your browser's console included in your [browser developer tools](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
-
-You can open the console by pressing `F12` or right-clicking within the browser and selecting `Inspect Element`.
-
-<img width="700" alt="Frontend Logs Location" src="/_images/frontend_logs.png" center/>
-
-## Gather Steps to Reproduce
-
-For us to be able to help you, we need to be able to reproduce the bug on our side.
-
-Thus, it is **critical** that you give us **as much details as possible** on the various steps you took leading to the bug.
-
-::: tip Example Steps to Reproduce
-
-1. In `Intercept`, click on `Response`.
-2. Start `Queuing`.
-3. In a terminal, execute `curl -x 127.0.0.1:8080 https://example.com`.
-4. Modify response status code.
-5. Click `Forward`.
-6. Confirm in terminal that the response was not modified.
-:::
-
-## Gather Operating System & Version
-
-Many Caido bugs are depend on the OS and even sometimes the version of that OS.
-When reporting a bug, please make sure to include this information.
+We will typically need the following information for every case. Please provide us with your operating system, version number/name, Caido client in use (_CLI/desktop application/web application_), and the version of Caido in use.
 
 ::: tip Example Operating System & Version
 
@@ -51,14 +14,60 @@ When reporting a bug, please make sure to include this information.
 - **Caido Version:** 0.33.0
 :::
 
+## Log Files
+
+As Caido utilizes a [client/server architecture](/concepts/essentials/instances.md), both frontend and backend logs are produced.
+
+::: danger
+As log files can contain sensitive information, only send them in private conversations with a verified member of the Caido team. If you are contacting us on Discord, we will open a private channel before asking for logs.
+:::
+
+::: warning NOTE
+Ensure to [enable debug mode](/troubleshooting/debugging.md) to assist with troubleshooting.
+:::
+
+### Backend Logs
+
+To obtain the backend log files of your instance, navigate to the `/logs` subdirectory of the data storage directory. The default location of this directory is dependent on your operating system:
+
+| OS      | Location                                         |
+| ------- | ------------------------------------------------ |
+| Linux   | `~/.local/share/caido`                           |
+| MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
+| Windows | `%APPDATA%\caido\Caido\data`                     |
+
+### Frontend Logs
+
+To obtain the frontend logs, either:
+
+- Access the DevTools interface by pressing the `F12` key, using the keybinding `CTRL` + `SHIFT` + `I`, or selecting `Inspect` from the **right-click** context menu. Within the `Console` **right-click** and select `Save as...`/`Save all Messages to File`/etc. to export the messages as a `.log` file.
+
+- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button at the bottom of the Caido user-interface, record your activity, and then **click** on the <code><Icon icon="fas fa-download" /></code> button to export the messages as a `.log` file.
+
+<img alt="The Caido frontend logs interface." src="/_images/frontend_logs.png" center/>
+
+## Steps to Reproduce
+
+In order to assist you, it is **critical** that you provide a detailed timeline of the exact steps you took leading up to the bug. This ensures we are able to reproduce the issue in an accurate and timely manner.
+
+::: tip Example Steps to Reproduce
+
+1. In the `Intercept` interface, click on the `Response` button.
+2. Begin intercepting responses, by **clicking** on the <code><Icon icon="fas fa-angles-right" /> Forwarding</code> button to toggle it to <code><Icon icon="fas fa-pause" /> Queuing</code>.
+3. In a terminal, execute `curl -x 127.0.0.1:8080 https://example.com`.
+4. Modify status code of the intercepted response.
+5. Click the `Forward` button.
+6. Confirm in terminal that the response was not modified.
+:::
+
 ## Submit a Github Issue
 
-The last step is to [open an issue](https://github.com/caido/caido/issues/new?assignees=&labels=&projects=&template=bug.md&title=) on our Github Tracker.
+::: danger
+Ensure to remove/redact any sensitive information in submissions.
+:::
 
-Thanks a lot for the help! You rock! 🤘
+Feel free to [create a new issue](https://github.com/caido/caido/issues/new?assignees=&labels=&projects=&template=bug.md&title=) on Github. For simplicity, a template is provided with sections to provide all the necessary information.
 
-## Providing Sensitive Information
-
-If you need to include sensitive information in your bug report, you can reach out on [Discord](https://links.caido.io/www-discord).
-
-We will create a private channel for you where you can provide that data to us in a secure manner.
+<center>
+  <h1>Thank you for bringing attention to the issue!</h1>
+</center>

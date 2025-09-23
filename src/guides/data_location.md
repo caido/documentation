@@ -1,6 +1,6 @@
-# Configuring the Data Directory
+# Changing the Data Storage Directory
 
-All the data Caido creates is stored in a single directory. The default location of this directory is dependent on your OS:
+All the data Caido creates is stored in a single directory. The default location of this directory is dependent on your operating system:
 
 | OS      | Location                                         |
 | ------- | ------------------------------------------------ |
@@ -9,12 +9,12 @@ All the data Caido creates is stored in a single directory. The default location
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
 ::: warning NOTE
-Caido does not currently support storing projects outside of the `/data` directory. However, you can change the location of the directory if needed. Before changing the location, ensure to copy the existing data before restarting your instance. Otherwise the instance will restart as if you were on a new device.
+Caido does not currently support storing projects outside of the this directory. However, you can change the location of the directory if needed. Before changing the location, ensure to copy the existing data before restarting your instance. Otherwise the instance will restart as if you were on a new device.
 :::
 
 ## Caido CLI
 
-To change the default location of the `/data` directory with the Caido CLI, launch Caido with the `--data-path <location>` argument.
+To change the default location of the data storage directory with the Caido CLI, launch Caido with the `--data-path <location>` argument.
 
 ```
 caido --data-path /alternate/data/location
@@ -22,7 +22,7 @@ caido --data-path /alternate/data/location
 
 ## Desktop Application
 
-To change the default location of the `/data` directory within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
+To change the default location of the data storage directory within the Caido desktop application, in the launch window, **click** on the <code><Icon icon="fas fa-ellipsis-vertical" /></code> button attached to an instance and select `Edit`.
 
 <img alt="The Edit instance option." src="/_images/launch_window_edit.png" center/>
 
@@ -33,5 +33,5 @@ Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to e
 Once you have defined the location, **click** on the `Save` button to update and save the configuration.
 
 ::: info
-The `/log` sub-directory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/).
+The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/).
 :::

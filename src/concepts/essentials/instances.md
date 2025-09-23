@@ -35,7 +35,7 @@ They can also be `Remote` instances if you just want to connect to an existing `
 To manage your instances, you can head over to the [Dashboard](https://dashboard.caido.io/instances).
 
 ::: warning
-If you delete an instance and try to log-in again, you will see the error ["Login URL generation failed"](http://localhost:3000/common_errors.html#login-url-generation-failed). You will need to reset the credentials.
+If you delete an instance and try to login again, you will see the error ["Login URL generation failed"](http://localhost:3000/common_errors.html#login-url-generation-failed). You will need to reset the credentials.
 :::
 
 <img alt="Dashboard for instances." src="/_images/instances_dashboard.png"/>

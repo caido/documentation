@@ -9,20 +9,24 @@ export const troubleshootingSidebar: DefaultTheme.SidebarItem[] = [
         link: "/troubleshooting/",
       },
       {
-        text: "Download & Installation",
-        link: "/troubleshooting/download_installation",
+        text: "Download Issues",
+        link: "/troubleshooting/download",
       },
       {
-        text: "Startup",
+        text: "Installation Issues",
+        link: "/troubleshooting/installation",
+      },
+      {
+        text: "Startup Issues",
         link: "/troubleshooting/startup",
       },
       {
-        text: "Authentication",
+        text: "Login Issues",
         link: "/troubleshooting/authentication",
       },
       {
-        text: "Runtime",
-        link: "/troubleshooting/runtime",
+        text: "In-app Issues",
+        link: "/troubleshooting/in_app",
       },
     ],
   },

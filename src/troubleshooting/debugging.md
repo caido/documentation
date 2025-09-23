@@ -1,4 +1,4 @@
-# Debugging
+# Enabling Debug Mode
 
 To assist with troubleshooting, Caido can be configured to include debug entries in the generated log files.
 

@@ -8,3 +8,7 @@ HTTP request and response data can be viewed in two different formats:
 To switch between the two views, **click** on their associated buttons.
 
 <img alt="Data format buttons." src="/_images/general_usage_pretty_raw.png" center>
+
+---
+
+<img alt="Alertnate data format buttons." src="/_images/general_usage_pretty_raw_icons.png" center>
