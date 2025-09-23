@@ -1,5 +1,5 @@
 ---
-description: "Overview of Caido's HTTP History interface for viewing and analyzing all proxied HTTP requests and responses."
+description: "A step-by-step guide to Caido's HTTP History interface for viewing and analyzing all proxied HTTP requests and responses."
 ---
 
 # HTTP History

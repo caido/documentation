@@ -1,5 +1,5 @@
 ---
-description: "Guide for configuring Caido to listen on multiple ports for UI and proxy traffic using CLI arguments and traffic splitting bypass."
+description: "A step-by-step guide to configuring Caido to listen on multiple ports for UI and proxy traffic using CLI arguments and traffic splitting bypass."
 ---
 
 # Listening on Multiple Ports

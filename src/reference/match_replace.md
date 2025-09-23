@@ -1,5 +1,5 @@
 ---
-description: "Complete reference for Caido's Match & Replace feature including request/response sections, actions, matchers, and replacers."
+description: "Find detailed reference information on Caido's Match & Replace feature including request/response sections, actions, matchers, and replacers."
 ---
 
 # Match & Replace

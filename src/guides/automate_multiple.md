@@ -1,5 +1,5 @@
 ---
-description: "Guide for sending multiple payloads in Caido's Automate feature using different strategies like All, Sequential, Parallel, and Matrix combinations."
+description: "A step-by-step guide to sending multiple payloads in Caido's Automate feature using different strategies like All, Sequential, Parallel, and Matrix combinations."
 ---
 
 # Sending Multiple Payloads

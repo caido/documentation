@@ -1,5 +1,5 @@
 ---
-description: "Understanding Caido's OAuth 2.0 authentication system, client registration, grants, and secure token storage mechanisms."
+description: "Understand the core concepts behind Caido's OAuth 2.0 authentication system, client registration, grants, and secure token storage mechanisms."
 ---
 
 # Authentication

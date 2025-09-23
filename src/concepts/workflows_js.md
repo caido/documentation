@@ -1,5 +1,5 @@
 ---
-description: "Complete guide to using JavaScript in Caido workflows including QuickJS engine, TypeScript, JSDoc, and SDK integration."
+description: "Understand the core concepts behind using JavaScript in Caido workflows including QuickJS engine, TypeScript, JSDoc, and SDK integration."
 ---
 
 # JavaScript in Caido

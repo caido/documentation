@@ -1,5 +1,5 @@
 ---
-description: "How to preview HTTP responses in Caido using the rendering engine to view content as it would appear in a browser window."
+description: "A step-by-step guide to previewing HTTP responses in Caido using the rendering engine to view content as it would appear in a browser window."
 ---
 
 # Previewing Responses

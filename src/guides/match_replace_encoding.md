@@ -1,5 +1,5 @@
 ---
-description: "How to encode request and response body data in Caido's Match & Replace feature using workflows and various encoding methods."
+description: "A step-by-step guide to encoding request and response body data in Caido's Match & Replace feature using workflows and various encoding methods."
 ---
 
 # Encoding Request Body Data

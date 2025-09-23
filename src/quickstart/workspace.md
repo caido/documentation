@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Workspace interface for managing projects, backups, and instance data organization."
+description: "A step-by-step guide to Caido's Workspace interface for managing projects, backups, and instance data organization."
 ---
 
 # Workspace

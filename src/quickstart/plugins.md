@@ -1,5 +1,5 @@
 ---
-description: "Guide to Caido's Plugins interface for installing and managing extension packages to customize functionality."
+description: "A step-by-step guide to Caido's Plugins interface for installing and managing extension packages to customize functionality."
 ---
 
 # Plugins

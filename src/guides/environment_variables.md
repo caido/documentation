@@ -1,5 +1,5 @@
 ---
-description: "How to create and manage environment variables in Caido including global and custom environments with secret variable support."
+description: "A step-by-step guide to creating and managing environment variables in Caido including global and custom environments with secret variable support."
 ---
 
 # Creating Environment Variables

@@ -1,5 +1,5 @@
 ---
-description: "Complete guide for intercepting, modifying, and controlling HTTP/HTTPS traffic in Caido including forwarding, dropping, and editing capabilities."
+description: "A step-by-step guide to intercepting, modifying, and controlling HTTP/HTTPS traffic in Caido including forwarding, dropping, and editing capabilities."
 ---
 
 # Intercepting Traffic

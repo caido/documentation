@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step guide to download and install Caido desktop application on Windows operating systems."
+description: "A step-by-step guide to downloading and installing Caido desktop application on Windows operating systems."
 ---
 
 # Installing Caido on Windows

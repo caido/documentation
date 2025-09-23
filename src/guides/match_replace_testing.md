@@ -1,5 +1,5 @@
 ---
-description: "How to test Match & Replace rules in Caido using the Test button and rule ordering for proper traffic modification."
+description: "A step-by-step guide to testing Match & Replace rules in Caido using the Test button and rule ordering for proper traffic modification."
 ---
 
 # Testing Rules

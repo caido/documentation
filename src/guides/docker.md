@@ -1,5 +1,5 @@
 ---
-description: "Complete guide for running Caido in Docker containers including image launching, project persistence, and custom Dockerfile examples."
+description: "A step-by-step guide to running Caido in Docker containers including image launching, project persistence, and custom Dockerfile examples."
 ---
 
 # Running in Docker

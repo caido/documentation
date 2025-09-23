@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Findings interface for viewing security discoveries and anomalous requests detected during testing."
+description: "A step-by-step guide to Caido's Findings interface for viewing security discoveries and anomalous requests detected during testing."
 ---
 
 # Findings

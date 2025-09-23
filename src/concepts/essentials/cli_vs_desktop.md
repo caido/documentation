@@ -1,5 +1,5 @@
 ---
-description: "Comparison between Caido CLI and Desktop application - understanding the client/server architecture and choosing the right option."
+description: "Understand the core concepts behind the comparison between Caido CLI and Desktop application - the client/server architecture and choosing the right option."
 ---
 
 # CLI vs Desktop

@@ -1,5 +1,5 @@
 ---
-description: "Complete technical reference documentation for Caido shortcuts, workflow nodes, HTTPQL, and other features."
+description: "Find detailed reference information on Caido shortcuts, workflow nodes, HTTPQL, and other features."
 ---
 
 # Reference

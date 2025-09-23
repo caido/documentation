@@ -1,5 +1,5 @@
 ---
-description: "Understanding Caido instances - the client/server architecture, local vs remote instances, and instance management."
+description: "Understand the core concepts behind Caido instances - the client/server architecture, local vs remote instances, and instance management."
 ---
 
 # Instances

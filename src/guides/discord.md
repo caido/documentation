@@ -1,5 +1,5 @@
 ---
-description: "Guide for linking your Caido account to Discord and accessing customer support channels for Individual and Team tier subscribers."
+description: "A step-by-step guide to linking your Caido account to Discord and accessing customer support channels for Individual and Team tier subscribers."
 ---
 
 # Joining Caido's Discord Server

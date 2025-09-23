@@ -1,5 +1,5 @@
 ---
-description: "How to apply scope presets in Caido using the Unset Scope dropdown menu to control which domains are included or excluded from traffic analysis."
+description: "A step-by-step guide to applying scope presets in Caido using the Unset Scope dropdown menu to control which domains are included or excluded from traffic analysis."
 ---
 
 # Applying a Scope

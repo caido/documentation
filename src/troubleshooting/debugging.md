@@ -1,5 +1,5 @@
 ---
-description: "How to enable debug logging in Caido CLI and Desktop application for troubleshooting and bug reporting purposes."
+description: "Enabling debug logging in Caido CLI and Desktop application for troubleshooting and bug reporting purposes."
 ---
 
 # Debugging

@@ -1,5 +1,5 @@
 ---
-description: "Guide for enabling invisible proxying in Caido CLI and Desktop application to capture traffic from non-proxy aware applications."
+description: "A step-by-step guide to enabling invisible proxying in Caido CLI and Desktop application to capture traffic from non-proxy aware applications."
 ---
 
 # Invisible Proxying

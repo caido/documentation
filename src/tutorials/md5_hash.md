@@ -1,5 +1,5 @@
 ---
-description: "Tutorial for creating a convert workflow that generates MD5 hash digests from input data with various encoding options."
+description: "Learn how to create a convert workflow that generates MD5 hash digests from input data with various encoding options."
 ---
 
 # MD5 Hash Input Workflow

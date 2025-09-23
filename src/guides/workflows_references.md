@@ -1,5 +1,5 @@
 ---
-description: "How to pass data between workflow nodes in Caido using references and data aliases for complex automation sequences."
+description: "A step-by-step guide to passing data between workflow nodes in Caido using references and data aliases for complex automation sequences."
 ---
 
 # Passing Data Between Nodes

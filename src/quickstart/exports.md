@@ -1,5 +1,5 @@
 ---
-description: "Guide to exporting data from Caido for use with other security tools or client presentations."
+description: "A step-by-step guide to exporting data from Caido for use with other security tools or client presentations."
 ---
 
 # Exports

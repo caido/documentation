@@ -1,5 +1,5 @@
 ---
-description: "Overview of Caido Cloud services including billing, access control, API transparency, data collection, and security measures."
+description: "Understand the core concepts behind Caido Cloud services including billing, access control, API transparency, data collection, and security measures."
 ---
 
 # Cloud

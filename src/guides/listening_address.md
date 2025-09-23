@@ -1,5 +1,5 @@
 ---
-description: "How to change the listening address and port in Caido CLI and Desktop application for network accessibility and security configuration."
+description: "A step-by-step guide to changing the listening address and port in Caido CLI and Desktop application for network accessibility and security configuration."
 ---
 
 # Changing the Listening Address/Port

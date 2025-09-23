@@ -1,5 +1,5 @@
 ---
-description: "Guide for sending numerical payloads in Caido's Automate feature with configurable ranges, increments, and zero-padding options."
+description: "A step-by-step guide to sending numerical payloads in Caido's Automate feature with configurable ranges, increments, and zero-padding options."
 ---
 
 # Sending Numerical Payloads

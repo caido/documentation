@@ -1,5 +1,5 @@
 ---
-description: "Get started with Caido - download and installation instructions for Windows, Linux, and macOS."
+description: "A step-by-step guide to getting started with Caido - download and installation instructions for Windows, Linux, and macOS."
 ---
 
 # Welcome to Caido!

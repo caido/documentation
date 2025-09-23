@@ -1,5 +1,5 @@
 ---
-description: "Complete tutorial for modifying Android APK files to bypass certificate pinning and enable HTTPS traffic interception through Caido."
+description: "Learn how to modify Android APK files to bypass certificate pinning and enable HTTPS traffic interception through Caido."
 ---
 
 # Modifying an Android Application

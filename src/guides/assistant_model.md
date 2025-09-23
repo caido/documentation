@@ -1,5 +1,5 @@
 ---
-description: "Guide for changing the LLM model in Caido's AI Assistant including available models, token costs, and credit usage."
+description: "A step-by-step guide to changing the LLM model in Caido's AI Assistant including available models, token costs, and credit usage."
 ---
 
 # Changing the LLM Model

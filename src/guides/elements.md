@@ -1,5 +1,5 @@
 ---
-description: "Guide for managing UI elements in Caido including context menu options, buttons, and interface controls for workspace management."
+description: "A step-by-step guide to managing UI elements in Caido including context menu options, buttons, and interface controls for workspace management."
 ---
 
 # Managing Elements

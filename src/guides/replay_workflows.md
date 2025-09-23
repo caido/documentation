@@ -1,5 +1,5 @@
 ---
-description: "How to apply workflows to Replay requests in Caido for dynamic value modification and automated request processing."
+description: "A step-by-step guide to applying workflows to Replay requests in Caido for dynamic value modification and automated request processing."
 ---
 
 # Using Workflows in Replay

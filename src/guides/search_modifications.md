@@ -1,5 +1,5 @@
 ---
-description: "How to view modifications made to requests and responses in Caido's Search interface using the Original Request dropdown menu."
+description: "A step-by-step guide to viewing modifications made to requests and responses in Caido's Search interface using the Original Request dropdown menu."
 ---
 
 # Viewing Modifications

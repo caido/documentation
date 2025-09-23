@@ -1,5 +1,5 @@
 ---
-description: "Guide for creating and defining scope presets in Caido to include or exclude specific domains and IP addresses from traffic analysis."
+description: "A step-by-step guide to creating and defining scope presets in Caido to include or exclude specific domains and IP addresses from traffic analysis."
 ---
 
 # Defining a Scope

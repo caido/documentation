@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's Filters feature for including or excluding specific requests and responses from traffic analysis."
+description: "A step-by-step guide to Caido's Filters feature for including or excluding specific requests and responses from traffic analysis."
 ---
 
 # Filters

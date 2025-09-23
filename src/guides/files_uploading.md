@@ -1,5 +1,5 @@
 ---
-description: "How to upload files to Caido instances for use in Automate sessions and workflow operations."
+description: "A step-by-step guide to uploading files to Caido instances for use in Automate sessions and workflow operations."
 ---
 
 # Uploading Files

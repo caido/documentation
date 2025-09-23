@@ -1,5 +1,5 @@
 ---
-description: "How to filter traffic table rows in Caido's Search interface using column options, advanced filters, and HTTPQL expressions."
+description: "A step-by-step guide to filtering traffic table rows in Caido's Search interface using column options, advanced filters, and HTTPQL expressions."
 ---
 
 # Filtering Traffic Table Rows

@@ -1,5 +1,5 @@
 ---
-description: "Tutorial for creating a convert workflow to automatically resign AWS requests with Signature V4 authentication for API access."
+description: "Learn how to create a convert workflow to automatically resign AWS requests with Signature V4 authentication for API access."
 ---
 
 # Resign AWS Requests Workflow

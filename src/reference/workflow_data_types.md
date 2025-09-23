@@ -1,5 +1,5 @@
 ---
-description: "Reference guide for workflow node data types and their compatibility conversions in Caido workflow automation."
+description: "Find detailed reference information on workflow node data types and their compatibility conversions in Caido workflow automation."
 ---
 
 # Workflow Node Data Types

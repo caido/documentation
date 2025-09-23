@@ -1,5 +1,5 @@
 ---
-description: "Tutorial for creating a convert workflow to decode JSON Web Tokens (JWT) and extract header and payload information."
+description: "Learn how to create a convert workflow to decode JSON Web Tokens (JWT) and extract header and payload information."
 ---
 
 # Decode a JWT Workflow

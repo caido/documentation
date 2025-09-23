@@ -1,5 +1,5 @@
 ---
-description: Frequently asked questions about Caido pricing, installation, data collection, support, and troubleshooting.
+description: "Frequently asked questions about Caido pricing, installation, data collection, support, and troubleshooting."
 ---
 
 # FAQ

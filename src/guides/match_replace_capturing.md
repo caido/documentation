@@ -1,5 +1,5 @@
 ---
-description: "Guide for using capturing groups in Caido's Match & Replace feature to extract and reference specific parts of regular expressions."
+description: "A step-by-step guide to using capturing groups in Caido's Match & Replace feature to extract and reference specific parts of regular expressions."
 ---
 
 # Using Capturing Groups

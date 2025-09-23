@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's Environment feature for managing variables and context switching during security testing."
+description: "A step-by-step guide to Caido's Environment feature for managing variables and context switching during security testing."
 ---
 
 # Environment

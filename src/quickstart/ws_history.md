@@ -1,5 +1,5 @@
 ---
-description: "Overview of Caido's WebSocket History interface for viewing and analyzing all proxied WebSocket streams and messages."
+description: "A step-by-step guide to Caido's WebSocket History interface for viewing and analyzing all proxied WebSocket streams and messages."
 ---
 
 # WS History

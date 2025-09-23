@@ -1,5 +1,5 @@
 ---
-description: "How to configure upstream proxies in Caido for forwarding traffic through HTTP and SOCKS proxies with authentication and scope control."
+description: "A step-by-step guide to configuring upstream proxies in Caido for forwarding traffic through HTTP and SOCKS proxies with authentication and scope control."
 ---
 
 # Upstream to Another Proxy

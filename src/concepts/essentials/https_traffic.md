@@ -1,5 +1,5 @@
 ---
-description: "How Caido handles HTTPS traffic proxying with dynamic certificate generation and TLS connection management."
+description: "Understand the core concepts behind how Caido handles HTTPS traffic proxying with dynamic certificate generation and TLS connection management."
 ---
 
 # Proxying HTTPS Traffic

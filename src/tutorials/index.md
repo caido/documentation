@@ -1,5 +1,5 @@
 ---
-description: "Hands-on tutorials and community-contributed guides to help you master Caido through practical examples."
+description: "Learn how to master Caido through hands-on tutorials and community-contributed guides with practical examples."
 ---
 
 # Tutorials

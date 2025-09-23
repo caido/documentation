@@ -1,5 +1,5 @@
 ---
-description: "Guide for creating findings in Caido workflows using nodes or JavaScript to document security discoveries and anomalous requests."
+description: "A step-by-step guide to creating findings in Caido workflows using nodes or JavaScript to document security discoveries and anomalous requests."
 ---
 
 # Creating Findings

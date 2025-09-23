@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's Scopes feature for defining which domains and subdomains to include or exclude from traffic analysis."
+description: "A step-by-step guide to Caido's Scopes feature for defining which domains and subdomains to include or exclude from traffic analysis."
 ---
 
 # Scopes

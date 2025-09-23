@@ -1,5 +1,5 @@
 ---
-description: "Guide for managing CA certificates in Caido including importing, exporting, and regenerating certificates for HTTPS traffic interception."
+description: "A step-by-step guide to managing CA certificates in Caido including importing, exporting, and regenerating certificates for HTTPS traffic interception."
 ---
 
 # CA Certificate Management

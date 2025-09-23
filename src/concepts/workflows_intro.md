@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido Workflows - creating customizable action sequences for passive, active, and convert operations in security testing."
+description: "Understand the core concepts behind Caido Workflows - creating customizable action sequences for passive, active, and convert operations in security testing."
 ---
 
 # Workflows

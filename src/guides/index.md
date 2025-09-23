@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step installation guides for Caido on Windows, Linux, and macOS operating systems."
+description: "A step-by-step guide to installing Caido on Windows, Linux, and macOS operating systems."
 ---
 
 # Installation

@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's Workflows feature for creating automated multi-step processes and task automation in security testing."
+description: "A step-by-step guide to Caido's Workflows feature for creating automated multi-step processes and task automation in security testing."
 ---
 
 # Workflows

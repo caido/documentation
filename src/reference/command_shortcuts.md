@@ -1,5 +1,5 @@
 ---
-description: "Complete list of Caido keyboard shortcuts and commands for efficient navigation and operation across all interfaces."
+description: "Find detailed reference information on Caido keyboard shortcuts and commands for efficient navigation and operation across all interfaces."
 ---
 
 # Command Shortcuts

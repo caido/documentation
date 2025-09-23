@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Sitemap interface for visualizing target file systems and domain structures from proxied traffic."
+description: "A step-by-step guide to Caido's Sitemap interface for visualizing target file systems and domain structures from proxied traffic."
 ---
 
 # Sitemap

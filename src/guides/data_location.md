@@ -1,5 +1,5 @@
 ---
-description: "Guide for configuring the data directory location in Caido CLI and Desktop application for custom data storage paths."
+description: "A step-by-step guide to configuring the data directory location in Caido CLI and Desktop application for custom data storage paths."
 ---
 
 # Configuring the Data Directory

@@ -1,5 +1,5 @@
 ---
-description: "Guide for creating and restoring project backups in Caido including backup creation, export, and import functionality."
+description: "A step-by-step guide to creating and restoring project backups in Caido including backup creation, export, and import functionality."
 ---
 
 # Saving Projects

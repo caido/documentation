@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Replay feature for creating, modifying, and sending individual HTTP requests for security testing."
+description: "A step-by-step guide to Caido's Replay feature for creating, modifying, and sending individual HTTP requests for security testing."
 ---
 
 # Replay

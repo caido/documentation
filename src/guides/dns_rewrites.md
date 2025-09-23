@@ -1,5 +1,5 @@
 ---
-description: "How to configure DNS rewrites in Caido including upstream servers, static IP resolution, and host filtering for custom domain resolution."
+description: "A step-by-step guide to configuring DNS rewrites in Caido including upstream servers, static IP resolution, and host filtering for custom domain resolution."
 ---
 
 # DNS Rewrites

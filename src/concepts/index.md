@@ -1,5 +1,5 @@
 ---
-description: "Learn the foundational concepts and principles behind Caido's features and design philosophy."
+description: "Understand the core concepts behind Caido's features and design philosophy."
 ---
 
 # Concepts

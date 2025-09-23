@@ -1,5 +1,5 @@
 ---
-description: "How to add custom headers to HTTP requests and responses in Caido's Match & Replace feature for traffic modification."
+description: "A step-by-step guide to adding custom headers to HTTP requests and responses in Caido's Match & Replace feature for traffic modification."
 ---
 
 # Adding a Header

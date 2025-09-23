@@ -1,5 +1,5 @@
 ---
-description: "How to repeat requests multiple times without payload values in Caido's Automate feature for load testing and request repetition."
+description: "A step-by-step guide to repeating requests multiple times without payload values in Caido's Automate feature for load testing and request repetition."
 ---
 
 # Repeating Requests with No Payload

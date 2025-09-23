@@ -1,5 +1,5 @@
 ---
-description: "Installation instructions for Caido on macOS using .dmg files or Homebrew for Intel and Apple Silicon Macs."
+description: "A step-by-step guide to installing Caido on macOS using .dmg files or Homebrew for Intel and Apple Silicon Macs."
 ---
 
 # Installing Caido on macOS

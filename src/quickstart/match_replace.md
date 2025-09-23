@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Match & Replace feature for automatically modifying requests and responses with custom rules."
+description: "A step-by-step guide to Caido's Match & Replace feature for automatically modifying requests and responses with custom rules."
 ---
 
 # Match & Replace

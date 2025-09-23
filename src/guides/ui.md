@@ -1,5 +1,5 @@
 ---
-description: "Guide for customizing Caido's user interface including pane resizing, font size adjustment, and custom JavaScript/CSS modifications."
+description: "A step-by-step guide to customizing Caido's user interface including pane resizing, font size adjustment, and custom JavaScript/CSS modifications."
 ---
 
 # Customizing the User Interface

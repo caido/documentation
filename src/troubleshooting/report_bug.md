@@ -1,5 +1,5 @@
 ---
-description: "Complete guide for reporting bugs in Caido including log collection, reproduction steps, and GitHub issue submission."
+description: "A step-by-step guide to reporting bugs in Caido including log collection, reproduction steps, and GitHub issue submission."
 ---
 
 # Reporting a Bug

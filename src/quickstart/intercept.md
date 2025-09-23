@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's Intercept feature for real-time traffic inspection, modification, and control during security testing."
+description: "A step-by-step guide to Caido's Intercept feature for real-time traffic inspection, modification, and control during security testing."
 ---
 
 # Intercept

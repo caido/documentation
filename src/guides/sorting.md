@@ -1,5 +1,5 @@
 ---
-description: "How to sort traffic table rows in Caido by clicking column names to toggle listing order for better data organization."
+description: "A step-by-step guide to sorting traffic table rows in Caido by clicking column names to toggle listing order for better data organization."
 ---
 
 # Sorting Traffic Table Rows

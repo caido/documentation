@@ -1,5 +1,5 @@
 ---
-description: "Tutorial for creating passive workflows that automatically extract and store session cookies or tokens as environment variables for continuous testing."
+description: "Learn how to create passive workflows that automatically extract and store session cookies or tokens as environment variables for continuous testing."
 ---
 
 # Refresh Authentication Workflow

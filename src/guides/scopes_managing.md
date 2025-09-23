@@ -1,5 +1,5 @@
 ---
-description: "Guide for managing scope presets in Caido including adding targets, duplicating presets, and deleting scope configurations."
+description: "A step-by-step guide to managing scope presets in Caido including adding targets, duplicating presets, and deleting scope configurations."
 ---
 
 # Managing Scopes

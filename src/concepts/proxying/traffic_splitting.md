@@ -1,5 +1,5 @@
 ---
-description: "How Caido's traffic splitting algorithm routes requests between proxy forwarding and UI/API, including upstream determination logic."
+description: "Understand the core concepts behind Caido's traffic splitting algorithm routes requests between proxy forwarding and UI/API, including upstream determination logic."
 ---
 
 # Traffic Splitting

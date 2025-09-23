@@ -1,5 +1,5 @@
 ---
-description: "Guide for sending requests from other Caido interfaces to the Automate interface for automated testing and fuzzing campaigns."
+description: "A step-by-step guide to sending requests from other Caido interfaces to the Automate interface for automated testing and fuzzing campaigns."
 ---
 
 # Sending Requests to Automate

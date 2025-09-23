@@ -1,5 +1,5 @@
 ---
-description: "Guide for using Caido on Athena OS with native support across security roles and launch instructions for the penetration testing distribution."
+description: "A step-by-step guide to using Caido on Athena OS with native support across security roles and launch instructions for the penetration testing distribution."
 ---
 
 # Caido :handshake: Athena OS

@@ -1,5 +1,5 @@
 ---
-description: "How to delete sitemap nodes in Caido including parent and child node deletion with permanent removal warnings."
+description: "A step-by-step guide to deleting sitemap nodes in Caido including parent and child node deletion with permanent removal warnings."
 ---
 
 # Deleting Sitemap Nodes

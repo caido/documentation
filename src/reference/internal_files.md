@@ -1,5 +1,5 @@
 ---
-description: "Reference guide for Caido's internal file structure, storage locations, and database organization across different operating systems."
+description: "Find detailed reference information on Caido's internal file structure, storage locations, and database organization across different operating systems."
 ---
 
 # Internal Files

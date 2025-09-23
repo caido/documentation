@@ -1,5 +1,5 @@
 ---
-description: "Guide for contributing to Caido's open-source documentation including setup, style guidelines, and pull request submission process."
+description: "A step-by-step guide to contributing to Caido's open-source documentation including setup, style guidelines, and pull request submission process."
 ---
 
 # Contributing to the Documentation

@@ -1,5 +1,5 @@
 ---
-description: "Complete installation guide for Caido on Linux using .deb packages, AppImage, or AUR for different architectures."
+description: "A step-by-step guide to installing Caido on Linux using .deb packages, AppImage, or AUR for different architectures."
 ---
 
 # Installing Caido on Linux

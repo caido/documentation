@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step guide for configuring iOS devices to proxy HTTP/HTTPS traffic through Caido including proxy settings and certificate installation."
+description: "Learn how to configure iOS devices to proxy HTTP/HTTPS traffic through Caido including proxy settings and certificate installation."
 ---
 
 # iOS Setup and Configuration

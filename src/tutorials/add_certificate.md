@@ -1,5 +1,5 @@
 ---
-description: "Step-by-step tutorial for adding Caido's CA certificate to Android system store for HTTPS traffic interception on rooted devices."
+description: "Learn how to add Caido's CA certificate to Android system store for HTTPS traffic interception on rooted devices."
 ---
 
 # Adding Caido's CA Certificate to the System-Store

@@ -1,5 +1,5 @@
 ---
-description: "Guide for creating and defining filter presets in Caido using HTTPQL expressions to organize and categorize traffic analysis."
+description: "A step-by-step guide to creating and defining filter presets in Caido using HTTPQL expressions to organize and categorize traffic analysis."
 ---
 
 # Defining a Filter

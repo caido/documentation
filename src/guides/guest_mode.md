@@ -1,5 +1,5 @@
 ---
-description: "Guide for using Caido in guest mode without authentication, including security considerations and feature limitations."
+description: "A step-by-step guide to using Caido in guest mode without authentication, including security considerations and feature limitations."
 ---
 
 # Guest Mode

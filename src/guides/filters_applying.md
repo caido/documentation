@@ -1,5 +1,5 @@
 ---
-description: "How to apply filter presets in Caido traffic tables using the Advanced button and filter selection interface."
+description: "A step-by-step guide to applying filter presets in Caido traffic tables using the Advanced button and filter selection interface."
 ---
 
 # Applying a Filter

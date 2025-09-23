@@ -1,5 +1,5 @@
 ---
-description: "How to view and navigate Caido's sitemap interface including domain expansion, request viewing, and search functionality."
+description: "A step-by-step guide to viewing and navigating Caido's sitemap interface including domain expansion, request viewing, and search functionality."
 ---
 
 # Viewing a Sitemap

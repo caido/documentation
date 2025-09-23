@@ -1,5 +1,5 @@
 ---
-description: "How to use wordlists in Caido's Automate feature for systematic payload testing with hosted files or simple lists."
+description: "A step-by-step guide to using wordlists in Caido's Automate feature for systematic payload testing with hosted files or simple lists."
 ---
 
 # Sending Payloads from a Wordlist

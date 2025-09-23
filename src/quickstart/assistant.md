@@ -1,5 +1,5 @@
 ---
-description: "Learn about Caido's AI Assistant feature for security research, attack vector suggestions, and proof-of-concept generation."
+description: "A step-by-step guide to Caido's AI Assistant feature for security research, attack vector suggestions, and proof-of-concept generation."
 ---
 
 # Assistant

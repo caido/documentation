@@ -1,5 +1,5 @@
 ---
-description: "Initial setup guide for Caido including authentication, instance configuration, and CA certificate import."
+description: "A step-by-step guide to initial setup for Caido including authentication, instance configuration, and CA certificate import."
 ---
 
 # Setup

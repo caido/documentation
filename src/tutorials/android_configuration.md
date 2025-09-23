@@ -1,5 +1,5 @@
 ---
-description: "Complete guide for setting up Android devices to proxy HTTP/HTTPS traffic through Caido including proxy configuration and certificate installation."
+description: "Learn how to set up Android devices to proxy HTTP/HTTPS traffic through Caido including proxy configuration and certificate installation."
 ---
 
 # Android Setup and Configuration

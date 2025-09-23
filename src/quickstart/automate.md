@@ -1,5 +1,5 @@
 ---
-description: "Introduction to Caido's Automate feature for programmatic request sending, brute-force attacks, and fuzzing campaigns."
+description: "A step-by-step guide to Caido's Automate feature for programmatic request sending, brute-force attacks, and fuzzing campaigns."
 ---
 
 # Automate

@@ -1,5 +1,5 @@
 ---
-description: "Complete reference for HTTPQL query language used in Caido for filtering requests and responses with namespaces, fields, and operators."
+description: "Find detailed reference information on HTTPQL query language used in Caido for filtering requests and responses with namespaces, fields, and operators."
 ---
 
 # HTTPQL

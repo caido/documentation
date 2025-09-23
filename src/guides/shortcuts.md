@@ -1,5 +1,5 @@
 ---
-description: "How to create, modify, and remove keyboard shortcuts in Caido for efficient navigation and command execution."
+description: "A step-by-step guide to creating, modifying, and removing keyboard shortcuts in Caido for efficient navigation and command execution."
 ---
 
 # Creating Shortcuts

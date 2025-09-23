@@ -1,5 +1,5 @@
 ---
-description: "Overview of Caido's Search interface for finding and analyzing HTTP requests and responses across all proxied traffic."
+description: "A step-by-step guide to Caido's Search interface for finding and analyzing HTTP requests and responses across all proxied traffic."
 ---
 
 # Search

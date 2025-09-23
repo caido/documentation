@@ -1,5 +1,5 @@
 ---
-description: "How to use environment variables in Caido's Replay feature for dynamic request modification and placeholder configuration."
+description: "A step-by-step guide to using environment variables in Caido's Replay feature for dynamic request modification and placeholder configuration."
 ---
 
 # Using Environment Variables in Replay

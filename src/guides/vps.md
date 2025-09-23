@@ -1,5 +1,5 @@
 ---
-description: "Guide for running Caido on a virtual private server (VPS) including SSH port forwarding and AWS SSM configuration for remote access."
+description: "A step-by-step guide to running Caido on a virtual private server (VPS) including SSH port forwarding and AWS SSM configuration for remote access."
 ---
 
 # Running on a VPS

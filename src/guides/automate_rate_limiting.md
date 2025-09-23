@@ -1,5 +1,5 @@
 ---
-description: "How to configure rate limiting and concurrency settings in Caido's Automate feature to avoid triggering rate-limiting protections."
+description: "A step-by-step guide to configuring rate limiting and concurrency settings in Caido's Automate feature to avoid triggering rate-limiting protections."
 ---
 
 # Avoiding Rate-Limiting Protections

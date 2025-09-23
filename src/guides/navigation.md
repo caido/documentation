@@ -1,5 +1,5 @@
 ---
-description: "Guide for navigating Caido's user interface including the navigation menu, feature interfaces, and sidebar visibility controls."
+description: "A step-by-step guide to navigating Caido's user interface including the navigation menu, feature interfaces, and sidebar visibility controls."
 ---
 
 # Navigating Caido

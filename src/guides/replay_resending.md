@@ -1,5 +1,5 @@
 ---
-description: "How to resend requests in Caido's Replay feature for testing modifications and analyzing response changes."
+description: "A step-by-step guide to resending requests in Caido's Replay feature for testing modifications and analyzing response changes."
 ---
 
 # Resending Requests

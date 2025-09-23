@@ -1,5 +1,5 @@
 ---
-description: "Tutorial for creating a passive workflow that automatically adds custom headers to in-scope requests and resends them in Caido."
+description: "Learn how to create a passive workflow that automatically adds custom headers to in-scope requests and resends them in Caido."
 ---
 
 # Add a Header Workflow

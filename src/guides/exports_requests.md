@@ -1,5 +1,5 @@
 ---
-description: "How to export request data from Caido traffic tables in JSON or CSV format for analysis, reporting, and integration with other security tools."
+description: "A step-by-step guide to exporting request data from Caido traffic tables in JSON or CSV format for analysis, reporting, and integration with other security tools."
 ---
 
 # Exporting Request Data

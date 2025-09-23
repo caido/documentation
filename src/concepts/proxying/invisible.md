@@ -1,5 +1,5 @@
 ---
-description: "Understanding invisible proxying in Caido for thick clients that cannot be configured to use traditional forward proxies."
+description: "Understand the core concepts behind invisible proxying in Caido for thick clients that cannot be configured to use traditional forward proxies."
 ---
 
 # Invisible Proxying
