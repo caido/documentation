@@ -1,3 +1,7 @@
+---
+description: "How to enable debug logging in Caido CLI and Desktop application for troubleshooting and bug reporting purposes."
+---
+
 # Debugging
 
 To assist with troubleshooting, Caido can be configured to include debug entries in the generated log files.

@@ -1,3 +1,7 @@
+---
+description: "Guide for using Caido on Parrot Security OS with native support, Docker integration, and launch instructions for the security-focused Linux distribution."
+---
+
 # Caido :handshake: Parrot Security
 
 ---

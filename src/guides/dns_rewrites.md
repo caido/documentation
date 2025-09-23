@@ -1,3 +1,7 @@
+---
+description: "How to configure DNS rewrites in Caido including upstream servers, static IP resolution, and host filtering for custom domain resolution."
+---
+
 # DNS Rewrites
 
 To control the domain to IP address resolutions for specified hosts, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `Network` tab.

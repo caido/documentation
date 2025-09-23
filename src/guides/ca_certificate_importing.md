@@ -1,3 +1,7 @@
+---
+description: "Step-by-step guide for downloading and importing Caido's CA certificate to enable HTTPS traffic interception in browsers."
+---
+
 # Importing Caido's CA Certificate
 
 To proxy HTTPS traffic with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.

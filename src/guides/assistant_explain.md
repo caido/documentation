@@ -1,3 +1,7 @@
+---
+description: "How to use Caido's AI Assistant to explain HTTP requests in natural language and identify potential attack vectors."
+---
+
 # Prompting the Assistant to Explain Requests
 
 <ProContainer>

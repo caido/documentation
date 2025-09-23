@@ -1,3 +1,7 @@
+---
+description: "Guide to Caido's GraphQL API for client/server communication, authentication, playground access, and schema exploration."
+---
+
 # GraphQL
 
 Caido mainly uses [GraphQL](https://graphql.org/) for the `client/server` communication.

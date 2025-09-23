@@ -1,3 +1,7 @@
+---
+description: "How to use wordlists in Caido's Automate feature for systematic payload testing with hosted files or simple lists."
+---
+
 # Sending Payloads from a Wordlist
 
 To use a wordlist of payload values, **click**, **drag**, and **hold** over the request element you want to replace and then **click** on the `+ Add Placeholder` button.

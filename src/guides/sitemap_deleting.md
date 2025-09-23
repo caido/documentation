@@ -1,3 +1,7 @@
+---
+description: "How to delete sitemap nodes in Caido including parent and child node deletion with permanent removal warnings."
+---
+
 # Deleting Sitemap Nodes
 
 To permanently delete a Sitemap node, **click** on the `...` button attached to it and select <code><Icon icon="fas fa-trash" /> Delete entry</code>.

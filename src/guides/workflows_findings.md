@@ -1,3 +1,7 @@
+---
+description: "Guide for creating findings in Caido workflows using nodes or JavaScript to document security discoveries and anomalous requests."
+---
+
 # Creating Findings
 
 Findings consist of the following set of properties:

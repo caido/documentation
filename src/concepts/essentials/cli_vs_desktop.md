@@ -1,3 +1,7 @@
+---
+description: "Comparison between Caido CLI and Desktop application - understanding the client/server architecture and choosing the right option."
+---
+
 # CLI vs Desktop
 
 Caido comes in two variations: `Desktop` and `CLI`. We are aware that this is **confusing** to new users, which is why we made this Concept page.

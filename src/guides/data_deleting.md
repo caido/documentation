@@ -1,3 +1,7 @@
+---
+description: "Advanced guide for manually deleting data in Caido using SQLite CLI with detailed instructions and safety warnings."
+---
+
 # Deleting Data in Caido
 
 ::: danger

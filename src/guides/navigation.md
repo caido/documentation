@@ -1,3 +1,7 @@
+---
+description: "Guide for navigating Caido's user interface including the navigation menu, feature interfaces, and sidebar visibility controls."
+---
+
 # Navigating Caido
 
 On the left-hand side of the Caido user-interface is a navigation menu that contains the different feature interfaces, grouped by category. **Clicking** on a listed feature will present its own page.

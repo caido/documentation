@@ -1,3 +1,7 @@
+---
+description: "Complete reference for HTTPQL query language used in Caido for filtering requests and responses with namespaces, fields, and operators."
+---
+
 # HTTPQL
 
 HTTPQL is the query language we use in Caido to let you filtering requests and responses. It is an evolving language that we hope will eventually become an industry standard.

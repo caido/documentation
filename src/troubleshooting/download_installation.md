@@ -1,3 +1,7 @@
+---
+description: "Troubleshooting download and installation issues including site access problems and Linux AppImage sandbox errors."
+---
+
 # Download & Installation
 
 ## "This site can't be reached."

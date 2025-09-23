@@ -1,3 +1,7 @@
+---
+description: "Learn about Caido's Environment feature for managing variables and context switching during security testing."
+---
+
 # Environment
 
 The `Environment` interface gives you the ability to define collections of variables that can be inserted into requests, enabling quick context switching while testing.

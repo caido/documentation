@@ -1,3 +1,7 @@
+---
+description: "Guide for configuring domain allowlists in Caido CLI, Desktop application, and Docker to control API and interface access security."
+---
+
 # Domain Allowlist
 
 For security, only defined domains can access the Caido API and interface.

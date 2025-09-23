@@ -1,3 +1,7 @@
+---
+description: "Guide for sending requests from other Caido interfaces to the Automate interface for automated testing and fuzzing campaigns."
+---
+
 # Sending Requests to Automate
 
 You can send requests from other interfaces to the Automate interface in various ways:

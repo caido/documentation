@@ -1,3 +1,7 @@
+---
+description: "How to filter and organize traffic table rows in Caido's HTTP History interface using column options and advanced filtering."
+---
+
 # Filtering Traffic Table Rows
 
 ::: tip

@@ -1,3 +1,7 @@
+---
+description: "How to view and navigate Caido's sitemap interface including domain expansion, request viewing, and search functionality."
+---
+
 # Viewing a Sitemap
 
 To view the root domain or subdomains of a Sitemap, reveal the child nodes of a root node by **clicking** on the <code><Icon icon="fas fa-chevron-right" /></code> button attached to it.

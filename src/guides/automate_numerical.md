@@ -1,3 +1,7 @@
+---
+description: "Guide for sending numerical payloads in Caido's Automate feature with configurable ranges, increments, and zero-padding options."
+---
+
 # Sending Numerical Payloads
 
 To send numerical payload values, **click**, **drag**, and **hold** over the request element you want to replace and then **click** on the `+ Add Placeholder` button.

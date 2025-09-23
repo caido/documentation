@@ -1,3 +1,7 @@
+---
+description: "How to test Match & Replace rules in Caido using the Test button and rule ordering for proper traffic modification."
+---
+
 # Testing Rules
 
 ::: warning NOTE

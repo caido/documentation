@@ -1,3 +1,7 @@
+---
+description: "Understanding Caido's OAuth 2.0 authentication system, client registration, grants, and secure token storage mechanisms."
+---
+
 # Authentication
 
 The authentication in Caido is based on the <a href="https://www.rfc-editor.org/rfc/rfc6749" target="_blank">OAuth 2.0 Authorization Framework</a>. It replaces the need for licenses and will allow us to provide hosted and sharing services down the line.

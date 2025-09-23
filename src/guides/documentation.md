@@ -1,3 +1,7 @@
+---
+description: "Guide for contributing to Caido's open-source documentation including setup, style guidelines, and pull request submission process."
+---
+
 # Contributing to the Documentation
 
 Caido's documentation is [open source](https://github.com/caido/documentation) and is open to community member contributions.

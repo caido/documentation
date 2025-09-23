@@ -1,3 +1,7 @@
+---
+description: "Reference guide for all context menu options available in Caido interfaces for request manipulation and workflow operations."
+---
+
 # Context Menu Options
 
 | Option | Description |

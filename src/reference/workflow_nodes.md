@@ -1,3 +1,7 @@
+---
+description: "Complete reference for Caido workflow nodes including JavaScript, Shell, If/Else, and other automation components."
+---
+
 # Workflow Nodes
 
 Here you'll find the list of nodes available to use in your convert workflows.

@@ -1,3 +1,7 @@
+---
+description: "Guide for using capturing groups in Caido's Match & Replace feature to extract and reference specific parts of regular expressions."
+---
+
 # Using Capturing Groups
 
 By encasing sections of a regular expression with parentheses, you can extract and reference specific subpatterns. Known as "capturing groups", these value groups can then be referenced using `$` followed by the group's number, starting from `1`.

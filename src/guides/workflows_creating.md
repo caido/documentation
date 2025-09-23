@@ -1,3 +1,7 @@
+---
+description: "Step-by-step guide for creating new workflows in Caido including node addition, connection setup, and workflow configuration."
+---
+
 # Creating Workflows
 
 ::: tip

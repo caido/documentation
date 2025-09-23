@@ -1,3 +1,7 @@
+---
+description: "Introduction to Caido's Replay feature for creating, modifying, and sending individual HTTP requests for security testing."
+---
+
 # Replay
 
 The `Replay` interface gives you the ability to create, modify, and send individual requests. Each sent request and its corresponding response are recorded, enabling you to compare and identify how specific modifications affect responses.

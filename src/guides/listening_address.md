@@ -1,3 +1,7 @@
+---
+description: "How to change the listening address and port in Caido CLI and Desktop application for network accessibility and security configuration."
+---
+
 # Changing the Listening Address/Port
 
 By default, Caido listens on the IP address `127.0.0.1` and port `8080`. This means that Caido will only be accessible from the same device it is running on.

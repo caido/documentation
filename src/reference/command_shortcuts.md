@@ -1,3 +1,7 @@
+---
+description: "Complete list of Caido keyboard shortcuts and commands for efficient navigation and operation across all interfaces."
+---
+
 # Command Shortcuts
 
 ::: tip

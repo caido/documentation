@@ -1,3 +1,7 @@
+---
+description: "Guide for customizing Caido's user interface including pane resizing, font size adjustment, and custom JavaScript/CSS modifications."
+---
+
 # Customizing the User Interface
 
 Caido offers a high-degree of customization, so you can adjust the user-interface to suit your preferences and needs.

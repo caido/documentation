@@ -1,3 +1,7 @@
+---
+description: "Complete guide for running Caido in Docker containers including image launching, project persistence, and custom Dockerfile examples."
+---
+
 # Running in Docker
 
 Caido is available as an image on [Docker Hub](https://hub.docker.com/r/caido/caido) that can be ran directly on x86 architecture.

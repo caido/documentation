@@ -2,6 +2,10 @@
 outline: [2, 4]
 ---
 
+---
+description: "Complete guide for setting up invisible proxying in Caido to capture traffic from thick client applications that don't support proxy configuration."
+---
+
 # Invisible Proxying for Non-Proxy Aware Thick Clients
 
 In this tutorial you will be guided through the process of configuring desktop applications to proxy traffic through Caido.

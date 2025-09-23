@@ -1,3 +1,7 @@
+---
+description: "Overview of Caido Cloud services including billing, access control, API transparency, data collection, and security measures."
+---
+
 # Cloud
 
 Caido Cloud is comprised of the [Dashboard](https://dashboard.caido.io) and the API that the instances use to communicate with us.

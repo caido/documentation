@@ -1,3 +1,7 @@
+---
+description: "Guide for changing the LLM model in Caido's AI Assistant including available models, token costs, and credit usage."
+---
+
 # Changing the LLM Model
 
 <ProContainer>

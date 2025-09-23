@@ -1,3 +1,7 @@
+---
+description: "Guide for linking your Caido account to Discord and accessing customer support channels for Individual and Team tier subscribers."
+---
+
 # Joining Caido's Discord Server
 
 To link your Caido account to your Discord account, visit [https://dashboard.caido.io/settings](https://dashboard.caido.io/settings) and click the `Sign in with Discord` button.

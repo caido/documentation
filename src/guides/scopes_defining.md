@@ -1,3 +1,7 @@
+---
+description: "Guide for creating and defining scope presets in Caido to include or exclude specific domains and IP addresses from traffic analysis."
+---
+
 # Defining a Scope
 
 Scopes are defined by creating sets of target lists referred to as "scope presets".
