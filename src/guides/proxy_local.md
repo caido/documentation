@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to proxying local traffic in Caido using FoxyProxy, Chrome, Firefox, and lvh.me domain to bypass localhost bypass rules."
+---
+
 # Proxying Local Traffic
 
 To proxy local traffic, it is necessary to bypass implicit rules that match against localhost addresses using a method mentioned below.

@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind Caido workflow nodes - actions, conditions, connections, aliases, and input types for building complex automation sequences."
+---
+
 # Understanding Nodes
 
 **Nodes** are simply **actions** or **conditions**. By connecting nodes together, complex action sequences based on certain conditions are created.

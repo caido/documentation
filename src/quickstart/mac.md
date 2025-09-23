@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to installing Caido on macOS using .dmg files or Homebrew for Intel and Apple Silicon Macs."
+---
+
 # Installing Caido on macOS
 
 Caido provides a desktop application for both Intel-based (x86_64) and Apple silicon (M1/M2/M3, AArch64) architectures.

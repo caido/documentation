@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to managing UI elements in Caido including context menu options, buttons, and interface controls for workspace management."
+---
+
 # Managing Elements
 
 As you use Caido, the user-interface will populate with elements that reflect your activity. The majority of these elements come with various controls, available as buttons or menu options, that are designed to give you fine-grained control over your workspace.

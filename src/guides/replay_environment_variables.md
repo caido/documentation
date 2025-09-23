@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to using environment variables in Caido's Replay feature for dynamic request modification and placeholder configuration."
+---
+
 # Using Environment Variables in Replay
 
 To insert an environment variable in a Replay request, **click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder.

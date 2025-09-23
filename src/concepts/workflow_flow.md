@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind workflow execution order and data flow in Caido - sequential node processing and data referencing between nodes."
+---
+
 # Workflow Execution and Data Flow
 
 ::: info

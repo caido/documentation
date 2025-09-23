@@ -1,4 +1,8 @@
-# Login Issues
+---
+description: "Troubleshooting authentication issues in Caido including instance access problems and login URL generation failures."
+---
+
+# Authentication
 
 ## "You do not have access to this instance. Go to dashboard." - "Login URL generation failed: invalid authentication token." - "The instance is no longer valid."
 

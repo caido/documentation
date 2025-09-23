@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to configuring upstream proxies in Caido for forwarding traffic through HTTP and SOCKS proxies with authentication and scope control."
+---
+
 # Upstream to Another Proxy
 
 To forward traffic proxied by Caido to an upstream proxy, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `Network` tab.

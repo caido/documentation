@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Match & Replace feature for automatically modifying requests and responses with custom rules."
+---
+
 # Match & Replace
 
 The `Match & Replace` interface gives you the ability to create rules that will automatically add, remove, or replace specific values within requests and responses as they are passed through Caido.

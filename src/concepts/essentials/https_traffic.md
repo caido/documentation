@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind how Caido handles HTTPS traffic proxying with dynamic certificate generation and TLS connection management."
+---
+
 # Proxying HTTPS Traffic
 
 When using Caido, two separate [TCP](https://developer.mozilla.org/en-US/docs/Glossary/TCP)/[TLS](https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security) connections are created: one between the client (_your browser_) and Caido, and the other between Caido and the server.

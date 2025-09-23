@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to installing plugins in Caido from the Community Store or local package files, including security considerations and risk acknowledgment."
+---
+
 # Installing Plugins
 
 ::: warning

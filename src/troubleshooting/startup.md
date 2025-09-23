@@ -1,4 +1,8 @@
-# Startup Issues
+---
+description: "Troubleshooting Caido startup issues including unreachable instances, connection errors, and configuration problems."
+---
+
+# Startup
 
 ## "Instance is unreachable"
 

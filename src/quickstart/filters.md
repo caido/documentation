@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Filters feature for including or excluding specific requests and responses from traffic analysis."
+---
+
 # Filters
 
 The `Filters` interface gives you the ability to define which requests or responses should be included or excluded from Caido traffic tables and operations, based on specific elements.

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Workflows feature for creating automated multi-step processes and task automation in security testing."
+---
+
 # Workflows
 
 Within the `Workflows` interface, you can construct multi-step processes to execute certain actions or conversions, allowing you to automate tasks on an immediate, discretionary, or repeated basis.

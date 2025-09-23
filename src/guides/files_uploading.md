@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to uploading files to Caido instances for use in Automate sessions and workflow operations."
+---
+
 # Uploading Files
 
 To upload files to your Caido instance, **click** on the <code><Icon icon="fas fa-cloud-arrow-up" /> Upload</code> button.

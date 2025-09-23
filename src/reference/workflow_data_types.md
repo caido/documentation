@@ -1,3 +1,7 @@
+---
+description: "Find detailed reference information on workflow node data types and their compatibility conversions in Caido workflow automation."
+---
+
 # Workflow Node Data Types
 
 Nodes are defined by various different input and output data types.

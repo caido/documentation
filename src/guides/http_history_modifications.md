@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to viewing modifications made to requests and responses in Caido's HTTP History interface using the Original Request dropdown menu."
+---
+
 # Viewing Modifications
 
 ::: info

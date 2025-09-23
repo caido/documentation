@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to preprocessing payloads in Caido's Automate feature using workflows, URL encoding, prefixes, suffixes, and custom transformations."
+---
+
 # Preprocessing Payloads
 
 <ProContainer>

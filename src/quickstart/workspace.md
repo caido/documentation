@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to Caido's Workspace interface for managing projects, backups, and instance data organization."
+---
+
 # Workspace
 
 The `Workspace` interface lists all the Caido projects and any backups of your instance.

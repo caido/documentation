@@ -1,3 +1,7 @@
+---
+description: "Understand the core concepts behind Caido Workflows - creating customizable action sequences for passive, active, and convert operations in security testing."
+---
+
 # Workflows
 
 **Workflows** provide an intuitive way to create, save and reuse customizable actions or sequences of actions that will be performed under certain specified conditions. With workflows, you have the ability to extend the functionality of Caido to suit your individual needs.

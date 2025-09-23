@@ -1,3 +1,7 @@
+---
+description: "Learn how to master Caido through hands-on tutorials and community-contributed guides with practical examples."
+---
+
 # Tutorials
 
 The Tutorials section contains example projects to help you get the most out of Caido.

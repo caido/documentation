@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to initial setup for Caido including authentication, instance configuration, and CA certificate import."
+---
+
 # Setup
 
 Once Caido has been launched:

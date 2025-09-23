@@ -1,3 +1,7 @@
+---
+description: "Find detailed reference information on Caido CLI command-line options and flags for advanced configuration and troubleshooting."
+---
+
 # CLI Options
 
 To view the options available to the Caido CLI, use `-h` or `--help`.

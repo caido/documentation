@@ -1,4 +1,8 @@
-# Submitting a Report
+---
+description: "A step-by-step guide to reporting bugs in Caido including log collection, reproduction steps, and GitHub issue submission."
+---
+
+# Reporting a Bug
 
 To report a bug or receive support, please contact a member of the Caido team by submitting a [contact form](https://caido.io/contact) or [send us a message on Discord](https://links.caido.io/www-discord) and be prepared to provide the following resources/information.
 

@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to using Caido's AI Assistant to generate Cross-Site Request Forgery (CSRF) proof-of-concept attacks from HTTP requests."
+---
+
 # Generating CSRF PoCs
 
 <ProContainer>

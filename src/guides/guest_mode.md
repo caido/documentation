@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to using Caido in guest mode without authentication, including security considerations and feature limitations."
+---
+
 # Guest Mode
 
 Caido can be used without an account by selecting the `Continue as guest` option in the authentication prompt.

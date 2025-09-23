@@ -1,4 +1,8 @@
-# Changing the Data Storage Directory
+---
+description: "A step-by-step guide to configuring the data directory location in Caido CLI and Desktop application for custom data storage paths."
+---
+
+# Configuring the Data Directory
 
 All the data Caido creates is stored in a single directory. The default location of this directory is dependent on your operating system:
 
