@@ -2,7 +2,7 @@
 description: "A step-by-step guide to reporting bugs in Caido including log collection, reproduction steps, and GitHub issue submission."
 ---
 
-# Reporting a Bug
+# Submitting a Report
 
 To report a bug or receive support, please contact a member of the Caido team by submitting a [contact form](https://caido.io/contact) or [send us a message on Discord](https://links.caido.io/www-discord) and be prepared to provide the following resources/information.
 
@@ -10,7 +10,9 @@ To report a bug or receive support, please contact a member of the Caido team by
 
 We will typically need the following information for every case. Please provide us with your operating system, version number/name, Caido client in use (_CLI/desktop application/web application_), and the version of Caido in use.
 
-::: tip Example Operating System & Version
+::: tip EXAMPLE
+
+I am using:
 
 - **OS:** Mac OS
 - **OS Version:** 12 (Monterey)
@@ -54,7 +56,9 @@ To obtain the frontend logs, either:
 
 In order to assist you, it is **critical** that you provide a detailed timeline of the exact steps you took leading up to the bug. This ensures we are able to reproduce the issue in an accurate and timely manner.
 
-::: tip Example Steps to Reproduce
+::: tip EXAMPLE
+
+To reproduce the bug, follow these steps:
 
 1. In the `Intercept` interface, click on the `Response` button.
 2. Begin intercepting responses, by **clicking** on the <code><Icon icon="fas fa-angles-right" /> Forwarding</code> button to toggle it to <code><Icon icon="fas fa-pause" /> Queuing</code>.

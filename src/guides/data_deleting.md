@@ -11,7 +11,7 @@ We do not recommend modifying the files directly as this might result in problem
 Caido does not currently support a CLI argument or desktop application functionality for deleting data. However, although it is not recommended, data can be deleted manually using the SQLite CLI.
 
 ::: tip
-View the [internal files](/reference/internal_files.md) reference to learn about the file system structure.
+View the [internal files](/reference/data_storage.md) reference to learn about the file system structure.
 :::
 
 ## Finding a Project

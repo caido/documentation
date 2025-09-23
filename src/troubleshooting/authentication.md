@@ -2,7 +2,7 @@
 description: "Troubleshooting authentication issues in Caido including instance access problems and login URL generation failures."
 ---
 
-# Authentication
+# Login Issues
 
 ## "You do not have access to this instance. Go to dashboard." - "Login URL generation failed: invalid authentication token." - "The instance is no longer valid."
 
@@ -46,7 +46,7 @@ Once you have authenticated to the instance, ensure to remove the `--reset-crede
 
 #### Delete the Data Storage Directory
 
-Although it is not recommended, deleting the [data storage directory](/reference/internal_files.md) reset the installation.
+Although it is not recommended, deleting the [data storage directory](/reference/data_storage.md) reset the installation.
 
 ## "Date mismatch: make sure your device's date and time settings are correct."
 

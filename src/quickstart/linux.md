@@ -91,7 +91,7 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 4. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
-If Caido is not launching and you are getting a FATAL error message, view the [Download & Installation](/troubleshooting/download_installation.md) troubleshooting guide for possible fixes.
+If Caido is not launching and you are getting a FATAL error message, view the [Installation Issues](/troubleshooting/installation.md) troubleshooting guide for possible fixes.
 :::
 
 ## AUR (Arch User Repository)
@@ -150,5 +150,5 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 7. [Continue to Setup.](/quickstart/setup.md)
 
 ::: warning TROUBLESHOOTING
-If Caido is not launching and you are getting a FATAL error message, view the [Download & Installation](/troubleshooting/download_installation.md) troubleshooting guide for possible fixes.
+If Caido is not launching and you are getting a FATAL error message, view the [Installation Issues](/troubleshooting/installation.md) troubleshooting guide for possible fixes.
 :::

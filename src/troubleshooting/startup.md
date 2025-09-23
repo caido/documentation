@@ -2,7 +2,7 @@
 description: "Troubleshooting Caido startup issues including unreachable instances, connection errors, and configuration problems."
 ---
 
-# Startup
+# Startup Issues
 
 ## "Instance is unreachable"
 

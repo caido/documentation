@@ -2,7 +2,7 @@
 description: "Find detailed reference information on Caido's internal file structure, storage locations, and database organization across different operating systems."
 ---
 
-# Internal Files
+# Data Storage
 
 All the data Caido creates is stored in a single directory. The default location of this directory is dependent on your operating system:
 
