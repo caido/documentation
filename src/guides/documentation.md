@@ -51,5 +51,5 @@ To contribute, you must sign the Contributor License Agreement which will be ava
 Your pull request will await and undergo review. You will be notified of any requested changes and its status. Once the changes are merged, you work will appear in the official documentation.
 
 <center>
-  <h1>Thanks for your contributions!</h1>
+  <h1>Thank you for contributing!</h1>
 </center>

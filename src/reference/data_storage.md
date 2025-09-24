@@ -2,12 +2,9 @@
 description: "Find detailed reference information on Caido's internal file structure, storage locations, and database organization across different operating systems."
 ---
 
-# Internal Files
+# Data Storage
 
-## Caido Storage Folder
-
-All the data Caido creates is stored in a single folder.
-It can be moved to another computer, but you might encounter issues (we are working on project export/import).
+All the data Caido creates is stored in a single directory. The default location of this directory is dependent on your operating system:
 
 | OS      | Location                                         |
 | ------- | ------------------------------------------------ |
@@ -15,31 +12,31 @@ It can be moved to another computer, but you might encounter issues (we are work
 | MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
-::: tip
-The `log` directory will contain the log files used to view output from the coding nodes using the [SDK](https://developer.caido.io/reference/sdks/workflow/).
+::: info
+The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/).
 :::
 
-## Folder Structure
+## Structure
 
-::: warning
+::: danger
 We do not recommend modifying the files directly as this might result in problems in the application and/or corruption of data. Proceed at your own risk.
 :::
 
-Inside the storage folder you will see the following files:
+### Files
 
-- `config.db`: Contains all the non-critical configurations of the instance. Also contains the cached data from the cloud for offline support.
+- `config.db`: Contains all the non-critical configurations of the instance and the cached data from the cloud for offline support.
 - `secrets.db`: Contains all the sensitive configurations. Currently, it is AES encrypted with a static secret, but we plan to support a user-specified password in the future.
 - `projects.db`: Contains the metadata of the projects and hosted files.
 
 ::: info
-Each one of those files is a sqlite3 database in `journal` mode. We usually use pretty recent sqlite3 versions, but we do not make any guarantees on exactly which.
+Each file is a sqlite3 database in `journal` mode. We usually use pretty recent sqlite3 versions, but we do not make any guarantees on exactly which.
 :::
 
-You can also see the following folders:
+### Subdirectories
 
-- `files`: Those are the hosted files that you uploaded to your instance.
+- `files`: Hosted files that have been uploaded to your instance.
 - `browsers`: The binary of the browser used for rendering.
-- `projects`: The data for each project. Each sub-folder will be the UUID of the project (structure detailed below).
+- `projects`: The data for each project. Each subdirectory name is the UUID of the project.
 
 For each project, you will see the following:
 
@@ -48,5 +45,5 @@ For each project, you will see the following:
 - `exports`: Folder containing the exported data.
 
 ::: info
-Each one of those files is a sqlite3 database in `wal` mode. Thus if you copy them, make sure to also copy the `-wal` files.
+Each file is a sqlite3 database in `wal` mode. If you copy them, ensure to also copy the `-wal` files.
 :::

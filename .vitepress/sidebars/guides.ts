@@ -54,7 +54,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/dns_rewrites",
       },
       {
-        text: "Configuring the Data Directory",
+        text: "Changing the Data Storage Location",
         link: "/guides/data_location",
       },
     ],
