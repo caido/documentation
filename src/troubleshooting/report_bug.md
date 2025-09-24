@@ -77,5 +77,5 @@ Ensure to remove/redact any sensitive information in submissions.
 Feel free to [create a new issue](https://github.com/caido/caido/issues/new?assignees=&labels=&projects=&template=bug.md&title=) on Github. For simplicity, a template is provided with sections to provide all the necessary information.
 
 <center>
-  <h1>Thank you for bringing attention to the issue!</h1>
+  <h2>Thank you for bringing attention to the issue!</h2>
 </center>

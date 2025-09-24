@@ -14,7 +14,7 @@ For example, when utilizing a domain that resolves to `127.0.0.1` to [proxy loca
 
 To add a domain to the allowlist with the Caido CLI, launch Caido with the `--ui-domain <domain>` argument.
 
-```
+```bash
 --ui-domain example.com
 ```
 
@@ -36,13 +36,13 @@ To add a domain to the allowlist when running the Caido Docker image, either:
 
 - Override the default command with:
 
-```
+```bash
 docker run caido/caido caido-cli --no-renderer-sandbox --no-open --listen 0.0.0.0:8080 --ui-domain=example.com
 ```
 
 - Or override the Docker Compose:
 
-```
+```yaml
 services:
   caido:
     image: caido/caido

@@ -12,7 +12,7 @@ To launch the image, specify the port with the `-p` argument.
 
 For example, to launch the image on port `7000`, enter:
 
-```
+```bash
 docker run --rm -p 7000:8080 caido/caido:latest
 ```
 
@@ -34,7 +34,7 @@ The host path must be an absolute path with the necessary permissions. Ensure th
 
 For example, to store Caido projects in `/home/my_user/my_data`, enter:
 
-```
+```bash
 docker run --rm -p 7000:8080 \
   -v /home/my_user/my_data:/home/caido/.local/share/caido caido/caido:latest
 ```

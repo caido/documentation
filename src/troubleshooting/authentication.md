@@ -26,7 +26,7 @@ To gain access to the instance, login to the account that created the instance.
 
 To reset the instance credentials with the Caido CLI, launch Caido with the `--reset-credentials` argument.
 
-```
+```bash
 caido --reset-credentials
 ```
 
@@ -66,7 +66,7 @@ To synchronize the time on Windows, **right-click** on the clock, select <code><
 
 To synchronize the time on macOS, use the `sntp` utility with the `-S` argument.
   
-```
+```bash
 sudo sntp -S pool.ntp.org
 ```
 
@@ -78,7 +78,7 @@ Check the time synchronization status with the same command.
 
 To synchronize the time on Linux, install the `ntp` package. Once the installation is complete, the service will start automatically.
 
-```
+```bash
 sudo apt-get install ntp
 ```
 

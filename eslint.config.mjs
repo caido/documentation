@@ -12,7 +12,12 @@ export default [
   {
     ignores: [".vitepress/cache", ".vitepress/dist"],
   },
-  ...markdownPlugin.configs.recommended,
+  ...(markdownPlugin.configs.recommended.map(config => ({
+    ...config,
+    languageOptions: {
+      frontmatter: "yaml"
+    }
+  }))),
   ...(defaultConfig().map(config => ({
     ...config,
     files: ["**/*.ts", "**/*.vue"],

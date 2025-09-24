@@ -16,7 +16,7 @@ If you enable invisible proxying on a remote instance, you must ensure the **sam
 
 By default, invisible proxying is **disabled** for the Caido CLI. To enable invisible proxying with the Caido CLI, launch Caido with the `--invisible` argument.
 
-```
+```bash
 caido --invisible
 ```
 

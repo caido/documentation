@@ -16,7 +16,7 @@ To change the listening address/port with the Caido CLI, launch Caido with the `
 
 For example, to listen on all available network interfaces on port `8000`, enter:
 
-```
+```bash
 caido -l 0.0.0.0:8000
 ```
 

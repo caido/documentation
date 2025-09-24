@@ -20,7 +20,7 @@ In general, the implicit bypass rules can be modified in the proxy settings of d
 
 Launch Chrome via the terminal with the `--proxy-server=<address:port>` and `--proxy-bypass-list="<-loopback>"` arguments.
 
-```
+```bash
 google-chrome --proxy-server=127.0.0.1:8080` --proxy-bypass-list="<-loopback>"
 ```
 

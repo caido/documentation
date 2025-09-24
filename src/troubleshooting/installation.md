@@ -2,7 +2,7 @@
 
 ## "The SUID sandbox helper binary was found, but is not configured correctly."
 
-```
+```text
 [142547:0410/141348.635410:FATAL:setuid_sandbox_host.cc(163)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /tmp/.mount_caido-PMiQot/chrome-sandbox is owned by root and has mode 4755.
 ```
 
@@ -20,11 +20,11 @@ Ensure to replace `/path/to/caido-desktop-vX.XX.X-linux-<architecture>.AppImage`
 
 To create an AppArmor profile for Caido, create a `appimage.caido` file with the following content in the `/etc/apparmor.d/` directory.
 
-```
+```bash
 sudo nano /etc/apparmor.d/appimage.caido
 ```
 
-```
+```text
 abi <abi/4.0>,
 include <tunables/global>
 
@@ -37,7 +37,7 @@ include if exists <local/appimage.caido>
 
 Once the file is written, save it, and then read/load the profile.
 
-```
+```bash
 apparmor_parser -r /etc/apparmor.d/appimage.caido
 ```
 
@@ -45,7 +45,7 @@ apparmor_parser -r /etc/apparmor.d/appimage.caido
 
 To disable the AppArmor sandbox security restrictions, launch Caido with the `--no-sandbox` argument.
 
-```
+```bash
 /path/to/caido-desktop-vX.XX.X-linux-<architecture>.AppImage --no-sandbox
 ```
 
@@ -55,7 +55,7 @@ To apply this to every launch, create a `.desktop` extension file with the follo
 Ensure to replace `/path/to/caido-icon.png` with the correct path and file name of the image you want to use for Caido's desktop application icon.
 :::
 
-```
+```ini
 [Desktop Entry]
 Version=1.0
 Name=Caido
@@ -70,7 +70,7 @@ StartupNotify=true
 
 Once the file is written, save it, and then refresh the desktop application icon cache.
 
-```
+```bash
 sudo update-icon-caches /usr/share/icons/*
 ```
 
@@ -82,6 +82,6 @@ Caido's default desktop application icon is available at [https://github.com/cai
 
 To disable AppArmor globally, use the `sysctl` utility to allow unprivileged users to create user namespaces.
 
-```
+```bash
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```

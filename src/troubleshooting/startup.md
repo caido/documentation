@@ -20,13 +20,13 @@ To disable the frontend component of a plugin, access Caido in your browser by n
 
 To disable the backend component of a plugin, launch Caido with the `--safe` argument.
 
-```
+```bash
 caido --safe
 ```
 
 ## "Encountered an error when communicating with the destination server"
 
-```
+```text
 Encountered an error when communicating with the destination server
 
 Failed to acquire connection
@@ -46,7 +46,7 @@ If you encounter this error message while proxying traffic through Caido, check 
 
 ## "Could not initialize configuration"
 
-```
+```text
 Error: Could not initialize configuration
 Caused by:
     0: Authentication service error

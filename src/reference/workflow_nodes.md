@@ -43,7 +43,7 @@ export function run(input, sdk) {
 
 Where the selected input was `aaa` will result in:
 
-```
+```text
 2024-05-26T12:14:13.115630Z  INFO executor:0|arbiter:3 JsSdk: [ 97, 97, 97 ]
 ```
 
@@ -90,14 +90,14 @@ Data is received via `STDIN` and is expected to output on `STDOUT`. The `STDERR`
 ::: tip
 If you're running Caido on Windows and you'd like to call out to `WSL` for the Shell node from `powershell`, add the following in the init section of the node:
 
-```
+```powershell
 $Env:WSLENV = ($Env:WSLENV + ":" + ((Get-ChildItem Env: | Where-Object { $_.Name -like 'CAIDO_*' }).Name -join ":")).Trim(":")
 ```
 
 Which will pass through all CAIDO_ environmental variables to `WSL`.
 Then, when making calls in the code section, perform the calls like this:
 
-```
+```bash
 wsl -- 'echo' '$CAIDO_URL' '>' '/tmp/fun'
 wsl -- 'cat' '/tmp/fun'
 ```
