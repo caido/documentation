@@ -67,7 +67,7 @@ In order for Caido's CA Certificate to be compatible with the Android system, it
 
 1. Generate the legacy hash of Caido's CA certificate's subject field:
 
-```
+```bash
 openssl x509 -inform PEM -subject_hash_old -in </path/to/your/ca.crt>
 ```
 
@@ -83,19 +83,19 @@ This method will only work for Android API level <= 33.
 
 1. List your available AVDs:
 
-```
+```bash
 emulator -list-avds
 ```
 
 2. Launch the desired AVD with write permissions (_if your virtual device is currently running, terminate it first_):
 
-```
+```bash
 emulator -avd <avd> -writable-system
 ```
 
 3. In a new terminal, restart the `adbd` process on the emulator to gain root privileges:
 
-```
+```bash
 adb root
 ```
 
@@ -103,7 +103,7 @@ adb root
 
 4. Disable secure boot verification:
 
-```
+```bash
 adb shell avbctl disable-verification
 ```
 
@@ -111,19 +111,19 @@ adb shell avbctl disable-verification
 
 5. Reboot the device:
 
-```
+```bash
 adb reboot
 ```
 
 6. Gain root permissions again:
 
-```
+```bash
 adb root
 ```
 
 7. Remount the partitions as read-write:
 
-```
+```bash
 adb remount
 ```
 
@@ -131,7 +131,7 @@ adb remount
 
 8. Push the renamed Caido certificate to the system store:
 
-```
+```bash
 adb push </path/to/certificate> /system/etc/security/cacerts
 ```
 
@@ -139,7 +139,7 @@ adb push </path/to/certificate> /system/etc/security/cacerts
 
 9. Set the proper permissions:
 
-```
+```bash
 adb shell chmod 664 -v /system/etc/security/cacerts/<certificate>
 ```
 
@@ -147,13 +147,13 @@ adb shell chmod 664 -v /system/etc/security/cacerts/<certificate>
 
 10. Reboot the device:
 
-```
+```bash
 adb reboot
 ```
 
 To verify that the certificate was added, list the contents of the `/system/etc/security/cacerts` directory and find the certificate:
 
-```
+```bash
 adb shell ls /system/etc/security/cacerts
 ```
 

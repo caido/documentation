@@ -128,7 +128,7 @@ import { Request as FetchRequest, fetch } from "caido:http";
 
 Next, an asynchronous function is defined that takes the `input` and the `sdk` interface object as parameters.
 
-``` js
+```js
 export async function run(input, sdk) {
 ```
 
@@ -194,7 +194,7 @@ The response is stored in the `response` variable.
 
 By accessing the `response` object properties, we can print the data to the backend logs.
 
-``` js
+```js
     // Create response data object.
     const responseData = {
       status: response.status,
@@ -237,7 +237,7 @@ You will receive a message in your Discord channel.
 
 Within the logs, the message will resemble:
 
-```
+```text
 2025-04-09T00:45:25.697833Z  INFO main service|workflow: Executing workflow (g:58) as task
 2025-04-09T00:45:25.697858Z  INFO main service|task: Running task
 2025-04-09T00:45:25.697862Z  INFO main service|workflow: Workflow (g:58) task assigned ID: 26

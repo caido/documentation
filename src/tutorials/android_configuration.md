@@ -52,7 +52,7 @@ For both physical and virtual devices:
 
 Since Caido is running on your computer, not your phone - run the following command to forward traffic from `localhost:8080` on your device to port `8080` on your computer through the USB connection:
 
-```
+```bash
 adb reverse tcp:8080 tcp:8080
 ```
 

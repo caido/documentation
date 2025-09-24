@@ -38,7 +38,7 @@ Passive workflows do not require `Passive End` nodes in order to exit execution 
 
 2. Then, **click** within the query environment and type in the following HTTPQL statement:
 
-```
+```httpql
 req.method.eq:"GET"
 ```
 
