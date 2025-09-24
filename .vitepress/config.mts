@@ -59,6 +59,7 @@ export default defineConfig({
         appId: "5R584H6RK2",
         apiKey: "c6b7b639856da05c4a4c61dbc517f771",
         indexName: "docs_caido_io_5r584h6rk2_pages",
+        insights: true,
       },
     },
 
