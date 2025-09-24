@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
+import MermaidExample from "./mermaid";
 import {
   conceptsSidebar,
   guidesSidebar,
@@ -9,7 +10,6 @@ import {
   troubleshootingSidebar,
   tutorialsSidebar,
 } from "./sidebars";
-import MermaidExample from "./mermaid";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

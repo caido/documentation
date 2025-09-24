@@ -4,6 +4,8 @@ description: "Frequently asked questions about Caido pricing, installation, data
 
 # FAQ
 
+# FAQ2
+
 ## Is Caido free?
 
 Caido has a free `Basic` plan. We also offer a `Pro` plan which includes additional advanced features. By purchasing the `Pro` plan, you will be supporting the development and maintenance of the tool.
@@ -13,6 +15,10 @@ Additionally, we offer a `Team` plan for organizations that need premium support
 ::: info
 You can check our [website](https://caido.io) to stay informed about the new features that will be added in the future.
 :::
+
+```
+asdf
+```
 
 ## Is Caido open source?
 

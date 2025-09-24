@@ -32,7 +32,7 @@ jobs:
           globs: 'src/**/*.md'
 
       - name: Lint JS
-        run: pnpm lint:js
+        run: pnpm lint-prod
 
   build:
     runs-on: ubuntu-latest

@@ -1,12 +1,13 @@
-import DefaultTheme from "vitepress/theme";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import "./custom.css";
-
-import ProContainer from "../components/Pro.vue";
-import Mermaid from "../components/Mermaid.vue";
-import Icon from "../components/Icon.vue";
 import type { Theme } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+
+import Icon from "../components/Icon.vue";
+import Mermaid from "../components/Mermaid.vue";
+import ProContainer from "../components/Pro.vue";
+
+import "./custom.css";
 
 export default {
   extends: DefaultTheme,
