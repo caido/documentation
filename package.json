@@ -11,6 +11,10 @@
     "lint:js": "ESLINT_ENV=production eslint ./.vitepress -c ./eslint.config.mjs --max-warnings 0",
     "lint:md": "markdownlint-cli2 'src/**/*.md'"
   },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
   "author": "Caido Labs Inc. <dev@caido.io>",
   "license": "CC-BY-4.0",
   "devDependencies": {
