@@ -168,7 +168,7 @@ Autocomplete is not currently available when using the `source` Namespace.
 - If you are not receiving results of a `source` query - click the `Advanced` settings button next to the HTTPQL query bar to ensure the desired `Sources` are enabled.
 :::
 
-# Queries
+## Queries
 
 <img width="600" alt="A full HTTPQL Query" src="/_images/httpql_logical.png" no-shadow center/>
 

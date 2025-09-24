@@ -220,8 +220,8 @@ In the `script.ts` file:
 ::: info
 The constructor parameter used to create the instance will become a property. In the above example, if you used `console.log(obj.username)`, the output would be as follows:
 
-```
-“ninjeeter”
+```text
+"ninjeeter"
 ```
 
 :::
@@ -297,7 +297,7 @@ export function run(input, sdk) {
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
-```
+```javascript
 /**
  * @param {BytesInput} input
  * @param {SDK} sdk
@@ -367,7 +367,7 @@ export async function run({ request, response }, sdk) {
 
 The JSDoc comment uses type tags to note what types are assigned to the function parameters:
 
-```
+```javascript
 /**
  * @param {HttpInput} input
  * @param {SDK} sdk

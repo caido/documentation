@@ -41,21 +41,21 @@ A `.dmg` file is a macOS disk image used to distribute applications. It's the mo
 ::: tip
 To download and install Homebrew, use the following terminal command:
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Once installed, Homebrew can be used globally by adding it to your PATH environment variable:
 
-```
+```bash
 echo >> /Users/<username>/.zprofile
 ```
 
-```
+```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
 ```
 
-```
+```bash
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
@@ -63,7 +63,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 1. To download and install the Caido desktop application on your macOS device, run the following terminal command:
 
-```
+```bash
 brew install --cask caido
 ```
 
@@ -71,7 +71,7 @@ brew install --cask caido
 
 The output should resemble:
 
-```
+```text
 ==> Downloading https://caido.download/releases/vX.XX.X/caido-desktop-vX.XX.X-mac-<architecture>.zip
 ==> Downloading from Downloading from https://<UID>.r2.cloudflarestorage.com/caido-releases/vX.XX.X/caido-cli-vX.XX.X-<architecture>.dmg?X-Amz-Expires=900&response-content-disposition=attachment%3B
 ######################################################################################################################################################################################################### 100%

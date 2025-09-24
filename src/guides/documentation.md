@@ -14,13 +14,13 @@ You will need a [Github](https://github.com) account, [Git](https://git-scm.com/
 
 To contribute to the documentation, first [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and create a clone.
 
-```
+```bash
 git clone https://github.com/<username>/documentation
 ```
 
 Then, navigate into the directory and create a new branch.
 
-```
+```bash
 cd documenation && git branch -b <branch-name>
 ```
 
@@ -38,7 +38,7 @@ To serve the documentation locally and view edits live run `pnpm dev`.
 
 When you are finished editing, commit the changes and push them to your fork.
 
-```
+```bash
 git add . && git commit -m "<description>" && git push
 ```
 
@@ -51,5 +51,5 @@ To contribute, you must sign the Contributor License Agreement which will be ava
 Your pull request will await and undergo review. You will be notified of any requested changes and its status. Once the changes are merged, you work will appear in the official documentation.
 
 <center>
-  <h1>Thank you for contributing!</h1>
+  <h2>Thank you for contributing!</h2>
 </center>

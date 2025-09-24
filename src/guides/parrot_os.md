@@ -36,6 +36,6 @@ To launch Caido, select the `Applications` menu tab in the top-left corner of th
 
 Or, enter the following terminal command from any directory:
 
-```
+```bash
 caido
 ```

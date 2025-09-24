@@ -14,7 +14,7 @@ By default, Caido listens on the IP address 127.0.0.1 and port 8080. This is the
 
 To access a remote Caido instance, establish an SSH connection between your local device and VPS, and forward traffic bound to the local port to the listening address/port of the remote instance.
 
-```
+```bash
 ssh -L <local-port>:127.0.0.1:8080 <username>@<vps-ip>
 ```
 

@@ -7,25 +7,26 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "lint": "pnpm lint:js && pnpm lint:md",
-    "lint:js": "ESLINT_ENV=production eslint ./.vitepress -c ./eslint.config.mjs --max-warnings 0",
-    "lint:md": "markdownlint-cli2 'src/**/*.md'"
+    "lint": "bash ./scripts/lint.sh",
+    "lint-prod": "bash ./scripts/lint-prod.sh",
+    "typecheck": "tsc --noEmit",
+    "validate": "pnpm lint && pnpm typecheck && pnpm build"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
   },
   "author": "Caido Labs Inc. <dev@caido.io>",
   "license": "CC-BY-4.0",
   "devDependencies": {
-    "eslint": "9.10.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-vue": "9.27.0",
-    "markdownlint-cli2": "0.14.0",
+    "@caido/eslint-config": "0.6.0",
+    "@eslint/markdown": "7.2.0",
+    "eslint": "9.28.0",
     "mermaid": "11.9.0",
     "typescript": "5.6.2",
-    "typescript-eslint": "8.5.0",
     "vitepress": "1.2.2",
     "vitepress-plugin-llms": "1.5.1",
-    "vue": "3.4.27",
-    "vue-eslint-parser": "9.4.3"
+    "vue": "3.4.27"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.7.2",

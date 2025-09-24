@@ -1,5 +1,4 @@
 ---
-outline: [2, 4]
 description: "Learn how to set up invisible proxying in Caido to capture traffic from thick client applications that don't support proxy configuration."
 ---
 
@@ -59,7 +58,7 @@ In order for Caido to capture the traffic, the domain name of a destination serv
 
 - To discover the IP address of a domain name, run the terminal command:
 
-```
+```bash
 nslookup www.example.com
 ```
 
@@ -89,28 +88,28 @@ Instead, you must either:
 
 On Windows, you can use the `netsh` (_Network Shell_) command-line utility to setup port forwarding. Open Command Prompt as Administrator and run:
 
-```
+```cmd
 netsh interface portproxy add v4tov4 listenport=80 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
 ```
 
-```
+```cmd
 netsh interface portproxy add v4tov4 listenport=443 listenaddress=127.0.0.1 connectport=8080 connectaddress=127.0.0.1
 ```
 
 ::: tip TIPS
 View any active rules with:
 
-```
+```cmd
 netsh interface portproxy show all
 ```
 
 Remove the rules with:
 
-```
+```cmd
 netsh interface portproxy delete v4tov4 listenport=80 listenaddress=127.0.0.1
 ```
 
-```
+```cmd
 netsh interface portproxy delete v4tov4 listenport=443 listenaddress=127.0.0.1
 ```
 
@@ -122,20 +121,20 @@ netsh interface portproxy delete v4tov4 listenport=443 listenaddress=127.0.0.1
 
 On macOS, you can use the `pfctl` (_Packet Filter_) command-line utility to setup port forwarding by writing a redirection rule in a `pf.conf` file. Open the `/etc/pf.conf` file and add:
 
-```
+```bash
 rdr pass on lo0 inet proto tcp from any to any port 80 -> 127.0.0.1 port 8080
 rdr pass on lo0 inet proto tcp from any to any port 443 -> 127.0.0.1 port 8080
 ```
 
 Reload the rules with:
 
-```
+```bash
 sudo pfctl -f pf.conf
 ```
 
 Ensure Packet Filter is enabled with:
 
-```
+```bash
 sudo pfctl -e
 ```
 
@@ -155,30 +154,30 @@ However, we do **NOT** recommend doing this in untrusted networks since this all
 
 On Linux, you can use the `iptables` command-line utility to setup port forwarding. Open a terminal and run:
 
-```
+```bash
 sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 80 -j REDIRECT --to-port 8080
 ```
 
-```
+```bash
 sudo iptables -t nat -A OUTPUT -p tcp -d 127.0.0.1 --dport 443 -j REDIRECT --to-port 8080
 ```
 
 ::: tip TIPS
 View any active rules with:
 
-```
+```bash
 sudo iptables -t nat -L OUTPUT -n -v --line-numbers
 ```
 
 Remove the rules with:
 
-```
+```bash
 sudo iptables -t nat -F OUTPUT
 ```
 
 Alternatively, on Linux, you can grant the Caido CLI permission to bind to ports 80 and 443 with:
 
-```
+```bash
 sudo setcap 'cap_net_bind_service=+ep' ./path/to/caido-cli
 ```
 
@@ -227,13 +226,13 @@ Glob syntax (\*) is supported to account for varying subdomains and top-level do
 
 To test the configuration, navigate to the directory in which the `thick-client.js` file is saved to and enter:
 
-```
+```bash
 node thick-client.js http://www.example.com/
 ```
 
 And:
 
-```
+```bash
 node thick-client.js https://www.example.com/
 ```
 
@@ -244,7 +243,7 @@ Each time the script is executed, a new request will be proxied through Caido.
 ::: tip
 You may need to flush the DNS cache.
 
-```
+```cmd
 ipconfig /flushdns
 ```
 

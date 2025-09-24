@@ -46,19 +46,19 @@ APKs can be acquired by downloading them directly from repositories or sites suc
 
 1. First, install the demo application to your connected device with:
 
-```
+```bash
 adb install pinning-demo.apk
 ```
 
 2. Initialize a command-line interface on your Android device:
 
-```
+```bash
 adb shell
 ```
 
 3. Find the application's `base.apk` package on your device by listing all the file paths of installed packages and filtering the results by the application name:
 
-```
+```bash
 pm list packages -f | grep -i pinning
 ```
 
@@ -68,7 +68,7 @@ pm list packages -f | grep -i pinning
 
 5. Pull the `base.apk` from your device to your computer (_do not include the `=<package-name>` portion of the output_):
 
-```
+```bash
 adb pull /data/app/tech.httptoolkit.pinning_demo-1wMoq8214ewjz2S-xt-sCA==/base.apk
 ```
 
@@ -84,7 +84,7 @@ adb pull /data/app/tech.httptoolkit.pinning_demo-1wMoq8214ewjz2S-xt-sCA==/base.a
 
 To unpack the contents of an APK to a new directory within the current directory, use the following command:
 
-```
+```bash
 apktool d -o unpacked pinning-demo.apk
 ```
 
@@ -125,7 +125,7 @@ To make the appropriate changes:
 
 4. From the directory of the unpacked APK, repack it with:
 
-```
+```bash
 apktool b -o modified.apk ./
 ```
 
@@ -137,7 +137,7 @@ apktool b -o modified.apk ./
 
 6. Generate a signing key with:
 
-```
+```bash
 keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysize 2048 -validity 10000
 ```
 
@@ -145,20 +145,20 @@ keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysi
 
 7. Align the APK:
 
-```
+```bash
 zipalign -p 4 modified.apk aligned.apk
 ```
 
 8. Sign the APK with:
 
-```
+```bash
 apksigner sign --ks custom.keystore aligned.apk
 ```
 
 ::: tip
 If the application is currently installed on your device, before continuing, uninstall it with:
 
-```
+```bash
 adb uninstall tech.httptoolkit.pinning_demo
 ```
 
@@ -166,7 +166,7 @@ adb uninstall tech.httptoolkit.pinning_demo
 
 9. Install the modified APK:
 
-```
+```bash
 adb install aligned.apk
 ```
 
@@ -192,7 +192,7 @@ Since certain Frida operations may not work with unrooted devices, you will also
 
 You can check what download you will need for your device's architecture with:
 
-```
+```bash
 adb shell getprop ro.product.cpu.abi
 ```
 
@@ -209,7 +209,7 @@ The provided links will download v16.6.6. [View the latest releases in the Frida
 
 Once downloaded, extract the library and rename it to:
 
-```
+```text
 libfrida-gadget.so
 ```
 
@@ -236,7 +236,7 @@ To bypass hardcoded certificate pinning protections, we will need to insert the 
 
 2. The `application` tag will contain an `android:extractNativeLibs` attribute. In order for the Frida Gadget library to function properly, this needs to be set to `"true"`:
 
-```
+```xml
 android:extractNativeLibs="true"
 ```
 
@@ -249,7 +249,7 @@ android:extractNativeLibs="true"
 
 Within this `activity` tag will be a `android:name` attribute which stores the full name of the package that serves the main activity of the application upon launch:
 
-```
+```text
 tech.httptoolkit.pinning_demo.MainActivity
 ```
 
@@ -292,7 +292,7 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 
 8. From the directory of the unpacked APK, repack it with:
 
-```
+```bash
 apktool b -o frida-app.apk ./
 ```
 
@@ -300,25 +300,25 @@ apktool b -o frida-app.apk ./
 
 9. Sign the APK with:
 
-```
+```bash
 apksigner sign --ks custom.keystore frida-app.apk
 ```
 
 10. Uninstall the original application from the device:
 
-```
+```bash
 adb uninstall tech.httptoolkit.pinning_demo
 ```
 
 11. Install the modified APK:
 
-```
+```bash
 adb install frida-app.apk
 ```
 
 12. Next, open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization. Supply it with:
 
-```
+```bash
 frida -U gadget --codeshare fdciabdul/frida-multiple-bypass
 ```
 
@@ -332,7 +332,7 @@ Various HTTP libraries and their versions will require certain scripts in order 
 
 [Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line argument.
 
-```
+```bash
 frida -U gadget --codeshare <author>/<file>
 ```
 
@@ -342,6 +342,6 @@ When sourcing files online, ensure to evaluate the code for any malicious operat
 
 You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line argument followed by the file's location:
 
-```
+```bash
 frida -U gadget -l <file>
 ```

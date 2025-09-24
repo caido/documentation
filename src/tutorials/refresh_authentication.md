@@ -33,7 +33,7 @@ If the `name` does not already exist, a new environment variable will be created
 ::: tip
 To set the variable to a specific environment, use the `env` field and supply an existing environment name as its value:
 
-```
+```text
 env: "Demo Environment"
 ```
 

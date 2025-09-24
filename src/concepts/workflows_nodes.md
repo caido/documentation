@@ -47,7 +47,7 @@ This differs from a node's name which simply serves cosmetic purposes to assist 
 
 - To use this input type, the content of the `Data` field under `Inputs` with the `Use reference` checkbox **_selected_** should be formatted using the following syntax:
 
-```
+```text
 $[node_alias].[property_alias]
 ```
 

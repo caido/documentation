@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
 import type { MermaidConfig } from "mermaid";
 import mermaid from "mermaid";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const props = defineProps({
   graph: {
@@ -17,7 +17,7 @@ const props = defineProps({
 const svg = ref("");
 const code = ref(decodeURIComponent(props.graph));
 
-let mut: MutationObserver | null = null;
+let mut: MutationObserver | undefined = undefined;
 
 onMounted(async () => {
   mut = new MutationObserver(() => {
@@ -31,8 +31,8 @@ onMounted(async () => {
   const hasImages = (/<img([\w\W]+?)>/.exec(code.value)?.length ?? 0) > 0;
   if (hasImages)
     setTimeout(() => {
-      let imgElements = document.getElementsByTagName("img");
-      let imgs = Array.from(imgElements);
+      const imgElements = document.getElementsByTagName("img");
+      const imgs = Array.from(imgElements);
       if (imgs.length) {
         Promise.all(
           imgs

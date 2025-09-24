@@ -9,7 +9,7 @@ Caido provides a desktop application for both x86_64 and AArch64 architectures.
 ::: tip TIPS
 To discover which download is suitable for your device, run the following terminal command:
 
-```
+```bash
 uname -m
 ```
 
@@ -29,7 +29,7 @@ If you are using [Parrot](/guides/parrot_os.md) or [Athena](/guides/athena_os.md
 
 <img alt="Linux .deb Caido download." src="/_images/linux_download.png" width=690px center/>
 
-```
+```bash
 sudo dpkg -i caido-desktop-vX.XX.X-linux-aarch64.deb
 ```
 
@@ -37,7 +37,7 @@ sudo dpkg -i caido-desktop-vX.XX.X-linux-aarch64.deb
 
 The output should resemble:
 
-```
+```text
 Selecting previously unselected package caido.
 (Reading database ... 131850 files and directories currently installed.)
 Preparing to unpack caido-desktop=v0.47.1-linux-aarch64.deb ...
@@ -55,7 +55,7 @@ Processing triggers for desktop-file-utils (0.26-1) ...
 
 3. After installation, you can launch Caido with:
 
-```
+```bash
 caido
 ```
 
@@ -69,20 +69,20 @@ caido
 
 <img alt="Linux AppImage Caido download." src="/_images/linux_appimage_download.png" width=690px center/>
 
-```
+```bash
 chmod +x caido-desktop-vX.XX.X-linux-<architecture>.AppImage
 ```
 
 3. After installation, you can launch Caido with:
 
-```
+```bash
 ./caido-desktop-vX.XX.X-linux-<architecture>.AppImage
 ```
 
 ::: tip
 Consider renaming the package for convenience:
 
-```
+```bash
 mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 ```
 
@@ -102,13 +102,13 @@ If Caido is not launching and you are getting a FATAL error message, view the [I
 
 1. To download the Caido desktop application for Arch Linux and Arch-based distributions, first ensure you have the required dependencies installed:
 
-```
+```bash
 sudo pacman -S --needed git base-devel fuse2
 ```
 
 2. Next, clone the package from the AUR:
 
-```
+```bash
 git clone https://aur.archlinux.org/caido-desktop.git
 ```
 
@@ -116,32 +116,32 @@ git clone https://aur.archlinux.org/caido-desktop.git
 
 3. Once downloaded, enter the directory with:
 
-```
+```bash
 cd caido-desktop
 ```
 
 4. Check and install for missing dependencies, build, and install the package with:
 
-```
+```bash
 makepkg -si
 ```
 
 5. Ensure the package is executable:
 
-```
+```bash
 chmod +x caido-desktop-vX.XX.X-linux-<architecture>.AppImage
 ```
 
 6. After installation, you can launch Caido with:
 
-```
+```bash
 ./caido-desktop-vX.XX.X-linux-<architecture>.AppImage
 ```
 
 ::: tip
 Consider renaming the package for convenience:
 
-```
+```bash
 mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage <name>
 ```
 

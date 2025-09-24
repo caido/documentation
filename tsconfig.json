@@ -16,8 +16,8 @@
     "noUnusedLocals": true
   },
   "include": [
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.vue",
-    ".vitepress/**/*.mts"
+    "./.vitepress/**/*.ts",
+    "./.vitepress/**/*.vue",
+    "./.vitepress/**/*.mts"
   ]
 }

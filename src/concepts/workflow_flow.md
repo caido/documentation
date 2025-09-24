@@ -30,7 +30,7 @@ Each node in a workflow has an input and output data type.
 
 With this typed data system, even though nodes are processed sequentially, you do not need a direct line between two nodes in order to pass data from one to another. Instead, data can be referenced using dot notation of a node's alias and it's output alias:
 
-```
+```text
 $[node_alias].[output_alias]
 ```
 

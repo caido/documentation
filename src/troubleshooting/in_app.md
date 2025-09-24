@@ -10,7 +10,7 @@ Ensure you are viewing and working with the [raw](/guides/request_response_modes
 
 ## Can't Preview Responses
 
-```
+```text
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
 ```
 
@@ -36,7 +36,7 @@ This error may occur when unauthenticated requests are being sent to the GraphQL
 
 If you are unable to make GraphQL API calls, access the GraphQL Playground in your browser by navigating to [http://127.0.0.1:8080/graphql](http://127.0.0.1:8080/graphql), **click** on the `Headers` tab, and add an `Authorization` header.
 
-```
+```json
 {
   "Authorization": "Bearer ACCESS_TOKEN_HERE"
 }
