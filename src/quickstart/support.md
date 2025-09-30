@@ -6,17 +6,13 @@ description: "A step-by-step guide to Caido support resources including GitHub i
 
 ## Github: Issues and Roadmap
 
-Your issue may already be resolved! Search for it here:
+Your issue may already be known, resolved, or a feature request has been made! Search for it here:
 
 - [Github Issues](https://github.com/caido/caido/issues)
 
 View the roadmap to stay up-to-date with Caido's development here:
 
 - [Roadmap](https://github.com/orgs/caido/projects)
-
-## Check Our Directory of Common Errors
-
-We have documented some of the common errors you might encounter while using Caido. View the [Troubleshooting](/troubleshooting/) guides for possible resolutions.
 
 ## Caido on Discord
 

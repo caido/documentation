@@ -2,7 +2,7 @@ import type { DefaultTheme } from "vitepress";
 
 export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Quickstart",
+    text: "Get Started",
     items: [
       {
         text: "Introduction",
@@ -26,7 +26,7 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         ],
       },
       {
-        text: "Setup",
+        text: "Setup & Next Steps",
         link: "/quickstart/setup",
       },
       {

@@ -6,4 +6,9 @@ description: "A step-by-step guide to Caido's Findings interface for viewing sec
 
 The `Findings` interface displays discoveries made by Caido processes or ones you’ve added manually, providing you with a repository of anomalous requests that warrant attention.
 
+::: tip HOW-TO GUIDE
+
+- [Creating Findings](/guides/workflows_findings.md)
+:::
+
 <img alt="The Findings interface." src="/_images/findings_interface.png" center>

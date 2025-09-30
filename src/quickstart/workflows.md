@@ -20,7 +20,7 @@ Within the `Workflows` interface, you can construct multi-step processes to exec
 - [Color Request Rows Workflow](/tutorials/color_requests.md)
 - [Refresh Authentication Workflow](/tutorials/refresh_authentication.md)
 - [Decode a JWT Workflow](/tutorials/decode_jwt.md)
-- [MD5 Hash Input Workflow](/tutorials/md5_hash.md)
+- [MD5 Hash Workflow](/tutorials/md5_hash.md)
 - [Resign AWS Requests Workflow](/tutorials/aws_signature.md)
 :::
 

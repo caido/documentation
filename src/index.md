@@ -29,7 +29,7 @@ features:
     link: /tutorials/
   - icon: 📚
     title: Reference
-    details: Complete technical documentation shortcuts, workflow nodes, and more for when you need specific details.
+    details: Detailed technical information that provides context to runtime operations.
     link: /reference/
   - icon: 💡
     title: Concepts
