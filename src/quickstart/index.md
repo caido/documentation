@@ -18,10 +18,6 @@ It is through this subversion of expectations that you can find weaknesses in sy
 
 **Anyone.** With its intiutive design, Caido makes web application hacking accessible to beginners. While its comprehensive set of features and extensibility equip experienced security professionals with the tools they need to streamline their workflows.
 
-<center>
-<em>"We started Caido to give hackers a tool that feels modern, reliable, and thoughtfully designed—something we'd want to use every day and one that's approachable even if you're a beginner."</em> – Ian Bouchard, Caido Cofounder
-</center>
-
 ## Get Started
 
 We are excited to have you here. Let's get you onboarded.

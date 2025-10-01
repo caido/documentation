@@ -29,10 +29,10 @@ features:
     link: /tutorials/
   - icon: 📚
     title: Reference
-    details: Detailed technical information that provides context to runtime operations.
+    details: Detailed technical information on Caido's features and capabilities.
     link: /reference/
   - icon: 💡
     title: Concepts
-    details: Explanations of key principles to help you understand how it works.
+    details: Explanations of key principles to help you understand how Caido works.
     link: /concepts/
 ---

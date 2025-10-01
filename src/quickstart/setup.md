@@ -35,7 +35,7 @@ If you are looking for guidance, technical information, or explanations:
 
 - For hands-on learning experiences that teach you through practical examples, view the [Tutorials](/tutorials/).
 
-- For detailed technical information that provides context to runtime operations, view the [Reference](/reference/) section.
+- For detailed technical information on Caido's features and capabilities, view the [Reference](/reference/) section.
 
 - For explanations of key principles to help you understand how and why Caido works the way it does, view the [Concepts](/concepts/) section.
 
