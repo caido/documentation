@@ -31,7 +31,7 @@ Aliases can only contain the following characters:
 To define filters, **click** in the `Expression` input field to type your HTTPQL expression.
 
 ::: tip
-[View the HTTQL Reference documentation to learn expression syntax.](/reference/httpql.md)
+[View the HTTPQL Reference documentation to learn expression syntax.](/reference/httpql.md)
 :::
 
 ::: info
