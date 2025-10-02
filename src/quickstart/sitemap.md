@@ -9,7 +9,7 @@ As you proxy traffic through Caido, the content you access across domains and su
 ::: tip HOW-TO GUIDES
 
 - [Viewing a Sitemap](/guides/sitemap_viewing.md)
-- [Deleting Sitemap Nodes](/guides/sitemap_deleting.md)
+- [Deleting a Sitemap](/guides/sitemap_deleting.md)
 :::
 
 <img alt="The Sitemap interface." src="/_images/sitemap_interface.png" center>

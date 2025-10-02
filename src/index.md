@@ -29,10 +29,10 @@ features:
     link: /tutorials/
   - icon: 📚
     title: Reference
-    details: Complete technical documentation shortcuts, workflow nodes, and more for when you need specific details.
+    details: Detailed technical information on Caido's features and capabilities.
     link: /reference/
   - icon: 💡
     title: Concepts
-    details: Explanations of key principles to help you understand how it works.
+    details: Explanations of key principles to help you understand how Caido works.
     link: /concepts/
 ---

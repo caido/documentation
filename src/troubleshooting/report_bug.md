@@ -6,6 +6,12 @@ description: "A step-by-step guide to reporting bugs in Caido including log coll
 
 To report a bug or receive support, please contact a member of the Caido team by submitting a [contact form](https://caido.io/contact) or [send us a message on Discord](https://links.caido.io/www-discord) and be prepared to provide the following resources/information.
 
+::: tip
+Your issue may already be known, resolved, or a feature request has been made! Search for it here:
+
+- [Github Issues](https://github.com/caido/caido/issues)
+:::
+
 ## Setup Information
 
 We will typically need the following information for every case. Please provide us with your operating system, version number/name, Caido client in use (_CLI/desktop application/web application_), and the version of Caido in use.

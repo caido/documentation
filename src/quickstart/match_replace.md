@@ -10,7 +10,7 @@ The `Match & Replace` interface gives you the ability to create rules that will 
 
 - [Adding a Header](/guides/match_replace_header.md)
 - [Using Capturing Groups](/guides/match_replace_capturing.md)
-- [Encoding Request Body Data](/guides/match_replace_encoding.md)
+- [Encoding Body Data](/guides/match_replace_encoding.md)
 - [Testing Rules](/guides/match_replace_testing.md)
 :::
 
