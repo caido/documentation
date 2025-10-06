@@ -25,35 +25,42 @@ You can view the data type by clicking on a node and viewing the value within th
 
 Strings are compatible with:
 
-- **String**
-  - **Choice**: Variation of string.
-  - **Code**: Variation of string.
-- **Bytes**: Encoded as UTF-8 with lossy conversion (invalid characters are replaced with `�`).
-- **Bool**: Converts to `"true"` or `"false"`.
-- **Integer**: Base-10 decimal encoding.
+| Type | Description |
+|------|-------------|
+| String: Choice | Variation of string. |
+| String: Code | Variation of string. |
+| Bytes | Encoded as UTF-8 with lossy conversion (invalid characters are replaced with `�`). |
+| Bool | Converts to `"true"` or `"false"`. |
+| Integer | Base-10 decimal encoding. |
 
 ### Bytes
 
 Bytes are compatible with:
 
-- **String**: Bytes as UTF-8 encoded.
-- **Bool**: Converts to `"true"` or `"false"` in bytes.
-- **Integer**: First converts to string type and then to  bytes UTF-8 encoded.
+| Type | Description |
+|------|-------------|
+| String | UTF-8 encoded bytes. |
+| Bool | Converts to `"true"` or `"false"` in bytes. |
+| Integer | First converts to string type and then to UTF-8 encoded bytes. |
 
 ### Bool
 
 Booleans are compatible with:
 
-- **Integer**: Is `true` if integer is not zero - otherwise `false`.
-- **Bytes/String**: Is `true` for "true", "on", "yes", and "1" - otherwise `false`.
+| Type | Description |
+|------|-------------|
+| Integer | Is `true` if integer is not zero - otherwise `false`. |
+| Bytes/String | Is `true` for `"true"`, `"on"`, `"yes"`, and `"1"` - otherwise `false`. |
 
 ### Integer
 
 Integers are compatible with:
 
-- **Bool**: Is `true` if integer is `1` - `false` if `0`.
-- **Bytes**: Converted to string loosely, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
-- **String**: Parsed from string, supports hex (0x), binary (0b), octal (0o), supports sign (+, -).
+| Type | Description |
+|------|-------------|
+| Bool | Is `true` if integer is `1` - `false` if `0`. |
+| Bytes | Converted to string loosely, supports hex (`0x`), binary (`0b`), octal (`0o`), supports sign (`+`, `-`). |
+| String | Parsed from string, supports hex (`0x`), binary (`0b`), octal (`0o`), supports sign (`+`, `-`). |
 
 ### Request & Responses
 

@@ -4,195 +4,151 @@ description: "Find detailed reference information on HTTPQL query language used 
 
 # HTTPQL
 
-HTTPQL is the query language we use in Caido to let you filtering requests and responses. It is an evolving language that we hope will eventually become an industry standard.
+HTTPQL is the query language used in Caido that gives you the ability to filter traffic. The constructing primitives of an HTTPQL filter clause, in order of position, are the:
+
+1. [Namespace](#namespaces)
+2. [Field](#fields)
+3. [Operator](#operators)
+4. [Value](#values)
+
+<img width="500" alt="Parts of a filter clause" src="/_images/httpql_clause.png" no-shadow center/>
 
 ::: tip
-The development of Fields is ongoing. [Let us know](https://github.com/caido/caido/issues/new?template=feature.md&title=New%20HttpQL%20field:) which ones you need!
+The development of fields is ongoing. To request a field, [submit a templated issue.](https://github.com/caido/caido/issues/new?template=feature.md&title=New%20HttpQL%20field:)
 :::
 
 <div class="video small">
   <iframe src="https://www.youtube.com/embed/0SxdQVjzRss?si=7bb3aoxU8anKV4Sc" title="YouTube video player." frameborder="0"></iframe>
 </div>
 
-## Primitives
-
-The constructing primitives of HTTPQL Filter Clause, in order of position, are the:
-
-1. [Namespace](#namespace)
-2. [Field](#field)
-3. [Operator](#operator-and-value)
-4. [Value](#operator-and-value)
-
-<img width="500" alt="Parts of a filter clause" src="/_images/httpql_clause.png" no-shadow center/>
-
-## Namespace
-
-The **Namespaces** that Caido supports include:
-
-- `req`: HTTP requests.
-- `resp`: HTTP responses.
-- `preset`: Filter presets.
-- `row`: A table row.
-- `source`: The Caido feature source.
+## Namespaces
 
 ::: info
-
-- The `preset` and `source` Namespaces do not have a `Field` or an `Operator`. View [Exception Values](#exception-values) for usage.
-- The `source` Namespace is available in Search.
+Namespaces are project-specific.
 :::
 
-## Field
+| Namespace | Description |
+|-----------|-------------|
+| `req` | All proxied HTTP requests. |
+| `resp` | All proxied HTTP responses. |
+| `preset` | Filter presets. |
+| `row` | A request's numerical identifier in the traffic tables. |
+| `source` | The Caido feature source (only available in the Search interface). |
 
-The **Fields** that Caido supports include:
+::: warning NOTE
+The `preset` and `source` namespaces do not have any fields available and instead take direct values.
+:::
+
+## Fields
 
 ### req
 
-- `ext`: The file extension (_if present_). Extensions in Caido always contain the leading `.` (_such as `.js`_).
-- `host`: The hostname of the target server.
-- `method`: The HTTP Method used for the request in uppercase. If the request is malformed, this will contain the bytes read until the first whitespace.
-- `path`: The path of the query, including the extension.
-- `port`: The port of the target server.
-- `raw`: The full raw data of the request. This allows you to search by elements that Caido currently does not index (_such as headers_).
-- `created_at`: The date and time the request was sent.
-
-::: tip
-Caido is liberal in what is accepted as an extension.
-:::
+| Available Fields | Description | Value Type |
+|------------------|-------------|------------|
+| `created_at` | The date and time the request was sent. | Date/Time: [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) (`2024-06-24T17:03:48+00:00`) / [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) (`2024-06-24T17:03:48+0000`) / [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) (`Mon, 24 Jun 2024 17:03:48 +0000`) / [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) (`Mon, 24 Jun 2024 17:03:48 GMT`) / [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) (`2024-06-24T17:03:48Z`) |
+| `ext` | The extension of the requested file. | String/Byte |
+| `host` | The value of the request's `Host` header. | String/Byte |
+| `len` | The request size in bytes (includes request line, headers, and body data). | Integer |
+| `method` | The HTTP method used for the request. | String/Byte |
+| `path` | The URL path (includes files). | String/Byte |
+| `port` | The port of the target server. | Integer |
+| `query` | The URL query string (excludes the leading `?`). | String/Byte |
+| `raw` | The full raw data of the request (includes request line, headers, and body data). | String/Byte |
+| `tls` | If the connection used TLS/SSL encryption. | Boolean (`true`/`false`) |
 
 ### resp
 
-- `code`: The status code of the reponse. If the response is malformed, this will contain everything after `HTTP/1.1` and the following whitespace.
-- `raw`: The full raw data of the response. This allows you to search by elements that Caido currently does not index (_such as headers_).
-- `roundtrip`: The total time taken (_in milliseconds_) for the request to travel from the client to the server and for the response to travel back from the server to the client.
+| Available Fields | Description | Value Type |
+|------------------|-------------|------------|
+| `code` | The status code of the reponse. | Integer |
+| `len` | The response size in bytes (includes response line, headers, and body data). | Integer |
+| `raw` | The full raw data of the response (includes response line, headers, and body data). | String/Byte |
+| `roundtrip` | The total request/response cycle time (in milliseconds). | Integer |
 
 ### row
 
-- `id`: The numerical ID of a table row.
+| Available Field | Description | Value Type |
+|------------------|-------------------|------------|
+| `id` | The numerical identifier of a request's traffic table row. | Integer |
 
-## Operator and Value
+## Operators
 
-The **Value** types and associated **Operators** that Caido supports include:
+| Operator | Description | Value Type | Additional Details |
+|----------|-------------|------------|-------------------|
+| `eq` | Equal to the supplied value. | String/Byte, Integer | Case sensitive. Requires leading `.` character for `ext` field. |
+| `gt` | Greater than the supplied value. | Date/Time, Integer | |
+| `gte` | Greater than or equal to the supplied value. | Integer | |
+| `lt` | Less than the supplied value. | Date/Time, Integer | |
+| `lte` | Less than or equal to the supplied value. | Integer | |
+| `ne` | Not equal to the supplied value. | String/Byte, Integer | Case sensitive. Requires leading `.` character for `ext` field. |
+| `cont` | Contains the supplied value. | String/Byte | Case insensitive. |
+| `like` | The [SQLite LIKE Operator](https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators). | String/Byte | Case sensitive for Unicode characters beyond the ASCII range. |
+| `ncont` | Does not contain the supplied value. | String/Byte | Case insensitive. |
+| `nlike` | The [SQLite NOT LIKE Operator](https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators). | String/Byte | Case sensitive for Unicode characters beyond the ASCII range. |
+| `regex` | Matches to the regular expression. | String/Byte | Rust-flavored syntax. |
+| `nregex` | Does not match to the regular expression. | String/Byte | Rust-flavored syntax. |
 
-### Integers
-
-These Operators work on **Fields** that are numerical (_`port`, `code`, `roundtrip` and `id`_).
-
-- `eq`: **Equal to** the supplied value.
-- `gt`: **Greater than** the supplied value.
-- `gte`: **Greater than or equal to** the supplied value.
-- `lt`: **Less than** the supplied value.
-- `lte`: **Less than or equal to** the supplied value.
-- `ne`: **Not equal** to the supplied value.
-
-### String/Bytes
-
-These Operators work on **Fields** that are text or byte values (_`ext`, `host`, `method`, `path`, `query` and `raw`_).
-
-- `cont`: **Contains** the supplied value.
-- `eq`: **Equal** to the supplied value.
-- `like`: The [SQLite LIKE Operator](https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators).
-- `ncont`: **Does not** contain the supplied value.
-- `ne`: **Not equal to** the supplied value.
-- `nlike`: The [SQLite NOT LIKE Operator](https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators).
-
-::: tip TIPS
-
-- The `cont` and `ncont` Operators are case insensitive.
-- In SQLite - the `%` character matches zero or more characters (_such as `%.js` to match `.map.js`_) and the `_` character matches one character (_such as `v_lue` to match `vAlue`_).
-- The `like` Operator is case sensitive for unicode characters that are beyond the ASCII range.
+::: tip
+In SQLite - the `%` character matches zero or more characters (_`%.js` matches `.map.js`_) and the `_` character matches one character (_`v_lue` matches `vAlue`_). Visit [https://regex101.com/](https://regex101.com/) and select **Rust** syntax to test regular expressions.
 :::
 
-### Regex
-
-These Operators work on **Fields** that are text or byte values (_that are text or byte values (_`ext`, `host`, `method`, `path`, `query` and `raw`_).
-
-- `regex`: Matches the regex `/value.+/`.
-- `nregex`: Doesn't match the regex `/value.+/`.
-
-::: info
+::: warning NOTE
 Not all regex features are currently supported by Caido (_such as look-ahead expressions_) as they are not included in the regex library of Rust.
 :::
 
-::: tip
-Visit [https://regex101.com/](https://regex101.com/) and select **Rust** syntax for assistance in creating expressions.
+## Values
+
+### preset
+
+| Available Values | Example |
+|------------------|---------|
+| A filter preset's alias. | `preset:"no-images"` |
+| A filter preset's name. | `preset:"No Images"` |
+
+### source
+
+| Available Values | Additional Details | Example |
+|------------------|--------------------|---------|
+| `automate`, `intercept`, `plugin`, `replay`, `workflow` | Requires lowercase. Autocomplete is not supported. | `source:"plugin"` |
+
+::: warning NOTE
+The `source` namespace is only available in the Search interface. If no results are returned, ensure the inclusion of the source is enabled in the [Advanced options](/guides/search_filtering.md) menu.
 :::
 
-### Date/Time
-
-These Operators work on the **`created_at` Field**.
-
-- `gt`: **Greater than** the supplied value.
-- `lt`: **Less than** the supplied value.
-
-The supported time formats for the values used with `created_at` Operators are:
-
-- [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) - _example:_ 2024-06-24T17:03:48+00:00
-- [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) - _example:_ 2024-06-24T17:03:48+0000
-- [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) - _example:_ Mon, 24 Jun 2024 17:03:48 +0000
-- [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) - _example:_ Mon, 24 Jun 2024 17:03:48 GMT
-- [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) - _example:_ 2024-06-24T17:03:48Z
-
-### Standalone
-
-Caido supports standalone string values. This serves as a search shortcut as the `Namespace`, `Field` and `Operator` do not have to be provided.
-
-Using a standalone string (_such as `"my value"`_) will search across both requests and responses. The supplied string is replaced at runtime by:
+::: tip
+Entering a string (_such as `"my value"`_) into the HTTPQL input field will search across both requests and responses. The supplied string is replaced at runtime by:
 
 ```sql
 (req.raw.cont:"my value" OR resp.raw.cont:"my value")
 ```
 
-## Exception Values
-
-### preset
-
-When using the `preset` Namespace - the value can be reference by either the name or the alias of a filter preset:
-
-- **Name**: `preset:"Preset name"`.
-- **Alias**: `preset:preset-alias`.
-
-### source
-
-- `intercept` - Traffic that has been proxied by Caido.
-- `replay` - Traffic generated by sending requests using Replay.
-- `automate` - Traffic generated by an Automate campaign.
-- `workflow` - Traffic generated by a workflow.
-
-::: info
-Autocomplete is not currently available when using the `source` Namespace.
-:::
-
-::: tip
-
-- When using the `source` Namespace - use all lowercase characters when naming the desired Caido feature.
-- If you are not receiving results of a `source` query - click the `Advanced` settings button next to the HTTPQL query bar to ensure the desired `Sources` are enabled.
 :::
 
 ## Queries
 
+Queries are composed of multiple filter clauses that are combined together using logical operators and logical grouping.
+
 <img width="600" alt="A full HTTPQL Query" src="/_images/httpql_logical.png" no-shadow center/>
 
-Queries are composed of multiple Filter Clauses that are combined together using `Logical Operators` and `Logical Grouping`.
+### Logical Operators
 
-## Logical Operators
-
-We offer two Logical Operators:
-
-- **AND**: Both the left and right clauses must be true.
-- **OR**: Either the left or right clause must be true.
+| Operator | Description |
+|----------|-------------|
+| AND | Both the left and right clauses must be true. |
+| OR | Either the left or right clause must be true. |
 
 ::: info
-Operators can be written in upper or lower case. Both have the **same priority**.
+Operators are case insensitive. Both have the **same priority**.
 :::
 
-## Logical Grouping
+### Logical Grouping
 
-Caido supports the priority of operations, `AND` has a higher priority than `OR`. Here are some examples:
+Caido supports the priority of operations: `AND` has a higher priority than `OR`.
 
-- `clause1 AND clause2 OR clause3` is equivalent to `((clause1 AND clause2) OR clause3)`.
-- `clause1 OR clause2 AND clause3` is equivalent to `(clause1 OR (clause2 AND clause3))`.
-- `clause1 AND clause2 AND clause3` is equivalent to `((clause1 AND clause2) AND clause3)`.
+- `<Clause1> AND <Clause2> OR <Clause3>` is equivalent to `((<Clause1> AND <Clause2>) OR <Clause3>)`.
+- `<Clause1> OR <Clause2> AND <Clause3>` is equivalent to `(<Clause1> OR (<Clause2> AND <Clause3>))`.
+- `<Clause1> AND <Clause2> AND <Clause3>` is equivalent to `((<Clause1> AND <Clause2>) AND <Clause3>)`.
 
 ::: tip
-We still recommend that you insert parentheses to make sure the Logicial Groups represent what you are trying to accomplish.
+While parentheses are optional, we recommend using them to make your logical grouping clear.
 :::
