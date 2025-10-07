@@ -74,9 +74,9 @@ Set-Cookie: session=757365723D636169646F3B726F6C653D75736572;
 
 <img alt="Referencing the request object." src="/_images/workflows_response_reference_request.png" center>
 
-2. Close the editor window, **click** on the `Javascript` node to access its editor.
+2. Close the editor window and **click** on the `Javascript` node to access its editor.
 
-2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
+3. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
 export async function run({ request, response }, sdk) {
@@ -189,7 +189,7 @@ Once these steps are completed, close the editor window and **click** on the `Sa
 
 ### Script Breakdown
 
-First an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters.
+First, an asynchronous function is defined that takes a `request` and `response` object pair and the `sdk` object as parameters.
 
 ```js
 export async function run({ request, response }, sdk) {
