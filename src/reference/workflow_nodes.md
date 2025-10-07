@@ -1,3 +1,7 @@
+---
+description: "Find detailed reference information on Caido workflow nodes including JavaScript, Shell, If/Else, and other automation components."
+---
+
 # Workflow Nodes
 
 ## Passive Workflow Nodes
