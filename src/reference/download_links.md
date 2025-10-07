@@ -6,14 +6,15 @@ description: "Find detailed reference information on Caido download links API an
 
 The download links of Caido are hosted under the domain `caido.download`.
 
-:::info
-You might see older links linking to Google Cloud buckets directly, those are deprecated and should not be used.
+::: warning NOTE
+You may encounter outdated Google Cloud bucket links. These are deprecated and should not be used.
 :::
 
 ## Latest
 
-To get the latest release links, you can query `GET https://caido.download/releases/latest`.
-This API will return a JSON similar to:
+To obtain the latest release links, use `GET https://caido.download/releases/latest`.
+
+The API will return JSON data resembling:
 
 ```json
 {
@@ -56,20 +57,22 @@ This API will return a JSON similar to:
 }
 ```
 
-- `display`: What you should display to an end-user.
-- `platform`: (Deprecated) We support three OS (`linux`, `mac`, `win`) and two architectures (`x86_64` and `aarch64`). The format is `[OS]-[ARCH]`.
-- `kind`: Either `desktop` or `cli`. See our [documention on the difference](/concepts/essentials/cli_vs_desktop.md).
-- `link`: The download link
-- `os`: The operating system of the binary (`linux`, `macos`, `windows`)
-- `arch`: The architecture of the binary (`x86_64`, `aarch64`)
-- `format`: The archive/binary format (`zip`, `tar.gz`, `deb`, `AppImage`, `dmg`, `exe`)
-- `hash`: The SHA512 hash of the file in base64 (might be null for older releases)
+| Field | Description |
+|-------|-------------|
+| `display` | The display name. |
+| `platform` | (Deprecated) Operating system (`linux`/`mac`/`win`) + `-` + architecture (`x86_64`/`aarch64`). |
+| `kind` | Either `desktop` or `cli` ([CLI vs Desktop](/concepts/essentials/cli_vs_desktop.md)). |
+| `link` | The download link. |
+| `os` | The operating system of the binary (`linux`/`macos`/`windows`). |
+| `arch` | The architecture of the binary (`x86_64`/`aarch64`). |
+| `format` | The archive/binary format (`zip`/`tar.gz`/`deb`/`AppImage`/`dmg`/`exe`). |
+| `hash` | The Base64-encoded SHA512 hash of the file (may be `null` for older releases). |
 
 ::: info
 If you prefer a file-based hash, we also build `[link].sha256` and `[link].sha512` files for each binary.
-Those are hex encoded and will be the same output as `shasum -a 256` and `shasum -a 512`.
+These are hex encoded and will produce the same output as `shasum -a 256` and `shasum -a 512`.
 :::
 
 ::: warning
-The download links **will redirect** to a signed URL, make sure your download client follows redirects.
+The download links **will redirect** to a signed URL, ensure your download client follows redirects.
 :::
