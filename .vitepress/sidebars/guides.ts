@@ -13,6 +13,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/ca_certificate_importing",
       },
       {
+        text: "Using a Preconfigured Browser",
+        link: "/guides/preconfigured_browser",
+      },
+      {
         text: "Guest Mode",
         link: "/guides/guest_mode",
       },
