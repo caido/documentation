@@ -51,6 +51,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Plugins",
+    items: [
+      {
+        text: "Scanner",
+        link: "/tutorials/scanner_configuration",
+      },
+    ],
+  },
+  {
     text: "Workflows",
     items: [
       {

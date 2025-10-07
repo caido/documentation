@@ -12,7 +12,7 @@ Plugins available in the Community Store run third-party code, which could poten
 :::
 
 ::: tip
-[View the developer documenation](https://developer.caido.io/) to learn how to create your own Caido plugins!
+[Learn how to create your own Caido plugins!](https://developer.caido.io/)
 :::
 
 To install a plugin, either:
