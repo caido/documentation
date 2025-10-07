@@ -1,3 +1,7 @@
+---
+description: "Learn how to configure and use the Scanner plugin for automated vulnerability detection, including passive and active scanning with template-based checks."
+---
+
 # Scanner
 
 The [Scanner](https://github.com/caido-community/scanner) is Caido's official template-based, vulnerability detection engine that brings automated security testing capabilities to Caido.
