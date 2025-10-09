@@ -4,40 +4,63 @@ description: "Learn how to create a convert workflow to automatically resign AWS
 
 # Resign AWS Requests Workflow
 
-When dealing with AWS APIs, there is often a need to resign requests so they can be accepted by AWS.
-In this tutorial, we will build a [convert](/concepts/workflows_intro.md#convert-workflows) workflow to rebuild the [AWS Signature V4](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html) on send in Replay.
-A similar method can be used for other cloud providers since a lot of them follow the same signature process.
+In this tutorial, we will create a convert workflow that will resign authenticated AWS requests sent in Replay by adding a valid [(AWS Signature V4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html) `Authorization` header.
 
-## Setting the Environment
+Then, by using [workflows in Replay](/guides/replay_environment_variables.md), you can achieve continuous, uninterrupted testing without manually updating expired sessions.
 
-We assume at this point that you have access to an `AWS Access Key` (like `AKIAIOSFODNN7EXAMPLE`) and an `AWS Secret Access key` (like `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY`).
+::: tip
+A similar method can be used for other cloud providers as many follow the same signature process.
+:::
 
-Enter them in the global environment for your project as `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY`.
-We will also need a two other variables: `AWS_REGION` (like `us-east-1`) and `AWS_SERVICE` (like `s3`).
+## Creating a Convert Workflow
 
-<img alt="Setup the variables in the global environment" src="/_images/aws_environment.png" center no-shadow width="900"/>
+To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
 
-## Creating the Workflow
+<img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
 
-For this tutorial, we will use AWS v4 authentication via headers. Note that it is [also possible to authenticate via query parameters](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv-authentication-methods.html).
+Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
-The algorithm to craft the signature is illustrated in the following diagram. You can also refer to the [AWS documentation on the subject](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv-create-signed-request.html) for more details.
+## Nodes and Connections
 
-<img alt="AWS Signature process" src="/_images/aws_signature_process.png" center no-shadow width="600"/>
+To add nodes to the workflow, **click** on `+ Add Node` button and then the `+ Add` button of a specific node.
 
-### Linking up the Nodes
+For this workflow, the overall node layout will be:
 
-Let's create a new convert workflow and drop in a `Javascript` node. This will provide us with [a full Javascript environment](https://developer.caido.io/concepts/essentials/runtime.html#backend) to code our algorithm.
-Make sure that all the references are setup properly. If that is the case if you enter `test` in the input and run it, it should output `test`.
+<img alt="The nodes used and their connections." src="/_images/resign_aws_requests_nodes.png" center>
 
-<img alt="Workflows setup" src="/_images/aws_workflow_setup.png" center no-shadow width="800"/>
+- The `Convert Start` node outputs `$convert_start.data` that represents the request that will undergo conversion.
+- The `Javascript` node accesses environment variables to retrieve AWS credentials, creates a signing key, signs the request, and generates a valid authentication header.
+- Once the header has been returned by the `Javascript` node, the resigned request will be output, and the workflow will end.
 
-### Inserting the Script
+## Creating the Environment Variables
 
-Here is the script we are going to use for that workflow, replace the content of the `Javascript` node with it.
-It will output three headers (`Authorization`, `x-amz-date` and `x-amz-content-sha256`) that we will inject in our request.
+For this workflow, you will need to obtain your:
 
-```javascript
+- AWS Access Key ID
+- AWS Secret Access Key
+- Resource region ID
+- Resource service ID
+
+With these values, [create environment variables](https://docs.caido.io/tutorials/aws_signature.html) in the `Global` environment with the following names:
+
+| Name | Value | Value Example |
+|----------|-------------|---------|
+| `AWS_ACCESS_KEY` | Your AWS Access Key ID | `AKIAXXXXXXXXXXXXXXXX` |
+| `AWS_SECRET_ACCESS_KEY` | Your AWS Secret Access Key | `xX3X51XXxXx77XXXXXxXXXX83x0XxX+1XXxxx8Xx` |
+| `AWS_REGION` | Your AWS Resource Region ID | `us-east-1` |
+| `AWS_SERVICE` | Your AWS Service ID | `s3` |
+
+<img alt="The AWS environment variables." src="/_images/resign_aws_requests_environment_variables.png" center>
+
+## Resigning AWS Requests
+
+1. **Click** on the `Javascript` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
+
+<img alt="Referencing the input data." src="/_images/workflows_convert_reference_data.png" center>
+
+2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
+
+```js
 import { createHmac, createHash } from "crypto";
 import { RequestSpec } from "caido:utils";
 
@@ -129,48 +152,171 @@ export function run(input, sdk) {
 }
 ```
 
-## Using the Workflow in Replay
+3. Close the editor window and **click** on the `Convert End` node to access its editor.
 
-Now that our workflow is created, the last step is to use it inside `Replay`. For the purpose of this tutorial, we will try to access a private file on an S3 bucket. If we try to access this file without authentication, we get an error.
+4. Reference the `$javascript.data` as input data.
 
-<img alt="AWS error when trying to access the file" src="/_images/aws_s3_error.png" center no-shadow width="800"/>
+<img alt="Referencing the Javascript node output data." src="/_images/workflows_reference_javascript_data.png" center>
 
-### Adding the Header
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
 
-Next add a new authorization header placeholder by highlighting it and clicking on the `+` icon.
-Then, open the placeholder settings by using the pen icon.
+### Script Breakdown
 
-<img alt="Adding an header placeholder" src="/_images/aws_header_placeholder.png" center no-shadow width="600"/>
+It will output three headers (`Authorization`, `x-amz-date` and `x-amz-content-sha256`) that we will inject in our request.
 
-On the left part of the new window, you can select what the input of our workflow will be. By default, only the placeholder is selected but in our case we will need the whole request. You can either select with the mouse or type `CTRL + A` to grab the whole request.
+First, the script imports the required cryptographic functions from the backend `crypto` module and the `RequestSpec` utility to modify requests.
 
-On the right, remove the default `URL Encode` preprocessor and add our `AWS Signature` workflow instead.
+```js
+import { createHmac, createHash } from "crypto";
+import { RequestSpec } from "caido:utils";
+```
 
-<img alt="Placeholder settings" src="/_images/aws_placeholder_settings.png" center no-shadow width="800"/>
+Then, the `getSignatureKey` function is defined that will create the signing key using a series of `createHMAC` operations with the secret key, timestamp, region, and service name.
 
-### Resending the request
+```js
+function getSignatureKey(key, dateStamp, regionName, serviceName) {
+  const kDate = createHmac("SHA256", `AWS4${key}`).update(dateStamp).digest();
+  const kRegion = createHmac("SHA256", kDate).update(regionName).digest();
+  const kService = createHmac("SHA256", kRegion).update(serviceName).digest();
+  const kSigning = createHmac("SHA256", kService)
+    .update("aws4_request")
+    .digest();
+  return kSigning;
+}
+```
 
-Once you resend the request, you should now get the content of the file.
+The main `sign` function uses the `.getVar()` method to retrieve the environment variables, generates the current timestamp for the `x-amz-date` component, creates the canonical request with various `RequestSpec` methods and hashes any body data.
 
-<img alt="Content of the private S3 file" src="/_images/aws_s3_success.png" center no-shadow width="900"/>
+```js
+function sign(sdk, spec) {
+  const accessKey = sdk.env.getVar("AWS_ACCESS_KEY");
+  const secretAccessKey = sdk.env.getVar("AWS_SECRET_ACCESS_KEY");
+  const region = sdk.env.getVar("AWS_REGION");
+  const service = sdk.env.getVar("AWS_SERVICE");
 
-In `Search`, you can also view the fully expanded request and the properly crafted signature.
+  const now = new Date();
+  const year = now.getUTCFullYear();
+  const month = String(now.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(now.getUTCDate()).padStart(2, "0");
+  const hours = String(now.getUTCHours()).padStart(2, "0");
+  const minutes = String(now.getUTCMinutes()).padStart(2, "0");
+  const seconds = String(now.getUTCSeconds()).padStart(2, "0");
+  const amzDate = `${year}${month}${day}T${hours}${minutes}${seconds}Z`;
+  const dateStamp = amzDate.slice(0, 8);
 
-<img alt="S3 Request signed" src="/_images/aws_s3_signed.png" center no-shadow width="900"/>
+  const method = spec.getMethod();
+  const canonicalUri = spec.getPath();
+  const canonicalQueryString = spec.getQuery();
+  const host = spec.getHost();
+  const payload = spec.getBody()?.toRaw() ?? "";
+  const payloadHash = createHash("SHA256").update(payload).digest("hex");
+  const canonicalHeaders = `host:${host}\nx-amz-content-sha256:${payloadHash}\nx-amz-date:${amzDate}\n`;
+  const signedHeaders = "host;x-amz-content-sha256;x-amz-date";
 
-## Conclusion
+  const canonicalRequest = [
+    method,
+    canonicalUri,
+    canonicalQueryString,
+    canonicalHeaders,
+    signedHeaders,
+    payloadHash,
+  ].join("\n");
+  const hashedCanonicalRequest = createHash("sha256")
+    .update(canonicalRequest)
+    .digest("hex");
+```
 
-With this new workflow you are now able to re-sign any `AWS` request.
-You should also be more familiar with workflow integration in `Replay` and how to really customize your requests at runtime.
+Next, it creates the credential scope and string to sign.
 
-The full workflow is provided below, ready to be imported!
+```js
+  const credentialScope = `${dateStamp}/${region}/${service}/aws4_request`;
+  const stringToSign = [
+    "AWS4-HMAC-SHA256",
+    amzDate,
+    credentialScope,
+    hashedCanonicalRequest,
+  ].join("\n");
+```
+
+Then, it generates the signing key, creates the final signature, pieces the `Authorization` header together, and returns it.
+
+```js
+  const signingKey = getSignatureKey(
+    secretAccessKey,
+    dateStamp,
+    region,
+    service,
+  );
+  const signature = createHmac("sha256", signingKey)
+    .update(stringToSign)
+    .digest("hex");
+  const authorizationHeader = [
+    `AWS4-HMAC-SHA256 Credential=${accessKey}/${credentialScope}`,
+    `SignedHeaders=${signedHeaders}`,
+    `Signature=${signature}`,
+  ].join(", ");
+
+  return {
+    authorizationHeader,
+    amzDate,
+    payloadHash,
+  };
+}
+```
+
+The `run` function takes the initial `request` object as input, converts it to a mutable `RequestSpec` object, and parses it. Then, the `sign` function is called to sign the request and insert the valid `Authorization` header.
+
+```js
+export function run(input, sdk) {
+  try {
+    const spec = RequestSpec.parse(input);
+    const { authorizationHeader, amzDate, payloadHash } = sign(sdk, spec);
+    return `Authorization: ${authorizationHeader}\r\nx-amz-date: ${amzDate}\r\nx-amz-content-sha256: ${payloadHash}\r\n`;
+  } catch (e) {
+    sdk.console.log(e.toString());
+    return input;
+  }
+}
+```
+
+## Testing the Workflow
+
+To test the workflow:
+
+1. Send an unauthorized request in Replay to a private S3 bucket object. Without authentication, a 403 response will be returned.
+
+<img alt="Unauthorized request and response pair." src="/_images/resign_aws_requests_unauthenticated.png" center />
+
+2. Next, add an arbitrary `Authorization` header to the request, **click**, **hold**, and **drag** over it, and **click** the `+` button to add it as a placeholder.
+
+3. **Click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.
+
+<img alt="Adding the placeholder." src="/_images/resign_aws_requests_placeholder.png" center />
+
+4. Use `CTRL` + `A` to select the whole request. With `Workflow` as the `Type`, **click** on the `Select a workflow` drop-down menu, select the workflow from the list, and **click** `Add` to save the configuration.
+
+<img alt="Placeholder settings" src="/_images/resign_aws_requests_placeholder_settings.png" center no-shadow width="800"/>
+
+5. Close the editor window and **click** on the `Send` button to resend the Replay request.
+
+## The Result
+
+The content of the file will be returned in a 200 response.
+
+<img alt="Content of the private S3 file" src="/_images/resign_aws_requests_result.png" center no-shadow width="900"/>
+
+To view the request as it was sent, navigate to the Search interface and **click** on the associated request row.
+
+<img alt="S3 Request signed" src="/_images/resign_aws_requests_search_result.png" center no-shadow width="900"/>
+
+The full workflow is provided below, ready to be imported.
 
 <details>
-<summary>Full Workflow</summary>
+<summary>Full workflow</summary>
 
-```json
+``` json
 {
-  "description": "This workflow will create an AWS Signature",
+  "description": "Resigns authenticated requests using the AWS Signature V4 header method.",
   "edition": 2,
   "graph": {
     "edges": [
@@ -200,8 +346,8 @@ The full workflow is provided below, ready to be imported!
         "alias": "convert_start",
         "definition_id": "caido/convert-start",
         "display": {
-          "x": 60,
-          "y": -110
+          "x": -70,
+          "y": 0
         },
         "id": 0,
         "inputs": [],
@@ -212,8 +358,8 @@ The full workflow is provided below, ready to be imported!
         "alias": "convert_end",
         "definition_id": "caido/convert-end",
         "display": {
-          "x": 60,
-          "y": 180
+          "x": 350,
+          "y": 0
         },
         "id": 1,
         "inputs": [
@@ -232,8 +378,8 @@ The full workflow is provided below, ready to be imported!
         "alias": "javascript",
         "definition_id": "caido/code-js",
         "display": {
-          "x": 60,
-          "y": 30
+          "x": 140,
+          "y": 0
         },
         "id": 2,
         "inputs": [
@@ -257,9 +403,9 @@ The full workflow is provided below, ready to be imported!
       }
     ]
   },
-  "id": "1a544966-62fd-4967-8fd4-702e97e02cc9",
+  "id": "2121672b-53d8-4004-aa80-d5021a954ead",
   "kind": "convert",
-  "name": "AWS Signature"
+  "name": "Resign AWS Requests"
 }
 ```
 

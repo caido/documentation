@@ -20,13 +20,21 @@ This error may occur when Caido is running as root.
 
 If you encounter this error message after attempting to preview a response, do not run Caido as the root user or launch Caido without the `--no-renderer-sandbox` argument.
 
-## Unable to Access 'Individual'/'Team' Tier Subscription Features
+## Unable to Access Individual/Team Tier Subscription Features
 
 This error may occur when the cached state of your account has not been updated.
 
 ### Resolution
 
 If you are unable access premium subscription features, refresh your account state by reauthenticating to your Caido instance.
+
+## "You don't have the required permissions for this action."
+
+This error may occur when you have exceeded the installation limits of workflows, plugins, or filters for your account type.
+
+### Resolution
+
+If you encounter this error message after attempting to install an extension, remove extensions that are unused or less important to your current work, and then retry the installation.
 
 ## The GraphQL Playground Doesn't Work
 
