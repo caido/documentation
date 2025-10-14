@@ -9,6 +9,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/reference/",
       },
       {
+        text: "Burp Suite vs Caido",
+        link: "/reference/burp_vs_caido",
+      },
+      {
         text: "CLI Options",
         link: "/reference/cli",
       },
