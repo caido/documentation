@@ -8,7 +8,7 @@ description: "A side-by-side reference of common Burp Suite features and where t
 
 | Burp Suite | Caido |
 |------------|-------|
-| Dashboard | [Plugins](/quickstart/plugins.md)/[Managing Multiple Sessions](/guides/automate_managing.md) |
+| Dashboard | [Plugins](/quickstart/plugins.md) |
 | Target | [Sitemap](/quickstart/sitemap.md)/[Scopes](/quickstart/scopes.md)/[Findings](/quickstart/findings.md) |
 | Burp's browser | [Using a Preconfigured Browser](/guides/preconfigured_browser.md) |
 | Proxy | [Intercept](/quickstart/intercept.md)/[HTTP History](/quickstart/http_history.md)/[WS History](/quickstart/ws_history.md)/[Match & Replace](/quickstart/match_replace.md) |
