@@ -15,7 +15,6 @@ The `Automate` interface gives you the ability to send requests programatically.
 - [Sending Multiple Payloads](/guides/automate_multiple.md)
 - [Preprocessing Payloads](/guides/automate_preprocessors.md)
 - [Avoiding Rate-Limiting Protections](/guides/automate_rate_limiting.md)
-- [Managing Multiple Sessions](/guides/automate_managing.md)
 :::
 
 <img alt="The Automate interface." src="/_images/automate_interface.png" center>
