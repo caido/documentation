@@ -2,15 +2,9 @@
 description: "A step-by-step guide to viewing, editing, and switching between Pretty and Raw view modes in HTTP request and response editors."
 ---
 
-# Working with Requests & Responses
+# Changing Request & Response View Modes
 
-HTTP requests and their corresponding responses will be presented in side-by-side panes.
-
-<img alt="Request and response panes." src="/_images/general_usage_request_response_panes.png" center>
-
-While certain request and response panes are intended to be view-only, others are editors.
-
-The data can be viewed in two different formats:
+HTTP request and response data can be viewed in two different formats:
 
 - `Pretty`: Formats the data with whitespaces, indentation, and new lines for enhanced readability.
 - `Raw`: Represents the data exactly as it was transmitted.

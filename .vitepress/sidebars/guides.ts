@@ -104,8 +104,8 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/sorting",
       },
       {
-        text: "Working with Requests & Responses",
-        link: "/guides/request_response_editors",
+        text: "Changing Request & Response View Modes",
+        link: "/guides/request_response_modes",
       },
       {
         text: "Previewing Responses",
@@ -254,10 +254,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Avoiding Rate-Limiting Protections",
         link: "/guides/automate_rate_limiting",
-      },
-      {
-        text: "Managing Multiple Sessions",
-        link: "/guides/automate_managing",
       },
     ],
   },

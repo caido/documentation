@@ -1,3 +1,7 @@
+---
+description: "Troubleshooting common Caido in-app errors including match and replace rules not working, responses not loading, permission issues, and missing user-interface sections.
+---
+
 # In-app Issues
 
 ## Match & Replace Rule Not Working
@@ -6,7 +10,7 @@ If a Match & Replace rule is not working or is not being applied, the formatting
 
 ### Resolution
 
-Ensure you are viewing and working with the [raw](/guides/request_response_panes.md) representation of data.
+Ensure you are viewing and working with the [raw](/guides/request_response_modes.md) representation of data.
 
 ## Can't Preview Responses
 

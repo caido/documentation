@@ -1,15 +1,8 @@
-# Burp Suite vs Caido
+---
+description: "A side-by-side reference of common Burp Suite features and where to find their counterparts in Caido."
+---
 
-| | Caido Basic | Caido Individual | Burp Suite Community | Burp Suite Professional |
-|---|---|---|---|---|
-| **Pricing** | Free | $200/y | Free | $475/y |
-| **Unlimited Installations** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /></code> |
-| **Project Management** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /></code> | <code><Icon icon="fas fa-x" /></code> |
-| **Unrestricted Automation** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /> Rate-limited Intruder</code> | <code><Icon icon="fas fa-check" /></code> |
-| **Intuitive Filtering** | <code><Icon icon="fas fa-check" /> HTTPQL</code> | <code><Icon icon="fas fa-check" /> HTTPQL</code> | <code><Icon icon="fas fa-x" /> Bambdas</code> | <code><Icon icon="fas fa-x" /> Bambdas</code> |
-| **No-Code Customizations** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /></code> | <code><Icon icon="fas fa-x" /></code> |
-| **Simplified Plugin Development** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /></code> | <code><Icon icon="fas fa-x" /></code> |
-| **Remote Hosting** | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-check" /></code> | <code><Icon icon="fas fa-x" /></code> | <code><Icon icon="fas fa-x" /></code> |
+# Burp Suite vs Caido
 
 ## Tools
 
@@ -26,10 +19,8 @@
 | Comparer | [Compare](https://github.com/amrelsagaei/Compare) |
 | Logger | [Search](/quickstart/search.md)/[Cerebrum](https://github.com/DewSecOff/Caido-Plugin-Cerebrum) |
 | Collaborator | [QuickSSRF](https://github.com/caido-community/quickssrf)/[OmniOAST](https://github.com/hahwul/OmniOAST) |
-| Message editor | [Working with Requests and Responses](/guides/request_response_panes.md) |
 | Search | [HTTPQL](/reference/httpql.md) |
 | Organizer | [Findings](/quickstart/findings.md) |
-| Context menu | [Context Menu Options](/reference/context_menu.md) |
 | Filter settings | [Filters](/quickstart/filters.md) |
 
 ## Extensions
