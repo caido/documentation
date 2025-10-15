@@ -4,6 +4,8 @@ description: "A side-by-side reference of common Burp Suite features and where t
 
 # Burp Suite vs Caido
 
+This page provides a mapping of Burp Suite features to their counterparts in Caido.
+
 ## Tools
 
 | Burp Suite | Caido |
