@@ -1,5 +1,5 @@
 ---
-description: "A step-by-step guide to switching between Pretty and Raw view modes in Caido for viewing HTTP request and response data in different formats."
+description: "A step-by-step guide to viewing, editing, and switching between Pretty and Raw view modes in HTTP request and response editors."
 ---
 
 # Changing Request & Response View Modes

@@ -1,3 +1,7 @@
+---
+description: "Commonly encountered Caido installation issues."
+---
+
 # Installation Issues
 
 ## "The SUID sandbox helper binary was found, but is not configured correctly."

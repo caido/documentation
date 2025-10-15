@@ -92,28 +92,28 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/navigation",
       },
       {
-        text: "Changing Request & Response View Modes",
-        link: "/guides/request_response_modes",
-      },
-      {
         text: "Customizing the User Interface",
         link: "/guides/ui",
-      },
-      {
-        text: "Sorting Traffic Table Rows",
-        link: "/guides/sorting",
-      },
-      {
-        text: "Creating Shortcuts",
-        link: "/guides/shortcuts",
       },
       {
         text: "Managing Elements",
         link: "/guides/elements",
       },
       {
+        text: "Sorting Traffic Table Rows",
+        link: "/guides/sorting",
+      },
+      {
+        text: "Changing Request & Response View Modes",
+        link: "/guides/request_response_modes",
+      },
+      {
         text: "Previewing Responses",
         link: "/guides/preview_responses",
+      },
+      {
+        text: "Creating Shortcuts",
+        link: "/guides/shortcuts",
       },
     ],
   },
