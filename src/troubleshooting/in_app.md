@@ -1,5 +1,5 @@
 ---
-description: "Troubleshooting common Caido in-app errors including match and replace rules not working, responses not loading, permission issues, and missing user-interface sections.
+description: "Troubleshooting common Caido in-app errors including match and replace rules not working, responses not loading, permission issues, and missing user-interface sections."
 ---
 
 # In-app Issues
