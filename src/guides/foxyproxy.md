@@ -18,7 +18,7 @@ In the pop-up window, **click** on the `Add extension` button.
 
 To install the browser extension, launch the Firefox browser, navigate to [https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/), and click on the `Add to Firefox` button.
 
-In the pop-up window, **click** on the `Add` button.
+In the pop-up window, select `Allow extension to run in private windows`, and then **click** on the `Add` button.
 
 <img alt="Add FoxyProxy pop-up window." src="/_images/firefox_add_foxyproxy.png" center/>
 
