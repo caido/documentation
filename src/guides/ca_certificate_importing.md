@@ -6,7 +6,7 @@ To download the certificate, **click** on the account button <code><Icon icon="f
 
 Once the certificate has been downloaded, continue with the import instructions for your browser:
 
-### Chrome
+## Chrome
 
 1. Launch the Chrome browser, enter `chrome://certificate-manager/` in the address bar, and select `Installed by you`.
 
@@ -18,7 +18,7 @@ Once the certificate has been downloaded, continue with the import instructions 
 
 3. Continue with the [Using FoxyProxy](/guides/foxyproxy.html#chrome) guide for Chrome.
 
-### Firefox
+## Firefox
 
 1. Launch the Firefox browser, enter `about:preferences` in the address bar, and search for `View Certificates`.
 
