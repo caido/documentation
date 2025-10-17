@@ -67,7 +67,7 @@ mv caido-desktop-vX.XX.X-linux-<architecture>.AppImage caido
 4. Once Caido has been installed, launch Caido, and [continue to the setup instructions](/quickstart/setup.md).
 
 ```bash
-./caido
+caido
 ```
 
 ::: warning TROUBLESHOOTING

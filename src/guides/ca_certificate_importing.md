@@ -4,31 +4,19 @@ To proxy HTTPS traffic with Caido, it is necessary to import and trust the CA Ce
 
 To download the certificate, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `CA Certificate`, and **click** on the <code><Icon icon="fas fa-download" /> Download CA Certificate</code> button.
 
-Once the certificate has been downloaded, continue with the import instructions for your operating system and browser:
-
-## Windows
+Once the certificate has been downloaded, continue with the import instructions for your browser:
 
 ### Chrome
 
-1. Launch the Chrome browser, enter `chrome://certificate-manager/` in the address bar, and select `Manage imported certificates from Windows`.
+1. Launch the Chrome browser, enter `chrome://certificate-manager/` in the address bar, and select `Installed by you`.
 
-<img alt="Manage imported certificates from Windows setting option." src="/_images/manage_imported_certificates_from_windows_chrome.png" center/>
+<img alt="Installed by you option." src="/_images/custom_certificate_chrome.png" center/>
 
-2. In the Certificates window, select the `Trusted Root Certification Authorities` tab and **click** on the `Import...` button.
+2. Then, **click** on the Trusted Certificates `Import` button and select the `ca.crt` file you previously downloaded.
 
-3. In the Certificate Import Wizard, **click** `Next`, **click** `Browse...`, and select the `ca.crt` file you previously downloaded.
+<img alt="Import button." src="/_images/trusted_certificates_chrome.png" center/>
 
-<img alt="Selecting the downloaded ca.crt file." src="/_images/file_to_import_windows_chrome.png" center/>
-
-4. **Click** `Next` and select the `Place all certificates in the following store` option.
-
-<img alt="Place all certificates in the following store settings option." src="/_images/certificate_store_windows_chrome.png" center/>
-
-5. **Click** `Next` and then `Finish`.
-
-6. In the Security Warning window, confirm the installation of Caido's CA certificate by **clicking** `Yes`.
-
-7. Continue with the [Using FoxyProxy](/guides/foxyproxy.html#chrome) guide for Chrome.
+3. Continue with the [Using FoxyProxy](/guides/foxyproxy.html#chrome) guide for Chrome.
 
 ### Firefox
 
