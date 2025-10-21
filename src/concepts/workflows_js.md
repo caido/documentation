@@ -228,7 +228,7 @@ The constructor parameter used to create the instance will become a property. In
 
 ## SDK
 
-_[View the developer documentation for more information.](https://developer.caido.io/reference/sdks/workflow/)
+[View the developer documentation for more information.](https://developer.caido.io/reference/sdks/workflow/)
 
 For simplicity, in Caido when referring to the SDK - we are speaking of the methods that allow a JavaScript program ran in a JavaScript node to interact with the rest of Caido backend.
 

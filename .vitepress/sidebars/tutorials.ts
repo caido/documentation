@@ -57,6 +57,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Scanner",
         link: "/tutorials/scanner",
       },
+      {
+        text: "Shift",
+        link: "/tutorials/shift",
+      },
     ],
   },
   {

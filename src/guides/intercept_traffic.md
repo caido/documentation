@@ -57,7 +57,7 @@ Any forwarded traffic that was modified from its original state will be marked a
 To send intercepted traffic to other interfaces, **right-click** within a traffic pane to open the context menu, and select a `Send to...` or `Plugins` option.
 
 ::: tip
-With a request pane focused, you can quickly send the request to Replay with the default keyboard shortcut `CTRL + R` or to Automate with `CTRL + M`.
+With a request pane focused, you can quickly send the request to Replay with the default keyboard shortcut `CTRL` + `R` or to Automate with `CTRL` + `M`.
 :::
 
 ## Disabling Interception

@@ -64,7 +64,7 @@ pm list packages -f | grep -i pinning
 
 <img alt="Finding the base package." src="/_images/adb_package_location.png" center no-shadow/>
 
-4. Copy the location and exit the device command-line interface using`CTRL+D` or by typing and entering `exit`.
+4. Copy the location and exit the device command-line interface using`CTRL` + `D` or by typing and entering `exit`.
 
 5. Pull the `base.apk` from your device to your computer (_do not include the `=<package-name>` portion of the output_):
 

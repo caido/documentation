@@ -11,8 +11,8 @@ The <b>Assistant</b> are only available to users with Individual or Team tier su
 ::: warning
 Submitted data is sent to the LLM's third-party provider (OpenAI) and can be stored for up to 30 days. Due to this, **anonymize sensitive data** when using the Assistant. Sensitive data may be unintentionally submitted when using the Assistant context menu options. Before using any context menu option, manually review all content to ensure no sensitive data is included. For more information, review:
 
-- [OpenAI's privacy policy.](https://openai.com/policies/privacy-policy)
-- [Caido's privacy policy.](https://caido.io/privacy)
+- [OpenAI's Privacy Policy](https://openai.com/policies/privacy-policy)
+- [Caido's Privacy Policy](https://caido.io/privacy)
 :::
 
 To prompt the Assistant to explain a HTTP request in natural language, **right-click** within a request pane to open the context menu, hover your mouse cursor over <code><Icon icon="fas fa-comment" /> Assistant</code>, and select `Explain`.
