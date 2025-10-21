@@ -21,7 +21,7 @@ Both options are enabled by default. However, you can disable either by **clicki
 
 4. Give the project a name and **click** `+ Create`.
 
-5. Then, continue with the [Importing Caido's CA Certificate](/guides/ca_certificate_importing.md) and [Using FoxyProxy](/guides/foxyproxy.md#chrome) guides.
+5. Then, continue with the [Importing Caido's CA Certificate](/guides/ca_certificate_importing.md) guide.
 
 ## What's next?
 

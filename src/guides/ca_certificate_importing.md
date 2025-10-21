@@ -4,7 +4,7 @@ description: "A step-by-step guide to importing Caido's CA certificate for proxy
 
 # Importing Caido's CA Certificate
 
-To proxy HTTPS traffic with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.
+To [proxy HTTPS traffic](/concepts/essentials/https_traffic.md) with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.
 
 To download the certificate, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `CA Certificate`, and **click** on the <code><Icon icon="fas fa-download" /> Download CA Certificate</code> button.
 
@@ -20,7 +20,7 @@ Once the certificate has been downloaded, continue with the import instructions 
 
 <img alt="Import button." src="/_images/trusted_certificates_chrome.png" center/>
 
-3. Continue with the [Using FoxyProxy](/guides/foxyproxy.html#chrome) guide for Chrome.
+3. Continue with either the [Using FoxyProxy](/guides/foxyproxy.md#chrome) or [Using ZeroOmega](/guides/zeroomega.md#chrome) guides for Chrome.
 
 ## Firefox
 
@@ -38,4 +38,4 @@ Once the certificate has been downloaded, continue with the import instructions 
 
 5. **Click** `OK` to close the Certificate Manager window.
 
-6. Continue with the [Using FoxyProxy](/guides/foxyproxy.html#firefox) guide for Firefox.
+6. Continue with either the [Using FoxyProxy](/guides/foxyproxy.md#firefox) or [Using ZeroOmega](/guides/zeroomega.md#firefox) guides for Firefox.

@@ -18,6 +18,10 @@ In the pop-up window, **click** on the `Add extension` button.
 
 <img alt="FoxyProxy added to Chrome." src="/_images/chrome_foxyproxy_added.png" center/>
 
+Once the extension is installed, **click** on the <code><Icon icon="fas fa-puzzle-piece" /></code> button in the top-right corner of the browser window, and then either **click** on the <code><Icon icon="fas fa-thumbtack" /></code> button or **right-click** on the extension and select `Pin to Toolbar`.
+
+Then, [continue to the configuration instructions](#configuring-foxyproxy).
+
 ## Firefox
 
 To install the browser extension, launch the Firefox browser, navigate to [https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/), and click on the `Add to Firefox` button.
@@ -30,11 +34,11 @@ In the subsequent pop-up window, **click** on the `OK` button.
 
 <img alt="FoxyProxy added to Firefox." src="/_images/firefox_foxyproxy_added.png" center/>
 
+Once the extension is installed, [continue to the configuration instructions](#configuring-foxyproxy).
+
 ## Configuring FoxyProxy
 
-Once FoxyProxy is installed, **click** on the <code><Icon icon="fas fa-puzzle-piece" /></code> button in the top-right corner of the browser window and then either **click** on the <code><Icon icon="fas fa-thumbtack" /></code> button or **right-click** on the extension and select `Pin to Toolbar`.
-
-Then, **click** on its toolbar button and select `Options`.
+**Click** on the FoxyProxy toolbar button and select `Options`.
 
 <img alt="The FoxyProxy toolbar interface." src="/_images/foxyproxy_options.png" center/>
 

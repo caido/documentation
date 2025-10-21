@@ -12,6 +12,12 @@ To proxy local traffic, it is necessary to bypass implicit rules that match agai
 
 <img alt="The Global Exclude list." src="/_images/foxyproxy_loopback.png" center/>
 
+## ZeroOmega
+
+**Click** on the ZeroOmega browser extension, select `Options`, select your proxy profile tab, replace the content of the `Bypass List` input field with `<-loopback>`, and **click** on the <code><Icon icon="fas fa-circle-check" /> Apply changes</code> button to update and save the configuration.
+
+<img alt="The Global Exclude list." src="/_images/zeroomega_loopback.png" center/>
+
 ::: info
 In general, the implicit bypass rules can be modified in the proxy settings of different systems/browsers/extensions by supplying `<-loopback>` to the hosts list. This input field is typically accompanied with a title or description that includes terms or keywords such as: `except these addresses`/`no-proxy for`/`exclude`.
 :::

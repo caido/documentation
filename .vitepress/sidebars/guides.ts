@@ -17,6 +17,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/foxyproxy.md",
       },
       {
+        text: "Using ZeroOmega",
+        link: "/guides/zeroomega.md",
+      },
+      {
         text: "Using a Preconfigured Browser",
         link: "/guides/preconfigured_browser",
       },
