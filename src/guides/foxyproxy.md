@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to installing and configuring the FoxyProxy browser extension for Chrome and Firefox."
+---
+
 # Using FoxyProxy
 
 The FoxyProxy browser extension gives you the ability to quickly enable/disable your browser's use of Caido as a proxy.

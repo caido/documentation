@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to importing Caido's CA certificate for proxying HTTPS traffic."
+---
+
 # Importing Caido's CA Certificate
 
 To proxy HTTPS traffic with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.
