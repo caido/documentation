@@ -17,7 +17,11 @@ Once Caido has been launched:
 Both options are enabled by default. However, you can disable either by **clicking** on their checkboxes.
 :::
 
-3. Return to Caido and follow the in-app tutorials on creating a project and [importing Caido's CA certificate](/guides/ca_certificate_importing.md).
+3. Return to Caido and **click** on the `+ Create a project` button.
+
+4. Give the project a name and **click** `+ Create`.
+
+5. Then, continue with the [Importing Caido's CA Certificate](/guides/ca_certificate_importing.md) and [Using FoxyProxy](/guides/foxyproxy.md#chrome) guides.
 
 ## What's next?
 

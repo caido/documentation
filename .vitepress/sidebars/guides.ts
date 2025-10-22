@@ -13,6 +13,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/ca_certificate_importing",
       },
       {
+        text: "Using FoxyProxy",
+        link: "/guides/foxyproxy.md",
+      },
+      {
         text: "Using a Preconfigured Browser",
         link: "/guides/preconfigured_browser",
       },
