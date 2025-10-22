@@ -48,4 +48,4 @@ To enable proxying to pass web traffic through Caido, **click** on the ZeroOmega
 
 <img alt="Enabling FoxyProxy." src="/_images/zeroomega_enable.png" center/>
 
-To disable proxying, select the <code><Icon icon="fas fa-arrow-right-arrow-left" /> [Direct]</code><code><Icon icon="fas fa-earth-americas" /></code> option.
+To disable proxying, select the <code><Icon icon="fas fa-arrow-right-arrow-left" /> \[Direct\]</code><code><Icon icon="fas fa-earth-americas" /></code> option.
