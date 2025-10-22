@@ -35,7 +35,7 @@ When you use Caido, we collect interaction data between your instances and our c
 We do not collect any data stored on your instances nor interactions within the Caido application.
 :::
 
-[Privacy Policy](https://caido.io/privacy)
+[Caido's Privacy Policy](https://caido.io/privacy)
 
 ## Location & Security
 
