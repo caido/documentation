@@ -26,8 +26,16 @@ The user-interface will launch in a browser window at `127.0.0.1:8080`.
 
 You can then configure proxy settings to listen for traffic on `127.0.0.1:8081` and `127.0.0.1:8082`.
 
-<img alt="FoxyProxy configuration for port 8081." src="/_images/networking_firefox_port.png" center/>
+<img alt="FoxyProxy configuration for port 8081." src="/_images/foxyproxy_firefox_port.png" center/>
 
 ---
 
-<img alt="FoxyProxy configuration for port 8081." src="/_images/networking_chrome_port.png" center/>
+<img alt="FoxyProxy configuration for port 8082." src="/_images/foxyproxy_chrome_port.png" center/>
+
+---
+
+<img alt="ZeroOmega configuration for port 8081." src="/_images/zeroomega_firefox_port.png" width=875px center/>
+
+---
+
+<img alt="ZeroOmega configuration for port 8082." src="/_images/zeroomega_chrome_port.png" width=875px center/>
