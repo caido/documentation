@@ -54,6 +54,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "Plugins",
     items: [
       {
+        text: "Autorize",
+        link: "/tutorials/autorize",
+      },
+      {
         text: "Scanner",
         link: "/tutorials/scanner",
       },
