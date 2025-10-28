@@ -1,3 +1,7 @@
+---
+description: "Learn how to configure and use the Autorize plugin for automated authorization and access control vulnerability detection, including passive and active scanning with template-based checks."
+---
+
 # Autorize
 
 [Autorize](https://github.com/caido-community/autorize) is Caido's official authorization vulnerability testing plugin.
