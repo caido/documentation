@@ -4,7 +4,9 @@ description: "Learn how to modify Android APK files to bypass certificate pinnin
 
 # Modifying an Android Application
 
-In this tutorial, we will cover the process of modifying an Android application in order to proxy the HTTPS traffic it generates.
+In this tutorial, we’ll use the **HTTPToolkit Pinning Demo** application to demonstrate how to modify an APK so that Caido can proxy its traffic, and we’ll test these changes using the app’s various HTTP requests. If you are new to mobile application testing, we recommend you [download the HTTPToolkit SSL Pinning Demo APK](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk) to ensure the steps align exactly.
+
+<img alt="List of connected Android devices." src="/_images/pinning_demo_requests.png" center no-shadow width="300"/>
 
 ::: danger WARNING
 Caido is not liable for any malfunctions, failures, damages, loss/theft of data, or other technical issues that may occur with your device as a result of following this tutorial. Proceed at your own risk.
@@ -30,12 +32,6 @@ If you want to automate this entire process, you can use [apk-mitm](https://gith
 ## Android Package Kits
 
 Android applications are files bundled as `.apk` (**Android Package Kit**) packages and must be modified for use with Caido.
-
-::: warning NOTE
-In this tutorial, we’ll use the **HTTPToolkit Pinning Demo** application to demonstrate how to modify an APK so that Caido can proxy its traffic, and we’ll test these changes using the app’s various HTTP requests. If you are new to mobile application testing, we recommend you [download the HTTPToolkit SSL Pinning Demo APK](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk) to ensure the steps align exactly.
-:::
-
-<img alt="List of connected Android devices." src="/_images/pinning_demo_requests.png" center no-shadow width="300"/>
 
 APKs can be acquired by downloading them directly from repositories or sites such as [apkmirror.com](https://www.apkmirror.com/) or [apkpure.com](https://apkpure.com/).
 

@@ -4,7 +4,9 @@ description: "Learn how to configure and use the Autorize plugin for automated a
 
 # Autorize
 
-[Autorize](https://github.com/caido-community/autorize) is Caido's official authorization vulnerability testing plugin.
+[Autorize](https://github.com/caido-community/autorize) is Caido's official authorization/access control vulnerability testing plugin.
+
+In this tutorial you will learn how to configure the plugin to conduct both passive and active scanning against a intentionally vulnerable application from Caido's Web Security Labs.
 
 ::: info
 Autorize is available for [installation](/guides/plugins_installing.md) in the `Official` tab of the Plugin interface.
@@ -20,58 +22,122 @@ Autorize creates templates for proxied requests that are modified to simulate re
 
 By comparing the corresponding responses of these requests to each other, Autorize is able to determine if low-privilege or unauthenticated users are able to access the same resources or functionality available to the high-privilege user.
 
-By default, the result of a template scan will be assigned one of three access states that will indicate whether the request succeeded or failed.
+## Autorize Lab Walkthrough
 
-<img alt="Autorize access states." src="/_images/autorize_access_states.png" center />
+The Autorize Lab features registered accounts for two users: John and Bob.
 
-1. `ALLOW`: The server accepted the request and returned a successful response. This might indicate an authorization vulnerability if a low-privilege user was able to access protected resources.
-2. `DENY`: The server denied the request, usually with status codes like 401, 403, or 404. This means access controls are working as expected.
-3. `UNCERTAIN`: Autorize could not determine if the request was allowed or denied. This happens when the response is different from the baseline but does not show clear denial indicators. You should manually review these cases.
+By designating John as the low-privilege user and Bob as the high-privilege user, we will use Autorize passively test for authorization vulnerabilities against API endpoints that return sensitive account data based on the `user_id` query parameter:
 
-## Configuration
+- `/autorize.php?action=profile&user_id={id}`
+- `/autorize.php?action=orders&user_id={id}`
+- `/autorize.php?action=messages&user_id={id}`
+- `/autorize.php?action=settings&user_id={id}`
 
-Within the `Configuration` tab of the Autorize plugin interface, the template settings are divided across several tabs.
+1. With your proxy settings enabled, navigate to [https://labs.cai.do/autorize.php](https://labs.cai.do/autorize.php) in your browser and **click** on the `Get John's Token` button to authenticate as John.
+2. Under the authenticated session, **clicking** on the `Get Profile`, `Get Orders`, `Get Messages`, and `Get Settings` buttons return John's sensitive data. Notice that the `user_id` assigned to John's account is `101`.
 
-<img alt="The Autorize configuration options." src="/_images/autorize_configuration.png" center />
+<img alt="John's account settings data." src="/_images/autorize_user_data.png" center />
 
 ### Mutations
 
-The modifications to each request are referred to as "mutations" and are applied to configuration profiles that represent the three requests. To configure mutations on a request, select a profile from the drop-down menu of the `Mutations` tab.
-
-<img alt="The Autorize profile options." src="/_images/autorize_profiles.png" center />
+The modifications to each request are referred to as "mutations" and are applied to configuration profiles that represent the three template requests:
 
 - `Mutated`: The low-privilege user request.
 - `No Auth`: The unauthenticated user request.
 - `Baseline`: The original high-privilege user request.
 
-::: warning NOTE
-Baseline mutations will apply to all requests.
-:::
 
-Once a profile is selected, select a mutation from the Add Mutation drop-down menu, type in the name and value of the header or cookie in the input fields, and **click** on the `+` button to update and save the configuration.
+The mutation that will apply John's low-privilege session token to the high-privilege baseline requests sent by Bob can be configured either manually or via a context-menu shortcut.
 
-<img alt="The Autorize mutation options." src="/_images/autorize_add_mutation.png" center />
+#### Manual Configuration
 
-::: info
-By default, Autorize automatically removes common authentication headers like `Authorization` and `Cookie` from the `No Auth` profile. However, mutations can still be configured to account for application-specific headers and cookies.
-:::
+To set the mutation for the low-privilege `Mutated` profile manually:
 
-- `Header: Set`: Replace a header in the request. If header does not exist, it will be added.
-- `Header: Add`: Add a header to the request.
-- `Header: Remove`: Remove a header from the request.
-- `Cookie: Set`: Replace a cookie in the request. If cookie does not exist, it will be added.
-- `Cookie: Add`: Add a cookie to the request.
-- `Cookie: Remove`: Remove a cookie from the request.
-- `Match and Replace`: Match a pattern in the request and replace it with a value.
+1. Copy the value of John's session token from the `token` parameter in the response to the `/autorize.php?action=login` POST request or from the `Authorization` header of subsequent API calls.
+2. Navigate to the `Configuration` tab of the Autorize plugin interface, click on the `Mutations` tab, and select `Mutated` from the drop-down menu.
 
-::: tip TIPS
-- The `Match and Replace` mutation supports regex and environment variables using `{{ VAR_NAME }}` syntax.
-- To quickly add a `Header: Set` mutation to the `Mutated` profile, **click**, **drag**, and **hold** over a header name and value within a low-privilege user request pane. Then, **right-click** on the highlighted selection to open the context menu, hover your mouse cursor over `Plugins` and `Autorize`, and select <code><Icon icon="fas fa-key" /> Send Headers to Autorize</code>.
+3. Next, select the `Header: Set` option from the `Add Mutation` drop-down menu, type in `Authorization` in the `Header name` input field, paste the token value into the `Value` input field, and click on the `+` button to update and save the configuration.
+
+<img alt="The Header: Set mutation." src="/_images/autorize_mutation.png" center />
 
 ---
 
-<img alt="The Send Headers to Autorize context menu option." src="/_images/autorize_send_headers.png" center no-shadow/>
+#### Context-Menu Shortcut
+
+To quickly add a `Header: Set` mutation to the `Mutated` profile:
+
+1. **Click**, **drag**, and **hold** over a header name and value within a low-privilege user request pane.
+2. Then, **right-click** on the highlighted selection to open the context menu, hover your mouse cursor over `Plugins` and `Autorize`, and select <code><Icon icon="fas fa-key" /> Send Headers to Autorize</code>.
+
+<img alt="The Send Headers to Autorize option." src="/_images/autorize_send_headers.png" center />
+
+::: info
+By default, Autorize automatically removes common authentication headers like `Authorization` and `Cookie` from the `No Auth` profile. However, mutations can still be configured to account for application-specific implementations.
 :::
+
+::: warning NOTE
+Baseline mutations will apply to all three template requests.
+:::
+
+### Scanning
+
+With the mutation set, testing can be conducted either passively against requests as they pass through Caido or actively against specific requests.
+
+#### Passive Scanning
+
+1. To enable passive scanning **click** on the `Enable Passive Scanning` radio button in the top-right corner of the plugin interface.
+
+<img alt="The Enable Passive Scanning radio button." src="/_images/autorize_passive_scanning.png" center />
+
+2. Now, return to the lab interface and **click** on the `Get Bob's Token` button to authenticate as Bob and make requests to the API endpoints that return sensitive data.
+
+<img alt="Bob's account settings data." src="/_images/autorize_user_data_baseline.png" center />
+
+---
+
+#### Active Scanning
+
+To execute a scan manually against a specific request **right-click** within a request pane or on a traffic table row, hover your mouse cursor over `Plugins` and `Autorize`, and select <code><Icon icon="fas fa-key" /> Send Request to Autorize</code>.
+
+<img alt="The Send Request to Autorize option." src="/_images/autorize_send_request.png" center />
+
+### Viewing Results
+
+To view the results of template scans, **click** on the `Dashboard` tab of the Autorize plugin interface.
+
+<img alt="The Autorize Dashboard tab interface." src="/_images/autorize_dashboard.png" center />
+
+By default, the result of a template scan will be assigned one of three access states that will indicate whether the request succeeded or failed:
+
+- `ALLOW`: The server accepted the request and returned a successful response. This might indicate an authorization vulnerability if a low-privilege user was able to access protected resources.
+- `DENY`: The server denied the request, usually with status codes like 401, 403, or 404. This means access controls are working as expected.
+- `UNCERTAIN`: Autorize could not determine if the request was allowed or denied. This happens when the response is different from the baseline but does not show clear denial indicators. You should manually review these cases.
+
+To switch between HTTP request and response data for each profile, **click** on their associated buttons.
+
+<img alt="Selecting the request and response for each profile." src="/_images/autorize_profile_views.png" center />
+
+The original requests made with Bob's session can be viewed by selecting `baseline` from the request pane.
+
+<img alt="Bob's original baseline request." src="/_images/autorize_baseline.png" center />
+
+Select `mutated` to view the mutation that overwrote Bob's session token with John's.
+
+<img alt="The mutated request." src="/_images/autorize_mutated.png" center />
+
+Notice that John is able to access Bob's data in requests to the `orders`, `messages`, and `settings` endpoints.
+
+Even unauthenticated users are able to access the sensitive information of other users in requests to the `settings` endpoint.
+
+<img alt="The no-auth request." src="/_images/autorize_no_auth.png" center />
+
+The only endpoint with proper access control to prevent unauthenticated or unauthorized users from viewing Bob's data is the `profile` endpoint.
+
+<img alt="The mutated and no-auth request denial." src="/_images/autorize_deny_deny.png" center />
+
+## Additional Configuration Options
+
+Within the `Configuration` tab of the Autorize plugin interface, additional template settings are divided across several tabs.
 
 ### Filtering
 
@@ -104,21 +170,3 @@ The `General` tab provides the option to include/exclude the `No Auth` request f
 The `UI` tab provides options to customize the results table within the `Dashboard` tab.
 
 <img alt="The Autorize UI options." src="/_images/autorize_ui.png" center />
-
-## Passive Scanning
-
-To enable passive scanning, **click** on the `Enable Passive Scanning` radio button in the top-right corner of the plugin interface.
-
-## Active Scanning
-
-To execute a scan manually against a specific request **right-click** within a request pane or on a traffic table row, hover your mouse cursor over `Plugins` and `Autorize`, and select <code><Icon icon="fas fa-key" /> Send Request to Autorize</code>.
-
-## Dashboard
-
-To view the results of template scans, **click** on the `Dashboard` tab of the Autorize plugin interface.
-
-<img alt="The Autorize results table." src="/_images/autorize_results.png" center />
-
-To switch between HTTP request and response data for each profile, **click** on their associated buttons.
-
-<img alt="Selecting the request and response for each profile." src="/_images/autorize_profile_views.png" center />
