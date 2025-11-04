@@ -16,6 +16,12 @@ If a Match & Replace rule is not working or is not being applied, the formatting
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> Ensure you are viewing and working with the [raw](/guides/request_response_modes.md) representation of data.
 
+## No Responses to Automate Requests
+
+If Automate requests are not receiving responses, unexpected input/output errors may be the cause.
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Select the `Settings` tab of the Automate interface and set the value of `Max retries` to `1`+.
+
 ## Can't Preview Responses
 
 This error may occur when Caido is running as root.
