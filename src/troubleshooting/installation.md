@@ -6,21 +6,19 @@ description: "Commonly encountered Caido installation issues."
 
 ## "The SUID sandbox helper binary was found, but is not configured correctly."
 
+This error may occur due to [AppArmor](https://apparmor.net/), the Linux application security system. Each time Caido is launched, it loads in the `tmp` directory as a virtual file system before execution. Due to this, there is no hook to add an AppArmor profile, which defines the permissions granted in the context of the operating system.
+
 ```text
 [142547:0410/141348.635410:FATAL:setuid_sandbox_host.cc(163)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /tmp/.mount_caido-PMiQot/chrome-sandbox is owned by root and has mode 4755.
 ```
 
-This error may occur due to [AppArmor](https://apparmor.net/), the Linux application security system. Each time Caido is launched, it loads in the `tmp` directory as a virtual file system before execution. Due to this, there is no hook to add an AppArmor profile, which defines the permissions granted in the context of the operating system.
-
-### Resolutions
-
-If you encounter this error message after installing the [AppImage](/quickstart/linux#appimage) Caido package, either:
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error message after installing the [AppImage](/quickstart/linux#appimage) Caido package, either:
 
 ::: warning NOTE
 Ensure to replace `/path/to/caido-desktop-vX.XX.X-linux-<architecture>.AppImage` with the correct path, versioning, and architecture of the AppImage package.
 :::
 
-#### Create an AppArmor Profile for Caido (Preferred Method):
+### Create an AppArmor Profile for Caido (Preferred Method):
 
 To create an AppArmor profile for Caido, create a `appimage.caido` file with the following content in the `/etc/apparmor.d/` directory.
 
@@ -45,7 +43,7 @@ Once the file is written, save it, and then read/load the profile.
 apparmor_parser -r /etc/apparmor.d/appimage.caido
 ```
 
-#### Run Caido without a Sandbox
+### Run Caido without a Sandbox
 
 To disable the AppArmor sandbox security restrictions, launch Caido with the `--no-sandbox` argument.
 
@@ -82,7 +80,7 @@ sudo update-icon-caches /usr/share/icons/*
 Caido's default desktop application icon is available at [https://github.com/caido/caido/blob/main/brand/png/logo.png](https://github.com/caido/caido/blob/main/brand/png/logo.png).
 :::
 
-#### Disable AppArmor (Not Recommended)
+### Disable AppArmor (Not Recommended)
 
 To disable AppArmor globally, use the `sysctl` utility to allow unprivileged users to create user namespaces.
 
