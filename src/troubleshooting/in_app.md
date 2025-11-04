@@ -26,6 +26,12 @@ Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end o
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error message after attempting to preview a response, do not run Caido as the root user or launch Caido without the `--no-renderer-sandbox` argument.
 
+## Looping Requests
+
+If a steady stream of requests are being sent to `api.caido.io` and/or `gstatic.com`, network configuration settings may be the cause.
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Disable your VPN and check your browser, upstream, SOCKS, and invisible proxy settings.
+
 ## Unable to Access Individual/Team Tier Subscription Features
 
 This error may occur when the cached state of your account has not been updated.
