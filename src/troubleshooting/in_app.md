@@ -4,6 +4,14 @@ description: "Troubleshooting common Caido in-app errors including match and rep
 
 # In-app Issues
 
+## Proxying Doesn't Work
+
+If you are unable to proxy traffic, tamper rules may be the cause.
+
+### Resolution
+
+Disable any Match & Replace rules, network configuration settings, and ensure your [proxy settings are configured correctly](/troubleshooting/startup.md#resolution-1).
+
 ## Match & Replace Rule Not Working
 
 If a Match & Replace rule is not working or is not being applied, the formatting may be incorrect.

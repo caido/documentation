@@ -83,6 +83,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/docker",
       },
       {
+        text: "Kali Linux",
+        link: "/guides/kali_linux",
+      },
+      {
         text: "Parrot Security",
         link: "/guides/parrot_os",
       },
