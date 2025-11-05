@@ -38,36 +38,45 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/ca_certificate_managing",
       },
       {
-        text: "Domain Allowlist",
-        link: "/guides/domain_allowlist",
+        text: "Changing the Data Storage Location",
+        link: "/guides/data_location",
+      },
+    ],
+  },
+  {
+    text: "Networking",
+    items: [
+      {
+        text: "Changing the Listening Address/Port",
+        link: "/guides/listening_address",
       },
       {
         text: "Proxying Local Traffic",
         link: "/guides/proxy_local",
       },
       {
-        text: "Changing the Listening Address/Port",
-        link: "/guides/listening_address",
+        text: "Domain Allowlist",
+        link: "/guides/domain_allowlist",
       },
       {
-        text: "Listening on Multiple Ports",
-        link: "/guides/listening_ports",
-      },
-      {
-        text: "Upstream to Another Proxy",
-        link: "/guides/upstream",
+        text: "Proxying WSL Traffic",
+        link: "/guides/wsl",
       },
       {
         text: "Enabling Invisible Proxying",
         link: "/guides/invisible_proxying",
       },
       {
-        text: "DNS Rewrites",
-        link: "/guides/dns_rewrites",
+        text: "Upstream to Another Proxy",
+        link: "/guides/upstream",
       },
       {
-        text: "Changing the Data Storage Location",
-        link: "/guides/data_location",
+        text: "Listening on Multiple Ports",
+        link: "/guides/listening_ports",
+      },
+      {
+        text: "DNS Rewrites",
+        link: "/guides/dns_rewrites",
       },
     ],
   },
@@ -81,10 +90,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Running in Docker",
         link: "/guides/docker",
-      },
-      {
-        text: "Sending WSL Traffic to the Windows Desktop Application",
-        link: "/guides/wsl",
       },
       {
         text: "Kali Linux",
