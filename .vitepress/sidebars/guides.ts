@@ -92,10 +92,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/docker",
       },
       {
-        text: "Sending WSL Traffic to the Windows Desktop Application",
-        link: "/guides/wsl",
-      },
-      {
         text: "Kali Linux",
         link: "/guides/kali_linux",
       },
