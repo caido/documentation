@@ -4,7 +4,7 @@ description: "Learn how to add Caido's CA certificate to Android system store fo
 
 # Adding Caido's CA Certificate to the System-Store
 
-In this tutorial, we will cover the process of adding Caido's CA certificate to the system-store of an Android device.
+In this tutorial, we will cover the process of adding Caido's CA certificate to the system-store of a virtual Android device.
 
 ::: danger WARNING
 Caido is not liable for any malfunctions, failures, damages, loss/theft of data, or other technical issues that may occur with your device as a result of following this tutorial. Proceed at your own risk.
@@ -24,10 +24,6 @@ This tutorial is a continuation of [Android Setup and Configuration](/tutorials/
 :::
 
 ## Android Studio
-
-::: warning NOTE
-This tutorial will demonstrate adding a system certificate using a virtual device.
-:::
 
 **Android Studio** is the official IDE for developing Android applications. It features the **Android Emulator** that can create a variety of Android Virtual Devices at specified API levels.
 

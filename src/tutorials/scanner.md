@@ -4,7 +4,9 @@ description: "Learn how to configure and use the Scanner plugin for automated vu
 
 # Scanner
 
-The [Scanner](https://github.com/caido-community/scanner) is Caido's official template-based, vulnerability detection engine that brings automated security testing capabilities to Caido.
+The [Scanner](https://github.com/caido-community/scanner) is Caido's official vulnerability detection engine that brings automated security testing capabilities to Caido.
+
+In this tutorial, you will learn how to configure the plugin to conduct both passive and active scanning.
 
 ::: info
 The Scanner is available for [installation](/guides/plugins_installing.md) in the `Official` tab of the Plugin interface.
@@ -12,15 +14,15 @@ The Scanner is available for [installation](/guides/plugins_installing.md) in th
 
 <img alt="The Scanner plugin listed in the Official tab." src="/_images/scanner_install.png" center />
 
+The Scanner engine detects vulnerabilities with templates that are referred to as "checks". Each check contains the logical process for identifying specific security issues.
+
 ## Checks
 
 ::: tip
 [Learn how to create your own check templates.](https://github.com/caido-community/scanner#%E2%80%8D-developer-documentation)
 :::
 
-The templates utilized by the plugin are referred to as "checks" and contain the logic for identifying specific security issues.
-
-To view the checks available, navigate to the Scanner plugin interface and **click** on the `Checks` tab.
+To view the available checks, navigate to the Scanner plugin interface and **click** on the `Checks` tab.
 
 Each check is listed as a table row. A check's metadata information, including a description of the vulnerability tested for and categorical tags, can be viewed by **clicking** on the <code><Icon icon="fas fa-chevron-right" /></code> button attached to its row. The metadata also includes a check's:
 
