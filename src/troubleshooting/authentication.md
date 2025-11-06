@@ -14,15 +14,13 @@ These errors may occur when you are trying to access an instance of a different 
 
 <img alt="Login error." src="/_images/login_url_error.png" width=600px center/>
 
-### Resolutions
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter one of these error messages after attempting to login, either:
 
-If you encounter one of these error messages after attempting to login, either:
-
-#### Use the Other Account
+### Use the Other Account
 
 To gain access to the instance, login to the account that created the instance.
 
-#### Reset the Instance Credentials
+### Reset the Instance Credentials
 
 To reset the instance credentials with the Caido CLI, launch Caido with the `--reset-credentials` argument.
 
@@ -44,7 +42,7 @@ Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to e
 Once you have authenticated to the instance, ensure to remove the `--reset-credentials` option or checkbox, otherwise your instance credentials will be reset on every launch.
 :::
 
-#### Delete the Data Storage Directory
+### Delete the Data Storage Directory
 
 Although it is not recommended, deleting the [data storage directory](/reference/data_storage.md) reset the installation.
 
@@ -54,15 +52,13 @@ This error may occur due to your computer time being out of synchronization with
 
 <img alt="Date mismatch." src="/_images/date_mismatch_error.png" width=600px center/>
 
-### Resolutions
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error after attempting to login, manually adjust the time utilized by your operating system.
 
-If you encounter this error after attempting to login, manually adjust the time utilized by your operating system.
-
-#### Windows
+### Windows
 
 To synchronize the time on Windows, **right-click** on the clock, select <code><Icon icon="fas fa-gear" /> Adjust date and time</code>, and **click** on the `Sync now` button.
 
-#### macOS
+### macOS
 
 To synchronize the time on macOS, use the `sntp` utility with the `-S` argument.
   
@@ -74,7 +70,7 @@ sudo sntp -S pool.ntp.org
 Check the time synchronization status with the same command.
 :::
 
-#### Linux
+### Linux
 
 To synchronize the time on Linux, install the `ntp` package. Once the installation is complete, the service will start automatically.
 
