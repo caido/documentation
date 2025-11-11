@@ -23,3 +23,6 @@ To verify the addition was successful, you can view the request by navigating to
 :::
 
 <img alt="Viewing the Replay request environment variable addition." src="/_images/search_env_variable_request.png" center/>
+
+---
+

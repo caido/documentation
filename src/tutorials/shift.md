@@ -107,3 +107,9 @@ To use a custom prompt, click on the `+` button within the message input field, 
 Shift is also able to automatically rename Replay session tabs from their numerical names to descriptive names that identify the purpose of the request. To enable this feature, and configure additional settings, navigate to the `AI Session Renaming` tab.
 
 <img alt="Session tab renaming settings." src="/_images/shift_session_renaming.png" center />
+
+---
+
+<div class="video small">
+  <iframe src="https://www.youtube.com/embed/gDZlAnToWV4?si=2j5XR4H7s0jSoDxL&amp;start=396" title="YouTube video player." frameborder="0"></iframe>
+</div>
