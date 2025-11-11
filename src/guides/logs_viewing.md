@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to viewing both the frontend and backend Caido log files."
+---
+
 # Viewing Logs
 
 As Caido utilizes a [client/server architecture](/concepts/essentials/instances.md), both frontend and backend logs are produced.
