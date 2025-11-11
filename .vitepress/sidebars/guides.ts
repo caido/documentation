@@ -92,6 +92,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/docker",
       },
       {
+        text: "Running Without Internet Access",
+        link: "/guides/no_internet_access",
+      },
+      {
         text: "Kali Linux",
         link: "/guides/kali_linux",
       },

@@ -69,3 +69,13 @@ To acquire your token, open the browser's DevTools interface, select the `Applic
 If you are unable to view a section of the user-interface, it may have been minimized.
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> Ensure the section pane wasn't [resized](/guides/ui.md#resizing-panes) inadvertently.
+
+## Shell Node Timeouts
+
+This error may occur when workflows include a shell node.
+
+```text
+"Error in $shell node: Failed to execute shell: Timeout"
+```
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> By default, the initialization script sources from `bashrc` or `zshrc`, which may contain slow operations or hanging commands. Clear the `init` script field in the shell node configuration, or replace it with a minimal script that doesn't source shell configuration files.
