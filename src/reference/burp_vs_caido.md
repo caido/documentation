@@ -42,6 +42,7 @@ The functionality of many Burp Suite Bambdas, custom scan checks, and extensions
 | Hackvertor | [Convert Workflows](/concepts/workflows_intro.html#convert-workflows) |
 | 403 Bypasser | [403Bypasser](https://github.com/bebiksior/Caido403Bypasser) |
 | InQL | [GraphQL Analyzer](https://github.com/amrelsagaei/GraphQL-Analyzer) |
+| Autorize/Auth Analyzer | [Autorize](https://github.com/caido-community/autorize) |
 | Auth Analyzer | [Authify](https://github.com/saltify7/Authify) |
 | Bypass WAF| [Passive Workflows](/concepts/workflows_intro.html#passive-workflows) |
 | Reflected Parameters | [Passive Workflows](/concepts/workflows_intro.html#passive-workflows) |
