@@ -14,7 +14,13 @@ Your issue may already be known, resolved, or a feature request has been made! S
 
 ## Setup Information
 
-We will typically need the following information for every case. Please provide us with your operating system, version number/name, Caido client in use (_CLI/desktop application/web application_), and the version of Caido in use.
+We will typically need the following information for every case. Please provide us with your:
+
+- Operating system.
+- Version number/name.
+- Caido client in use (_CLI/desktop application/web application_).
+- The version of Caido in use.
+- Both [log files](/guides/logs_viewing.md) that include the issue.
 
 ::: tip EXAMPLE
 
@@ -25,38 +31,6 @@ I am using:
 - **Caido Client:** Caido Desktop
 - **Caido Version:** 0.33.0
 :::
-
-## Log Files
-
-As Caido utilizes a [client/server architecture](/concepts/essentials/instances.md), both frontend and backend logs are produced.
-
-::: danger
-As log files can contain sensitive information, only send them in private conversations with a verified member of the Caido team. If you are contacting us on Discord, we will open a private channel before asking for logs.
-:::
-
-::: warning NOTE
-Ensure to [enable debug mode](/troubleshooting/debugging.md) to assist with troubleshooting.
-:::
-
-### Backend Logs
-
-To obtain the backend log files of your instance, navigate to the `/logs` subdirectory of the data storage directory. The default location of this directory is dependent on your operating system:
-
-| OS      | Location                                         |
-| ------- | ------------------------------------------------ |
-| Linux   | `~/.local/share/caido`                           |
-| MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
-| Windows | `%APPDATA%\caido\Caido\data`                     |
-
-### Frontend Logs
-
-To obtain the frontend logs, either:
-
-- Access the DevTools interface by pressing the `F12` key, using the keybinding `CTRL` + `SHIFT` + `I`, or selecting `Inspect` from the **right-click** context menu. Within the `Console` **right-click** and select `Save as...`/`Save all Messages to File`/etc. to export the messages as a `.log` file.
-
-- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button at the bottom of the Caido user-interface, record your activity, and then **click** on the <code><Icon icon="fas fa-download" /></code> button to export the messages as a `.log` file.
-
-<img alt="The Caido frontend logs interface." src="/_images/frontend_logs.png" center/>
 
 ## Steps to Reproduce
 
