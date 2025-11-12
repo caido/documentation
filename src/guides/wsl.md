@@ -43,7 +43,7 @@ ip route show | grep -i default | awk '{ print $3}'
 
 <img alt="The gateway IP address output." src="/_images/wsl_gateway_ip.png" center/>
 
-To test the network access, launch the Caido desktop application and issue a `curl` request with the `-x <address:port>` argument:
+To test the network access, launch the Caido desktop application and issue a `curl` request with the `-x <address:port>` command-line option:
 
 ```bash
 curl -x 172.22.0.1:8080 https://example.com
@@ -59,7 +59,7 @@ To configure your WSL CLI tools to proxy traffic through Caido, set the `http_pr
 export http_proxy="http://172.22.0.1:8080" && export https_proxy="http://172.22.0.1:8080"
 ```
 
-<img alt="Setting the environment variables and entering a curl command without the -x argument." src="/_images/wsl_environment_variables.png" center/>
+<img alt="Setting the environment variables and entering a curl command without the -x command-line option." src="/_images/wsl_environment_variables.png" center/>
 
 ::: tip TIPS
 - To verify the rules exist, use: `echo $http_proxy && echo $https_proxy`

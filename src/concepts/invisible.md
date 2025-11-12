@@ -32,5 +32,5 @@ You will need to change your host DNS resolution (in the `/etc/hosts` on Linux f
 [Learn how to create DNS Rewrite rules.](/guides/dns_rewrites.md)
 
 :::info
-View [Traffic Splitting](/concepts/proxying/traffic_splitting.md) to gain a detailed understanding of how Caido selects the host and port to use when forwarding requests.
+View [Traffic Splitting](/concepts/traffic_splitting.md) to gain a detailed understanding of how Caido selects the host and port to use when forwarding requests.
 :::

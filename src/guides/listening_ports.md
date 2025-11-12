@@ -1,13 +1,13 @@
 ---
-description: "A step-by-step guide to configuring Caido to listen on multiple ports for UI and proxy traffic using CLI arguments and traffic splitting bypass."
+description: "A step-by-step guide to configuring Caido to listen on multiple ports for UI and proxy traffic using CLI options and traffic splitting bypass."
 ---
 
 # Listening on Multiple Ports
 
-To listen for traffic on additional ports launch the Caido CLI with the `--ui-listen <address:port>` and multiple `--proxy-listen <address:port>` arguments.
+To listen for traffic on additional ports launch the Caido CLI with the `--ui-listen <address:port>` and multiple `--proxy-listen <address:port>` command-line options.
 
 ::: info
-Specifying different listening ports for the user-interface GraphQL API calls and traffic bypasses Caido's default [traffic splitting algorithm](/concepts/proxying/traffic_splitting.md).
+Specifying different listening ports for the user-interface GraphQL API calls and traffic bypasses Caido's default [traffic splitting algorithm](/concepts/traffic_splitting.md).
 :::
 
 ::: warning

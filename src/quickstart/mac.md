@@ -30,7 +30,7 @@ A `.dmg` file is a macOS disk image used to distribute applications. It's the mo
  Using an unofficial Homebrew tap to install Caido may expose you to potential security risks. The installation is managed by third-party maintainers, not the official Caido team, which means it may not be as regularly updated or audited.
 :::
 
-[Homebrew](https://brew.sh/) is a popular package manager that simplifies the installation and management of software. It allows users to easily install, update, and manage software packages from the command line.
+[Homebrew](https://brew.sh/) is a popular package manager that simplifies the installation and management of software. It allows users to easily install, update, and manage software packages from the command-line.
 
 ::: tip
 To download and install Homebrew, enter the following terminal command:
@@ -55,7 +55,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 :::
 
-1. To download and install the Caido desktop application on your macOS device with the Homebrew package manager, run `brew install` with the `--cask` argument.
+1. To download and install the Caido desktop application on your macOS device with the Homebrew package manager, run `brew install` with the `--cask` command-line option.
 
 ```bash
 brew install --cask caido

@@ -5,7 +5,7 @@ description: "Understand the core concepts behind workflow execution order and d
 # Workflow Execution and Data Flow
 
 ::: info
-[Learn the difference between plugins and workflows in Caido.](https://developer.caido.io/concepts/backend/workflow.html)
+[Learn the difference between plugins and workflows in Caido.](https://developer.caido.io/concepts/workflow.md)
 :::
 
 The order of workflow operation can be split into two concepts:

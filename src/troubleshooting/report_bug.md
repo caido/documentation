@@ -32,6 +32,38 @@ I am using:
 - **Caido Version:** 0.33.0
 :::
 
+## Log Files
+
+As Caido utilizes a [client/server architecture](/concepts/instances.md), both frontend and backend logs are produced.
+
+::: danger
+As log files can contain sensitive information, only send them in private conversations with a verified member of the Caido team. If you are contacting us on Discord, we will open a private channel before asking for logs.
+:::
+
+::: warning NOTE
+Ensure to [enable debug mode](/troubleshooting/debugging.md) to assist with troubleshooting.
+:::
+
+### Backend Logs
+
+To obtain the backend log files of your instance, navigate to the `/logs` subdirectory of the data storage directory. The default location of this directory is dependent on your operating system:
+
+| OS      | Location                                         |
+| ------- | ------------------------------------------------ |
+| Linux   | `~/.local/share/caido`                           |
+| MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
+| Windows | `%APPDATA%\caido\Caido\data`                     |
+
+### Frontend Logs
+
+To obtain the frontend logs, either:
+
+- Access the DevTools interface by pressing the `F12` key, using the keybinding `CTRL` + `SHIFT` + `I`, or selecting `Inspect` from the **right-click** context menu. Within the `Console` **right-click** and select `Save as...`/`Save all Messages to File`/etc. to export the messages as a `.log` file.
+
+- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button at the bottom of the Caido user-interface, record your activity, and then **click** on the <code><Icon icon="fas fa-download" /></code> button to export the messages as a `.log` file.
+
+<img alt="The Caido frontend logs interface." src="/_images/frontend_logs.png" center/>
+
 ## Steps to Reproduce
 
 In order to assist you, it is **critical** that you provide a detailed timeline of the exact steps you took leading up to the bug. This ensures we are able to reproduce the issue in an accurate and timely manner.
