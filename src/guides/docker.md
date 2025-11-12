@@ -8,7 +8,7 @@ Caido is available as an image on [Docker Hub](https://hub.docker.com/r/caido/ca
 
 ## Launching the Docker Image
 
-To launch the image, specify the port with the `-p` argument.
+To launch the image, specify the port with the `-p` command-line option.
 
 For example, to launch the image on port `7000`, enter:
 
@@ -26,7 +26,7 @@ For M1 users, it is now possible to enable [Rosetta](https://docs.docker.com/des
 
 By default, projects created in the Docker container are not saved between `docker run` commands. Due to this, we recommend mounting a volume to store data on your file system to avoid losing data between Caido updates.
 
-To mount a volume, append the `-v <host-path>:/home/caido/.local/share/caido` argument to the `docker run` command.
+To mount a volume, append the `-v <host-path>:/home/caido/.local/share/caido` command-line option to the `docker run` command.
 
 ::: warning NOTE
 The host path must be an absolute path with the necessary permissions. Ensure the necessary permissions are granted to the host path with: `chown -R 999:999 <host-path>`

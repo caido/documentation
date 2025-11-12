@@ -16,7 +16,7 @@ To disable the frontend component of a plugin, access Caido in your browser by n
 
 <img alt="The plugin component checkboxes." src="/_images/plugin_frontend_component_disabled.png" width=700px center/>
 
-To disable the backend component of a plugin, launch Caido with the `--safe` argument.
+To disable the backend component of a plugin, launch Caido with the `--safe` command-line option.
 
 ```bash
 caido --safe

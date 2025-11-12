@@ -18,7 +18,7 @@ Caido does not currently support storing projects outside of the this directory.
 
 ## Caido CLI
 
-To change the default location of the data storage directory with the Caido CLI, launch Caido with the `--data-path <location>` argument.
+To change the default location of the data storage directory with the Caido CLI, launch Caido with the `--data-path <location>` option.
 
 ```bash
 caido --data-path /alternate/data/location

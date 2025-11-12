@@ -9,12 +9,12 @@ View the [Invisible Proxying for Non-Proxy Aware Thick Clients](/tutorials/invis
 :::
 
 ::: warning NOTE
-If you enable invisible proxying on a remote instance, you must ensure the **same address and port** is used. This includes any SSH port forwarding you may use. Otherwise, Caido will not be able to [split the traffic](/concepts/proxying/traffic_splitting) correctly and will not work.
+If you enable invisible proxying on a remote instance, you must ensure the **same address and port** is used. This includes any SSH port forwarding you may use. Otherwise, Caido will not be able to [split the traffic](/concepts/traffic_splitting) correctly and will not work.
 :::
 
 ## Caido CLI
 
-By default, invisible proxying is **disabled** for the Caido CLI. To enable invisible proxying with the Caido CLI, launch Caido with the `--invisible` argument.
+By default, invisible proxying is **disabled** for the Caido CLI. To enable invisible proxying with the Caido CLI, launch Caido with the `--invisible` command-line option.
 
 ```bash
 caido --invisible

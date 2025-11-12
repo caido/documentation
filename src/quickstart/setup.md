@@ -7,7 +7,7 @@ description: "A step-by-step guide to initial setup for Caido including authenti
 Once Caido has been launched:
 
 1. **Click** on the `Start` button and log in with your account credentials or create an account.
-2. Once you are authenticated, name your [instance](/concepts/essentials/instances.md) and grant access to your account username, email address, and subscription.
+2. Once you are authenticated, name your [instance](/concepts/instances.md) and grant access to your account username, email address, and subscription.
 
 ::: info ADDITIONAL OPTIONS
 `Enable the AI assistant feature`: Available to Individual and Team tier [subscriptions](https://caido.io/pricing).

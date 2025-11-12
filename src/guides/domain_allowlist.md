@@ -12,7 +12,7 @@ For example, when utilizing a domain that resolves to `127.0.0.1` to [proxy loca
 
 ## Caido CLI
 
-To add a domain to the allowlist with the Caido CLI, launch Caido with the `--ui-domain <domain>` argument.
+To add a domain to the allowlist with the Caido CLI, launch Caido with the `--ui-domain <domain>` command-line option.
 
 ```bash
 --ui-domain example.com

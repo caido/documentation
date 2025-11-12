@@ -45,7 +45,7 @@ apparmor_parser -r /etc/apparmor.d/appimage.caido
 
 ### Run Caido without a Sandbox
 
-To disable the AppArmor sandbox security restrictions, launch Caido with the `--no-sandbox` argument.
+To disable the AppArmor sandbox security restrictions, launch Caido with the `--no-sandbox` command-line option.
 
 ```bash
 /path/to/caido-desktop-vX.XX.X-linux-<architecture>.AppImage --no-sandbox

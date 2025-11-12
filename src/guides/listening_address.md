@@ -12,7 +12,7 @@ Please note that if you change the listening address to something other than 127
 
 ## Caido CLI
 
-To change the listening address/port with the Caido CLI, launch Caido with the `-l <address:port>` or `--listen <address:port>` argument.
+To change the listening address/port with the Caido CLI, launch Caido with the `-l <address:port>` or `--listen <address:port>` command-line option.
 
 For example, to listen on all available network interfaces on port `8000`, enter:
 

@@ -4,15 +4,11 @@ description: "Understand the core concepts behind Caido instances - the client/s
 
 # Instances
 
-We use the concept of an `instance` to refer approximately to an installation of Caido.
+Once Caido is installed, the data it generates is stored in a single directory. The default [data storage location](/reference/data_storage.md) on the file system of your device is dependent on the operating system.
 
-To be precise, an instance is the set of files contained in the the [data location](/guides/data_location.md), thus you can have _multiple_ Caido instances on one machine if you change the data path.
+In Caido, an "instance" is a reference to a data directory. meaning each instance is essentially a separate installation.
 
-## Why?
-
-First, let's revisit the fact that Caido is built around a `client/server` architecture. This means you can deploy the `Caido CLI` anywhere (like on [VPS](/guides/vps.md) or on [Docker](/guides/docker.md)). We thus need some form of _access control_ to authenticate the client (`Browser` or `Desktop Application`) that connects to that server.
-
-You can find all details in our [guide on the topic](/concepts/internals/authentication.md), but in essence each instance is tied to your account so only you can access it (sharing will be added eventually). Each instance has a set of OAuth credentials given to it by our cloud service that it uses to identify itself when communicating with us.
+As Caido is built around a client/server architecture, each instance is granted a set of OAuth credentials by our cloud service that are used to authenticate the client (_desktop or web application_) to the server (_Caido CLI_).
 
 <img alt="Client/server architecture." src="/_images/client_server.png" no-shadow/>
 

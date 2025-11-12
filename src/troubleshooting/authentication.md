@@ -22,7 +22,7 @@ To gain access to the instance, login to the account that created the instance.
 
 ### Reset the Instance Credentials
 
-To reset the instance credentials with the Caido CLI, launch Caido with the `--reset-credentials` argument.
+To reset the instance credentials with the Caido CLI, launch Caido with the `--reset-credentials` command-line option.
 
 ```bash
 caido --reset-credentials
@@ -60,7 +60,7 @@ To synchronize the time on Windows, **right-click** on the clock, select <code><
 
 ### macOS
 
-To synchronize the time on macOS, use the `sntp` utility with the `-S` argument.
+To synchronize the time on macOS, use the `sntp` utility with the `-S` command-line option.
   
 ```bash
 sudo sntp -S pool.ntp.org

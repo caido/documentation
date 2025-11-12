@@ -326,7 +326,7 @@ Various HTTP libraries and their versions will require certain scripts in order 
 
 #### Frida CodeShare
 
-[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line argument.
+[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line option.
 
 ```bash
 frida -U gadget --codeshare <author>/<file>
@@ -336,7 +336,7 @@ frida -U gadget --codeshare <author>/<file>
 When sourcing files online, ensure to evaluate the code for any malicious operations before executing it.
 :::
 
-You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line argument followed by the file's location:
+You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line option followed by the file's location:
 
 ```bash
 frida -U gadget -l <file>
