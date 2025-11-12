@@ -381,6 +381,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Deleting Data",
         link: "/guides/data_deleting",
       },
+      {
+        text: "Viewing Logs",
+        link: "/guides/logs_viewing",
+      },
     ],
   },
   {
