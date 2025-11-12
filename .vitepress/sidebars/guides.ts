@@ -84,6 +84,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Deployments",
     items: [
       {
+        text: "Running Multiple Instances",
+        link: "/guides/multiple_instances",
+      },
+      {
         text: "Running on a VPS",
         link: "/guides/vps",
       },
