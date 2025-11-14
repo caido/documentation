@@ -4,15 +4,16 @@ description: "Understand the core concepts behind the comparison between Caido C
 
 # Caido CLI vs Desktop
 
-Since Caido is built around a client/server architecture, the graphical user-interface (_GUI_) is decoupled from proxying and processing.
+Caido is built around a client/server architecture and the two are decoupled by a [traffic splitting](/concepts/proxying/traffic_splitting.md) algorithm:
 
-The proxying and processing is handled by the Caido CLI and the GUI is available either as a desktop or web application.
+- The **client** is the graphical user-interface (_GUI_).
+- The **server** is the Caido CLI that handles proxying and processing.
 
 <img width="600" alt="CLI vs Desktop" src="/_images/cli_vs_desktop.png" center no-shadow/>
 
 ## Caido CLI
 
-The Caido CLI acts as the server and can be deployed on a variety of different platforms (_[virtual private servers](/guides/vps.md), [containers](/guides/docker.), etc._).
+The standalone Caido CLI installation is versatile as it can be ran on a variety of different platforms (_[virtual private servers](/guides/vps.md), [containers](/guides/docker.), etc._).
 
 Once the Caido CLI is launched, the GUI is available as a web application in the browser.
 
@@ -24,15 +25,18 @@ Certain [options](/reference/cli.md) for advanced configuration and management a
 
 ## Desktop Application
 
-Caido's desktop application runs the Caido CLI in the background and provides the GUI as a local installation.
+The desktop application also runs the Caido CLI (_as a background process_) and provides the GUI as a local installation via a webview window.
 
 ::: tip
-In addition to the installed webview, you can also access the GUI from the browser once the desktop application is launched.
+In addition to the installed webview, you can still access the GUI from the browser once the desktop application is launched.
 :::
 
-The desktop application has some advantages over the CLI:
+<img width="800" alt="Desktop" src="/_images/launch_window.png" center/>
+
+::: info
+Although either installation provides the same functionality, the desktop application has some slight advantages over the standalone Caido CLI:
 
 - It provides centralized management for multiple [instances](/concepts/instances.md).
 - It includes [browser pre-configurations](/guides/preconfigured_browser.md).
-
-<img width="800" alt="Desktop" src="/_images/launch_window.png" center/>
+- It can be used in environments without internet access.
+:::
