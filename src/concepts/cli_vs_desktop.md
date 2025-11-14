@@ -12,14 +12,12 @@ The proxying and processing is handled by the Caido CLI and the GUI is available
 
 ## Caido CLI
 
-The Caido CLI acts as the server and can be deployed on a variety of different platforms (_virtual private servers, containers, cloud instances, etc._). Once the Caido CLI is launched, the GUI is available as a web application in the browser.
+The Caido CLI acts as the server and can be deployed on a variety of different platforms (_[virtual private servers](/guides/vps.md), [containers](/guides/docker.), etc._).
 
-It is the most versatile way of using Caido and it is generally recommended as a fallback if your platform doesn't support our Desktop application well.
-
-Certain [options](/reference/cli.md) for advanced configuration and management are only available to the Caido CLI.
+Once the Caido CLI is launched, the GUI is available as a web application in the browser.
 
 ::: info
-[View all of the available Caido CLI options.](/reference/cli.md)
+Certain [options](/reference/cli.md) for advanced configuration and management are only available to the Caido CLI.
 :::
 
 <img width="800" alt="CLI" src="/_images/caido_cli_banner.png" center/>
@@ -37,4 +35,4 @@ The desktop application has some advantages over the CLI:
 - It provides centralized management for multiple [instances](/concepts/instances.md).
 - It includes [browser pre-configurations](/guides/preconfigured_browser.md).
 
-<img width="800" alt="Desktop" src="/_images/launch_window.png" center no-shadow/>
+<img width="800" alt="Desktop" src="/_images/launch_window.png" center/>
