@@ -4,6 +4,13 @@ description: "Learn how to configure and use the Shift plugin to automate tasks.
 
 # Shift
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/gDZlAnToWV4?si=2j5XR4H7s0jSoDxL&amp;start=1318&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 [Shift](https://github.com/caido-community/shift) is Caido's official AI/LLM plugin that can be instructed to automate tasks in your security assessments.
 
 In this tutorial, you will learn how to use the plugin's two main components: [Shift Core](#shift-core) and [Shift Agents](#shift-agents).

@@ -4,6 +4,13 @@ description: "A step-by-step guide to applying workflows to Replay requests in C
 
 # Using Workflows in Replay
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/gDZlAnToWV4?si=2j5XR4H7s0jSoDxL&amp;start=1012&amp;end=1200&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 To apply a workflow to a value in a Replay request, **click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder. Then, **click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.
 
 With `Workflow` as the `Type`, **click** on the `Select a workflow` drop-down menu, select a workflow from the list, and **click** `Add` to save the configuration.
