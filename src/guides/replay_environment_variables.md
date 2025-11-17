@@ -4,6 +4,13 @@ description: "A step-by-step guide to using environment variables in Caido's Rep
 
 # Using Environment Variables in Replay
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/gDZlAnToWV4?si=2j5XR4H7s0jSoDxL&amp;start=1200&amp;end=1313&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 To insert an environment variable in a Replay request, **click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/replay_placeholder.png" center/>
