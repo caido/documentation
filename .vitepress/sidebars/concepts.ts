@@ -71,6 +71,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Authentication",
         link: "/concepts/internals/authentication",
       },
+      {
+        text: "Using Caido Offline",
+        link: "/concepts/offline",
+      },
     ],
   },
 ];
