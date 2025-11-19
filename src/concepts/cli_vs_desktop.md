@@ -4,7 +4,7 @@ description: "Understand the core concepts behind the comparison between Caido C
 
 # Caido CLI vs Desktop
 
-Caido is built around a client/server architecture and the two are decoupled by a [traffic splitting](/concepts/proxying/traffic_splitting.md) algorithm:
+Caido is built around a client/server architecture and the two are decoupled by a [traffic splitting](/concepts/traffic_splitting.md) algorithm:
 
 - The **client** is the graphical user-interface (_GUI_).
 - The **server** is the Caido CLI that handles proxying and processing.
@@ -13,7 +13,7 @@ Caido is built around a client/server architecture and the two are decoupled by 
 
 ## Caido CLI
 
-The standalone Caido CLI installation is versatile as it can be ran on a variety of different platforms (_[virtual private servers](/guides/vps.md), [containers](/guides/docker.), etc._).
+The standalone Caido CLI installation is versatile as it can be ran on a variety of different platforms (_[virtual private servers](/guides/vps.md), [containers](/guides/docker.md), etc._).
 
 Once the Caido CLI is launched, the GUI is available as a web application in the browser.
 

@@ -10,7 +10,7 @@ This abstraction allows you to manage multiple, separate installations of Caido 
 
 ## Local Instances
 
-Additional local instances can be created using either the Caido CLI or desktop application by [changing the data storage location](/guides/data_location.).
+Additional local instances can be created using either the Caido CLI or desktop application by [changing the data storage location](/guides/data_location.md).
 
 ## Remote Instances
 
