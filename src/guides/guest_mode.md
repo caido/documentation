@@ -14,7 +14,7 @@ In guest mode, anyone can access your instance without authentication. For examp
 
 ## Caido CLI
 
-By default, guest mode is **disabled** for the Caido CLI. To enable guest mode with the Caido CLI, launch Caido with the `--allow-guests` argument.
+By default, guest mode is **disabled** for the Caido CLI. To enable guest mode with the Caido CLI, launch Caido with the `--allow-guests` command-line option.
 
 ```bash
 caido --allow-guests

@@ -10,15 +10,15 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Proxying HTTPS Traffic",
-        link: "/concepts/essentials/https_traffic",
+        link: "/concepts/https_traffic",
       },
       {
         text: "CLI vs Desktop",
-        link: "/concepts/essentials/cli_vs_desktop",
+        link: "/concepts/cli_vs_desktop",
       },
       {
         text: "Instances",
-        link: "/concepts/essentials/instances",
+        link: "/concepts/instances",
       },
     ],
   },
@@ -27,11 +27,11 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Traffic Splitting",
-        link: "/concepts/proxying/traffic_splitting",
+        link: "/concepts/traffic_splitting",
       },
       {
         text: "Invisible Proxying",
-        link: "/concepts/proxying/invisible",
+        link: "/concepts/invisible",
       },
     ],
   },
@@ -61,15 +61,15 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "GraphQL",
-        link: "/concepts/internals/graphql",
+        link: "/concepts/graphql",
       },
       {
         text: "Cloud",
-        link: "/concepts/internals/cloud",
+        link: "/concepts/cloud",
       },
       {
         text: "Authentication",
-        link: "/concepts/internals/authentication",
+        link: "/concepts/authentication",
       },
     ],
   },

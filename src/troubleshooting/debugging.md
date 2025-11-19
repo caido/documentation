@@ -8,7 +8,7 @@ To assist with troubleshooting, Caido can be configured to include debug entries
 
 ## Caido CLI
 
-To enable the inclusion of debug entries in the log files with the Caido CLI, launch Caido with the `--debug` argument.
+To enable the inclusion of debug entries in the log files with the Caido CLI, launch Caido with the `--debug` command-line option.
 
 ```bash
 caido --debug

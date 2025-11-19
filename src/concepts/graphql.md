@@ -29,7 +29,7 @@ JSON.parse(localStorage.CAIDO_AUTHENTICATION).accessToken;
 ```
 
 ::: info
-This token will last 7 days. If you need a more permanent token, we suggest doing the [OAuth authentication flow](http://localhost:5173/concepts/internals/authentication.html).
+This token will last 7 days. If you need a more permanent token, we suggest doing the [OAuth authentication flow](http://localhost:5173/concepts/authentication.md).
 
 We are currently working on libraries to abstract that process. In the meantime, look at the mutation `startAuthenticationFlow` and the subscription `createdAuthenticationToken`.
 :::
