@@ -301,10 +301,6 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Using the JavaScript Node",
         link: "/guides/workflows_javascript",
       },
-      {
-        text: "Using the Shell Node",
-        link: "/guides/workflows_shell",
-      },
     ],
   },
   {
