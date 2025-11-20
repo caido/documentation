@@ -297,6 +297,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Passing Data Between Nodes",
         link: "/guides/workflows_references",
       },
+      {
+        text: "Using the JavaScript Node",
+        link: "/guides/workflows_javascript",
+      },
     ],
   },
   {
