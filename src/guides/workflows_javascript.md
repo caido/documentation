@@ -13,6 +13,10 @@ The data made available to the node is passed as the `input` parameter and can e
 - `BytesInput`: An array of bytes represented in decimal notation.
 - `HttpInput`: Request and response object pairs for passive/active workflows.
 
+::: tip
+View the [Passing Data Between Nodes](/guides/workflows_references.md) guide to learn how to use the output of a workflow node as the input of a connected downstream node.
+:::
+
 ## SDK
 
 The [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/) is made available to the node via the `sdk` parameter, which provides a variety of methods to convert data, interact with proxied traffic, and carry out actions within Caido.
@@ -85,7 +89,7 @@ Content-Length: 71
 Monitor the [logs](/guides/logs_viewing.md) when debugging.
 :::
 
-<img alt="The test environment." src="/_images/workflows_testing_debugging.png" center>
+<img alt="The test environment." src="/_images/workflows_javascript_testing.png" center>
 
 ## Conversion
 
