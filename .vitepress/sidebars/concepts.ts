@@ -20,6 +20,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Instances",
         link: "/concepts/instances",
       },
+      {
+        text: "Using Caido Offline",
+        link: "/concepts/offline",
+      },
     ],
   },
   {
