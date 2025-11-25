@@ -1,3 +1,7 @@
+---
+description: "A guide on using the Shell node in Caido workflows to run terminal commands and scripts."
+---
+
 # Using the Shell Node
 
 The `Shell` node allows you to run terminal commands and scripts in Caido workflows.
