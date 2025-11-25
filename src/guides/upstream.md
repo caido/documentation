@@ -34,7 +34,7 @@ Once you have defined the upstream proxy settings, click on the `+ Create` butto
 ::: info
 
 - If both SOCKS and HTTP proxies are enabled, traffic will flow through the SOCKS proxy first, then through the HTTP proxy.
-- Calls to [Caido's cloud server](/concepts/internals/cloud.md) will not flow through additional proxies.
+- Calls to [Caido's cloud server](/concepts/cloud.md) will not flow through additional proxies.
 :::
 
 ---

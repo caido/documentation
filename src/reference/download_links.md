@@ -61,7 +61,7 @@ The API will return JSON data resembling:
 |-------|-------------|
 | `display` | The display name. |
 | `platform` | (Deprecated) Operating system (`linux`/`mac`/`win`) + `-` + architecture (`x86_64`/`aarch64`). |
-| `kind` | Either `desktop` or `cli` ([CLI vs Desktop](/concepts/essentials/cli_vs_desktop.md)). |
+| `kind` | Either `desktop` or `cli` ([CLI vs Desktop](/concepts/cli_vs_desktop.md)). |
 | `link` | The download link. |
 | `os` | The operating system of the binary (`linux`/`macos`/`windows`). |
 | `arch` | The architecture of the binary (`x86_64`/`aarch64`). |

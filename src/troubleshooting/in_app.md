@@ -30,7 +30,7 @@ This error may occur when Caido is running as root.
 Rendering error: LaunchIo(Custom { kind: UnexpectedEof, error: "unexpected end of stream" }, BrowserStderr("[0101/110718.156035:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.\n"))
 ```
 
-<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error message after attempting to preview a response, do not run Caido as the root user or launch Caido without the `--no-renderer-sandbox` argument.
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error message after attempting to preview a response, do not run Caido as the root user or launch Caido without the `--no-renderer-sandbox` command-line option.
 
 ## Looping Requests
 
@@ -69,3 +69,13 @@ To acquire your token, open the browser's DevTools interface, select the `Applic
 If you are unable to view a section of the user-interface, it may have been minimized.
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> Ensure the section pane wasn't [resized](/guides/ui.md#resizing-panes) inadvertently.
+
+## Shell Node Timeouts
+
+This error may occur when workflows include a shell node.
+
+```text
+"Error in $shell node: Failed to execute shell: Timeout"
+```
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> By default, the initialization script sources from `bashrc` or `zshrc`, which may contain slow operations or hanging commands. Clear the `init` script field in the shell node configuration, or replace it with a minimal script that doesn't source shell configuration files.

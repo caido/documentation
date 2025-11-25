@@ -4,7 +4,7 @@ description: "Understand the core concepts behind Caido's traffic splitting algo
 
 # Traffic Splitting
 
-By default Caido will listen on a single port for all traffic, it uses a splitting algorithm to determine if a request is for the UI/[GraphQL API](/concepts/internals/graphql) or if it's a normal user request that needs to be forwarded. This allows for a simpler user experience, but can sometimes have unexpected behaviour.
+By default Caido will listen on a single port for all traffic, it uses a splitting algorithm to determine if a request is for the UI/[GraphQL API](/concepts/graphql.md) or if it's a normal user request that needs to be forwarded. This allows for a simpler user experience, but can sometimes have unexpected behaviour.
 
 ::: info
 To add other listeners, refer to the [guide on the topic](/guides/listening_address.md).
