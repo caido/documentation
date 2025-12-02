@@ -6,6 +6,13 @@ description: "A step-by-step guide to Caido's Workflows feature for creating aut
 
 Within the `Workflows` interface, you can construct multi-step processes to execute certain actions or conversions, allowing you to automate tasks on an immediate, discretionary, or repeated basis.
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/5Di0VVK9JiQ?si=_jidw6BH-h86yz8T&amp;start=1474&amp;end=1711&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 ::: tip HOW-TO GUIDES
 
 - [Creating Workflows](/guides/workflows_creating.md)

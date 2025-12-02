@@ -10,6 +10,13 @@ description: "A step-by-step guide to Caido's AI Assistant feature for security 
 
 The `Assistant` interface provides you with access to Caido's fine-tuned AI model, specifically tailored for security research, that can help you understand traffic elements, suggest attack vectors, and generate proof-of-concept exploits.
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/4rpbtc4nPAA?si=6uaNhhcdCx_qSUB4&amp;start=1112&amp;end=1162&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 ::: tip HOW-TO GUIDES
 
 - [Generating CSRF PoCs](/guides/assistant_csrf.md)

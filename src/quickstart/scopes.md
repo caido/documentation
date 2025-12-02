@@ -6,6 +6,13 @@ description: "A step-by-step guide to Caido's Scopes feature for defining which 
 
 The `Scopes` interface gives you the ability to define which domains or subdomains should be included or excluded from Caido traffic tables and operations.
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/5Di0VVK9JiQ?si=_jidw6BH-h86yz8T&amp;start=530&amp;end=604&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 ::: tip HOW-TO GUIDES
 
 - [Defining a Scope](/guides/scopes_defining.md)
