@@ -63,7 +63,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/wsl",
       },
       {
-        text: "Enabling Invisible Proxying",
+        text: "Enabling/Disabling Invisible Proxying",
         link: "/guides/invisible_proxying",
       },
       {
@@ -370,6 +370,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Installing Plugins",
         link: "/guides/plugins_installing",
+      },
+      {
+        text: "Enabling/Disabling Plugins",
+        link: "/guides/plugins_managing",
       },
     ],
   },
