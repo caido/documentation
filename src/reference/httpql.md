@@ -4,7 +4,7 @@ description: "Find detailed reference information on HTTPQL query language used 
 
 # HTTPQL
 
-HTTPQL is the query language used in Caido that gives you the ability to filter traffic. The constructing primitives of an HTTPQL filter clause, in order of position, are the:
+HTTPQL is the query language used in Caido that gives you the ability to filter traffic. The constructing primitives of an HTTPQL query statement, in order of position, are the:
 
 1. [Namespace](#namespaces)
 2. [Field](#fields)
@@ -124,11 +124,11 @@ Entering a string (_such as `"my value"`_) into the HTTPQL input field will sear
 
 :::
 
-## Queries
+## Combining Statements
 
-Queries are composed of multiple filter clauses that are combined together using logical operators and logical grouping.
+Query statements can be combined together using logical operators and logical grouping.
 
-<img width="600" alt="A full HTTPQL Query" src="/_images/httpql_logical.png" no-shadow center/>
+<img width="600" alt="A full HTTPQL query." src="/_images/httpql_logical.png" no-shadow center/>
 
 ### Logical Operators
 

@@ -195,7 +195,7 @@ First, an asynchronous function is defined that takes a `request` and `response`
 export async function run({ request, response }, sdk) {
 ```
 
-Using `sdk.requests.matches()` the execution of the script is scoped to common authentication endpoints with HTTPQL statements. The script will execute every time an in-scope request object to one of these endpoints is passed from the `In Scope` node.
+Using `sdk.requests.matches()` the execution of the script is scoped to common authentication endpoints with HTTPQL query statements. The script will execute every time an in-scope request object to one of these endpoints is passed from the `In Scope` node.
 
 ```js
   const authFilter = `req.path.cont:"/auth" OR req.path.cont:"/login" OR req.path.cont:"/token" OR req.path.cont:"/oauth" OR req.path.cont:"/refresh"`;

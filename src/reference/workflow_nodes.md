@@ -18,7 +18,7 @@ description: "Find detailed reference information on Caido workflow nodes includ
 | Check Finding | Checks if a finding already exists. |
 | Create Finding | Reports a finding to the system. |
 | In Scope | Checks if a request is in-scope. |
-| Matches HTTPQL | Matches a request/response against an HTTPQL query. |
+| Matches HTTPQL | Matches a request/response against an HTTPQL query statement. |
 | Set Color | Sets the traffic table request row color. |
 
 ## Active Workflow Nodes
@@ -34,7 +34,7 @@ description: "Find detailed reference information on Caido workflow nodes includ
 | Check Finding | Checks if a finding already exists. |
 | Create Finding | Reports a finding to the system. |
 | In Scope | Checks if a request is in-scope. |
-| Matches HTTPQL | Matches a request/response against an HTTPQL query. |
+| Matches HTTPQL | Matches a request/response against an HTTPQL query statement. |
 | Set Color | Sets the traffic table request row color. |
 
 ## Convert Workflow Nodes
