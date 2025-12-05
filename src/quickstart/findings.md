@@ -9,7 +9,7 @@ The `Findings` interface displays discoveries made by Caido processes or ones yo
 ::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
 ---
 <div class="video">
-  <iframe src="https://www.youtube.com/embed/4rpbtc4nPAA?si=6uaNhhcdCx_qSUB4&amp;start=700&amp;end=715&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+  <iframe src="https://www.youtube.com/embed/1BYjsJsPBVQ?si=jfeInSjRcrNDY4bQ&amp;start=384&amp;end=400&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
 </div>
 :::
 
