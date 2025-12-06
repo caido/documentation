@@ -1,10 +1,10 @@
 ---
-description: "A step-by-step guide to creating and defining filter presets in Caido using HTTPQL expressions to organize and categorize traffic analysis."
+description: "A step-by-step guide to creating and defining filter presets in Caido using HTTPQL queries to organize and categorize traffic analysis."
 ---
 
 # Defining a Filter
 
-Filters are defined by creating sets of HTTPQL expressions referred to as "filter presets".
+Filters are defined by creating sets of HTTPQL queries referred to as "filter presets".
 
 ::: info
 Filter presets are specific to the project they are created in.
@@ -28,10 +28,10 @@ Aliases can only contain the following characters:
 
 ### Defining Filters
 
-To define filters, **click** in the `Expression` input field to type your HTTPQL expression.
+To define filters, **click** in the `Expression` input field to type your HTTPQL queries.
 
 ::: tip
-[View the HTTPQL Reference documentation to learn expression syntax.](/reference/httpql.md)
+[View the HTTPQL Reference documentation to learn statement syntax.](/reference/httpql.md)
 :::
 
 ::: info

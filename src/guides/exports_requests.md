@@ -15,7 +15,7 @@ Once a selection is made between `Export all` or `Export current rows`, the data
 </ProContainer>
 
 ::: tip
-To further refine which requests are included when exporting the currently displayed rows, use HTTPQL statements.
+To further refine which requests are included when exporting the currently displayed rows, use HTTPQL query statements.
 :::
 
 <img alt="The As JSON and As CSV options." src="/_images/exports_format.png" center/>

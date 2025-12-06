@@ -176,6 +176,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Filters",
     items: [
       {
+        text: "Writing HTTPQL Queries",
+        link: "/guides/filters_httpql",
+      },
+      {
         text: "Defining a Filter",
         link: "/guides/filters_defining",
       },

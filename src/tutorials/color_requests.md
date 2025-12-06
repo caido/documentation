@@ -28,7 +28,7 @@ Passive workflows do not require `Passive End` nodes in order to exit execution 
 
 - The `On Intercept Request` node outputs `$on_intercept_request.request` objects which represent proxied requests.
 - The `In Scope` node checks if the value of a request's Host header is included in the in-scope list of a scope preset. If it is not - the workflow will end.
-- In-scope requests will be passed to the `Matches HTTPQL` node, which checks if a request satisfies an HTTPQL statement. If it does not - the workflow will end.
+- In-scope requests will be passed to the `Matches HTTPQL` node, which checks if a request satisfies an HTTPQL query statement. If it does not - the workflow will end.
 - If a request satisfies the HTTPQL query statement, it is passed to the `Set Color` node. If it does not - the workflow will end.
 - Once a request has been processed by the `Set Color` node, the workflow will end.
 
@@ -36,7 +36,7 @@ Passive workflows do not require `Passive End` nodes in order to exit execution 
 
 1. **Click** on the `Matches HTTPQL` node to access its editor.
 
-2. Then, **click** within the query environment and type in the following HTTPQL statement:
+2. Then, **click** within the query environment and type in the following HTTPQL query statement:
 
 ```httpql
 req.method.eq:"GET"
