@@ -6,6 +6,13 @@ description: "A step-by-step guide to installing and configuring the FoxyProxy b
 
 The FoxyProxy browser extension gives you the ability to quickly enable/disable your browser's use of Caido as a proxy.
 
+::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
+---
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/HjZxwcBJl7Y?si=VE0jYfqcxjE1E88B&amp;start=677&amp;end=712&amp;rel=0" title="YouTube video player." frameborder="0"></iframe>
+</div>
+:::
+
 ## Chrome
 
 To install the browser extension, launch the Chrome browser, navigate to [https://chromewebstore.google.com/detail/foxyproxy/gcknhkkoolaabfmlnjonogaaifnjlfnp](https://chromewebstore.google.com/detail/foxyproxy/gcknhkkoolaabfmlnjonogaaifnjlfnp), and click on the `Add to Chrome` button.
