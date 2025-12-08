@@ -107,6 +107,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Athena OS",
         link: "/guides/athena_os",
       },
+      {
+      	text: "Exegol",
+      	link: "/guides/exegol"
+      },
     ],
   },
   {
