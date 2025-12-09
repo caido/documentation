@@ -57,3 +57,19 @@ Caused by:
 ```
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error message, check your internet connection.
+
+## Launching Caido on Arch Linux with Hyprland
+
+If you are unable to launch Caido on Arch with Hyprland, it may be due to a lack of support for Electron applications.
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Install XWayland to allow X11 applications to run in a Wayland environment.
+
+::: code-group
+``` bash [Installation]
+sudo pacman -S xorg-xwayland
+```
+
+```bash [Launching]
+env ELECTRON_OZONE_PLATFORM_HINT=x11 ./caido
+```
+:::
