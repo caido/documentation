@@ -64,12 +64,12 @@ If you are unable to launch Caido on Arch with Hyprland, it may be due to a lack
 
 <code><Icon icon="fas fa-screwdriver-wrench" /></code> Install XWayland to allow X11 applications to run in a Wayland environment.
 
-::: code-group
-``` bash [Installation]
+``` bash
 sudo pacman -S xorg-xwayland
 ```
 
-```bash [Launching]
+Then, launch Caido through XWayland.
+
+```bash
 env ELECTRON_OZONE_PLATFORM_HINT=x11 ./caido
 ```
-:::
