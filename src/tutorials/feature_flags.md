@@ -1,4 +1,8 @@
-# Using Match & Replace Against Feature Flags
+---
+description: "Learn how to create Match & Replace rules in Caido to gain access to additional client-side features."
+---
+
+# Enable Feature Flags
 
 In this tutorial, you will learn how to configure Match & Replace rules to gain access to features intended for admin users in an intentionally vulnerable application from Caido's Web Security Labs.
 
@@ -181,7 +185,11 @@ When copying values to match against from requests or responses, ensure to [view
 
 In combination with the previous rule, since the rule automatically added the features to the array in the response before it reached the browser, when `checkFeatureFlags()` is executed, `if (user.featureFlags.includes('bouncy-ball'))` and `if (user.featureFlags.includes('sparkle-background'))` is satisfied and the `createBouncyBall()` and `enableSparkleBackground()` functions are executed.
 
-## Additional Modifications
+### Additional Modification
+
+Rules can also be created to target entire blocks instead of just individual values or lines.
+
+For example, by matching against the `setTimeout` function and replacing it with an empty string or comment, you can effectively remove the code from the page.
 
 ::: code-group
 ```txt [Matcher: String]
@@ -201,5 +209,7 @@ In combination with the previous rule, since the rule automatically added the fe
 :::
 
 <img alt="Creating a rule to persist the sparkles." src="/_images/permanent_sparkles_rule.png" center>
+
+Now, once the page is reloaded, the sparkles will persist.
 
 <img alt="Permanent sparkles." src="/_images/lab_permanent_sparkles.png" center>
