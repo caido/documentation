@@ -68,6 +68,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Match & Replace",
+    items: [
+      {
+        text: "Enable Feature Flags",
+        link: "/tutorials/feature_flags",
+      },
+    ],
+  },
+  {
     text: "Workflows",
     items: [
       {
