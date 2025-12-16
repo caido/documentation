@@ -14,7 +14,7 @@ Typically, access to these additional features is determined by Boolean values, 
 
 The Match & Replace Lab displays different user-interface components based on a user's permission role: either `basic` or `admin`.
 
-1. With your proxy settings enabled, navigate to [https://labs.cai.do/matchAndReplace.php](https://labs.cai.do/matchAndReplace.php) in your browser.
+1. With your proxy settings enabled, navigate to [https://labs.caido.io/hubs/match-and-replace](https://labs.caido.io/hubs/match-and-replace) in your browser.
 2. Within the corresponding response is a `user` object:
 
 ```js [user]
@@ -157,7 +157,7 @@ Click on the <code><Icon icon="fas fa-pencil" /></code> button to rename the rul
 
 <img alt="Creating a the role change rule." src="/_images/admin_panel_rule.png" center>
 
-7. With your proxy settings enabled, reload [https://labs.cai.do/matchAndReplace.php](https://labs.cai.do/matchAndReplace.php) in your browser.
+7. With your proxy settings enabled, reload [https://labs.caido.io/hubs/match-and-replace](https://labs.caido.io/hubs/match-and-replace) in your browser.
 
 <img alt="The admin panel." src="/_images/lab_admin_panel.png" center>
 
@@ -180,7 +180,7 @@ When copying values to match against from requests or responses, ensure to [view
 
 <img alt="Creating a the feature flag rule." src="/_images/feature_flag_rule.png" center>
 
-6. With your proxy settings enabled, reload [https://labs.cai.do/matchAndReplace.php](https://labs.cai.do/matchAndReplace.php) in your browser.
+6. With your proxy settings enabled, reload [https://labs.caido.io/hubs/match-and-replace](https://labs.caido.io/hubs/match-and-replace) in your browser.
 
 <img alt="The additional user-interface features." src="/_images/lab_admin_features.png" center>
 
