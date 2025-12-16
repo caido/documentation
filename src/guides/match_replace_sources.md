@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to selecting the traffic that Match & Replace rules in Caido apply to."
+---
+
 # Selecting a Traffic Source
 
 The options available under the Sources section of the Match & Replace interface determine the traffic the rules will apply to.
