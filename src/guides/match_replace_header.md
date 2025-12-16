@@ -12,7 +12,7 @@ Next, **click** on the `Add` button and type the header key name and its value i
 
 <img alt="Adding and naming the header." src="/_images/match_replace_header_add.png" center/>
 
-**Click** on the `+ Add` button to add the rule to the Default Collection.
+Select the traffic source/s and **click** on the `+ Add` button to add the rule to the Default Collection.
 
 ::: tip
 Give rules descriptive names for quick identification of their purpose.
