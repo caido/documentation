@@ -152,3 +152,17 @@ Caido supports the priority of operations: `AND` has a higher priority than `OR`
 ::: tip
 While parentheses are optional, we recommend using them to make your logical grouping clear.
 :::
+
+## Comments
+
+Caido supports both single-line and multi-line comments in HTTPQL queries.
+
+::: tip
+Comments can be used to write descriptions or temporary disable certain query statements.
+:::
+
+<img alt="Single-line comment." src="/_images/httpql_single_line_comment.png" center />
+
+---
+
+<img alt="Single-line comment." src="/_images/httpql_multi_line_comment.png" center />
