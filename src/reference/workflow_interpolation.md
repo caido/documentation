@@ -14,7 +14,15 @@ expressions can take the following shapes:
 ## Inline Evaluation
 
 Inline interpolation uses `<% %>` delimiters to execute JavaScript expressions
-and output results in-place within text.
+and output results in-place within text. For example:
+
+```md
+# Found <% issue_count %> issues
+lorem ipsum dolor ...
+```
+::: warning NOTE
+The example above assumes a `issue_count` variable was previously declared.
+:::
 
 ### Escaping
 
