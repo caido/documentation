@@ -18,7 +18,6 @@ and output results in-place within text. For example:
 
 ```md
 # Found <% issue_count %> issues
-lorem ipsum dolor ...
 ```
 ::: warning NOTE
 The example above assumes a `issue_count` variable was previously declared.
@@ -33,13 +32,18 @@ Use `\<% %>` to display literal interpolation syntax without execution (shows as
 | Syntax | Description |
 |--------|-------------|
 | `<% value // comment %>` | Line comments - `%>` closes the interpolation block. |
-| `<% /* comment with %> */ value %>` | Block comments for including `%>` in comments. |
+| `<% /* comment with %> */ value %>` | Block comments allow including `%>` in comments. |
 
 ## Tagged Code Blocks
 
-| Tag | Description |
-|-----|-------------|
-| `exec` | Markdown code blocks with this tag are evaluated by the JavaScript engine. |
+Markdown-style code blocks with the `exec` tag are evaluated by the JavaScript engine. For example:
+
+````md
+```exec
+const issue_count = 5;
+println("# Found " + issue_count + " issues");
+```
+````
 
 ### Output Functions
 
@@ -83,4 +87,3 @@ which entails the following:
 - **Shared Context**: All interpolations in a single node share the same
   JavaScript environment, meaning variables, functions, and state are accessible
   across all expressions within that node.
-
