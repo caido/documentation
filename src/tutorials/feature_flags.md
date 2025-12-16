@@ -15,12 +15,8 @@ Typically, access to these additional features is determined by Boolean values, 
 The Match & Replace Lab displays different user-interface components based on a user's permission role: either `basic` or `admin`.
 
 1. With your proxy settings enabled, navigate to [https://labs.cai.do/matchAndReplace.php](https://labs.cai.do/matchAndReplace.php) in your browser.
-2. Within the corresponding response is a `user` object and `checkUserRole()` function. If `(user.role === "admin")`:
+2. Within the corresponding response is a `user` object:
 
-- The `displayAdminUI()` function will execute and append an administrative panel to the page.
-- The `checkFeatureFlags()` function will parse the `user.featureFlags` property array and append additional components to the user-interface.
-
-::: code-group
 ```js [user]
         let user = { 
             name: "john", 
@@ -28,6 +24,22 @@ The Match & Replace Lab displays different user-interface components based on a 
             featureFlags: [] // Update this array to enable/disable features
         };
 ```
+
+3. If `(user.role === "admin")` in the `checkUserRole()` function:
+
+```js [checkUserRole()]
+        // Check if role is admin and update feature flags
+        function checkUserRole() {
+            if (user.role === "admin") {
+                displayAdminUI();
+            }
+            
+            displayUserInfo();
+            checkFeatureFlags();
+        }
+```
+
+4. The `displayAdminUI()` function will execute and append an administrative panel to the page:
 
 ```js [displayAdminUI()]
         // Display admin UI elements
@@ -63,17 +75,7 @@ The Match & Replace Lab displays different user-interface components based on a 
         }
 ```
 
-```js [checkUserRole()]
-        // Check if role is admin and update feature flags
-        function checkUserRole() {
-            if (user.role === "admin") {
-                displayAdminUI();
-            }
-            
-            displayUserInfo();
-            checkFeatureFlags();
-        }
-```
+5. The `checkFeatureFlags()` function will parse the `user.featureFlags` property array and append additional components to the user-interface:
 
 ```js [checkFeatureFlags()]
         // Check feature flags and activate features
@@ -136,7 +138,6 @@ The Match & Replace Lab displays different user-interface components based on a 
             }, 1000);
         }
 ```
-:::
 
 ### Accessing the Administrative Panel
 
@@ -191,8 +192,9 @@ Rules can also be created to target entire blocks instead of just individual val
 
 For example, by matching against the `setTimeout` function and replacing it with an empty string or comment, you can effectively remove the code from the page.
 
-::: code-group
-```txt [Matcher: String]
+#### Matcher: String
+
+```txt
             // Fade out and remove
             setTimeout(() => {
                 sparkle.style.opacity = '0';
@@ -203,10 +205,11 @@ For example, by matching against the `setTimeout` function and replacing it with
             }, 1000);
 ```
 
-```txt [Replacer: String]
+#### Replacer: String
+
+```txt
 // Leave empty or add this comment
 ```
-:::
 
 <img alt="Creating a rule to persist the sparkles." src="/_images/permanent_sparkles_rule.png" center>
 
