@@ -219,6 +219,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Match & Replace",
     items: [
       {
+        text: "Selecting a Traffic Source",
+        link: "/guides/match_replace_sources",
+      },
+      {
         text: "Adding a Header",
         link: "/guides/match_replace_header",
       },

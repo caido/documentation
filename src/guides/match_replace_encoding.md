@@ -18,7 +18,7 @@ Then, select the `Workflow` option from the `Replacer` drop-down menu and select
 
 <img alt="The drop-down menu encoding options." src="/_images/match_replace_encoding.png" center/>
 
-**Click** on the `+ Add` button to add the rule to the Default Collection.
+Select the traffic source/s and **click** on the `+ Add` button to add the rule to the Default Collection.
 
 ::: tip
 Give rules descriptive names for quick identification of their purpose.
