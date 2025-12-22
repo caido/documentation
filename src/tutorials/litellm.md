@@ -49,7 +49,7 @@ volumes:
 2. With Docker running, enter the following terminal command:
 
 ```bash
-docker compose up
+docker-compose up
 ```
 
 <img alt="Launching the Docker containers." src="/_images/litellm_init.png" center />
