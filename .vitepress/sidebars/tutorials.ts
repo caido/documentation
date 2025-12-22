@@ -65,6 +65,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Shift",
         link: "/tutorials/shift",
       },
+      {
+        text: "Using LiteLLM with Shift",
+        link: "/tutorials/litellm",
+      },
     ],
   },
   {
