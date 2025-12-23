@@ -1,36 +1,22 @@
 # Exposing an Instance to the Internet
 
-::: tip
-Discover your system architecture with:
-```bash
-uname -m
-```
+In this tutorial, you will learn how to expose a Caido instance to the internet.
+
+::: warning NOTE
+Ensure to replace `user` with your username, `example.com` with your domain, `user@example.com` with your email address, and account for any currently running processes by changing the ports.
 :::
 
+## Nginx Configuration
 
-1. Download the latest Caido CLI release from GitHub: `wget https://caido.download/releases/v0.54.1/caido-cli-vX.XX.X-linux-<architecture>.tar.gz`
-2. Extract with: `tar -xzf caido-cli-vX.XX.X-<architecture>.tar.gz`
-3. Make it executable: `chmod +x caido-cli`
-4. Add it to PATH to make it globally executable: `sudo mv caido-cli /usr/local/bin/`
-5. Delete the installation package: `rm caido-cli-v0.54.1-linux-x86_64.tar.gz`
-6. View the command-line options with: `caido-cli -h`
+1. To logically separate the internet-exposed Caido instance from your existing setup, create a new subdomain by adding a A record for `caido.example.com` for the IP address of your server.
 
-## Exposing the Instance to the Internet
+2. SSH into your server.
 
-### Nginx Configuration
-
-::: tip
-To separate the internet-exposed instance from your setup, create a new subdomain by adding an A record for `caido.<your-domain>` pointing to the same IP address.
-
-Then create a new `sites-available` file:
-
-```bash
-sudo nano /etc/nginx/sites-available/caido.ninjeeter-poc.com
-```
+3. Create a new `sites-available` file and use the `proxy_pass` directive to route traffic to Caido: `sudo nano /etc/nginx/sites-available/caido.example.com`
 
 ```txt
 server {
-    server_name caido.ninjeeter-poc.com;
+    server_name caido.example.com;
     
     location / {
         proxy_pass http://127.0.0.1:8081;
@@ -45,10 +31,10 @@ server {
 }
 ```
 
-Enable the site:
+4. Make the site available, test the configuration, and reload the web server:
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/caido.ninjeeter-poc.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/caido.example.com /etc/nginx/sites-enabled/
 ```
 
 ```bash
@@ -59,29 +45,29 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-And obtain a SSL/TLS certificate:
+5. Obtain a SSL/TLS certificate:
 
 ```bash
-sudo certbot --nginx -d caido.ninjeeter-poc.com
+sudo certbot --nginx -d caido.example.com
 ```
 
-:::
-
-1. Launch Caido:
+6. Launch the Caido CLI:
 
 ```bash
-caido-cli --ui-listen 0.0.0.0:8081 --proxy-listen 0.0.0.0:8082 --ui-domain ninjeeter-poc.com --debug --no-renderer-sandbox --no-open
+caido-cli --ui-listen 0.0.0.0:8081 --proxy-listen 0.0.0.0:8082 --ui-domain caido.example.com --debug --no-renderer-sandbox --no-open
 ```
 
 ## Docker
 
+The following Docker compose file runs two services: the Caido CLI and [Traefik](https://doc.traefik.io/traefik/).
+
 ::: warning NOTE
-If Nginx/Apache is running, kill it with `sudo systemctl stop nginx`/`sudo systemctl stop apache`
+If Nginx/Apache is running, kill it with: `sudo systemctl stop nginx`/`sudo systemctl stop apache`
 :::
 
-1. Install Docker with the Docker Compose plugin.
+1. Install [Docker](https://docs.docker.com/engine/install/) with the Docker Compose plugin.
 2. SSH into your server.
-3. Create a `docker-compose.yml` file with the following content (_ensure to replace `user` with your username_, `example.com` with your domain, `user@example.com` with your email address, and account for any currently running processes by changing the ports_):
+3. Create a `docker-compose.yml` file with the following content:
 
 ```txt
 services:
@@ -114,8 +100,8 @@ services:
     container_name: traefik
     restart: unless-stopped
     ports:
-      - "80:80"          # HTTP (requires Nginx to be stopped/disabled)
-      - "443:443"        # HTTPS / TLS termination (requires Nginx to be stopped/disabled)
+      - "80:80"
+      - "443:443"
     command:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
@@ -141,17 +127,23 @@ services:
 3. Create a data storage location for Caido:
 
 ```bash
-mkdir -p /home/ninjeeter/caido/data
+mkdir -p /home/user/caido/data
 ```
 
 4. Since the container runs as `uid=996(caido) gid=996(caido) groups=996(caido)`, set ownership of the host directory to match:
 
 ```bash
-sudo chown -R 996:996 /home/ninjeeter/caido/data
+sudo chown -R 996:996 /home/user/caido/data
 ```
 
 5. Make the directory writable:
 
 ```bash
-sudo chmod 755 /home/ninjeeter/caido/data
+sudo chmod 755 /home/user/caido/data
 ```
+
+## Accessing Caido
+
+Once Caido is running, access the instance at the configured domain and authenticate into your account.
+
+<img alt="Login page." src="/_images/internet_instance.png" center>
