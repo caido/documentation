@@ -44,7 +44,7 @@ View the [Passing Data Between Nodes](/guides/workflows_references.md) guide to 
 
 ## Testing/Debugging Shell Node Workflows
 
-To test the execution and debug your Shell node commands/scripts before using workflows against targets, provide mock requests and responses in the editors, and click on the **click** on the <code><Icon icon="fas fa-play" /> Run</code> button.
+To test the execution and debug your Shell node commands/scripts before using workflows against targets, provide mock requests and responses in the editors, and **click** on the <code><Icon icon="fas fa-play" /> Run</code> button.
 
 ::: tip
 Monitor the [logs](/guides/logs_viewing.md) when debugging.
@@ -52,7 +52,7 @@ Monitor the [logs](/guides/logs_viewing.md) when debugging.
 
 <img alt="The test environment." src="/_images/workflows_shell_testing.png" center>
 
-The details of each run will be listed in the `View` drop-down menu. To view the execution details of the Shell node, click on the **click** on its associated <code><Icon icon="fas fa-circle-info" /></code> button.
+The details of each run will be listed in the `View` drop-down menu. To view the execution details of the Shell node, **click** on its associated <code><Icon icon="fas fa-circle-info" /></code> button.
 
 <img alt="The test environment run details." src="/_images/workflows_shell_run_details.png" center>
 

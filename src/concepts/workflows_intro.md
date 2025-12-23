@@ -26,7 +26,7 @@ Passive workflows are **automatically triggered** when their specifications/cond
 
 ## Active Workflows
 
-`Active` workflows also take **requests** or **responses** as input. However, they are manually triggered, usually by right-clicking on a request/response in the HTTP History or Search pages.
+`Active` workflows also take **requests** or **responses** as input. However, they are manually triggered, usually by **right-clicking** on a request/response in the HTTP History or Search pages.
 
 ## Convert Workflows
 

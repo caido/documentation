@@ -101,7 +101,7 @@ When writing custom prompts, provide detailed information and guidelines for the
 
 <img alt="Adding a custom prompt." src="/_images/shift_add_new_prompt.png" center />
 
-To use a custom prompt, click on the `+` button within the message input field, select the prompt by name, and reference it in the message.
+To use a custom prompt, **click** on the `+` button within the message input field, select the prompt by name, and reference it in the message.
 
 <img alt="Using a custom prompt." src="/_images/shift_custom_prompt_message.png" center />
 

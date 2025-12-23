@@ -46,7 +46,7 @@ For both physical and virtual devices:
 
 <img alt="Android proxy settings." src="/_images/android_proxy_config.png" center no-shadow width="300"/>
 
-4. Click `Save` to set the proxy configurations.
+4. **Click** `Save` to set the proxy configurations.
 
 ### Port Forwarding
 
@@ -68,7 +68,7 @@ Clients maintain two certificate stores:
 To proxy the HTTPS traffic that the device's mobile browser generates:
 
 1. With Caido running, navigate to [http://127.0.0.1:8080/ca.crt](http://127.0.0.1:8080/ca.crt) in your device's browser to download Caido's CA certificate.
-2. In the device's settings, search for and select `Install a certificate`, select `CA certificate`, click `INSTALL ANYWAY` on the warning screen to continue, and then select Caido's certificate.
+2. In the device's settings, search for and select `Install a certificate`, select `CA certificate`, **click** `INSTALL ANYWAY` on the warning screen to continue, and then select Caido's certificate.
 
 You can also view the certificate addition in the device's interface. Navigate to your device's settings and search for and select `Trusted credentials`. In the `USER` tab, it will be included in the list.
 

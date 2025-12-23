@@ -15,6 +15,7 @@ The `Filters` interface gives you the ability to define which requests or respon
 
 ::: tip HOW-TO GUIDES
 
+- [Writing HTTPQL Queries](/guides/filters_httpql.md)
 - [Defining a Filter](/guides/filters_defining.md)
 - [Applying a Filter](/guides/filters_applying.md)
 :::

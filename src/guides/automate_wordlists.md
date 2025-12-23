@@ -14,7 +14,7 @@ Once a placeholder has been marked, you will be presented with options in the `P
 
 <img alt="Selecting an uploaded wordlist with Hosted File." src="/_images/automate_hosted_file.png" center/>
 
-- `Simple List`: This option will present an input field that allows you to manually type in a wordlist, one payload per new line. You can also load a wordlist file directly by clicking on the `Load from file...` button.
+- `Simple List`: This option will present an input field that allows you to manually type in a wordlist, one payload per new line. You can also load a wordlist file directly by **clicking** on the `Load from file...` button.
 
 <img alt="Manually creating a wordlist with Simple List." src="/_images/automate_simple_list.png" center/>
 

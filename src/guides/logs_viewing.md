@@ -26,7 +26,7 @@ To view the backend log files of your instance, either:
 | MacOS   | `~/Library/Application\ Support/io.caido.Caido/` |
 | Windows | `%APPDATA%\Caido\Caido\data`                     |
 
-- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button in the desktop application user interface and click on the <code><Icon icon="fas fa-circle-dot" /> Record</code> button to capture the backend logs for a certain interval of time.
+- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button in the desktop application user interface and **click** on the <code><Icon icon="fas fa-circle-dot" /> Record</code> button to capture the backend logs for a certain interval of time.
 
 <img alt="The in-app log panel." src="/_images/logs_panel.png" center/>
 

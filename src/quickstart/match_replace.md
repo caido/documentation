@@ -15,6 +15,7 @@ The `Match & Replace` interface gives you the ability to create rules that will 
 
 ::: tip HOW-TO GUIDES
 
+- [Selecting a Traffic Source](/guides/match_replace_sources.md)
 - [Adding a Header](/guides/match_replace_header.md)
 - [Using Capturing Groups](/guides/match_replace_capturing.md)
 - [Encoding Body Data](/guides/match_replace_encoding.md)

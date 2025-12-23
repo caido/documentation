@@ -54,9 +54,9 @@ The mutation that will apply John's low-privilege session token to the high-priv
 To set the mutation for the low-privilege `Mutated` profile manually:
 
 1. Copy the value of John's session token from the `token` parameter in the response to the `/autorize.php?action=login` POST request or from the `Authorization` header of subsequent API calls.
-2. Navigate to the `Configuration` tab of the Autorize plugin interface, click on the `Mutations` tab, and select `Mutated` from the drop-down menu.
+2. Navigate to the `Configuration` tab of the Autorize plugin interface, **click** on the `Mutations` tab, and select `Mutated` from the drop-down menu.
 
-3. Next, select the `Header: Set` option from the `Add Mutation` drop-down menu, type in `Authorization` in the `Header name` input field, paste the token value into the `Value` input field, and click on the `+` button to update and save the configuration.
+3. Next, select the `Header: Set` option from the `Add Mutation` drop-down menu, type in `Authorization` in the `Header name` input field, paste the token value into the `Value` input field, and **click** on the `+` button to update and save the configuration.
 
 <img alt="The Header: Set mutation." src="/_images/autorize_mutation.png" center />
 

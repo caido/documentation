@@ -62,7 +62,7 @@ docker-compose up
 
 <img alt="LiteLLM provider configuration." src="/_images/litellm_provider.png" center />
 
-5. Next, select `Virtual Keys`, click on the `+ Create New Key` button, configure the key, and click on the `Create Key` button to save the configuration.
+5. Next, select `Virtual Keys`, **click** on the `+ Create New Key` button, configure the key, and **click** on the `Create Key` button to save the configuration.
 
 <img alt="LiteLLM virtual key." src="/_images/litellm_key.png" center />
 

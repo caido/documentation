@@ -21,8 +21,8 @@ Caido is not liable for any malfunctions, failures, damages, loss/theft of data,
 
 To capture traffic from your Apple devices on your Wi-Fi network, you will need to edit the default settings of Caido.
 
-1. In the launch window, click the vertical ellipsis button of your desired instance and select `Edit`.
-2. Select `All interfaces (0.0.0.0)` and click the `Save` button in the bottom right corner.
+1. In the launch window, **click** the vertical ellipsis button of your desired instance and select `Edit`.
+2. Select `All interfaces (0.0.0.0)` and **click** the `Save` button in the bottom right corner.
 
 <img alt="All interfaces (0.0.0.0)." src="/_images/launcher_all_interfaces.png" center no-shadow/>
 
@@ -33,13 +33,13 @@ To capture traffic from your Apple devices on your Wi-Fi network, you will need 
 1. On your iOS device, navigate to `Settings` and select `Wi-Fi`.
 2. Ensure your device is on the same network as your computer.
 3. Select the network SSID and scroll down to select the `Configure Proxy` option, then select the `Manual` option.
-4. In the `Server` field, enter the IP address of your computer running Caido (_run the terminal command `ipconfig` in Windows or `ifconfig` in macOS/Linux to discover your computer's IP address_). Then enter the listening port of Caido in the `Port` field. Once the values have been added, click `Save` in the upper left corner.
+4. In the `Server` field, enter the IP address of your computer running Caido (_run the terminal command `ipconfig` in Windows or `ifconfig` in macOS/Linux to discover your computer's IP address_). Then enter the listening port of Caido in the `Port` field. Once the values have been added, **click** `Save` in the upper left corner.
 
 <img alt="iOS proxy configuration." src="/_images/ios_configure_proxy.png" center no-shadow width="500"/>
 
-5. In the Safari browser, visit `http://<IP>:8080/ca.crt` (_replace `<IP>` with the IP address of your computer_) to download Caido's CA certificate. Select `Allow` in the prompt. In the `Choose a Device` prompt, select the device you are currently using. Click `Close` in the `Profile Downloaded` notification.
-6. Return to your device's `Settings`, click on the `Profile Downloaded` option, and then click `Install`. On the warning screen, click `Install` again and `Install` yet again at the bottom. Then select `Done`.
-7. Click the `< Back` button in the upper left corner to return to the `General Settings` screen. Next, select the `About` option. At the bottom of this screen will be the `Certificate Trust Settings` option, select this and then enable Caido to be a trusted root certificate. In the warning prompt, select `Continue`.
+5. In the Safari browser, visit `http://<IP>:8080/ca.crt` (_replace `<IP>` with the IP address of your computer_) to download Caido's CA certificate. Select `Allow` in the prompt. In the `Choose a Device` prompt, select the device you are currently using. **Click** `Close` in the `Profile Downloaded` notification.
+6. Return to your device's `Settings`, **click** on the `Profile Downloaded` option, and then **click** `Install`. On the warning screen, **click** `Install` again and `Install` yet again at the bottom. Then select `Done`.
+7. **Click** the `< Back` button in the upper left corner to return to the `General Settings` screen. Next, select the `About` option. At the bottom of this screen will be the `Certificate Trust Settings` option, select this and then enable Caido to be a trusted root certificate. In the warning prompt, select `Continue`.
 
 <img alt="Trusting Caido's CA certificate in iOS." src="/_images/ios_certificate_trust_settings.png" center no-shadow width="500"/>
 

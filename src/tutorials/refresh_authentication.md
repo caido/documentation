@@ -43,7 +43,7 @@ This specification will take precedence over the `global` flag.
 
 ## Creating a Passive Workflow
 
-To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Passive` tab, and **click** the `+ New workflow` button.
 
 <img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
 

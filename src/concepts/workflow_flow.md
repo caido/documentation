@@ -35,7 +35,7 @@ $[node_alias].[output_alias]
 ```
 
 ::: tip
-You can view the data type by clicking on a node and viewing the value within the parenthesis next to the name of the object.
+You can view the data type by **clicking** on a node and viewing the value within the parenthesis next to the name of the object.
 :::
 
 <img alt="Register command SDK." src="/_images/data_flow.png" center/>

@@ -74,7 +74,7 @@ Once the active scan is configured, **click** on the <code><Icon icon="fas fa-pl
 In addition to generating findings, the results of ongoing and completed active scans are available in the `Dashboard` tab interface.
 
 ::: tip
-To interupt an in-progress active scan, click on the `Cancel` button.
+To interupt an in-progress active scan, **click** on the `Cancel` button.
 :::
 
 <img alt="The Dashboard tab interface." src="/_images/scanner_dashboard.png" center />
