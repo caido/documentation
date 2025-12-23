@@ -6,7 +6,7 @@ description: "A step-by-step guide to using Caido on Exegol."
 
 ---
 
-<img alt="Exegol Banner" style="width: 100%" src="/_images/exegol-banner.png"/>
+<img alt="Exegol Banner" src="/_images/exegol-banner.png"/>
 
 [Exegol](https://exegol.com/) is a comprehensive cybersecurity environment designed by offensive security experts, for fellow hackers, in collaboration with its community. It solves the common pain points of traditional security distributions by providing a modular and reliable toolkit that's made for the field.
 
