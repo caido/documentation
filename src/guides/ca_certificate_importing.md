@@ -38,4 +38,4 @@ Once the certificate has been downloaded, continue with the import instructions 
 
 5. **Click** `OK` to close the Certificate Manager window.
 
-6. Continue with either the [Using FoxyProxy](/guides/foxyproxy.md#firefox) or [Using ZeroOmega](/guides/zeroomega.md#firefox) guides for Firefox.
+6. Continue with either the [Using the Caido Extension](/guides/caido_extension.md), [Using FoxyProxy](/guides/foxyproxy.md#firefox) or [Using ZeroOmega](/guides/zeroomega.md#firefox) guides for Firefox.
