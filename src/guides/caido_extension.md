@@ -1,3 +1,7 @@
+---
+description: "A step-by-step guide to installing and configuring the Caido browser extension for Firefox."
+---
+
 # Using the Caido Browser Extension
 
 Caido's browser extension gives you the ability to quickly enable/disable your browser's use of Caido as a proxy.
@@ -14,7 +18,7 @@ In the subsequent pop-up window, **click** on the `OK` button.
 
 <img alt="FoxyProxy added to Firefox." src="/_images/firefox_caido_extension_added.png" center/>
 
-Once the extension is installed, [continue to the configuration instructions](#configuring-foxyproxy).
+Once the extension is installed, [continue to the configuration instructions](#configuring-the-caido-browser-extension).
 
 ## Configuring the Caido Browser Extension
 
