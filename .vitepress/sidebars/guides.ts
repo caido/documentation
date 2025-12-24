@@ -13,6 +13,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/guides/ca_certificate_importing",
       },
       {
+        text: "Using the Caido Browser Extension",
+        link: "/guides/caido_extension",
+      },
+      {
         text: "Using FoxyProxy",
         link: "/guides/foxyproxy.md",
       },
