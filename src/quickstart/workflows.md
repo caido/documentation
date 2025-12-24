@@ -18,6 +18,8 @@ Within the `Workflows` interface, you can construct multi-step processes to exec
 - [Creating Workflows](/guides/workflows_creating.md)
 - [Creating Findings](/guides/workflows_findings.md)
 - [Passing Data Between Nodes](/guides/workflows_references.md)
+- [Using the JavaScript Node](/guides/workflows_javascript.md)
+- [Using the Shell Node](/guides/workflows_shell.md)
 :::
 
 ::: warning STEP-BY-STEP TUTORIALS

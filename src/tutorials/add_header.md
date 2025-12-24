@@ -8,7 +8,7 @@ In this tutorial, we will create a passive workflow that will add a header to an
 
 ## Creating a Passive Workflow
 
-To begin, navigate to the Workflows interface, select the `Passive` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Passive` tab, and **click** the `+ New workflow` button.
 
 <img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
 

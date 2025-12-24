@@ -8,7 +8,7 @@ In this tutorial, we will create a convert workflow that will decode a [JSON Web
 
 ## Creating a Convert Workflow
 
-To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Convert` tab, and **click** the `+ New workflow` button.
 
 <img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
 

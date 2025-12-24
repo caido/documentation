@@ -8,7 +8,7 @@ In this tutorial, we will create a convert workflow that will MD5 hash input.
 
 ## Creating a Convert Workflow
 
-To begin, navigate to the Workflows interface, select the `Convert` tab, and click the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Convert` tab, and **click** the `+ New workflow` button.
 
 <img alt="Creating a new convert workflow." src="/_images/new_convert_workflow.png" center>
 
@@ -28,7 +28,7 @@ For this workflow, the overall node layout will be:
 
 ## MD5 Hashing
 
-1. Click on the `MD5 Hash` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
+1. **Click** on the `MD5 Hash` node to access its editor and ensure the `$convert_start.data` is [referenced as input data](/guides/workflows_references.md).
 
 2. Then, select an encoding type from the `Encoding (choice)` drop-down menu.
 

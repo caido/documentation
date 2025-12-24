@@ -72,11 +72,11 @@ In order to assist you, it is **critical** that you provide a detailed timeline 
 
 To reproduce the bug, follow these steps:
 
-1. In the `Intercept` interface, click on the `Response` button.
+1. In the `Intercept` interface, **click** on the `Response` button.
 2. Begin intercepting responses, by **clicking** on the <code><Icon icon="fas fa-angles-right" /> Forwarding</code> button to toggle it to <code><Icon icon="fas fa-pause" /> Queuing</code>.
 3. In a terminal, execute `curl -x 127.0.0.1:8080 https://example.com`.
 4. Modify status code of the intercepted response.
-5. Click the `Forward` button.
+5. **Click** the `Forward` button.
 6. Confirm in terminal that the response was not modified.
 :::
 

@@ -10,6 +10,6 @@ To make use of this feature, **click** on the account button <code><Icon icon="f
 
 <img alt="Installing the rendering engine." src="/_images/general_usage_rendering_engine.png" center>
 
-Once the rendering engine is installed, you can click on the `Preview` or page button <code><Icon icon="fas fa-file" /></code> attached to a response pane to render the view.
+Once the rendering engine is installed, you can **click** on the `Preview` or page button <code><Icon icon="fas fa-file" /></code> attached to a response pane to render the view.
 
 <img alt="Previewing a response within Caido." src="/_images/general_usage_response_preview.png" center>

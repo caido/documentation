@@ -29,7 +29,7 @@ To ensure your configurations successfully forward traffic, you can test them by
 
 <img alt="The upstream proxy configuration settings." src="/_images/upstream_socks_proxy.png" center>
 
-Once you have defined the upstream proxy settings, click on the `+ Create` button save the configuration.
+Once you have defined the upstream proxy settings, **click** on the `+ Create` button save the configuration.
 
 ::: info
 

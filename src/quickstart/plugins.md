@@ -13,9 +13,17 @@ The `Plugins` interface allows you to install and manage plugin packages in Caid
 </div>
 :::
 
-::: tip HOW-TO GUIDE
+::: tip HOW-TO GUIDES
 
 - [Installing Plugins](/guides/plugins_installing.md)
+- [Enabling/Disabling Plugins](/guides/plugins_managing.md)
+:::
+
+::: warning STEP-BY-STEP TUTORIALS
+
+- [Autorize](/tutorials/autorize.md)
+- [Scanner](/tutorials/scanner.md)
+- [Shift](/tutorials/shift.md)
 :::
 
 <img alt="The Plugins interface." src="/_images/plugins_interface.png" center>

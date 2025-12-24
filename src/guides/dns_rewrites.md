@@ -16,7 +16,7 @@ To resolve DNS queries using an alternative upstream DNS server, instead of your
 
 <img alt="Google or Cloudflare DNS server options." src="/_images/upstream_dns.png" center no-shadow/>
 
-- Or the DNS server can be explicitly defined by clicking on the `+` button, providing the server's IP address along with an arbitrary name, and clicking `+ Create`. This will add the server as an option in the drop-down menu.
+- Or the DNS server can be explicitly defined by **clicking** on the `+` button, providing the server's IP address along with an arbitrary name, and **clicking** `+ Create`. This will add the server as an option in the drop-down menu.
 
 <img alt="Setting a custom upstream DNS server." src="/_images/new_upstream_dns.png" center no-shadow/>
 

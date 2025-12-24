@@ -13,7 +13,7 @@ When referencing a node's data for use in another, the types must be compatible 
 Data can be shared across nodes as long as the types are `Exact` (expected) or are `Compatible` based on the following conversions:
 
 ::: tip
-You can view the data type by clicking on a node and viewing the value within the parenthesis. This will be above the reference data drop-down menu.
+You can view the data type by **clicking** on a node and viewing the value within the parenthesis. This will be above the reference data drop-down menu.
 <img alt="Node reference drop-down menu." src="/_images/node_reference_selection.png" center no-shadow/>
 :::
 

@@ -8,7 +8,7 @@ The ZeroOmega browser extension gives you the ability to quickly enable/disable 
 
 ## Chrome
 
-To install the browser extension, launch the Chrome browser, navigate to [https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped](https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped), and click on the `Add to Chrome` button.
+To install the browser extension, launch the Chrome browser, navigate to [https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped](https://chromewebstore.google.com/detail/proxy-switchyomega-3-zero/pfnededegaaopdmhkdmcofjmoldfiped), and **click** on the `Add to Chrome` button.
 
 In the pop-up window, **click** on the `Add extension` button.
 
@@ -20,7 +20,7 @@ Then, [continue to the configuration instructions](#configuring-zeroomega).
 
 ## Firefox
 
-To install the browser extension, launch the Firefox browser, navigate to [https://addons.mozilla.org/en-US/firefox/addon/zeroomega/](https://addons.mozilla.org/en-US/firefox/addon/zeroomega/), and click on the `Add to Firefox` button.
+To install the browser extension, launch the Firefox browser, navigate to [https://addons.mozilla.org/en-US/firefox/addon/zeroomega/](https://addons.mozilla.org/en-US/firefox/addon/zeroomega/), and **click** on the `Add to Firefox` button.
 
 In the pop-up window, select `Allow extension to run in private windows`, and then **click** on the `Add` button.
 

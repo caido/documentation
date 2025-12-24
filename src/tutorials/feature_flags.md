@@ -150,7 +150,7 @@ To display the administrative panel:
 1. Navigate to the Match & Replace interface and **click** on the `+ New Rule` button.
 
 ::: tip
-Click on the <code><Icon icon="fas fa-pencil" /></code> button to rename the rule to a name that quickly identifies the rule's purpose such as "Change Role: basic to admin".
+**Click** on the <code><Icon icon="fas fa-pencil" /></code> button to rename the rule to a name that quickly identifies the rule's purpose such as "Change Role: basic to admin".
 :::
 
 2. Select `Response Body` from the `Section` drop-down menu and `String` from the `Matcher` drop-down menu.
