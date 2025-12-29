@@ -1,3 +1,7 @@
+---
+description: "Learn how to set up an instance of Caido that is available online via a domain."
+---
+
 # Exposing an Instance to the Internet
 
 In this tutorial, you will learn how to expose a Caido instance to the internet.
@@ -54,7 +58,7 @@ sudo certbot --nginx -d caido.example.com
 6. Launch the Caido CLI:
 
 ```bash
-caido-cli --ui-listen 0.0.0.0:8081 --proxy-listen 0.0.0.0:8082 --ui-domain caido.example.com --debug --no-renderer-sandbox --no-open
+caido-cli --ui-listen 127.0.0.1:8081 --proxy-listen 127.0.0.1:8082 --ui-domain caido.example.com --debug --no-renderer-sandbox --no-open
 ```
 
 ## Docker
@@ -65,8 +69,8 @@ The following Docker compose file runs two services: the Caido CLI and [Traefik]
 If Nginx/Apache is running, kill it with: `sudo systemctl stop nginx`/`sudo systemctl stop apache`
 :::
 
-1. Install [Docker](https://docs.docker.com/engine/install/) with the Docker Compose plugin.
-2. SSH into your server.
+1. SSH into your server.
+2. Install [Docker](https://docs.docker.com/engine/install/) with the Docker Compose plugin.
 3. Create a `docker-compose.yml` file with the following content:
 
 ```txt
@@ -140,6 +144,12 @@ sudo chown -R 996:996 /home/user/caido/data
 
 ```bash
 sudo chmod 755 /home/user/caido/data
+```
+
+6. Then, run the container to launch Caido and navigate to the `--ui-domain`:
+
+```bash
+docker compose up
 ```
 
 ## Accessing Caido
