@@ -9,10 +9,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/",
       },
       {
-        text: "Proxying HTTPS Traffic",
-        link: "/concepts/https_traffic",
-      },
-      {
         text: "CLI vs Desktop",
         link: "/concepts/cli_vs_desktop",
       },
@@ -29,6 +25,14 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: "Proxying",
     items: [
+      {
+        text: "Proxying Web Traffic",
+        link: "/concepts/web_traffic",
+      },
+      {
+        text: "Proxying HTTPS Traffic",
+        link: "/concepts/https_traffic",
+      },
       {
         text: "Traffic Splitting",
         link: "/concepts/traffic_splitting",
