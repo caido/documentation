@@ -17,6 +17,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Invisible Proxying",
         link: "/tutorials/invisible_proxy",
       },
+      {
+        text: "Exposing an Instance to the Internet",
+        link: "/tutorials/instance_internet",
+      },
     ],
   },
   {
