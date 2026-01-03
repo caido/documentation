@@ -4,11 +4,11 @@ description: "Learn how to set up invisible proxying in Caido to capture traffic
 
 # Invisible Proxying for Non-Proxy Aware Thick Clients
 
-In this tutorial you will be guided through the process of configuring desktop applications to proxy traffic through Caido.
+In this tutorial you will be guided through the process of configuring clients that cannot be configured to utilize a HTTP proxy server via native settings, in order to view, intercept, and modify their traffic with Caido.
 
 ## Thick Clients
 
-“Thick clients” refer to desktop applications installed on your computer. These applications perform the majority of their processes client-side and occasionally communicate:
+“Thick clients” refer to clients that lack native HTTP proxy server support. These clients perform the majority of their processes independently but occasionally communicate:
 
 - With a database server (_two-tier architecture_).
 - With an external backend server that communicates with a database server (_three-tier architecture_).
@@ -71,7 +71,7 @@ This can be done by adding `127.0.0.1 www.example.com` as an entry to either:
 
 ### Port Binding / Forwarding
 
-The thick client application will expect the destination server to be running on either port 80 (_for HTTP_) or 443 (_for HTTPS_). However, ports below 1024 are considered privileged ports which only bind to services running with root/administrative privileges.
+The thick client will expect the destination server to be running on either port 80 (_for HTTP_) or 443 (_for HTTPS_). However, ports below 1024 are considered privileged ports which only bind to services running with root/administrative privileges.
 
 ::: danger
 Running Caido with root/administrative privileges is **NOT** recommended. Doing so **will** create issues later on since any resource created by Caido will be owned by the root/administrator user. **DO NOT DO THIS.**

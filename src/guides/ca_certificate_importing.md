@@ -4,7 +4,7 @@ description: "A step-by-step guide to importing Caido's CA certificate for proxy
 
 # Importing Caido's CA Certificate
 
-To [proxy HTTPS traffic](/concepts/https_traffic.md) with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.
+To [proxy HTTPS traffic](/concepts/web_traffic.md) with Caido, it is necessary to import and trust the CA Certificate of Caido in your browser.
 
 To download the certificate, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `CA Certificate`, and **click** on the <code><Icon icon="fas fa-download" /> Download CA Certificate</code> button.
 

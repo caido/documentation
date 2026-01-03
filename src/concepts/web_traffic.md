@@ -4,60 +4,237 @@ The Caido CLI (_server component_) is an HTTP proxy server that forwards the bid
 
 HTTP proxy servers operate in a few distinct ways depending on: 
 
-- If the traffic is in cleartext or encrypted.
-- If the client is aware of the proxy server or not.
 - If the client is able to be directly configured to utilize a proxy server or not.
+- If the traffic is in cleartext (_HTTP_) or encrypted (_HTTPS_).
 
+## Proxy-Aware Clients
 
-## HTTP Proxy (Standard Forward Proxy)
+Clients that can be configured to utilize a HTTP proxy server via native settings, are considered to be "proxy-aware".
 
-If the proxy server is acting as a standard forward proxy, the client is aware of its existence and is configured to send its traffic to it instead of sending it directly to the destination server.
+By manually configuring the connection settings (_or by using a browser extension_), we are able to proxy the traffic the browser generates, intended for a web server, through Caido.
 
-In order to specify the intended recipient, the client will send an HTTP CONNECT method request to the listening address of the HTTP proxy server.
+<img alt="OS connection settings." src="/_images/proxy_connection_settings.png" center width=600px style="filter: brightness(85%);" />
 
-This initial request specifies the destination server the client would like the proxy to establish a connection with and forward requests to.
+Other clients, such as command-line tools allow you to specify the listening address of the proxy server via arguments.
 
-```http
-CONNECT example.com:80 HTTP/1.1
-Host: localhost:8080
+For example, by using the `-x` command-line argument and Caido's listening address, `curl` will instruct Caido to make a request to `example.com` on it's behalf.
+
+### HTTP
+
+```bash
+└─$ curl -x 127.0.0.1:8080 http://example.com -v
+*   Trying 127.0.0.1:8080...
+* Established connection to 127.0.0.1 (127.0.0.1 port 8080) from 127.0.0.1 port 53219
+* using HTTP/1.x
+> GET http://example.com/ HTTP/1.1
+> Host: example.com
+> User-Agent: curl/8.17.0
+> Accept: */*
+> Proxy-Connection: Keep-Alive
+>
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Sat, 03 Jan 2026 19:44:03 GMT
+< Content-Type: text/html
+< Connection: keep-alive
+< CF-RAY: 9b84fd17ee220ff9-LAX
+< Last-Modified: Sat, 03 Jan 2026 05:43:21 GMT
+< Allow: GET, HEAD
+< Age: 4371
+< cf-cache-status: HIT
+< Accept-Ranges: bytes
+< Server: cloudflare
+< Content-Length: 513
+<
+<!doctype html><html lang="en"><head><title>Example Domain</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href="https://iana.org/domains/example">Learn more</a></div></body></html>
+* Connection #0 to host 127.0.0.1:8080 left intact
 ```
 
-Once the proxy server has made a TCP connection with the destination server, it will respond to the clients CONNECT request with a `200 Connection Established` response.
+### HTTPS
 
-Until the connection is closed, the proxy server will forward requests on behalf of the client to the destination server.
-
-The corresponding responses received from the destination server by the proxy server will be forwarded to the client through their own connection.
-
-## HTTPS Proxy (Standard Forward Proxy for HTTPS)
-
-If the client specifies it would like the proxy server to establish an encrypted connection with the destination server, the operation is the same with the exception that the data will be obfuscated to the proxy server.
+If a proxy-aware client would like to establish an encrypted connection with the destination server, the client will first send a `CONNECT` method request to the proxy server that states the destination server to create a tunnel with.
 
 ```http
 CONNECT example.com:443 HTTP/1.1
-Host: localhost:8080
+Host: example.com:443
+User-Agent: curl/8.17.0
+Proxy-Connection: Keep-Alive
 ```
 
-However, if the client has imported the CA certificate of the proxy server, it is viewed as a trusted entity. This allows the proxy server to establish TLS connections with both the client and the destination server allowing it to encrypt and decrypt traffic as it is passed through.
+Once the tunnel is established, traffic will still pass through the proxy server but it will be obfuscated.
 
-## Invisible HTTP (Transparent Proxy for HTTP)
+However, if the client has imported the CA certificate of the proxy server, it is viewed as a trusted entity. This allows the proxy server to establish TCP/TLS connections with both the client and the destination server, holding the derived symmetric keys for both connections so data can be encrypted and decrypted in both directions.
 
-If the client is unable to be configured to use a proxy server via native settings, it is known to be a "thick client".
+To ensure the the domain name of the client’s request matches the domain name in the certificate, Caido dynamically generates certificates for the destination server.
 
-However, by configuring local DNS settings, clients can be forced to send requests to the proxy server instead of sending them directly to the destination server. This is accomplished by manually configuring local DNS settings to resolve the hostname of the destination server to the IP address of the proxy server.
+```bash
+└─$ curl -x 127.0.0.1:8080 https://example.com -v
+*   Trying 127.0.0.1:8080...
+* CONNECT: no ALPN negotiated
+* allocate connect buffer
+* Establish HTTP proxy tunnel to example.com:443
+> CONNECT example.com:443 HTTP/1.1
+> Host: example.com:443
+> User-Agent: curl/8.17.0
+> Proxy-Connection: Keep-Alive
+>
+< HTTP/1.1 200 OK
+<
+* CONNECT phase completed
+* CONNECT tunnel established, response 200
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* SSL Trust Anchors:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+*   CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / RSASSA-PSS
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*   subject: C=CA; ST=CA; O=Caido; CN=Caido Generated Certificate
+*   start date: Dec 27 19:47:46 2025 GMT
+*   expire date: Jan 10 19:47:46 2026 GMT
+*   issuer: C=CA; ST=QC; O=Caido; CN=Caido
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   subjectAltName: "example.com" matches cert's "example.com"
+* SSL certificate verified via OpenSSL.
+* Established connection to 127.0.0.1 (127.0.0.1 port 8080) from 127.0.0.1 port 53219
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/8.17.0
+> Accept: */*
+>
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Sat, 03 Jan 2026 19:47:49 GMT
+< Content-Type: text/html
+< Connection: keep-alive
+< CF-RAY: 9b85029889038a80-LAX
+< last-modified: Sat, 03 Jan 2026 05:43:21 GMT
+< allow: GET, HEAD
+< Age: 2128
+< cf-cache-status: HIT
+< Accept-Ranges: bytes
+< Server: cloudflare
+< Content-Length: 513
+<
+<!doctype html><html lang="en"><head><title>Example Domain</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href="https://iana.org/domains/example">Learn more</a></div></body></html>
+* Connection #0 to host 127.0.0.1:8080 left intact
+```
 
-Since the client is unaware of the presence of the proxy server, it will not send an initial CONNECT method request. This behavior is similar to how reverse proxies like Nginx&trade; operate. Because of this, the proxy server also needs to listen on the same port that the request is intended for. This is accomplished via port forwarding.
+## Thick Clients
 
-- Client is not proxy-aware; it thinks it's talking directly to the destination
-- No CONNECT method; the client sends regular HTTP requests directly
-- The proxy acts like the destination server (similar to a reverse proxy)
-- The proxy must listen on the same port as the destination (typically port 80)
-- Requires DNS manipulation (e.g., /etc/hosts) to route traffic to the proxy
-- Used for "thick clients" that cannot be configured to use a proxy
+Certain clients (_such as installed desktop applications_), that cannot be configured to utilize a HTTP proxy server via native settings, are referred to as "thick clients" and are considered to be "proxy-unaware" as they expect to communicate with a destination server directly.
 
-## Invisible HTTPS (Transparent Proxy for HTTPS)
+Due to this, thick clients will not generate `CONNECT` method requests. 
 
-- Same as invisible HTTP, but for HTTPS traffic
-- Client initiates TLS directly with the proxy (which appears as the destination)
-- The proxy must listen on the destination port (typically 443)
-- Requires DNS manipulation and a trusted CA certificate for TLS interception
-- The client sends TLS Client Hello directly, without CONNECT
+However, their traffic can still be proxied by configuring local DNS settings and port forwarding so the listening address of the destination server resolves to the listening address of the proxy server. This technique is known as "invisible proxying".
+
+::: tip
+View the [Invisible Proxying for Non-Proxy Aware Thick Clients](/tutorials/invisible_proxy.md) tutorial for a detailed walk-through on configuring invisible proxying.
+:::
+
+### HTTP
+
+```bash
+┌──(ninjeeter㉿ninjeeter)-[~]
+└─$ curl http://example.com -v
+* Host example.com:80 was resolved.
+* IPv6: (none)
+* IPv4: 127.0.0.1
+*   Trying 127.0.0.1:80...
+* Established connection to example.com (127.0.0.1 port 80) from 127.0.0.1 port 53219
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/8.17.0
+> Accept: */*
+>
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Date: Sat, 03 Jan 2026 22:07:17 GMT
+< Content-Type: text/html
+< Connection: keep-alive
+< CF-RAY: 9b85cee559350928-LAX
+< Last-Modified: Sat, 03 Jan 2026 05:43:21 GMT
+< Allow: GET, HEAD
+< Age: 4400
+< cf-cache-status: HIT
+< Accept-Ranges: bytes
+< Server: cloudflare
+< Content-Length: 513
+<
+<!doctype html><html lang="en"><head><title>Example Domain</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href="https://iana.org/domains/example">Learn more</a></div></body></html>
+* Connection #0 to host example.com:80 left intact
+```
+
+### HTTPS
+
+```bash
+┌──(ninjeeter㉿ninjeeter)-[~]
+└─$ curl https://example.com -v
+* Host example.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 127.0.0.1
+*   Trying 127.0.0.1:443...
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* SSL Trust Anchors:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+*   CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / x25519 / RSASSA-PSS
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*   subject: C=CA; ST=CA; O=Caido; CN=Caido Generated Certificate
+*   start date: Dec 27 22:07:37 2025 GMT
+*   expire date: Jan 10 22:07:37 2026 GMT
+*   issuer: C=CA; ST=QC; O=Caido; CN=Caido
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using ecdsa-with-SHA256
+*   Certificate level 1: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA256
+*   subjectAltName: "example.com" matches cert's "example.com"
+* SSL certificate verified via OpenSSL.
+* Established connection to example.com (127.0.0.1 port 443) from 127.0.0.1 port 53219
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/8.17.0
+> Accept: */*
+>
+* Request completely sent off
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+< HTTP/1.1 200 OK
+< Date: Sat, 03 Jan 2026 22:07:40 GMT
+< Content-Type: text/html
+< Connection: keep-alive
+< CF-RAY: 9b85cf73098bcd33-LAX
+< last-modified: Sat, 03 Jan 2026 05:43:21 GMT
+< allow: GET, HEAD
+< Age: 2131
+< cf-cache-status: HIT
+< Accept-Ranges: bytes
+< Server: cloudflare
+< Content-Length: 513
+<
+<!doctype html><html lang="en"><head><title>Example Domain</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.<p><a href="https://iana.org/domains/example">Learn more</a></div></body></html>
+* Connection #0 to host example.com:443 left intact
+```
