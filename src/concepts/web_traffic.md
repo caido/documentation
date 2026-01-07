@@ -148,7 +148,6 @@ View the [Invisible Proxying for Non-Proxy Aware Thick Clients](/tutorials/invis
 ### HTTP
 
 ```bash
-┌──(ninjeeter㉿ninjeeter)-[~]
 └─$ curl http://example.com -v
 * Host example.com:80 was resolved.
 * IPv6: (none)
@@ -182,7 +181,6 @@ View the [Invisible Proxying for Non-Proxy Aware Thick Clients](/tutorials/invis
 ### HTTPS
 
 ```bash
-┌──(ninjeeter㉿ninjeeter)-[~]
 └─$ curl https://example.com -v
 * Host example.com:443 was resolved.
 * IPv6: (none)
