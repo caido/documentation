@@ -43,7 +43,7 @@ JSON.parse(localStorage.CAIDO_AUTHENTICATION).accessToken;
 ```
 
 ::: warning NOTE
-The access token expires after a period of 7 days. If your project requires consistent authentication, utilize the [OAuth](/concepts/authentication.md)  `startAuthenticationFlow` mutation and `createdAuthenticationToken` subscription.
+The access token expires after a period of 7 days. If your project requires consistent authentication, utilize the [OAuth](/concepts/instances.md#authentication)  `startAuthenticationFlow` mutation and `createdAuthenticationToken` subscription.
 :::
 
 ## Example: Using Replay
