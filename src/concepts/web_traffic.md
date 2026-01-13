@@ -1,6 +1,6 @@
 # Proxying Web Traffic
 
-The Caido CLI (_server component_) is an HTTP proxy server that forwards the bidirectional communication between a client and a server.
+Caido is a HTTP proxy server that forwards the bidirectional communication between a client and a destination server.
 
 HTTP proxy servers operate in a few distinct ways depending on: 
 

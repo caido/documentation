@@ -13,12 +13,25 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/cli_vs_desktop",
       },
       {
-        text: "Instances",
+        text: "Instances & Authentication",
         link: "/concepts/instances",
       },
       {
         text: "Using Caido Offline",
         link: "/concepts/offline",
+      },
+    ],
+  },
+  {
+    text: "Internals",
+    items: [
+      {
+        text: "GraphQL",
+        link: "/concepts/graphql",
+      },
+      {
+        text: "Cloud",
+        link: "/concepts/cloud",
       },
     ],
   },
@@ -53,23 +66,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Workflow Operation",
         link: "/concepts/workflow_flow",
-      },
-    ],
-  },
-  {
-    text: "Internals",
-    items: [
-      {
-        text: "GraphQL",
-        link: "/concepts/graphql",
-      },
-      {
-        text: "Cloud",
-        link: "/concepts/cloud",
-      },
-      {
-        text: "Authentication",
-        link: "/concepts/authentication",
       },
     ],
   },
