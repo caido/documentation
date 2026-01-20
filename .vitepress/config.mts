@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
+import type { DefaultTheme } from "vitepress";
+
 import MermaidExample from "./mermaid";
 import {
   conceptsSidebar,
@@ -64,14 +66,10 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Get Started", link: "/quickstart/" },
-      { text: "How-to Guides", link: "/guides/" },
-      { text: "Tutorials", link: "/tutorials/" },
-      { text: "Reference", link: "/reference/" },
-      { text: "Concepts", link: "/concepts/" },
+      { text: "App", link: "/app/" },
+      { text: "Dashboard", link: "/dashboard/" },
       { text: "FAQ", link: "/faq" },
-      { text: "Troubleshooting", link: "/troubleshooting" },
-    ],
+    ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
       "/quickstart/": quickstartSidebar,
