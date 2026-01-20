@@ -66,7 +66,7 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "App", link: "/app/" },
+      { text: "App", link: "/quickstart/", activeMatch: "/" },
       { text: "Dashboard", link: "/dashboard/" },
       { text: "FAQ", link: "/faq" },
     ] satisfies DefaultTheme.NavItem[],

@@ -60,6 +60,11 @@ h4 {
   color:#b67474;
 }
 
+/* Hide default nav items since we're rendering custom nav via Layout slot */
+.VPNavBar .content > nav:not(.custom-nav-links) {
+  display: none;
+}
+
 .videos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
