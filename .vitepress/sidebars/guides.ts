@@ -88,6 +88,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Deployments",
     items: [
       {
+        text: "Automated Deployments",
+        link: "/guides/automated_deployments",
+      },
+      {
         text: "Running Multiple Instances",
         link: "/guides/multiple_instances",
       },
