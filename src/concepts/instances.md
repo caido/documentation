@@ -30,6 +30,10 @@ Although the API is authenticated, the proxy traffic is currently unprotected. W
 
 Authentication in Caido is based on [OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749). Every instance that is created [registers](https://www.rfc-editor.org/rfc/rfc7591.html) to our cloud service and obtains a client ID and secret. On initial login to the instance using your account credentials, you claim the instance's client ID.
 
+### Workspaces
+
+Once an instance has been registered and claimed, it is associated with your account workspace. Workspaces provide a central management location and facilitate collaboration between team members via the `Instances` interface of the [account dashboard](https://dashboard.caido.io/).
+
 ### OAuth Grants Used by Caido
 
 - <a href="https://www.rfc-editor.org/rfc/rfc6749#section-1.3.4" target="_blank">Client Credentials</a>: This grant is used to obtain an access token that authenticates the instance with the cloud.
