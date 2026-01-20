@@ -9,15 +9,11 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/concepts/",
       },
       {
-        text: "Proxying HTTPS Traffic",
-        link: "/concepts/https_traffic",
-      },
-      {
         text: "CLI vs Desktop",
         link: "/concepts/cli_vs_desktop",
       },
       {
-        text: "Instances",
+        text: "Instances & Authentication",
         link: "/concepts/instances",
       },
       {
@@ -27,15 +23,28 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Internals",
+    items: [
+      {
+        text: "GraphQL",
+        link: "/concepts/graphql",
+      },
+      {
+        text: "Cloud",
+        link: "/concepts/cloud",
+      },
+    ],
+  },
+  {
     text: "Proxying",
     items: [
       {
-        text: "Traffic Splitting",
-        link: "/concepts/traffic_splitting",
+        text: "Proxying Web Traffic",
+        link: "/concepts/web_traffic",
       },
       {
-        text: "Invisible Proxying",
-        link: "/concepts/invisible",
+        text: "Traffic Splitting",
+        link: "/concepts/traffic_splitting",
       },
     ],
   },
@@ -57,23 +66,6 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Workflow Operation",
         link: "/concepts/workflow_flow",
-      },
-    ],
-  },
-  {
-    text: "Internals",
-    items: [
-      {
-        text: "GraphQL",
-        link: "/concepts/graphql",
-      },
-      {
-        text: "Cloud",
-        link: "/concepts/cloud",
-      },
-      {
-        text: "Authentication",
-        link: "/concepts/authentication",
       },
     ],
   },

@@ -50,7 +50,7 @@ Next, open an application and view if the traffic it is generating is being prox
 :::
 
 ::: info
-Applications may have security measures that will prevent them from working properly and allowing [Caido to proxy the HTTPS traffic](/concepts/https_traffic.md) they generate. If the application is still not working properly and traffic is still not being proxied, you will need to take additional steps to bypass these measures.
+Applications may have security measures that will prevent them from working properly and allowing [Caido to proxy the HTTPS traffic](/concepts/web_traffic.md) they generate. If the application is still not working properly and traffic is still not being proxied, you will need to take additional steps to bypass these measures.
 
 Due to Apple's robust security, the easiest way to do so is to obtain a device running an operating system version that has a jailbreak available.
 :::
