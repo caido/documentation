@@ -83,16 +83,13 @@ If no port is specified, the default is 80.
 
 ### Host IP/Port Matches Caido Listener?
 
-The host and port is then compared against the IP address and port of the connection URL.
+The host and port is then compared against the IP and port of Caido's listening address.
 
-<img alt="Client/server architecture." src="/_images/connection_url.png" center />
-
-| Request | Connection URL | Destination | Response | Error |
+| Request | Listening Address | Destination | Response | Error |
 |---------|--------------------|-------------|----------|----------|
 | GET `http://www.google.com/` HTTP/1.1 | `http://127.0.0.1:8080` | Proxy | 200 OK | |
 | GET `http://www.google.com/` HTTP/1.1 <br> Host: 127.0.0.1 | `http://127.0.0.1:8080` | Proxy | 301 Moved Permanently <br> Location: `http://www.google.com/` | |
 | GET `http://www.google.com/` HTTP/1.1 <br> Host: 127.0.0.1:8080 | `http://127.0.0.1:8080` | Proxy | 301 Moved Permanently <br> Location: `http://www.google.com:8080/` | Failed to connect: www.google.com:8080 |
-| GET `http://127.0.0.1:8080/` HTTP/1.1 <br> Host: www.google.com | `http://www.google.com` | Proxy | 301 Moved Permanently <br> Location: `http://www.google.com:8080/` | Failed to connect: www.google.com:8080 |
 | GET `http://127.0.0.1:8080/` HTTP/1.1 | `http://127.0.0.1:8080` | API | 200 OK | |
 | GET `http://127.0.0.1:8080/` HTTP/1.1 <br> Host: www.google.com | `http://127.0.0.1:8080` | API |  403 Forbidden | Host/IP is not allowed to connect to Caido <br> _View the [Domain Allowlist](/guides/domain_allowlist.md) guide._ |
 | GET / HTTP/1.1 <br> Host: 127.0.0.1:8080 | `http://127.0.0.1:8080` | API | 200 OK | |
