@@ -1,15 +1,21 @@
 <script setup lang="ts">
+import { useData, useRoute, useRouter } from "vitepress";
 import DefaultThemeComponent from "vitepress/theme";
+import { computed } from "vue";
 
-import SecondNavbar from "../components/SecondNavbar.vue";
+import ApplicationNavbar from "../components/ApplicationNavbar.vue";
 
 const { Layout } = DefaultThemeComponent;
+const router = useRoute();
+const { site } = useData();
 </script>
 
 <template>
   <Layout>
     <template #doc-top>
-      <SecondNavbar style="margin-top: -48px; margin-left: -32px; z-index: 1" />
+      <ApplicationNavbar
+        style="margin-top: -48px; margin-left: -32px; z-index: 1"
+      />
     </template>
     <template #doc-before>
       <div style="height: var(--vp-nav-height)" />

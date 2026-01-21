@@ -2,7 +2,7 @@
 import { useRoute } from "vitepress";
 import type { DefaultTheme } from "vitepress";
 
-import { appNavbar } from "../app.navbar";
+import { appNavbar } from "../application.navbar";
 
 const route = useRoute();
 
