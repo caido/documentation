@@ -15,15 +15,15 @@ export const dashboardSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Creating a team",
-        link: "/dashboard/guides/create-team",
+        link: "/dashboard/guides/create_team",
       },
       {
         text: "Setting up payment",
-        link: "/dashboard/guides/setup-payment",
+        link: "/dashboard/guides/setup_payment",
       },
       {
         text: "Assigning licenses",
-        link: "/dashboard/guides/assign-licenses",
+        link: "/dashboard/guides/assign_licenses",
       },
     ],
   },
