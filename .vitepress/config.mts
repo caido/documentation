@@ -69,8 +69,7 @@ export default defineConfig({
       {
         text: "Application",
         link: "/app/quickstart/",
-        // Active for any route under /app/ that is NOT under /dashboard/ or /faq
-        activeMatch: "^/app/(?!(dashboard|faq)(/|$)).*",
+        activeMatch: "^/app(/.*)?$",
       },
       { text: "Dashboard", link: "/dashboard/", activeMatch: "^/dashboard(/|$)" },
       { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },

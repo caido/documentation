@@ -15,6 +15,9 @@ hero:
       text: Get Started
       link: /app/quickstart/
     - theme: alt
+      text: Dashboard 
+      link: /dashboard/
+    - theme: alt
       text:  Build Plugins 
       link: https://developer.caido.io
 
