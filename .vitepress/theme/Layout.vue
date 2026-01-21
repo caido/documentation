@@ -24,3 +24,9 @@ const router = useRoute();
     </template>
   </Layout>
 </template>
+
+<style scoped>
+:deep(.VPHomeHero) h1.heading .text {
+  color: var(--vp-c-text-1);
+}
+</style>
