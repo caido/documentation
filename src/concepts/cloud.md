@@ -13,7 +13,7 @@ For transparency, the OpenAPI specification of the cloud API can be viewed at [h
 ## Data Collection
 
 ::: warning NOTE
-We are aware that tying Caido to a cloud may be controversial to some. However, **we do not collect any data stored on your instances nor interactions within the Caido application.** View our [privacy policy](https://caido.io/privacy) for more information.
+We are aware that tying Caido to a cloud may be controversial to some. However, **we do not collect any data stored on your instances.** View our [privacy policy](https://caido.io/privacy) for more information.
 :::
 
 The data collected upon account registration (_name, email address, and user-agent information_) allows for:
