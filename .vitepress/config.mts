@@ -6,6 +6,7 @@ import type { DefaultTheme } from "vitepress";
 import MermaidExample from "./mermaid";
 import {
   conceptsSidebar,
+  dashboardSidebar,
   guidesSidebar,
   quickstartSidebar,
   referenceSidebar,
@@ -82,6 +83,7 @@ export default defineConfig({
       "/app/concepts/": conceptsSidebar,
       "/app/tutorials/": tutorialsSidebar,
       "/app/troubleshooting/": troubleshootingSidebar,
+      "/dashboard/": dashboardSidebar,
     },
 
     outline: {

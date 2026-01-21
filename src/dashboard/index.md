@@ -15,4 +15,3 @@ Through the Dashboard, you can:
 - **Organize teams**: Create and manage teams, invite members, and configure team settings and permissions
 
 The Dashboard serves as the administrative hub for your Caido experience, allowing you to control all aspects of your account and subscription from a single, easy-to-use web interface.
-
