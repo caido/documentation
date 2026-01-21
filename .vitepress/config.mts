@@ -66,9 +66,14 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "App", link: "/quickstart/", activeMatch: "/" },
-      { text: "Dashboard", link: "/dashboard/" },
-      { text: "FAQ", link: "/faq" },
+      {
+        text: "Application",
+        link: "/quickstart/",
+        // Active for any route that is NOT under /dashboard/ or /faq
+        activeMatch: "^(?!/(dashboard|faq)(/|$)).*",
+      },
+      { text: "Dashboard", link: "/dashboard/", activeMatch: "^/dashboard(/|$)" },
+      { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },
     ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
