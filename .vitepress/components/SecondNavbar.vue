@@ -65,7 +65,6 @@ const isActive = (link: string) => {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
-  border-bottom: 2px solid transparent;
   text-decoration: none;
   display: inline-block;
 }
