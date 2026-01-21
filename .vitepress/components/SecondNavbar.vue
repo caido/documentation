@@ -40,15 +40,19 @@ const isActive = (link: string) => {
 <style scoped>
 .second-navbar {
   background: var(--vp-c-bg);
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid black;
   width: 100%;
+  height: var(--vp-nav-height);
+  position: fixed;
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
 }
 
 .second-navbar-container {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 32px;
   height: 48px;
 }
 
