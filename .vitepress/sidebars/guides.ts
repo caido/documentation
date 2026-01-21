@@ -6,31 +6,31 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Installation",
-        link: "/guides/",
+        link: "/app/guides/",
       },
       {
         text: "Importing Caido's CA Certificate",
-        link: "/guides/ca_certificate_importing",
+        link: "/app/guides/ca_certificate_importing",
       },
       {
         text: "Using the Caido Browser Extension",
-        link: "/guides/caido_extension",
+        link: "/app/guides/caido_extension",
       },
       {
         text: "Using FoxyProxy",
-        link: "/guides/foxyproxy.md",
+        link: "/app/guides/foxyproxy.md",
       },
       {
         text: "Using ZeroOmega",
-        link: "/guides/zeroomega.md",
+        link: "/app/guides/zeroomega.md",
       },
       {
         text: "Using a Preconfigured Browser",
-        link: "/guides/preconfigured_browser",
+        link: "/app/guides/preconfigured_browser",
       },
       {
         text: "Guest Mode",
-        link: "/guides/guest_mode",
+        link: "/app/guides/guest_mode",
       },
     ],
   },
@@ -39,11 +39,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "CA Certificate Management",
-        link: "/guides/ca_certificate_managing",
+        link: "/app/guides/ca_certificate_managing",
       },
       {
         text: "Changing the Data Storage Location",
-        link: "/guides/data_location",
+        link: "/app/guides/data_location",
       },
     ],
   },
@@ -52,35 +52,35 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Changing the Listening Address/Port",
-        link: "/guides/listening_address",
+        link: "/app/guides/listening_address",
       },
       {
         text: "Proxying Local Traffic",
-        link: "/guides/proxy_local",
+        link: "/app/guides/proxy_local",
       },
       {
         text: "Domain Allowlist",
-        link: "/guides/domain_allowlist",
+        link: "/app/guides/domain_allowlist",
       },
       {
         text: "Proxying WSL Traffic",
-        link: "/guides/wsl",
+        link: "/app/guides/wsl",
       },
       {
         text: "Enabling/Disabling Invisible Proxying",
-        link: "/guides/invisible_proxying",
+        link: "/app/guides/invisible_proxying",
       },
       {
         text: "Upstream to Another Proxy",
-        link: "/guides/upstream",
+        link: "/app/guides/upstream",
       },
       {
         text: "Listening on Multiple Ports",
-        link: "/guides/listening_ports",
+        link: "/app/guides/listening_ports",
       },
       {
         text: "DNS Rewrites",
-        link: "/guides/dns_rewrites",
+        link: "/app/guides/dns_rewrites",
       },
     ],
   },
@@ -89,31 +89,31 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Running Multiple Instances",
-        link: "/guides/multiple_instances",
+        link: "/app/guides/multiple_instances",
       },
       {
         text: "Running on a VPS",
-        link: "/guides/vps",
+        link: "/app/guides/vps",
       },
       {
         text: "Running in Docker",
-        link: "/guides/docker",
+        link: "/app/guides/docker",
       },
       {
         text: "Kali Linux",
-        link: "/guides/kali_linux",
+        link: "/app/guides/kali_linux",
       },
       {
         text: "Parrot Security",
-        link: "/guides/parrot_os",
+        link: "/app/guides/parrot_os",
       },
       {
         text: "Athena OS",
-        link: "/guides/athena_os",
+        link: "/app/guides/athena_os",
       },
       {
         text: "Exegol",
-        link: "/guides/exegol",
+        link: "/app/guides/exegol",
       },
     ],
   },
@@ -122,31 +122,31 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Navigating Caido",
-        link: "/guides/navigation",
+        link: "/app/guides/navigation",
       },
       {
         text: "Customizing the User Interface",
-        link: "/guides/ui",
+        link: "/app/guides/ui",
       },
       {
         text: "Managing Elements",
-        link: "/guides/elements",
+        link: "/app/guides/elements",
       },
       {
         text: "Sorting Traffic Table Rows",
-        link: "/guides/sorting",
+        link: "/app/guides/sorting",
       },
       {
         text: "Changing Request & Response View Modes",
-        link: "/guides/request_response_modes",
+        link: "/app/guides/request_response_modes",
       },
       {
         text: "Previewing Responses",
-        link: "/guides/preview_responses",
+        link: "/app/guides/preview_responses",
       },
       {
         text: "Creating Shortcuts",
-        link: "/guides/shortcuts",
+        link: "/app/guides/shortcuts",
       },
     ],
   },
@@ -155,11 +155,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Viewing a Sitemap",
-        link: "/guides/sitemap_viewing",
+        link: "/app/guides/sitemap_viewing",
       },
       {
         text: "Deleting a Sitemap",
-        link: "/guides/sitemap_deleting",
+        link: "/app/guides/sitemap_deleting",
       },
     ],
   },
@@ -168,15 +168,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Defining a Scope",
-        link: "/guides/scopes_defining",
+        link: "/app/guides/scopes_defining",
       },
       {
         text: "Applying a Scope",
-        link: "/guides/scopes_applying",
+        link: "/app/guides/scopes_applying",
       },
       {
         text: "Managing Scopes",
-        link: "/guides/scopes_managing",
+        link: "/app/guides/scopes_managing",
       },
     ],
   },
@@ -185,15 +185,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Writing HTTPQL Queries",
-        link: "/guides/filters_httpql",
+        link: "/app/guides/filters_httpql",
       },
       {
         text: "Defining a Filter",
-        link: "/guides/filters_defining",
+        link: "/app/guides/filters_defining",
       },
       {
         text: "Applying a Filter",
-        link: "/guides/filters_applying",
+        link: "/app/guides/filters_applying",
       },
     ],
   },
@@ -202,7 +202,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Intercepting Traffic",
-        link: "/guides/intercept_traffic",
+        link: "/app/guides/intercept_traffic",
       },
     ],
   },
@@ -211,11 +211,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Filtering Traffic Table Rows",
-        link: "/guides/http_history_filtering",
+        link: "/app/guides/http_history_filtering",
       },
       {
         text: "Viewing Modifications",
-        link: "/guides/http_history_modifications",
+        link: "/app/guides/http_history_modifications",
       },
     ],
   },
@@ -224,23 +224,23 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Selecting a Traffic Source",
-        link: "/guides/match_replace_sources",
+        link: "/app/guides/match_replace_sources",
       },
       {
         text: "Adding a Header",
-        link: "/guides/match_replace_header",
+        link: "/app/guides/match_replace_header",
       },
       {
         text: "Using Capturing Groups",
-        link: "/guides/match_replace_capturing",
+        link: "/app/guides/match_replace_capturing",
       },
       {
         text: "Encoding Body Data",
-        link: "/guides/match_replace_encoding",
+        link: "/app/guides/match_replace_encoding",
       },
       {
         text: "Testing Rules",
-        link: "/guides/match_replace_testing",
+        link: "/app/guides/match_replace_testing",
       },
     ],
   },
@@ -249,19 +249,19 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Sending Requests to Replay",
-        link: "/guides/replay_requests",
+        link: "/app/guides/replay_requests",
       },
       {
         text: "Resending Requests",
-        link: "/guides/replay_resending",
+        link: "/app/guides/replay_resending",
       },
       {
         text: "Using Workflows in Replay",
-        link: "/guides/replay_workflows",
+        link: "/app/guides/replay_workflows",
       },
       {
         text: "Using Environment Variables in Replay",
-        link: "/guides/replay_environment_variables",
+        link: "/app/guides/replay_environment_variables",
       },
     ],
   },
@@ -270,31 +270,31 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Sending Requests to Automate",
-        link: "/guides/automate_requests",
+        link: "/app/guides/automate_requests",
       },
       {
         text: "Sending Payloads from a Wordlist",
-        link: "/guides/automate_wordlists",
+        link: "/app/guides/automate_wordlists",
       },
       {
         text: "Sending Numerical Payloads",
-        link: "/guides/automate_numerical",
+        link: "/app/guides/automate_numerical",
       },
       {
         text: "Repeating Requests with No Payload",
-        link: "/guides/automate_null",
+        link: "/app/guides/automate_null",
       },
       {
         text: "Sending Multiple Payloads",
-        link: "/guides/automate_multiple",
+        link: "/app/guides/automate_multiple",
       },
       {
         text: "Preprocessing Payloads",
-        link: "/guides/automate_preprocessors",
+        link: "/app/guides/automate_preprocessors",
       },
       {
         text: "Avoiding Rate-Limiting Protections",
-        link: "/guides/automate_rate_limiting",
+        link: "/app/guides/automate_rate_limiting",
       },
     ],
   },
@@ -303,23 +303,23 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Creating Workflows",
-        link: "/guides/workflows_creating",
+        link: "/app/guides/workflows_creating",
       },
       {
         text: "Creating Findings",
-        link: "/guides/workflows_findings",
+        link: "/app/guides/workflows_findings",
       },
       {
         text: "Passing Data Between Nodes",
-        link: "/guides/workflows_references",
+        link: "/app/guides/workflows_references",
       },
       {
         text: "Using the JavaScript Node",
-        link: "/guides/workflows_javascript",
+        link: "/app/guides/workflows_javascript",
       },
       {
         text: "Using the Shell Node",
-        link: "/guides/workflows_shell",
+        link: "/app/guides/workflows_shell",
       },
     ],
   },
@@ -328,15 +328,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Generating CSRF PoCs",
-        link: "/guides/assistant_csrf",
+        link: "/app/guides/assistant_csrf",
       },
       {
         text: "Prompting the Assistant to Explain Requests",
-        link: "/guides/assistant_explain",
+        link: "/app/guides/assistant_explain",
       },
       {
         text: "Changing the LLM Model",
-        link: "/guides/assistant_model",
+        link: "/app/guides/assistant_model",
       },
     ],
   },
@@ -345,7 +345,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Creating Environment Variables",
-        link: "/guides/environment_variables",
+        link: "/app/guides/environment_variables",
       },
     ],
   },
@@ -354,11 +354,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Filtering Traffic Table Rows",
-        link: "/guides/search_filtering",
+        link: "/app/guides/search_filtering",
       },
       {
         text: "Viewing Modifications",
-        link: "/guides/search_modifications",
+        link: "/app/guides/search_modifications",
       },
     ],
   },
@@ -367,7 +367,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Exporting Request Data",
-        link: "/guides/exports_requests",
+        link: "/app/guides/exports_requests",
       },
     ],
   },
@@ -376,7 +376,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Uploading Files",
-        link: "/guides/files_uploading",
+        link: "/app/guides/files_uploading",
       },
     ],
   },
@@ -385,11 +385,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Installing Plugins",
-        link: "/guides/plugins_installing",
+        link: "/app/guides/plugins_installing",
       },
       {
         text: "Enabling/Disabling Plugins",
-        link: "/guides/plugins_managing",
+        link: "/app/guides/plugins_managing",
       },
     ],
   },
@@ -398,11 +398,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Saving Projects",
-        link: "/guides/projects_backups",
+        link: "/app/guides/projects_backups",
       },
       {
         text: "Recovering Read-Only Projects",
-        link: "/guides/projects_recovering",
+        link: "/app/guides/projects_recovering",
       },
     ],
   },
@@ -411,11 +411,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Deleting Data",
-        link: "/guides/data_deleting",
+        link: "/app/guides/data_deleting",
       },
       {
         text: "Viewing Logs",
-        link: "/guides/logs_viewing",
+        link: "/app/guides/logs_viewing",
       },
     ],
   },
@@ -424,11 +424,11 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Contributing to the Documentation",
-        link: "/guides/documentation",
+        link: "/app/guides/documentation",
       },
       {
         text: "Joining Caido's Discord Server",
-        link: "/guides/discord",
+        link: "/app/guides/discord",
       },
     ],
   },

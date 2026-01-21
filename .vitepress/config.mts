@@ -68,21 +68,21 @@ export default defineConfig({
     nav: [
       {
         text: "Application",
-        link: "/quickstart/",
-        // Active for any route that is NOT under /dashboard/ or /faq
-        activeMatch: "^(?!/(dashboard|faq)(/|$)).*",
+        link: "/app/quickstart/",
+        // Active for any route under /app/ that is NOT under /dashboard/ or /faq
+        activeMatch: "^/app/(?!(dashboard|faq)(/|$)).*",
       },
       { text: "Dashboard", link: "/dashboard/", activeMatch: "^/dashboard(/|$)" },
       { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },
     ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
-      "/quickstart/": quickstartSidebar,
-      "/reference/": referenceSidebar,
-      "/guides/": guidesSidebar,
-      "/concepts/": conceptsSidebar,
-      "/tutorials/": tutorialsSidebar,
-      "/troubleshooting/": troubleshootingSidebar,
+      "/app/quickstart/": quickstartSidebar,
+      "/app/reference/": referenceSidebar,
+      "/app/guides/": guidesSidebar,
+      "/app/concepts/": conceptsSidebar,
+      "/app/tutorials/": tutorialsSidebar,
+      "/app/troubleshooting/": troubleshootingSidebar,
     },
 
     outline: {

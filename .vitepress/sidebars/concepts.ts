@@ -6,19 +6,19 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Introduction",
-        link: "/concepts/",
+        link: "/app/concepts/",
       },
       {
         text: "CLI vs Desktop",
-        link: "/concepts/cli_vs_desktop",
+        link: "/app/concepts/cli_vs_desktop",
       },
       {
         text: "Instances & Authentication",
-        link: "/concepts/instances",
+        link: "/app/concepts/instances",
       },
       {
         text: "Using Caido Offline",
-        link: "/concepts/offline",
+        link: "/app/concepts/offline",
       },
     ],
   },
@@ -27,11 +27,11 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "GraphQL",
-        link: "/concepts/graphql",
+        link: "/app/concepts/graphql",
       },
       {
         text: "Cloud",
-        link: "/concepts/cloud",
+        link: "/app/concepts/cloud",
       },
     ],
   },
@@ -40,11 +40,11 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Proxying Web Traffic",
-        link: "/concepts/web_traffic",
+        link: "/app/concepts/web_traffic",
       },
       {
         text: "Traffic Splitting",
-        link: "/concepts/traffic_splitting",
+        link: "/app/concepts/traffic_splitting",
       },
     ],
   },
@@ -53,19 +53,19 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "What are Workflows?",
-        link: "/concepts/workflows_intro",
+        link: "/app/concepts/workflows_intro",
       },
       {
         text: "Understanding Nodes",
-        link: "/concepts/workflows_nodes",
+        link: "/app/concepts/workflows_nodes",
       },
       {
         text: "Writing JavaScript",
-        link: "/concepts/workflows_js",
+        link: "/app/concepts/workflows_js",
       },
       {
         text: "Workflow Operation",
-        link: "/concepts/workflow_flow",
+        link: "/app/concepts/workflow_flow",
       },
     ],
   },

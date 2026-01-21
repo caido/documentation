@@ -6,27 +6,27 @@ export const troubleshootingSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Introduction",
-        link: "/troubleshooting/",
+        link: "/app/troubleshooting/",
       },
       {
         text: "Download Issues",
-        link: "/troubleshooting/download",
+        link: "/app/troubleshooting/download",
       },
       {
         text: "Installation Issues",
-        link: "/troubleshooting/installation",
+        link: "/app/troubleshooting/installation",
       },
       {
         text: "Startup Issues",
-        link: "/troubleshooting/startup",
+        link: "/app/troubleshooting/startup",
       },
       {
         text: "Login Issues",
-        link: "/troubleshooting/authentication",
+        link: "/app/troubleshooting/authentication",
       },
       {
         text: "In-app Issues",
-        link: "/troubleshooting/in_app",
+        link: "/app/troubleshooting/in_app",
       },
     ],
   },
@@ -35,11 +35,11 @@ export const troubleshootingSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Enabling Debug Mode",
-        link: "/troubleshooting/debugging",
+        link: "/app/troubleshooting/debugging",
       },
       {
         text: "Submitting a Report",
-        link: "/troubleshooting/report_bug",
+        link: "/app/troubleshooting/report_bug",
       },
     ],
   },

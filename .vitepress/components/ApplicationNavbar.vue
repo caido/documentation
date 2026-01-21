@@ -16,7 +16,7 @@ const isActive = (link: string) => {
   const currentPath = route.path;
   // Handle exact matches and path prefixes
   if (link === currentPath) return true;
-  // Handle directory matches (e.g., /quickstart/ matches /quickstart/setup)
+  // Handle directory matches (e.g., /app/quickstart/ matches /app/quickstart/setup)
   if (link.endsWith("/") && currentPath.startsWith(link)) return true;
   return false;
 };

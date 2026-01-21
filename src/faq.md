@@ -36,7 +36,7 @@ You can ask for support and submit feature requests through our public <a href="
 
 ## How do I gain access to the dedicated Discord support channels?
 
-Caido Individual and Team level subscriptions come with prioritized customer support. To access these channels, you must first [link your Discord account](/guides/discord.md).
+Caido Individual and Team level subscriptions come with prioritized customer support. To access these channels, you must first [link your Discord account](/app/guides/discord.md).
 
 ## What is the difference between Caido CLI and Caido Desktop?
 

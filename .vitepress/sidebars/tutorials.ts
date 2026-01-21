@@ -6,7 +6,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Introduction",
-        link: "/tutorials/",
+        link: "/app/tutorials/",
       },
     ],
   },
@@ -15,11 +15,11 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Invisible Proxying",
-        link: "/tutorials/invisible_proxy",
+        link: "/app/tutorials/invisible_proxy",
       },
       {
         text: "Exposing an Instance to the Internet",
-        link: "/tutorials/instance_internet",
+        link: "/app/tutorials/instance_internet",
       },
     ],
   },
@@ -31,15 +31,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         items: [
           {
             text: "Android Setup and Configuration",
-            link: "/tutorials/android_configuration",
+            link: "/app/tutorials/android_configuration",
           },
           {
             text: "Adding Caido's CA Certificate to the System-Store",
-            link: "/tutorials/add_certificate",
+            link: "/app/tutorials/add_certificate",
           },
           {
             text: "Modifying an Android Application",
-            link: "/tutorials/modifying_apk",
+            link: "/app/tutorials/modifying_apk",
           },
         ],
       },
@@ -48,7 +48,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         items: [
           {
             text: "iOS Setup and Configuration",
-            link: "/tutorials/ios_configuration",
+            link: "/app/tutorials/ios_configuration",
           },
         ],
       },
@@ -59,19 +59,19 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Autorize",
-        link: "/tutorials/autorize",
+        link: "/app/tutorials/autorize",
       },
       {
         text: "Scanner",
-        link: "/tutorials/scanner",
+        link: "/app/tutorials/scanner",
       },
       {
         text: "Shift",
-        link: "/tutorials/shift",
+        link: "/app/tutorials/shift",
         items: [
           {
             text: "Using LiteLLM with Shift",
-            link: "/tutorials/litellm",
+            link: "/app/tutorials/litellm",
           },
         ],
       },
@@ -82,7 +82,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Enable Feature Flags",
-        link: "/tutorials/feature_flags",
+        link: "/app/tutorials/feature_flags",
       },
     ],
   },
@@ -91,31 +91,31 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Send a Notification to Discord",
-        link: "/tutorials/discord_notification",
+        link: "/app/tutorials/discord_notification",
       },
       {
         text: "Add a Header",
-        link: "/tutorials/add_header",
+        link: "/app/tutorials/add_header",
       },
       {
         text: "Color Request Rows",
-        link: "/tutorials/color_requests",
+        link: "/app/tutorials/color_requests",
       },
       {
         text: "Refresh Authentication",
-        link: "/tutorials/refresh_authentication",
+        link: "/app/tutorials/refresh_authentication",
       },
       {
         text: "Decode a JWT",
-        link: "/tutorials/decode_jwt",
+        link: "/app/tutorials/decode_jwt",
       },
       {
         text: "MD5 Hash",
-        link: "/tutorials/md5_hash",
+        link: "/app/tutorials/md5_hash",
       },
       {
         text: "Resign AWS Requests",
-        link: "/tutorials/aws_signature",
+        link: "/app/tutorials/aws_signature",
       },
     ],
   },
