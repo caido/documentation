@@ -21,7 +21,7 @@ Actively applied advanced options are listed below the table.
 <img alt="The applied filters list." src="/_images/http_history_applied.png" center>
 
 ::: tip
-View the [HTTPQL reference](/reference/httpql.md) to learn how to filter traffic based on certain traits.
+View the [Writing HTTPQL Queries](/guides/filters_httpql.md) guide to learn how to filter traffic based on certain traits.
 :::
 
 <div class="video small">

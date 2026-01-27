@@ -6,7 +6,7 @@ description: "Learn how to configure and use the Autorize plugin for automated a
 
 [Autorize](https://github.com/caido-community/autorize) is Caido's official authorization/access control vulnerability testing plugin.
 
-In this tutorial you will learn how to configure the plugin to conduct both passive and active scanning against a intentionally vulnerable application from Caido's Web Security Labs.
+In this tutorial you will learn how to configure the plugin to conduct both passive and active scanning.
 
 ::: info
 Autorize is available for [installation](/guides/plugins_installing.md) in the `Official` tab of the Plugin interface.
@@ -22,9 +22,13 @@ Autorize creates templates for proxied requests that are modified to simulate re
 
 By comparing the corresponding responses of these requests to each other, Autorize is able to determine if low-privilege or unauthenticated users are able to access the same resources or functionality available to the high-privilege user.
 
-## Autorize Lab Walkthrough
+## Autorize IDOR Testing Lab Walkthrough
 
-The Autorize Lab features registered accounts for two users: John and Bob.
+<LabContainer>
+Learn how to use this plugin in a hands-on, simulated training environment: <a href="https://labs.cai.do/autorize.php">Autorize IDOR Testing Lab</a>
+</LabContainer>
+
+The Autorize IDOR Testing Lab features registered accounts for two users: John and Bob.
 
 By designating John as the low-privilege user and Bob as the high-privilege user, we will use Autorize passively test for authorization vulnerabilities against API endpoints that return sensitive account data based on the `user_id` query parameter:
 

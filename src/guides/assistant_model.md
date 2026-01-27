@@ -5,7 +5,7 @@ description: "A step-by-step guide to changing the LLM model in Caido's AI Assis
 # Changing the LLM Model
 
 <ProContainer>
-The <b>Assistant</b> are only available to users with Individual or Team tier subscriptions.
+The <b>Assistant</b> is only available to users with Individual or Team tier subscriptions.
 </ProContainer>
 
 ::: warning

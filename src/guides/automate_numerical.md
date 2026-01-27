@@ -21,3 +21,7 @@ To account for multi-digit numbers, ensure to set an appropriate value for the `
 Once the configuration has been made, **click** on the `Run` button to launch the Automate session. A new tab will be generated that contains a traffic table of the payload requests. To view the results of the session, **click** on this paired tab.
 
 <img alt="The traffic table of Automate session requests." src="/_images/automate_numbers_results.png" center/>
+
+::: info
+If `Close Connection` is disabled in the `Settings` tab, the TCP connection is maintained through the session until it is terminated by the server.
+:::

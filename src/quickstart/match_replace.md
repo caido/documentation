@@ -22,4 +22,8 @@ The `Match & Replace` interface gives you the ability to create rules that will 
 - [Testing Rules](/guides/match_replace_testing.md)
 :::
 
+<LabContainer>
+Learn how to use this feature in a hands-on, simulated training environment: <a href="https://labs.cai.do/matchAndReplace.php">Match & Replace Lab</a>
+</LabContainer>
+
 <img alt="The Match & Replace interface." src="/_images/match_replace_interface.png" center>

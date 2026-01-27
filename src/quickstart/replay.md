@@ -21,4 +21,11 @@ The `Replay` interface gives you the ability to create, modify, and send individ
 - [Using Environment Variables in Replay](/guides/replay_environment_variables.md)
 :::
 
+<LabContainer>
+Learn how to use this feature in hands-on, simulated training environments:<br>
+- <a href="https://labs.cai.do/csrfContentType.php">CSRF via Content-Type Lab</a><br>
+- <a href="https://labs.cai.do/xss.php">Reflected XSS Lab</a><br>
+- <a href="https://labs.cai.do/sqlInjection.php">SQL Injection Lab</a>
+</LabContainer>
+
 <img alt="The Replay interface." src="/_images/replay_interface.png" center>

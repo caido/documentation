@@ -16,6 +16,10 @@ HTTPQL query statements filter either requests (`req`), responses (`resp`), or s
 These statements will serve as a starting point for your HTTPL queries. View the full [HTTPQL](/reference/httpql.md) reference to customize your query statements to achieve the intended results.
 :::
 
+<LabContainer>
+Learn how to use this feature in a hands-on, simulated training environment: <a href="https://labs.cai.do/tooManyRequests.php">Too Many Request Lab</a>
+</LabContainer>
+
 ## Filtering Requests by Host
 
 To filter requests made to `example.com`, use the `host` field.
