@@ -86,3 +86,7 @@ The Matrix strategy will test all the possible combinations of payload values ac
 | 7       | username=`chriscremesure`&password=`password` |
 | 8       | username=`chriscremesure`&password=`admin`    |
 | 9       | username=`chriscremesure`&password=`123`      |
+
+::: info
+If `Close Connection` is disabled in the `Settings` tab, the TCP connection is maintained through the session until it is terminated by the server.
+:::
