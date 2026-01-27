@@ -10,7 +10,7 @@ When referencing a node's data for use in another, the types must be compatible 
 
 ## Data Type Conversions
 
-Data can be shared across nodes as long as the types are `Exact` (expected) or are `Compatible` based on the following conversions:
+Data can be shared across nodes as long as the types are `Exact` (_expected_) or are `Compatible` based on the following conversions:
 
 ::: tip
 You can view the data type by **clicking** on a node and viewing the value within the parenthesis. This will be above the reference data drop-down menu.
@@ -61,6 +61,23 @@ Integers are compatible with:
 | Bool | Is `true` if integer is `1` - `false` if `0`. |
 | Bytes | Converted to string loosely, supports hex (`0x`), binary (`0b`), octal (`0o`), supports sign (`+`, `-`). |
 | String | Parsed from string, supports hex (`0x`), binary (`0b`), octal (`0o`), supports sign (`+`, `-`). |
+
+### Float
+
+Floats are compatible with:
+
+| Type | Description |
+|------|-------------|
+| Integer | Converted to float (e.g., `1` becomes `1.0`). |
+| String | Parsed from string as decimal number, supports scientific notation and sign (`+`, `-`). |
+
+### Map
+
+There is no conversion besides their own.
+
+### Array
+
+There is no conversion besides their own.
 
 ### Request & Responses
 

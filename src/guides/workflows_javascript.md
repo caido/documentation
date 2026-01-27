@@ -8,13 +8,41 @@ These code blocks will serve as a starting point for your workflow scripts. View
 
 ## Input
 
-The data made available to the node is passed as the `input` parameter and can either be:
+The data made available to the node is dependant on the workflow type and is passed as the `input` parameter and can either be:
 
-- `BytesInput`: An array of bytes represented in decimal notation.
-- `HttpInput`: Request and response object pairs for passive/active workflows.
+### NodeInput (Convert)
+
+```ts
+export type NodeInput = {
+  data?: Bytes; // An array of bytes represented in decimal notation.
+  extra?: Record<string, any>;
+};
+```
+
+### NodeInputHTTP (Passive/Active)
+
+```ts
+export type NodeInputHTTP = {
+  request?: Request; // An object representation of an HTTP request.
+  response?: Response; // An object representation of an HTTP response.
+  extra?: Record<string, any>;
+};
+```
+
+---
+
+The JavaScript node can receive additional input via `extra?: Record<string, any>;` from either the [output of an upstream node](/guides/workflows_references.md) or static input of type:
+
+- `String`
+- `Integer`
+- `Float`
+- `Boolean`
+- `Bytes`
+- `Map`
+- `Array`
 
 ::: tip
-View the [Passing Data Between Nodes](/guides/workflows_references.md) guide to learn how to use the output of a workflow node as the input of a connected downstream node.
+View the [Additional Input](#additional-input) section for examples.
 :::
 
 ## SDK
@@ -22,23 +50,22 @@ View the [Passing Data Between Nodes](/guides/workflows_references.md) guide to 
 The [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/) is made available to the node via the `sdk` parameter, which provides a variety of methods to convert data, interact with proxied traffic, and carry out actions within Caido.
 
 ::: code-group
-```js [Passive/Active Workflows]
-/**
- * @param {HttpInput} input
- * @param {SDK} sdk
- * @returns {MaybePromise<Data | undefined>}
- */
-export async function run({ request, response }, sdk) {}
-```
-
 ```js [Convert Workflows]
 /**
- * @param {BytesInput} input
+ * @param {NodeInput} input
  * @param {SDK} sdk
- * @returns {MaybePromise<Data>}
+ * @returns {MaybePromise<NodeResult | Data>}
  */
-export function run(input, sdk) {}
+export function run({ data, extra }, sdk) {}
+```
 
+```js [Passive/Active Workflows]
+/**
+ * @param {NodeInputHTTP} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<NodeResult | Data | undefined>}
+ */
+export async function run({ request, response, extra }, sdk) {}
 ```
 :::
 
@@ -47,7 +74,7 @@ export function run(input, sdk) {}
 To log messages to the backend logs, access the various level methods via the `sdk.console` object.
 
 ```js
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   sdk.console.debug('Debug message.');
   sdk.console.error('Error message.');
   sdk.console.log('Log message.');
@@ -98,8 +125,8 @@ To output byte data as a string, use the `.asString()` method.
 ### Convert Bytes to a String
 
 ```js
-export function run(input, sdk) {
-  let parsed = sdk.asString(input);
+export function run({ data, extra }, sdk) {
+  let parsed = sdk.asString(data);
   sdk.console.log(parsed);
 
   return parsed;
@@ -114,7 +141,7 @@ The `request` and `response` object types provide a variety of methods for handl
 
 ::: code-group
 ```js [Current Request Elements]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     sdk.console.log(`${request.getId()}`);
     sdk.console.log(`${request.getCreatedAt()}`);
@@ -132,7 +159,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Current Request Headers]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let headers = request.getHeaders();
     sdk.console.log(JSON.stringify(headers, null, 2));
@@ -143,7 +170,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Current Full Request]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     sdk.console.log(`${request.getRaw().toBytes()}`);
     sdk.console.log(`${request.getRaw().toText()}`);
@@ -152,7 +179,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Full Requests from Project by HTTPQL Query]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   const page = await sdk.requests
     .query()
     .filter('req.host.eq:"example.com"')
@@ -175,7 +202,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Current Response Elements]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (response) {
     sdk.console.log(`${response.getId()}`);
     sdk.console.log(`${response.getCreatedAt()}`);
@@ -188,7 +215,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Current Response Headers]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (response) {
     let headers = response.getHeaders();
     sdk.console.log(JSON.stringify(headers, null, 2));
@@ -199,7 +226,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Current Full Response]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (response) {
     sdk.console.log(`${response.getRaw().toBytes()}`);
     sdk.console.log(`${response.getRaw().toText()}`);
@@ -208,7 +235,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Full Responses from Project by HTTPQL Query]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   const page = await sdk.requests
     .query()
     .filter('req.host.eq:"example.com"')
@@ -231,7 +258,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Current Request and Response Elements]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let requestId = request.getId();
     
@@ -266,7 +293,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Current Full Request and Response]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let requestId = request.getId();
     
@@ -288,7 +315,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Full Requests and Responses from Project by HTTPQL Query]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   const page = await sdk.requests
     .query()
     .filter('req.host.eq:"example.com"')
@@ -316,7 +343,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Filter by Request Element]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let requestPath = request.getPath();
 
   if (requestPath === '/api/user') {
@@ -327,7 +354,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Filter by Response Element]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let responseCode = response.getCode();
 
   if (responseCode === 200) {
@@ -338,7 +365,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Check if Request is in Scope]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     if (sdk.requests.inScope(request)) {
       sdk.console.log(`${request.getHost()} is in scope.`);
@@ -350,7 +377,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Match Request Against HTTPQL Query]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let matchesFilter = sdk.requests.matches(
       'req.method.eq:"POST" AND req.path.cont:"/api/"',
@@ -377,7 +404,7 @@ export async function run({ request, response }, sdk) {
 ### Creating and Sending a Request
 
 ```js
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = new RequestSpec('https://example.com/endpoint?parameter=value');
     // Caido will infer the scheme, host, path, and query from the URL parameter.
@@ -393,7 +420,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Request Elements]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = request.toSpec();
     let method = spec.setMethod('GET');
@@ -410,7 +437,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Removing a Header]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = request.toSpec();
     spec.removeHeader('If-None-Match');
@@ -425,7 +452,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [String]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = request.toSpec();
     let body = new Body('{"parameter":"value"}');
@@ -439,7 +466,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Number]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = request.toSpec();
     let body = new Body([123, 34, 112, 97, 114, 97, 109, 101, 116, 101, 114, 34, 58, 34, 118, 97, 108, 117, 101, 34, 125]);
@@ -452,7 +479,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Uint8Array]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let spec = request.toSpec();
     let body = new Body(new Uint8Array([123, 34, 112, 97, 114, 97, 109, 101, 116, 101, 114, 34, 58, 34, 118, 97, 108, 117, 101, 34, 125]));
@@ -469,7 +496,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Request Body]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     try {
       let body = request.getBody();
@@ -487,7 +514,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Response Body]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (response) {
     try {
       let body = response.getBody();
@@ -515,7 +542,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Default Collection]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let session = await sdk.replay.createSession(request);
     sdk.console.log(`Created replay session with ID: ${session.getId()}`);
@@ -524,7 +551,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [First Custom Collection]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let collections = await sdk.replay.getCollections();
     let session = await sdk.replay.createSession(request, collections[1]);
@@ -535,7 +562,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Custom Collection by Name]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let collections = await sdk.replay.getCollections();
     
@@ -560,7 +587,7 @@ The `findings` interface provides methods for handling findings.
 
 ::: code-group
 ```js [Creating a Finding]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {  
     let finding = {
       title: `Request Monitor Passive Workflow.`,
@@ -574,7 +601,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Avoiding Duplicates]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {  
     let finding = {
       title: `Request Monitor Passive Workflow.`,
@@ -601,7 +628,7 @@ export async function run({ request, response }, sdk) {
 ::: code-group
 ```js [Last Finding for Request by Reporter]
 // Active workflow selected via request context menu.
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     // Get finding for this request from "Request Monitor" reporter
     let finding = await sdk.findings.get({
@@ -624,7 +651,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Most Recent Finding]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   const result = await sdk.graphql.execute(`
     query GetMostRecentFinding {
       findings(first: 1, order: { by: CREATED_AT, ordering: DESC }) {
@@ -665,7 +692,7 @@ The `projects` interface returns data about your Caido projects.
 ### Obtaining Project Data
 
 ```js
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let currentProject = await sdk.projects.getCurrent();
   
   sdk.console.log(`Project ID: ${currentProject.getId()}`);
@@ -683,7 +710,7 @@ The `env` interface provides methods for handling environment variables across t
 ### Set an Environment Variable
 
 ```js [Set Environment Variable]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (response) {
     let body = response.getBody();
     let jsonData = body.toJson();
@@ -706,7 +733,7 @@ export async function run({ request, response }, sdk) {
 ### Obtain Environment Variable Data
 
 ```js [Get All Variables]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let variables = sdk.env.getVars();
   
   sdk.console.log(`Found ${variables.length} environment variables:`);
@@ -723,7 +750,7 @@ export async function run({ request, response }, sdk) {
 ### Use an Environment Variable
 
 ```js
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let apiKey = sdk.env.getVar('API_KEY');
   
@@ -754,7 +781,7 @@ The `scope` interface provides methods for handling scope presets in your projec
 
 ::: code-group
 ```js [All Scope Names]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let scopes = await sdk.scope.getAll();
   
   scopes.forEach(scope => {
@@ -764,7 +791,7 @@ export async function run({ request, response }, sdk) {
 ```
 
 ```js [Scope Details]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   let scopes = await sdk.scope.getAll();
   
   scopes.forEach(scope => {
@@ -782,7 +809,7 @@ export async function run({ request, response }, sdk) {
 
 ::: code-group
 ```js [Adding a Domain to the Denylist]
-export async function run({ request, response }, sdk) {
+export async function run({ request, response, extra }, sdk) {
   if (request) {
     let host = request.getHost();
     
@@ -834,3 +861,64 @@ export async function run({ request, response }, sdk) {
 :::
 
 <img alt="Update scope preset denylist console log." src="/_images/workflows_update_denylist.png" center>
+
+## Additional Input
+
+The `Extra (map)` configuration provides additional data as input.
+
+### Referencing Output of an Upstream Node
+
+To include the output data of an upstream node **click** on the <code><Icon icon="fas fa-i-cursor" /></code> button to the right of `Extra (map)` and type in a key name.
+
+Then, **click** on the <code><Icon icon="fas fa-link" /></code> button to the right of the key and select the output data alias of the upstream node.
+
+For example, to use the output of a `Shell` node (_in this case `echo 'Shell STDOUT'`_) the configuration will resemble:
+
+<img alt="Upstream node output configuration." src="/_images/additional_data_upstream.png" center>
+
+The data can then be referenced as a property of the `extra` input parameter (_in this case `extra.stdout`_):
+
+```js
+export async function run({ request, response, extra }, sdk) {
+  if (request) {
+    let host = request.getHost();
+    let additional = sdk.asString(extra.stdout);
+    sdk.console.log(`${host}-${additional}`);
+  }
+  return { data: null, extra };
+}
+```
+
+<img alt="Upstream node output configuration." src="/_images/additional_data_upstream_result.png" center>
+
+### Static Data
+
+To include additional static data **click** on the <code><Icon icon="fas fa-i-cursor" /></code> button to the right of `Extra (map)` and type in a key name.
+
+Then, **click** on the <code><Icon icon="fas fa-i-cursor" /></code> button to the right of the key and select the data type from the drop-down menu.
+
+For example, to use elements in an array (_in this case strings `B` and `C`_) the configuration will resemble:
+
+<img alt="Upstream node output configuration." src="/_images/additional_data_static.png" center>
+
+The data can then be referenced as a property of the `extra` input parameter (_in this case `extra.elements[0]` and `extra.elements[1]`_):
+
+```js
+/**
+ * @param {NodeInput} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<NodeResult | Data>}
+ */
+export function run({ data, extra }, sdk) {
+  let input = sdk.asString(data);
+  let first = sdk.asString(extra.elements[0]);
+  let second = sdk.asString(extra.elements[1]);
+  sdk.console.log(`Additional static data concat: ${input}-${first}-${second}`);
+  return {
+    data: `${input}-${first}-${second}`,
+    extra
+  };
+}
+```
+
+<img alt="Upstream node output configuration." src="/_images/additional_data_static_result.png" center>
