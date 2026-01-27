@@ -46,6 +46,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/reference/workflow_data_types",
       },
       {
+        text: "Interpolation",
+        link: "/reference/workflow_interpolation",
+      },
+      {
         text: "SDK",
         link: "https://developer.caido.io/reference/sdks/workflow/",
       },
