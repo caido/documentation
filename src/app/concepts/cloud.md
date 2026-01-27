@@ -20,7 +20,7 @@ The data collected upon account registration (_name, email address, and user-age
 
 - Billing on a per-user basis rather than per-license, so Caido can be installed on multiple devices.
 - Access control to facilitate collaboration on instances belonging to the same account workspace.
-- Complementary services such as the [Assistant](/quickstart/assistant.md) and sharing capabilities (_planned for a future release_).
+- Complementary services such as the [Assistant](/app/quickstart/assistant.md) and sharing capabilities (_planned for a future release_).
 
 ::: info
 Accounts can **always** be deleted upon request by contacting us at `security[at]caido.io`.

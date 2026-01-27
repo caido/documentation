@@ -31,7 +31,7 @@ export type NodeInputHTTP = {
 
 ---
 
-The JavaScript node can receive additional input via `extra?: Record<string, any>;` from either the [output of an upstream node](/guides/workflows_references.md) or static input of type:
+The JavaScript node can receive additional input via `extra?: Record<string, any>;` from either the [output of an upstream node](/app/guides/workflows_references.md) or static input of type:
 
 - `String`
 - `Integer`

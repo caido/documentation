@@ -8,8 +8,8 @@ Interpolation enables dynamic content generation within workflow nodes by
 embedding [JavaScript](#javascript-engine) expressions in text. Those
 expressions can take the following shapes:
 
-1. [Inline](#inline-evaluation)
-2. [Code Blocks](#tagged-code-blocks)
+- [Inline](#inline-evaluation)
+- [Code Blocks](#tagged-code-blocks)
 
 ## Inline Evaluation
 
@@ -65,21 +65,18 @@ simple `<% variable %>` interpolations for improved readability.
 
 ## Javascript Engine
 
-Interpolation uses Caido's JavaScript runtime environment. See [JavaScript in
-Workflows](/concepts/workflows_js) for understanding JavaScript concepts in
-workflows and refer to the [Runtime
-documentation](https://developer.caido.io/concepts/runtime.html) for detailed
+Interpolation uses [Caido's JavaScript runtime environment](/app/concepts/workflows_js.md). Refer to the [runtime documentaion](https://developer.caido.io/concepts/runtime.html) for detailed
 technical specifications.
 
-### Accessing previous nodes
+### Accessing Previous Nodes
 
 All previous node outputs within a workflow are accessible using their
-[alias](/concepts/workflows_nodes.html#aliases), allowing interpolation to use
+[alias](/app/concepts/workflows_nodes.html#aliases), allowing interpolation to use
 values from earlier nodes in the workflow chain.
 
-### Shared context
+### Shared Context
 
-All Interpolable fields within a workflow node share the same execution context
+All interpolable fields within a workflow node share the same execution context
 which entails the following:
 
 - **Execution Order**: Interpolations execute sequentially in the order they

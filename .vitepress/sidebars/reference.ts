@@ -47,7 +47,7 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Interpolation",
-        link: "/reference/workflow_interpolation",
+        link: "/app/reference/workflow_interpolation",
       },
       {
         text: "SDK",
