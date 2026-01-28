@@ -18,6 +18,7 @@
   "include": [
     "./.vitepress/**/*.ts",
     "./.vitepress/**/*.vue",
-    "./.vitepress/**/*.mts"
+    "./.vitepress/**/*.mts",
+    "./.vitepress/**/*.d.ts"
   ]
 }

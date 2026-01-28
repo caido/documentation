@@ -6,31 +6,31 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Introduction",
-        link: "/reference/",
+        link: "/app/reference/",
       },
       {
         text: "Burp Suite vs Caido",
-        link: "/reference/burp_vs_caido",
+        link: "/app/reference/burp_vs_caido",
       },
       {
         text: "CLI Options",
-        link: "/reference/cli",
+        link: "/app/reference/cli",
       },
       {
         text: "Command Shortcuts",
-        link: "/reference/command_shortcuts",
+        link: "/app/reference/command_shortcuts",
       },
       {
         text: "Context Menu Options",
-        link: "/reference/context_menu",
+        link: "/app/reference/context_menu",
       },
       {
         text: "HTTPQL",
-        link: "/reference/httpql",
+        link: "/app/reference/httpql",
       },
       {
         text: "Match & Replace",
-        link: "/reference/match_replace",
+        link: "/app/reference/match_replace",
       },
     ],
   },
@@ -39,15 +39,15 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Nodes",
-        link: "/reference/workflow_nodes",
+        link: "/app/reference/workflow_nodes",
       },
       {
         text: "Node Data Types",
-        link: "/reference/workflow_data_types",
+        link: "/app/reference/workflow_data_types",
       },
       {
         text: "Interpolation",
-        link: "/reference/workflow_interpolation",
+        link: "/app/reference/workflow_interpolation",
       },
       {
         text: "SDK",
@@ -60,11 +60,11 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Data Storage",
-        link: "/reference/data_storage",
+        link: "/app/reference/data_storage",
       },
       {
         text: "Download Links",
-        link: "/reference/download_links",
+        link: "/app/reference/download_links",
       },
     ],
   },

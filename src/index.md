@@ -1,5 +1,5 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+# https://vitepress.dev/app/reference/default-theme-home-page
 layout: home
 description: "Caido - A lightweight web security auditing toolkit for penetration testing and security research."
 
@@ -13,7 +13,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /quickstart/
+      link: /app/quickstart/
+    - theme: alt
+      text: Dashboard 
+      link: /dashboard/
     - theme: alt
       text:  Build Plugins 
       link: https://developer.caido.io
@@ -22,17 +25,17 @@ features:
   - icon: 📖
     title: How-to Guides
     details: Step-by-step instructions to accomplish common tasks.
-    link: /guides/
+    link: /app/guides/
   - icon: 🎓
     title: Tutorials
     details: Hands-on learning experiences that teach you through practical examples.
-    link: /tutorials/
+    link: /app/tutorials/
   - icon: 📚
     title: Reference
     details: Detailed technical information on Caido's features and capabilities.
-    link: /reference/
+    link: /app/reference/
   - icon: 💡
     title: Concepts
     details: Explanations of key principles to help you understand how Caido works.
-    link: /concepts/
+    link: /app/concepts/
 ---

@@ -8,9 +8,11 @@ import Mermaid from "../components/Mermaid.vue";
 import ProContainer from "../components/Pro.vue";
 
 import "./custom.css";
+import Layout from "./Layout.vue";
 
 export default {
   extends: DefaultTheme,
+  Layout,
   enhanceApp({ app }) {
     library.add(fas);
     app.component("ProContainer", ProContainer);

@@ -1,9 +1,12 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
+import type { DefaultTheme } from "vitepress";
+
 import MermaidExample from "./mermaid";
 import {
   conceptsSidebar,
+  dashboardSidebar,
   guidesSidebar,
   quickstartSidebar,
   referenceSidebar,
@@ -64,22 +67,23 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Get Started", link: "/quickstart/" },
-      { text: "How-to Guides", link: "/guides/" },
-      { text: "Tutorials", link: "/tutorials/" },
-      { text: "Reference", link: "/reference/" },
-      { text: "Concepts", link: "/concepts/" },
-      { text: "FAQ", link: "/faq" },
-      { text: "Troubleshooting", link: "/troubleshooting" },
-    ],
+      {
+        text: "Application",
+        link: "/app/quickstart/",
+        activeMatch: "^/app(/.*)?$",
+      },
+      { text: "Dashboard", link: "/dashboard/", activeMatch: "^/dashboard(/|$)" },
+      { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },
+    ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
-      "/quickstart/": quickstartSidebar,
-      "/reference/": referenceSidebar,
-      "/guides/": guidesSidebar,
-      "/concepts/": conceptsSidebar,
-      "/tutorials/": tutorialsSidebar,
-      "/troubleshooting/": troubleshootingSidebar,
+      "/app/quickstart/": quickstartSidebar,
+      "/app/reference/": referenceSidebar,
+      "/app/guides/": guidesSidebar,
+      "/app/concepts/": conceptsSidebar,
+      "/app/tutorials/": tutorialsSidebar,
+      "/app/troubleshooting/": troubleshootingSidebar,
+      "/dashboard/": dashboardSidebar,
     },
 
     outline: {

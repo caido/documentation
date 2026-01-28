@@ -6,109 +6,109 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       {
         text: "Introduction",
-        link: "/quickstart/",
+        link: "/app/quickstart/",
       },
       {
         text: "Installation",
         items: [
           {
             text: "Windows",
-            link: "/quickstart/windows",
+            link: "/app/quickstart/windows",
           },
           {
             text: "Linux",
-            link: "/quickstart/linux",
+            link: "/app/quickstart/linux",
           },
           {
             text: "macOS",
-            link: "/quickstart/mac",
+            link: "/app/quickstart/mac",
           },
         ],
       },
       {
         text: "Setup & Next Steps",
-        link: "/quickstart/setup",
+        link: "/app/quickstart/setup",
       },
       {
         text: "Features Overview",
         items: [
           {
             text: "Sitemap",
-            link: "/quickstart/sitemap",
+            link: "/app/quickstart/sitemap",
           },
           {
             text: "Scopes",
-            link: "/quickstart/scopes",
+            link: "/app/quickstart/scopes",
           },
           {
             text: "Filters",
-            link: "/quickstart/filters",
+            link: "/app/quickstart/filters",
           },
           {
             text: "Intercept",
-            link: "/quickstart/intercept",
+            link: "/app/quickstart/intercept",
           },
           {
             text: "HTTP History",
-            link: "/quickstart/http_history",
+            link: "/app/quickstart/http_history",
           },
           {
             text: "WS History",
-            link: "/quickstart/ws_history",
+            link: "/app/quickstart/ws_history",
           },
           {
             text: "Match & Replace",
-            link: "/quickstart/match_replace",
+            link: "/app/quickstart/match_replace",
           },
           {
             text: "Replay",
-            link: "/quickstart/replay",
+            link: "/app/quickstart/replay",
           },
           {
             text: "Automate",
-            link: "/quickstart/automate",
+            link: "/app/quickstart/automate",
           },
           {
             text: "Workflows",
-            link: "/quickstart/workflows",
+            link: "/app/quickstart/workflows",
           },
           {
             text: "Assistant",
-            link: "/quickstart/assistant",
+            link: "/app/quickstart/assistant",
           },
           {
             text: "Environment",
-            link: "/quickstart/environment",
+            link: "/app/quickstart/environment",
           },
           {
             text: "Search",
-            link: "/quickstart/search",
+            link: "/app/quickstart/search",
           },
           {
             text: "Findings",
-            link: "/quickstart/findings",
+            link: "/app/quickstart/findings",
           },
           {
             text: "Exports",
-            link: "/quickstart/exports",
+            link: "/app/quickstart/exports",
           },
           {
             text: "Files",
-            link: "/quickstart/files",
+            link: "/app/quickstart/files",
           },
           {
             text: "Plugins",
-            link: "/quickstart/plugins",
+            link: "/app/quickstart/plugins",
           },
           {
             text: "Workspace",
-            link: "/quickstart/workspace",
+            link: "/app/quickstart/workspace",
           },
         ],
       },
       {
         text: "Support",
-        link: "/quickstart/support",
+        link: "/app/quickstart/support",
       },
     ],
   },
