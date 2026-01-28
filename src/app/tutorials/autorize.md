@@ -24,7 +24,7 @@ By comparing the corresponding responses of these requests to each other, Autori
 
 ## Autorize IDOR Testing Lab Walkthrough
 
-<LabContainer message="Learn how to use this plugin in a hands-on, simulated training environment:" :labs="[{name: 'Autorize IDOR Testing Lab', url: 'https://labs.cai.do/autorize.php'}]" />
+<LabContainer :labs="[{name: 'Autorize IDOR Testing Lab', url: 'https://labs.cai.do/autorize.php'}]" />
 
 The Autorize IDOR Testing Lab features registered accounts for two users: John and Bob.
 
