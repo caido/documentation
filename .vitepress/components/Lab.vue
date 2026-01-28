@@ -4,10 +4,16 @@ interface Lab {
   url: string;
 }
 
-defineProps<{
-  message: string;
-  labs: Lab[];
-}>();
+withDefaults(
+  defineProps<{
+    message?: string;
+    labs: Lab[];
+  }>(),
+  {
+    message:
+      "Learn how to use this feature in hands-on, simulated training environments: ",
+  },
+);
 </script>
 
 <template>
@@ -19,11 +25,11 @@ defineProps<{
         <a :href="labs[0].url">{{ labs[0].name }}</a>
       </template>
       <template v-else>
-        <br />
-        <template v-for="(lab, index) in labs" :key="index">
-          - <a :href="lab.url">{{ lab.name }}</a>
-          <br />
-        </template>
+        <ul>
+          <li v-for="(lab, index) in labs" :key="index">
+            <a :href="lab.url">{{ lab.name }}</a>
+          </li>
+        </ul>
       </template>
     </p>
   </div>
@@ -47,5 +53,6 @@ defineProps<{
     linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
+  pointer-events: none;
 }
 </style>

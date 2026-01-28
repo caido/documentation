@@ -22,6 +22,6 @@ The `Match & Replace` interface gives you the ability to create rules that will 
 - [Testing Rules](/guides/match_replace_testing.md)
 :::
 
-<LabContainer message="Learn how to use this feature in a hands-on, simulated training environment:" :labs="[{name: 'Match & Replace Lab', url: 'https://labs.cai.do/matchAndReplace.php'}]" />
+<LabContainer :labs="[{name: 'Match & Replace Lab', url: 'https://labs.cai.do/matchAndReplace.php'}]" />
 
 <img alt="The Match & Replace interface." src="/_images/match_replace_interface.png" center>
