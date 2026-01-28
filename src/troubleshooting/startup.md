@@ -73,3 +73,11 @@ Then, launch Caido through XWayland.
 ```bash
 env ELECTRON_OZONE_PLATFORM_HINT=x11 ./caido
 ```
+
+## Blank Screen
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter a blank screen in the desktop application, launch Caido with the `--disable-gpu` command-line option.
+
+```bash
+caido --disable-gpu
+```

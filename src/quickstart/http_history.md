@@ -19,4 +19,6 @@ The `HTTP History` interface provides a table that contains all of the HTTP requ
 - [Viewing Modifications](/guides/http_history_modifications.md)
 :::
 
+<LabContainer :labs="[{name: 'HTTP Hunt Lottery Lab', url: 'https://labs.cai.do/http-hunt/index.php'}]" />
+
 <img alt="The HTTP History interface." src="/_images/http_history_interface.png" center>

@@ -13,4 +13,6 @@ description: "A step-by-step guide to resending requests in Caido's Replay featu
 
 To resend a request, **click** on the `Send` button. You can resend requests as many times as you want, allowing you to test how modifications alter the response.
 
+<LabContainer :labs="[{name: 'CSRF via Content-Type Lab', url: 'https://labs.cai.do/csrfContentType.php'}, {name: 'Reflected XSS Lab', url: 'https://labs.cai.do/xss.php'}, {name: 'SQL Injection Lab', url: 'https://labs.cai.do/sqlInjection.php'}, {name: 'SSTI Lab', url: 'https://labs.cai.do/ssti.php'}]" />
+
 <img alt="The result of sending a request in Replay." src="/_images/replay_request_send.png" center>

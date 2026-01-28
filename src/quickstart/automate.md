@@ -24,4 +24,6 @@ The `Automate` interface gives you the ability to send requests programatically.
 - [Avoiding Rate-Limiting Protections](/guides/automate_rate_limiting.md)
 :::
 
+<LabContainer :labs="[{name: 'IDOR Vulnerability Lab', url: 'https://labs.cai.do/idor.php'}, {name: 'Hidden Dashboard Lab', url: 'https://labs.cai.do/hiddenDashboard.php'}]" />
+
 <img alt="The Automate interface." src="/_images/automate_interface.png" center>

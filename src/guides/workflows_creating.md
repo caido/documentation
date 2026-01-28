@@ -4,10 +4,6 @@ description: "A step-by-step guide to creating new workflows in Caido including 
 
 # Creating Workflows
 
-::: tip
-View the Tutorials section of the documentation for detailed walk-throughs on creating a variety of workflows.
-:::
-
 To create a new workflow, select a [workflow type](/concepts/workflows_intro.md) by **clicking** on either the `Passive`, `Active`, or `Convert` tabs and **click** the `+ New workflow` button.
 
 <img alt="The workflow type tabs and + New workflow button." src="/_images/workflows_create.png" center>
@@ -15,6 +11,12 @@ To create a new workflow, select a [workflow type](/concepts/workflows_intro.md)
 Once the workflow is created, you can edit its display name and provide an optional description.
 
 <img alt="The workflow name and description input fields." src="/_images/workflows_name_description.png" center>
+
+::: tip
+View the Tutorials section of the documentation for detailed walk-throughs on creating a variety of workflows.
+:::
+
+<LabContainer :labs="[{name: 'SHASigned Lab', url: 'https://labs.cai.do/shaSigned.php'}, {name: 'Session Monitor Lab', url: 'https://labs.cai.do/sessionMonitor.php'}]" />
 
 ## Adding Nodes
 

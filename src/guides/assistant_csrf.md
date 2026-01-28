@@ -5,8 +5,10 @@ description: "A step-by-step guide to using Caido's AI Assistant to generate Cro
 # Generating CSRF PoCs
 
 <ProContainer>
-The <b>Assistant</b> are only available to users with Individual or Team tier subscriptions.
+The <b>Assistant</b> is only available to users with Individual or Team tier subscriptions.
 </ProContainer>
+
+<LabContainer :labs="[{name: 'CSRF via Content-Type Lab', url: 'https://labs.cai.do/csrfContentType.php'}]" />
 
 ::: warning
 Submitted data is sent to a third-party (OpenAI) and can be stored for up to 30 days. Due to this, **anonymize sensitive data** when using the Assistant. Sensitive data may be unintentionally submitted when using the Assistant context menu options. Before using any context menu option, manually review all content to ensure no sensitive data is included. For more information, review:
