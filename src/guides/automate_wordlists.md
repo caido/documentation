@@ -8,9 +8,7 @@ To use a wordlist of payload values, **click**, **drag**, and **hold** over the 
 
 <img alt="Marking a placeholder." src="/_images/automate_placeholder_wordlist.png" center/>
 
-<LabContainer>
-Learn how to use this feature in a hands-on, simulated training environment: <a href="https://labs.cai.do/hiddenDashboard.php">Hidden Dashboard Lab</a>
-</LabContainer>
+<LabContainer message="Learn how to use this feature in a hands-on, simulated training environment:" :labs="[{name: 'Hidden Dashboard Lab', url: 'https://labs.cai.do/hiddenDashboard.php'}]" />
 
 Once a placeholder has been marked, you will be presented with options in the `Payload` tab. From the `Type` drop-down menu, select either:
 

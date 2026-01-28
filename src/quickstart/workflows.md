@@ -33,10 +33,6 @@ Within the `Workflows` interface, you can construct multi-step processes to exec
 - [Resign AWS Requests Workflow](/tutorials/aws_signature.md)
 :::
 
-<LabContainer>
-Learn how to use this feature in hands-on, simulated training environments:<br>
-- <a href="https://labs.cai.do/shaSigned.php">SHASigned Lab</a><br>
-- <a href="https://labs.cai.do/sessionMonitor.php">Session Monitor Lab</a>
-</LabContainer>
+<LabContainer message="Learn how to use this feature in hands-on, simulated training environments:" :labs="[{name: 'SHASigned Lab', url: 'https://labs.cai.do/shaSigned.php'}, {name: 'Session Monitor Lab', url: 'https://labs.cai.do/sessionMonitor.php'}]" />
 
 <img alt="The Workflows interface." src="/_images/workflows_interface.png" center>
