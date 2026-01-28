@@ -1,29 +1,47 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Lab {
+  name: string;
+  url: string;
+}
+
+defineProps<{
+  message: string;
+  labs: Lab[];
+}>();
+</script>
 
 <template>
-  <div class="c-pro info custom-block">
-    <slot name="title">
-      <p class="custom-block-title">🧪 CAIDO LABS</p>
-    </slot>
+  <div class="c-lab info custom-block">
+    <p class="custom-block-title">🧪 CAIDO LABS</p>
     <p>
-      <slot />
+      {{ message }}
+      <template v-if="labs.length === 1 && labs[0]">
+        <a :href="labs[0].url">{{ labs[0].name }}</a>
+      </template>
+      <template v-else>
+        <br />
+        <template v-for="(lab, index) in labs" :key="index">
+          - <a :href="lab.url">{{ lab.name }}</a>
+          <br />
+        </template>
+      </template>
     </p>
   </div>
 </template>
 
 <style scoped>
-.c-pro {
+.c-lab {
   position: relative;
   backdrop-filter: blur(10px);
 }
 
-.c-pro::before {
+.c-lab::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 8px;
   border: 2px solid transparent;
-  background: linear-gradient(140deg,rgb(219, 51, 234),rgb(59, 209, 246))
+  background: linear-gradient(140deg, rgb(219, 51, 234), rgb(59, 209, 246))
     border-box;
   mask:
     linear-gradient(#fff 0 0) padding-box,

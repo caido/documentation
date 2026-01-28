@@ -16,11 +16,7 @@ Once the workflow is created, you can edit its display name and provide an optio
 View the Tutorials section of the documentation for detailed walk-throughs on creating a variety of workflows.
 :::
 
-<LabContainer>
-Learn how to use this feature in hands-on, simulated training environments:<br>
-- <a href="https://labs.cai.do/shaSigned.php">SHASigned Lab</a><br>
-- <a href="https://labs.cai.do/sessionMonitor.php">Session Monitor Lab</a>
-</LabContainer>
+<LabContainer message="Learn how to use this feature in hands-on, simulated training environments:" :labs="[{name: 'SHASigned Lab', url: 'https://labs.cai.do/shaSigned.php'}, {name: 'Session Monitor Lab', url: 'https://labs.cai.do/sessionMonitor.php'}]" />
 
 ## Adding Nodes
 
