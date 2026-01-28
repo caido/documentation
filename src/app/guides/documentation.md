@@ -12,7 +12,7 @@ You will need a [Github](https://github.com) account, [Git](https://git-scm.com/
 
 ## Creating a Workspace
 
-To contribute to the documentation, first [fork the repository](https://docs.github.com/en/get-started/app/quickstart/fork-a-repo) and create a clone.
+To contribute to the documentation, first [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and create a clone.
 
 ```bash
 git clone https://github.com/<username>/documentation
