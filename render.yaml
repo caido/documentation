@@ -14,6 +14,42 @@ services:
       - type: rewrite
         source: /stats/event
         destination: https://plausible.io/api/event
+      - type: redirect
+        source: /quickstart
+        destination: /app/quickstart/
+      - type: redirect
+        source: /quickstart/*
+        destination: /app/quickstart/*
+      - type: redirect
+        source: /guides
+        destination: /app/guides/
+      - type: redirect
+        source: /guides/*
+        destination: /app/guides/*
+      - type: redirect
+        source: /tutorials
+        destination: /app/tutorials/
+      - type: redirect
+        source: /tutorials/*
+        destination: /app/tutorials/*
+      - type: redirect
+        source: /reference
+        destination: /app/reference/
+      - type: redirect
+        source: /reference/*
+        destination: /app/reference/*
+      - type: redirect
+        source: /concepts
+        destination: /app/concepts/
+      - type: redirect
+        source: /concepts/*
+        destination: /app/concepts/*
+      - type: redirect
+        source: /troubleshooting
+        destination: /app/troubleshooting/
+      - type: redirect
+        source: /troubleshooting/*
+        destination: /app/troubleshooting/*
     domains:
       - docs.caido.io
     envVars:
