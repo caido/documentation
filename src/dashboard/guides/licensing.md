@@ -4,11 +4,7 @@ description: "Learn how to configure payment methods and billing information in 
 
 # Licensing
 
-In order for team members to access workspace instances, each member must claim a licensing "seat" of a Team or Enterprise tier subscription.
-
-::: info
-Caido uses [Paddle](https://www.paddle.com/) for payment processing.
-:::
+In order for team members to access workspace instances, each member must claim a "seat" of your Team or Enterprise tier subscription.
 
 ## Billing
 
@@ -16,7 +12,11 @@ To upgrade your account subscription, click on the <code><Icon icon="fas fa-bolt
 
 <img alt="Upgrade subscription." src="/_images/team_upgrade.png" center/>
 
-Team tier accounts include a maximum of 5 actively claimed seats. To select the number of seats for your team, click on the arrow buttons to increase or decrease the total seat count at checkout.
+::: info
+Caido uses [Paddle](https://www.paddle.com/) for payment processing.
+:::
+
+Team tier accounts include a maximum of 50 seats. To select the number of seats for your team, click on the arrow buttons to increase or decrease the total seat count at checkout.
 
 <img alt="Seat count." src="/_images/team_seat_count.png" center/>
 
@@ -26,6 +26,6 @@ If your organization needs additional seats, purchase orders, security questionn
 
 ## Assigning Seats
 
-Once an account holds an active Team or Enterprise tier subscription, seats can be assigned to members with an <code><Icon icon="fas fa-check" /> Active</code> status by **clicking** the `Use seat` checkbox of a team member's row in the `Users` interface table.
+Once an account holds an active Team or Enterprise tier subscription, seats can be assigned to members with an <code><Icon icon="fas fa-check" /> Active</code> status by **clicking** the `Use seat` checkbox of a team member's row in the `Users` page.
 
 <img alt="Assigning seats." src="/_images/team_assign_seats.png" center/>

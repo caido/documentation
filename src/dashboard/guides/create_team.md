@@ -4,13 +4,9 @@ description: "Step-by-step instructions for creating a new team in the Caido Das
 
 # Creating a Team
 
-<ProContainer>
-<b>Teams</b> are only available to Team and Enterprise tier subscriptions.
-</ProContainer>
+Teams allow you to invite members to a group to collaborate on instances associated with an account workspace. Access management, license assignment, and permission controls for teams are configured via the Caido Dashboard.
 
-Teams allow you to invite members to a group to collaborate on instances associated with an account workspace. Access management, license distribution, and permission controls for teams are configured via the Caido Dashboard.
-
-To permit workspace access, **click** on the `+ Create a Team` button in the <code><Icon icon="fas fa-home" /> Home</code> tab interface.
+To permit workspace access, **click** on the `+ Create a Team` button in the <code><Icon icon="fas fa-home" /> Home</code> page.
 
 <img alt="Create a team." src="/_images/team_create.png" center/>
 
@@ -20,8 +16,8 @@ Name the team, enter the email address of the team owner that will act as the in
 
 Each team member can be assigned one of two roles:
 
-- **Admin**: Grants full control over a team including its associated members, billing information, access tokens, and settings.
-- **Member**: Grants control over team invitation revocation and licensing seat assignments.
+- **Admin**: Has full control over a team including its members, billing information, access tokens, and settings.
+- **Member**: Has access to team instances and workspaces. Can also create access tokens.
 
 To add a team member, enter their email address, select a permission level from the `Role` drop-down menu, and click on the `Add Member` button.
 
@@ -35,6 +31,6 @@ Once members have been added, **clicking** the <code><Icon icon="fas fa-arrow-ri
 
 <img alt="Create a team." src="/_images/team_invitation_email.png" center/>
 
-## Team Member Management
+## Managing Team Members
 
-Once a team is created, members can be managed from the `Users` tab interface of the Caido Dashboard.
+Once a team is created, members can be managed from the `Users` page of the Caido Dashboard.
