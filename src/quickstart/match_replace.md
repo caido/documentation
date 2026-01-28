@@ -22,6 +22,6 @@ The `Match & Replace` interface gives you the ability to create rules that will 
 - [Testing Rules](/guides/match_replace_testing.md)
 :::
 
-<LabContainer :labs="[{name: 'Match & Replace Lab', url: 'https://labs.cai.do/matchAndReplace.php'}]" />
+<LabContainer :labs="[{name: 'Match & Replace Lab', url: 'https://labs.caido.io/hubs/match-and-replace'}]" />
 
 <img alt="The Match & Replace interface." src="/_images/match_replace_interface.png" center>
