@@ -8,8 +8,6 @@ To use a wordlist of payload values, **click**, **drag**, and **hold** over the 
 
 <img alt="Marking a placeholder." src="/_images/automate_placeholder_wordlist.png" center/>
 
-<LabContainer :labs="[{name: 'Hidden Dashboard Lab', url: 'https://labs.cai.do/hiddenDashboard.php'}]" />
-
 Once a placeholder has been marked, you will be presented with options in the `Payload` tab. From the `Type` drop-down menu, select either:
 
 - `Hosted File`: This option will present a `Selected file` drop-down menu from which you can select a wordlist that you have uploaded to your Caido instance.

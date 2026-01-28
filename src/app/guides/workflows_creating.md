@@ -16,7 +16,7 @@ Once the workflow is created, you can edit its display name and provide an optio
 View the Tutorials section of the documentation for detailed walk-throughs on creating a variety of workflows.
 :::
 
-<LabContainer :labs="[{name: 'SHASigned Lab', url: 'https://labs.cai.do/shaSigned.php'}, {name: 'Session Monitor Lab', url: 'https://labs.cai.do/sessionMonitor.php'}]" />
+<LabContainer :labs="[{name: 'SHASigned Lab', url: 'https://labs.caido.io/hubs/sha-signed'}, {name: 'Session Monitor Lab', url: 'https://labs.caido.io/hubs/session-monitor'}]" />
 
 ## Adding Nodes
 
