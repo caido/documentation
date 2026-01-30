@@ -13,12 +13,25 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/concepts/cli_vs_desktop",
       },
       {
-        text: "Instances & Authentication",
-        link: "/app/concepts/instances",
-      },
-      {
         text: "Using Caido Offline",
         link: "/app/concepts/offline",
+      },
+    ],
+  },
+  {
+    text: "Instances",
+    items: [
+      {
+        text: "Instance",
+        link: "/app/concepts/instance",
+      },
+      {
+        text: "Registration",
+        link: "/app/concepts/instance_registration",
+      },
+      {
+        text: "Authentication",
+        link: "/app/concepts/instance_authentication",
       },
     ],
   },

@@ -1,12 +1,12 @@
 import type { DefaultTheme } from "vitepress";
 
-export const dashboardSidebar: DefaultTheme.SidebarItem[] = [
+export const guidesSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: "Dashboard",
+    text: "Guides",
     items: [
       {
         text: "Introduction",
-        link: "/dashboard/",
+        link: "/dashboard/guides/",
       },
     ],
   },
@@ -20,6 +20,15 @@ export const dashboardSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Managing Licenses",
         link: "/dashboard/guides/licensing",
+      },
+    ],
+  },
+  {
+    text: "Workspaces",
+    items: [
+      {
+        text: "Creating a registration key",
+        link: "/dashboard/guides/create_registration_key",
       },
     ],
   },

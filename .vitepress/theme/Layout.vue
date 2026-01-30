@@ -1,20 +1,15 @@
 <script setup lang="ts">
-import { useRoute } from "vitepress";
 import DefaultThemeComponent from "vitepress/theme";
 
-import ApplicationNavbar from "../components/ApplicationNavbar.vue";
+import Navbar from "../components/Navbar.vue";
 
 const { Layout } = DefaultThemeComponent;
-const router = useRoute();
 </script>
 
 <template>
   <Layout>
     <template #doc-top>
-      <ApplicationNavbar
-        v-if="router.path.startsWith('/app/')"
-        style="margin-top: -48px; margin-left: -32px; z-index: 1"
-      />
+      <Navbar style="margin-top: -48px; margin-left: -32px; z-index: 1" />
     </template>
     <template #doc-before>
       <div style="height: var(--vp-nav-height)" />

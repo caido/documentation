@@ -4,7 +4,7 @@ description: "A step-by-step guide to viewing both the frontend and backend Caid
 
 # Viewing Logs
 
-As Caido utilizes a [client/server architecture](/app/concepts/instances.md), both frontend and backend logs are produced.
+As Caido utilizes a [client/server architecture](/app/concepts/instance.md), both frontend and backend logs are produced.
 
 ::: danger
 As log files can contain sensitive information, only send them in private conversations with a verified member of the Caido team. If you are contacting us on Discord, we will open a private channel before asking for logs.

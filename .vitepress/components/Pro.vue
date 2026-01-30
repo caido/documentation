@@ -3,7 +3,7 @@
 <template>
   <div class="c-pro info custom-block">
     <slot name="title">
-      <p class="custom-block-title">⚡PRO FEATURE</p>
+      <p class="custom-block-title">⚡PAID FEATURE</p>
     </slot>
     <p>
       <slot />
