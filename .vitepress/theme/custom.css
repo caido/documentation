@@ -29,8 +29,8 @@
 }
 
 img {
-    -webkit-box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
-    box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
+  box-shadow: 2px 5px 15px 3px rgba(0, 0, 0, 0.74);
 }
 
 img[no-shadow] {
@@ -44,24 +44,35 @@ img[center] {
   margin-right: auto;
 }
 
+.mermaid-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
-  color:#daa04a
+  color: #daa04a
 }
 
 h2 {
-  color:#b49566
+  color: #b49566
 }
 
 h3 {
-  color:#a38e7f;
+  color: #a38e7f;
 }
 
 h4 {
-  color:#b67474;
+  color: #b67474;
 }
 
 /* Hide default nav items since we're rendering custom nav via Layout slot */
-.VPNavBar .content > nav:not(.custom-nav-links) {
+.VPNavBar .content>nav:not(.custom-nav-links) {
   display: none;
 }
 
@@ -75,14 +86,16 @@ h4 {
 /* Media query for mobile view */
 @media (max-width: 600px) {
   .videos {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: 1fr;
+    /* Single column layout */
   }
 }
 
 .video {
   min-height: 6rem;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }

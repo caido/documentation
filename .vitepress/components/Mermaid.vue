@@ -72,5 +72,5 @@ const renderChart = async () => {
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <div v-html="svg" />
+  <div class="mermaid-container" v-html="svg" />
 </template>

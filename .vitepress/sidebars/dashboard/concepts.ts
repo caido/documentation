@@ -8,6 +8,14 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Introduction",
         link: "/dashboard/concepts/",
       },
+      {
+        text: "Workspace",
+        link: "/dashboard/concepts/workspace",
+      },
+      {
+        text: "Registration Key",
+        link: "/dashboard/concepts/registration_key",
+      },
     ],
   },
 ];
