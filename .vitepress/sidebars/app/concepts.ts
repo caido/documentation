@@ -23,6 +23,23 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Instances",
+    items: [
+      {
+        text: "Instance",
+        link: "/app/concepts/instance",
+      },
+      {
+        text: "Registration",
+        link: "/app/concepts/instance_registration",
+      },
+      {
+        text: "Authentication",
+        link: "/app/concepts/instance_authentication",
+      },
+    ],
+  },
+  {
     text: "Internals",
     items: [
       {

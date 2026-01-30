@@ -5,13 +5,8 @@ import type { DefaultTheme } from "vitepress";
 
 import MermaidExample from "./mermaid";
 import {
-  conceptsSidebar,
-  dashboardSidebar,
-  guidesSidebar,
-  quickstartSidebar,
-  referenceSidebar,
-  troubleshootingSidebar,
-  tutorialsSidebar,
+  appSidebars,
+  dashboardSidebars,
 } from "./sidebars";
 
 // https://vitepress.dev/reference/site-config
@@ -72,18 +67,20 @@ export default defineConfig({
         link: "/app/quickstart/",
         activeMatch: "^/app(/.*)?$",
       },
-      { text: "Dashboard", link: "/dashboard/", activeMatch: "^/dashboard(/|$)" },
+      { text: "Dashboard", link: "/dashboard/quickstart/", activeMatch: "^/dashboard(/|$)" },
       { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },
     ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
-      "/app/quickstart/": quickstartSidebar,
-      "/app/reference/": referenceSidebar,
-      "/app/guides/": guidesSidebar,
-      "/app/concepts/": conceptsSidebar,
-      "/app/tutorials/": tutorialsSidebar,
-      "/app/troubleshooting/": troubleshootingSidebar,
-      "/dashboard/": dashboardSidebar,
+      "/app/quickstart/": appSidebars.quickstartSidebar,
+      "/app/reference/": appSidebars.referenceSidebar,
+      "/app/guides/": appSidebars.guidesSidebar,
+      "/app/concepts/": appSidebars.conceptsSidebar,
+      "/app/tutorials/": appSidebars.tutorialsSidebar,
+      "/app/troubleshooting/": appSidebars.troubleshootingSidebar,
+      "/dashboard/quickstart/": dashboardSidebars.quickstartSidebar,
+      "/dashboard/guides/": dashboardSidebars.guidesSidebar,
+      "/dashboard/concepts/": dashboardSidebars.conceptsSidebar,
     },
 
     outline: {

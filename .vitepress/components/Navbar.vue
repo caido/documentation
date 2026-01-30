@@ -1,15 +1,25 @@
 <script setup lang="ts">
 import { useRoute } from "vitepress";
 import type { DefaultTheme } from "vitepress";
+import { computed } from "vue";
 
-import { appNavbar } from "../application.navbar";
+import { appNavbar, dashboardNavbar } from "../navbars";
 
 const route = useRoute();
 
 // Filter items that have a link property (exclude items with nested children)
-const navItemsWithLinks = appNavbar.filter(
-  (item): item is DefaultTheme.NavItemWithLink => "link" in item,
-);
+const navItemsWithLinks = computed(() => {
+  if (route.path.startsWith("/app/")) {
+    return appNavbar.filter(
+      (item): item is DefaultTheme.NavItemWithLink => "link" in item,
+    );
+  } else if (route.path.startsWith("/dashboard/")) {
+    return dashboardNavbar.filter(
+      (item): item is DefaultTheme.NavItemWithLink => "link" in item,
+    );
+  }
+  return [];
+});
 
 const isActive = (link: string) => {
   if (!link) return false;
