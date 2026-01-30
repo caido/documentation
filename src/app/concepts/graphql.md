@@ -43,7 +43,7 @@ JSON.parse(localStorage.CAIDO_AUTHENTICATION).accessToken;
 ```
 
 ::: warning NOTE
-The access token expires after a period of 7 days. If your project requires consistent authentication, utilize the [OAuth](/app/concepts/instances.md#authentication)  `startAuthenticationFlow` mutation and `createdAuthenticationToken` subscription.
+The access token expires after a period of 7 days. If your project requires consistent authentication, utilize the [OAuth](/app/concepts/instance_authentication)  `startAuthenticationFlow` mutation and `createdAuthenticationToken` subscription.
 :::
 
 ## Example: Using Replay
@@ -280,7 +280,7 @@ date: Tue, 13 Jan 2026 16:15:03 GMT
 {"data":{"startReplayTask":{"task":{"__typename":"ReplayTask","id":"2","createdAt":"2026-01-13T16:15:03.7537873Z","replayEntry":{"__typename":"ReplayEntry","id":"2","error":null,"createdAt":1768320903752,"connection":{"__typename":"ConnectionInfo","host":"example.com","port":80,"isTLS":false,"SNI":"example.com"},"session":{"id":"1"},"request":null,"raw":"R0VUIC8gSFRUUC8xLjENCkhvc3Q6IGV4YW1wbGUuY29tDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=","settings":{"placeholders":[]}}},"error":null}}}
 ```
 
-A [traffic splitting algorithm](/app/concepts/traffic_splitting.md) recognizes that the request is intended for a destination server. The Caido CLI (_server component_) forwards the request and handles the corresponding response. 
+A [traffic splitting algorithm](/app/concepts/traffic_splitting.md) recognizes that the request is intended for a destination server. The Caido CLI (_server component_) forwards the request and handles the corresponding response.
 
 ```http
 GET / HTTP/1.1

@@ -36,7 +36,7 @@ In addition to the installed webview, you can still access the GUI from the brow
 ::: info
 Although either installation provides the same functionality, the desktop application has some slight advantages over the standalone Caido CLI:
 
-- It provides centralized management for multiple [instances](/app/concepts/instances.md).
+- It provides centralized management for multiple [instances](/app/concepts/instance.md).
 - It includes [browser pre-configurations](/app/guides/preconfigured_browser.md).
 - It can be used in environments without internet access.
 :::
