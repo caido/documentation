@@ -16,6 +16,8 @@ HTTPQL query statements filter either requests (`req`), responses (`resp`), or s
 These statements will serve as a starting point for your HTTPL queries. View the full [HTTPQL](/app/reference/httpql.md) reference to customize your query statements to achieve the intended results.
 :::
 
+<LabContainer :labs="[{name: 'Too Many Request Lab', url: 'https://labs.caido.io/hubs/too-many-requests'}]" />
+
 ## Filtering Requests by Host
 
 To filter requests made to `example.com`, use the `host` field.

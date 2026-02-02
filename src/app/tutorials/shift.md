@@ -44,6 +44,8 @@ Find similar requests to this.
 Shift is highly capable and should be able to carry out any task you could do with a well-written prompt.
 :::
 
+<LabContainer :labs="[{name: 'Shift Payload Lab', url: 'https://labs.caido.io/hubs/shift-payload'}]" />
+
 ## Configuration
 
 To use Shift, register/login to [https://openrouter.ai/](https://openrouter.ai/) and obtain an [API key](https://openrouter.ai/settings/keys).
