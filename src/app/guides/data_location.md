@@ -13,7 +13,7 @@ All the data Caido creates is stored in a single directory. The default location
 | Windows | `%APPDATA%\Caido\Caido\data`                     |
 
 ::: warning NOTE
-Caido does not currently support storing projects outside of the this directory. However, you can change the location of the directory if needed. Before changing the location, ensure to copy the existing data before restarting your instance. Otherwise the instance will restart as if you were on a new device.
+Caido does not currently support storing projects outside of this directory. However, you can change the location of the directory if needed. Before changing the location, ensure to copy the existing data before restarting your instance. Otherwise the instance will restart as if you were on a new device.
 :::
 
 ## Caido CLI

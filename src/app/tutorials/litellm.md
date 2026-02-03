@@ -6,7 +6,7 @@ In this tutorial, you will learn how to configure LiteLLM, Caido, and [Shift](/a
 
 ## LiteLLM Configuration
 
-The following Docker compose file runs two services: LiteLLM and a PostgreSQL database for chat history persistence.
+The following Docker Compose file runs two services: LiteLLM and a PostgreSQL database for chat history persistence.
 
 1. Save the following `docker-compose.yml` file and navigate to its directory:
 
