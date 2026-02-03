@@ -12,9 +12,14 @@ Authentication in Caido is based on [OAuth 2.0](https://www.rfc-editor.org/rfc/r
 
 Like we mentioned in [instance registration](./instance_registration.md), each Caido instance registers itself with our Cloud as an `OAuth 2.0 client`.
 
-When you click on `Login` on the instance, it performs a <a href="https://www.rfc-editor.org/rfc/rfc8628.html" target="_blank">Device Authorization</a> flow. Currently this flow requires a human approval via the website (we are working on removing this limitation).
+When you click on `Login` on the instance, it performs a <a href="https://www.rfc-editor.org/rfc/rfc8628.html" target="_blank">Device Authorization</a> flow.
 
 <img alt="Authenticate user flow." src="/_images/authentication_user.png" width=800px center no-shadow/>
+
+This flow is usually approved with the consent form on the [Dashboard](https://dashboard.caido.io).
+It can also be approved using [Personal Access Tokens](/dashboard/concepts/pat) if you want to interact with the instance in headless mode (CICD for example).
+
+<img alt="Consent form for authentication" src="/_images/authentication_consent.png" width=400px center no-shadow/>
 
 ::: warning NOTE
 We do not make any guarantees on the lifetime of the tokens.
