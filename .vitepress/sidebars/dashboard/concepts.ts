@@ -9,6 +9,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/dashboard/concepts/",
       },
       {
+        text: "Personal Access Token",
+        link: "/dashboard/concepts/pat",
+      },
+      {
         text: "Workspace",
         link: "/dashboard/concepts/workspace",
       },

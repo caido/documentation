@@ -11,6 +11,15 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Users",
+    items: [
+      {
+        text: "Creating a Personal Access Token",
+        link: "/dashboard/guides/create_pat",
+      },
+    ],
+  },
+  {
     text: "Teams",
     items: [
       {
