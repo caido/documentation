@@ -60,7 +60,9 @@ To obtain the frontend logs, either:
 
 - Access the DevTools interface by pressing the `F12` key, using the keybinding `CTRL` + `SHIFT` + `I`, or selecting `Inspect` from the **right-click** context menu. Within the `Console` **right-click** and select `Save as...`/`Save all Messages to File`/etc. to export the messages as a `.log` file.
 
-- Or, **click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button at the bottom of the Caido user-interface, record your activity, and then **click** on the <code><Icon icon="fas fa-download" /></code> button to export the messages as a `.log` file.
+- **Click** on the <code><Icon icon="fas fa-file-lines" /> Logs</code> button at the bottom of the Caido user-interface, record your activity, and then **click** on the <code><Icon icon="fas fa-download" /></code> button to export the messages as a `.log` file.
+
+- Press the `ALT` key to open the menu bar, **click** on `View`, and select `Toggle Developer Tools`.
 
 <img alt="The Caido frontend logs interface." src="/_images/frontend_logs.png" center/>
 
