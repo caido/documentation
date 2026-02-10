@@ -10,7 +10,7 @@ The goal of this tutorial is to automate an headless Caido instances through scr
 - **CI/CD testing**: Automatically set up instances to run particular tests on-demand
 - **AI agent interfaces**: Provide human-in-the-loop interfaces to AI agents
 
-## Creating a Registration Key and Launching the Instance
+## Part 1: Creating a Registration Key and Launching the Instance
 
 <ProContainer>
 This is feature is available starting with Caido v0.55.3 for Teams.
@@ -80,7 +80,7 @@ For more information about the registration process, see our documentation on [i
 If you want to expose the instance to the internet, make sure to read our [tutorial](./instance_internet.md) on the subject to do so securely.
 :::
 
-## Section 2: Creating a PAT and Setting Environment Variable
+## Part 2: Creating a PAT and Setting Environment Variable
 
 To authenticate your scripts with the Caido instance, you'll need a [Personal Access Token (PAT)](/dashboard/concepts/pat). PATs allow headless authentication without requiring browser interaction.
 
@@ -114,7 +114,7 @@ export CAIDO_INSTANCE_URL=http://abc.remote.cai.do:9000
 For more information about authentication, see our documentation on [instance authentication](/app/concepts/instance_authentication).
 :::
 
-## Section 3: Creating the Configuration Script
+## Part 3: Creating the Configuration Script
 
 Now we'll create a script that uses the `@caido/sdk-client` to automatically configure your Caido instance. This script will:
 
