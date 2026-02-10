@@ -24,6 +24,19 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Automatisation",
+    items: [
+      {
+        text: "Orchestrating Caido headless",
+        link: "/app/tutorials/headless_orchestration",
+      },
+      {
+        text: "Running Caido in Github Actions",
+        link: "/app/tutorials/github_action",
+      },
+    ],
+  },
+  {
     text: "Proxying Mobile Traffic",
     items: [
       {
