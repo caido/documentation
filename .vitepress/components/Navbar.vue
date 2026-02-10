@@ -57,6 +57,7 @@ const isActive = (link: string) => {
   padding-left: 32px;
   display: flex;
   align-items: center;
+  z-index: 100 !important;
 }
 
 .second-navbar-container {
