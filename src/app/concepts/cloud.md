@@ -32,6 +32,20 @@ The data collected as you use Caido (_IP address and API call actions/timestamps
 - `/instance/user/session` / `/instance/user/profile`: Instance interaction is tracked upon first interaction and once per hour.
 - `/instance/assistant/complete`: Assistant token usage is tracked (_message content data is **not** collected_).
 
+We also have opt-out analytics for UI interactions performed within the application. We NEVER collect project data, HTTP requests, payloads, etc.
+
+## Endpoints used
+
+If you need to whitelist endpoints, here are all the endpoints we use:
+
+- api.caido.io: Main Caido API
+- sync.caido.io: Synchronization service
+- caido.download: Update checking and download
+- github.com: Plugins download
+- storage.googleapis.com: Chromium download
+
+Only `api.caido.io` is absolutely required.
+
 ## Location & Security
 
 - Our cloud services are currently hosted on [Render](https://render.com) in their Oregon (_US_) region. Refer to Render's [Security and Trust](https://trust.render.com/) page for more information.
