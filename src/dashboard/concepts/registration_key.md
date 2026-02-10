@@ -1,7 +1,7 @@
 # Registration Key
 
 <ProContainer>
-This is feature is available starting with Caido v0.56.0 for Teams.
+This is feature is available starting with Caido v0.55.3 for Teams.
 </ProContainer>
 
 Registration Keys allow you to automatically claim new instances. This allows you to deploy instances safely without human intervention. For example, ahead of an engagement or on demand in CICD.
