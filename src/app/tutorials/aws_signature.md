@@ -140,17 +140,23 @@ function sign(sdk, spec) {
   };
 }
 
-export function run(input, sdk) {
+export function run({ data }, sdk) {
   try {
-    const spec = RequestSpec.parse(input);
+    const spec = RequestSpec.parse(data);
     const { authorizationHeader, amzDate, payloadHash } = sign(sdk, spec);
     return `Authorization: ${authorizationHeader}\r\nx-amz-date: ${amzDate}\r\nx-amz-content-sha256: ${payloadHash}\r\n`;
   } catch (e) {
     sdk.console.log(e.toString());
-    return input;
+    return data;
   }
 }
 ```
+
+::: info
+If you are using an older workflow (before `v0.55.0`), use `function run(input, sdk)` as signature.
+
+We used to pass the raw data directly as the first parameter.
+:::
 
 3. Close the editor window and **click** on the `Convert End` node to access its editor.
 
@@ -267,14 +273,14 @@ Then, it generates the signing key, creates the final signature, pieces the `Aut
 The `run` function takes the initial `request` object as input, converts it to a mutable `RequestSpec` object, and parses it. Then, the `sign` function is called to sign the request and insert the valid `Authorization` header.
 
 ```js
-export function run(input, sdk) {
+export function run({ data }, sdk) {
   try {
-    const spec = RequestSpec.parse(input);
+    const spec = RequestSpec.parse(data);
     const { authorizationHeader, amzDate, payloadHash } = sign(sdk, spec);
     return `Authorization: ${authorizationHeader}\r\nx-amz-date: ${amzDate}\r\nx-amz-content-sha256: ${payloadHash}\r\n`;
   } catch (e) {
     sdk.console.log(e.toString());
-    return input;
+    return data;
   }
 }
 ```
@@ -298,6 +304,12 @@ To test the workflow:
 <img alt="Placeholder settings" src="/_images/resign_aws_requests_placeholder_settings.png" center no-shadow width="800"/>
 
 5. Close the editor window and **click** on the `Send` button to resend the Replay request.
+
+::: warning
+Make sure all your headers are CRLF terminated, the workflow doesn't handle LF terminated headers.
+
+Click on `Options` -> `Display hidden charaters` to show them. You should see a `\r` on each header line.
+:::
 
 ## The Result
 
