@@ -4,10 +4,8 @@ import llmstxt from "vitepress-plugin-llms";
 import type { DefaultTheme } from "vitepress";
 
 import MermaidExample from "./mermaid";
-import {
-  appSidebars,
-  dashboardSidebars,
-} from "./sidebars";
+import { appNavbar, dashboardNavbar } from "./navbars";
+import { appSidebars, dashboardSidebars } from "./sidebars";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -63,12 +61,28 @@ export default defineConfig({
 
     nav: [
       {
-        text: "Application",
-        link: "/app/quickstart/",
-        activeMatch: "^/app(/.*)?$",
+        component: "NavItem",
+        props: {
+          text: "Application",
+          link: "/app/quickstart/",
+          activeMatch: "^/app(/.*)?$",
+          items: appNavbar,
+        },
       },
-      { text: "Dashboard", link: "/dashboard/quickstart/", activeMatch: "^/dashboard(/|$)" },
-      { text: "FAQ", link: "/faq", activeMatch: "^/faq(/|$)" },
+      {
+        component: "NavItem",
+        props: {
+          text: "Dashboard",
+          link: "/dashboard/quickstart/",
+          activeMatch: "^/dashboard(/|$)",
+          items: dashboardNavbar,
+        },
+      },
+      {
+        text: "FAQ",
+        link: "/faq",
+        activeMatch: "^/faq(/|$)",
+      },
     ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
