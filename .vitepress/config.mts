@@ -79,9 +79,12 @@ export default defineConfig({
         },
       },
       {
-        text: "FAQ",
-        link: "/faq",
-        activeMatch: "^/faq(/|$)",
+        component: "NavItem",
+        props: {
+          text: "FAQ",
+          link: "/faq/",
+          activeMatch: "^/faq(/|$)",
+        },
       },
     ] satisfies DefaultTheme.NavItem[],
 

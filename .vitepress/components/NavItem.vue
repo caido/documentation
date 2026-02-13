@@ -6,7 +6,7 @@ const props = defineProps<{
   text: string;
   link: string;
   activeMatch: string;
-  items: { text: string; link: string }[];
+  items?: { text: string; link: string }[];
   screenMenu?: boolean;
 }>();
 
@@ -34,11 +34,22 @@ function isChildActive(link: string) {
 </script>
 
 <template>
-  <!-- Desktop: single link (same as VPNavBarMenuLink) -->
+  <!-- Desktop: single link -->
   <a
     v-if="!screenMenu"
     :href="props.link"
     :class="['VPNavBarMenuLink', { active: isActive }]"
+  >
+    <span>{{ props.text }}</span>
+  </a>
+
+  <!-- Mobile: single link when no children -->
+  <a
+    v-else-if="!props.items"
+    :href="props.link"
+    class="VPNavBarMenuLink mobile-nav-single-link"
+    :class="{ active: isActive }"
+    @click="closeScreen?.()"
   >
     <span>{{ props.text }}</span>
   </a>
@@ -52,6 +63,7 @@ function isChildActive(link: string) {
     <button
       type="button"
       class="button"
+      :class="{ active: isActive }"
       :aria-expanded="isOpen"
       @click="isOpen = !isOpen"
     >
@@ -116,11 +128,35 @@ function isChildActive(link: string) {
 
 .mobile-nav-group.open .button {
   padding-bottom: 6px;
-  color: var(--vp-c-brand-1);
 }
 
 .mobile-nav-group.open .button-icon {
   transform: rotate(45deg);
+}
+
+/* Only highlight button when a child is the current page */
+.mobile-nav-group .button.active {
+  color: var(--vp-c-brand-1);
+}
+
+.mobile-nav-single-link {
+  display: block;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 12px 0 11px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.mobile-nav-single-link:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.mobile-nav-single-link.active {
+  color: var(--vp-c-brand-1);
 }
 
 .mobile-nav-group .button {
@@ -139,7 +175,13 @@ function isChildActive(link: string) {
   cursor: pointer;
 }
 
-.mobile-nav-group .button:hover {
+.mobile-nav-group .button:hover:not(.active),
+.mobile-nav-group .button:focus:not(.active) {
+  color: var(--vp-c-text-1);
+}
+
+.mobile-nav-group .button.active:hover,
+.mobile-nav-group .button.active:focus {
   color: var(--vp-c-brand-1);
 }
 
