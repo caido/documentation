@@ -1,5 +1,5 @@
 ---
-description: "Learn how to orchestrate Caido in Github Action for CICD"
+description: "Learn how to orchestrate Caido in GitHub Actions for CI/CD"
 ---
 
 # Using Caido in GitHub Actions
@@ -14,7 +14,7 @@ This tutorial will guide you through setting up and using Caido in a GitHub Acti
 This tutorial requires a Caido Teams plan for registration key support.
 </ProContainer>
 
-## Part 1: Creating a Registration Key
+## 1. Creating a Registration Key
 
 To safely deploy Caido instances in automated environments without human intervention, you'll need to use a [Registration Key](/dashboard/concepts/registration_key). Registration keys automatically claim new instances, ensuring they're secure even when deployed in CI/CD pipelines.
 
@@ -33,7 +33,7 @@ First, create a registration key in the [Caido Dashboard](https://dashboard.caid
 
 For detailed instructions, see our guide on [creating a registration key](/dashboard/guides/create_registration_key).
 
-## Part 2: Creating a Personal Access Token (PAT)
+## 2. Creating a Personal Access Token (PAT)
 
 To authenticate your scripts with the Caido instance, you'll need a [Personal Access Token (PAT)](/dashboard/concepts/pat). PATs allow headless authentication without requiring browser interaction.
 
@@ -49,7 +49,7 @@ To authenticate your scripts with the Caido instance, you'll need a [Personal Ac
 
 For detailed instructions, see our guide on [creating a PAT](/dashboard/guides/create_pat).
 
-## Part 3: Configuring GitHub Secrets
+## 3. Configuring GitHub Secrets
 
 To securely store your registration key and PAT, you'll need to add them as GitHub repository secrets. This ensures they're encrypted and only accessible to your GitHub Actions workflows.
 
@@ -72,7 +72,7 @@ To securely store your registration key and PAT, you'll need to add them as GitH
 Never commit secrets directly in your code or workflow files. Always use GitHub Secrets for sensitive information.
 :::
 
-## Part 4: Creating the Automation Script
+## 4. Creating the Automation Script
 
 Now we'll create a script that uses the `@caido/sdk-client` to interact with your Caido instance. This script will demonstrate common CI/CD use cases like creating projects, running scans, and checking results.
 
@@ -151,7 +151,7 @@ Add the following to your `package.json`:
 }
 ```
 
-## Part 5: Creating the GitHub Actions Workflow
+## 5. Creating the GitHub Actions Workflow
 
 Now we'll create a GitHub Actions workflow that sets up Caido and runs your automation script.
 
@@ -204,7 +204,7 @@ jobs:
           CAIDO_INSTANCE_URL: http://localhost:8080
 ```
 
-## Part 6: Customizing for Your Use Case
+## 6. Customizing for Your Use Case
 
 You can extend this setup for various security testing scenarios:
 

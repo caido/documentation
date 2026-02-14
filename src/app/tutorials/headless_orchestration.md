@@ -4,16 +4,16 @@ description: "Learn how to orchestrate headless Caido instances and automate ins
 
 # Orchestrating Caido Headless
 
-The goal of this tutorial is to automate an headless Caido instances through scripting to ensure it is safely registred and configured without human intervention. This allows many usecases like:
+The goal of this tutorial is to automate headless Caido instances through scripting to ensure they are safely registered and configured without human intervention. This allows many use cases like:
 
 - **Red boxes**: Pre-configure isolated instances for triaging/pentest/etc
 - **CI/CD testing**: Automatically set up instances to run particular tests on-demand
 - **AI agent interfaces**: Provide human-in-the-loop interfaces to AI agents
 
-## Part 1: Creating a Registration Key and Launching the Instance
+## 1. Creating a Registration Key and Launching the Instance
 
 <ProContainer>
-This is feature is available starting with Caido v0.55.3 for Teams.
+This feature is available starting with Caido v0.55.3 for Teams.
 </ProContainer>
 
 To safely deploy Caido instances without human intervention, you'll need to use a [Registration Key](/dashboard/concepts/registration_key). Registration keys automatically claim new instances, ensuring they're secure even when deployed in automated environments.
@@ -80,7 +80,7 @@ For more information about the registration process, see our documentation on [i
 If you want to expose the instance to the internet, make sure to read our [tutorial](./instance_internet.md) on the subject to do so securely.
 :::
 
-## Part 2: Creating a PAT and Setting Environment Variable
+## 2. Creating a PAT and Setting Environment Variable
 
 To authenticate your scripts with the Caido instance, you'll need a [Personal Access Token (PAT)](/dashboard/concepts/pat). PATs allow headless authentication without requiring browser interaction.
 
@@ -114,7 +114,7 @@ export CAIDO_INSTANCE_URL=http://abc.remote.cai.do:9000
 For more information about authentication, see our documentation on [instance authentication](/app/concepts/instance_authentication).
 :::
 
-## Part 3: Creating the Configuration Script
+## 3. Creating the Configuration Script
 
 Now we'll create a script that uses the `@caido/sdk-client` to automatically configure your Caido instance. This script will:
 
@@ -142,7 +142,7 @@ pnpm install @caido/sdk-client
 
 ::: info
 Not all versions of the sdk-client are compatible with the targeted Caido instances.
-If you see errors, make sure update your sdk-client version.
+If you see errors, make sure to update your sdk-client version.
 :::
 
 ### The Configuration Script
@@ -346,4 +346,4 @@ The script performs the following operations:
 
 Your instance is now configured, you can start using it directly as an operator or via further scripting.
 
-You can also check out our tutorial on [Github Actions](./github_action.md).
+You can also check out our tutorial on [GitHub Actions](./github_action.md).

@@ -24,14 +24,14 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: "Automatisation",
+    text: "Automation",
     items: [
       {
-        text: "Orchestrating Caido headless",
+        text: "Orchestrating Caido Headless",
         link: "/app/tutorials/headless_orchestration",
       },
       {
-        text: "Running Caido in Github Actions",
+        text: "Using Caido in GitHub Actions",
         link: "/app/tutorials/github_action",
       },
     ],
