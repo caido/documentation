@@ -1,6 +1,6 @@
 import type { DefaultTheme } from "vitepress";
 
-export const appNavbar: DefaultTheme.NavItem[] = [
+export const appNavbar: DefaultTheme.NavItemWithLink[] = [
   { text: "Get Started", link: "/app/quickstart/" },
   { text: "How-to Guides", link: "/app/guides/" },
   { text: "Tutorials", link: "/app/tutorials/" },

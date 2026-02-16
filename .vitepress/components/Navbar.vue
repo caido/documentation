@@ -89,6 +89,13 @@ const isActive = (link: string) => {
   border-bottom-color: var(--vp-c-brand-1);
 }
 
+/* Hide second navbar on mobile; section links are in the hamburger menu */
+@media (max-width: 960px) {
+  .second-navbar {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .second-navbar-container {
     padding: 8px 16px;
