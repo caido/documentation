@@ -4,7 +4,7 @@ description: "A step-by-step guide to using wordlists in Caido's Automate featur
 
 # Sending Payloads from a Wordlist
 
-To use a wordlist of payload values, **click**, **drag**, and **hold** over the request element you want to replace and then **click** on the `+ Add Placeholder` button.
+To use a wordlist of payload values, **click**, **hold**, and **drag** over the request element you want to replace and then **click** on the `+ Add Placeholder` button.
 
 <img alt="Marking a placeholder." src="/_images/automate_placeholder_wordlist.png" center/>
 

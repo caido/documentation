@@ -68,7 +68,7 @@ To set the mutation for the low-privilege `Mutated` profile manually:
 
 To quickly add a `Header: Set` mutation to the `Mutated` profile:
 
-1. **Click**, **drag**, and **hold** over a header name and value within a low-privilege user request pane.
+1. **Click**, **hold**, and **drag** over a header name and value within a low-privilege user request pane.
 2. Then, **right-click** on the highlighted selection to open the context menu, hover your mouse cursor over `Plugins` and `Autorize`, and select <code><Icon icon="fas fa-key" /> Send Headers to Autorize</code>.
 
 <img alt="The Send Headers to Autorize option." src="/_images/autorize_send_headers.png" center />

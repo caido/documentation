@@ -4,7 +4,7 @@ description: "A step-by-step guide to sending multiple payloads in Caido's Autom
 
 # Sending Multiple Payloads
 
-To use multiple payload values, **click**, **drag**, and **hold** over multiple request elements you want to replace and then **click** on the `+ Add Placeholder` button.
+To use multiple payload values, **click**, **hold**, and **drag** over multiple request elements you want to replace and then **click** on the `+ Add Placeholder` button.
 
 <img alt="Marking two placeholders." src="/_images/automate_placeholder_multiple.png" center/>
 
