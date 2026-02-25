@@ -31,21 +31,24 @@ const normalizedItem = computed(() => {
 });
 
 const isChildActive = (navItem: DefaultTheme.NavItem & { props?: { items?: unknown[] } }) => {
-  if (navItem && "link" in navItem && navItem.link != null) {
+  if (navItem !== null && navItem !== undefined && "link" in navItem && navItem.link !== null && navItem.link !== undefined) {
+    const activeMatch = normalizedItem.value.activeMatch ?? "";
     return isActive(
       page.value.relativePath,
       navItem.link,
-      !!normalizedItem.value.activeMatch
+      activeMatch !== ""
     );
   }
   const items =
     (navItem as { items?: unknown[] })?.items ??
     (navItem as { props?: { items?: unknown[] } })?.props?.items ??
     [];
-  return Array.isArray(items) && items.some(isChildActive);
+  return Array.isArray(items) && items.some((item) => isChildActive(item as DefaultTheme.NavItem & { props?: { items?: unknown[] } }) === true);
 };
 
 const childrenActive = computed(() => isChildActive(normalizedItem.value));
+
+const hasActiveMatch = computed(() => (normalizedItem.value.activeMatch ?? "") !== "");
 </script>
 
 <template>
@@ -56,7 +59,7 @@ const childrenActive = computed(() => isChildActive(normalizedItem.value));
         isActive(
           page.relativePath,
           normalizedItem.activeMatch,
-          !!normalizedItem.activeMatch
+          hasActiveMatch
         ) || childrenActive,
     }"
     :button="normalizedItem.text"
