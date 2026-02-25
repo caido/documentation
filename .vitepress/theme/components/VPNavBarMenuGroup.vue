@@ -43,10 +43,10 @@ const isChildActive = (navItem: DefaultTheme.NavItem & { props?: { items?: unkno
     (navItem as { items?: unknown[] })?.items ??
     (navItem as { props?: { items?: unknown[] } })?.props?.items ??
     [];
-  return Array.isArray(items) && items.some((item) => isChildActive(item as DefaultTheme.NavItem & { props?: { items?: unknown[] } }) === true);
+  return Array.isArray(items) && items.some((item) => Boolean(isChildActive(item as DefaultTheme.NavItem & { props?: { items?: unknown[] } })));
 };
 
-const childrenActive = computed(() => isChildActive(normalizedItem.value));
+const childrenActive = computed(() => Boolean(isChildActive(normalizedItem.value)));
 
 const hasActiveMatch = computed(() => (normalizedItem.value.activeMatch ?? "") !== "");
 </script>
