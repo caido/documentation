@@ -43,17 +43,47 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Android",
         items: [
           {
-            text: "Android Setup and Configuration",
-            link: "/app/tutorials/android_configuration",
+            text: "Introduction",
+            link: "/app/tutorials/android_introduction",
           },
           {
-            text: "Adding Caido's CA Certificate to the System-Store",
-            link: "/app/tutorials/add_certificate",
+            text: "Virtual Device",
+            items: [
+              {
+                text: "Setup & Configuration",
+                link: "/app/tutorials/android_virtual_device"
+              },
+              {
+                text: "Proxying Mobile Chrome Browser Traffic",
+                link: "/app/tutorials/android_browser_virtual",
+              },
+              {
+                text: "Adding Caido's CA Certificate to the System Partition",
+                link: "/app/tutorials/android_add_certificate",
+              },
+            ]
           },
           {
-            text: "Modifying an Android Application",
+            text: "Physical Device",
+            items: [
+              {
+                text: "Setup & Configuration",
+                link: "/app/tutorials/android_physical_device"
+              },
+              {
+                text: "Proxying Mobile Chrome Browser Traffic",
+                link: "/app/tutorials/android_browser_physical",
+              },
+            ]
+          },
+          {
+            text: "Modifying an Android Application: Virtual & Physical Devices",
             link: "/app/tutorials/modifying_apk",
           },
+          {
+            text: "Troubleshooting",
+            link: "/app/tutorials/android_troubleshooting",
+          }
         ],
       },
       {
