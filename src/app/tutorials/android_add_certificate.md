@@ -22,7 +22,7 @@ To generate the correct certificate file name:
 
 2. Open a terminal and navigate to the file system location of the certificate and enter the following command:
 
-```bash
+```
 openssl x509 -inform PEM -subject_hash_old -in ca.crt
 ```
 
