@@ -48,17 +48,11 @@ Shift is highly capable and should be able to carry out any task you could do wi
 
 ## Configuration
 
-To use Shift, register/login to [https://openrouter.ai/](https://openrouter.ai/) and obtain an [API key](https://openrouter.ai/settings/keys).
+To use Shift, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `AI` tab.
 
-::: warning NOTE
-Certain models can be used for [free](https://openrouter.ai/models?q=free) while others cost [credits](https://openrouter.ai/settings/credits). Actively monitor usage and consider setting a budget to avoid high costs.
-:::
+Enter your API key for your provider and **click** on the `Verify` button.
 
-Copy the key to your clipboard, navigate to the `Settings` tab of the Shift interface, and paste it into the `Enter API key` input field.
-
-<img alt="Adding the API key in Shift." src="/_images/shift_api_key.png" center />
-
-Within the `Settings` interface, there are also options to limit the number of API calls a Shift Agent can make and an input field to provide a general system prompt or more contextual information about your target.
+Within the `Settings` interface of Shift, there are also options to limit the number of API calls a Shift Agent can make and an input field to provide a general system prompt or more contextual information about your target.
 
 <img alt="Additional Shift settings." src="/_images/shift_settings.png" center />
 
