@@ -7,7 +7,7 @@ description: "Understand the core concepts behind Caido Cloud services including
 Caido Cloud is comprised of your account dashboard (_accessible at [https://dashboard.caido.io](https://dashboard.caido.io)_) and an API that handles [instance](/app/concepts/instance.md) registration and authentication.
 
 ::: info
-For transparency, the OpenAPI specification of the cloud API can be viewed at [https://github.com/caido/caido/blob/main/api/cloud_instance.yaml](https://github.com/caido/caido/blob/main/api/cloud_instance.yaml).
+For transparency, the OpenAPI specification of the cloud API can be viewed at [https://github.com/caido/schemas/blob/main/schemas/cloud/instance.yml](https://github.com/caido/schemas/blob/main/schemas/cloud/instance.yml).
 :::
 
 ## Data Collection
