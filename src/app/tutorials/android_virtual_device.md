@@ -1,3 +1,7 @@
+---
+description: "Learn how to install Android Studio and create a virtual Android device."
+---
+
 # Setup & Configuration
 
 To proceed with the tutorials for a virtual device, you will need to download/install **Android Studio**.

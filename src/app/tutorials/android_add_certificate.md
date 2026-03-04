@@ -1,5 +1,5 @@
 ---
-description: "Learn how to add Caido's CA certificate to Android system store for HTTPS traffic interception on rooted devices."
+description: "Learn how to add Caido's CA certificate to the system-store of a virtual Android device."
 ---
 
 # Adding Caido's CA Certificate to the System Partition
@@ -22,7 +22,7 @@ To generate the correct certificate file name:
 
 2. Open a terminal and navigate to the file system location of the certificate and enter the following command:
 
-```
+```bash
 openssl x509 -inform PEM -subject_hash_old -in ca.crt
 ```
 
