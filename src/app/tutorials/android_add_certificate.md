@@ -2,13 +2,13 @@
 description: "Learn how to add Caido's CA certificate to Android system store for HTTPS traffic interception on rooted devices."
 ---
 
-# Adding Caido's CA Certificate to the System Partition: Virtual Device
-
-::: tip
-For convenience, consider adding all installed tools/tool packages to your system PATH environment variable to avoid navigation/the need to use absolute paths in commands.
-:::
+# Adding Caido's CA Certificate to the System Partition
 
 In this tutorial, we will cover the process of adding Caido's CA certificate to the system-store of a virtual Android device.
+
+::: warning NOTE
+This tutorial is a continuation of [Setup & Configuration](/app/tutorials/android_virtual_device.md) and [Proxying Browser Traffic](/app/tutorials/android_browser_virtual.md). Ensure you have completed the previous steps before proceeding.
+:::
 
 ## Renaming Caido's CA Certificate
 
@@ -42,95 +42,91 @@ To add the certificate to the system level certificate storage of the device:
 
 2. Select `Android SDK` from the **Languages & Frameworks** drop-down menu.
 
-3. Open a terminal and navigate the the file system location stated in the `Android SDK Location` field.
+3. Add the `emulator` directory (_a subdirectory of the file system location stated in the `Android SDK Location` field_) to your system's PATH environment variable
 
 <img alt="Android SDK Location." src="/_images/android_studio_sdk_tools.png" center no-shadow/>
 
-4. Navigate into the `emulator` directory.
-
-5. Execute the **emulator** tool with `-list-avds` to ensure the device is listed.
+4. Open a terminal and execute the **emulator** tool with `-list-avds` to ensure the device is listed.
 
 ```bash
-./emulator -list-avds
+emulator -list-avds
 ```
 
-6. Execute the **emulator** tool with the name of your device as the value of the `-avd` argument and `writeable-system` (_if your device is currently running, terminate it first by clicking the <code><Icon icon="fas fa-stop" /></code> button of its associated row in the Device Manager window_).
+5. Execute the **emulator** tool with the name of your device as the value of the `-avd` argument and `writeable-system` (_if your device is currently running, terminate it first by clicking the <code><Icon icon="fas fa-stop" /></code> button of its associated row in the Device Manager window_).
 
 ```bash
-./emulator -avd <device-name> -writable-system
+emulator -avd <device-name> -writable-system
 ```
 
-7. Open a new terminal and and navigate the the file system location stated in the `Android SDK Location` field.
-
-8. Navigate into the `platform-tools` directory.
-
-9. Execute the `adb` tool with `devices` to ensure the device is listed.
+6. Once the device has booted up, open a new terminal and execute the `adb` tool with `devices` to ensure the device is listed.
 
 ```bash
-./adb devices
+adb devices
 ```
 
 <img alt="List of connected virtual Android devices." src="/_images/adb_device_list_emulator.png" center no-shadow/>
 
-9. Execute the `adb` tool with the device ID as the value of the `-s` argument and  `root` to gain root privileges.
+7. Execute the `adb` tool with the device ID as the value of the `-s` argument and  `root` to gain root privileges.
 
 ```bash
-./adb -s <device-id> root
+adb -s <device-id> root
 ```
 
 <img alt="Restarting for root privileges." src="/_images/adb_root.png" center no-shadow/>
 
-10. Execute the `adb` tool against the device with `shell avbctl disable-verification` to disable secure boot verification.
+8. Execute the `adb` tool against the device with `shell avbctl disable-verification` to disable secure boot verification.
 
 ```bash
-./adb -s <device-id> shell avbctl disable-verification
+adb -s <device-id> shell avbctl disable-verification
 ```
 
 <img alt="Disabling verification." src="/_images/adb_disable_verification.png" center no-shadow/>
 
-11. Execute the `adb` tool against the device with `reboot` to reboot the device.
+9. Execute the `adb` tool against the device with `reboot` to reboot the device.
 
 ```bash
-./adb -s <device-id> reboot
+adb -s <device-id> reboot
 ```
 
-12. Once the device has rebooted, gain root privileges again.
+10. Once the device has rebooted, gain root privileges again.
 
 ```bash
-./adb -s <device-id> root
+adb -s <device-id> root
 ```
 
-13. Execute the `adb` tool against the device with `remount` to modify the partition permissions as read/write.
+11. Execute the `adb` tool against the device with `remount` to modify the partition permissions as read/write.
 
 ```bash
-./adb -s <device-id> remount
+adb -s <device-id> remount
 ```
 
 <img alt="Remounting." src="/_images/adb_remount.png" center no-shadow/>
 
-14. Execute the `adb` tool against the device with the file system location of the renamed certificate as the value of the `push` argument to move it into the System partition.
+11. In your terminal, navigate to the file system location of the renamed certificate.
+
+12. Execute the `adb` tool against the device with the filename of the renamed certificate as the value of the `push` argument to move it into the System partition.
 
 ```bash
-./adb push </path/to/certificate/hash.0> /system/etc/security/cacerts
+adb-s <device-id> push <hash.0> /system/etc/security/cacerts
 ```
 
 <img alt="Remounting." src="/_images/adb_push_cert.png" center no-shadow/>
 
-15. Execute the `adb` tool with `shell chmod 664 -v` to set the proper permissions on the certificate by specifying its file system location on the device.
+13. Execute the `adb` tool with `shell chmod 664 -v` to set the proper permissions on the certificate by specifying its file system location on the device.
 
 ```bash
-./adb -s <device-id> shell chmod 664 -v /system/etc/security/cacerts/<hash.0>
+adb -s <device-id> shell chmod 664 -v /system/etc/security/cacerts/<hash.0>
 ```
 
 <img alt="Certificate permissions." src="/_images/adb_chmod.png" center no-shadow/>
 
-16. Reboot the device again for the changes to take effect.
+14. Reboot the device again for the changes to take effect.
 
 ```bash
-./adb -s <device-id> reboot
+adb -s <device-id> reboot
 ```
 
-17. Execute the `adb` tool against the device with `reverse tcp:8080 tcp:8080` to forward traffic to Caido.
+15. Once the device has rebooted, execute the `adb` tool against the device with `reverse tcp:8080 tcp:8080` to forward traffic to Caido.
 
 ```bash
 ./adb -s <device-id> reverse tcp:8080 tcp:8080

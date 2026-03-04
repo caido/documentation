@@ -1,4 +1,4 @@
-# Setup & Configuration: Virtual Device
+# Setup & Configuration
 
 To proceed with the tutorials for a virtual device, you will need to download/install **Android Studio**.
 
@@ -44,6 +44,8 @@ Once Android Studio is installed and launched, to create a virtual device:
 6. In the `API` drop-down menu, select `API 30 "R"; Android 11.0`.
 
 7. In the `System Image` table select `Google APIs Intel x86 Atom System Image`.
+
+<img alt="API and System Image selection." src="/_images/android_virtual_config.png" center no-shadow/>
 
 8. **Click** on the `Finish` button and then the `Yes` button in the **Confirm Download** window.
 

@@ -1,14 +1,11 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
-import type { DefaultTheme, HeadConfig } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 import MermaidExample from "./mermaid";
-import {
-  appSidebars,
-  dashboardSidebars,
-} from "./sidebars";
 import { appNavbar, dashboardNavbar } from "./navbars";
+import { appSidebars, dashboardSidebars } from "./sidebars";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,40 +20,21 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [
-      llmstxt(),
-      {
-        name: "vp-nav-menu-alias",
-        resolveId(id) {
-          if (id === "./VPNavBarMenu.vue" || id.endsWith("VPNavBarMenu.vue")) {
-            return new URL(
-              "theme/components/VPNavBarMenu.vue",
-              import.meta.url
-            ).href;
-          }
-        },
-      },
-    ],
+    plugins: [llmstxt()],
   },
 
   head: [
     ["link", { rel: "icon", href: "/favicon.png" }],
-    ...(typeof globalThis !== "undefined" &&
-    (globalThis as { process?: { env?: { NODE_ENV?: string } } }).process?.env
-      ?.NODE_ENV === "production"
-      ? [
-          [
-            "script",
-            {
-              "data-api": "/stats/event",
-              src: "/stats/script.js",
-              defer: "",
-              "data-domain": "docs.caido.io",
-            },
-          ],
-        ]
-      : []),
-  ] as HeadConfig[],
+    [
+      "script",
+      {
+        "data-api": "/stats/event",
+        src: "/stats/script.js",
+        defer: "",
+        "data-domain": "docs.caido.io",
+      },
+    ],
+  ],
   ignoreDeadLinks: "localhostLinks",
 
   markdown: {
@@ -83,9 +61,6 @@ export default defineConfig({
 
     nav: [
       {
-        text: "Application",
-        link: "/app/quickstart/",
-        activeMatch: "^/app(/.*)?$",
         component: "NavItem",
         props: {
           text: "Application",
@@ -96,10 +71,6 @@ export default defineConfig({
       },
       {
         component: "NavItem",
-        text: "Dashboard",
-        link: "/dashboard/quickstart/",
-        activeMatch: "^/dashboard(/|$)",
-        items: dashboardNavbar,
         props: {
           text: "Dashboard",
           link: "/dashboard/quickstart/",
@@ -109,17 +80,13 @@ export default defineConfig({
       },
       {
         component: "NavItem",
-        text: "FAQ",
-        link: "/faq/",
-        activeMatch: "^/faq(/|$)",
-        items: [],
         props: {
           text: "FAQ",
           link: "/faq/",
           activeMatch: "^/faq(/|$)",
         },
       },
-    ] as unknown as DefaultTheme.NavItem[],
+    ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
       "/app/quickstart/": appSidebars.quickstartSidebar,

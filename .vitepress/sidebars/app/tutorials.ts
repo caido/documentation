@@ -54,7 +54,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
                 link: "/app/tutorials/android_virtual_device"
               },
               {
-                text: "Proxying Mobile Chrome Browser Traffic",
+                text: "Proxying Browser Traffic",
                 link: "/app/tutorials/android_browser_virtual",
               },
               {
@@ -71,13 +71,13 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
                 link: "/app/tutorials/android_physical_device"
               },
               {
-                text: "Proxying Mobile Chrome Browser Traffic",
+                text: "Proxying Browser Traffic",
                 link: "/app/tutorials/android_browser_physical",
               },
             ]
           },
           {
-            text: "Modifying an Android Application: Virtual & Physical Devices",
+            text: "Modifying an APK: Virtual & Physical Devices",
             link: "/app/tutorials/modifying_apk",
           },
           {

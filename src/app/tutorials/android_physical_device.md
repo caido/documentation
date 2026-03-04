@@ -1,4 +1,4 @@
-# Setup & Configuration: Physical Device
+# Setup & Configuration
 
 To proceed with the tutorials for a physical device, you will need to download/install Android Studio, the official IDE for developing Android applications.
 
