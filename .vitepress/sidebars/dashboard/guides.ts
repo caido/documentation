@@ -14,6 +14,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Users",
     items: [
       {
+        text: "Applying for Education Plan",
+        link: "/dashboard/guides/education_plan",
+      },
+      {
         text: "Creating a Personal Access Token",
         link: "/dashboard/guides/create_pat",
       },
