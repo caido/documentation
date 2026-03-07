@@ -13,5 +13,5 @@ However, since authentication requires communication with our cloud platform, in
 Once authenticated, Caido will operate in offline mode for 7 days. After this period, internet connectivity will be required again to obtain access tokens.
 
 ::: warning NOTE
-If internet access is completely unavailable, Caido can still be used in [guest mode](/app/guides/guest_mode.md)
+If internet access is completely unavailable, Caido can still be used in [Guest Mode](/app/guides/guest_mode.md)
 :::
