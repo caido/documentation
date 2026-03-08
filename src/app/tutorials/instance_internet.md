@@ -6,6 +6,10 @@ description: "Learn how to set up an instance of Caido that is available online 
 
 In this tutorial, you will learn how to expose a Caido instance to the internet.
 
+::: danger
+If [Guest Mode](/app/guides/guest_mode.md) is enabled, the Caido instance will be publicly accessible without authentication. For security and confidentiality, ensure to disable Guest Mode before exposing an instance to the internet.
+:::
+
 ::: warning NOTE
 Ensure to replace `user` with your username, `example.com` with your domain, `user@example.com` with your email address, and account for any currently running processes by changing the ports.
 :::
