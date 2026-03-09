@@ -3,3 +3,225 @@ description: "Learn possible resolutions for errors encountered when attempting 
 ---
 
 # Troubleshooting
+
+::: warning NOTE
+Due to the variety of Android testing configurations, the potential resolutions are non-exhaustive. Individual research may be necessary in order to resolve errors encountered with your specific setup.
+:::
+
+## Traffic Isn't Appearing in HTTP History
+
+If traffic is not appearing in the HTTP History table, network configuration settings may be the cause.
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Disable `Mobile data` usage, VPN connections, and/or set the Wi-Fi **Proxy hostname** to `10.0.2.2`.
+
+## "Failed to spawn: unable to find process with name 'gadget'"
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error after attempting to execute Frida, ensure the application is launched.
+
+## "Failed to spawn: unable to communicate with remote frida-server; please ensure that major versions match and that the remote Frida has the feature you are trying to use" - "TypeError: not a function"
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> If you encounter this error after attempting to execute Frida, ensure the versions of Frida, Frida Tools, and Frida Gadget are compatible with each other.
+
+[View the releases in the Frida repository.](https://github.com/frida/frida/releases)
+
+```bash
+frida --version
+```
+
+```bash
+pip show frida-tools
+```
+
+## Certificate Errors
+
+If you encounter an error after attempting to install Caido's CA certificate, either:
+
+### Verify the Certificate
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Ensure the certificate is the one specific to your active instance: [
+CA Certificate Management](/app/guides/ca_certificate_managing.md)
+
+<code><Icon icon="fas fa-screwdriver-wrench" /></code> Ensure the certificate name is compatible with the Android system: [Renaming Caido's CA Certificate](/app/tutorials/android_add_certificate.md#renaming-caido-s-ca-certificate)
+
+### Ignore Certificate Errors
+
+1. Obtain the SPKI fingerprint of your Caido instance CA certificate by executing the `get_spki_fingerprint.py` file.
+
+<details>
+<summary>get_spki_fingerprint.py</summary>
+
+```py
+#!/usr/bin/env python3
+"""
+Script to extract SPKI fingerprint from a certificate
+Mimics: openssl x509 -in $YOUR_CA_CERTIFICATE -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+"""
+
+import base64
+import hashlib
+from cryptography import x509
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+
+def get_spki_fingerprint_openssl_style(cert_pem):
+    """
+    Extract the SPKI fingerprint from a certificate in PEM format
+    Mimics the OpenSSL command:
+    openssl x509 -in $YOUR_CA_CERTIFICATE -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+    
+    Args:
+        cert_pem (str): Certificate in PEM format
+        
+    Returns:
+        str: Base64 encoded SHA-256 hash of the public key in DER format
+    """
+    # Parse the certificate
+    cert = x509.load_pem_x509_certificate(cert_pem.encode('utf-8'))
+    
+    # Get the public key bytes in DER format (equivalent to openssl pkey -pubin -outform der)
+    public_key_bytes = cert.public_key().public_bytes(
+        encoding=Encoding.DER,
+        format=PublicFormat.SubjectPublicKeyInfo
+    )
+    
+    # Calculate SHA-256 hash in binary (equivalent to openssl dgst -sha256 -binary)
+    hash_binary = hashlib.sha256(public_key_bytes).digest()
+    
+    # Encode in base64 (equivalent to openssl enc -base64)
+    base64_fingerprint = base64.b64encode(hash_binary).decode('utf-8')
+    
+    return base64_fingerprint
+
+def get_spki_fingerprint_hex(cert_pem):
+    """
+    Extract the SPKI fingerprint from a certificate in PEM format (hex format)
+    
+    Args:
+        cert_pem (str): Certificate in PEM format
+        
+    Returns:
+        str: SHA-256 fingerprint of the SPKI in hex format
+    """
+    # Parse the certificate
+    cert = x509.load_pem_x509_certificate(cert_pem.encode('utf-8'))
+    
+    # Get the public key bytes (SPKI)
+    public_key_bytes = cert.public_key().public_bytes(
+        encoding=Encoding.DER,
+        format=PublicFormat.SubjectPublicKeyInfo
+    )
+    
+    # Calculate SHA-256 hash
+    fingerprint = hashlib.sha256(public_key_bytes).hexdigest()
+    
+    # Format as colon-separated hex pairs (common format for fingerprints)
+    formatted_fingerprint = ':'.join(fingerprint[i:i+2].upper() for i in range(0, len(fingerprint), 2))
+    
+    return formatted_fingerprint
+
+def get_certificate_input():
+    """
+    Get certificate input from user
+    """
+    print("Please paste your certificate (including BEGIN and END lines):")
+    print("Press Enter twice when finished:")
+    
+    lines = []
+    while True:
+        line = input()
+        if line.strip() == "" and lines and lines[-1].strip() == "":
+            break
+        lines.append(line)
+    
+    # Remove the last empty line
+    if lines and lines[-1].strip() == "":
+        lines.pop()
+    
+    return '\n'.join(lines)
+
+def main():
+    try:
+        # Get certificate from user input
+        cert_pem = get_certificate_input()
+        
+        # Validate that it looks like a certificate
+        if not cert_pem.strip().startswith('-----BEGIN CERTIFICATE-----'):
+            print("Error: Certificate should start with '-----BEGIN CERTIFICATE-----'")
+            return
+        
+        if not cert_pem.strip().endswith('-----END CERTIFICATE-----'):
+            print("Error: Certificate should end with '-----END CERTIFICATE-----'")
+            return
+        
+        # Get the OpenSSL-style base64 fingerprint
+        base64_fingerprint = get_spki_fingerprint_openssl_style(cert_pem)
+        print("\nSPKI Fingerprint (OpenSSL style - Base64):")
+        print(base64_fingerprint)
+        
+        # Also show the hex format for comparison
+        hex_fingerprint = get_spki_fingerprint_hex(cert_pem)
+        print(f"\nSPKI Fingerprint (Hex format):")
+        print(hex_fingerprint)
+        
+        # Show the raw hex without colons
+        raw_fingerprint = hex_fingerprint.replace(':', '').lower()
+        print(f"\nRaw hex: {raw_fingerprint}")
+        
+        print(f"\nEquivalent OpenSSL command:")
+        print("openssl x509 -in certificate.pem -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64")
+        
+    except Exception as e:
+        print(f"Error processing certificate: {e}")
+
+if __name__ == "__main__":
+    main()
+```
+
+</details>
+
+```bash
+python get_spki_fingerprint.py
+```
+
+2. Create a file named `chrome` with the following content with the SPKI fingerprint as the value of the `--ignore-certificate-errors-spki-list` argument.
+
+```txt
+chrome --ignore-certificate-errors-spki-list=
+```
+
+3. Execute the `adb` tool with the device ID as the value of the `-s` argument and  `root` to gain root privileges.
+
+```bash
+adb -s <device-id> root
+```
+
+4. Execute `adb push` to push the `chrome` file to the following locations:
+
+- /data/local/chrome-command-line
+- /data/local/android-webview-command-line
+- /data/local/webview-command-line
+- /data/local/content-shell-command-line
+- /data/local/tmp/chrome-command-line
+- /data/local/tmp/android-webview-command-line
+- /data/local/tmp/webview-command-line
+- /data/local/tmp/content-shell-command-line
+
+```bash
+adb push chrome /data/local/chrome-command-line && adb push chrome /data/local/android-webview-command-line && adb push chrome /data/local/webview-command-line && adb push chrome /data/local/content-shell-command-line && adb push chrome /data/local/tmp/chrome-command-line && adb push chrome /data/local/tmp/android-webview-command-line && adb push chrome /data/local/tmp/webview-command-line && adb push chrome /data/local/tmp/content-shell-command-line
+```
+
+5. Set the appropriate permissions on each location.
+
+```bash
+adb shell "chmod 555 -v /data/local/chrome-command-line /data/local/android-webview-command-line /data/local/webview-command-line /data/local/content-shell-command-line /data/local/tmp/chrome-command-line /data/local/tmp/android-webview-command-line /data/local/tmp/webview-command-line /data/local/tmp/content-shell-command-line"
+```
+
+6. Kill Chrome.
+
+```bash
+adb shell am force-stop com.android.chrome
+```
+
+7. Launch Chrome.
+
+8. Navigate to `chrome://version` and verify that `chrome --ignore-certificate-errors-spki-list=<fingerprint>` is listed in the **Command Line** arguments.

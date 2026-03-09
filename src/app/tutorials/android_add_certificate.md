@@ -107,7 +107,7 @@ adb -s <device-id> remount
 12. Execute the `adb` tool against the device with the filename of the renamed certificate as the value of the `push` argument to move it into the System partition.
 
 ```bash
-adb-s <device-id> push <hash.0> /system/etc/security/cacerts
+adb -s <device-id> push <hash.0> /system/etc/security/cacerts/
 ```
 
 <img alt="Remounting." src="/_images/adb_push_cert.png" center no-shadow/>
@@ -129,7 +129,7 @@ adb -s <device-id> reboot
 15. Once the device has rebooted, execute the `adb` tool against the device with `reverse tcp:8080 tcp:8080` to forward traffic to Caido.
 
 ```bash
-./adb -s <device-id> reverse tcp:8080 tcp:8080
+adb -s <device-id> reverse tcp:8080 tcp:8080
 ```
 
 ::: tip

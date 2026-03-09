@@ -131,10 +131,10 @@ To make the appropriate changes:
 
 5. Save any changes to `AndroidManifest.xml`.
 
-6. Execute `apktool` with `b` and the output filename (_e.g. `modified.apk`_) as the value of the `-o` argument against the unpacked APK directory (_e.g. `unpacked`_) to repack the contents into an APK.
+6. From the root directory of the unpacked APK, execute `apktool` with `b` and the output filename (_e.g. `modified.apk`_) as the value of the `-o` argument to repack the contents into an APK.
 
 ```bash
-apktool b -o modified.apk unpacked
+apktool b -o modified.apk ./
 ```
 
 <img alt="Repacking the APK." src="/_images/apk_repack.png" center no-shadow/>
@@ -195,9 +195,22 @@ As you can see, certain requests still result in an error message and are not pr
 
 **Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This can be used to modify the processes are checking the SSL/TLS certificates.
 
+::: warning NOTE
+This tutorial was written using:
+
+- **Frida** v16.6.6
+- **Frida Tools** v13.6.0
+
+We recommend using the same versions to ensure the instructions align.
+:::
+
 To bypass the additional certificate pinning protections:
 
-1. [Download and install the Frida CLI tools.](https://frida.re/docs/installation/)
+1. Download and install the Frida CLI tools (Frida and Frida Tools):
+
+```bash
+pip install frida==16.6.6 frida-tools==13.6.0
+```
 
 2. Add the `/scripts` directory of the package to your system's PATH environment variable.
 
@@ -207,6 +220,14 @@ To bypass the additional certificate pinning protections:
 
 Since certain Frida operations may not work with unrooted devices, you will also need the **Frida Gadget** library. Once the library is injected into the APK, commands can be executed using the CLI tools.
 
+::: warning NOTE
+This tutorial was written using:
+
+- **Frida Gadget** v16.6.6
+
+We recommend using the same versions to ensure the instructions align.
+:::
+
 To check which download you will need for your device's architecture:
 
 1. Execute the `adb` tool against the device with `shell getprop ro.product.cpu.abi` to get the device's CPU ABI.
@@ -215,14 +236,14 @@ To check which download you will need for your device's architecture:
 adb -s <device-id> shell getprop ro.product.cpu.abi
 ```
 
-2. Download the latest appropriate `frida-gadget-<version>-android-<architecture>.so.xz` package from the [release repository](https://github.com/frida/frida/releases):
+2. Download the latest appropriate `frida-gadget-16.6.6-android-<architecture>.so.xz` package:
 
-- For **armeabi-v7a or armeabi**: `android-arm.so.xz`
-- For **arm64-v8a**: `android-arm64.so.xz`
-- For **x86**: `android-x86.so.xz`
-- For **x86_64**: `android-x86_64.so.xz`
+- For `armeabi-v7a` or `armeabi`: [android-arm.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm.so.xz)
+- For `arm64-v8a`: [android-arm64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm64.so.xz)
+- For `x86`: [android-x86.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-x86.so.xz)
+- For `x86_64`: [android-x86_64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-x86_64.so.xz)
 
-Once downloaded, extract the library folder to your working directory and rename the `.so` to:
+Once downloaded, extract the library folder to your working directory and rename the `.so` file to:
 
 ```text
 libfrida-gadget.so
@@ -255,29 +276,25 @@ In Android development, an "activity" is the term used to refer to a specific pa
 
 2. Change the value of the `android:extractNativeLibs` attribute from `"false"` to `"true`".
 
+3. Save the changes to the `AndroidManifest.xml` file.
+
 ```xml
 android:extractNativeLibs="true"
 ```
 
-3. Next, search for the `activity` tag.
+4. Next, search for the `activity` tag for the value of the `android:name` attribute which stores the full name of the package that serves the main activity of the application upon launch.
 
 ``` xml
 <activity android:exported="true" android:name="tech.httptoolkit.pinning_demo.MainActivity">
-```
-
-Within this `activity` tag will be a `android:name` attribute which stores the full name of the package that serves the main activity of the application upon launch.
-
-```text
-tech.httptoolkit.pinning_demo.MainActivity
 ```
 
 ::: info
 The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e.g. `MainActivity`, `SplashActivity`, `WindowActivity`, `LauncherActivity`, etc._).
 :::
 
-4. Recursively search through the unpacked APK for the `MainActivity`'s `.smali` file.
+5. Recursively search through the unpacked APK for the `MainActivity`'s `.smali` file.
 
-5. Open the `smali/tech/httptoolkit/pinning_demo/MainActivity.smali` file and locate the `.method public constructor <init>()V` initialization function.
+6. Open the `smali/tech/httptoolkit/pinning_demo/MainActivity.smali` file and locate the `.method public constructor <init>()V` initialization function (_lines 74-81_).
 
 ``` smali
 .method public constructor <init>()V
@@ -290,7 +307,7 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 .end method
 ```
 
-6. Modify this function class definition to include the Frida Gadget script and increment the value of its `.locals` property to account for the change.
+7. Modify this method to include the Frida Gadget script and increment the value of its `.locals` property to account for the change.
 
 ``` smali
 .method public constructor <init>()V
@@ -306,21 +323,21 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 .end method
 ```
 
-7. Save the changes to `smali/tech/httptoolkit/pinning_demo/MainActivity.smali`.
+8. Save the changes to `smali/tech/httptoolkit/pinning_demo/MainActivity.smali`.
 
-8. Next, create a `lib` directory in the root of the unpacked APK folder, an architecture specific subdirectory, and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/x86/libfrida-gadget.so`_).
+9. Next, create a `lib` directory in the root of the unpacked APK folder, an architecture specific subdirectory, and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/x86/libfrida-gadget.so`_).
 
-9. Execute `apktool` with `b` and the output filename (_e.g. `frida-app.apk`_) as the value of the `-o` argument against the unpacked APK directory (_e.g. `unpacked`_) to repack the contents into an APK.
+10. Execute `apktool` with `b` and the output filename (_e.g. `frida-app.apk`_) as the value of the `-o` argument against the unpacked APK directory to repack the contents.
 
 ```bash
-apktool b -o frida-app.apk unpacked
+apktool b -o frida-app.apk ./
 ```
 
 <img alt="Repacking the APK." src="/_images/apk_unpinned_repack.png" center no-shadow/>
 
 ---
 
-Execute zipalign with -p 4 against the repacked APK filename (e.g. modified.apk) and specify a new APK filename for the aligned file (e.g. aligned.apk).
+11. Align the file (_e.g. `frida-aligned.apk`_).
 
 ```bash
 zipalign -p 4 frida-app.apk frida-aligned.apk
@@ -328,50 +345,48 @@ zipalign -p 4 frida-app.apk frida-aligned.apk
 
 ---
 
-10. Sign the APK.
+12. Sign the APK.
 
 ```bash
 apksigner sign --ks custom.keystore frida-aligned.apk
 ```
 
-11. Uninstall the original application from the device.
+13. Uninstall the original application from the device.
 
 ```bash
-adb uninstall tech.httptoolkit.pinning_demo
+adb -s <device-id> uninstall tech.httptoolkit.pinning_demo
 ```
 
-12. Install the modified APK.
+14. Install the modified APK.
 
 ```bash
-adb install frida-aligned.apk
+adb -s <device-id> install frida-aligned.apk
 ```
 
-14. Next, open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization. Supply it with:
+## Frida CodeShare
+
+[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts for bypassing the protective measures of various HTTP libraries utilized by Android applications.
+
+To utilize a script from the repository:
+
+1. Open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization.
+
+2. Execute `frida` against the device with `-U gadget` and the script `<author>/<name>` (_e.g. `fdciabdul/frida-multiple-bypass`_) as the value of the `--codeshare` argument.
 
 ```bash
 frida -U gadget --codeshare fdciabdul/frida-multiple-bypass
 ```
 
-15. Depending on the script used, you will now be able to make additional requests that were previously blocked when we only modified the `network_security_config.xml` file and see traffic in Caido's HTTP History.
-
-### Bypass Scripts
-
-Various HTTP libraries and their versions will require certain scripts in order to successfully bypass them.
-
-#### Frida CodeShare
-
-[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line option.
-
-```bash
-./frida -U gadget --codeshare <author>/<file>
-```
+Depending on the script used, you will now be able to make additional requests that previously failed.
 
 ::: danger WARNING
 When sourcing files online, ensure to evaluate the code for any malicious operations before executing it.
 :::
 
-You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line option followed by the file's location:
+::: tip
+To specify a local script, use the filename as the value of the `-l` argument.
 
 ```bash
 ./frida -U gadget -l <file>
 ```
+:::
