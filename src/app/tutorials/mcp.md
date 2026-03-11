@@ -1,3 +1,7 @@
+---
+description: "Learn how to integrate AI models and agents with Caido using the Caido MCP Server."
+---
+
 # AI with Caido
 
 In this tutorial, you will learn how to integrate AI models/agents with Caido.

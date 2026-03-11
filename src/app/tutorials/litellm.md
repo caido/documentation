@@ -1,3 +1,7 @@
+---
+description: "Learn how to configure LiteLLM, Caido, and Shift to use models from multiple LLM providers via a unified proxy."
+---
+
 # Using LiteLLM with Shift
 
 [LiteLLM](https://docs.litellm.ai/) is an open-source proxy/gateway that provides a unified interface for accessing multiple LLM providers.
