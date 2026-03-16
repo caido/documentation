@@ -77,7 +77,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
             ]
           },
           {
-            text: "Modifying an APK: Virtual & Physical Devices",
+            text: "Modifying an APK",
             link: "/app/tutorials/modifying_apk",
           },
           {

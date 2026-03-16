@@ -70,7 +70,7 @@ pm list packages -f | grep -i pinning
 
 <img alt="Finding the base package." src="/_images/adb_package_location.png" center no-shadow/>
 
-3. Copy the absolute file path (_starting from `/data` and ending with `/base.apk`_) and exit the device command-line interface using`CTRL` + `D` or by typing and entering `exit`.
+3. Copy the absolute file path (_starting from `/data` and ending with `/base.apk`_) and exit the device command-line interface using `CTRL` + `D` or by typing and entering `exit`.
 
 4. Execute the `adb` tool against the device with the file path as the value of the `pull` argument to pull the APK to your computer.
 
@@ -151,31 +151,31 @@ keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysi
 
 <img alt="Generating a key." src="/_images/apk_keytool_genkey.png" center no-shadow/>
 
-11. Follow the prompts to configure the key.
+10. Follow the prompts to configure the key.
 
-12. Add the `build-tools\<version>` directory (_a subdirectory of the file system location stated in the `Android SDK Location` field_) to your system's PATH environment variable.
+11. Add the `build-tools\<version>` directory (_a subdirectory of the file system location stated in the `Android SDK Location` field_) to your system's PATH environment variable.
 
-13. Open a new terminal and navigate to the file system location of the repacked APK file.
+12. Open a new terminal and navigate to the file system location of the repacked APK file.
 
-14. Execute `zipalign` with `-p 4` against the repacked APK filename (_e.g. `modified.apk`_) and specify a new APK filename for the aligned file (_e.g. `aligned.apk`_).
+13. Execute `zipalign` with `-p 4` against the repacked APK filename (_e.g. `modified.apk`_) and specify a new APK filename for the aligned file (_e.g. `aligned.apk`_).
 
 ```bash
 zipalign -p 4 modified.apk aligned.apk
 ```
 
-15. Sign the APK.
+14. Sign the APK.
 
 ```bash
 apksigner sign --ks custom.keystore aligned.apk
 ```
 
-16. Execute the `adb` tool against the device with `uninstall tech.httptoolkit.pinning_demo` to uninstall the existing installation.
+15. Execute the `adb` tool against the device with `uninstall tech.httptoolkit.pinning_demo` to uninstall the existing installation.
 
 ```bash
 adb -s <device-id> uninstall tech.httptoolkit.pinning_demo
 ```
 
-18. Install the modified application on the device.
+16. Install the modified application on the device.
 
 ```bash
 adb -s <device-id> install aligned.apk
@@ -193,7 +193,7 @@ As you can see, certain requests still result in an error message and are not pr
 
 ## Frida
 
-**Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This can be used to modify the processes are checking the SSL/TLS certificates.
+**Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This can be used to modify the processes that are checking the SSL/TLS certificates.
 
 ::: warning NOTE
 This tutorial was written using:
@@ -274,7 +274,7 @@ In Android development, an "activity" is the term used to refer to a specific pa
 </manifest>
 ```
 
-2. Change the value of the `android:extractNativeLibs` attribute from `"false"` to `"true`".
+2. Change the value of the `android:extractNativeLibs` attribute from `"false"` to `"true"`.
 
 3. Save the changes to the `AndroidManifest.xml` file.
 
