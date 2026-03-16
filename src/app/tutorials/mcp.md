@@ -193,7 +193,3 @@ Select `2. Yes, and don't ask again for caido - caido_send_request commands in..
 A new Replay session will be created and a summary of the request and response will be returned.
 
 <img alt="Replay request and response summary." src="/_images/mcp_claude_replay.png" width=500px center>
-
-## Caido Skills
-
-[https://github.com/caido/skills](https://github.com/caido/skills)
