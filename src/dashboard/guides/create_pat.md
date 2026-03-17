@@ -2,7 +2,7 @@
 
 [PAT](/dashboard/concepts/pat) can be used as the authentication method for the [Caido Cloud API](https://developer.caido.io/reference/api.html).
 
-To create a new PAT, visit the <code><Icon icon="fas fa-key" /> Developer</code> page on your account.
+To create a new PAT, visit [https://dashboard.caido.io/developer](https://dashboard.caido.io/developer).
 
 <img alt="PAT Page for user" src="/_images/pat_page.png" width=900px center />
 
