@@ -2,7 +2,7 @@
 description: "Learn how to integrate AI models and agents with Caido using the Caido MCP Server."
 ---
 
-# AI with Caido
+# The Caido MCP Server
 
 In this tutorial, you will learn how to integrate AI models/agents with Caido.
 
@@ -10,7 +10,13 @@ In this tutorial, you will learn how to integrate AI models/agents with Caido.
 
 The community developed [Caido MCP Server](https://github.com/c0tton-fluff/caido-mcp-server) provides AI models/agents with a variety of tools and controlled access to project data.
 
-With contexual awareness of a project's proxied traffic, extensions, and configurations - the Caido MCP Server gives you the ability to instruct AI assistants to:
+::: warning
+The Caido MCP Server is **not** officially affiliated with Caido.
+
+As with any third-party projects, ensure to review the code and assess the potential security risks before installation and execution.
+:::
+
+With contextual awareness of a project's proxied traffic, extensions, and configurations - the Caido MCP Server gives you the ability to instruct AI assistants to:
 
 - Intercept and forward traffic.
 - Filter traffic with HTTPQL query statements.
@@ -80,7 +86,7 @@ caido-mcp-server.exe login -u http://127.0.0.1:8080
 
 Once the server is installed, configured, and you are authenticated, models/agents can be configured as clients.
 
-### Cursor Desktop Application
+### Cursor
 
 To use the Caido MCP Server with the Cursor desktop application:
 
@@ -130,8 +136,8 @@ To verify the configuration, **click** on the <code><Icon icon="fas fa-gear" /><
 
 5. To verify the connection, submit the message "Send a Replay request to example.com".
 
-::: tip
-Select `Allowlist MCP Tool` to avoid having to authorize the server repeatedly.
+::: warning
+Consider the reduction in oversight before selecting `Allowlist MCP Tool`.
 
 <img alt="Allowlist MCP tool." src="/_images/mcp_allowlist.png" no-shadow center>
 :::
@@ -184,10 +190,10 @@ claude
 
 4. To verify the connection, submit the message "Send a Replay request to example.com".
 
-::: tip
-Select `2. Yes, and don't ask again for caido - caido_send_request commands in...` to avoid having to authorize the server repeatedly.
+::: warning
+Consider the reduction in oversight before selecting `2. Yes, and don't ask again for caido - caido_send_request commands in...`.
 
-<img alt="Claude CLI authorization prompt." src="/_images/mcp_allowlist.png" no-shadow center>
+<img alt="Claude CLI authorization prompt." src="/_images/mcp_claude.png" no-shadow center>
 :::
 
 A new Replay session will be created and a summary of the request and response will be returned.

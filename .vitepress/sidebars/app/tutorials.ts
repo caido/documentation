@@ -40,7 +40,7 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     text: "AI",
     items: [
       {
-        text: "AI with Caido",
+        text: "The Caido MCP Server",
         link: "/app/tutorials/mcp",
       },
     ],
