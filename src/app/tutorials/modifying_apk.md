@@ -2,57 +2,67 @@
 description: "Learn how to modify Android APK files to bypass certificate pinning and enable HTTPS traffic interception through Caido."
 ---
 
-# Modifying an Android Application
+# Modifying an Android Application: Virtual & Physical Devices
 
-In this tutorial, we’ll use the **HTTPToolkit Pinning Demo** application to demonstrate how to modify an APK so that Caido can proxy its traffic, and we’ll test these changes using the app’s various HTTP requests. If you are new to mobile application testing, we recommend you [download the HTTPToolkit SSL Pinning Demo APK](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk) to ensure the steps align exactly.
+::: warning NOTE
+This tutorial is a continuation of the previous tutorials. Ensure your environment and virtual/physical device is prepared before continuing.
+:::
+
+To proceed with this tutorial, you will need to download/install the **SSL Pinning Demo** application.
+
+## SSL Pinning Demo
+
+The [SSL Pinning Demo](https://github.com/httptoolkit/android-ssl-pinning-demo) is an Android application developed by [HTTPToolkit](https://httptoolkit.tech/) for security education. It blocks HTTPS traffic from being proxied or intercepted via certificate pinning and a security configuration file.
+
+The application provides an array of buttons that issue requests under various secure and insecure configurations. Unpacking and modifying the **Android Package Kit** (APK) file bundle that comprises the application demonstrates how these protective measures can be bypassed.
+
+If an application's traffic is still not proxied through Caido or you encounter errors or limited functionality, similar protective measures likely exist in its code or configuration.
+
+::: warning NOTE
+This tutorial was written using:
+
+- SSL Pinning Demo v1.4.1. To download this release visit: [https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk](https://github.com/httptoolkit/android-ssl-pinning-demo/releases/download/v1.4.1/pinning-demo.apk)
+
+We recommend using the same version to ensure the instructions align.
+:::
 
 <img alt="List of connected Android devices." src="/_images/pinning_demo_requests.png" center no-shadow width="300"/>
 
-::: danger WARNING
-Caido is not liable for any malfunctions, failures, damages, loss/theft of data, or other technical issues that may occur with your device as a result of following this tutorial. Proceed at your own risk.
-:::
-
-::: warning NOTE
-This tutorial is a continuation of [Android Setup and Configuration](/app/tutorials/android_configuration.md). Ensure your environment and device are prepared before continuing.
-:::
-
 ::: info
 
-- ****This process does not require a rooted device.****
+- **This process does NOT require a rooted device.**
 - Be aware that the exact names and locations of setting options may vary between devices.
 - Ensure to pay attention to any prompts on the device itself while proceeding through these steps.
-- For convenience, add all installed tools to your system's `PATH` envrionment variable to make them globally accessible. Ensure to restart your terminal afterwards so the changes take effect.
-- For physical devices, make sure the device is connected to the computer running Caido via USB and that both the device and the computer are on the same Wi-Fi network.
+- For physical devices, ensure the device is connected to the computer running Caido via USB and that both the device and the computer are on the same Wi-Fi network.
 :::
 
-::: tip
-If you want to automate this entire process, you can use [apk-mitm](https://github.com/niklashigi/apk-mitm).
-:::
+Once the `SSL Pinning Demo v1.4.1` APK has been downloaded to your computer, to install it on your device:
 
-## Android Package Kits
-
-Android applications are files bundled as `.apk` (**Android Package Kit**) packages and must be modified for use with Caido.
-
-APKs can be acquired by downloading them directly from repositories or sites such as [apkmirror.com](https://www.apkmirror.com/) or [apkpure.com](https://apkpure.com/).
-
-### Extracting APKs
-
-<details>
-<summary>APKs can also be extracted from applications already installed on your device. Expand this section to learn how.</summary>
-
-1. First, install the demo application to your connected device with:
+1. Execute the `adb` tool with `devices` to ensure the device is listed.
 
 ```bash
-adb install pinning-demo.apk
+adb devices
 ```
 
-2. Initialize a command-line interface on your Android device:
+2. Navigate to the file system location of the APK file.
+
+3. Execute the `adb` tool with the device ID as the value of the `-s` argument and the file system location of the `pinning-demo.apk` as the value of the `install` argument to install the application.
 
 ```bash
-adb shell
+adb -s <device-id> install pinning-demo.apk
 ```
 
-3. Find the application's `base.apk` package on your device by listing all the file paths of installed packages and filtering the results by the application name:
+## Extracting an APK
+
+Once the `SSL Pinning Demo v1.4.1` application has been installed on your device, to simulate extracting the APK from the installation:
+
+1. Execute the `adb` tool against the device with `shell` to initialize a terminal.
+
+```bash
+adb -s <device-id> shell
+```
+
+2. Find the application's `base.apk` package on your device by listing all the file paths of installed packages and filtering the results by the application name.
 
 ```bash
 pm list packages -f | grep -i pinning
@@ -60,46 +70,44 @@ pm list packages -f | grep -i pinning
 
 <img alt="Finding the base package." src="/_images/adb_package_location.png" center no-shadow/>
 
-4. Copy the location and exit the device command-line interface using`CTRL` + `D` or by typing and entering `exit`.
+3. Copy the absolute file path (_starting from `/data` and ending with `/base.apk`_) and exit the device command-line interface using `CTRL` + `D` or by typing and entering `exit`.
 
-5. Pull the `base.apk` from your device to your computer (_do not include the `=<package-name>` portion of the output_):
+4. Execute the `adb` tool against the device with the file path as the value of the `pull` argument to pull the APK to your computer.
 
 ```bash
-adb pull /data/app/tech.httptoolkit.pinning_demo-1wMoq8214ewjz2S-xt-sCA==/base.apk
+adb -s <device-id> pull </data/app/<path-segments>/base.apk>
 ```
 
 <img alt="Pulling the base package." src="/_images/apk_pulled.png" center no-shadow/>
 
-</details>
-
 ### Unpacking APKs
 
-**Apktool** is a tool for reverse engineering Android applications. Once you have an application's APK, with Apktool you can decompile the package into its individual resources (_such as XML files, images, and code_) and then rebuild them after making modifications.
+Once you have an application's APK, to decompile the package into its individual resources:
 
-[Download Apktools for your operating system.](https://apktool.org/docs/install)
+1. Download and install [Apktool](https://apktool.org/docs/install/) for your operating system.
 
-To unpack the contents of an APK to a new directory within the current directory, use the following command:
+2. Open a terminal and navigate to the file system location of the APK file.
+
+3. Execute `apktool` with `d` and the output directory (_e.g. `unpacked`_) as the value of the `-o` argument against the APK file (_e.g. `base.apk`_) to unpack the contents to the specified directory.
 
 ```bash
-apktool d -o unpacked pinning-demo.apk
+apktool d -o unpacked base.apk
 ```
-
-_If you extracted the APK, ensure to replace `pinning-demo.apk` with `base.apk`._
 
 <img alt="Unpacking the APK." src="/_images/apk_unpacked.png" center no-shadow/>
 
 ## Modifying the Network Security Configuration File
 
-One of the reasons that Caido may not be able to proxy the application traffic is due to the presence of a [Network Security Configuration file](https://developer.android.com/privacy-and-security/security-config).
-Introduced in Android 7.0 (API level 24), the `network_security_config.xml` file allows developers to customize network security settings for their applications.
+Application traffic may be blocked from interception/proxying due to the presence of a [Network Security Configuration](https://developer.android.com/privacy-and-security/security-config) file.
+Introduced in Android 7.0 (_API level 24_), the `network_security_config.xml` file allows developers to customize network security settings for their applications.
 
-In some cases, modifying this file and including the `<certificates src="user" overridePins="true" />` directive to trust user-supplied certificates may be enough to make the application Caido compatible.
+In some cases, modifying this file and including the `<certificates src="user" overridePins="true" />` directive to trust user-supplied certificates may be sufficient enough to configure the application to be Caido compatible.
 
 To make the appropriate changes:
 
-1. Open the `/res/xml/network_security_config.xml` file, or if it doesn't exist, create it.
+1. Open the `/res/xml/network_security_config.xml` file from the unpacked directory in an editor (_or, if it doesn't exist, create it_).
 
-2. Replace or write the content of the file to:
+2. Replace/write the content of the file to:
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,9 +125,13 @@ To make the appropriate changes:
 </network-security-config>
 ```
 
-3. Ensure that the main configuration file, `AndroidManifest.xml` references the `network_security_config.xml` file via the `android:networkSecurityConfig="@xml/network_security_config"` attribute in the `<application>` tag. If you created a new `network_security_config.xml` file, you will have to explicitly add this.
+3. Save the changes to `/res/xml/network_security_config.xml`.
 
-4. From the directory of the unpacked APK, repack it with:
+4. Ensure that the main configuration file, `AndroidManifest.xml` references the `network_security_config.xml` file via the `android:networkSecurityConfig="@xml/network_security_config"` attribute in the `<application>` tag (_if you created a new `network_security_config.xml` file, you will have to explicitly add this_).
+
+5. Save any changes to `AndroidManifest.xml`.
+
+6. From the root directory of the unpacked APK, execute `apktool` with `b` and the output filename (_e.g. `modified.apk`_) as the value of the `-o` argument to repack the contents into an APK.
 
 ```bash
 apktool b -o modified.apk ./
@@ -127,11 +139,11 @@ apktool b -o modified.apk ./
 
 <img alt="Repacking the APK." src="/_images/apk_repack.png" center no-shadow/>
 
-5. You will need the `keytool` tool in order to repack the APK. This tool is included in the Java Development Kit (JDK).
+7. Download and install [Java Development Kit (JDK)](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html) for your operating system and add the `/bin` directory to your system's PATH environment variable.
 
-[Download the JDK for your operating system](https://docs.oracle.com/en/java/javase/23/install/overview-jdk-installation.html) and add it to your system's `PATH` environment variable.
+8. Open a new terminal and navigate to the file system location of the repacked APK file.
 
-6. Generate a signing key with:
+9. Execute `keytool` to generate a signing key with a keystore filename as the value of the `-keystore` argument (_e.g. `custom.keystore`_).
 
 ```bash
 keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysize 2048 -validity 10000
@@ -139,71 +151,99 @@ keytool -genkey -v -keystore custom.keystore -alias aliasname -keyalg RSA -keysi
 
 <img alt="Generating a key." src="/_images/apk_keytool_genkey.png" center no-shadow/>
 
-7. Align the APK:
+10. Follow the prompts to configure the key.
+
+11. Add the `build-tools\<version>` directory (_a subdirectory of the file system location stated in the `Android SDK Location` field_) to your system's PATH environment variable.
+
+12. Open a new terminal and navigate to the file system location of the repacked APK file.
+
+13. Execute `zipalign` with `-p 4` against the repacked APK filename (_e.g. `modified.apk`_) and specify a new APK filename for the aligned file (_e.g. `aligned.apk`_).
 
 ```bash
 zipalign -p 4 modified.apk aligned.apk
 ```
 
-8. Sign the APK with:
+14. Sign the APK.
 
 ```bash
 apksigner sign --ks custom.keystore aligned.apk
 ```
 
-::: tip
-If the application is currently installed on your device, before continuing, uninstall it with:
+15. Execute the `adb` tool against the device with `uninstall tech.httptoolkit.pinning_demo` to uninstall the existing installation.
 
 ```bash
-adb uninstall tech.httptoolkit.pinning_demo
+adb -s <device-id> uninstall tech.httptoolkit.pinning_demo
 ```
 
-:::
-
-9. Install the modified APK:
+16. Install the modified application on the device.
 
 ```bash
-adb install aligned.apk
+adb -s <device-id> install aligned.apk
 ```
 
-10. Next, open the HTTPToolkit application on your device. You should be able to make the following requests:
+Open the SSL Pinning Demo application on your device. Modifying the `network_security_config.xml` file allows for the following requests (_highlighted in green_):
 
 <img alt="Testing requests." src="/_images/android_security_config_modified.png" center no-shadow width="300"/>
 
-11. You will now see traffic generated by the application in Caido's HTTP History.
+You will now see traffic generated by the application in Caido's **HTTP History** traffic table.
 
 <img alt="APK traffic." src="/_images/apk_test_traffic.png" center/>
 
-As you can see, certain requests still result in an error message and are not proxied through Caido. This is due to certificate pinning within the codebase itself.
+As you can see, certain requests still result in an error message and are not proxied through Caido. This is due to certificate pinning within the application code.
 
 ## Frida
 
-**Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This is what we will use to modify the processes are checking the SSL/TLS certificates.
+**Frida** is a toolkit that allows you to hook custom scripts into running Android application processes, enabling real-time analysis and modification. This can be used to modify the processes that are checking the SSL/TLS certificates.
 
-[Download Frida's CLI tools.](https://frida.re/docs/installation/)
+::: warning NOTE
+This tutorial was written using:
+
+- **Frida** v16.6.6
+- **Frida Tools** v13.6.0
+
+We recommend using the same versions to ensure the instructions align.
+:::
+
+To bypass the additional certificate pinning protections:
+
+1. Download and install the Frida CLI tools (Frida and Frida Tools):
+
+```bash
+pip install frida==16.6.6 frida-tools==13.6.0
+```
+
+2. Add the `/scripts` directory of the package to your system's PATH environment variable.
+
+3. Open a new terminal and navigate to the file system location of the unpacked APK directory.
 
 ### Frida Gadget
 
-Since certain Frida operations may not work with unrooted devices, you will also need the **Frida Gadget** library. Once we inject the library into the APK, we can then send commands to it using the CLI tools.
+Since certain Frida operations may not work with unrooted devices, you will also need the **Frida Gadget** library. Once the library is injected into the APK, commands can be executed using the CLI tools.
 
-You can check what download you will need for your device's architecture with:
+::: warning NOTE
+This tutorial was written using:
+
+- **Frida Gadget** v16.6.6
+
+We recommend using the same versions to ensure the instructions align.
+:::
+
+To check which download you will need for your device's architecture:
+
+1. Execute the `adb` tool against the device with `shell getprop ro.product.cpu.abi` to get the device's CPU ABI.
 
 ```bash
-adb shell getprop ro.product.cpu.abi
+adb -s <device-id> shell getprop ro.product.cpu.abi
 ```
 
-Then, choose the appropriate Frida Gadget library download:
+2. Download the latest appropriate `frida-gadget-16.6.6-android-<architecture>.so.xz` package:
 
 - For `armeabi-v7a` or `armeabi`: [android-arm.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm.so.xz)
 - For `arm64-v8a`: [android-arm64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-arm64.so.xz)
 - For `x86`: [android-x86.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-x86.so.xz)
 - For `x86_64`: [android-x86_64.so.xz](https://github.com/frida/frida/releases/download/16.6.6/frida-gadget-16.6.6-android-x86_64.so.xz)
 
-::: tip
-The provided links will download v16.6.6. [View the latest releases in the Frida repository.](https://github.com/frida/frida/releases)
-:::
-
-Once downloaded, extract the library and rename it to:
+Once downloaded, extract the library folder to your working directory and rename the `.so` file to:
 
 ```text
 libfrida-gadget.so
@@ -211,9 +251,13 @@ libfrida-gadget.so
 
 ## Bypassing Hardcoded Certificate Pinning
 
-To bypass hardcoded certificate pinning protections, we will need to insert the Frida Gadget library into the main "activity" stated in the `AndroidManifest.xml` configuration file. In Android development, an activity is the term used to refer to a specific page/screen of the application.
+To bypass hardcoded certificate pinning protections, you will need to insert the Frida Gadget library into the main activity stated in the `AndroidManifest.xml` configuration file:
 
-1. Open the `AndroidManifest.xml` file of the unpacked APK in a text editor:
+::: info
+In Android development, an "activity" is the term used to refer to a specific page/screen of the application.
+:::
+
+1. Open the `AndroidManifest.xml` file of the unpacked APK in a text editor.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -230,32 +274,27 @@ To bypass hardcoded certificate pinning protections, we will need to insert the 
 </manifest>
 ```
 
-2. The `application` tag will contain an `android:extractNativeLibs` attribute. In order for the Frida Gadget library to function properly, this needs to be set to `"true"`:
+2. Change the value of the `android:extractNativeLibs` attribute from `"false"` to `"true"`.
+
+3. Save the changes to the `AndroidManifest.xml` file.
 
 ```xml
 android:extractNativeLibs="true"
 ```
 
-3. Next, search for the `activity` tag with a nested `intent-filter` tag that contains:
+4. Next, search for the `activity` tag for the value of the `android:name` attribute which stores the full name of the package that serves the main activity of the application upon launch.
 
 ``` xml
-<action android:name="android.intent.action.MAIN"/>
-<category android:name="android.intent.category.LAUNCHER"/>
-```
-
-Within this `activity` tag will be a `android:name` attribute which stores the full name of the package that serves the main activity of the application upon launch:
-
-```text
-tech.httptoolkit.pinning_demo.MainActivity
+<activity android:exported="true" android:name="tech.httptoolkit.pinning_demo.MainActivity">
 ```
 
 ::: info
 The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e.g. `MainActivity`, `SplashActivity`, `WindowActivity`, `LauncherActivity`, etc._).
 :::
 
-4. Recursively search through the unpacked APK for the `MainActivity`'s `.smali` file.
+5. Recursively search through the unpacked APK for the `MainActivity`'s `.smali` file.
 
-5. Open the `smali/tech/httptoolkit/pinning_demo/MainActivity.smali` file and locate the `.method public constructor <init>()V` initialization function:
+6. Open the `smali/tech/httptoolkit/pinning_demo/MainActivity.smali` file and locate the `.method public constructor <init>()V` initialization function (_lines 74-81_).
 
 ``` smali
 .method public constructor <init>()V
@@ -268,7 +307,7 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 .end method
 ```
 
-6. Modify this function class definition to include the Frida Gadget script and increment the value of its `.locals` property to account for the change:
+7. Modify this method to include the Frida Gadget script and increment the value of its `.locals` property to account for the change.
 
 ``` smali
 .method public constructor <init>()V
@@ -284,9 +323,11 @@ The packages can be recognized by their ending syntax of `<Keyword>Activity` (_e
 .end method
 ```
 
-7. Next, create a `lib` directory in the unpacked APK folder, an architecture specific subdirectory, and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/x86_64/libfrida-gadget.so`_).
+8. Save the changes to `smali/tech/httptoolkit/pinning_demo/MainActivity.smali`.
 
-8. From the directory of the unpacked APK, repack it with:
+9. Next, create a `lib` directory in the root of the unpacked APK folder, an architecture specific subdirectory, and move the `libfrida-gadget.so` file into it (_example: `/unpacked/lib/x86/libfrida-gadget.so`_).
+
+10. Execute `apktool` with `b` and the output filename (_e.g. `frida-app.apk`_) as the value of the `-o` argument against the unpacked APK directory to repack the contents.
 
 ```bash
 apktool b -o frida-app.apk ./
@@ -294,50 +335,58 @@ apktool b -o frida-app.apk ./
 
 <img alt="Repacking the APK." src="/_images/apk_unpinned_repack.png" center no-shadow/>
 
-9. Sign the APK with:
+---
+
+11. Align the file (_e.g. `frida-aligned.apk`_).
 
 ```bash
-apksigner sign --ks custom.keystore frida-app.apk
+zipalign -p 4 frida-app.apk frida-aligned.apk
 ```
 
-10. Uninstall the original application from the device:
+---
+
+12. Sign the APK.
 
 ```bash
-adb uninstall tech.httptoolkit.pinning_demo
+apksigner sign --ks custom.keystore frida-aligned.apk
 ```
 
-11. Install the modified APK:
+13. Uninstall the original application from the device.
 
 ```bash
-adb install frida-app.apk
+adb -s <device-id> uninstall tech.httptoolkit.pinning_demo
 ```
 
-12. Next, open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization. Supply it with:
+14. Install the modified APK.
+
+```bash
+adb -s <device-id> install frida-aligned.apk
+```
+
+## Frida CodeShare
+
+[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts for bypassing the protective measures of various HTTP libraries utilized by Android applications.
+
+To utilize a script from the repository:
+
+1. Open the SSL Pinning Demo application on your device. The screen will be blank as it is awaiting the script that will hook into the application's initialization.
+
+2. Execute `frida` against the device with `-U gadget` and the script `<author>/<name>` (_e.g. `fdciabdul/frida-multiple-bypass`_) as the value of the `--codeshare` argument.
 
 ```bash
 frida -U gadget --codeshare fdciabdul/frida-multiple-bypass
 ```
 
-14. Depending on the script used, you will now be able to make additional requests that were previously blocked when we only modified the `network_security_config.xml` file and see traffic in Caido's HTTP History.
-
-### Bypass Scripts
-
-Various HTTP libraries and their versions will require certain scripts in order to successfully bypass them.
-
-#### Frida CodeShare
-
-[Frida Codeshare](https://codeshare.frida.re/browse) is Frida's official repository of scripts that can be called using the `--codeshare` command-line option.
-
-```bash
-frida -U gadget --codeshare <author>/<file>
-```
+Depending on the script used, you will now be able to make additional requests that previously failed.
 
 ::: danger WARNING
 When sourcing files online, ensure to evaluate the code for any malicious operations before executing it.
 :::
 
-You can also write them yourself or source them alternative repositories. To specify a file, use the `-l` command-line option followed by the file's location:
+::: tip
+To specify a local script, use the filename as the value of the `-l` argument.
 
 ```bash
-frida -U gadget -l <file>
+./frida -U gadget -l <file>
 ```
+:::
