@@ -37,6 +37,15 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "AI",
+    items: [
+      {
+        text: "Using a Caido MCP Server",
+        link: "/app/tutorials/mcp",
+      },
+    ],
+  },
+  {
     text: "Proxying Mobile Traffic",
     items: [
       {
