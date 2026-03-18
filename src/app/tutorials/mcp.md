@@ -2,9 +2,9 @@
 description: "Learn how to integrate AI models and agents with Caido using the Caido MCP Server."
 ---
 
-# The Caido MCP Server
+# Using a Caido MCP Server
 
-In this tutorial, you will learn how to integrate AI models/agents with Caido.
+In this tutorial, you will learn how to integrate a Caido MCP Server to be used with Cursor and Claude Code.
 
 ## Caido MCP Server
 
