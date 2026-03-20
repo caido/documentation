@@ -43,6 +43,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Using a Caido MCP Server",
         link: "/app/tutorials/mcp",
       },
+      {
+        text: "Using Caido Skills",
+        link: "/app/tutorials/skills"
+      },
     ],
   },
   {
