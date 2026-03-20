@@ -97,7 +97,7 @@ To authenticate to your Caido instance:
 npx tsx caido-client.ts setup "<PAT>"
 ```
 
-```
+```txt
 Connecting to http://localhost:8080...
 [caido] Attempting to load cached token
 [caido] Starting authentication flow
@@ -117,7 +117,7 @@ Access token: cached
 npx tsx caido-client.ts auth-status
 ```
 
-```
+```txt
 [caido] Attempting to load cached token
 [caido] Loaded token from cache
 {
@@ -204,7 +204,7 @@ claude
 
 14. Grant access to the project directory.
 
-```
+```txt
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source project, or work from your team). If not, take a moment to review what's in this folder
  first.
 
