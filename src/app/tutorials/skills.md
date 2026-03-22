@@ -1,3 +1,7 @@
+---
+description: "Learn how to use Caido Skills to integrate Caido with AI agents."
+---
+
 # Using Caido Skills
 
 In this tutorial, you will learn how to use Caido Skills to integrate Caido with AI agents.
@@ -111,7 +115,7 @@ PAT: caido_8yWtyz...
 Access token: cached
 ```
 
-11. To verify the authentication, execute the `auth-status` command.
+3. To verify the authentication, execute the `auth-status` command.
 
 ```bash
 npx tsx caido-client.ts auth-status
@@ -190,19 +194,19 @@ npx tsx caido-client.ts auth-status
 }
 ```
 
-12. Navigate to the project directory.
+4. Navigate to the project directory.
 
 ```bash
 cd ../../../
 ```
 
-13. Launch the Claude Code CLI.
+5. Launch the Claude Code CLI.
 
 ```bash
 claude
 ```
 
-14. Grant access to the project directory.
+6. Grant access to the project directory.
 
 ```txt
  Quick safety check: Is this a project you created or one you trust? (Like your own code, a well-known open source project, or work from your team). If not, take a moment to review what's in this folder
@@ -222,7 +226,7 @@ claude
 Assess and accept any security prompts encountered to continue.
 :::
 
-15. With Caido launched, test the Caido Skills integration.
+7. With Caido launched, test the Caido Skills integration.
 
 ```txt
 Check the interception status of Caido.
