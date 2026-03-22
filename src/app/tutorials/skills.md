@@ -6,32 +6,73 @@ description: "Learn how to use Caido Skills to integrate Caido with AI agents."
 
 In this tutorial, you will learn how to use Caido Skills to integrate Caido with AI agents.
 
-## Skills
+## Agent Skills
 
-In the context of AI, "skills" extend the capabilities of an agent by providing the instructions, data, scripts, commands, and reference material needed in order to perform a specific task or series of tasks.
+[Agent Skills](https://agentskills.io/home) is an open standard for extending the capabilities of AI agents.
 
-The official [Caido Skills](https://github.com/caido/skills) provides full coverage of Caido's API, allowing you to instruct AI agents to carry out tasks that you would normally have to do manually such as:
+At its most basic, a skill is a folder that contains a `SKILL.md` file. The file begins with a "frontmatter" header that provides basic information to a AI agent. The two required fields of a frontmatter header are the skill name and a brief description of what the skill does and when it should be used.
 
-- Search, retrieve, resend, and edit requests with HTTPQL.
-- Access Replay sessions/collections/entries.
-- Fuzz request payloads.
-- Create and manage scope presets.
-- Create and manage filter presets.
-- Store environment variables.
-- Create, list, and update findings.
-- Monitor and cancel background tasks.
-- Switch between projects.
-- Manage uploaded files.
-- Enable and disable traffic interception.
-- List installed plugins.
-- Convert requests as cURL commands.
-- Check the status of the instance.
+```yaml
+---
+name: my-skill
+description: This skill does XYZ and should be used when a user prompt begins with "Run my-skill".
+---
+```
+
+Once the frontmatter is written, the instructions of the skill can be defined in Markdown format in the rest of the file.
+
+```markdown
+---
+name: my-skill
+description: This skill does XYZ and should be used when a user prompt begins with "Run my-skill".
+---
+
+# My Skill
+
+At a high-level this skill...
+
+## Step-by-Step Instructions
+
+1. Start with...
+2. ...
+3. ...
+
+## Examples
+
+An example use case of this skill is...
+```
+
+In addition to instructions defined in a `SKILL.md` file, a skill folder can also include categorical sub-folders for additional content to provide an agent with like scripts, references, and assets.
+
+These can then be referenced in the `SKILL.md` file using relative paths from the skill folder root.
+
+[View examples of skill folders.](https://github.com/anthropics/skills/tree/main/skills)
+
+## Caido Skills
+
+The official [Caido Skills](https://github.com/caido/skills) provides AI agents with the [Caido Client SDK](https://github.com/caido/sdk-js/tree/main/packages/sdk-client), giving agents the ability to connect, authenticate, and interact with an instance programmatically.
+
+Caido Skills provides complete coverage of Caido's API, allowing you to instruct AI agents to carry out tasks that you would normally have to do manually such as send HTTP requests with Replay, fuzz payloads with Automate, search for proxied traffic, and more.
+
+[View a complete list of capabilities.](https://github.com/caido/skills/tree/main/skills/caido-mode#whats-covered)
+
+## Claude Code
+
+::: warning NOTE
+In this tutorial we will cover adding Caido Skills using the Claude Code CLI tool.
+
+However, the skill package is available to other AI agents. A full list of available agents is available following the `Which agents do you want to install to?` prompt of the installation.
+:::
+
+Claude Code is an AI agent designed to work within a project to assist with development. Once Claude Code, is granted access to a project, it is able to read, edit, and execute its files - making it skill compatible.
+
+[View the official documentation for instructions on how to install the Claude Code CLI tool.](https://code.claude.com/docs/en/overview#get-started)
 
 ## Configuration & Installation
 
 To make the Caido Skills available to the Claude Code CLI tool:
 
-1. Create a new project.
+1. Create a new project (_e.g. `my-project`_) to store the Caido Skills package.
 
 ```bash
 mkdir my-project
@@ -47,6 +88,12 @@ cd my-project
 
 ```bash
 pnpx skills add caido/skills --skill='*'
+```
+
+Or:
+
+```bash
+pnpm dlx skills add caido/skills --skill='*'
 ```
 
 <img alt="Found skill." src="/_images/skills_found.png" center>
@@ -94,6 +141,12 @@ npm install
 To authenticate to your Caido instance:
 
 1. [Create a Personal Access Token (PAT)](https://docs.caido.io/dashboard/guides/create_pat.html).
+
+::: info
+Typically, authentication requires user interaction (_clicking `Login`, submitting account credentials, and granting your device authorization to access an instance_). With a PAT, authorization is granted immediately, and the PAT is exchanged for an access token and a refresh token.
+
+A custom SecretsTokenCache (_implementing the SDK's TokenCache interface_) persists these tokens to `secrets.json` file in `~/.claude/config` so they survive across CLI invocations. 
+:::
 
 2. Execute the `setup` command and provide the PAT.
 
