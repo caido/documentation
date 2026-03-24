@@ -13,10 +13,9 @@ Anyone who installed `litellm==1.82.8` via `pip` has had all environment variabl
 
 The recommended actions to take are:
 
-- PyPI: Yank/remove `litellm 1.82.8` immediately.
-- Users: Check for `litellm_init.pth` in your site-packages/directory.
-- Users: Rotate ALL credentials that were present as environment variables or in config files on any system where `litellm 1.82.8` was installed.
-- BerriAI: Audit PyPI publishing credentials and CI/CD pipeline for compromise.
+- Remove/uninstall `litellm 1.82.8` immediately.
+- Check for `litellm_init.pth` in your site-packages/directory.
+- Rotate ALL credentials that were present as environment variables or in config files on any system where `litellm 1.82.8` was installed.
 
 View more details and updates:
 
