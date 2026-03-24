@@ -4,6 +4,26 @@ description: "Learn how to configure LiteLLM, Caido, and Shift to use models fro
 
 # Using LiteLLM with Shift
 
+::: danger
+**March 24, 202610:52 UTC**
+
+The `litellm==1.82.8` wheel package on PyPI contains a malicious `.pth` file (_`litellm_init.pth`, 34,628 bytes_) that automatically executes a credential-stealing script every time the Python interpreter starts — no `import litellm` required.
+
+Anyone who installed `litellm==1.82.8` via `pip` has had all environment variables, SSH keys, cloud credentials, and other secrets collected and sent to an attacker-controlled server.
+
+The recommended actions to take are:
+
+- PyPI: Yank/remove `litellm 1.82.8` immediately.
+- Users: Check for `litellm_init.pth` in your site-packages/directory.
+- Users: Rotate ALL credentials that were present as environment variables or in config files on any system where `litellm 1.82.8` was installed.
+- BerriAI: Audit PyPI publishing credentials and CI/CD pipeline for compromise.
+
+View more details and updates:
+
+- [https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/](https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/)
+- [https://github.com/BerriAI/litellm/issues/24512](https://github.com/BerriAI/litellm/issues/24512)
+:::
+
 [LiteLLM](https://docs.litellm.ai/) is an open-source proxy/gateway that provides a unified interface for accessing multiple LLM providers.
 
 In this tutorial, you will learn how to configure LiteLLM, Caido, and [Shift](/app/tutorials/shift.md) to use models from various providers that are not directly supported.
