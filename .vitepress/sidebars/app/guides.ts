@@ -338,6 +338,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Changing the LLM Model",
         link: "/app/guides/assistant_model",
       },
+      {
+        text: "Disabling the Assistant",
+        link: "/app/guides/assistant_disable",
+      },
     ],
   },
   {
