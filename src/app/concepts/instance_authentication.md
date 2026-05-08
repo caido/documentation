@@ -17,7 +17,7 @@ When you click on `Login` on the instance, it performs a <a href="https://www.rf
 <img alt="Authenticate user flow." src="/_images/authentication_user.png" width=800px center no-shadow/>
 
 This flow is usually approved with the consent form on the [Dashboard](https://dashboard.caido.io).
-It can also be approved using [Personal Access Tokens](/dashboard/concepts/pat) if you want to interact with the instance in headless mode (CICD for example).
+It can also be approved using [Personal Access Tokens](./pat.md) if you want to interact with the instance in headless mode (CICD for example).
 
 <img alt="Consent form for authentication" src="/_images/authentication_consent.png" width=400px center no-shadow/>
 

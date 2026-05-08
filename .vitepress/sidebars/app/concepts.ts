@@ -36,6 +36,15 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
+    text: "Authentication",
+    items: [
+      {
+        text: "Personal Access Token",
+        link: "/app/concepts/pat",
+      },
+    ],
+  },
+  {
     text: "Internals",
     items: [
       {
