@@ -1,3 +1,7 @@
+---
+description: "Learn how to host Caido remotely in a variety of ways."
+---
+
 # Remote Hosting
 
 The two components of Caido's client/server based architecture are the:
@@ -11,7 +15,7 @@ However, the Caido CLI can be installed as a standalone binary.
 
 Once the binary is launched, the Caido GUI becomes available as a browser web application. This allows you to install and run the Caido CLI on a remote server and access the [instance](/app/concepts/instance.md) from your local device.
 
-This versitality is especially useful for facilitating collaboration between [Caido Team](/dashboard/guides/create_team.md) members by allowing them to access a shared instance and the workspace projects it contains, from their separate devices.
+This versatility is especially useful for facilitating collaboration between [Caido Team](/dashboard/guides/create_team.md) members by allowing them to access a shared instance and the workspace projects it contains, from their separate devices.
 
 ::: warning NOTE
 True multi-user instance usage is not yet available. However, data can be shared between members via the [Drop](/app/tutorials/drop.md) plugin.
@@ -76,7 +80,7 @@ sudo docker run --rm caido/caido:latest id
 To grant ownership of the directory (_e.g. `~/caido-docker`_), replace `<uid>` and `<gid>` in the following command with the `uid` and `gid` of the `caido` user:
 
 ```bash
-sudo chown -R <uid>:<gid> ~/caido-docker -v
+sudo chown -v -R <uid>:<gid> ~/caido-docker
 ```
 
 To launch the image container, publish the container's port to an unused port (_e.g. `7000`_) on the remote host and specify the absolute path to the created directory on the remote host as the volume mount (_e.g. `/home/ninjeeter/caido-docker`_):
@@ -89,7 +93,7 @@ sudo docker run --rm -p 127.0.0.1:7000:8080 -v /home/ninjeeter/caido-docker:/hom
 
 Once the Caido CLI is launched, you can access the Caido GUI over an SSH tunnel.
 
-To connect to an instance, open a new terminal and replace `<local-port>` with a unused port on your local device and replace `<username>` and `<remote-host>` with the username and IP address of the remote host:
+To connect to an instance, open a new terminal and replace `<local-port>` with an unused port on your local device and replace `<username>` and `<remote-host>` with the username and IP address of the remote host:
 
 ```shell
 # Standalone Binary
@@ -111,7 +115,7 @@ By default, [Guest Mode](/app/guides/guest_mode.md) is **disabled** for the Caid
 
 ### Nginx Configuration
 
-1. To logically separate the internet-exposed Caido instance from your existing setup, create a new subdomain (_e.g. `caido.example.com`_) by adding a A record for the IP address of your server.
+1. To logically separate the internet-exposed Caido instance from your existing setup, create a new subdomain (_e.g. `caido.example.com`_) by adding an A record for the IP address of your server.
 
 2. SSH into your server.
 
@@ -133,6 +137,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
+        proxy_http_version 1.1;
     }
     
     listen 80;
@@ -154,7 +159,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-5. Obtain a SSL/TLS certificate:
+5. Obtain an SSL/TLS certificate:
 
 ```bash
 sudo certbot --nginx -d caido.example.com
