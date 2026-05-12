@@ -38,6 +38,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Configuration",
     items: [
       {
+        text: "Adding AI Provider API Keys",
+        link: "/app/guides/ai",
+      },
+      {
         text: "CA Certificate Management",
         link: "/app/guides/ca_certificate_managing",
       },
