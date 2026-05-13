@@ -1,0 +1,60 @@
+name: 📝 Documentation Request
+description: Propose new content or updates using the Diátaxis framework.
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Help us improve Caido's documentation
+        We use the **Diátaxis framework** to organize our content. Please describe the documentation gap below.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary of the gap
+      description: What is missing or unclear? (We will determine the final article title).
+      placeholder: "e.g., The 'Remote Hosting' section doesn't explain the security implications of exposing the port directly."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What is the goal of this content?
+      description: This helps us place the info in the right section (Diátaxis).
+      options:
+        - "Learning: A step-by-step tutorial for beginners."
+        - "Task: A practical 'how-to' guide for a specific problem."
+        - "Knowledge: An explanation of a concept or the 'why'."
+        - "Facts: Technical reference (API, CLI, Config flags)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success Criteria
+      description: What should the reader be able to DO or UNDERSTAND after reading this?
+      placeholder: "e.g., A user should be able to set up a reverse proxy for Caido without leaking the admin UI to the public web."
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_details
+    attributes:
+      label: Technical Details / Proposed Content
+      description: Provide any commands, specific steps, or logs that help explain the solution.
+      placeholder: "Steps to reproduce the setup, relevant CLI flags, or screenshots..."
+
+  - type: input
+    id: see_also
+    attributes:
+      label: See Also
+      description: Link to Discord threads, related issues, or external technical docs.
+      placeholder: "e.g., Discord thread link, GitHub Issue #332..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Thank you! Our team will review this and determine the best way to integrate it into the docs.*
