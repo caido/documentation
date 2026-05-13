@@ -12,7 +12,7 @@ To obtain receipts of your subscription payments, visit [https://dashboard.caido
 
 <img alt="Billing page." src="/_images/dashboard_billing.png" center />
 
-Reciepts can also be obtained from the Paddle customer portal which can be accessed by clicking on either the `Update billing information` or `Cancel subscription` buttons in the [Billing](https://dashboard.caido.io/receipts) page.
+Receipts can also be obtained from the Paddle customer portal which can be accessed by clicking on either the `Update billing information` or `Cancel subscription` buttons in the [Billing](https://dashboard.caido.io/receipts) page.
 
 ::: warning NOTE
 Close the panel opened in the customer portal to avoid subscription interruptions.
