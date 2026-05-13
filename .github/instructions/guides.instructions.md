@@ -12,12 +12,14 @@ A how-to guide addresses a **real-world goal or problem** with practical directi
 
 ## Must do
 
+- **First-sentence orientation**: Immediately after the `#` page title, the very first sentence of body text must say what this article is about and what problem the reader will solve or what outcome they will get. Place it before any `##` heading, `::: callout`, list, image, table, or fenced code block.
 - State the problem or goal clearly up front.
 - Give actionable steps appropriate for a reader who already understands the surrounding product.
 - Use imperative, concise instruction where it helps.
 
 ## Must not do (flag these)
 
+- **Deferred orientation**: Starting the page with a heading, callout, list, image, table, or code before any sentence that explains what the article is about, or burying that explanation only later in the page.
 - **Tutorial drift**: Teaching from scratch, long guided “lessons,” or hand-holding through a first project — belongs in tutorials.
 - **Explanation drift**: Background, architecture, or “why it works this way” — belongs in concepts/explanation (link instead).
 - **Category headings**: Headings that only name a type or category (“Project Events”, “Log Levels”) instead of a use case or question. Prefer gerund/action phrasing (“Subscribing to Project Events”, “Choosing a Log Level”). **Exception:** `## Examples` if used.

@@ -12,6 +12,7 @@ A tutorial is a **lesson** that takes the learner by the hand through a practica
 
 ## Must do
 
+- **First-sentence orientation**: Immediately after the `#` page title, the very first sentence of body text must say what this article is about and what the reader will learn or build by following it. Place it before any `##` heading, `::: callout`, list, image, table, or fenced code block.
 - Present a clear learning outcome at the start (what the reader will have built or achieved).
 - Use numbered steps and include working code or concrete actions at each step where relevant.
 - Lead to a demonstrable result.
@@ -19,6 +20,7 @@ A tutorial is a **lesson** that takes the learner by the hand through a practica
 
 ## Must not do (flag these)
 
+- **Deferred orientation**: Starting the page with a heading, callout, list, image, table, or code before any sentence that explains what the article is about, or burying that explanation only later in the page.
 - **Reference drift**: API tables, exhaustive option lists, or neutral specification-style prose that belongs in reference documentation.
 - **Long background**: Extended “why” or architecture narrative — belongs in a concept/explanation page, linked from the tutorial.
 - **Incomplete paths**: Missing steps, missing code where the learner must type or paste something, or an unclear final state.
