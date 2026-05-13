@@ -6,7 +6,7 @@ description: "A guide to viewing and downloading receipts in the Caido Dashboard
 
 Before your subscription is renewed, you will receive an email from **Caido Labs Inc. (via Paddle.com)** notifying you of the upcoming transaction.
 
-<img alt="Receipt email." src="/_images/subscription_renewal_email.png" center />
+<img alt="Subscription renewal notification email." src="/_images/subscription_renewal_email.png" center />
 
 To obtain receipts of your subscription payments, visit [https://dashboard.caido.io](https://dashboard.caido.io), authenticate with your account, and visit the [Billing](https://dashboard.caido.io/receipts) page. In the **Transactions** table, the **Receipt** column will contain a link to the receipt for the transaction.
 
