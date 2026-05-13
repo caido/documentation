@@ -40,8 +40,17 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Workspaces",
     items: [
       {
-        text: "Creating a registration key",
+        text: "Creating a Registration Key",
         link: "/dashboard/guides/create_registration_key",
+      },
+    ],
+  },
+  {
+    text: "Billing",
+    items: [
+      {
+        text: "Obtaining Receipts",
+        link: "/dashboard/guides/receipts",
       },
     ],
   },
