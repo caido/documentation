@@ -1,0 +1,19 @@
+exclude_path = ["node_modules", ".vitepress/cache", ".vitepress/dist"]
+
+exclude = [
+    "localhost",
+    "127\\.0\\.0\\.1",
+    "172\\.22\\.0\\.1",
+    "lvh\\.me",
+    "example\\.com",
+    "plausible\\.io",
+    "npmjs\\.com",
+    "github\\.com/username/",
+    "^file://",
+    "\\|"
+]
+
+timeout = 30
+max_retries = 2
+
+accept = [200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 429]
