@@ -4,7 +4,11 @@ description: "Learn how to host Caido remotely in a variety of ways."
 
 # Remote Hosting
 
-The two components of Caido's client/server based architecture are the:
+In this tutorial, you will learn how Caido's client/server-based architecture enables remote hosting, what advantages that setup provides, and how to configure it for different environments.
+
+## Architecture
+
+The two components of Caido's client/server-based architecture are the:
 
 1. **Caido CLI**: The server component that handles proxied network traffic.
 2. **Caido GUI**: The client component that provides the user interface.
@@ -15,13 +19,20 @@ However, the Caido CLI can be installed as a standalone binary.
 
 Once the binary is launched, the Caido GUI becomes available as a browser web application. This allows you to install and run the Caido CLI on a remote server and access the [instance](/app/concepts/instance.md) from your local device.
 
-This versatility is especially useful for facilitating collaboration between [Caido Team](/dashboard/guides/create_team.md) members by allowing them to access a shared instance and the workspace projects it contains, from their separate devices.
+## Advantages
+
+This architecture provides several advantages:
+
+- Caido can be offloaded to a server that is running continuously (_as opposed to forcing users to keep their own devices open to run tests_).
+- Caido can be offloaded to a server with better performance (_allowing users to use devices with more modest specifications_).
+- Caido becomes accessible to other members of your [Team](/dashboard/guides/create_team.md) by allowing them to access a shared instance and the workspace projects it contains, from their separate devices.
+- Caido becomes accessible to multiple devices.
+- Caido instances can be deployed automatically on-demand (_via [registration keys](/dashboard/guides/create_registration_key.md)_).
+- Security audit data can be stored on a client's own infrastructure.
 
 ::: warning NOTE
 True multi-user instance usage is not yet available. However, data can be shared between members via the [Drop](/app/tutorials/drop.md) plugin.
 :::
-
-In this tutorial, you will learn how to host Caido remotely in a variety of ways.
 
 ## Downloading & Launching the Caido CLI
 
