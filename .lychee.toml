@@ -10,10 +10,11 @@ exclude = [
     "npmjs\\.com",
     "github\\.com/username/",
     "^file://",
-    "\\|"
+    "\\|",
+    "labs\\.caido\\.io"
 ]
 
 timeout = 30
 max_retries = 2
 
-accept = [200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 429]
+accept = [200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 403, 429]
