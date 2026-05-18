@@ -10,7 +10,7 @@ As you interact with the Caido GUI (_client component_), a variety of [GraphQL](
 
 ## GraphQL Playground
 
-The [GraphQL API schema](https://github.com/caido/graphql-explorer/blob/main/src/assets/schema.graphql) is available via a Playground IDE. To access it, navigate to [http://127.0.0.1:8080/graphql](http://127.0.0.1:8080/graphql) or **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface and select <code><Icon icon="fas fa-up-right-from-square" /> GraphQL Playground</code>.
+The [GraphQL API schema](https://github.com/caido/schemas/blob/main/schemas/proxy/schema.graphql) is available via a Playground IDE. To access it, navigate to [http://127.0.0.1:8080/graphql](http://127.0.0.1:8080/graphql) or **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface and select <code><Icon icon="fas fa-up-right-from-square" /> GraphQL Playground</code>.
 
 ::: tip
 A visual representation of the schema can be viewed at [https://graphql-explorer.caido.io](https://graphql-explorer.caido.io).

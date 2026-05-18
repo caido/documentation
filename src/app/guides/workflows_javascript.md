@@ -3,7 +3,7 @@
 The `Javascript` node allows you to write and execute JavaScript code within a workflow via the `run` function.
 
 ::: warning NOTE
-These code blocks will serve as a starting point for your workflow scripts. View the full [Workflow SDK](https://developer.caido.io/app/reference/sdks/workflow/) to customize your scripts to achieve the intended results.
+These code blocks will serve as a starting point for your workflow scripts. View the full [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/) to customize your scripts to achieve the intended results.
 :::
 
 ## Input
@@ -47,7 +47,7 @@ View the [Additional Input](#additional-input) section for examples.
 
 ## SDK
 
-The [Workflow SDK](https://developer.caido.io/app/reference/sdks/workflow/) is made available to the node via the `sdk` parameter, which provides a variety of methods to convert data, interact with proxied traffic, and carry out actions within Caido.
+The [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/) is made available to the node via the `sdk` parameter, which provides a variety of methods to convert data, interact with proxied traffic, and carry out actions within Caido.
 
 ::: code-group
 ```js [Convert Workflows]

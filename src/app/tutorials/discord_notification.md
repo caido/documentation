@@ -6,10 +6,10 @@ description: "Learn how to create an active workflow that sends notifications to
 
 In this tutorial, we create an active workflow that will send a notification to Discord.
 
-We will use Caido's [HTTP Module](https://developer.caido.io/app/reference/modules/caido/http.html) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
+We will use Caido's [HTTP Module](https://developer.caido.io/reference/modules/caido/http) which provides an implementation of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). With this module, you can create and send asynchronous HTTP requests and handle their responses.
 
 ::: warning NOTE
-The request and response objects of this module differ from those used in the [Backend SDK](https://developer.caido.io/app/reference/sdks/backend/) and [Workflow SDK](https://developer.caido.io/app/reference/sdks/workflow/). Due to this, their properties and methods differ as well. Additionally, they are not routed through the proxy and must adhere to the HTTP specification in order to be interpreted correctly.
+The request and response objects of this module differ from those used in the [Backend SDK](https://developer.caido.io/reference/sdks/backend/) and [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/). Due to this, their properties and methods differ as well. Additionally, they are not routed through the proxy and must adhere to the HTTP specification in order to be interpreted correctly.
 :::
 
 ## Creating an Active Workflow
@@ -168,7 +168,7 @@ The body data of the fetch request is defined as an object and stored in the `me
   };
 ```
 
-Then, using `new FetchRequest()` the fetch request is defined, using a Discord Webhook URL as the `input` parameter of the constructor. The HTTP `method`, `headers`, and `body` data are specified in the [RequestOpts](https://developer.caido.io/app/reference/modules/caido/http.html#requestopts) object parameter.
+Then, using `new FetchRequest()` the fetch request is defined, using a Discord Webhook URL as the `input` parameter of the constructor. The HTTP `method`, `headers`, and `body` data are specified in the [RequestOpts](https://developer.caido.io/reference/modules/caido/http#requestopts) object parameter.
 
 ```js
   // Create a new request to Discord webhook.
