@@ -18,6 +18,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/tutorials/invisible_proxy",
       },
       {
+        text: "Remote Hosting",
+        link: "/app/tutorials/remote",
+      },
+      {
         text: "Exposing an Instance to the Internet",
         link: "/app/tutorials/instance_internet",
       },
