@@ -18,7 +18,7 @@ You can view the data type by **clicking** on a node and viewing the value withi
 :::
 
 ::: info
-[View the SDK for the types here.](https://developer.caido.io/app/reference/sdks/workflow/#data)
+[View the SDK for the types here.](https://developer.caido.io/reference/sdks/workflow/data)
 :::
 
 ### String

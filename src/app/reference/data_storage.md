@@ -13,7 +13,7 @@ All the data Caido creates is stored in a single directory. The default location
 | Windows | `%APPDATA%\caido\Caido\data`                     |
 
 ::: info
-The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/app/reference/sdks/workflow/).
+The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/).
 :::
 
 ## Structure

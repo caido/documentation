@@ -37,5 +37,5 @@ Then, **click** on <code><Icon icon="fas fa-angle-right" /> Advanced</code> to e
 Once you have defined the location, **click** on the `Save` button to update and save the configuration.
 
 ::: info
-The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/app/reference/sdks/workflow/).
+The `/logs` subdirectory stores the log files that contain the output from workflow nodes using the [Workflow SDK](https://developer.caido.io/reference/sdks/workflow/).
 :::

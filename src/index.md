@@ -1,5 +1,5 @@
 ---
-# https://vitepress.dev/app/reference/default-theme-home-page
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 description: "Caido - A lightweight web security auditing toolkit for penetration testing and security research."
 
