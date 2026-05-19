@@ -4,7 +4,7 @@ services:
     runtime: static
     repo: https://github.com/caido/documentation.git
     branch: main
-    buildCommand: make build-release
+    buildCommand: curl -fsSL https://mise.run | sh && ~/.local/bin/mise trust && ~/.local/bin/mise install && ~/.local/bin/mise run build
     staticPublishPath: ./.vitepress/dist
     pullRequestPreviewsEnabled: true
     routes:
