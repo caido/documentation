@@ -10,9 +10,9 @@ Burp Suite Pro target management, site map, and scope features and their Caido e
 
 ### Target
 
-Burp's view of in-scope hosts, site structure, and discovered content.
+Burp provides a view of in-scope hosts, site structure, and discovered content.
 
-In Caido, target management is split across native **Sitemap**, **Scopes**, and **Findings** rather than a single Target tab. Sitemap shows discovered structure, Scopes define what is in bounds, and Findings tracks notable items — together covering Burp Target's role.
+Caido splits target management across native **Sitemap**, **Scopes**, and **Findings** rather than a single Target tab. Sitemap shows discovered structure, Scopes define what is in bounds, and Findings tracks notable items — together covering Burp Target's role.
 
 #### Resources
 
@@ -22,20 +22,21 @@ In Caido, target management is split across native **Sitemap**, **Scopes**, and 
 
 ### Site map
 
-Tree view of discovered hosts, directories, and endpoints.
+Burp displays a tree view of discovered hosts, directories, and endpoints.
 
-Caido's native **Sitemap** displays discovered hosts and endpoints in a tree view. It is populated from proxied traffic rather than Burp's dedicated crawler, though workflows can extend discovery.
+Caido offers native **Sitemap** that displays discovered hosts and endpoints in a tree view. It is populated from proxied traffic; the **Crawler** community plugin can automate discovery to extend the sitemap beyond manual browsing.
 
 #### Resources
 
 - [Sitemap](/app/quickstart/sitemap.md)
 - [Viewing the Sitemap](/app/guides/sitemap_viewing.md)
+- [Crawler](https://github.com/caido-community/crawler) (GitHub)
 
 ### Scope
 
-Define which hosts and URLs are in scope for testing.
+Burp lets you define which hosts and URLs are in scope for testing.
 
-Caido's native **Scopes** define in-scope hosts and URL patterns. Scoped traffic can be highlighted and filtered across views, similar to Burp's scope configuration.
+Caido offers native **Scopes** to define in-scope hosts and URL patterns. Scoped traffic can be highlighted and filtered across views, similar to Burp's scope configuration.
 
 #### Resources
 
@@ -45,9 +46,9 @@ Caido's native **Scopes** define in-scope hosts and URL patterns. Scoped traffic
 
 ### Issue definitions
 
-Customize how Burp Scanner reports and categorizes issue types.
+Burp lets you customize how Scanner reports and categorizes issue types.
 
-Define custom finding types through the **Scanner** plugin's custom check definitions. Custom issue types are plugin-driven rather than a built-in editor.
+Caido lets you define custom finding types through the **Scanner** plugin's custom check definitions. Custom issue types are plugin-driven rather than a built-in editor.
 
 #### Resources
 
@@ -57,11 +58,12 @@ Define custom finding types through the **Scanner** plugin's custom check defini
 
 ### Crawl paths
 
-Visualize how Burp's crawler reached specific endpoints.
+Burp visualizes how its crawler reached specific endpoints.
 
-Caido has no crawl-path visualization. Review discovered endpoints in **Sitemap** and use **Workflows** to implement custom crawling or discovery logic if needed.
+Caido has no crawl-path visualization like Burp's crawler tree. Caido lets you review discovered endpoints in **Sitemap**, run the **Crawler** plugin for automated discovery, or use **Workflows** for custom crawling logic.
 
 #### Resources
 
 - [Sitemap](/app/quickstart/sitemap.md)
 - [Workflows](/app/quickstart/workflows.md)
+- [Crawler](https://github.com/caido-community/crawler) (GitHub)

@@ -10,52 +10,54 @@ Burp Suite Pro BApp Store extensions and popular community plugin equivalents in
 
 ### Extensions (BApp Store)
 
-Burp's extension marketplace for installing third-party and official BApps.
+Burp provides an extension marketplace for installing third-party and official BApps.
 
-Caido uses a native **plugin store** for community extensions, plus manual installation from GitHub. Plugins are the primary extensibility model in Caido, equivalent to Burp's BApp Store but with a different distribution and API.
+Caido uses a native **Community Store** for extensions listed in the [caido/store](https://github.com/caido/store) catalog, plus manual installation from GitHub. Plugins are the primary extensibility model in Caido, equivalent to Burp's BApp Store but with a different distribution and API.
 
 #### Resources
 
 - [Plugins](/app/quickstart/plugins.md)
 - [Installing Plugins](/app/guides/plugins_installing.md)
 - [Managing Plugins](/app/guides/plugins_managing.md)
+- [Caido plugin store catalog](https://github.com/caido/store) (GitHub)
 
 ### Param Miner
 
-Discovers hidden parameters, headers, and cache-busting inputs.
+Param Miner discovers hidden parameters, headers, and cache-busting inputs.
 
-Use the **ParamFinder** community plugin. Caido does not include hidden-parameter discovery natively; this capability comes from a plugin modeled after Burp's Param Miner.
+Caido offers the **ParamFinder** community plugin. Caido does not include hidden-parameter discovery natively; this capability comes from a plugin modeled after Burp's Param Miner.
 
 #### Resources
 
-- [ParamFinder](https://github.com/bebiksior/ParamFinder) (GitHub)
+- [ParamFinder](https://github.com/caido-community/ParamFinder) (GitHub)
 
 ### JWT Editor
 
-Decodes, edits, and resigns JSON Web Tokens inside Burp.
+JWT Editor decodes, edits, and resigns JSON Web Tokens inside Burp.
 
-Use the **JWT Analyzer** community plugin for JWT decoding, editing, and analysis within Caido. JWT handling is plugin-based rather than a built-in editor.
+Caido offers the **JWT Analyzer** community plugin for JWT decoding, editing, and analysis within Caido. JWT handling is plugin-based rather than a built-in editor.
 
 #### Resources
 
-- [JWT Analyzer](https://github.com/amrelsagaei/JWT-Analyzer) (GitHub)
+- [JWT Analyzer](https://github.com/caido-community/JWT-Analyzer) (GitHub)
 - [Decode JWT Tutorial](/app/tutorials/decode_jwt.md)
 
 ### JS Miner
 
-Mines JavaScript files for endpoints, secrets, and interesting strings.
+JS Miner mines JavaScript files for endpoints, secrets, and interesting strings.
 
-Use the **Data Grep** community plugin to extract patterns from JavaScript and other response content. Equivalent to JS Miner's mining capabilities through passive analysis.
+Caido offers the **Data Grep** and **JS Analyzer** community plugins to extract patterns and analyze JavaScript in captured traffic. Together they cover much of JS Miner's endpoint and secret discovery through passive analysis.
 
 #### Resources
 
 - [Data Grep](https://github.com/caido-community/data-grep) (GitHub)
+- [JS Analyzer](https://github.com/caido-community/JS-Analyzer) (GitHub)
 
 ### Content Type Converter
 
-Converts request and response bodies between content types.
+Content Type Converter converts request and response bodies between content types.
 
-Use the **Convert Tools** community plugin for content-type conversion. Caido's native Convert Workflows also handle many encoding transformations.
+Caido offers the **Convert Tools** community plugin for content-type conversion. Caido's native **Convert Workflows** also handle many encoding transformations.
 
 #### Resources
 
@@ -64,40 +66,41 @@ Use the **Convert Tools** community plugin for content-type conversion. Caido's 
 
 ### 403 Bypasser
 
-Attempts path and header mutations to bypass 403 Forbidden responses.
+403 Bypasser attempts path and header mutations to bypass 403 Forbidden responses.
 
-Use the **403Bypasser** community plugin for automated 403 bypass attempts. This is a dedicated plugin rather than a native feature.
+Caido offers the **403Bypasser** community plugin for automated 403 bypass attempts. This is a dedicated plugin rather than a native feature.
 
 #### Resources
 
-- [403Bypasser](https://github.com/bebiksior/Caido403Bypasser) (GitHub)
+- [403Bypasser](https://github.com/caido-community/Caido403Bypasser) (GitHub)
 
 ### InQL
 
-GraphQL introspection, query building, and analysis inside Burp.
+InQL provides GraphQL introspection, query building, and analysis inside Burp.
 
-Use the **GraphQL Analyzer** community plugin for GraphQL testing in Caido. GraphQL-specific analysis is plugin-provided rather than built in.
+Caido offers the **GraphQL Analyzer** community plugin for GraphQL testing in Caido. GraphQL-specific analysis is plugin-provided rather than built in.
 
 #### Resources
 
-- [GraphQL Analyzer](https://github.com/amrelsagaei/GraphQL-Analyzer) (GitHub)
+- [GraphQL Analyzer](https://github.com/caido-community/GraphQL-Analyzer) (GitHub)
 
 ### Autorize / Auth Analyzer
 
-Tests access controls by replaying requests with different session tokens.
+Autorize tests access controls by replaying requests with different session tokens.
 
-Use the **Autorize** community plugin for authorization testing. It provides a dedicated workflow for comparing responses across different session contexts, similar to Burp's Autorize extension.
+Caido offers the **Autorize** community plugin for authorization testing, and **Authswap** to switch between authentication contexts during manual testing. Together they provide a workflow for comparing responses across different session contexts, similar to Burp's Autorize extension.
 
 #### Resources
 
 - [Autorize](https://github.com/caido-community/autorize) (GitHub)
 - [Autorize Tutorial](/app/tutorials/autorize.md)
+- [Authswap](https://github.com/caido-community/authswap) (GitHub)
 
 ### Auth Analyzer
 
-Compares responses across multiple authorization contexts to find access control flaws.
+Auth Analyzer compares responses across multiple authorization contexts to find access control flaws.
 
-Use the **Authify** community plugin for multi-context authorization comparison. It extends Autorize-style testing with additional analysis features.
+Caido offers the **Authify** community plugin for multi-context authorization comparison. It extends Autorize-style testing with additional analysis features.
 
 #### Resources
 
@@ -105,9 +108,9 @@ Use the **Authify** community plugin for multi-context authorization comparison.
 
 ### Request Minimizer
 
-Strips unnecessary headers and parameters to find minimal viable requests.
+Request Minimizer strips unnecessary headers and parameters to find minimal viable requests.
 
-Use the **Squash** community plugin to minimize requests. Request minimization is plugin-based rather than a native Burp-style tool.
+Caido offers the **Squash** community plugin to minimize requests. Request minimization is plugin-based rather than a native Burp-style tool.
 
 #### Resources
 
@@ -115,19 +118,19 @@ Use the **Squash** community plugin to minimize requests. Request minimization i
 
 ### CSP Auditor
 
-Analyzes Content-Security-Policy headers for weaknesses.
+CSP Auditor analyzes Content-Security-Policy headers for weaknesses.
 
-Use the **CSP Auditor** community plugin for CSP analysis. CSP-specific auditing is provided by a plugin rather than a native tool.
+Caido offers the **CSP Auditor** community plugin for CSP analysis. CSP-specific auditing is provided by a plugin rather than a native tool.
 
 #### Resources
 
-- [CSP Auditor](https://github.com/GangGreenTemperTatum/csp-auditor) (GitHub)
+- [CSP Auditor](https://github.com/caido-community/csp-auditor) (GitHub)
 
 ### AuthMatrix
 
-Tests authorization across roles with a matrix of requests and sessions.
+AuthMatrix tests authorization across roles with a matrix of requests and sessions.
 
-Use the **AuthMatrix** community plugin for role-based authorization matrix testing. It provides a dedicated UI for cross-role comparison similar to Burp's AuthMatrix extension.
+Caido offers the **AuthMatrix** community plugin for role-based authorization matrix testing. It provides a dedicated UI for cross-role comparison similar to Burp's AuthMatrix extension.
 
 #### Resources
 
@@ -135,9 +138,9 @@ Use the **AuthMatrix** community plugin for role-based authorization matrix test
 
 ### Notes
 
-Attach notes and annotations to requests inside Burp.
+Notes lets you attach notes and annotations to requests inside Burp.
 
-Use the **Notes++** community plugin for request annotations. Caido's native Findings can track issues, but rich per-request notes are plugin-provided.
+Caido offers the **Notes++** community plugin for request annotations. Caido's native **Findings** can track issues, but rich per-request notes are plugin-provided.
 
 #### Resources
 
@@ -146,9 +149,9 @@ Use the **Notes++** community plugin for request annotations. Caido's native Fin
 
 ### YesWeBurp
 
-Shares Burp requests with teammates through YesWeHack tooling.
+YesWeBurp shares Burp requests with teammates through YesWeHack tooling.
 
-Use the **YesWeCaido** community plugin for YesWeHack-compatible request sharing. This is a direct port of the collaboration workflow for Caido.
+Caido offers the **YesWeCaido** community plugin for YesWeHack-compatible request sharing. This is a direct port of the collaboration workflow for Caido.
 
 #### Resources
 
@@ -156,9 +159,9 @@ Use the **YesWeCaido** community plugin for YesWeHack-compatible request sharing
 
 ### Burp Share Requests
 
-Collaborative request sharing between Burp users.
+Burp Share Requests enables collaborative request sharing between Burp users.
 
-Use the **Drop** community plugin to share requests with teammates. Collaborative sharing is plugin-based rather than a native Caido feature.
+Caido offers the **Drop** community plugin to share requests with teammates. Collaborative sharing is plugin-based rather than a native Caido feature.
 
 #### Resources
 
@@ -169,53 +172,62 @@ Use the **Drop** community plugin to share requests with teammates. Collaborativ
 
 ### Active Scan++
 
-Additional active scan checks beyond Burp Scanner's defaults.
+Active Scan++ adds active scan checks beyond Burp Scanner's defaults.
 
-Implement additional checks through the **Scanner** plugin's custom check definitions. Active Scan++'s extra checks map to user-defined scanner rules rather than a separate plugin.
+Caido lets you implement additional checks through the **Scanner** plugin's custom check definitions, and install scan-focused plugins such as **Mass Assignment Radar** or **RetireJS Scanner** for extra coverage. Active Scan++'s extra checks map to custom scanner rules and community plugins rather than a single BApp.
 
 #### Resources
 
 - [Scanner: Custom Checks](https://github.com/caido-community/scanner#check-definition) (GitHub)
+- [Mass Assignment Radar](https://github.com/sp1r1tt/Mass-Assignment-Radar) (GitHub)
+- [RetireJS Scanner](https://github.com/bensh/caido-retirejs) (GitHub)
 
 ### Logger++
 
-Enhanced logging with custom fields and filtering beyond Burp Logger.
+Logger++ provides enhanced logging with custom fields and filtering beyond Burp Logger.
 
-Use native **Search** for traffic querying, or the **Cerebrum** plugin for enhanced logging with custom fields. Logger++'s advanced logging maps to Search plus an optional plugin.
+Caido offers native **Search** for traffic querying, the **Data Grep** plugin to extract fields from traffic, or the **Cerebrum** plugin for enhanced logging with custom fields. Logger++'s advanced logging maps to Search plus optional plugins.
 
 #### Resources
 
 - [Search](/app/quickstart/search.md)
 - [Search Filtering](/app/guides/search_filtering.md)
+- [Data Grep](https://github.com/caido-community/data-grep) (GitHub)
 - [Cerebrum](https://github.com/DewSecOff/Caido-Plugin-Cerebrum) (GitHub)
 
 ### Hackvertor
 
-Transforms data with tag-based encoding, decoding, and encryption pipelines.
+Hackvertor transforms data with tag-based encoding, decoding, and encryption pipelines.
 
-Use native **Convert Workflows** for tag-based transformations. Hackvertor's pipeline model is similar to Caido's workflow-driven conversion, though with different syntax.
+Caido offers native **Convert Workflows** for tag-based transformations, plus the **Convert Tools** and **HackerUtils** community plugins for encoding pipelines and manual-test utilities. Hackvertor's pipeline model is similar to Caido's workflow-driven conversion, though with different syntax.
 
 #### Resources
 
 - [Convert Workflows](/app/concepts/workflows_intro.md#convert-workflows)
 - [Workflows](/app/quickstart/workflows.md)
+- [Convert Tools](https://github.com/caido-community/convert-tools) (GitHub)
+- [HackerUtils](https://github.com/caido-community/hackerutils) (GitHub)
 
 ### Bypass WAF
 
-Passive and active techniques to evade web application firewalls during testing.
+Bypass WAF applies passive and active techniques to evade web application firewalls during testing.
 
-Use **Passive Workflows** to transform traffic and native **Automate** for payload tuning. Caido has no single WAF-bypass plugin; the workflow is distributed across native features.
+Caido offers **Passive Workflows** to transform traffic, native **Automate** for payload tuning, and WAF-focused plugins such as **403Bypasser**, **Host Header Injector**, **Nomad-ip**, and **SLCyber Tools** (Surf). Caido has no single WAF-bypass BApp; the workflow is distributed across native features and plugins.
 
 #### Resources
 
 - [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
 - [Automate](/app/quickstart/automate.md)
+- [403Bypasser](https://github.com/caido-community/Caido403Bypasser) (GitHub)
+- [Host Header Injector](https://github.com/oksuzkayra/host-header-injector) (GitHub)
+- [Nomad-ip](https://github.com/caido-community/nomad-ip) (GitHub)
+- [SLCyber Tools](https://github.com/caido-community/slcyber-tools) (GitHub)
 
 ### Reflected Parameters
 
-Highlights parameters reflected in responses for XSS and injection testing.
+Reflected Parameters highlights parameters reflected in responses for XSS and injection testing.
 
-Use **Passive Workflows** to flag reflected parameters in proxied traffic. Reflection detection is workflow-driven rather than a dedicated extension tab.
+Caido offers **Passive Workflows** to flag reflected parameters in proxied traffic. Reflection detection is workflow-driven rather than a dedicated extension tab.
 
 #### Resources
 
@@ -224,20 +236,21 @@ Use **Passive Workflows** to flag reflected parameters in proxied traffic. Refle
 
 ### Sensitive Discoverer
 
-Finds sensitive data patterns in HTTP traffic.
+Sensitive Discoverer finds sensitive data patterns in HTTP traffic.
 
-Use **Passive Workflows** to match sensitive data patterns in traffic automatically. Custom workflow rules replace Burp's Sensitive Discoverer checks.
+Caido offers **Passive Workflows** to match sensitive data patterns in traffic automatically, and the **Data Grep** plugin to extract and surface patterns from requests and responses. Custom workflow rules and grep rules replace Burp's Sensitive Discoverer checks.
 
 #### Resources
 
 - [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
 - [Workflows](/app/quickstart/workflows.md)
+- [Data Grep](https://github.com/caido-community/data-grep) (GitHub)
 
 ### Additional Scanner Checks
 
-Community passive checks that extend Burp Scanner coverage.
+Additional Scanner Checks provides community passive checks that extend Burp Scanner coverage.
 
-Add checks through the **Scanner** plugin's custom check API and **Passive Workflows**. Extended scanner coverage in Caido is defined by you rather than installed as a BApp.
+Caido lets you add checks through the **Scanner** plugin's custom check API and **Passive Workflows**. Extended scanner coverage in Caido is defined by you rather than installed as a BApp.
 
 #### Resources
 
@@ -246,9 +259,9 @@ Add checks through the **Scanner** plugin's custom check API and **Passive Workf
 
 ### CORS / Additional CORS Checks
 
-Detects cross-origin misconfigurations and related issues.
+CORS checks detect cross-origin misconfigurations and related issues.
 
-Implement CORS checks through the **Scanner** plugin's custom checks or **Passive Workflows**. Caido does not ship built-in CORS scanning; define checks to match your methodology.
+Caido lets you implement CORS checks through the **Scanner** plugin's custom checks or **Passive Workflows**. Caido does not ship built-in CORS scanning; Caido lets you define checks to match your methodology.
 
 #### Resources
 
@@ -257,20 +270,22 @@ Implement CORS checks through the **Scanner** plugin's custom checks or **Passiv
 
 ### Add Custom Header
 
-Adds or modifies headers on requests passing through the proxy.
+Add Custom Header adds or modifies headers on requests passing through the proxy.
 
-Build a native **workflow** to add headers to proxied traffic, or use **Match & Replace** for simpler header injection. Caido favors workflows over a dedicated "add header" extension.
+Caido lets you build a native **workflow** to add headers to proxied traffic, use **Match & Replace** for simpler header injection, or install the **Template** plugin for reusable match-and-replace rule templates. The **Host Header Injector** plugin automates Host-header payload variations.
 
 #### Resources
 
 - [Add a Header Tutorial](/app/tutorials/add_header.md)
 - [Match & Replace](/app/quickstart/match_replace.md)
+- [Template](https://github.com/MDGDSS/caido-template) (GitHub)
+- [Host Header Injector](https://github.com/oksuzkayra/host-header-injector) (GitHub)
 
 ### AWS Signer
 
-Signs AWS API requests with SigV4 credentials inside Burp.
+AWS Signer signs AWS API requests with SigV4 credentials inside Burp.
 
-Use the **Resign AWS Requests** workflow tutorial pattern to sign AWS requests in Caido. AWS signing is implemented as a workflow rather than a standalone BApp.
+Caido supports AWS signing through the **Resign AWS Requests** workflow tutorial pattern to sign AWS requests in Caido. AWS signing is implemented as a workflow rather than a standalone BApp.
 
 #### Resources
 

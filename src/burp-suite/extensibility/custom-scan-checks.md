@@ -14,9 +14,9 @@ Several BApp Store extensions also add scan checks — for example, Active Scan+
 
 ### Custom scan checks
 
-User-defined passive and active scan rules written in BCheck format or via the custom scan checks API.
+Burp lets you define passive and active scan rules in BCheck format or via the custom scan checks API.
 
-Define custom checks through the **Scanner** plugin's check definition API for active and passive vulnerability detection. Supplement with **Passive Workflows** for traffic-level rules that run on every request. Caido splits scanning between the Scanner plugin (issue detection) and workflows (traffic analysis) rather than a single BCheck format.
+Caido lets you define custom checks through the **Scanner** plugin's check definition API for active and passive vulnerability detection. Caido also supplements this with **Passive Workflows** for traffic-level rules that run on every request. Caido splits scanning between the Scanner plugin (issue detection) and workflows (traffic analysis) rather than a single BCheck format.
 
 #### Resources
 

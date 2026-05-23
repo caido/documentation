@@ -10,9 +10,9 @@ Burp Suite Pro Scanner, live tasks, and scan operations and their Caido equivale
 
 ### Scanner
 
-Burp's automated vulnerability scanner for passive and active testing.
+Burp includes an automated vulnerability scanner for passive and active testing.
 
-Use the community **Scanner** plugin for automated vulnerability scanning in Caido. Active and passive scanning is provided by this plugin and can be extended with custom checks.
+Caido offers the community **Scanner** plugin for automated vulnerability scanning in Caido. Active and passive scanning is provided by this plugin and can be extended with custom checks.
 
 #### Resources
 
@@ -21,9 +21,9 @@ Use the community **Scanner** plugin for automated vulnerability scanning in Cai
 
 ### Configuring scans
 
-Adjust scan speed, insertion points, and audit checks for Burp Scanner.
+Burp lets you adjust scan speed, insertion points, and audit checks for Scanner.
 
-Configure scan behavior through the **Scanner** plugin's custom check definitions and native **Workflows**. Check selection is plugin- and workflow-specific rather than a unified scan configuration UI.
+Caido lets you configure scan behavior through the **Scanner** plugin's custom check definitions and native **Workflows**. Check selection is plugin- and workflow-specific rather than a unified scan configuration UI.
 
 #### Resources
 
@@ -32,9 +32,9 @@ Configure scan behavior through the **Scanner** plugin's custom check definition
 
 ### Running scans
 
-Launch full crawl-and-audit or targeted scans against web applications.
+Burp launches full crawl-and-audit or targeted scans against web applications.
 
-Run active scans with the **Scanner** plugin and targeted fuzzing with native **Automate**. Combine both for coverage similar to Burp's integrated scanner.
+Caido supports running active scans with the **Scanner** plugin and targeted fuzzing with native **Automate**. Combine both for coverage similar to Burp's integrated scanner.
 
 #### Resources
 
@@ -44,9 +44,9 @@ Run active scans with the **Scanner** plugin and targeted fuzzing with native **
 
 ### Scanning specific HTTP messages
 
-Run an audit against selected requests rather than an entire site.
+Burp runs an audit against selected requests rather than an entire site.
 
-Send selected requests from **HTTP History** to the **Scanner** plugin or **Automate**. This matches Burp's "scan selected items" workflow using Caido's context menu and traffic views.
+Caido lets you send selected requests from **HTTP History** to the **Scanner** plugin or **Automate**. This matches Burp's "scan selected items" workflow using Caido's context menu and traffic views.
 
 #### Resources
 
@@ -56,9 +56,9 @@ Send selected requests from **HTTP History** to the **Scanner** plugin or **Auto
 
 ### Viewing scan results
 
-Review discovered issues, audit items, and event logs from scans.
+Burp lets you review discovered issues, audit items, and event logs from scans.
 
-Review results in native **Findings** and the **Scanner** plugin's results view. Caido centralizes tracked issues in Findings rather than Burp's separate scan issue tabs.
+Caido lets you review results in native **Findings** and the **Scanner** plugin's results view. Caido centralizes tracked issues in Findings rather than Burp's separate scan issue tabs.
 
 #### Resources
 
@@ -69,9 +69,9 @@ Review results in native **Findings** and the **Scanner** plugin's results view.
 
 ### Live tasks
 
-Continuous background crawling and auditing of in-scope traffic as you browse.
+Burp runs continuous background crawling and auditing of in-scope traffic as you browse.
 
-Use native **Passive Workflows** for real-time traffic analysis as you browse. For active auditing, run the **Scanner** plugin against selected requests. Caido does not have a single "live tasks" panel like Burp; background analysis is workflow-driven.
+Caido offers native **Passive Workflows** for real-time traffic analysis as you browse. For active auditing, Caido supports running the **Scanner** plugin against selected requests. Caido does not have a single "live tasks" panel like Burp; background analysis is workflow-driven.
 
 #### Resources
 
@@ -81,9 +81,9 @@ Use native **Passive Workflows** for real-time traffic analysis as you browse. F
 
 ### Application logins
 
-Provide credentials or recorded login sequences so Burp Scanner can test authenticated areas.
+Burp lets you provide credentials or recorded login sequences so Scanner can test authenticated areas.
 
-Store credentials in native **Environment Variables** and record login flows manually in **Replay**. Caido does not support recorded login sequences or a login configuration library like Burp.
+Caido lets you store credentials in native **Environment Variables**, record login flows manually in **Replay**, and use the **NTLM Authentication** plugin for NTLM-protected applications. Caido does not support Burp-style recorded login sequences or a login configuration library.
 
 #### Resources
 
@@ -91,12 +91,13 @@ Store credentials in native **Environment Variables** and record login flows man
 - [Replay](/app/quickstart/replay.md)
 - [Automate](/app/quickstart/automate.md)
 - [Refresh Authentication Tutorial](/app/tutorials/refresh_authentication.md)
+- [NTLM Authentication](https://github.com/caido-community/ntlm) (GitHub)
 
 ## Not Available
 
 ### Resource pools
 
-Limit concurrent scan threads to control resource usage during scans.
+Burp limits concurrent scan threads to control resource usage during scans.
 
 Caido has no resource pool for throttling scan concurrency. Throttle **Automate** campaigns manually or add delays in workflows to control request rate.
 

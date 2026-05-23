@@ -8,21 +8,11 @@ Burp Suite Pro browser integration, transport, and setup features and their Caid
 
 ## Available
 
-### Testing with HTTP/2
-
-Send and manipulate HTTP/2 requests, including exclusive attacks.
-
-Caido natively captures and replays HTTP/2 traffic. Send HTTP/2 requests through **Replay** when the connection supports it. Caido handles HTTP/2 at the protocol level rather than through a dedicated HTTP/2 tool tab.
-
-#### Resources
-
-- [Replay](/app/quickstart/replay.md)
-
 ### Testing mobile applications
 
-Proxy traffic from iOS and Android devices through Burp.
+Burp proxies traffic from iOS and Android devices through the intercepting proxy.
 
-Configure mobile devices to proxy through Caido the same way as Burp: install Caido's CA certificate on the device and point the proxy settings to your Caido instance. Caido supports mobile proxying natively through its listening proxy.
+Caido supports proxying mobile device traffic the same way as Burp: install Caido's CA certificate on the device and point the proxy settings to your Caido instance. Caido supports mobile proxying natively through its listening proxy.
 
 #### Resources
 
@@ -33,9 +23,9 @@ Configure mobile devices to proxy through Caido the same way as Burp: install Ca
 
 ### External browser configuration
 
-Use a system browser other than Burp's embedded browser with the proxy.
+Burp lets you use a system browser other than its embedded browser with the proxy.
 
-Use a **preconfigured browser** or manually set any browser's proxy to point at Caido. Caido does not require its own embedded browser for proxy testing.
+Caido supports using a **preconfigured browser** or manually set any browser's proxy to point at Caido. Caido does not require its own embedded browser for proxy testing.
 
 #### Resources
 
@@ -45,9 +35,9 @@ Use a **preconfigured browser** or manually set any browser's proxy to point at 
 
 ### Invisible proxying
 
-Forward non-proxy-aware clients through Burp without explicit proxy configuration.
+Burp forwards non-proxy-aware clients through the proxy without explicit proxy configuration.
 
-Use Caido's **Invisible Proxy** setup to intercept traffic from clients that cannot be configured to use an explicit proxy. This requires network-level forwarding similar to Burp's invisible proxying mode.
+Caido offers an **Invisible Proxy** setup to intercept traffic from clients that cannot be configured to use an explicit proxy. This requires network-level forwarding similar to Burp's invisible proxying mode.
 
 #### Resources
 
@@ -56,9 +46,9 @@ Use Caido's **Invisible Proxy** setup to intercept traffic from clients that can
 
 ### Managing CA certificates
 
-Install and manage Burp's CA certificate for intercepting HTTPS traffic.
+Burp lets you install and manage its CA certificate for intercepting HTTPS traffic.
 
-Export and install Caido's CA certificate from **Settings → Network → TLS**. Certificate management is built into Caido's network settings rather than a separate Burp-style CA tool tab.
+Caido lets you export and install its CA certificate from **Settings → Network → TLS**. Certificate management is built into Caido's network settings rather than a separate Burp-style CA tool tab.
 
 #### Resources
 
@@ -70,11 +60,26 @@ Export and install Caido's CA certificate from **Settings → Network → TLS**.
 
 ### Burp's browser
 
-Chromium-based browser preconfigured to proxy through Burp with DOM Invader integration.
+Burp ships a Chromium-based browser preconfigured to proxy through Burp with DOM Invader integration.
 
-Configure a **preconfigured browser** to proxy through Caido automatically. Caido does not ship an embedded browser with DOM testing integration like Burp's browser; you use your system browser with proxy settings applied.
+Caido supports configuring a **preconfigured browser** to proxy through Caido automatically. The **PwnFox** plugin integrates multi-profile Firefox containers for parallel sessions. Caido does not ship an embedded browser with DOM testing integration like Burp's browser; pair a system browser with **DOMLogger++** for partial DOM sink monitoring.
 
 #### Resources
 
 - [Using a Preconfigured Browser](/app/guides/preconfigured_browser.md)
 - [Setup](/app/quickstart/setup.md)
+- [PwnFox](https://github.com/caido-community/pwnfox) (GitHub)
+- [DOMLogger++](https://github.com/kevin-mizu/domloggerpp-caido) (GitHub)
+
+## Not Available
+
+### Testing with HTTP/2
+
+Burp lets you send and manipulate HTTP/2 requests, including exclusive attacks.
+
+Caido does not support HTTP/2 in the intercepting proxy or in **Replay**. Traffic is handled over HTTP/1.1; HTTP/2-specific testing and attacks are not available in Caido today.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Intercept](/app/quickstart/intercept.md)
