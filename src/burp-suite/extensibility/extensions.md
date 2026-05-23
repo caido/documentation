@@ -84,11 +84,11 @@ Caido offers the **GraphQL Analyzer** community plugin for GraphQL testing in Ca
 
 - [GraphQL Analyzer](https://github.com/caido-community/GraphQL-Analyzer) (GitHub)
 
-### Autorize / Auth Analyzer
+### Autorize
 
 Autorize tests access controls by replaying requests with different session tokens.
 
-Caido offers the **Autorize** community plugin for authorization testing, and **Authswap** to switch between authentication contexts during manual testing. Together they provide a workflow for comparing responses across different session contexts, similar to Burp's Autorize extension.
+Caido offers the **Autorize** community plugin for automated authorization testing. **Authswap** can complement it by switching between authentication contexts during manual testing.
 
 #### Resources
 
@@ -100,7 +100,7 @@ Caido offers the **Autorize** community plugin for authorization testing, and **
 
 Auth Analyzer compares responses across multiple authorization contexts to find access control flaws.
 
-Caido offers the **Authify** community plugin for multi-context authorization comparison. It extends Autorize-style testing with additional analysis features.
+Caido offers the **Authify** community plugin for multi-context authorization comparison and analysis.
 
 #### Resources
 
