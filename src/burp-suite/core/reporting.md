@@ -10,4 +10,10 @@ Burp Suite Pro reporting and export features and their Caido equivalents.
 
 Export scan results and findings as formatted HTML or XML reports.
 
-**Caido equivalent:** [Findings](/app/quickstart/findings.md) for tracking issues. Export raw data with [Exports](/app/quickstart/exports.md). Use plugins for formatted report output.
+Caido tracks issues in native **Findings** and exports raw traffic data through **Exports**. Caido does not ship formatted HTML or XML report generation like Burp; use Findings for issue tracking and export data for external reporting tools or plugins.
+
+#### Resources
+
+- [Findings](/app/quickstart/findings.md)
+- [Exports](/app/quickstart/exports.md)
+- [Exporting Requests](/app/guides/exports_requests.md)

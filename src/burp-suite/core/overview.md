@@ -10,7 +10,7 @@ This section maps **Burp Suite Pro** built-in tools and product features to Caid
 
 1. **Search by Burp name** — Use the site search or your browser's find-in-page for the Burp feature you used (for example, `Intruder`, `HTTP history`, or `Collaborator`).
 2. **Open the matching page** — Pick the page that best fits what you used in Burp. Not sure? Start with [Tools](/burp-suite/core/tools).
-3. **Follow the links** — Each entry includes a short description and links to Caido documentation or community plugins when that is the best match.
+3. **Read the mapping** — Each entry explains the Caido equivalent (native feature, workflow, or plugin), how it differs from Burp, and links to relevant documentation under **Resources**.
 
 ::: tip New to Caido?
 After finding your equivalents, continue with the [Application quickstart](/app/quickstart/).

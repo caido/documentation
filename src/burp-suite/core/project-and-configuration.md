@@ -10,28 +10,57 @@ Burp Suite Pro project files, session handling, and configuration features and t
 
 Save and restore Burp state including traffic, site map, and configuration.
 
-**Caido equivalent:** [Workspace](/app/quickstart/workspace.md) for project management. Export traffic with [Exports](/app/quickstart/exports.md).
+Use Caido's native **Workspace** to manage projects and persist traffic, scope, and configuration within an instance. Export traffic separately with **Exports** when you need portable data outside the workspace.
+
+#### Resources
+
+- [Workspace](/app/quickstart/workspace.md)
+- [Exports](/app/quickstart/exports.md)
+- [Recovering Projects](/app/guides/projects_recovering.md)
+- [Project Backups](/app/guides/projects_backups.md)
 
 ### Session handling rules
 
 Automatically modify requests based on session state using macros and rules.
 
-**Caido equivalent:** No direct equivalent. Use [Environment Variables](/app/quickstart/environment.md) for token storage and [Workflows](/app/quickstart/workflows.md) to inject session values into requests.
+Caido has no native session handling rule engine like Burp. Store session tokens in **Environment Variables** and inject them into requests with **Workflows**. This requires explicit setup rather than Burp's rule-based automation.
+
+#### Resources
+
+- [Environment Variables](/app/quickstart/environment.md)
+- [Workflows](/app/quickstart/workflows.md)
+- [Refresh Authentication Tutorial](/app/tutorials/refresh_authentication.md)
 
 ### Macros
 
 Recorded sequences of requests replayed to maintain session state.
 
-**Caido equivalent:** No direct equivalent. Chain requests manually in [Replay](/app/quickstart/replay.md) or automate login sequences with [Automate](/app/quickstart/automate.md).
+Caido has no macro recorder like Burp. Chain requests manually in **Replay** or build login sequences in **Automate** to maintain session state across requests.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Automate](/app/quickstart/automate.md)
+- [Refresh Authentication Tutorial](/app/tutorials/refresh_authentication.md)
 
 ### Configuration library
 
 Save and reuse Burp configuration profiles across projects.
 
-**Caido equivalent:** No direct equivalent. Export plugin settings individually. Scope and filter configurations persist within each [Workspace](/app/quickstart/workspace.md).
+Caido has no configuration library for sharing profiles across projects. Scope, filter, and workflow settings persist within each **Workspace**, and plugin settings are managed per plugin.
+
+#### Resources
+
+- [Workspace](/app/quickstart/workspace.md)
+- [Managing Plugins](/app/guides/plugins_managing.md)
 
 ### Save custom configuration
 
 Export specific Burp settings as shareable configuration files.
 
-**Caido equivalent:** No direct equivalent. Share [Workflows](/app/quickstart/workflows.md) and plugin configurations through files or version control.
+Caido does not export unified configuration files like Burp. Share **Workflows** and plugin configurations through files or version control instead.
+
+#### Resources
+
+- [Workflows](/app/quickstart/workflows.md)
+- [Creating Workflows](/app/guides/workflows_creating.md)

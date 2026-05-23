@@ -10,172 +10,318 @@ Burp Suite Pro tools — Proxy, Repeater, Intruder, utilities, and related featu
 
 Burp's central hub showing scan progress, issue summaries, and task status.
 
-**Caido equivalent:** [Plugins](/app/quickstart/plugins.md) such as [Scanner](https://github.com/caido-community/scanner) and [Autorize](https://github.com/caido-community/autorize) provide dedicated dashboards. Caido itself focuses on traffic-centric views rather than a single dashboard tab.
+Caido does not have a single dashboard tab. Instead, traffic-centric views like HTTP History and Search are the default workspace, and some community plugins ship their own dashboard pages for scanning or authorization testing.
+
+#### Resources
+
+- [Plugins](/app/quickstart/plugins.md)
+- [Scanner](https://github.com/caido-community/scanner) (GitHub)
+- [Autorize](https://github.com/caido-community/autorize) (GitHub)
 
 ### Command palette
 
 Quick-access launcher for Burp tools, settings, and actions via keyboard.
 
-**Caido equivalent:** Caido's command palette (open with `Ctrl/Cmd+K`). See [Command Shortcuts](/app/reference/command_shortcuts.md).
+Caido includes a native command palette opened with `Ctrl/Cmd+K`. It exposes navigation, plugin commands, and shortcuts rather than Burp's tool-centric launcher, but serves the same quick-access purpose.
+
+#### Resources
+
+- [Command Shortcuts](/app/reference/command_shortcuts.md)
 
 ### Search
 
 Global search across Burp tools for requests, issues, and configuration.
 
-**Caido equivalent:** [Search](/app/quickstart/search.md) with [HTTPQL](/app/reference/httpql.md) for querying captured traffic.
+Use Caido's native **Search** feature with **HTTPQL** to query captured traffic across your project. Search replaces Burp's cross-tool search with a traffic-focused query language rather than a unified issue-and-config index.
+
+#### Resources
+
+- [Search](/app/quickstart/search.md)
+- [HTTPQL](/app/reference/httpql.md)
+- [Search Filtering](/app/guides/search_filtering.md)
 
 ### Context menu
 
 Right-click actions on requests, responses, and site map entries.
 
-**Caido equivalent:** [Context Menu Options](/app/reference/context_menu.md).
+Caido provides native context menu actions on requests and responses in HTTP History, Replay, and related views. Available actions depend on the current view and installed plugins.
+
+#### Resources
+
+- [Context Menu Options](/app/reference/context_menu.md)
 
 ### Filter settings
 
 Shared filter configuration applied across Burp tables and views.
 
-**Caido equivalent:** [Filters](/app/quickstart/filters.md).
+Caido's native **Filters** apply across traffic tables and can be combined with HTTPQL. Filters are view-scoped rather than a single global filter profile shared by every Burp tool.
+
+#### Resources
+
+- [Filters](/app/quickstart/filters.md)
+- [Applying Filters](/app/guides/filters_applying.md)
+- [Defining Filters](/app/guides/filters_defining.md)
 
 ### Customizing Burp's layout
 
 Rearrange tabs, split panes, and customize the Burp UI layout.
 
-**Caido equivalent:** No direct equivalent. Caido's layout is fixed, but you can install plugins that add custom [pages](https://developer.caido.io/guides/page.html) for specialized views.
+Caido has a fixed application layout and does not support Burp-style tab rearrangement. For custom views, community plugins can add dedicated pages through the plugin SDK.
+
+#### Resources
+
+- [Creating a Page](https://developer.caido.io/guides/page.html) (developer docs)
 
 ### Proxy
 
 Burp's intercepting proxy that captures HTTP/S traffic between your browser and target applications.
 
-**Caido equivalent:** [Intercept](/app/quickstart/intercept.md) and [HTTP History](/app/quickstart/http_history.md).
+Caido's native **Intercept** and **HTTP History** handle proxied traffic capture. Intercept pauses traffic for review; HTTP History stores the full log. Together they cover Burp Proxy's core workflow without a separate Proxy tool tab.
+
+#### Resources
+
+- [Intercept](/app/quickstart/intercept.md)
+- [HTTP History](/app/quickstart/http_history.md)
+- [Intercepting Traffic](/app/guides/intercept_traffic.md)
 
 ### Proxy intercept
 
 Pause, inspect, and modify individual requests and responses in flight.
 
-**Caido equivalent:** [Intercept](/app/quickstart/intercept.md).
+Use Caido's native **Intercept** view to pause, inspect, and forward or drop individual requests and responses. Behavior matches Burp's intercept queue, integrated into Caido's main traffic workflow.
+
+#### Resources
+
+- [Intercept](/app/quickstart/intercept.md)
+- [Intercepting Traffic](/app/guides/intercept_traffic.md)
 
 ### HTTP history
 
 Persistent log of all proxied HTTP traffic with filtering and search.
 
-**Caido equivalent:** [HTTP History](/app/quickstart/http_history.md).
+**HTTP History** is Caido's native persistent traffic log. It supports filtering, search, and sending entries to Replay or Automate. It is the primary workspace for reviewing proxied HTTP traffic.
+
+#### Resources
+
+- [HTTP History](/app/quickstart/http_history.md)
+- [Filtering HTTP History](/app/guides/http_history_filtering.md)
 
 ### WebSockets history
 
 Capture and inspect WebSocket messages proxied through Burp.
 
-**Caido equivalent:** [WS History](/app/quickstart/ws_history.md).
+Caido's native **WS History** captures WebSocket frames proxied through the instance. It provides a dedicated view for WebSocket traffic separate from HTTP History.
+
+#### Resources
+
+- [WS History](/app/quickstart/ws_history.md)
 
 ### Match and replace
 
 Automatically modify requests or responses matching defined rules as they pass through the proxy.
 
-**Caido equivalent:** [Match & Replace](/app/quickstart/match_replace.md). See also the [Match & Replace reference](/app/reference/match_replace.md).
+Caido's native **Match & Replace** applies rules to traffic in transit, similar to Burp's match-and-replace rules. Rules can target requests, responses, and specific scopes.
+
+#### Resources
+
+- [Match & Replace](/app/quickstart/match_replace.md)
+- [Match & Replace Reference](/app/reference/match_replace.md)
+- [Testing Match & Replace Rules](/app/guides/match_replace_testing.md)
 
 ### Repeater
 
 Manually modify and resend individual HTTP requests to observe response changes.
 
-**Caido equivalent:** [Replay](/app/quickstart/replay.md).
+Use Caido's native **Replay** to edit and resend individual requests. Replay is accessed from HTTP History and the context menu rather than a dedicated Repeater tab, but supports the same manual request manipulation workflow.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Resending Requests](/app/guides/replay_resending.md)
+- [Sending Requests to Replay](/app/guides/replay_requests.md)
 
 ### Intruder
 
 Automated payload injection for fuzzing, brute-forcing, and enumeration attacks.
 
-**Caido equivalent:** [Automate](/app/quickstart/automate.md).
+Use Caido's native **Automate** for payload-based attacks. Automate supports wordlists, numeric ranges, multiple payload sets, and preprocessors — covering Burp Intruder's core fuzzing and brute-force workflows with a different UI model.
+
+#### Resources
+
+- [Automate](/app/quickstart/automate.md)
+- [Sending Requests to Automate](/app/guides/automate_requests.md)
+- [Sending Payloads from a Wordlist](/app/guides/automate_wordlists.md)
 
 ### Inspector
 
 Structured view of request and response components (headers, parameters, cookies).
 
-**Caido equivalent:** Caido's built-in request and response editors in [Replay](/app/quickstart/replay.md) and [HTTP History](/app/quickstart/http_history.md). Parameters and headers are editable inline without a separate Inspector panel.
+Caido does not have a separate Inspector panel. Request and response components are edited inline in **Replay**, **HTTP History**, and **Automate** using built-in structured editors. Headers, parameters, and cookies are accessible without switching to a dedicated tool.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [HTTP History](/app/quickstart/http_history.md)
 
 ### Message editor
 
 Raw and parsed editing of HTTP messages across Burp tools.
 
-**Caido equivalent:** Built into [Replay](/app/quickstart/replay.md), [Intercept](/app/quickstart/intercept.md), and [Automate](/app/quickstart/automate.md).
+Caido's native message editors are built into **Replay**, **Intercept**, and **Automate**. You can switch between structured and raw editing within each view rather than using a shared editor component across separate Burp tabs.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Intercept](/app/quickstart/intercept.md)
+- [Automate](/app/quickstart/automate.md)
+- [Request and Response Modes](/app/guides/request_response_modes.md)
 
 ### Decoder
 
 Encode, decode, and hash data in common formats.
 
-**Caido equivalent:** [Convert Workflows](/app/concepts/workflows_intro.md#convert-workflows).
+Use Caido's native **Convert Workflows** to transform data between formats. Unlike Burp's standalone Decoder tab, conversion in Caido is workflow-driven and can be applied to traffic automatically or on demand.
+
+#### Resources
+
+- [Convert Workflows](/app/concepts/workflows_intro.md#convert-workflows)
+- [Workflows](/app/quickstart/workflows.md)
 
 ### Comparer
 
 Word-level and byte-level diff of requests, responses, or arbitrary data.
 
-**Caido equivalent:** [Compare](https://github.com/amrelsagaei/Compare) plugin.
+Use the community **Compare** plugin to diff requests and responses. Caido does not ship a native Comparer tab; diffing is handled by a plugin rather than a built-in tool.
+
+#### Resources
+
+- [Compare](https://github.com/amrelsagaei/Compare) (GitHub)
 
 ### Sequencer
 
 Analyze the randomness of session tokens and CSRF tokens.
 
-**Caido equivalent:** No direct equivalent. Export tokens via [Exports](/app/quickstart/exports.md) and analyze randomness with external statistical tools.
+Caido has no native token randomness analysis tool. Export captured tokens and analyze them with external statistical tools. This workflow is manual compared to Burp Sequencer's integrated analysis.
+
+#### Resources
+
+- [Exports](/app/quickstart/exports.md)
 
 ### DOM Invader
 
 Browser-based testing for DOM XSS, prototype pollution, and web message vulnerabilities.
 
-**Caido equivalent:** No direct equivalent. Test DOM-based issues manually with [Replay](/app/quickstart/replay.md) and browser DevTools, or use [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows) to flag suspicious patterns in traffic.
+Caido has no native browser-based DOM testing tool equivalent to DOM Invader. Test DOM-based issues manually with browser DevTools and Replay, or use passive workflows to flag suspicious patterns in proxied traffic.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
 
 ### Clickbandit
 
 Generate clickjacking proof-of-concept overlays against a target page.
 
-**Caido equivalent:** No direct equivalent. Build clickjacking PoCs manually using HTML iframes and [Replay](/app/quickstart/replay.md) to verify framing headers.
+Caido has no native clickjacking PoC generator. Build PoCs manually with HTML iframes and verify framing protections by replaying requests and inspecting response headers.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
 
 ### Infiltrator
 
 Modify compiled class files to test deserialization and injection in Java applications.
 
-**Caido equivalent:** No direct equivalent. Use external Java instrumentation tools alongside Caido's [Replay](/app/quickstart/replay.md) for request manipulation.
+Caido has no equivalent to Infiltrator's bytecode manipulation. Use external Java instrumentation tools for class-level testing and Caido's Replay for HTTP-level request manipulation.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
 
 ### Collaborator
 
 Out-of-band interaction server for detecting blind SSRF, XXE, and similar vulnerabilities.
 
-**Caido equivalent:** [QuickSSRF](https://github.com/caido-community/quickssrf) and [OmniOAST](https://github.com/hahwul/OmniOAST).
+Use community OAST plugins such as **QuickSSRF** or **OmniOAST** for out-of-band interaction testing. Caido does not ship a built-in Collaborator server; OAST testing relies on community plugins.
+
+#### Resources
+
+- [QuickSSRF](https://github.com/caido-community/quickssrf) (GitHub)
+- [OmniOAST](https://github.com/hahwul/OmniOAST) (GitHub)
 
 ### Logger
 
 Capture and review traffic from all Burp tools in a unified log.
 
-**Caido equivalent:** [Search](/app/quickstart/search.md) across all captured traffic. For enhanced logging, [Cerebrum](https://github.com/DewSecOff/Caido-Plugin-Cerebrum).
+Caido's native **Search** queries all captured traffic across the project, covering much of Burp Logger's review workflow. For enhanced logging with custom fields, use the **Cerebrum** plugin.
+
+#### Resources
+
+- [Search](/app/quickstart/search.md)
+- [Search Filtering](/app/guides/search_filtering.md)
+- [Cerebrum](https://github.com/DewSecOff/Caido-Plugin-Cerebrum) (GitHub)
 
 ### Organizer
 
 Store and annotate interesting requests for later review.
 
-**Caido equivalent:** [Findings](/app/quickstart/findings.md) for tracking issues and notable requests.
+Use Caido's native **Findings** to track notable requests and issues. Findings serves a similar annotation and review purpose to Burp Organizer, tied to Caido's findings model rather than a separate request collection.
+
+#### Resources
+
+- [Findings](/app/quickstart/findings.md)
 
 ### Engagement tools
 
 Suite of utilities for target analysis, content discovery, and PoC generation.
 
-**Caido equivalent:** Combine [Sitemap](/app/quickstart/sitemap.md), [Automate](/app/quickstart/automate.md), and purpose-built plugins. See individual tools below.
+Caido does not bundle engagement utilities into a single tool suite. Equivalent workflows are spread across native features like Sitemap and Automate, plus purpose-built plugins. See the individual engagement tools below for specific mappings.
+
+#### Resources
+
+- [Sitemap](/app/quickstart/sitemap.md)
+- [Automate](/app/quickstart/automate.md)
 
 ### Target analyzer
 
 Summarize a target's technology stack, content types, and dynamic URLs.
 
-**Caido equivalent:** Review technology hints in [HTTP History](/app/quickstart/http_history.md) and use [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows) to flag stack indicators.
+Caido has no dedicated target analyzer. Review technology hints in HTTP History responses and use passive workflows to flag stack indicators automatically as traffic passes through the proxy.
+
+#### Resources
+
+- [HTTP History](/app/quickstart/http_history.md)
+- [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
 
 ### Content discovery
 
 Brute-force hidden directories and files on a web server.
 
-**Caido equivalent:** [Automate](/app/quickstart/automate.md) with wordlists. See [Sending Payloads from a Wordlist](/app/guides/automate_wordlists.md).
+Use Caido's native **Automate** with wordlists to brute-force paths and files. This replaces Burp's content discovery tool with Automate's payload-driven request sending.
+
+#### Resources
+
+- [Automate](/app/quickstart/automate.md)
+- [Sending Payloads from a Wordlist](/app/guides/automate_wordlists.md)
 
 ### Generate CSRF PoC
 
 Build cross-site request forgery proof-of-concept HTML from captured requests.
 
-**Caido equivalent:** No direct equivalent. Craft CSRF PoC HTML manually from requests captured in [Replay](/app/quickstart/replay.md).
+Caido has no one-click CSRF PoC generator. Craft PoC HTML manually from requests captured in Replay. Caido's Assistant can help draft CSRF payloads if configured.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Assistant CSRF Guidance](/app/guides/assistant_csrf.md)
 
 ### Manual testing simulator
 
 Simulate user interactions for manual testing scenarios.
 
-**Caido equivalent:** [Replay](/app/quickstart/replay.md) for manual request manipulation. For browser-based interaction, use a [Preconfigured Browser](/app/guides/preconfigured_browser.md).
+Use Caido's native **Replay** for manual request-level testing, or a **preconfigured browser** for browser-based interaction. Caido does not ship a dedicated interaction simulator like Burp's manual testing simulator.
+
+#### Resources
+
+- [Replay](/app/quickstart/replay.md)
+- [Using a Preconfigured Browser](/app/guides/preconfigured_browser.md)
