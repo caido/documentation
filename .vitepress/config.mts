@@ -4,8 +4,8 @@ import llmstxt from "vitepress-plugin-llms";
 import type { DefaultTheme } from "vitepress";
 
 import MermaidExample from "./mermaid";
-import { appNavbar, dashboardNavbar } from "./navbars";
-import { appSidebars, dashboardSidebars } from "./sidebars";
+import { appNavbar, burpSuiteNavbar, dashboardNavbar } from "./navbars";
+import { appSidebars, burpSuiteSidebars, dashboardSidebars } from "./sidebars";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -81,6 +81,15 @@ export default defineConfig({
       {
         component: "NavItem",
         props: {
+          text: "Migrating from Burp Suite",
+          link: "/burp-suite/",
+          activeMatch: "^/burp-suite(/|$)",
+          items: burpSuiteNavbar,
+        },
+      },
+      {
+        component: "NavItem",
+        props: {
           text: "FAQ",
           link: "/faq/",
           activeMatch: "^/faq(/|$)",
@@ -98,6 +107,7 @@ export default defineConfig({
       "/dashboard/quickstart/": dashboardSidebars.quickstartSidebar,
       "/dashboard/guides/": dashboardSidebars.guidesSidebar,
       "/dashboard/concepts/": dashboardSidebars.conceptsSidebar,
+      "/burp-suite/": burpSuiteSidebars.burpSuiteSidebar,
     },
 
     outline: {

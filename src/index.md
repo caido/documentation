@@ -18,7 +18,10 @@ hero:
       text: Dashboard 
       link: /dashboard/
     - theme: alt
-      text:  Build Plugins 
+      text: Migrating from Burp Suite
+      link: /burp-suite/
+    - theme: alt
+      text: Build Plugins
       link: https://developer.caido.io
 
 features:
