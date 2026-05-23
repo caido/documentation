@@ -6,6 +6,8 @@ description: "Map Burp Suite Pro Bambdas to Caido workflows and plugins."
 
 Burp Suite Pro Bambdas — in-app JavaScript snippets — and their Caido equivalents.
 
+## Indirectly Available
+
 ### Bambdas
 
 Lightweight JavaScript snippets that run inside Burp for filtering, custom actions, and UI automation.

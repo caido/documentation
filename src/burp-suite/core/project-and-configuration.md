@@ -6,6 +6,8 @@ description: "Map Burp Suite Pro project files and configuration to Caido."
 
 Burp Suite Pro project files, session handling, and configuration features and their Caido equivalents.
 
+## Available
+
 ### Project files
 
 Save and restore Burp state including traffic, site map, and configuration.
@@ -18,6 +20,8 @@ Use Caido's native **Workspace** to manage projects and persist traffic, scope, 
 - [Exports](/app/quickstart/exports.md)
 - [Recovering Projects](/app/guides/projects_recovering.md)
 - [Project Backups](/app/guides/projects_backups.md)
+
+## Indirectly Available
 
 ### Session handling rules
 
@@ -43,17 +47,6 @@ Caido has no macro recorder like Burp. Chain requests manually in **Replay** or 
 - [Automate](/app/quickstart/automate.md)
 - [Refresh Authentication Tutorial](/app/tutorials/refresh_authentication.md)
 
-### Configuration library
-
-Save and reuse Burp configuration profiles across projects.
-
-Caido has no configuration library for sharing profiles across projects. Scope, filter, and workflow settings persist within each **Workspace**, and plugin settings are managed per plugin.
-
-#### Resources
-
-- [Workspace](/app/quickstart/workspace.md)
-- [Managing Plugins](/app/guides/plugins_managing.md)
-
 ### Save custom configuration
 
 Export specific Burp settings as shareable configuration files.
@@ -64,3 +57,16 @@ Caido does not export unified configuration files like Burp. Share **Workflows**
 
 - [Workflows](/app/quickstart/workflows.md)
 - [Creating Workflows](/app/guides/workflows_creating.md)
+
+## Not Available
+
+### Configuration library
+
+Save and reuse Burp configuration profiles across projects.
+
+Caido has no configuration library for sharing profiles across projects. Scope, filter, and workflow settings persist within each **Workspace**, and plugin settings are managed per plugin.
+
+#### Resources
+
+- [Workspace](/app/quickstart/workspace.md)
+- [Managing Plugins](/app/guides/plugins_managing.md)

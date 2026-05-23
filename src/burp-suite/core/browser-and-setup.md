@@ -6,16 +6,7 @@ description: "Map Burp Suite Pro browser, mobile, and setup features to Caido."
 
 Burp Suite Pro browser integration, transport, and setup features and their Caido equivalents.
 
-### Burp's browser
-
-Chromium-based browser preconfigured to proxy through Burp with DOM Invader integration.
-
-Configure a **preconfigured browser** to proxy through Caido automatically. Caido does not ship an embedded browser with DOM testing integration like Burp's browser; you use your system browser with proxy settings applied.
-
-#### Resources
-
-- [Using a Preconfigured Browser](/app/guides/preconfigured_browser.md)
-- [Setup](/app/quickstart/setup.md)
+## Available
 
 ### Testing with HTTP/2
 
@@ -74,3 +65,16 @@ Export and install Caido's CA certificate from **Settings → Network → TLS**.
 - [Setup](/app/quickstart/setup.md)
 - [Managing CA Certificates](/app/guides/ca_certificate_managing.md)
 - [Importing CA Certificates](/app/guides/ca_certificate_importing.md)
+
+## Indirectly Available
+
+### Burp's browser
+
+Chromium-based browser preconfigured to proxy through Burp with DOM Invader integration.
+
+Configure a **preconfigured browser** to proxy through Caido automatically. Caido does not ship an embedded browser with DOM testing integration like Burp's browser; you use your system browser with proxy settings applied.
+
+#### Resources
+
+- [Using a Preconfigured Browser](/app/guides/preconfigured_browser.md)
+- [Setup](/app/quickstart/setup.md)

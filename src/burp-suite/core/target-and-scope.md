@@ -6,6 +6,8 @@ description: "Map Burp Suite Pro Target and Scope features to Caido."
 
 Burp Suite Pro target management, site map, and scope features and their Caido equivalents.
 
+## Available
+
 ### Target
 
 Burp's view of in-scope hosts, site structure, and discovered content.
@@ -41,6 +43,18 @@ Caido's native **Scopes** define in-scope hosts and URL patterns. Scoped traffic
 - [Defining Scopes](/app/guides/scopes_defining.md)
 - [Applying Scopes](/app/guides/scopes_applying.md)
 
+### Issue definitions
+
+Customize how Burp Scanner reports and categorizes issue types.
+
+Define custom finding types through the **Scanner** plugin's custom check definitions. Custom issue types are plugin-driven rather than a built-in editor.
+
+#### Resources
+
+- [Scanner: Custom Checks](https://github.com/caido-community/scanner#check-definition) (GitHub)
+
+## Indirectly Available
+
 ### Crawl paths
 
 Visualize how Burp's crawler reached specific endpoints.
@@ -51,13 +65,3 @@ Caido has no crawl-path visualization. Review discovered endpoints in **Sitemap*
 
 - [Sitemap](/app/quickstart/sitemap.md)
 - [Workflows](/app/quickstart/workflows.md)
-
-### Issue definitions
-
-Customize how Burp Scanner reports and categorizes issue types.
-
-Define custom finding types through the community **Scanner** plugin's custom check definitions. Caido does not have a built-in issue definition editor like Burp; custom issue types are plugin-driven.
-
-#### Resources
-
-- [Scanner: Custom Checks](https://github.com/caido-community/scanner#check-definition) (GitHub)
