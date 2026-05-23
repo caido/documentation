@@ -3,7 +3,7 @@ import { useRoute } from "vitepress";
 import type { DefaultTheme } from "vitepress";
 import { computed } from "vue";
 
-import { appNavbar, dashboardNavbar } from "../navbars";
+import { appNavbar, burpSuiteNavbar, dashboardNavbar } from "../navbars";
 
 const route = useRoute();
 
@@ -15,6 +15,10 @@ const navItemsWithLinks = computed(() => {
     );
   } else if (route.path.startsWith("/dashboard/")) {
     return dashboardNavbar.filter(
+      (item): item is DefaultTheme.NavItemWithLink => "link" in item,
+    );
+  } else if (route.path.startsWith("/burp-suite/")) {
+    return burpSuiteNavbar.filter(
       (item): item is DefaultTheme.NavItemWithLink => "link" in item,
     );
   }

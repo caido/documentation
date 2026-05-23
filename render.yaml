@@ -50,6 +50,12 @@ services:
       - type: redirect
         source: /troubleshooting/*
         destination: /app/troubleshooting/*
+      - type: redirect
+        source: /app/reference/burp_vs_caido
+        destination: /burp-suite/core/overview
+      - type: redirect
+        source: /app/reference/burp_vs_caido.html
+        destination: /burp-suite/core/overview
     domains:
       - docs.caido.io
     envVars:
