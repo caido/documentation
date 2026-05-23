@@ -82,7 +82,7 @@ export default defineConfig({
         component: "NavItem",
         props: {
           text: "Migrating from Burp Suite",
-          link: "/burp-suite/",
+          link: "/burp-suite/core/overview",
           activeMatch: "^/burp-suite(/|$)",
           items: burpSuiteNavbar,
         },
@@ -107,7 +107,8 @@ export default defineConfig({
       "/dashboard/quickstart/": dashboardSidebars.quickstartSidebar,
       "/dashboard/guides/": dashboardSidebars.guidesSidebar,
       "/dashboard/concepts/": dashboardSidebars.conceptsSidebar,
-      "/burp-suite/": burpSuiteSidebars.burpSuiteSidebar,
+      "/burp-suite/core/": burpSuiteSidebars.coreSidebar,
+      "/burp-suite/extensibility/": burpSuiteSidebars.extensibilitySidebar,
     },
 
     outline: {

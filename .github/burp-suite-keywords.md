@@ -1,10 +1,10 @@
 # Burp Suite Pro keyword checklist
 
-Authoring checklist for the [Migrating from Burp Suite](/burp-suite/) section. Every keyword below must have an entry on **Core**, **Extensions**, or **AI** before a release.
+Authoring checklist for the [Migrating from Burp Suite](/burp-suite/core/overview) section. Every keyword below must have an entry before a release.
 
-Source: [Burp Suite desktop documentation](https://portswigger.net/burp/documentation/desktop) at tool + one sub-feature depth. Workflow how-tos (e.g. "Testing for SQL injection") are excluded.
+Source: [Burp Suite desktop documentation](https://portswigger.net/burp/documentation/desktop) at tool + one sub-feature depth. Workflow how-tos are excluded.
 
-## Core
+## Core — [Tools](/burp-suite/core/tools)
 
 ### Interface & navigation
 
@@ -15,38 +15,17 @@ Source: [Burp Suite desktop documentation](https://portswigger.net/burp/document
 - [x] Filter settings
 - [x] Customizing Burp's layout
 
-### Proxy
+### Proxy & request editing
 
 - [x] Proxy
 - [x] Proxy intercept
 - [x] HTTP history
 - [x] WebSockets history
 - [x] Match and replace
-- [x] Invisible proxying
-- [x] Managing CA certificates
-
-### Target & scope
-
-- [x] Target
-- [x] Site map
-- [x] Scope
-- [x] Crawl paths
-- [x] Issue definitions
-
-### Request editing
-
 - [x] Repeater
 - [x] Intruder
 - [x] Inspector
 - [x] Message editor
-
-### Scanning
-
-- [x] Scanner
-- [x] Live tasks
-- [x] Configuring scans
-- [x] Application logins
-- [x] Resource pools
 
 ### Analysis & utilities
 
@@ -57,13 +36,10 @@ Source: [Burp Suite desktop documentation](https://portswigger.net/burp/document
 - [x] Clickbandit
 - [x] Infiltrator
 
-### Collaboration & logging
+### Collaboration & organization
 
 - [x] Collaborator
 - [x] Logger
-
-### Organization
-
 - [x] Organizer
 
 ### Engagement tools
@@ -74,14 +50,30 @@ Source: [Burp Suite desktop documentation](https://portswigger.net/burp/document
 - [x] Generate CSRF PoC
 - [x] Manual testing simulator
 
-### Browser & transport
+## Core — [Target & Scope](/burp-suite/core/target-and-scope)
 
-- [x] Burp's browser
-- [x] Testing with HTTP/2
-- [x] Testing mobile applications
-- [x] External browser configuration
+- [x] Target
+- [x] Site map
+- [x] Scope
+- [x] Crawl paths
+- [x] Issue definitions
 
-### Project & configuration
+## Core — [Scans](/burp-suite/core/scans)
+
+- [x] Scanner
+- [x] Live tasks
+- [x] Configuring scans
+- [x] Application logins
+- [x] Resource pools
+- [x] Running scans
+- [x] Scanning specific HTTP messages
+- [x] Viewing scan results
+
+## Core — [Reporting](/burp-suite/core/reporting)
+
+- [x] Generating a report
+
+## Core — [Project & Configuration](/burp-suite/core/project-and-configuration)
 
 - [x] Project files
 - [x] Session handling rules
@@ -89,18 +81,26 @@ Source: [Burp Suite desktop documentation](https://portswigger.net/burp/document
 - [x] Configuration library
 - [x] Save custom configuration
 
-### Reporting & scan operations
+## Core — [Browser & Setup](/burp-suite/core/browser-and-setup)
 
-- [x] Generating a report
-- [x] Running scans
-- [x] Scanning specific HTTP messages
-- [x] Viewing scan results
+- [x] Burp's browser
+- [x] Testing with HTTP/2
+- [x] Testing mobile applications
+- [x] External browser configuration
+- [x] Invisible proxying
+- [x] Managing CA certificates
 
-## Extensions
+## Core — [AI](/burp-suite/core/ai)
+
+- [x] Burp AI
+- [x] Using Burp AI in Repeater
+- [x] Generating AI-powered explanations
+- [x] Automating tasks with custom actions
+- [x] AI credits
+
+## Extensibility — [Extensions](/burp-suite/extensibility/extensions)
 
 - [x] Extensions (BApp Store)
-- [x] Bambdas
-- [x] Custom scan checks
 - [x] Param Miner
 - [x] JWT Editor
 - [x] JS Miner
@@ -126,10 +126,10 @@ Source: [Burp Suite desktop documentation](https://portswigger.net/burp/document
 - [x] YesWeBurp
 - [x] Burp Share Requests
 
-## AI
+## Extensibility — [Bambdas](/burp-suite/extensibility/bambdas)
 
-- [x] Burp AI
-- [x] Using Burp AI in Repeater
-- [x] Generating AI-powered explanations
-- [x] Automating tasks with custom actions
-- [x] AI credits
+- [x] Bambdas
+
+## Extensibility — [Custom Scan Checks](/burp-suite/extensibility/custom-scan-checks)
+
+- [x] Custom scan checks

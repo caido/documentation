@@ -1,3 +1,3 @@
 ---
-redirect: /burp-suite/
+redirect: /burp-suite/core/overview
 ---

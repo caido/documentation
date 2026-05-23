@@ -19,7 +19,7 @@ hero:
       link: /dashboard/
     - theme: alt
       text: Migrating from Burp Suite
-      link: /burp-suite/
+      link: /burp-suite/core/overview
     - theme: alt
       text: Build Plugins
       link: https://developer.caido.io

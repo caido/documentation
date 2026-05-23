@@ -10,7 +10,7 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
       },
       {
         text: "Migrating from Burp Suite",
-        link: "/burp-suite/",
+        link: "/burp-suite/core/overview",
       },
       {
         text: "CLI Options",
