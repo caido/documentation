@@ -261,7 +261,7 @@ By creating a proxy profile for Caido's listening address and rules for which ap
 
 1. Download and install Proxifier by visiting [https://www.proxifier.com/download/](https://www.proxifier.com/download/).
 
-2. Accept the permissions prompt/adjust your device settings to allow Proxifier to use a network extension.
+2. Accept any prompts/adjust your device settings to grant Proxifier permission.
 
 3. **Click** on `Proxies` in the top navigation bar and select `Add...`.
 
