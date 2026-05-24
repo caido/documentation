@@ -7,7 +7,7 @@ description: "Learn how to set up invisible proxying in Caido, both manually and
 In this tutorial you will be guided through the process of configuring clients that cannot be configured to utilize a HTTP proxy server via native settings, in order to view, intercept, and modify their traffic with Caido.
 
 ::: tip
-View the [Proxifier](/app/tutorials/proxifier.md) section to learn how to automate invisible proxying.
+View the [Proxifier](/app/tutorials/invisible_proxy.md#proxifier) section to learn how to automate invisible proxying.
 :::
 
 ## Thick Clients
