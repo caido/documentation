@@ -181,6 +181,10 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Resign AWS Requests",
         link: "/app/tutorials/aws_signature",
       },
+      {
+        text: "Refresh a JWT",
+        link: "/app/tutorials/refresh_jwt",
+      },
     ],
   },
 ];
