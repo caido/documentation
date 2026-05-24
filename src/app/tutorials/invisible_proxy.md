@@ -279,7 +279,7 @@ By creating a proxy profile for Caido's listening address and rules for which ap
 
 8. Provide a name for the rule, the name of the application you want to proxy, and the hosts that you want to proxy.
 
-9. **Click** on the `Action` dropdown menu  and select the proxy profile you created previously.
+9. **Click** on the `Action` dropdown menu and select the proxy profile you created previously.
 
 <img alt="Proxifier rule." src="/_images/proxifier_rule.png" center />
 
