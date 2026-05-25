@@ -128,11 +128,11 @@ Typically, to continue authenticated testing in [Replay](/app/guides/replay_rese
 
 But, by creating a [workflow](/app/guides/workflows_creating.html) that sets the `accessToken` and `refreshToken` as environment variables and automates the exchange, you can achieve continuous, uninterrupted testing in Replay requests using the [placeholder functionality](/app/guides/replay_environment_variables.md).
 
-## Creating a Passive Workflow
+## Creating an Active Workflow
 
-To begin, navigate to the Workflows interface, select the `Passive` tab, and **click** the `+ New workflow` button.
+To begin, navigate to the Workflows interface, select the `Active` tab, and **click** on the `+ New workflow` button.
 
-<img alt="Creating a new passive workflow." src="/_images/new_passive_workflow.png" center>
+<img alt="Creating a new active workflow." src="/_images/new_active_workflow.png" center/>
 
 Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
@@ -140,23 +140,139 @@ Next, rename the workflow by typing in the `Name` input field. You can also prov
 
 For this workflow, the overall node layout will be:
 
-<img alt="Refresh authentication workflow." src="/_images/nodes_auth_refresh.png" center>
+<img alt="The nodes used and their connections." src="/_images/discord_notification_nodes.png" center>
 
-- The `On Intercept Response` node outputs `$on_intercept_response.request` and `$on_intercept_response.response` objects which represent proxied requests and their corresponding responses.
-- The `In Scope` node checks if the value of a request's Host header is included in the in-scope list of a scope preset. If it is not - the workflow will end.
-- In-scope request and response objects will be passed to the `Javascript` node.
-- Once a request or response has been processed by the script in the `Javascript` node, the workflow will end.
+- The `Active Start` node outputs `$active_start.request` and `$active_start.response` objects which represent proxied requests the workflow was initiated on and their corresponding responses.
+- The request and response objects will be passed to the `Javascript` node.
+- Once the script in the `Javascript` node finishes, the workflow will end.
 
 ## Refreshing the JWT
 
-1. **Click** on the `In Scope` node to access its editor and ensure the `$on_intercept_response.request` object is [referenced as input data](/app/guides/workflows_references.md).
+1. Close the editor window and **click** on the `Javascript` node to access its editor.
 
-<img alt="Referencing the request object." src="/_images/workflows_response_reference_request.png" center>
-
-2. Close the editor window and **click** on the `Javascript` node to access its editor.
-
-3. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
+2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
 ```js
+import { Request as FetchRequest, fetch } from "caido:http";
 
+const EXPIRES_IN_MINS = 1;
+const POLL_INTERVAL_MS = 45_000;
+const POLL_COUNT = 4;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function saveTokens(sdk, data) {
+  if (data.accessToken) {
+    await sdk.env.setVar({
+      name: "ACCESS_TOKEN",
+      value: data.accessToken,
+      secret: true,
+      global: true,
+    });
+  }
+  if (data.refreshToken) {
+    await sdk.env.setVar({
+      name: "REFRESH_TOKEN",
+      value: data.refreshToken,
+      secret: true,
+      global: true,
+    });
+  }
+}
+
+/**
+ * @param {NodeInputHTTP} input
+ * @param {SDK} sdk
+ * @returns {MaybePromise<NodeResult | Data | undefined>}
+ */
+export async function run({ request, response, extra }, sdk) {
+  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
+  let refreshToken = sdk.env.getVar("REFRESH_TOKEN");
+
+  // Login once — https://dummyjson.com/docs/auth
+  if (!accessToken || !refreshToken) {
+    const loginRequest = new FetchRequest("https://dummyjson.com/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: "emilys",
+        password: "emilyspass",
+        expiresInMins: EXPIRES_IN_MINS,
+      }),
+    });
+    const loginResp = await fetch(loginRequest);
+    if (!loginResp.ok) {
+      sdk.console.error("Login failed.");
+      return;
+    }
+    const loginData = await loginResp.json();
+    await saveTokens(sdk, loginData);
+    accessToken = loginData.accessToken;
+    refreshToken = loginData.refreshToken;
+    sdk.console.log("Logged in once. Tokens saved to Global environment.");
+  }
+
+  for (let i = 0; i < POLL_COUNT; i++) {
+    const meRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+    let meResp = await fetch(meRequest);
+
+    // Refresh on 401 — https://dummyjson.com/docs/auth
+    if (meResp.status === 401) {
+      sdk.console.log("Access token expired. Refreshing...");
+      const refreshRequest = new FetchRequest(
+        "https://dummyjson.com/auth/refresh",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            refreshToken: refreshToken,
+            expiresInMins: EXPIRES_IN_MINS,
+          }),
+        },
+      );
+      const refreshResp = await fetch(refreshRequest);
+      if (!refreshResp.ok) {
+        sdk.console.error("Token refresh failed.");
+        return;
+      }
+      const refreshData = await refreshResp.json();
+      await saveTokens(sdk, refreshData);
+      accessToken = refreshData.accessToken;
+      refreshToken = refreshData.refreshToken;
+      sdk.console.log("JWT refreshed and saved to Global environment.");
+
+      const retryRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      meResp = await fetch(retryRequest);
+    }
+
+    const meData = await meResp.json();
+    sdk.console.log(`/auth/me [${i + 1}]:`, JSON.stringify(meData, null, 2));
+
+    if (i < POLL_COUNT - 1) {
+      await sleep(POLL_INTERVAL_MS);
+    }
+  }
+}
 ```
+
+3. Reference the `$active_start.request` and `$active_start.response` objects as [input data](/app/guides/workflows_references.md).
+
+<img alt="Referencing the request object." src="/_images/workflows_active_reference_request_response.png" center>
+
+Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
+
+## Script Breakdown
+
+## Testing the Workflow
