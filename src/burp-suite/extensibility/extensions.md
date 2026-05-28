@@ -357,7 +357,7 @@ Caido supports AWS signing through the **Resign AWS Requests** workflow tutorial
 - [Resign AWS Requests Tutorial](/app/tutorials/aws_signature.md)
 - [Workflows](/app/quickstart/workflows.md)
 
-## Unavailable
+## Not Available
 
 The following BApps from the Burp plugin catalog have no Community Store plugin and no reliable Caido equivalent today. Workarounds, where they exist, are noted but do not provide comparable coverage.
 
