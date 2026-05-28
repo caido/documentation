@@ -212,6 +212,17 @@ Caido offers **Match & Replace** and **Passive Workflows** for rule-based traffi
 - [Match & Replace](/app/quickstart/match_replace.md)
 - [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
 
+### ExifTool Scanner
+
+ExifTool Scanner reads metadata from uploaded or proxied files (JPEG, PNG, PDF, DOC, and more) using ExifTool.
+
+Caido has no dedicated ExifTool scanner BApp equivalent. You can extract file metadata with the **Panes** plugin by defining a pane that runs **ExifTool** as a shell command on request or response bodies, or automate similar checks with a **Passive Workflow**. ExifTool must be installed on your system and available in your shell `PATH`.
+
+#### Resources
+
+- [Panes](https://github.com/caido-community/panes) (GitHub)
+- [Passive Workflows](/app/concepts/workflows_intro.md#passive-workflows)
+
 ### MCP Server
 
 Burp's MCP Server extension integrates Burp Suite with AI clients through the Model Context Protocol (MCP).
@@ -433,12 +444,6 @@ Caido has no CO2-style SQL mapping or user-generation toolkit. **HackerUtils** a
 Proxy Enriched Sequence Diagrams Exporter converts Burp proxy traffic into interactive sequence diagrams.
 
 Caido has no traffic-to-diagram export extension. You can review flows in **HTTP History** and **Sitemap**, but not generate sequence diagrams from captured traffic.
-
-### ExifTool Scanner
-
-ExifTool Scanner reads metadata from uploaded or proxied files (JPEG, PNG, PDF, DOC, and more) using ExifTool.
-
-Caido has no ExifTool integration or file-metadata scanner plugin.
 
 ### Nucleus Burp Extension
 
