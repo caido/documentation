@@ -36,7 +36,7 @@ Caido offers native **Sitemap** that displays discovered hosts and endpoints in 
 
 Burp lets you define which hosts and URLs are in scope for testing.
 
-Caido offers native **Scopes** to define in-scope hosts and URL patterns. Scoped traffic can be highlighted and filtered across views, similar to Burp's scope configuration.
+Caido offers native **Scopes** to define in-scope hosts. Scoped traffic can be highlighted and filtered across views, similar to Burp's scope configuration.
 
 #### Resources
 
