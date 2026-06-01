@@ -275,6 +275,144 @@ Once these steps are completed, close the editor window and **click** on the `Sa
 
 ## Script Breakdown
 
+To be able to send a fetch request, the `Request` class and the `fetch()` function are imported from the `caido:http` module.
+
+```js
+import { Request as FetchRequest, fetch } from "caido:http";
+```
+
+Next, the `EXPIRES_IN_MINS`, `POLL_INTERVAL_MS`, and `POLL_COUNT` constants are defined.
+
+```js
+const EXPIRES_IN_MINS = 1;
+const POLL_INTERVAL_MS = 45_000;
+const POLL_COUNT = 4;
+```
+
+The `EXPIRES_IN_MINS` constant is set to 1 minute, the `POLL_INTERVAL_MS` constant is set to 45 seconds, and the `POLL_COUNT` constant is set to 4.
+
+The `sleep()` function is defined to pause the script for a specified number of milliseconds.
+
+```js
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+```
+
+Next, an asynchronous function named `saveTokens` is defined that takes the `sdk` and the `data` object as parameters. The function checks if the `accessToken` and `refreshToken` properties exist in the `data` object and if they do, it uses the `sdk.env.setVar()` method to set the `ACCESS_TOKEN` and `REFRESH_TOKEN` environment variables.
+
+```js
+async function saveTokens(sdk, data) {
+  if (data.accessToken) {
+    await sdk.env.setVar({
+      name: "ACCESS_TOKEN",
+      value: data.accessToken,
+      secret: true,
+      global: true,
+    });
+  }
+  if (data.refreshToken) {
+    await sdk.env.setVar({
+      name: "REFRESH_TOKEN",
+      value: data.refreshToken,
+      secret: true,
+      global: true,
+    });
+  }
+}
+```
+
+Next, the `run` function is defined that takes the `request`, `response`, and `extra` objects and the `sdk` object as parameters. The variables `accessToken` and `refreshToken` are created and assigned the values of the `ACCESS_TOKEN` and `REFRESH_TOKEN` environment variables.
+
+```js
+export async function run({ request, response, extra }, sdk) {
+  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
+  let refreshToken = sdk.env.getVar("REFRESH_TOKEN");
+```
+
+If the environment variables do not exist, the initial authentication request is sent to the `/auth/login` endpoint.
+
+```js
+  // Login once — https://dummyjson.com/docs/auth
+  if (!accessToken || !refreshToken) {
+    const loginRequest = new FetchRequest("https://dummyjson.com/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: "emilys",
+        password: "emilyspass",
+        expiresInMins: EXPIRES_IN_MINS,
+      }),
+    });
+    const loginResp = await fetch(loginRequest);
+    if (!loginResp.ok) {
+      sdk.console.error("Login failed.");
+      return;
+    }
+    const loginData = await loginResp.json();
+    await saveTokens(sdk, loginData);
+    accessToken = loginData.accessToken;
+    refreshToken = loginData.refreshToken;
+    sdk.console.log("Logged in once. Tokens saved to Global environment.");
+  }
+```
+
+Requests to the `/auth/me` endpoint are sent at intervals. If a **401 Unauthorized** response is returned, a `POST` request to the `/auth/refresh` endpoint is sent using the `refreshToken` to obtain a new `accessToken`. The environment variables are updated with the new tokens and the request is retried.
+
+```js
+  for (let i = 0; i < POLL_COUNT; i++) {
+    const meRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+    let meResp = await fetch(meRequest);
+
+    // Refresh on 401 — https://dummyjson.com/docs/auth
+    if (meResp.status === 401) {
+      sdk.console.log("Access token expired. Refreshing...");
+      const refreshRequest = new FetchRequest(
+        "https://dummyjson.com/auth/refresh",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            refreshToken: refreshToken,
+            expiresInMins: EXPIRES_IN_MINS,
+          }),
+        },
+      );
+      const refreshResp = await fetch(refreshRequest);
+      if (!refreshResp.ok) {
+        sdk.console.error("Token refresh failed.");
+        return;
+      }
+      const refreshData = await refreshResp.json();
+      await saveTokens(sdk, refreshData);
+      accessToken = refreshData.accessToken;
+      refreshToken = refreshData.refreshToken;
+      sdk.console.log("JWT refreshed and saved to Global environment.");
+
+      const retryRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      meResp = await fetch(retryRequest);
+    }
+
+    const meData = await meResp.json();
+    sdk.console.log(`/auth/me [${i + 1}]:`, JSON.stringify(meData, null, 2));
+
+    if (i < POLL_COUNT - 1) {
+      await sleep(POLL_INTERVAL_MS);
+    }
+  }
+}
+```
+
 <img alt="The global environment variables." src="/_images/refresh_jwt_environment.png" center/>
 
 ## Testing the Workflow
