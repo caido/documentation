@@ -4,7 +4,7 @@ description: "A step-by-step guide to downloading and installing Caido desktop a
 
 # Installing Caido on Windows
 
-1. To download the Caido desktop application for Windows, visit [caido.io/download](https://caido.io/download) and **click** on the `Windows (x86_64)` button.
+1. To download the Caido desktop application for Windows, visit [www.caido.io/download](https://www.caido.io/download) and **click** on the `Windows (x86_64)` button.
 
 <img alt="Windows dashboard download." src="/_images/windows_dashboard_download.png" center/>
 

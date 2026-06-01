@@ -10,7 +10,7 @@ Once Caido has been launched:
 2. Once you are authenticated, name your [instance](/app/concepts/instance.md) and grant access to your account username, email address, and subscription.
 
 ::: info ADDITIONAL OPTIONS
-`Enable the AI assistant feature`: Available to Individual and Team tier [subscriptions](https://caido.io/pricing).
+`Enable the AI assistant feature`: Available to Individual and Team tier [subscriptions](https://www.caido.io/pricing).
 
 `Stay logged-in for an extended period`: Extends the validity of an authenticated session.
 
