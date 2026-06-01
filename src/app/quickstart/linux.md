@@ -12,7 +12,7 @@ Caido comes preinstalled on [Parrot Security](/app/guides/parrot_os.md) and [Ath
 
 ## Debian Distributions
 
-1. To download the Caido desktop application for Debian-based Linux distributions, visit [caido.io/download](https://caido.io/download) and **click** on the `Linux (x86_64)` or `Linux (Aarch64)` button, depending on your architecture.
+1. To download the Caido desktop application for Debian-based Linux distributions, visit [www.caido.io/download](https://www.caido.io/download) and **click** on the `Linux (x86_64)` or `Linux (Aarch64)` button, depending on your architecture.
 
 ::: tip
 To discover which download is suitable for your device, enter the following terminal command:

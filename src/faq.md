@@ -11,12 +11,12 @@ Caido has a free `Basic` plan. We also offer an `Individual` plan which includes
 Additionally, we offer a `Team` plan for organizations that need premium support and/or custom feature implementation.
 
 ::: info
-You can check our [website](https://caido.io) to stay informed about the new features that will be added in the future.
+You can check our [website](https://www.caido.io) to stay informed about the new features that will be added in the future.
 :::
 
 ## Is Caido open source?
 
-Caido is not currently open source, but we have a rich ecosystem of [open source extensions](https://caido.io/plugins). We also employ standard open formats whenever possible.
+Caido is not currently open source, but we have a rich ecosystem of [open source extensions](https://www.caido.io/plugins). We also employ standard open formats whenever possible.
 
 ## On how many devices can I install Caido?
 

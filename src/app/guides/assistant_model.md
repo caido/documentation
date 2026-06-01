@@ -12,7 +12,7 @@ The <b>Assistant</b> is only available to users with Individual or Team tier sub
 Submitted data is sent to the LLM's third-party provider (OpenAI) and can be stored for up to 30 days. Due to this, **anonymize sensitive data** when using the Assistant. Sensitive data may be unintentionally submitted when using the Assistant context menu options. Before using any context menu option, manually review all content to ensure no sensitive data is included. For more information, review:
 
 - [OpenAI's Privacy Policy](https://openai.com/policies/privacy-policy)
-- [Caido's Privacy Policy](https://caido.io/privacy)
+- [Caido's Privacy Policy](https://www.caido.io/privacy)
 :::
 
 ::: info

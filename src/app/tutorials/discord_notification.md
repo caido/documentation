@@ -50,7 +50,7 @@ export async function run(input, sdk) {
   // Discord webhook data.
   const message = {
     username: "Caido Bot",
-    avatar_url: "https://caido.io/images/logo.color.webp",
+    avatar_url: "https://www.caido.io/images/logo.color.webp",
     content: "Message from Caido Workflow",
     embeds: [{
       title: "Webhook Fetch Request",
@@ -142,7 +142,7 @@ The body data of the fetch request is defined as an object and stored in the `me
   // Discord webhook data.
   const message = {
     username: "Caido Bot",
-    avatar_url: "https://caido.io/images/logo.color.webp",
+    avatar_url: "https://www.caido.io/images/logo.color.webp",
     content: "Message from Caido Workflow",
     embeds: [{
       title: "Webhook Fetch Request",

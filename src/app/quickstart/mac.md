@@ -10,7 +10,7 @@ For macOS users, Caido provides a desktop application for both the Intel-based `
 
 A `.dmg` file is a macOS disk image used to distribute applications. It's the most common and user-friendly way to install apps on Mac.
 
-1. To download the Caido desktop application for macOS, visit [caido.io/download](https://caido.io/download) and **click** on the `Mac Intel Chip` or `Mac Apple Chip` button, depending on your architecture.
+1. To download the Caido desktop application for macOS, visit [www.caido.io/download](https://www.caido.io/download) and **click** on the `Mac Intel Chip` or `Mac Apple Chip` button, depending on your architecture.
 
 ::: tip
 [Learn which download is suitable for your device.](https://support.apple.com/en-us/116943)
