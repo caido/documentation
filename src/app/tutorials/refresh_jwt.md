@@ -126,7 +126,7 @@ Content-Length: 397
 
 Typically, to continue authenticated testing in [Replay](/app/guides/replay_resending.md), the `accessToken` would need to be manually updated in the request headers.
 
-But, by creating a [workflow](/app/guides/workflows_creating.html) that sets the `accessToken` and `refreshToken` as environment variables and automates the exchange, you can achieve continuous, uninterrupted testing in Replay requests using the [placeholder functionality](/app/guides/replay_environment_variables.md).
+However, by creating a [workflow](/app/guides/workflows_creating.html) that sets the `accessToken` and `refreshToken` as environment variables and automates the exchange, you can achieve continuous, uninterrupted testing in Replay requests using the [placeholder functionality](/app/guides/replay_environment_variables.md).
 
 ## Creating an Active Workflow
 
@@ -148,7 +148,7 @@ For this workflow, the overall node layout will be:
 
 ## Refreshing the JWT
 
-1. Close the editor window and **click** on the `Javascript` node to access its editor.
+1. **Click** on the `Javascript` node to access its editor.
 
 2. Then, **click** within the coding environment, select all of the existing code, and replace it with the following script:
 
@@ -267,7 +267,7 @@ export async function run({ request, response, extra }, sdk) {
 }
 ```
 
-3. Reference the `$active_start.request` and `$active_start.response` objects as [input data](/app/guides/workflows_references.md).
+3. Next, ensure the `$active_start.request` and `$active_start.response` objects are [referenced as input data](/app/guides/workflows_references.md).
 
 <img alt="Referencing the request object." src="/_images/workflows_active_reference_request_response.png" center>
 
@@ -275,4 +275,50 @@ Once these steps are completed, close the editor window and **click** on the `Sa
 
 ## Script Breakdown
 
+<img alt="The global environment variables." src="/_images/refresh_jwt_environment.png" center/>
+
 ## Testing the Workflow
+
+To test the workflow:
+
+1. Send the following request via Replay:
+
+```http
+POST /auth/login HTTP/1.1
+Host: dummyjson.com
+Content-Type: application/json
+Content-Length: 63
+
+{"username":"emilys","password":"emilyspass","expiresInMins":1}
+```
+
+2. Copy the value of the `accessToken` from the response.
+
+3. Send the following request via Replay using the `accessToken` you copied in the previous step as the value of the `Authorization` header:
+
+```http
+GET /auth/me HTTP/1.1
+Host: dummyjson.com
+Connection: close
+Authorization: Bearer <accessToken>
+
+
+```
+
+4. After one minute has passed send the previous request again and notice that a **401 Unauthorized** response is returned.
+
+5. **Click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder.
+
+6. Then, **click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.
+
+<img alt="Adding a placeholder in a Replay request." src="/_images/refresh_jwt_placeholder.png" width=585 center/>
+
+7. **Click** on the `Type` drop-down menu and select `Environment Variable`.
+
+8. **Click** on the `Environment Variable` drop-down menu and select the `ACCESS_TOKEN` environment variable.
+
+9. **Click** on the `Add` button to save the configuration.
+
+<img alt="Adding an environment variable to a Replay request." src="/_images/refresh_jwt_placeholder_settings.png" center/>
+
+10. Close the settings window and send the request.
