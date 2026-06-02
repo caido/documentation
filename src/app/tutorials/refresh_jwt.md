@@ -4,7 +4,11 @@ description: "Learn how to create a workflow that automatically refreshes a JSON
 
 # Refresh a JWT Workflow
 
-In this tutorial, we will create a workflow that will automatically refresh a JSON Web Token (JWT) when it expires.
+In this tutorial, you will learn how to create a workflow to refresh a JSON Web Token (JWT) when it expires.
+
+Typically, to continue authenticated testing in [Replay](/app/guides/replay_resending.md), session tokens would need to be manually updated in the request headers.
+
+However, by combining multiple features available in Caido, this process can be automated.
 
 We will use the [https://dummyjson.com](https://dummyjson.com) API to demonstrate the workflow.
 
@@ -32,80 +36,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 
 ```
 
-```json
-{
-    "id": 1,
-    "firstName": "Emily",
-    "lastName": "Johnson",
-    "maidenName": "Smith",
-    "age": 29,
-    "gender": "female",
-    "email": "emily.johnson@x.dummyjson.com",
-    "phone": "+81 965-431-3024",
-    "username": "emilys",
-    "password": "emilyspass",
-    "birthDate": "1996-5-30",
-    "image": "https://dummyjson.com/ic on/emilys/128",
-    "bloodGroup": "O-",
-    "height": 193.24,
-    "weight": 63.16,
-    "eyeColor": "Green",
-    "hair": {
-        "color": "Brown",
-        "type": "Curly"
-    },
-    "ip": "42.48.100.32",
-    "address": {
-        "address": "626 Main Street",
-        "city": "Phoenix",
-        "state": "Mississippi",
-        "stateCode": "MS",
-        "postalCode": "29112",
-        "coordinates": {
-            "lat": -77.16213,
-            "lng": -92.084824
-        },
-        "country": "United States"
-    },
-    "macAddress": "47:fa:41:18:ec:eb",
-    "university": "University of Wisconsin--Madison",
-    "bank": {
-        "cardExpire": "05/28",
-        "cardNumber": "3693233511855044",
-        "cardType": "Diners Club International",
-        "currency": "GBP",
-        "iban": "GB74MH2UZLR9TRPHYNU8F8"
-    },
-    "company": {
-        "department": "Engineering",
-        "name": "Dooley, Kozey and Cronin",
-        "title": "Sales Manager",
-        "address": {
-            "address": "263 Tenth Street",
-            "city": "San Francisco",
-            "state": "Wisconsin",
-            "stateCode": "WI",
-            "postalCode": "37657",
-            "coordinates": {
-                "lat": 71.814525,
-                "lng": -161.150263
-            },
-            "country": "United States"
-        }
-    },
-    "ein": "977-175",
-    "ssn": "900-590-289",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
-    "crypto": {
-        "coin": "Bitcoin",
-        "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-        "network": "Ethereum (ERC20)"
-    },
-    "role": "admin"
-}
-```
-
-Once a minute has passed, a **401 Unauthorized** response is returned instead of user data with a body notifiying the `accessToken` has expired:
+Once a minute has passed, a **401 Unauthorized** response is returned instead of user data with a body notifying the `accessToken` has expired:
 
 ```http
 {
@@ -124,15 +55,11 @@ Content-Length: 397
 {"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3Nzk2NDA4OTIsImV4cCI6MTc4MjIzMjg5Mn0.kmaBxCM5Sq1ybQFZcspzf1HnJBPpZ9maMwOUjxreoYI","expiresInMins":1}
 ```
 
-Typically, to continue authenticated testing in [Replay](/app/guides/replay_resending.md), the `accessToken` would need to be manually updated in the request headers.
+## Creating a Convert Workflow
 
-However, by creating a [workflow](/app/guides/workflows_creating.html) that sets the `accessToken` and `refreshToken` as environment variables and automates the exchange, you can achieve continuous, uninterrupted testing in Replay requests using the [placeholder functionality](/app/guides/replay_environment_variables.md).
+To begin, navigate to the Workflows interface, select the `Convert` tab, and **click** on the `+ New workflow` button.
 
-## Creating an Active Workflow
-
-To begin, navigate to the Workflows interface, select the `Active` tab, and **click** on the `+ New workflow` button.
-
-<img alt="Creating a new active workflow." src="/_images/new_active_workflow.png" center/>
+<img alt="Creating a new active workflow." src="/_images/new_convert_workflow.png" center/>
 
 Next, rename the workflow by typing in the `Name` input field. You can also provide an optional description of the workflow's functionality by typing in the `Description` input field.
 
@@ -140,10 +67,10 @@ Next, rename the workflow by typing in the `Name` input field. You can also prov
 
 For this workflow, the overall node layout will be:
 
-<img alt="The nodes used and their connections." src="/_images/discord_notification_nodes.png" center>
+<img alt="The nodes used and their connections." src="/_images/refresh_jwt_nodes.png" center>
 
-- The `Active Start` node outputs `$active_start.request` and `$active_start.response` objects which represent proxied requests the workflow was initiated on and their corresponding responses.
-- The request and response objects will be passed to the `Javascript` node.
+- The `Convert Start` node outputs `$convert_start.data` that represents the user-selected data that will undergo conversion (_in this case, the `accessToken` JWT that is the value of the `Authorization` header in a request_).
+- The `Javascript` node executes a script on the `accessToken` and outputs the converted data as `$javascript.data`.
 - Once the script in the `Javascript` node finishes, the workflow will end.
 
 ## Refreshing the JWT
@@ -155,121 +82,114 @@ For this workflow, the overall node layout will be:
 ```js
 import { Request as FetchRequest, fetch } from "caido:http";
 
-const EXPIRES_IN_MINS = 1;
-const POLL_INTERVAL_MS = 45_000;
-const POLL_COUNT = 4;
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+async function saveTokens(sdk, body) {
+  await sdk.env.setVar({
+    name: "ACCESS_TOKEN",
+    value: body.accessToken,
+    secret: false,
+    global: true,
+  });
+  await sdk.env.setVar({
+    name: "REFRESH_TOKEN",
+    value: body.refreshToken,
+    secret: false,
+    global: true,
+  });
 }
 
-async function saveTokens(sdk, data) {
-  if (data.accessToken) {
-    await sdk.env.setVar({
-      name: "ACCESS_TOKEN",
-      value: data.accessToken,
-      secret: true,
-      global: true,
-    });
-  }
-  if (data.refreshToken) {
-    await sdk.env.setVar({
-      name: "REFRESH_TOKEN",
-      value: data.refreshToken,
-      secret: true,
-      global: true,
-    });
-  }
-}
-
-/**
- * @param {NodeInputHTTP} input
- * @param {SDK} sdk
- * @returns {MaybePromise<NodeResult | Data | undefined>}
- */
-export async function run({ request, response, extra }, sdk) {
-  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
-  let refreshToken = sdk.env.getVar("REFRESH_TOKEN");
-
-  // Login once — https://dummyjson.com/docs/auth
-  if (!accessToken || !refreshToken) {
-    const loginRequest = new FetchRequest("https://dummyjson.com/auth/login", {
+async function login(sdk) {
+  const resp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/login", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         username: "emilys",
         password: "emilyspass",
-        expiresInMins: EXPIRES_IN_MINS,
+        expiresInMins: 1,
       }),
-    });
-    const loginResp = await fetch(loginRequest);
-    if (!loginResp.ok) {
-      sdk.console.error("Login failed.");
-      return;
-    }
-    const loginData = await loginResp.json();
-    await saveTokens(sdk, loginData);
-    accessToken = loginData.accessToken;
-    refreshToken = loginData.refreshToken;
-    sdk.console.log("Logged in once. Tokens saved to Global environment.");
+    }),
+  );
+  if (!resp.ok) {
+    sdk.console.error(`Login failed: ${resp.status} ${resp.statusText}`);
+    sdk.console.error(await resp.text());
+    return null;
+  }
+  const body = await resp.json();
+  sdk.console.log(`/auth/login: ${resp.status} ${resp.statusText}`);
+  sdk.console.log(JSON.stringify(body));
+  await saveTokens(sdk, body);
+  return body.accessToken;
+}
+
+async function refresh(sdk, refreshToken) {
+  const resp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/refresh", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        refreshToken,
+        expiresInMins: 1,
+      }),
+    }),
+  );
+  if (!resp.ok) {
+    sdk.console.error(`Refresh failed: ${resp.status} ${resp.statusText}`);
+    sdk.console.error(await resp.text());
+    return null;
+  }
+  const body = await resp.json();
+  sdk.console.log(`/auth/refresh: ${resp.status} ${resp.statusText}`);
+  sdk.console.log(JSON.stringify(body));
+  await saveTokens(sdk, body);
+  return body.accessToken;
+}
+
+export async function run({ data, extra }, sdk) {
+  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
+
+  if (!accessToken) {
+    const token = await login(sdk);
+    return { data: token ?? sdk.asString(data), extra };
   }
 
-  for (let i = 0; i < POLL_COUNT; i++) {
-    const meRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+  const meResp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/me", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-    });
-    let meResp = await fetch(meRequest);
+    }),
+  );
+  sdk.console.log(`/auth/me: ${meResp.status} ${meResp.statusText}`);
 
-    // Refresh on 401 — https://dummyjson.com/docs/auth
-    if (meResp.status === 401) {
-      sdk.console.log("Access token expired. Refreshing...");
-      const refreshRequest = new FetchRequest(
-        "https://dummyjson.com/auth/refresh",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            refreshToken: refreshToken,
-            expiresInMins: EXPIRES_IN_MINS,
-          }),
-        },
-      );
-      const refreshResp = await fetch(refreshRequest);
-      if (!refreshResp.ok) {
-        sdk.console.error("Token refresh failed.");
-        return;
-      }
-      const refreshData = await refreshResp.json();
-      await saveTokens(sdk, refreshData);
-      accessToken = refreshData.accessToken;
-      refreshToken = refreshData.refreshToken;
-      sdk.console.log("JWT refreshed and saved to Global environment.");
-
-      const retryRequest = new FetchRequest("https://dummyjson.com/auth/me", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-      meResp = await fetch(retryRequest);
+  if (meResp.status !== 401) {
+    if (!meResp.ok) {
+      sdk.console.error(await meResp.text());
     }
+    return { data: accessToken, extra };
+  }
 
-    const meData = await meResp.json();
-    sdk.console.log(`/auth/me [${i + 1}]:`, JSON.stringify(meData, null, 2));
-
-    if (i < POLL_COUNT - 1) {
-      await sleep(POLL_INTERVAL_MS);
+  const refreshToken = sdk.env.getVar("REFRESH_TOKEN");
+  if (refreshToken) {
+    const token = await refresh(sdk, refreshToken);
+    if (token) {
+      return { data: token, extra };
     }
   }
+
+  sdk.console.log("Refresh unavailable or failed; logging in again");
+  const token = await login(sdk);
+  return { data: token ?? accessToken, extra };
 }
 ```
 
-3. Next, ensure the `$active_start.request` and `$active_start.response` objects are [referenced as input data](/app/guides/workflows_references.md).
+3. Next, ensure the `$convert_start.data` is [referenced as input data](/app/guides/workflows_references.md).
 
-<img alt="Referencing the request object." src="/_images/workflows_active_reference_request_response.png" center>
+<img alt="Referencing the input data." src="/_images/workflows_convert_reference_data.png" center>
 
 Once these steps are completed, close the editor window and **click** on the `Save` button to update and save the configuration.
 
@@ -281,139 +201,126 @@ To be able to send a fetch request, the `Request` class and the `fetch()` functi
 import { Request as FetchRequest, fetch } from "caido:http";
 ```
 
-Next, the `EXPIRES_IN_MINS`, `POLL_INTERVAL_MS`, and `POLL_COUNT` constants are defined.
+The `saveTokens()` function is defined to set environment variables `ACCESS_TOKEN` and `REFRESH_TOKEN` in the global environment.
 
 ```js
-const EXPIRES_IN_MINS = 1;
-const POLL_INTERVAL_MS = 45_000;
-const POLL_COUNT = 4;
-```
-
-The `EXPIRES_IN_MINS` constant is set to 1 minute, the `POLL_INTERVAL_MS` constant is set to 45 seconds, and the `POLL_COUNT` constant is set to 4.
-
-The `sleep()` function is defined to pause the script for a specified number of milliseconds.
-
-```js
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+async function saveTokens(sdk, body) {
+  await sdk.env.setVar({
+    name: "ACCESS_TOKEN",
+    value: body.accessToken,
+    secret: false,
+    global: true,
+  });
+  await sdk.env.setVar({
+    name: "REFRESH_TOKEN",
+    value: body.refreshToken,
+    secret: false,
+    global: true,
+  });
 }
 ```
 
-Next, an asynchronous function named `saveTokens` is defined that takes the `sdk` and the `data` object as parameters. The function checks if the `accessToken` and `refreshToken` properties exist in the `data` object and if they do, it uses the `sdk.env.setVar()` method to set the `ACCESS_TOKEN` and `REFRESH_TOKEN` environment variables.
+The `login()` function is defined to log in with valid user credentials. If authentication is successful, the `accessToken` and `refreshToken` are saved to the global environment using the `saveTokens()` function.
 
 ```js
-async function saveTokens(sdk, data) {
-  if (data.accessToken) {
-    await sdk.env.setVar({
-      name: "ACCESS_TOKEN",
-      value: data.accessToken,
-      secret: true,
-      global: true,
-    });
-  }
-  if (data.refreshToken) {
-    await sdk.env.setVar({
-      name: "REFRESH_TOKEN",
-      value: data.refreshToken,
-      secret: true,
-      global: true,
-    });
-  }
-}
-```
-
-Next, the `run` function is defined that takes the `request`, `response`, and `extra` objects and the `sdk` object as parameters. The variables `accessToken` and `refreshToken` are created and assigned the values of the `ACCESS_TOKEN` and `REFRESH_TOKEN` environment variables.
-
-```js
-export async function run({ request, response, extra }, sdk) {
-  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
-  let refreshToken = sdk.env.getVar("REFRESH_TOKEN");
-```
-
-If the environment variables do not exist, the initial authentication request is sent to the `/auth/login` endpoint.
-
-```js
-  // Login once — https://dummyjson.com/docs/auth
-  if (!accessToken || !refreshToken) {
-    const loginRequest = new FetchRequest("https://dummyjson.com/auth/login", {
+async function login(sdk) {
+  const resp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/login", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         username: "emilys",
         password: "emilyspass",
-        expiresInMins: EXPIRES_IN_MINS,
+        expiresInMins: 1,
       }),
-    });
-    const loginResp = await fetch(loginRequest);
-    if (!loginResp.ok) {
-      sdk.console.error("Login failed.");
-      return;
-    }
-    const loginData = await loginResp.json();
-    await saveTokens(sdk, loginData);
-    accessToken = loginData.accessToken;
-    refreshToken = loginData.refreshToken;
-    sdk.console.log("Logged in once. Tokens saved to Global environment.");
+    }),
+  );
+  if (!resp.ok) {
+    sdk.console.error(`Login failed: ${resp.status} ${resp.statusText}`);
+    sdk.console.error(await resp.text());
+    return null;
   }
+  const body = await resp.json();
+  sdk.console.log(`/auth/login: ${resp.status} ${resp.statusText}`);
+  sdk.console.log(JSON.stringify(body));
+  await saveTokens(sdk, body);
+  return body.accessToken;
+}
 ```
 
-Requests to the `/auth/me` endpoint are sent at intervals. If a **401 Unauthorized** response is returned, a `POST` request to the `/auth/refresh` endpoint is sent using the `refreshToken` to obtain a new `accessToken`. The environment variables are updated with the new tokens and the request is retried.
+The `refresh()` function is defined to refresh the `accessToken` using the `refreshToken` that was saved to the global environment. If the refresh is successful, the `accessToken` is saved to the global environment using the `saveTokens()` function.
 
 ```js
-  for (let i = 0; i < POLL_COUNT; i++) {
-    const meRequest = new FetchRequest("https://dummyjson.com/auth/me", {
+async function refresh(sdk, refreshToken) {
+  const resp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/refresh", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        refreshToken,
+        expiresInMins: 1,
+      }),
+    }),
+  );
+  if (!resp.ok) {
+    sdk.console.error(`Refresh failed: ${resp.status} ${resp.statusText}`);
+    sdk.console.error(await resp.text());
+    return null;
+  }
+  const body = await resp.json();
+  sdk.console.log(`/auth/refresh: ${resp.status} ${resp.statusText}`);
+  sdk.console.log(JSON.stringify(body));
+  await saveTokens(sdk, body);
+  return body.accessToken;
+}
+```
+
+The `run()` function is defined to execute the workflow. If the `accessToken` is not set, the `login()` function is called to log in with valid user credentials. If the `accessToken` is set, the `refresh()` function is called to refresh the `accessToken` using the `refreshToken` that was saved to the global environment. If the refresh is successful, the `accessToken` is saved to the global environment using the `saveTokens()` function.
+
+```js
+export async function run({ data, extra }, sdk) {
+  let accessToken = sdk.env.getVar("ACCESS_TOKEN");
+
+  if (!accessToken) {
+    const token = await login(sdk);
+    return { data: token ?? sdk.asString(data), extra };
+  }
+
+  const meResp = await fetch(
+    new FetchRequest("https://dummyjson.com/auth/me", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
-    });
-    let meResp = await fetch(meRequest);
+    }),
+  );
+  sdk.console.log(`/auth/me: ${meResp.status} ${meResp.statusText}`);
 
-    // Refresh on 401 — https://dummyjson.com/docs/auth
-    if (meResp.status === 401) {
-      sdk.console.log("Access token expired. Refreshing...");
-      const refreshRequest = new FetchRequest(
-        "https://dummyjson.com/auth/refresh",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            refreshToken: refreshToken,
-            expiresInMins: EXPIRES_IN_MINS,
-          }),
-        },
-      );
-      const refreshResp = await fetch(refreshRequest);
-      if (!refreshResp.ok) {
-        sdk.console.error("Token refresh failed.");
-        return;
-      }
-      const refreshData = await refreshResp.json();
-      await saveTokens(sdk, refreshData);
-      accessToken = refreshData.accessToken;
-      refreshToken = refreshData.refreshToken;
-      sdk.console.log("JWT refreshed and saved to Global environment.");
-
-      const retryRequest = new FetchRequest("https://dummyjson.com/auth/me", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-      meResp = await fetch(retryRequest);
+  if (meResp.status !== 401) {
+    if (!meResp.ok) {
+      sdk.console.error(await meResp.text());
     }
+    return { data: accessToken, extra };
+  }
 
-    const meData = await meResp.json();
-    sdk.console.log(`/auth/me [${i + 1}]:`, JSON.stringify(meData, null, 2));
-
-    if (i < POLL_COUNT - 1) {
-      await sleep(POLL_INTERVAL_MS);
+  const refreshToken = sdk.env.getVar("REFRESH_TOKEN");
+  if (refreshToken) {
+    const token = await refresh(sdk, refreshToken);
+    if (token) {
+      return { data: token, extra };
     }
   }
+
+  sdk.console.log("Refresh unavailable or failed; logging in again");
+  const token = await login(sdk);
+  return { data: token ?? accessToken, extra };
 }
 ```
 
-<img alt="The global environment variables." src="/_images/refresh_jwt_environment.png" center/>
 
 ## Testing the Workflow
 
@@ -445,18 +352,20 @@ Authorization: Bearer <accessToken>
 
 4. After one minute has passed send the previous request again and notice that a **401 Unauthorized** response is returned.
 
-5. **Click**, **hold**, and **drag** over the value you want to replace and **click** the `+` button to add it as a placeholder.
+5. **Click**, **hold**, and **drag** over the `accessToken` value of the `Authorization` header and **click** the `+` button to add it as a placeholder.
 
 6. Then, **click** on the associated edit button <code><Icon icon="fas fa-pen-to-square" /></code> of the placeholder to open the `Placeholder Settings` window.
 
 <img alt="Adding a placeholder in a Replay request." src="/_images/refresh_jwt_placeholder.png" width=585 center/>
 
-7. **Click** on the `Type` drop-down menu and select `Environment Variable`.
+7. **Click** on the `Type` drop-down menu and select `Workflow`.
 
-8. **Click** on the `Environment Variable` drop-down menu and select the `ACCESS_TOKEN` environment variable.
+8. **Click** on the `Workflow` drop-down menu and select the workflow from the list.
 
 9. **Click** on the `Add` button to save the configuration.
 
-<img alt="Adding an environment variable to a Replay request." src="/_images/refresh_jwt_placeholder_settings.png" center/>
+<img alt="Adding a workflow to a placeholder." src="/_images/refresh_jwt_placeholder_config.png" center/>
 
 10. Close the settings window and send the request.
+
+<img alt="Workflow log output." src="/_images/refresh_jwt_logs.png" center/>
