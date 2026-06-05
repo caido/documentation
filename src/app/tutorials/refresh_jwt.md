@@ -8,11 +8,15 @@ In this tutorial, you will learn how to create a workflow to refresh a JSON Web 
 
 Typically, to continue authenticated testing in [Replay](/app/guides/replay_resending.md), session tokens would need to be manually updated in the request headers.
 
-However, by combining multiple features available in Caido, this process can be automated.
+However, this process can be automated by:
 
-We will use the [https://dummyjson.com](https://dummyjson.com) API to demonstrate the workflow.
+1. [Creating environment variables](/app/guides/environment_variables.md) to store the tokens.
+2. [Creating a workflow](http://localhost:5173/app/guides/workflows_creating.html) (_specifically a [convert workflow](/app/concepts/workflows_intro.md#convert-workflows)_) that will automatically exchange an expired token for a new one.
+3. [Using the workflow in Replay](/app/guides/replay_environment_variables.md) to apply the workflow conversion to the request.
 
-According to the [https://dummyjson.com/docs/auth](https://dummyjson.com/docs/auth) documentation, any user credentials returned from the `/users` endpoint can be used to authenticate with the `/auth/login` endpoint. By including the `expiresInMins` parameter, we can simulate a short-lived JWT.
+## Example Authentication Flow
+
+We will use the [https://dummyjson.com](https://dummyjson.com) API to demonstrate the workflow. According to the [https://dummyjson.com/docs/auth](https://dummyjson.com/docs/auth) documentation, any user credentials returned from the `/users` endpoint can be used to authenticate with the `/auth/login` endpoint. By including the `expiresInMins` parameter, we can simulate a short-lived JWT.
 
 ```http
 POST /auth/login HTTP/1.1
@@ -368,4 +372,16 @@ Authorization: Bearer <accessToken>
 
 10. Close the settings window and send the request.
 
+## The Result
+
+The workflow will execute every time the request is sent and automatically refresh the `accessToken` when it expires.
+
+The result will be continuous, successful `200 OK` responses with the new `accessToken` in the `Authorization` header.
+
+The log messages of the JavaScript node can be viewed in the [frontend logs](/app/troubleshooting/report_bug.md#frontend-logs).
+
 <img alt="Workflow log output." src="/_images/refresh_jwt_logs.png" center/>
+
+If you navigate to the **Environment** interface, you will notice the `ACCESS_TOKEN` and `REFRESH_TOKEN` environment variables that have been set by the workflow.
+
+<img alt="Environment variables." src="/_images/refresh_jwt_environment.png" center/>
