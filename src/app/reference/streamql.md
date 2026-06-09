@@ -56,12 +56,12 @@ The `preset` namespace does not have any fields available and instead takes a di
 
 | Operator | Description | Value Type | Additional Details |
 |----------|-------------|------------|-------------------|
-| `eq` | Equal to the supplied value. | String/Byte, Integer | Case sensitive. Requires leading `.` character for `ext` field. |
+| `eq` | Equal to the supplied value. | String/Byte, Integer | Case sensitive. |
 | `gt` | Greater than the supplied value. | Date/Time, Integer | |
 | `gte` | Greater than or equal to the supplied value. | Integer | |
 | `lt` | Less than the supplied value. | Date/Time, Integer | |
 | `lte` | Less than or equal to the supplied value. | Integer | |
-| `ne` | Not equal to the supplied value. | String/Byte, Integer | Case sensitive. Requires leading `.` character for `ext` field. |
+| `ne` | Not equal to the supplied value. | String/Byte, Integer | Case sensitive. |
 | `cont` | Contains the supplied value. | String/Byte | Case insensitive. |
 | `like` | The [SQLite LIKE Operator](https://www.sqlite.org/lang_expr.html#the_like_glob_regexp_match_and_extract_operators). | String/Byte | Case sensitive for Unicode characters beyond the ASCII range. |
 | `ncont` | Does not contain the supplied value. | String/Byte | Case insensitive. |
@@ -124,5 +124,5 @@ While parentheses are optional, we recommend using them to make your logical gro
 Caido supports both single-line and multi-line comments in StreamQL queries.
 
 ::: tip
-Comments can be used to write descriptions or temporary disable certain query statements.
+Comments can be used to write descriptions or temporarily disable certain query statements.
 :::
