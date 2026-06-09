@@ -13,6 +13,8 @@ StreamQL is the query language used in Caido that gives you the ability to filte
 
 <img width="500" alt="Parts of a filter clause" src="/_images/streamql_clause.png" no-shadow center/>
 
+## Namespaces
+
 ::: info
 Namespaces are project-specific.
 :::
