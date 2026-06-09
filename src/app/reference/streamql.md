@@ -24,7 +24,7 @@ Namespaces are project-specific.
 | `preset` | Filter presets. |
 
 ::: warning NOTE
-The `preset` namespace does not have any fields available and instead takes a direct value of a [filter preset's](/app/guides/filters_defining.md) alias.
+The `preset` namespace does not have any fields available and instead takes a direct value of a [filter preset's](/app/guides/filters_defining.md) name/alias.
 :::
 
 ## Fields
@@ -34,8 +34,8 @@ The `preset` namespace does not have any fields available and instead takes a di
 | Available Fields | Description | Value Type |
 |------------------|-------------|------------|
 | `created_at` | The date and time the message was sent. | Date/Time: [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) (`2024-06-24T17:03:48+00:00`) / [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) (`2024-06-24T17:03:48+0000`) / [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) (`Mon, 24 Jun 2024 17:03:48 +0000`) / [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) (`Mon, 24 Jun 2024 17:03:48 GMT`) / [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) (`2024-06-24T17:03:48Z`) |
-| `direction` | The direction of the message. | String/Byte |
-| `format` | The format of the message. | String/Byte |
+| `direction` | The direction of the message. | String/Byte: `To Server`/`To Client` |
+| `format` | The message type. | String/Byte: `Binary`, `Text`, `Close`, `Ping`, `Pong` |
 | `len` | The message size in bytes. | Integer |
 | `raw` | The full raw data of the message. | String/Byte |
 
@@ -47,7 +47,7 @@ The `preset` namespace does not have any fields available and instead takes a di
 | `path` | The URL path. | String/Byte |
 | `port` | The port of the destination server. | Integer |
 | `protocol` | The protocol of the destination server. | String/Byte |
-| `source` | The source of the stream message. | String/Byte |
+| `source` | The Caido feature source of the stream message. | String/Byte |
 | `tls` | If the connection used TLS/SSL encryption. | Boolean (`true`/`false`) |
 
 ## Operators
@@ -76,3 +76,51 @@ Not all regex features are currently supported by Caido (_such as look-ahead exp
 :::
 
 ## Values
+
+### preset
+
+| Available Values | Example |
+|------------------|---------|
+| A filter preset's alias. | `preset:"no-health-check"` |
+| A filter preset's name. | `preset:"No Health Check"` |
+
+### source
+
+| Available Values | Additional Details | Example |
+|------------------|--------------------|---------|
+| `automate`, `intercept`, `plugin`, `replay`, `workflow` | Requires lowercase. Autocomplete is not supported. | `stream.source.eq:"intercept"` |
+
+## Combining Statements
+
+Query statements can be combined together using logical operators and logical grouping.
+
+### Logical Operators
+
+| Operator | Description |
+|----------|-------------|
+| AND | Both the left and right clauses must be true. |
+| OR | Either the left or right clause must be true. |
+
+::: info
+Operators are case insensitive. Both have the **same priority**.
+:::
+
+### Logical Grouping
+
+Caido supports the priority of operations: `AND` has a higher priority than `OR`.
+
+- `<Clause1> AND <Clause2> OR <Clause3>` is equivalent to `((<Clause1> AND <Clause2>) OR <Clause3>)`.
+- `<Clause1> OR <Clause2> AND <Clause3>` is equivalent to `(<Clause1> OR (<Clause2> AND <Clause3>))`.
+- `<Clause1> AND <Clause2> AND <Clause3>` is equivalent to `((<Clause1> AND <Clause2>) AND <Clause3>)`.
+
+::: tip
+While parentheses are optional, we recommend using them to make your logical grouping clear.
+:::
+
+## Comments
+
+Caido supports both single-line and multi-line comments in StreamQL queries.
+
+::: tip
+Comments can be used to write descriptions or temporary disable certain query statements.
+:::
