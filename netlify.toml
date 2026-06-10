@@ -1,0 +1,88 @@
+[build]
+command = "make deploy-netlify"
+publish = ".vitepress/dist"
+
+[build.environment]
+MISE_VERSION = "2026.5.7"
+
+[[redirects]]
+from = "/stats/script.js"
+to = "https://plausible.io/js/plausible.js"
+status = 200
+force = true
+
+[[redirects]]
+from = "/stats/event"
+to = "https://plausible.io/api/event"
+status = 200
+force = true
+
+[[redirects]]
+from = "/quickstart"
+to = "/app/quickstart/"
+status = 301
+
+[[redirects]]
+from = "/quickstart/*"
+to = "/app/quickstart/:splat"
+status = 301
+
+[[redirects]]
+from = "/guides"
+to = "/app/guides/"
+status = 301
+
+[[redirects]]
+from = "/guides/*"
+to = "/app/guides/:splat"
+status = 301
+
+[[redirects]]
+from = "/tutorials"
+to = "/app/tutorials/"
+status = 301
+
+[[redirects]]
+from = "/tutorials/*"
+to = "/app/tutorials/:splat"
+status = 301
+
+[[redirects]]
+from = "/reference"
+to = "/app/reference/"
+status = 301
+
+[[redirects]]
+from = "/reference/*"
+to = "/app/reference/:splat"
+status = 301
+
+[[redirects]]
+from = "/concepts"
+to = "/app/concepts/"
+status = 301
+
+[[redirects]]
+from = "/concepts/*"
+to = "/app/concepts/:splat"
+status = 301
+
+[[redirects]]
+from = "/troubleshooting"
+to = "/app/troubleshooting/"
+status = 301
+
+[[redirects]]
+from = "/troubleshooting/*"
+to = "/app/troubleshooting/:splat"
+status = 301
+
+[[redirects]]
+from = "/app/reference/burp_vs_caido"
+to = "/burp-suite/core/overview"
+status = 301
+
+[[redirects]]
+from = "/app/reference/burp_vs_caido.html"
+to = "/burp-suite/core/overview"
+status = 301
