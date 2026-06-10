@@ -1,6 +1,6 @@
 [tools]
-node = "22"
-pnpm = "10.17"
+node = "22.20.0"
+pnpm = "10.17.0"
 lychee = "0.23.0"
 
 [settings]
