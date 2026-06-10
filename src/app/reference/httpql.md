@@ -158,7 +158,7 @@ While parentheses are optional, we recommend using them to make your logical gro
 Caido supports both single-line and multi-line comments in HTTPQL queries.
 
 ::: tip
-Comments can be used to write descriptions or temporary disable certain query statements.
+Comments can be used to write descriptions or temporarily disable certain query statements.
 :::
 
 <img alt="Single-line comment." src="/_images/httpql_single_line_comment.png" center />

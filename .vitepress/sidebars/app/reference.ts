@@ -29,6 +29,10 @@ export const referenceSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/reference/httpql",
       },
       {
+        text: "StreamQL",
+        link: "/app/reference/streamql",
+      },
+      {
         text: "Match & Replace",
         link: "/app/reference/match_replace",
       },
