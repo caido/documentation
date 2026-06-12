@@ -40,6 +40,7 @@ jobs:
         uses: caido/action-mise-action@v3.2.0
         with:
           version: ${{ vars.CI__MISE_VERSION }} 
+          experimental: true # Necessary for custom backend plugins
 
       - name: Install dependencies
         run: pnpm install
@@ -58,6 +59,7 @@ jobs:
         uses: caido/action-mise-action@v3.2.0
         with:
           version: ${{ vars.CI__MISE_VERSION }}
+          experimental: true # Necessary for custom backend plugins
 
       - name: Check links
         run: mise run check-links
