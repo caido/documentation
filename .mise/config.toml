@@ -1,7 +1,11 @@
+[plugins]
+toolshed = "https://github.com/caido/mise-toolshed"
+
 [tools]
 node = "22.20.0"
 pnpm = "10.17.0"
 lychee = "0.23.0"
+"toolshed:get-skills" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
