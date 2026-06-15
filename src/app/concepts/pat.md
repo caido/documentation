@@ -4,7 +4,7 @@ description: "Understand what Personal Access Tokens (PATs) are, how they work i
 
 # Personal Access Token
 
-A Personal Access Token (PAT) is a long-lived credential that allows you to authenticate with a Caido instance without going through the browser-based consent flow described in [Authentication](./instance_authentication.md). This makes PATs the primary authentication method for headless environments, CI/CD pipelines, and any automated interaction with the [Caido Cloud API](https://developer.caido.io/reference/api.html).
+A Personal Access Token (PAT) is a long-lived credential that allows you to authenticate with a Caido instance without going through the browser-based consent flow described in [Authentication](./instance_authentication.md). This makes PATs the primary authentication method for headless environments, CI/CD pipelines, and any automated interaction with the [Caido Cloud API](https://developer.caido.io/client-sdk/reference/api.html).
 
 All Caido PATs use the `caido_` prefix, making them easy to identify and manage across your systems.
 
