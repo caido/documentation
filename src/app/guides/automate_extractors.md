@@ -4,7 +4,7 @@ description: "A step-by-step guide to using extractors in Caido's Automate featu
 
 # Customizing Result Columns with Extractors
 
-The `Extractors` tab of an Automate session allows you to create custom columns in a session's result table based on if a matching condition is met in the responses to the requests.
+The `Extractors` tab of an Automate session allows you to create custom columns in a session's result table. Values for these columns are determined based on whether or not a matching condition is met in the responses to the requests.
 
 To configure an extractor, define the matcher in the `Regex` input field.
 
