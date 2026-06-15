@@ -7,7 +7,7 @@ description: "A guide to the configuration file for Caido."
 As an alternative to including [command-line options](/app/reference/cli.md) directly, you can launch Caido with the `--config` command-line option to specify a configuration file.
 
 ```bash
-caido --config /path/to/caido.yaml
+caido-cli --config /path/to/caido.yaml
 ```
 
 ::: info
@@ -60,14 +60,14 @@ config:
     # CA certificate configuration
     ca:
       # CA certificate path (Required if ca is provided)
-      path: "/Users/ninjeeter/Desktop/certificate.p12"
+      path: "/path/to/certificate.p12"
       # CA certificate password
       password: null
     # Listeners configuration
     listeners:
       - # Listener address (Required)
         address: "127.0.0.1:8080"
-        # Listener usage: Allowed values are 'u_i', 'proxy', or 'both'
+        # Listener usage: Allowed values are 'ui', 'proxy', or 'both'
         usage: "both"
 
   # Project configuration
@@ -87,7 +87,7 @@ config:
   plugins:
     # Can install via 'store' identifier OR via local 'path'
     - store: "scanner"
-    - path: "/Users/ninjeeter/Desktop/plugins/demo/dist/plugin_package.zip"
+    - path: "/path/to/plugin_package.zip"
 
   # Logging configuration
   logging:
