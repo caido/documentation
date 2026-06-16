@@ -6,10 +6,6 @@ description: "A step-by-step guide to creating and defining filter presets in Ca
 
 Filters are defined by creating sets of HTTPQL queries referred to as "filter presets".
 
-::: info
-Filter presets are specific to the project they are created in.
-:::
-
 ## Creating a New Filter Preset
 
 To create a new filter preset, **click** on the `+ New Preset` button.
