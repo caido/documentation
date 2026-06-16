@@ -2,7 +2,7 @@
 description: "A step-by-step guide to sending requests from other Caido interfaces to the Replay interface for manual request testing and modification."
 ---
 
-# Sending Requests to Replay
+# Sending HTTP Requests to Replay
 
 ::: tip <code><Icon icon="fas fa-video" /></code> Video Demonstration
 ---
@@ -11,7 +11,7 @@ description: "A step-by-step guide to sending requests from other Caido interfac
 </div>
 :::
 
-You can send requests from other interfaces to the Replay interface in various ways:
+You can send HTTP requests from other interfaces to the Replay interface in various ways:
 
 - By **right-clicking** on a request row in a traffic table or within a request pane, hovering your mouse cursor over `Send to Replay`, and selecting the Collection to include it in.
 
@@ -20,3 +20,7 @@ You can send requests from other interfaces to the Replay interface in various w
 - Or by selecting a request row or focusing a request pane and using the default keyboard shortcut `CTRL` + `R`.
 
 Requests in the Replay interface are referred to as "sessions". Each session is listed as a tab that stores the associated request.
+
+Replay sessions can also be created manually by **clicking** on the `+ New Session` button and entering a connection URL.
+
+<img alt="Creating a new Replay session manually." src="/_images/replay_manual_session.png" center>

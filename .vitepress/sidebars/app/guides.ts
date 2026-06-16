@@ -235,6 +235,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/guides/match_replace_header",
       },
       {
+        text: "Modifying WebSocket Messages",
+        link: "/app/guides/match_replace_websocket",
+      },
+      {
         text: "Using Capturing Groups",
         link: "/app/guides/match_replace_capturing",
       },
@@ -252,7 +256,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
     text: "Replay",
     items: [
       {
-        text: "Sending Requests to Replay",
+        text: "Sending HTTP Requests to Replay",
         link: "/app/guides/replay_requests",
       },
       {
@@ -266,6 +270,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Using Environment Variables in Replay",
         link: "/app/guides/replay_environment_variables",
+      },
+      {
+        text: "Sending WebSocket Messages",
+        link: "/app/guides/replay_websocket",
       },
     ],
   },
