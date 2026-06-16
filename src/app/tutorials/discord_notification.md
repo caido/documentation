@@ -168,7 +168,7 @@ The body data of the fetch request is defined as an object and stored in the `me
   };
 ```
 
-Then, using `new FetchRequest()` the fetch request is defined, using a Discord Webhook URL as the `input` parameter of the constructor. The HTTP `method`, `headers`, and `body` data are specified in the [RequestOpts](https://developer.caido.io/reference/modules/caido/http#requestopts) object parameter.
+Then, using `new FetchRequest()` the fetch request is defined, using a Discord Webhook URL as the `input` parameter of the constructor. The HTTP `method`, `headers`, and `body` data are specified in the [RequestOpts](https://developer.caido.io/plugins/reference/modules/caido/http.html#requestopts) object parameter.
 
 ```js
   // Create a new request to Discord webhook.

@@ -1,6 +1,6 @@
 # Creating a Personal Access Token
 
-[PAT](/dashboard/concepts/pat) can be used as the authentication method for the [Caido Cloud API](https://developer.caido.io/reference/api.html).
+[PAT](/dashboard/concepts/pat) can be used as the authentication method for the [Caido Cloud API](https://developer.caido.io/client-sdk/reference/api.html).
 
 To create a new PAT, visit [https://dashboard.caido.io/developer](https://dashboard.caido.io/developer).
 

@@ -1,6 +1,6 @@
 # Personal Access Token
 
-Personal Access Tokens (PAT) are used to access the public [API of Caido Cloud](https://developer.caido.io/reference/api.html).
+Personal Access Tokens (PAT) are used to access the public [API of Caido Cloud](https://developer.caido.io/client-sdk/reference/api.html).
 For example, they can be used to invite new members to a Team or approve an headless login to a Caido instance.
 
 You can easily recognize a Caido PAT as they start with `caido_`.

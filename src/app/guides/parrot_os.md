@@ -20,7 +20,7 @@ Caido now comes pre-installed in:
 
 - [ParrotOS Security](https://parrotsec.org/download/)
 - [ParrotOS WSL](https://parrotsec.org/docs/installation/install-with-wsl/)
-- [ParrotOS Docker](https://parrot.run/)
+- [ParrotOS Docker](https://hub.docker.com/r/parrotsec/security)
 
 ::: info
 Caido can also be ran as a Docker container inside ParrotOS, with [Rocket](https://gitlab.com/parrotsec/project/rocket)!
