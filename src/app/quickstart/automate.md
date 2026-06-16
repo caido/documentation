@@ -22,6 +22,7 @@ The `Automate` interface gives you the ability to send requests programatically.
 - [Sending Multiple Payloads](/app/guides/automate_multiple.md)
 - [Preprocessing Payloads](/app/guides/automate_preprocessors.md)
 - [Avoiding Rate-Limiting Protections](/app/guides/automate_rate_limiting.md)
+- [Customizing Result Columns with Extractors](/app/guides/automate_extractors.md)
 :::
 
 <LabContainer :labs="[{name: 'IDOR Vulnerability Lab', url: 'https://labs.cai.do/idor.php'}, {name: 'Hidden Dashboard Lab', url: 'https://labs.cai.do/hiddenDashboard.php'}]" />

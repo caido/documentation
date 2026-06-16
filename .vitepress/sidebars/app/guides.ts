@@ -300,6 +300,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Avoiding Rate-Limiting Protections",
         link: "/app/guides/automate_rate_limiting",
       },
+      {
+        text: "Customizing Result Columns with Extractors",
+        link: "/app/guides/automate_extractors",
+      },
     ],
   },
   {
