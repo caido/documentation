@@ -12,7 +12,7 @@ All Caido PATs use the `caido_` prefix, making them easy to identify and manage 
 Each PAT is tied to the user who created it and acts with the same level of permissions as that user.
 :::
 
-## How it works
+## How It Works
 
 When you log into a Caido instance through the browser or desktop application, a <a href="https://www.rfc-editor.org/rfc/rfc8628.html" target="_blank">Device Authorization</a> flow takes place. You are redirected to the [Dashboard](https://dashboard.caido.io) to manually approve a consent form. A PAT replaces that manual approval step, making the entire authentication process automated.
 
@@ -26,7 +26,7 @@ When you log into a Caido instance through the browser or desktop application, a
 
 From this point forward, the session behaves identically to a browser-based login. The access token authenticates subsequent API calls and the refresh token is used to renew it when it expires.
 
-## Resource ownership
+## Resource Ownership
 
 A PAT can be created to access resources under your own account or under a specific Team. When you [create a PAT](/dashboard/guides/create_pat) for a Team, it operates within that Team's [Workspace](/dashboard/concepts/workspace) and can access the Team's instances, members, and subscription resources. A PAT created for yourself can only access your personal resources.
 
@@ -34,7 +34,7 @@ A PAT can be created to access resources under your own account or under a speci
 Team admins can view PATs created for their Team, but only the creator of a PAT can revoke it.
 :::
 
-## Security considerations
+## Security Considerations
 
 - **Always set an expiration date** when [creating a PAT](/dashboard/guides/create_pat). Open-ended tokens increase your risk exposure if they are leaked.
 - **Treat PATs like passwords.** Store them in environment variables or a secret management system. Never commit them to source code.

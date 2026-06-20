@@ -8,7 +8,7 @@ Burp Suite Pro browser integration, transport, and setup features and their Caid
 
 ## Available
 
-### Testing mobile applications
+### Testing Mobile Applications
 
 Burp proxies traffic from iOS and Android devices through the intercepting proxy.
 
@@ -21,7 +21,7 @@ Caido supports proxying mobile device traffic the same way as Burp: install Caid
 - [Importing CA Certificates](/app/guides/ca_certificate_importing.md)
 - [Android Introduction Tutorial](/app/tutorials/android_introduction.md)
 
-### External browser configuration
+### External Browser Configuration
 
 Burp lets you use a system browser other than its embedded browser with the proxy.
 
@@ -33,7 +33,7 @@ Caido supports using a **preconfigured browser** or manually set any browser's p
 - [FoxyProxy Guide](/app/guides/foxyproxy.md)
 - [ZeroOmega Guide](/app/guides/zeroomega.md)
 
-### Invisible proxying
+### Invisible Proxying
 
 Burp forwards non-proxy-aware clients through the proxy without explicit proxy configuration.
 
@@ -44,7 +44,7 @@ Caido offers an **Invisible Proxy** setup to intercept traffic from clients that
 - [Invisible Proxy Tutorial](/app/tutorials/invisible_proxy.md)
 - [Invisible Proxying Guide](/app/guides/invisible_proxying.md)
 
-### Managing CA certificates
+### Managing CA Certificates
 
 Burp lets you install and manage its CA certificate for intercepting HTTPS traffic.
 
@@ -58,7 +58,7 @@ Caido lets you export and install its CA certificate from **Settings → Network
 
 ## Indirectly Available
 
-### Burp's browser
+### Burp's Browser
 
 Burp ships a Chromium-based browser preconfigured to proxy through Burp with DOM Invader integration.
 

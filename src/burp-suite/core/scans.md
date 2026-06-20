@@ -19,7 +19,7 @@ Caido offers the community **Scanner** plugin for automated vulnerability scanni
 - [Scanner](https://github.com/caido-community/scanner) (GitHub)
 - [Scanner Tutorial](/app/tutorials/scanner.md)
 
-### Configuring scans
+### Configuring Scans
 
 Burp lets you adjust scan speed, insertion points, and audit checks for Scanner.
 
@@ -30,7 +30,7 @@ Caido lets you configure scan behavior through the **Scanner** plugin's custom c
 - [Scanner: Custom Checks](https://github.com/caido-community/scanner#check-definition) (GitHub)
 - [Workflows](/app/quickstart/workflows.md)
 
-### Running scans
+### Running Scans
 
 Burp launches full crawl-and-audit or targeted scans against web applications.
 
@@ -42,7 +42,7 @@ Caido supports running active scans with the **Scanner** plugin and targeted fuz
 - [Automate](/app/quickstart/automate.md)
 - [Scanner Tutorial](/app/tutorials/scanner.md)
 
-### Scanning specific HTTP messages
+### Scanning Specific HTTP Messages
 
 Burp runs an audit against selected requests rather than an entire site.
 
@@ -54,7 +54,7 @@ Caido lets you send selected requests from **HTTP History** to the **Scanner** p
 - [Scanner](https://github.com/caido-community/scanner) (GitHub)
 - [Automate](/app/quickstart/automate.md)
 
-### Viewing scan results
+### Viewing Scan Results
 
 Burp lets you review discovered issues, audit items, and event logs from scans.
 
@@ -67,7 +67,7 @@ Caido lets you review results in native **Findings** and the **Scanner** plugin'
 
 ## Indirectly Available
 
-### Live tasks
+### Live Tasks
 
 Burp runs continuous background crawling and auditing of in-scope traffic as you browse.
 
@@ -79,7 +79,7 @@ Caido offers native **Passive Workflows** for real-time traffic analysis as you 
 - [Workflows](/app/quickstart/workflows.md)
 - [Scanner](https://github.com/caido-community/scanner) (GitHub)
 
-### Application logins
+### Application Logins
 
 Burp lets you provide credentials or recorded login sequences so Scanner can test authenticated areas.
 
@@ -95,7 +95,7 @@ Caido lets you store credentials in native **Environment Variables**, record log
 
 ## Not Available
 
-### Resource pools
+### Resource Pools
 
 Burp limits concurrent scan threads to control resource usage during scans.
 

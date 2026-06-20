@@ -8,7 +8,7 @@ Burp Suite Pro AI features and their Caido equivalents.
 
 ## Available
 
-### Generating AI-powered explanations
+### Generating AI-Powered Explanations
 
 Burp can generate natural-language explanations of HTTP requests and responses from Repeater.
 
@@ -46,7 +46,7 @@ Caido does not ship a single bundled AI product like Burp AI. Use **Shift** (inc
 - [Shift Tutorial](/app/tutorials/shift.md)
 - [Chatio](https://github.com/caido-community/Chatio) (GitHub)
 
-### Automating tasks with custom actions
+### Automating Tasks with Custom Actions
 
 Burp AI custom actions automate repetitive Repeater tasks with prompts and predefined workflows.
 
@@ -61,7 +61,7 @@ Caido offers **Shift Agents** to assign autonomous background tasks to a model, 
 
 ## Not Available
 
-### AI credits
+### AI Credits
 
 Burp tracks AI usage through a credits system tied to your PortSwigger subscription.
 

@@ -33,6 +33,10 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
         text: "Authentication",
         link: "/app/concepts/instance_authentication",
       },
+      {
+        text: "Collaboration",
+        link: "/app/concepts/collaboration",
+      },
     ],
   },
   {

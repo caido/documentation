@@ -34,7 +34,7 @@ The data collected as you use Caido (_IP address and API call actions/timestamps
 
 We also have opt-out analytics for UI interactions performed within the application. We NEVER collect project data, HTTP requests, payloads, etc.
 
-## Endpoints used
+## Endpoints Used
 
 If you need to whitelist endpoints, here are all the endpoints we use:
 
