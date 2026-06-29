@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 
 ```
 
-Once a minute has passed, a **401 Unauthorized** response is returned instead of user data with a body notifying the `accessToken` has expired:
+Once three minutes have passed, a **401 Unauthorized** response is returned instead of user data with a body notifying the `accessToken` has expired:
 
 ```http
 {
