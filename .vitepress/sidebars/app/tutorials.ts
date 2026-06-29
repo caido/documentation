@@ -120,6 +120,12 @@ export const tutorialsSidebar: DefaultTheme.SidebarItem[] = [
       {
         text: "Autorize",
         link: "/app/tutorials/autorize",
+        items: [
+          {
+            text: "Session Management",
+            link: "/app/tutorials/autorize_sessions",
+          },
+        ],
       },
       {
         text: "Drop",
