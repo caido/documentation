@@ -8,7 +8,7 @@ Although the API is authenticated, the proxy traffic is currently unprotected. W
 
 Authentication in Caido is based on [OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749) protocol.
 
-## User authentication
+## User Authentication
 
 Like we mentioned in [instance registration](./instance_registration.md), each Caido instance registers itself with our Cloud as an `OAuth 2.0 client`.
 
@@ -26,7 +26,7 @@ We do not make any guarantees on the lifetime of the tokens.
 Currently the access token is valid for 7 days and the refresh token is valid for 3 months.
 :::
 
-## Instance authentication
+## Instance Authentication
 
 Under the cover, the instance will also perform a <a href="https://www.rfc-editor.org/rfc/rfc6749#section-1.3.4" target="_blank">Client Credentials</a> flow to have a token to identify itself with the cloud.
 This allows the instance to retrieve metadata like the [Workspace](/dashboard/concepts/workspace) in which it lives.

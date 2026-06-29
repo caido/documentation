@@ -5,7 +5,7 @@ At this stage the instance is considered "unclaimed", meaning that **anybody** w
 
 You can **only** log into an instance if it has been claimed.
 
-## Human claim
+## Human Claim
 
 On initial the login, if it the instance is "unclaimed", you can claim it.
 This is the same idea if you [reset the credentials](/app/troubleshooting/authentication.html#reset-the-instance-credentials) of your instance.
@@ -42,7 +42,7 @@ For Teams, you can also automatically claim new instances using [Registration Ke
 
 This ensures that all the instances are safe even if no human is involved in the deployment.
 
-Currently you need to use the [caido cli](./cli_vs_desktop.md) to pass the Registration Key to the instance.
+Currently you need to use the [Caido CLI](./cli_vs_desktop.md) to pass the Registration Key to the instance.
 You can use either the `--registration-key` flag or the environment variable `CAIDO_REGISTRATION_KEY`.
 
 The flow usually looks like:

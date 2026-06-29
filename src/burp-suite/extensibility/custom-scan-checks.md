@@ -12,7 +12,7 @@ Several BApp Store extensions also add scan checks — for example, Active Scan+
 
 ## Available
 
-### Custom scan checks
+### Custom Scan Checks
 
 Burp lets you define passive and active scan rules in BCheck format or via the custom scan checks API.
 

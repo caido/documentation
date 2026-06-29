@@ -20,12 +20,6 @@ Please note that these videos are not endorsed by Caido.
 <div class="videos">
     <div class="video">
         <iframe width="585" height="315" src="https://www.youtube.com/embed/nZDwUwIPJ6M" title="YouTube video player" frameborder="0"></iframe>
-        <br>
-        <div class="caption" style="color:#ffffff">
-            Try Hack Me Tutorial: OWASP Top 10
-            <br>
-            By: <a href="https://hacksmarter.live/">Tyler Ramsbey</a>
-        </div>
     </div>
     <div class="video">
         <iframe width="585" height="315" src="https://www.youtube.com/embed/lW-u_2EByT4" title="YouTube video player" frameborder="0"></iframe>
@@ -38,12 +32,6 @@ Please note that these videos are not endorsed by Caido.
     </div>
     <div class="video">
         <iframe width="585" height="315" src="https://www.youtube.com/embed/u8bQPtLNPpk" title="YouTube video player" frameborder="0"></iframe>
-        <br>
-        <div class="caption" style="color:#ffffff">
-            Hack The Box Tutorial: Intranet
-            <br>
-            By: <a href="https://hacksmarter.live/">Tyler Ramsbey</a>
-        </div>
     </div>
     <div class="video">
         <iframe width="585" height="315" src="https://www.youtube.com/embed/d9EFV5zdkQY" title="YouTube video player" frameborder="0"></iframe>

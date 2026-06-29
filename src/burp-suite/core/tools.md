@@ -8,7 +8,7 @@ Burp Suite Pro tools — Proxy, Repeater, Intruder, utilities, and related featu
 
 ## Available
 
-### Command palette
+### Command Palette
 
 Burp provides a quick-access launcher for tools, settings, and actions via the keyboard.
 
@@ -30,7 +30,7 @@ Caido offers native **Search** with **HTTPQL** to query captured traffic across 
 - [HTTPQL](/app/reference/httpql.md)
 - [Search Filtering](/app/guides/search_filtering.md)
 
-### Context menu
+### Context Menu
 
 Burp offers right-click actions on requests, responses, and site map entries.
 
@@ -40,7 +40,7 @@ Caido provides native context menu actions on requests and responses in HTTP His
 
 - [Context Menu Options](/app/reference/context_menu.md)
 
-### Filter settings
+### Filter Settings
 
 Burp applies shared filter configuration across its tables and views.
 
@@ -64,7 +64,7 @@ Caido offers native **Intercept** and **HTTP History** to handle proxied traffic
 - [HTTP History](/app/quickstart/http_history.md)
 - [Intercepting Traffic](/app/guides/intercept_traffic.md)
 
-### Proxy intercept
+### Proxy Intercept
 
 Burp lets you pause, inspect, and modify individual requests and responses in flight.
 
@@ -75,7 +75,7 @@ Caido offers native **Intercept** to pause, inspect, and forward or drop individ
 - [Intercept](/app/quickstart/intercept.md)
 - [Intercepting Traffic](/app/guides/intercept_traffic.md)
 
-### HTTP history
+### HTTP History
 
 Burp maintains a persistent log of all proxied HTTP traffic with filtering and search.
 
@@ -86,7 +86,7 @@ Caido offers native **HTTP History** as the persistent traffic log. It supports 
 - [HTTP History](/app/quickstart/http_history.md)
 - [Filtering HTTP History](/app/guides/http_history_filtering.md)
 
-### WebSockets history
+### WebSockets History
 
 Burp captures and inspects WebSocket messages proxied through the proxy.
 
@@ -96,7 +96,7 @@ Caido offers native **WS History** to capture WebSocket frames proxied through t
 
 - [WS History](/app/quickstart/ws_history.md)
 
-### Match and replace
+### Match and Replace
 
 Burp automatically modifies requests or responses matching defined rules as they pass through the proxy.
 
@@ -143,7 +143,7 @@ Caido does not have a separate Inspector panel. Request and response components 
 - [Replay](/app/quickstart/replay.md)
 - [HTTP History](/app/quickstart/http_history.md)
 
-### Message editor
+### Message Editor
 
 Burp lets you edit HTTP messages in raw and parsed form across its tools.
 
@@ -224,7 +224,7 @@ Caido offers native **Findings** to track notable requests and issues. Findings 
 
 - [Findings](/app/quickstart/findings.md)
 
-### Content discovery
+### Content Discovery
 
 Burp brute-forces hidden directories and files on a web server.
 
@@ -260,7 +260,7 @@ Caido does not have a single dashboard tab. Instead, traffic-centric views like 
 - [Scanner](https://github.com/caido-community/scanner) (GitHub)
 - [Autorize](https://github.com/caido-community/autorize) (GitHub)
 
-### Customizing Burp's layout
+### Customizing Burp's Layout
 
 Burp lets you rearrange tabs, split panes, and customize the UI layout.
 
@@ -270,7 +270,7 @@ Caido has a fixed application layout and does not support Burp-style tab rearran
 
 - [Creating a Page](https://developer.caido.io/guides/page.html) (developer docs)
 
-### Engagement tools
+### Engagement Tools
 
 Burp bundles a suite of utilities for target analysis, content discovery, and PoC generation.
 
@@ -284,7 +284,7 @@ Caido does not bundle engagement utilities into a single tool suite. Equivalent 
 - [CSRF PoC Generator](https://github.com/BugBountyzip/CaidoCSRF) (GitHub)
 - [Crawler](https://github.com/caido-community/crawler) (GitHub)
 
-### Target analyzer
+### Target Analyzer
 
 Target analyzer summarizes a target's technology stack, content types, and dynamic URLs.
 
@@ -297,7 +297,7 @@ Caido has no dedicated target analyzer. Caido lets you review technology hints i
 - [JS Analyzer](https://github.com/caido-community/JS-Analyzer) (GitHub)
 - [RetireJS Scanner](https://github.com/bensh/caido-retirejs) (GitHub)
 
-### Manual testing simulator
+### Manual Testing Simulator
 
 The manual testing simulator simulates user interactions for manual testing scenarios.
 

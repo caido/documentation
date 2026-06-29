@@ -8,7 +8,7 @@ Burp Suite Pro reporting and export features and their Caido equivalents.
 
 ## Indirectly Available
 
-### Generating a report
+### Generating a Report
 
 Burp exports scan results and findings as formatted HTML or XML reports.
 
