@@ -12,6 +12,10 @@ To include or exclude traffic table columns, **click** on the <code><Icon icon="
 
 <img alt="Column inclusion/exclusion options menu." src="/_images/http_history_table.png" center>
 
+::: warning NOTE
+Certain columns support [sorting traffic table rows](/app/guides/sorting.md), while others do not. For example, the `Path & Query` column does not support sorting but the individual `Path` and `Query` columns do.
+:::
+
 Additional filtering options are accessible by **clicking** the `Advanced` button, located above the traffic table.
 
 <img alt="Additional filtering options menu." src="/_images/http_history_advanced_options.png" center>
