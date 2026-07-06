@@ -8,7 +8,7 @@ Burp Suite Pro project files, session handling, and configuration features and t
 
 ## Available
 
-### Project files
+### Project Files
 
 Burp saves and restores project state including traffic, site map, and configuration.
 
@@ -23,7 +23,7 @@ Caido offers native **Workspaces** to manage projects and persist traffic, scope
 
 ## Indirectly Available
 
-### Session handling rules
+### Session Handling Rules
 
 Burp automatically modifies requests based on session state using macros and rules.
 
@@ -49,7 +49,7 @@ Caido offers **Workflows** as the equivalent for defining sequences of actionsâ€
 - [Creating Workflows](/app/guides/workflows_creating.md)
 - [Refresh Authentication Tutorial](/app/tutorials/refresh_authentication.md)
 
-### Configuration library
+### Configuration Library
 
 Burp exports specific settings as shareable configuration files and saves configuration profiles for reuse across projects.
 

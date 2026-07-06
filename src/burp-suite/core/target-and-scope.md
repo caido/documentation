@@ -20,7 +20,7 @@ Caido splits target management across native **Sitemap**, **Scopes**, and **Find
 - [Scopes](/app/quickstart/scopes.md)
 - [Findings](/app/quickstart/findings.md)
 
-### Site map
+### Sitemap
 
 Burp displays a tree view of discovered hosts, directories, and endpoints.
 
@@ -44,7 +44,7 @@ Caido offers native **Scopes** to define in-scope hosts. Scoped traffic can be h
 - [Defining Scopes](/app/guides/scopes_defining.md)
 - [Applying Scopes](/app/guides/scopes_applying.md)
 
-### Issue definitions
+### Issue Definitions
 
 Burp lets you customize how Scanner reports and categorizes issue types.
 
@@ -56,7 +56,7 @@ Caido lets you define custom finding types through the **Scanner** plugin's cust
 
 ## Indirectly Available
 
-### Crawl paths
+### Crawl Paths
 
 Burp visualizes how its crawler reached specific endpoints.
 

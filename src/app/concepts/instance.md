@@ -4,7 +4,7 @@ description: "Understand the core concepts behind Caido instances - the client/s
 
 # Instance
 
-An Instance of Caido is effectively a directory on disk that contains the settings, projects, secrets, plugins, etc. that are created by Caido at runtime.
+An **instance** of Caido is effectively a directory on disk that contains the settings, projects, secrets, plugins, etc. that are created by Caido at runtime.
 
 This abstraction allows you to manage multiple, separate instances of Caido on a single device.
 
@@ -12,7 +12,7 @@ This abstraction allows you to manage multiple, separate instances of Caido on a
 
 ### Local Instances
 
-A local instance runs on the same computer as you. Effectively, we will manage the [caido cli](./cli_vs_desktop.md) for you in the background.
+A local instance runs on the same computer as you. Effectively, we will manage the [Caido CLI](./cli_vs_desktop.md) for you in the background.
 
 Additional local instances can be created using either the standalone Caido CLI or desktop application by [changing the data storage location](/app/guides/data_location.md).
 

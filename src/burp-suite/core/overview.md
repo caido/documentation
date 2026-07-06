@@ -6,14 +6,14 @@ description: "Map Burp Suite Pro built-in features to Caido."
 
 This section maps **Burp Suite Pro** built-in tools and product features to Caido.
 
-## How to use this section
+## How to Use This Section
 
-1. **Search by Burp name** — Use the site search or your browser's find-in-page for the Burp feature you used (for example, `Intruder`, `HTTP history`, or `Collaborator`).
+1. **Search by Burp feature name** — Use the site search or your browser's find-in-page for the Burp feature you used (for example, `Intruder`, `HTTP history`, or `Collaborator`).
 2. **Open the matching page** — Pick the page that best fits what you used in Burp. New to Caido? Start with [Browser & Setup](/burp-suite/core/browser-and-setup), then [Tools](/burp-suite/core/tools).
 3. **Read the mapping** — Entries are grouped under **Available**, **Indirectly Available**, and **Not Available**. Each entry explains the Caido equivalent, how it differs from Burp, and links under **Resources**.
 
 ::: tip New to Caido?
-After finding your equivalents, continue with the [Application quickstart](/app/quickstart/).
+After finding your equivalents, continue with the [application quickstart](/app/quickstart/).
 :::
 
 ## Pages
