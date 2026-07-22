@@ -36,7 +36,7 @@ The `preset` namespace does not have any fields available and instead takes a di
 | Available Fields | Description | Value Type |
 |------------------|-------------|------------|
 | `created_at` | The date and time the message was sent. | Date/Time: [RFC3339](https://datatracker.ietf.org/doc/html/rfc3339) (`2024-06-24T17:03:48+00:00`) / [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#appendix-A) (`2024-06-24T17:03:48+0000`) / [RFC2822](https://datatracker.ietf.org/doc/html/rfc2822) (`Mon, 24 Jun 2024 17:03:48 +0000`) / [RFC7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.2) (`Mon, 24 Jun 2024 17:03:48 GMT`) / [ISO9075](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format) (`2024-06-24T17:03:48Z`) |
-| `direction` | The direction of the message. | String/Byte: `To Server`/`To Client` |
+| `direction` | The direction of the message. | String/Byte: `server`/`client` |
 | `format` | The message type. | String/Byte: `Binary`, `Text`, `Close`, `Ping`, `Pong` |
 | `len` | The message size in bytes. | Integer |
 | `raw` | The full raw data of the message. | String/Byte |
