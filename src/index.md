@@ -16,7 +16,7 @@ hero:
       link: /app/quickstart/
     - theme: alt
       text: Dashboard 
-      link: /dashboard/
+      link: /dashboard/quickstart/
     - theme: alt
       text: Migrating from Burp Suite
       link: /burp-suite/core/overview
