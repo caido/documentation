@@ -109,3 +109,9 @@ Additional commands may be available depending on the Plugins you have installed
 |-------------------|----------------------------|--------------------|------------------|
 | Select Next Row   | Move downward through table rows. | `DOWN ARROW`       | `DOWN ARROW`     |
 | Select Previous Row | Move upward through table rows. | `UP ARROW`         | `UP ARROW`       |
+
+## HTTP History
+
+| Command | Description | Default Keybinding | macOS Keybinding |
+|---------|-------------|--------------------|------------------|
+| Delete selected | Delete selected requests | `⌫` | `⌫` |
