@@ -20,7 +20,7 @@ To view the content of a specific Fully Qualified Domain Name (FQDN), continue r
 <img alt="Expanding the leaf nodes of a Fully Qualified Domain Name's (FQDN) Sitemap." src="/_images/sitemap_leaves.png" center>
 
 ::: tip
-You can fully expand a Sitemap element by holding `Shift` and clicking and on the <code><Icon icon="fas fa-chevron-right" /></code> button.
+You can fully expand a Sitemap element by holding `Shift` and clicking on the <code><Icon icon="fas fa-chevron-right" /></code> button.
 :::
 
 **Clicking** on a node will reveal its associated requests in the traffic table. Select a request row to view the request and its corresponding response.
