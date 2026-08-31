@@ -112,6 +112,6 @@ Additional commands may be available depending on the Plugins you have installed
 
 ## HTTP History
 
-| Command | Description | Default Keybinding | macOS Keybinding |
-|---------|-------------|--------------------|------------------|
-| Delete selected | Delete selected requests | `⌫` | `⌫` |
+| Command           | Description                | Default Keybinding | macOS Keybinding |
+|-------------------|----------------------------|--------------------|------------------|
+| Delete selected | Delete selected requests | `DELETE` | `DELETE` |
