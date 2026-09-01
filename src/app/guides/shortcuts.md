@@ -21,3 +21,11 @@ To set or change a shortcut keybinding, **click** on the command row from the ta
 ## Remove a Shortcut
 
 To remove a shortcut keybinding, **click** on the command row from the table and **click** the `Unset` button.
+
+## Assign the same shortcut to multiple commands
+
+You can assign the same keyboard shortcut to multiple commands. For example, you can use the same shortcut for Send to Replay and Go to Replay.
+
+Some commands cannot share shortcuts. When a conflict occurs, Caido displays a warning showing the commands using the shortcut and which command takes precedence.
+
+<img alt="Assign same command to multiple shortcuts" src="/_images/shortcuts_same_command.png" center/>
