@@ -49,6 +49,7 @@ The `preset` and `source` namespaces do not have any fields available and instea
 | `ext` | The extension of the requested file. | String/Byte |
 | `host` | The value of the request's `Host` header. | String/Byte |
 | `len` | The request size in bytes (includes request line, headers, and body data). | Integer |
+| `body` | The body of the request. | String/Byte |
 | `method` | The HTTP method used for the request. | String/Byte |
 | `path` | The URL path (includes files). | String/Byte |
 | `port` | The port of the target server. | Integer |
@@ -62,6 +63,7 @@ The `preset` and `source` namespaces do not have any fields available and instea
 |------------------|-------------|------------|
 | `code` | The status code of the reponse. | Integer |
 | `len` | The response size in bytes (includes response line, headers, and body data). | Integer |
+| `body` | The body of the response. | String/Byte |
 | `raw` | The full raw data of the response (includes response line, headers, and body data). | String/Byte |
 | `roundtrip` | The total request/response cycle time (in milliseconds). | Integer |
 
