@@ -6,6 +6,23 @@ description: "A step-by-step guide to customizing Caido's user interface includi
 
 Caido offers a high-degree of customization, so you can adjust the user-interface to suit your preferences and needs.
 
+## Customize the Sidebar
+
+You can customize the Sidebar  to organize pages and plugins according to your preferences by selecting **Customize** at the bottom.
+
+The following options are available:
+
+- Drag pages and plugins to reorder them
+- Pin frequently used tools.
+- Hide items or entire categories.
+- Create categories with `New Category`.
+
+Once you're satisfied with the layout, click `Save` to apply it.
+
+To restore to the default layout, click `↶`.
+
+<img alt="Customize the Sidebar" src="/_images/general_usage_customize_sidebar.png" center>
+
 ## Resizing Panes
 
 To customize the layout of an interface, hover your mouse cursor between two panes until it is replaced with the grip icon <code><Icon icon="fas fa-arrow-left" /><Icon icon="fas fa-grip-lines-vertical" /><Icon icon="fas fa-arrow-right" /></code> or its vertical equivalent. Then, **left-click**, **hold**, and **drag** the gutter to resize a pane according to your preferences.
