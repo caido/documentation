@@ -23,3 +23,11 @@ To install a plugin, either:
 <div class="video small">
   <iframe src="https://www.youtube.com/embed/lO-WB_cXPfk?si=kou_6r8GDF1yl5Jm" title="YouTube video player." frameborder="0"></iframe>
 </div>
+
+## Browse Plugins
+
+The Plugins page makes it easy to discover and compare plugins before installing them.
+
+Plugins maintained by Caido are marked with an Official badge. Each row shows the quality rating, author, number of downloads, and version. You can also filter plugins by **Official** or **Community**. Select multiple plugins to install or update them at once.
+
+<img alt="Setting a shortcut." src="/_images/plugins_interface.png" center/>
