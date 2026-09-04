@@ -53,6 +53,8 @@ The `preset` and `source` namespaces do not have any fields available and instea
 | `method` | The HTTP method used for the request. | String/Byte |
 | `path` | The URL path (includes files). | String/Byte |
 | `port` | The port of the target server. | Integer |
+| `header` | The headers of the request. You can filter by header name or value. | String/Byte |
+| `header["name"]` | The value of a specific request header, where `name` is the header name. | String/Byte |
 | `query` | The URL query string (excludes the leading `?`). | String/Byte |
 | `raw` | The full raw data of the request (includes request line, headers, and body data). | String/Byte |
 | `tls` | If the connection used TLS/SSL encryption. | Boolean (`true`/`false`) |
@@ -64,6 +66,8 @@ The `preset` and `source` namespaces do not have any fields available and instea
 | `code` | The status code of the response. | Integer |
 | `len` | The response size in bytes (includes response line, headers, and body data). | Integer |
 | `body` | The body of the response, excluding headers. | String/Byte |
+| `header` | The headers of the response. You can filter by header name or value. | String/Byte |
+| `header["name"]` | The value of a specific response header, where `name` is the header name. | String/Byte |
 | `raw` | The full raw data of the response (includes response line, headers, and body data). | String/Byte |
 | `roundtrip` | The total request/response cycle time (in milliseconds). | Integer |
 
