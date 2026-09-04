@@ -8,20 +8,20 @@ Caido offers a high-degree of customization, so you can adjust the user-interfac
 
 ## Customize the Sidebar
 
-You can customize the Sidebar  to organize pages and plugins according to your preferences by selecting **Customize** at the bottom.
+You can customize the Sidebar to organize pages and plugins according to your preferences by selecting **Customize** at the bottom.
 
 The following options are available:
 
 - Drag pages and plugins to reorder them
-- Pin frequently used tools.
-- Hide items or entire categories.
-- Create categories with `New Category`.
+- Pin frequently used tools
+- Hide items or entire categories
+- Create categories with `New Category`
 
 Once you're satisfied with the layout, click `Save` to apply it.
 
-To restore to the default layout, click `↶`.
+To restore the default layout, click `↶`.
 
-<img alt="Customize the Sidebar" src="/_images/general_usage_customize_sidebar.png" center>
+<img alt="Customize the Sidebar." src="/_images/general_usage_customize_sidebar.png" center>
 
 ## Resizing Panes
 
