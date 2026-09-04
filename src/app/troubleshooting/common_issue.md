@@ -2,11 +2,13 @@
 description: "Troubleshooting common issues in Caido."
 ---
 
-# Common Issue
+# Common Issues
 
 ## Caido is running slow
 
-This can occur for several reasons, but the most common cause is having the `Leakz` plugin installed. Uninstalling the plugin resolves the issue.
+This can occur for several reasons, but the most common cause is having the `Leakz` plugin installed.
+
+ <code><Icon icon="fas fa-screwdriver-wrench" /></code> Uninstall the `Leakz` plugin to resolve the issue.
 
 ## Dashboard Pricing page isn't loading
 
