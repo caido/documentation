@@ -19,6 +19,7 @@ The `Replay` interface gives you the ability to create, modify, and send individ
 - [Resending Requests](/app/guides/replay_resending.md)
 - [Using Workflows in Replay](/app/guides/replay_workflows.md)
 - [Using Environment Variables in Replay](/app/guides/replay_environment_variables.md)
+- [Using Replay Pipelines](/app/guides/replay_test_race_conditions.md)
 :::
 
 <LabContainer :labs="[{name: 'CSRF via Content-Type Lab', url: 'https://labs.caido.io/hubs/csrf-via-content-type'}, {name: 'Reflected XSS Lab', url: 'https://labs.caido.io/hubs/reflected-xss'}, {name: 'SQL Injection Lab', url: 'https://labs.caido.io/hubs/sql-injection'}]" />
