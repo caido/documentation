@@ -276,6 +276,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/guides/replay_environment_variables",
       },
       {
+        text: "Using Replay Pipelines",
+        link: "/app/guides/replay_test_race_conditions",
+      },
+      {
         text: "Sending WebSocket Messages",
         link: "/app/guides/replay_websocket",
       },
