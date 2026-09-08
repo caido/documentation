@@ -28,6 +28,10 @@ export const troubleshootingSidebar: DefaultTheme.SidebarItem[] = [
         text: "In-app Issues",
         link: "/app/troubleshooting/in_app",
       },
+      {
+        text: "Common Issues",
+        link: "/app/troubleshooting/common_issue",
+      },
     ],
   },
   {
