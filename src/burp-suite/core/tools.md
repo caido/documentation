@@ -124,7 +124,7 @@ Caido offers native **Replay** to edit and resend individual requests. Replay is
 
 Burp lets you group multiple requests and send them sequentially or in parallel for race condition testing.
 
-Caido offers native **Replay Pipelines** to group multiple requests into a single run. Pipelines support **Sequential** execution and **Last Byte Synchronization** for race condition testing.
+Caido offers native **Replay Pipelines** to group multiple requests into a single run. Pipelines support **Sequential** execution, **Single Packet Attack** and **Last Byte Synchronization** for race condition testing.
 
 #### Resources
 
