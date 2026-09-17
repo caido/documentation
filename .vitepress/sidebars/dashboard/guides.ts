@@ -52,6 +52,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Obtaining Receipts",
         link: "/dashboard/guides/receipts",
       },
+      {
+        text: "Updating Billing and Invoice Information",
+        link: "/dashboard/guides/business_details_invoice",
+      },
     ],
   },
 ];
