@@ -120,6 +120,16 @@ Caido offers native **Replay** to edit and resend individual requests. Replay is
 - [Resending Requests](/app/guides/replay_resending.md)
 - [Sending Requests to Replay](/app/guides/replay_requests.md)
 
+### Repeater Request Groups
+
+Burp lets you group multiple requests and send them sequentially or in parallel for race condition testing.
+
+Caido offers native **Replay Pipelines** to group multiple requests into a single run. Pipelines support **Sequential** execution, **Single Packet Attack** and **Last Byte Synchronization** for race condition testing.
+
+#### Resources
+
+- [**Using Replay Pipelines**](https://docs.caido.io/app/guides/replay_test_race_conditions.html)
+
 ### Intruder
 
 Burp performs automated payload injection for fuzzing, brute-forcing, and enumeration attacks.
