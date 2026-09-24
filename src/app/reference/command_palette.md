@@ -4,11 +4,13 @@ description: "Find detailed reference information on all Command Palette options
 
 # Command Palette Options
 
+This page documents the Command Palette options available in Caido.
+
 ## Editor
 
 | Option |
 |--------|
-| Focus HTTQL Search Bar. |
+| Focus HTTPQL Search Bar. |
 
 ## Misc
 
@@ -30,7 +32,7 @@ description: "Find detailed reference information on all Command Palette options
 | Go to Scope |
 | Go to Filters |
 | Go to Workflows |
-| Go to Match & Remplace |
+| Go to Match & Replace |
 | Go to Assistant |
 | Go to WS History |
 | Go to Exports |
