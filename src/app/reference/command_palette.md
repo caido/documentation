@@ -67,13 +67,4 @@ This page documents the Command Palette options available in Caido.
 | Toggle Logs Panel |
 | Toggle Convert Panel |
 
-## Convert Workflows
-
-| Option |
-|--------|
-| c Base64 Decode |
-| c Base64 Encode |
-| c URL Decode |
-| c URL Encode |
-
 
