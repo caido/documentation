@@ -6,65 +6,38 @@ description: "Find detailed reference information on all Command Palette options
 
 This page documents the Command Palette options available in Caido.
 
-## Editor
-
-| Option |
-|--------|
-| Focus HTTPQL Search Bar. |
-
-## Misc
-
-| Option |
-|--------|
-| Reopen Closed Tab |
-| Reload Window |
-
-## Navigation
-
-| Option |
-|--------|
-| Go to Intercept |
-| Go to HTTP History |
-| Go to Replay |
-| Go to Automate |
-| Go to Search |
-| Go to Sitemap |
-| Go to Scope |
-| Go to Filters |
-| Go to Workflows |
-| Go to Match & Replace |
-| Go to Assistant |
-| Go to WS History |
-| Go to Exports |
-| Go to Files |
-| Go to Workspace |
-| Go to Settings |
-| Go to Environment |
-| Go to Plugins : Installed |
-| Go to Plugins : Store |
-| Go to Findings |
-| Go to Certificate |
-| Go to About |
-| Go to Backups |
-| Go to Projects |
-
-## Request
-
-| Option |
-|--------|
-| Save to file |
-
-## Findings
-
-| Option |
-|--------|
-| Send to Findings |
-
-## Runtime
-
-| Option |
-|--------|
-| Toggle Logs Panel |
-| Toggle Convert Panel |
+| Category | Command |
+|----------|---------|
+| Editor | Focus HTTPQL Search Bar |
+| Misc | Reopen Closed Tab |
+| Misc | Reload Window |
+| Navigation | Go to Intercept |
+| Navigation | Go to HTTP History |
+| Navigation | Go to Replay |
+| Navigation | Go to Automate |
+| Navigation | Go to Search |
+| Navigation | Go to Sitemap |
+| Navigation | Go to Scope |
+| Navigation | Go to Filters |
+| Navigation | Go to Workflows |
+| Navigation | Go to Match & Replace |
+| Navigation | Go to Assistant |
+| Navigation | Go to WS History |
+| Navigation | Go to Exports |
+| Navigation | Go to Files |
+| Navigation | Go to Workspace |
+| Navigation | Go to Settings |
+| Navigation | Go to Environment |
+| Navigation | Go to Plugins : Installed |
+| Navigation | Go to Plugins : Store |
+| Navigation | Go to Findings |
+| Navigation | Go to Certificate |
+| Navigation | Go to About |
+| Navigation | Go to Backups |
+| Navigation | Go to Projects |
+| Request | Save to file |
+| Findings | Send to Findings |
+| Runtime | Toggle Logs Panel |
+| Runtime | Toggle Convert Panel |
 
 
