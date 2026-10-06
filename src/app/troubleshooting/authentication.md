@@ -81,3 +81,10 @@ sudo apt-get install ntp
 ::: tip
 
 Check the time synchronization status with `sudo systemctl status ntp`.
+:::
+
+## Invalid Scope error when using a PAT
+
+This can occur when authenticating with a Personal Access Token (PAT) if one of your teams has its AI policy disabled. Your PAT may be valid, but authentication fails because the client requests AI access.
+
+To resolve this issue ask a team admin to re-enable the team's AI policy.
