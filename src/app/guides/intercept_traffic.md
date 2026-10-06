@@ -48,6 +48,13 @@ To make modifications to an intercepted HTTP request, HTTP response, or Websocke
 Any forwarded traffic that was modified from its original state will be marked as `Edited` within the `State` column of traffic tables. Both states can be viewed for comparison.
 :::
 
+::: info Proxy timeouts
+When forwarding HTTP requests to a server, Caido uses the following timeouts:
+- **Connection**: 10 seconds to establish the TCP connection.
+- **Response**: 30 seconds to receive the first byte from the server.
+- **Partial response**: 5 seconds to receive additional data while the response is incomplete.
+:::
+
 ## Dropping Intercepted Traffic
 
 **Clicking** on the `Drop` button will stop the traffic from being sent to its target recipient.
