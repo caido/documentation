@@ -1,5 +1,5 @@
 ---
-description: "A guide on using the Command Palete in Caido."
+description: "A guide on using the Command Palette in Caido."
 ---
 
 # Using the Command Palette
@@ -15,7 +15,7 @@ Press `Ctrl` + `K` on Windows/Linux or `⌘` + `K` on macOS to open the Command 
 1. Type the name of the command you want to run in the search field. For example, type `Replay` to find `Go to Replay`.
 2. Click on the command to run it.
 
-<img alt="Font size settings." src="/_images/general_usage_command_palette.png" center>
+<img alt="Command Palette search results for Replay" src="/_images/general_usage_command_palette.png" center>
 
 For a list of available commands, view [Command Palette Options](/app/reference/command_palette).
 
