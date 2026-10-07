@@ -133,6 +133,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/guides/navigation",
       },
       {
+        text: "Using the Command Palette",
+        link: "/app/guides/command_palette_guide",
+      },
+      {
         text: "Customizing the User Interface",
         link: "/app/guides/ui",
       },
