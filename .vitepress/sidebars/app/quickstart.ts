@@ -33,6 +33,10 @@ export const quickstartSidebar: DefaultTheme.SidebarItem[] = [
         text: "Features Overview",
         items: [
           {
+            text: "Command Palette",
+            link: "/app/quickstart/command_palette",
+          },
+          {
             text: "Sitemap",
             link: "/app/quickstart/sitemap",
           },
