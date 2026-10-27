@@ -95,6 +95,14 @@ export default defineConfig({
           activeMatch: "^/faq(/|$)",
         },
       },
+      {
+        component: "NavItem",
+        props: {
+          text: "Download",
+          link: "https://www.caido.io/download?utm_source=docs&utm_medium=nav",
+          activeMatch: "^$",
+        },
+      },
     ] satisfies DefaultTheme.NavItem[],
 
     sidebar: {
