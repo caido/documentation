@@ -101,6 +101,8 @@ export default defineConfig({
           text: "Download",
           link: "https://www.caido.io/download?utm_source=docs&utm_medium=nav",
           activeMatch: "^$",
+          button: true,
+          icon: "download",
         },
       },
     ] satisfies DefaultTheme.NavItem[],
