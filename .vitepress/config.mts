@@ -99,7 +99,8 @@ export default defineConfig({
         component: "NavItem",
         props: {
           text: "Download",
-          link: "https://www.caido.io/download?utm_source=docs&utm_medium=nav",
+          link: "https://www.caido.io/download",
+          rel: "noopener",
           activeMatch: "^$",
           button: true,
           icon: "download",
