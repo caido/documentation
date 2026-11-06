@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from "vitepress";
 import { computed, inject, ref } from "vue";
+import Icon from "./Icon.vue";
 
 const props = defineProps<{
   text: string;
@@ -8,6 +9,8 @@ const props = defineProps<{
   activeMatch: string;
   items?: { text: string; link: string }[];
   screenMenu?: boolean;
+  button?: boolean;
+  icon?: string;
 }>();
 
 const route = useRoute();
@@ -38,8 +41,9 @@ function isChildActive(link: string) {
   <a
     v-if="!screenMenu"
     :href="props.link"
-    :class="['VPNavBarMenuLink', { active: isActive }]"
+    :class="['VPNavBarMenuLink', { active: isActive, 'nav-button': props.button }]"
   >
+    <Icon v-if="props.icon" :icon="props.icon" aria-hidden="true" />
     <span>{{ props.text }}</span>
   </a>
 
@@ -48,9 +52,10 @@ function isChildActive(link: string) {
     v-else-if="!props.items"
     :href="props.link"
     class="VPNavBarMenuLink mobile-nav-single-link"
-    :class="{ active: isActive }"
+    :class="{ active: isActive, 'nav-button': props.button }"
     @click="closeScreen?.()"
   >
+    <Icon v-if="props.icon" :icon="props.icon" aria-hidden="true" />
     <span>{{ props.text }}</span>
   </a>
 
@@ -206,5 +211,35 @@ function isChildActive(link: string) {
 
 .mobile-nav-link.active {
   color: var(--vp-c-brand-1);
+}
+
+.VPNavBarMenuLink.nav-button {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+  margin: 0 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--vp-c-brand-3);
+  color: #fff;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.VPNavBarMenuLink.nav-button:hover {
+  background-color: var(--vp-c-brand-2);
+  color: #fff;
+}
+
+.VPNavBarMenuLink.nav-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.VPNavBarMenuLink.nav-button.mobile-nav-single-link {
+  margin: 12px 0;
 }
 </style>
