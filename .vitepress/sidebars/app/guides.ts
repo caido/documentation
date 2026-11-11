@@ -287,6 +287,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Sending WebSocket Messages",
         link: "/app/guides/replay_websocket",
       },
+      {
+        text: "Using Curl to send Replay Request",
+        link: "/app/guides/replay_request_curl",
+      },
     ],
   },
   {
