@@ -392,6 +392,10 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         text: "Viewing Modifications",
         link: "/app/guides/search_modifications",
       },
+      {
+        text: "Applying Color to HTTP History table rows",
+        link: "/app/guides/http_history_colors",
+      },
     ],
   },
   {
