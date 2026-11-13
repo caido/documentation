@@ -17,6 +17,7 @@ The `HTTP History` interface provides a table that contains all of the HTTP requ
 
 - [Filtering Traffic Table Rows](/app/guides/http_history_filtering.md)
 - [Viewing Modifications](/app/guides/http_history_modifications.md)
+- [Applying Color to HTTP History table rows](/app/guides/http_history_colors.md)
 :::
 
 <LabContainer :labs="[{name: 'HTTP Hunt Lottery Lab', url: 'https://labs.cai.do/http-hunt/index.php'}]" />
