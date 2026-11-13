@@ -2,9 +2,9 @@
 description: "A step-by-step guide to creating a Caido Replay session from a cURL command."
 ---
 
-# Using Curl to send Replay Request
+# Creating an Replay Request from Curl
 
-Click the <code><Icon icon="fas fa-chevron-down" /></code> dropdown next to `+ New Session` and select <code><Icon icon="fas fa-terminal" /> From cURL</code>.
+To create a Replay session from a cURL command click the <code><Icon icon="fas fa-chevron-down" /></code> dropdown next to `+ New Session` and select <code><Icon icon="fas fa-terminal" /> From cURL</code>.
 
 <img alt="Creating a new Curl Replay Session." src="/_images/replay_curl.png" center width=350>
 
