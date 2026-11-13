@@ -76,3 +76,15 @@ To resume passive forwarding for a specific traffic type, **click** on its assoc
 To resume passive forwarding for all traffic, **click** on the <code><Icon icon="fas fa-pause" /> Queuing</code> button to revert back to the <code><Icon icon="fas fa-angles-right" /> Forwarding</code> state.
 
 <img alt="The >> Forwarding button." src="/_images/intercept_forwarding_button.png" center>
+
+## Setting the Capture Scope in Intercept
+
+Use the **Capture Menu** in **Intercept** to control which requests Caido records.
+
+<img alt="The default capture menu ( All traffic)." src="/_images/intercept_capture_menu.png" center>
+
+- **All traffic** records every request.
+- **In-Scope** records only requests to hosts within your project's scope. Out-of-scope requests pass through without being recorded.
+- **Custom rules** let you choose which hosts to capture and which to let pass through without recording.
+
+<img alt="The Custom rules Capture menu." src="/_images/intercept_capture_custom_rules.png" center>
