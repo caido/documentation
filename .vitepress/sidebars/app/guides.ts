@@ -288,7 +288,7 @@ export const guidesSidebar: DefaultTheme.SidebarItem[] = [
         link: "/app/guides/replay_websocket",
       },
       {
-        text: "Creating an Replay Request from Curl",
+        text: "Creating a Replay Request from cURL",
         link: "/app/guides/replay_request_curl",
       },
     ],
