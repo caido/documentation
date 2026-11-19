@@ -84,7 +84,11 @@ Use the **Capture Menu** in **Intercept** to control which requests Caido record
 <img alt="The default capture menu ( All traffic)." src="/_images/intercept_capture_menu.png" center>
 
 - **All traffic** records every request.
-- **In-Scope** records only requests to hosts within your project's scope. Out-of-scope requests pass through without being recorded.
+- **In-Scope** uses all scopes defined on the Scope page, not just the currently active scope.
 - **Custom rules** let you choose which hosts to capture and which to let pass through without recording.
 
 <img alt="The Custom rules Capture menu." src="/_images/intercept_capture_custom_rules.png" center>
+
+::: tip
+When you select **Custom rules**, you can choose which hosts Caido captures and which it passes through without recording. Add one host pattern per line to the **Capture** and/or **Passthrough** list, then click **Apply**.
+:::
