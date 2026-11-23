@@ -56,6 +56,18 @@ Caido lets you export and install its CA certificate from **Settings → Network
 - [Managing CA Certificates](/app/guides/ca_certificate_managing.md)
 - [Importing CA Certificates](/app/guides/ca_certificate_importing.md)
 
+### Testing with HTTP/2
+
+Burp lets you send and manipulate HTTP/2 requests, including exclusive attacks.
+
+Caido supports HTTP/2 through its experimental HTTP/2 stack. You can enable it from `Settings → Network → HTTP Stack`. HTTP/2 is also used by Replay Pipelines for feature such as Single Packet Attack.
+
+The HTTP/2 stack is currently experimental and may be unstable.
+
+#### Resources
+
+- [Using Replay Pipelines](/app/guides/replay_test_race_conditions.md)
+
 ## Indirectly Available
 
 ### Burp's Browser
@@ -73,13 +85,4 @@ Caido supports configuring a **preconfigured browser** to proxy through Caido au
 
 ## Not Available
 
-### Testing with HTTP/2
 
-Burp lets you send and manipulate HTTP/2 requests, including exclusive attacks.
-
-Caido does not support HTTP/2 in the intercepting proxy or in **Replay**. Traffic is handled over HTTP/1.1; HTTP/2-specific testing and attacks are not available in Caido today.
-
-#### Resources
-
-- [Replay](/app/quickstart/replay.md)
-- [Intercept](/app/quickstart/intercept.md)
