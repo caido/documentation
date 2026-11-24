@@ -2,19 +2,41 @@
 description: "A guide to adding AI provider API keys in Caido."
 ---
 
-# Adding AI Provider API Keys
+# Adding AI Provider
 
-In addition to the [Assistant](/app/guides/assistant_model.md), Caido supports the following major AI providers:
+In addition to the [Assistant](/app/guides/assistant_model.md), Caido offers several ways to connect an AI service. Open the account menu in the top-right corner, select `Settings`, then go to `AI` > `Providers`.
 
-- Anthropic
-- Google
+## Providers
+
+You can connect to the following providers using your own credentials:
+
 - OpenAI
+- Anthropic
+- Google Gemini
+- SpaceXAI
 - OpenRouter
+- Amazon Bedrock
 
-::: tip
-To configure other AI providers, view the [LiteLLM](/app/tutorials/litellm.md) tutorial.
+<img alt="Available AI providers in Caido" src="/_images/ai_provider_settings.png" center />
+
+::: info
+Amazon Bedrock is available only to users on Team or Enterprise plans.
 :::
 
-To set an API key for one of these providers, **click** on the account button <code><Icon icon="fas fa-user" /></code> in the top-right corner of the Caido user-interface, select `Settings`, and open the `AI` tab.
+Select `Configure` beside a provider to add your credentials.
 
-<img alt="Caido AI settings." src="/_images/ai_provider_settings.png" center />
+<img alt="AI provider configuration menu in Caido" src="/_images/ai_provider_configure_menu.png" center />
+
+You can test the connection before saving your API key by selecting `Test`.
+
+## Subscriptions
+
+Subscriptions let you sign in to an existing account instead of using an API key. This feature is experimental. ChatGPT and Grok are currently available as subscription options.
+
+<img alt="Available AI subscription options in Caido" src="/_images/ai_provider_subscriptions.png" center />
+
+## Custom Providers
+
+Custom providers are available on Team and Enterprise plans. To connect Caido to a compatible AI endpoint, enter a Provider ID and select an API type. The Base URL and API Key fields are optional. If your local LM Studio or LiteLLM endpoint doesn’t require authentication, leave the API Key field blank.
+
+<img alt="Custom AI provider settings in Caido" src="/_images/ai_provider_custom.png" center />
