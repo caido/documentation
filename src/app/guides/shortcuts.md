@@ -18,6 +18,11 @@ To set or change a shortcut keybinding, **click** on the command row from the ta
 
 <img alt="Setting a shortcut." src="/_images/shortcuts_keystroke_combination.png" center/>
 
+:::warning macOS Shortcuts
+If a shortcut is already used by macOS, it takes precedence over the Caido shortcut. Change the macOS shortcut or assign a different shortcut in Caido to resolve the issue.
+:::
+
+
 ## Remove a Shortcut
 
 To remove a shortcut keybinding, **click** on the command row from the table and **click** the `Unset` button.
