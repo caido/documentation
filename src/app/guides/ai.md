@@ -41,6 +41,9 @@ Select `Sign in` beside ChatGPT or Grok and follow the prompts to complete the s
 
 ## Connect a custom provider
 
-Custom providers are available on Team and Enterprise plans. To connect Caido to a compatible AI endpoint, enter a Provider ID and select an API type. The Base URL and API Key fields are optional. If your local LM Studio or LiteLLM endpoint doesn’t require authentication, leave the API Key field blank.
-
+Custom providers are available on Team and Enterprise plans. To connect Caido to a compatible AI endpoint click on the `Add` button.
 <img alt="Custom AI provider settings in Caido" src="/_images/ai_provider_custom.png" center />
+
+Enter a Provider ID and select an API type. The Base URL and API Key fields are optional. If your local LM Studio or LiteLLM endpoint doesn’t require authentication, leave the API Key field blank.
+
+<img alt="Custom AI provider settings in Caido" src="/_images/ai_provider_custom_menu.png" center />
