@@ -4,6 +4,8 @@ description: "A step-by-step guide to creating new workflows in Caido including 
 
 # Creating Workflows
 
+You can create workflows manually or generate an workflow with AI.
+
 ## Generate a workflow with AI
 
 After [configuring an AI provider](/app/guides/ai.md), open **Workflows** and select `Generate`.
