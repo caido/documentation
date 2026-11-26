@@ -4,6 +4,22 @@ description: "A step-by-step guide to creating new workflows in Caido including 
 
 # Creating Workflows
 
+You can create workflows manually or generate an workflow with AI.
+
+## Generate a workflow with AI
+
+After [configuring an AI provider](/app/guides/ai.md), open **Workflows** and select `Generate`.
+
+<img alt="The Generate button in Workflows" src="/_images/workflows_generate.png" center />
+
+In the `Generate workflow` window, describe the `Passive`, `Active`, or `Convert` workflow you want to create, then select a model.
+
+<img alt="The workflow generation menu" src="/_images/workflows_generate_menu.png" center />
+
+Select `Generate` to create the workflow.
+
+## Create a Worflow manually
+
 To create a new workflow, select a [workflow type](/app/concepts/workflows_intro.md) by **clicking** on either the `Passive`, `Active`, or `Convert` tabs and **click** the `+ New workflow` button.
 
 <img alt="The workflow type tabs and + New workflow button." src="/_images/workflows_create.png" center>
@@ -18,7 +34,7 @@ View the Tutorials section of the documentation for detailed walk-throughs on cr
 
 <LabContainer :labs="[{name: 'SHASigned Lab', url: 'https://labs.caido.io/hubs/sha-signed'}, {name: 'Session Monitor Lab', url: 'https://labs.caido.io/hubs/session-monitor'}]" />
 
-## Adding Nodes
+### Adding Nodes
 
 To add new nodes, **click** on the `+ Add Node` button and the `+ Add` button of a listed node.
 
@@ -28,7 +44,7 @@ In the workflow editor, **click**, **hold** and **drag** a node to rearrange its
 
 <img alt="The connection lines between nodes." src="/_images/workflows_connect.png" center>
 
-## Editing Nodes
+### Editing Nodes
 
 **Click** on a node to access its individual editor.
 
